@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 180">
+  <g transform="translate(40,30)">
+    <rect
+      x="0"
+      y="0"
+      class="stroke-current fill-current/5"
+    />
+    <text x="60" y="66" text-anchor="middle" class="fill-current">
+      30 × 30
+    </text>
+  </g>
+  <g transform="translate(240,30)">
+    <rect
+      x="0"
+      y="0"
+      class="stroke-current fill-current/5"
+    />
+    <rect
+      x="120"
+      y="0"
+      class="fill-green-500/40 stroke-primary"
+    />
+    <rect
+      x="0"
+      y="0"
+      class="fill-primary/40 stroke-red-600"
+    />
+    <rect
+      x="0"
+      y="4"
+      class="stroke-current fill-none"
+      stroke-dasharray="4 3"
+    />
+    <text x="60" y="72" text-anchor="middle" class="fill-current">
+      31 × 29
+    </text>
+    <text x="132" y="66" class="fill-green-700">+ 1 × 30</text>
+    <text x="60" y="-6" text-anchor="middle" class="fill-red-700">
+      − 31 × 1
+    </text>
+  </g>
+</svg>

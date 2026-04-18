@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <g class="stroke-current fill-none">
+    <polygon points="58,238 382,238 162,30" />
+    <line x1="162" y1="30" x2="220" y2="238" />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="47" y="257">B</text>
+    <text x="393" y="257">C</text>
+    <text x="162" y="20">A</text>
+    <text x="220" y="260">D</text>
+    <text x="290" y="130">E</text>
+    <text x="94" y="130">F</text>
+  </g>
+  <polygon class="stroke-primary fill-primary/10" points="220,238 272,134 110,134" />
+</svg>

@@ -1,0 +1,30 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 440 280"
+>
+  <text
+    x="220"
+    y="63.64"
+    class="fill-primary"
+    text-anchor="middle"
+  >
+    210
+  </text>
+  <!-- 第一层分支 -->
+  <line x1="220" y1="78.18" x2="132.73" y2="121.82" class="stroke-current" />
+  <line x1="220" y1="78.18" x2="307.27" y2="121.82" class="stroke-current" />
+  <text x="118.18" y="143.64" class="fill-primary" text-anchor="middle">10</text>
+  <text x="321.82" y="143.64" class="fill-primary" text-anchor="middle">21</text>
+  <!-- 第二层分支 -->
+  <line x1="118.18" y1="158.18" x2="74.55" y2="194.55" class="stroke-current" />
+  <line x1="118.18" y1="158.18" x2="161.82" y2="194.55" class="stroke-current" />
+  <line x1="321.82" y1="158.18" x2="278.18" y2="194.55" class="stroke-current" />
+  <line x1="321.82" y1="158.18" x2="365.45" y2="194.55" class="stroke-current" />
+  <text x="60" y="216.36" class="fill-primary" text-anchor="middle">2</text>
+  <text x="176.36" y="216.36" class="fill-primary" text-anchor="middle">5</text>
+  <text x="263.64" y="216.36" class="fill-primary" text-anchor="middle">3</text>
+  <text x="380" y="216.36" class="fill-primary" text-anchor="middle">7</text>
+  <text x="220" y="260" fill="currentColor" text-anchor="middle">
+    210 = 2 × 3 × 5 × 7
+  </text>
+</svg>

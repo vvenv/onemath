@@ -1,0 +1,102 @@
+import type { ProblemData } from "@/types/problem";
+
+export default {
+  id: "10017",
+  title: "植树问题·两端都种",
+  grade: "三年级",
+  difficulty: "基础",
+  module: "应用题",
+  question:
+    "一条长 200 米的小路，现在要在路的一旁每隔 5 米种一棵树，并且两端都要种。请问一共需要多少棵树苗？",
+  solutions: [
+    {
+      key: "interval",
+      label: "间隔数法",
+      steps: [
+        {
+          text: "间隔数 = 200 ÷ 5 = 40，棵数 = 40 + 1 = 41 棵。",
+          scenes: [
+            {
+              kind: "number-line",
+              min: 0,
+              max: 200,
+              points: [
+                { value: 0, label: "起点", sublabel: "0米", tone: "primary" },
+                { value: 5, tone: "muted" },
+                { value: 10, tone: "muted" },
+                { value: 100, sublabel: "···", tone: "muted" },
+                { value: 190, tone: "muted" },
+                { value: 195, tone: "muted" },
+                {
+                  value: 200,
+                  label: "终点",
+                  sublabel: "200米",
+                  tone: "primary",
+                },
+              ],
+              segments: [
+                {
+                  from: 0,
+                  to: 200,
+                  label: "共 40 个间隔 × 5 米 = 200 米",
+                  tone: "primary",
+                },
+              ],
+
+            },
+            {
+              kind: "statement-table",
+              headers: {
+                speaker: "场景",
+                claim: "棵数与间隔数关系",
+                verdict: "本题",
+                badge: "规律",
+              },
+              rows: [
+                {
+                  speaker: "两端都种",
+                  claim: "棵 = 间隔 + 1",
+                  verdict: "true",
+                  highlight: "target",
+                  badge: "本题：40 + 1 = 41",
+                },
+                { speaker: "一端种", claim: "棵 = 间隔", badge: "40 棵" },
+                { speaker: "两端不种", claim: "棵 = 间隔 − 1", badge: "39 棵" },
+                { speaker: "封闭路线", claim: "棵 = 间隔", badge: "40 棵" },
+              ],
+
+            },
+            {
+              kind: "equation-list",
+              rows: [
+                { lhs: "间隔数", rhs: "200 ÷ 5 = 40" },
+                { lhs: "棵数", rhs: "40 + 1 = 41", status: "keep" },
+              ],
+
+            },
+            {
+              kind: "result-badges",
+              items: [{ icon: "🌳", count: 41, label: "树苗" }],
+
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  variant: {
+    question:
+      "一座桥长150米，在桥的两侧护栏上从头到尾安装彩灯，每隔3米装一盏。一共需要多少盏彩灯？",
+    fields: [
+      {
+        key: "lights",
+        label: "彩灯总数",
+      },
+    ],
+    answer: {
+      lights: 102,
+    },
+    hint: "注意是在“两侧”安装，并且“从头到尾”。",
+  },
+  tags: ["线段图法"],
+} satisfies ProblemData;

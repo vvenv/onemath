@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120" font-size="14">
+  <g class="fill-current/10 stroke-current" text-anchor="middle">
+    <rect x="40" y="40" width="60" height="40" />
+    <rect x="110" y="40" width="60" height="40" />
+    <rect x="180" y="40" width="60" height="40" />
+  </g>
+  <g class="fill-primary/15 stroke-primary" stroke-dasharray="6 3">
+    <rect x="250" y="40" width="150" height="40" />
+  </g>
+  <g class="fill-primary/20 stroke-primary">
+    <rect x="258" y="46" width="62" height="28" />
+    <rect x="330" y="46" width="62" height="28" />
+  </g>
+  <g class="fill-current" text-anchor="middle">
+    <text x="70" y="65">男</text>
+    <text x="140" y="65">男</text>
+    <text x="210" y="65">男</text>
+    <text x="289" y="65">女</text>
+    <text x="361" y="65">女</text>
+    <text x="325" y="100">大元素</text>
+  </g>
+</svg>

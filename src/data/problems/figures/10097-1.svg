@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
+  <g class="stroke-current fill-none">
+    <line x1="20" y1="220" x2="400" y2="220" />
+    <line x1="220" y1="20" x2="220" y2="400" />
+    <line x1="97.5" y1="97.5" x2="342.5" y2="342.5" />
+    <line x1="342.5" y1="97.5" x2="97.5" y2="342.5" />
+  </g>
+  <g class="fill-current">
+    <circle cx="40" cy="220" r="20" />
+    <circle cx="320" cy="220" r="20" />
+    <circle cx="400" cy="220" r="20" />
+    <circle cx="220" cy="40" r="20" />
+    <circle cx="220" cy="320" r="20" />
+    <circle cx="220" cy="400" r="20" />
+    <circle cx="97.5" cy="97.5" r="20" />
+    <circle cx="291.11" cy="291.11" r="20" />
+    <circle cx="342.5" cy="342.5" r="20" />
+    <circle cx="342.5" cy="97.5" r="20" />
+    <circle cx="291.11" cy="148.89" r="20" />
+    <circle cx="97.5" cy="342.5" r="20" />
+    <circle cx="220" cy="220" r="20" />
+  </g>
+</svg>

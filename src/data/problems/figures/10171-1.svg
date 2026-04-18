@@ -1,0 +1,13 @@
+<svg viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg">
+  <g class="stroke-current fill-none">
+    <rect x="40" y="20" width="360" height="20" />
+    <rect x="40" y="80" width="240" height="20" />
+  </g>
+  <g class="fill-primary/10 stroke-primary">
+    <rect x="280" y="20" width="120" height="20" />
+  </g>
+  <g class="stroke-primary fill-none">
+    <line x1="280" y1="40" x2="280" y2="80" stroke-dasharray="6 3" />
+    <line x1="400" y1="40" x2="400" y2="80" stroke-dasharray="6 3" />
+  </g>
+</svg>

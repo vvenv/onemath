@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <polygon points="41,244 399,244 112,28" class="stroke-current fill-none" />
+  <line x1="184" y1="244" x2="303" y2="172" class="stroke-current" />
+  <line x1="112" y1="28" x2="224" y2="220" class="stroke-current" />
+  <polygon
+    points="184,244 224,220 196,172"
+    class="stroke-primary fill-primary/10"
+  />
+  <g text-anchor="middle" class="fill-current">
+    <text x="32" y="259">B</text>
+    <text x="408" y="259">C</text>
+    <text x="112" y="20">A</text>
+    <text x="184" y="260">D</text>
+    <text x="312" y="172">E</text>
+    <text x="224" y="236">G</text>
+    <text x="196" y="162">F</text>
+  </g>
+</svg>

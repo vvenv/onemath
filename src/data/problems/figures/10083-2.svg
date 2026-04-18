@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
+  <circle cx="220" cy="220" r="200" class="stroke-current fill-none" />
+  <g class="fill-current/10">
+    <circle cx="220" cy="220" r="25" class="stroke-current" />
+    <circle cx="320" cy="170" r="25" />
+    <circle cx="120" cy="270" r="25" />
+  </g>
+  <g class="fill-current" text-anchor="middle" dominant-baseline="middle">
+    <text x="320" y="186">P</text>
+    <text x="120" y="286">P'</text>
+  </g>
+  <g class="stroke-current" stroke-dasharray="6 3">
+    <line x1="220" y1="220" x2="320" y2="170" />
+    <line x1="220" y1="220" x2="120" y2="270" />
+  </g>
+</svg>

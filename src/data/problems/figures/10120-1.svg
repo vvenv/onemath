@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 440">
+  <g class="fill-none stroke-current">
+    <polygon
+      points="164,244 260,244 164,52"
+    />
+    <polygon
+      points="212,244 260,244 212,388"
+    />
+    <polygon
+      points="212,292 212,388 20,292"
+    />
+    <polygon
+      points="164,292 20,292 164,52"
+    />
+  </g>
+  <g class="fill-current" text-anchor="middle" dominant-baseline="middle">
+    <text x="150" y="245">A</text>
+    <text x="215" y="230">B</text>
+    <text x="225" y="295">C</text>
+    <text x="165" y="310">D</text>
+    <text x="270" y="245">E</text>
+    <text x="215" y="400">F</text>
+    <text x="10" y="292">G</text>
+    <text x="165" y="40">H</text>
+  </g>
+</svg>

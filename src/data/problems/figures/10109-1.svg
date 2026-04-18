@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
+  <g class="stroke-current fill-none">
+    <rect x="20" y="20" width="400" height="400" />
+    <line x1="152" y1="20" x2="152" y2="420" />
+    <line x1="287" y1="20" x2="287" y2="420" />
+    <line x1="20" y1="152" x2="420" y2="152" />
+    <line x1="20" y1="287" x2="420" y2="287" />
+  </g>
+  <g class="fill-current" text-anchor="middle" dominant-baseline="middle">
+    <text x="152" y="102" transform="rotate(90 152 102)">V</text>
+    <text x="152" y="235" transform="rotate(-90 152 235)">V</text>
+    <text x="287" y="370" transform="rotate(90 287 370)">V</text>
+    <text x="352" y="152">V</text>
+    <text x="220" y="287">V</text>
+  </g>
+</svg>

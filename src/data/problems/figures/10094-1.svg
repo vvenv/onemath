@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
+  <path
+    d="M148 20 H275 V148 H403 V275 H275 V403 H148 V275 H20 V148 H148 Z M148 148 H275 M148 275 H275 M148 148 V275 M275 148 V275"
+    stroke-linejoin="miter"
+    stroke-linecap="square"
+    class="stroke-current fill-none"
+  />
+</svg>

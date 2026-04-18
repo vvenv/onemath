@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <g class="fill-none stroke-current">
+    <polygon points="123,196 369,196 410,73 164,73" />
+    <line x1="164" y1="73" x2="20" y2="73" stroke-dasharray="6 3" />
+  </g>
+  <g class="stroke-primary fill-none">
+    <line x1="369" y1="196" x2="41" y2="73" />
+  </g>
+  <g class="fill-current" text-anchor="middle">
+    <text x="114" y="212" text-anchor="middle">A</text>
+    <text x="377" y="212" text-anchor="middle">B</text>
+    <text x="420" y="68" text-anchor="middle">C</text>
+    <text x="172" y="68" text-anchor="middle">D</text>
+    <text x="137" y="126" text-anchor="middle">E</text>
+    <text x="32" y="68" text-anchor="middle">F</text>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 410">
+  <g class="stroke-current fill-none">
+    <rect x="10" y="10" width="390" height="390" />
+    <line x1="140" y1="10" x2="140" y2="400" />
+    <line x1="270" y1="10" x2="270" y2="400" />
+    <line x1="10" y1="140" x2="400" y2="140" />
+    <line x1="10" y1="270" x2="400" y2="270" />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="335" y="80">6</text>
+    <text x="205" y="210">5</text>
+    <text x="335" y="210">1</text>
+    <text x="75" y="340">4</text>
+  </g>
+</svg>

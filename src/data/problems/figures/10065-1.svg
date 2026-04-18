@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120">
+  <g class="stroke-current fill-none">
+    <rect x="20" y="20" width="80" height="80" />
+    <rect x="180" y="20" width="80" height="80" />
+    <rect x="340" y="20" width="80" height="80" />
+  </g>
+  <g class="fill-current" text-anchor="middle" dominant-baseline="middle">
+    <text x="60" y="60">2</text>
+    <text x="220" y="60">2</text>
+    <text x="380" y="60">2</text>
+  </g>
+</svg>

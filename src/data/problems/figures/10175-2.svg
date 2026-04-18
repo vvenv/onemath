@@ -1,0 +1,17 @@
+<svg viewBox="0 0 440 280" xmlns="http://www.w3.org/2000/svg">
+  <g class="stroke-current fill-none">
+    <circle cx="160" cy="140" r="120" />
+    <circle cx="280" cy="140" r="120" />
+    <line x1="160" y1="140" x2="280" y2="140" stroke-dasharray="6 3" />
+    <line x1="160" y1="140" x2="220" y2="36" stroke-dasharray="6 3" />
+    <line x1="220" y1="36" x2="280" y2="140" stroke-dasharray="6 3" />
+  </g>
+  <g class="fill-current/10">
+    <path d="M 220 36 L 280 140 L 220 244 L 160 140 Z" />
+  </g>
+  <g class="fill-current">
+    <circle cx="160" cy="140" r="3" />
+    <circle cx="280" cy="140" r="3" />
+    <circle cx="220" cy="36" r="3" />
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 440 440"
+  class="stroke-current fill-none"
+>
+  <g class="stroke-current/10">
+    <line x1="20" y1="20" x2="420" y2="20" />
+    <line x1="20" y1="120" x2="420" y2="120" />
+    <line x1="20" y1="220" x2="420" y2="220" />
+    <line x1="20" y1="320" x2="420" y2="320" />
+    <line x1="20" y1="420" x2="420" y2="420" />
+    <line x1="20" y1="20" x2="20" y2="420" />
+    <line x1="120" y1="20" x2="120" y2="420" />
+    <line x1="220" y1="20" x2="220" y2="420" />
+    <line x1="320" y1="20" x2="320" y2="420" />
+    <line x1="420" y1="20" x2="420" y2="420" />
+  </g>
+
+  <g class="fill-current">
+    <circle cx="20" cy="20" r="4" />
+    <circle cx="120" cy="20" r="4" />
+    <circle cx="220" cy="20" r="4" />
+    <circle cx="320" cy="20" r="4" />
+    <circle cx="420" cy="20" r="4" />
+    <circle cx="20" cy="120" r="4" />
+    <circle cx="120" cy="120" r="4" />
+    <circle cx="220" cy="120" r="4" />
+    <circle cx="320" cy="120" r="4" />
+    <circle cx="420" cy="120" r="4" />
+    <circle cx="20" cy="220" r="4" />
+    <circle cx="120" cy="220" r="4" />
+    <circle cx="220" cy="220" r="4" />
+    <circle cx="320" cy="220" r="4" />
+    <circle cx="420" cy="220" r="4" />
+    <circle cx="20" cy="320" r="4" />
+    <circle cx="120" cy="320" r="4" />
+    <circle cx="220" cy="320" r="4" />
+    <circle cx="320" cy="320" r="4" />
+    <circle cx="420" cy="320" r="4" />
+    <circle cx="20" cy="420" r="4" />
+    <circle cx="120" cy="420" r="4" />
+    <circle cx="220" cy="420" r="4" />
+    <circle cx="320" cy="420" r="4" />
+    <circle cx="420" cy="420" r="4" />
+  </g>
+</svg>

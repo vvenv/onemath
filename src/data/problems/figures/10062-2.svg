@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120">
+  <g>
+    <text x="220" y="61.38" class="fill-red-800" text-anchor="middle">
+      🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎
+    </text>
+    <g class="stroke-current">
+      <line x1="226.90" y1="20" x2="226.90" y2="77.93" />
+      <line x1="420" y1="20" x2="420" y2="77.93" />
+    </g>
+    <text x="199.31" y="100" fill="currentColor" text-anchor="middle">隔板①</text>
+    <text x="392.41" y="100" fill="currentColor" text-anchor="middle">隔板②</text>
+  </g>
+</svg>

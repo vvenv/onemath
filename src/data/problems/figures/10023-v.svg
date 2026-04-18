@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <g class="stroke-current fill-none">
+    <rect x="20" y="31.67" width="133.33" height="133.33" />
+    <line x1="86.67" y1="31.67" x2="86.67" y2="165" />
+    <line x1="20" y1="98.33" x2="153.33" y2="98.33" />
+    <rect
+      x="86.67"
+      y="98.33"
+      fill-opacity="0"
+      class="fill-current"
+    />
+  </g>
+  <g fill-opacity="0.12" class="fill-current">
+    <rect x="20" y="98.33" width="66.67" height="66.67" />
+  </g>
+  <g class="stroke-current fill-none">
+    <rect x="286.67" y="31.67" width="133.33" height="133.33" />
+    <line x1="353.33" y1="31.67" x2="353.33" y2="165" />
+    <line x1="286.67" y1="98.33" x2="420" y2="98.33" />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="86.67" y="206.67" text-anchor="middle">正视（田缺左下角）</text>
+    <text x="353.33" y="206.67" text-anchor="middle">俯视（田字）</text>
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="220" y="248.33" text-anchor="middle">
+      缺角处无方块；其余列高由正视决定
+    </text>
+  </g>
+</svg>

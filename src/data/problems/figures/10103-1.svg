@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 400" class="stroke-current fill-none">
+  <polygon points="220,40 40,351.77 400,351.77" />
+  <g class="fill-current">
+    <circle cx="220" cy="40" r="20" />
+    <circle cx="40" cy="351.77" r="20" />
+    <circle cx="400" cy="351.77" r="20" />
+    <circle cx="160" cy="143.92" r="20" />
+    <circle cx="100" cy="247.85" r="20" />
+    <circle cx="280" cy="143.92" r="20" />
+    <circle cx="340" cy="247.85" r="20" />
+    <circle cx="160" cy="351.77" r="20" />
+    <circle cx="280" cy="351.77" r="20" />
+  </g>
+</svg>

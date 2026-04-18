@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <g
+    class="stroke-current fill-none">
+    <polygon
+      points="42,221 398,221 398,43 42,147"
+    />
+    <polygon
+      class="fill-primary/10"
+      points="42,147 264,221 183,106"
+      stroke-dasharray="6 3"
+    />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="30" y="241" text-anchor="middle">A</text>
+    <text x="410" y="241" text-anchor="middle">B</text>
+    <text x="413" y="37" text-anchor="middle">C</text>
+    <text x="30" y="141" text-anchor="middle">D</text>
+    <text x="264" y="243" text-anchor="middle">E</text>
+    <text x="173" y="99" text-anchor="middle">F</text>
+  </g>
+</svg>

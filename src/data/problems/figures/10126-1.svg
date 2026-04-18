@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
+  <polygon
+    points="400,220 310,64.1 130,64.1 40,220 130,375.9 310,375.9"
+    class="stroke-current fill-none"
+  />
+  <polygon
+    points="310,64.1 130,64.1 220,116.1"
+    class="fill-primary/10 stroke-primary"
+  />
+  <line
+    x1="310" y1="64.1" x2="40" y2="220"
+    class="stroke-current"
+  />
+  <line
+    x1="130" y1="64.1" x2="400" y2="220"
+    class="stroke-current"
+  />
+  <g text-anchor="middle" class="fill-current">
+    <text x="420" y="225">A</text>
+    <text x="310" y="55">B</text>
+    <text x="130" y="55">C</text>
+    <text x="20" y="225">D</text>
+    <text x="130" y="395">E</text>
+    <text x="310" y="395">F</text>
+    <text x="220" y="145">P</text>
+  </g>
+</svg>

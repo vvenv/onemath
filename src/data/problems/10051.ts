@@ -1,0 +1,95 @@
+import type { ProblemData } from "@/types/problem";
+
+export default {
+  id: "10051",
+  title: "多次操作·浓度递推",
+  grade: "六年级",
+  module: "应用题",
+  difficulty: "挑战",
+  question:
+    "容器中有浓度为 a% 的酒精溶液 100 克。每次操作：倒出 25 克溶液，再加入 25 克水。经过 3 次操作后，浓度变为 27%。\n求原来浓度 a%。",
+  solutions: [
+    {
+      key: "decay_formula",
+      label: "浓度衰减公式",
+      steps: [
+        {
+          text: "应用浓度衰减公式计算原浓度。",
+          scenes: [
+            {
+              kind: "equation-list",
+              rows: [
+                {
+                  lhs: "每次保留比例",
+                  rhs: "(100 − 25) / 100 = 3/4",
+                  status: "keep",
+                },
+                {
+                  lhs: "3 次后保留比例",
+                  rhs: "(3/4)³ = 27/64",
+                  status: "keep",
+                },
+                {
+                  lhs: "列方程",
+                  rhs: "a% × 27/64 = 27%",
+                  status: "keep",
+                },
+                {
+                  lhs: "求解",
+                  rhs: "a% = 27% × 64/27 = 64%",
+                  status: "keep",
+                },
+              ],
+
+            },
+            {
+              kind: "compare-bars",
+              rows: [
+                {
+                  label: "初始浓度 a%",
+                  value: 64,
+                  max: 64,
+                  tone: "primary",
+                },
+                {
+                  label: "第 1 次后",
+                  value: 48,
+                  max: 64,
+                  tone: "primary",
+                },
+                {
+                  label: "第 2 次后",
+                  value: 36,
+                  max: 64,
+                  tone: "primary",
+                },
+                {
+                  label: "第 3 次后",
+                  value: 27,
+                  max: 64,
+                  tone: "muted",
+                },
+              ],
+
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  variant: {
+    question:
+      "100 克酒精溶液，每次倒出 20 克加水，2 次后浓度变为原来的 64%。求每次保留比例。",
+    fields: [
+      {
+        key: "ratio",
+        label: "保留比例（%）",
+      },
+    ],
+    answer: {
+      ratio: 80,
+    },
+    hint: "设保留比例 r，r² = 64%，r = 80%。每次倒出 20 克。",
+  },
+  tags: ["递推法"],
+} satisfies ProblemData;

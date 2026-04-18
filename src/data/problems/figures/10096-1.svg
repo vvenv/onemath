@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
+  <g class="stroke-current fill-none">
+    <line x1="20" y1="220" x2="420" y2="220" />
+    <line x1="220" y1="20" x2="220" y2="420" />
+    <line x1="97.50" y1="97.50" x2="342.50" y2="342.50" />
+    <line x1="342.50" y1="97.50" x2="97.50" y2="342.50" />
+  </g>
+  <g class="stroke-none fill-current">
+    <circle cx="40" cy="220" r="20" />
+    <circle cx="400" cy="220" r="20" />
+    <circle cx="220" cy="40" r="20" />
+    <circle cx="220" cy="400" r="20" />
+    <circle cx="97.50" cy="97.50" r="20" />
+    <circle cx="342.50" cy="342.50" r="20" />
+    <circle cx="342.50" cy="97.50" r="20" />
+    <circle cx="97.50" cy="342.50" r="20" />
+    <circle cx="220" cy="220" r="20" />
+  </g>
+</svg>

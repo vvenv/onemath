@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120">
+  <g
+    class="stroke-current fill-current/10"
+  >
+    <rect
+      x="52.5"
+      y="20"
+    />
+    <rect
+      x="147.5"
+      y="20"
+    />
+    <rect
+      x="242.5"
+      y="20"
+    />
+    <rect
+      x="337.5"
+      y="20"
+    />
+  </g>
+  <g class="fill-current" text-anchor="middle" dominant-baseline="middle">
+    <text x="77.5" y="60">1</text>
+    <text x="172.5" y="60">2</text>
+    <text x="267.5" y="60">3</text>
+    <text x="362.5" y="60">4</text>
+  </g>
+  <g class="fill-primary" text-anchor="middle" dominant-baseline="middle">
+    <text x="30" y="60">∧</text>
+    <text x="125" y="60">∧</text>
+    <text x="220" y="60">∧</text>
+    <text x="315" y="60">∧</text>
+    <text x="410" y="60">∧</text>
+  </g>
+</svg>

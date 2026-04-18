@@ -1,0 +1,161 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "一道+ / edao.plus 内容接口",
+    "version": "0.1.0",
+    "summary": "一道+ / edao.plus 对外提供的题目页、知识点页与发现文档的 HTTP 接口。",
+    "description": "一道+ / edao.plus 是一个面向小学奥数的静态预渲染站点。本 OpenAPI 文档描述其对外公开的 HTTP 端点——包括题目与知识点内容页，以及本服务的机器可读发现文档（api-catalog、openapi、status）。",
+    "contact": {
+      "name": "一道+ / edao.plus",
+      "url": "https://edao.plus/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://edao.plus"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "首页：题目总览与筛选",
+        "operationId": "getHome",
+        "responses": {
+          "200": {
+            "description": "首页 HTML",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/p/{id}": {
+      "get": {
+        "summary": "题目详情页",
+        "operationId": "getProblem",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "题目编号（纯数字，例如 10001）。",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d+$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "题目详情 HTML",
+            "content": {
+              "text/html": {}
+            }
+          },
+          "404": {
+            "description": "未找到对应题目"
+          }
+        }
+      }
+    },
+    "/k": {
+      "get": {
+        "summary": "方法手册索引",
+        "operationId": "getKnowledgeIndex",
+        "responses": {
+          "200": {
+            "description": "方法手册索引 HTML",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/k/{slug}": {
+      "get": {
+        "summary": "方法手册条目详情",
+        "operationId": "getKnowledge",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "description": "知识点条目的 slug（例如 chicken-rabbit）。",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "知识点条目 HTML",
+            "content": {
+              "text/html": {}
+            }
+          },
+          "404": {
+            "description": "未找到对应知识点"
+          }
+        }
+      }
+    },
+    "/.well-known/api-catalog": {
+      "get": {
+        "summary": "RFC 9727 API 目录文档（Linkset）",
+        "operationId": "getApiCatalog",
+        "responses": {
+          "200": {
+            "description": "描述本服务对外 API 的 Linkset 文档",
+            "content": {
+              "application/linkset+json": {}
+            }
+          }
+        }
+      }
+    },
+    "/openapi.json": {
+      "get": {
+        "summary": "本 OpenAPI 描述文档",
+        "operationId": "getOpenApi",
+        "responses": {
+          "200": {
+            "description": "OpenAPI 3.1 文档",
+            "content": {
+              "application/openapi+json": {}
+            }
+          }
+        }
+      }
+    },
+    "/status.json": {
+      "get": {
+        "summary": "服务健康检查",
+        "operationId": "getStatus",
+        "responses": {
+          "200": {
+            "description": "描述服务健康状态的 JSON 文档",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "enum": ["ok"]
+                    },
+                    "service": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["status", "service"]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

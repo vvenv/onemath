@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 240">
+  <g class="fill-primary/10 stroke-primary">
+    <rect x="20" y="30" width="136.22" height="97.30" />
+  </g>
+  <g class="fill-primary/15 stroke-primary">
+    <rect x="156.22" y="30" width="242.16" height="97.30" />
+  </g>
+  <g class="fill-current" text-anchor="middle" font-weight="bold">
+    <text x="88.11" y="84">36 × 47</text>
+    <text x="277.30" y="84">64 × 47</text>
+  </g>
+  <g class="stroke-current fill-none">
+    <line x1="20" y1="143.24" x2="398.38" y2="143.24" />
+    <line x1="20" y1="137.84" x2="20" y2="148.65" />
+    <line x1="398.38" y1="137.84" x2="398.38" y2="148.65" />
+    <line x1="409.19" y1="30" x2="409.19" y2="127.30" />
+    <line x1="403.78" y1="30" x2="414.59" y2="30" />
+    <line x1="403.78" y1="127.30" x2="414.59" y2="127.30" />
+  </g>
+  <g class="fill-current" text-anchor="middle">
+    <text x="220" y="162">36 + 64 = 100</text>
+    <text x="430" y="82">47</text>
+  </g>
+</svg>

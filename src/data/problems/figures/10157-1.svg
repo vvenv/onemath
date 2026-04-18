@@ -1,0 +1,49 @@
+<svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg">
+  <g class="stroke-current fill-none">
+    <!-- Outer square ABCD -->
+    <rect x="38.18" y="29.09" width="363.64" height="363.64" />
+
+    <!-- Connection lines: A-H, B-I, C-K, D-E -->
+    <!-- A(38.18, 29.09) to H(401.82, 150.29) -->
+    <line x1="38.18" y1="29.09" x2="401.82" y2="150.29" />
+    <!-- B(401.82, 29.09) to I(280.62, 392.73) -->
+    <line x1="401.82" y1="29.09" x2="280.62" y2="392.73" />
+    <!-- C(401.82, 392.73) to K(38.18, 271.53) -->
+    <line x1="401.82" y1="392.73" x2="38.18" y2="271.53" />
+    <!-- D(38.18, 392.73) to E(159.38, 29.09) -->
+    <line x1="38.18" y1="392.73" x2="159.38" y2="29.09" />
+  </g>
+
+  <!-- Trisection points on each side -->
+  <g class="fill-current">
+    <!-- AB side: E and F -->
+    <circle cx="159.38" cy="29.09" r="2" />
+    <circle cx="280.62" cy="29.09" r="2" />
+
+    <!-- BC side: G and H -->
+    <circle cx="401.82" cy="150.29" r="2" />
+    <circle cx="401.82" cy="271.53" r="2" />
+
+    <!-- CD side: I and J -->
+    <circle cx="280.62" cy="392.73" r="2" />
+    <circle cx="159.38" cy="392.73" r="2" />
+
+    <!-- DA side: K and L -->
+    <circle cx="38.18" cy="271.53" r="2" />
+    <circle cx="38.18" cy="150.29" r="2" />
+  </g>
+
+  <!-- Rotated square (shaded) -->
+  <!-- Vertices: P(365.46, 138.18), Q(292.73, 356.37), R(74.54, 283.64), S(147.27, 65.45) -->
+  <g class="fill-current/20 stroke-current">
+    <polygon points="365.46,138.18 292.73,356.37 74.54,283.64 147.27,65.45" />
+  </g>
+
+  <!-- Labels -->
+  <g class="fill-current" text-anchor="middle">
+    <text x="20" y="47.27">A</text>
+    <text x="420" y="47.27">B</text>
+    <text x="420" y="410.91">C</text>
+    <text x="20" y="410.91">D</text>
+  </g>
+</svg>

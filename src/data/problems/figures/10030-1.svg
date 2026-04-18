@@ -1,0 +1,9 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 440 280"
+  class="stroke-current fill-none"
+>
+  <path
+    d="M100 100 L180 100 L180 20 L260 20 L260 100 L420 100 L420 260 L100 260 L100 220 L20 220 L20 140 L100 140 Z"
+  />
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <g fill-opacity="0.12" class="stroke-current fill-current">
+    <rect x="42.22" y="112.22" width="88.89" height="44.44" rx="6" />
+    <rect x="308.89" y="112.22" width="88.89" height="44.44" rx="6" />
+  </g>
+  <g class="stroke-yellow-700 fill-none" marker-end="url(#ar2)">
+    <path d="M140 130 L300 130" />
+    <path d="M300 147 L140 147" />
+  </g>
+  <defs>
+    <marker
+      id="ar2"
+      markerWidth="10"
+      markerHeight="10"
+      refX="8"
+      refY="3"
+      orient="auto"
+    >
+      <path d="M0,0 L0,6 L9,3 z" class="fill-yellow-700" />
+    </marker>
+  </defs>
+  <g text-anchor="middle" class="fill-current">
+    <text x="86.67" y="140" text-anchor="middle">A 仓库</text>
+    <text x="353.33" y="140" text-anchor="middle">B 工地</text>
+    <text x="220" y="117.78" text-anchor="middle">15 min</text>
+    <text x="220" y="167.78" text-anchor="middle">15 min</text>
+    <text x="86.67" y="178.89" text-anchor="middle">装 3 min</text>
+    <text x="353.33" y="178.89" text-anchor="middle">卸 3 min</text>
+  </g>
+</svg>

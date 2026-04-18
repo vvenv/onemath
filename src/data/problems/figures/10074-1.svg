@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120">
+  <line x1="20" y1="50" x2="420" y2="50" class="stroke-current" />
+  <g class="stroke-current fill-current">
+    <circle cx="53.33" cy="50" r="10" />
+    <circle cx="97.78" cy="50" r="10" />
+    <circle cx="164.44" cy="50" r="10" />
+    <circle cx="231.11" cy="50" r="10" />
+    <circle cx="320" cy="50" r="10" />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="53.33" y="30">A</text>
+    <text x="97.78" y="30">B</text>
+    <text x="164.44" y="30">C</text>
+    <text x="231.11" y="30">D</text>
+    <text x="320" y="30">E</text>
+    <text x="53.33" y="80">0 km</text>
+    <text x="97.78" y="80">2</text>
+    <text x="164.44" y="80">5</text>
+    <text x="231.11" y="80">8</text>
+    <text x="320" y="80">12</text>
+    <text x="53.33" y="110">30 户</text>
+    <text x="97.78" y="110">20</text>
+    <text x="164.44" y="110">40</text>
+    <text x="231.11" y="110">25</text>
+    <text x="320" y="110">15</text>
+  </g>
+</svg>

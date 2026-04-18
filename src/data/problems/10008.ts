@@ -1,0 +1,62 @@
+import type { ProblemData } from "@/types/problem";
+
+export default {
+  id: "10008",
+  title: "平均成绩·移多补少",
+  grade: "三年级",
+  difficulty: "基础",
+  module: "应用题",
+  question: "小华的前四次数学测验平均分是 88 分。他想在第五次测验后，将平均分提高到 90 分。那么他第五次测验至少要考多少分？",
+  solutions: [
+    {
+      key: "total",
+      label: "总量分析法",
+      steps: [
+        {
+          text: "目标总分 90 × 5 = 450，当前总分 88 × 4 = 352，第五次需 450 − 352 = 98 分。",
+          scenes: [
+            {"kind":"compare-bars","rows":[{"label":"目标总分","value":450,"max":450,"tone":"primary"},{"label":"当前总分","value":352,"max":450,"tone":"muted","marker":true}]},
+            {"kind":"result-badges","items":[{"icon":"📝","count":98,"label":"第五次需考分数"}]},
+          ],
+        },
+      ],
+    },
+    {
+      key: "makeup",
+      label: "移多补少法",
+      steps: [
+        {
+          text: "第五次测验不仅要考到 90 分（基准线），还要额外弥补前四次的不足。",
+        },
+        {
+          text: "前四次每次比目标 90 分低：90 − 88 = 2 分。",
+        },
+        {
+          text: "前四次一共亏欠：2 × 4 = 8 分。",
+        },
+        {
+          text: "所以第五次分数 = 基准线 90 + 弥补亏欠的 8 = 98 分。",
+          scenes: [
+            {"kind":"number-line","min":80,"max":100,"points":[{"value":88,"label":"当前平均","tone":"muted"},{"value":90,"label":"目标平均","tone":"primary"},{"value":98,"label":"第五次分数","tone":"accent"}],"segments":[{"from":88,"to":90,"label":"每项缺2分","tone":"muted"}]},
+          ],
+        },
+      ],
+    },
+  ],
+  variant: {
+    question: "小明前三次语文测验的平均分是 82 分。这次测验后，他的平均分提高到了 84 分。请问他这次语文测验考了多少分？",
+    fields: [
+      {
+        key: "score",
+        label: "第四次成绩",
+      },
+    ],
+    answer: {
+      score: 90,
+    },
+    hint: "试试移多补少法：第四次成绩 = 新的平均分 + (前几次与平均分的总差额)。",
+  },
+  tags: [
+    "画图法",
+  ],
+} satisfies ProblemData;

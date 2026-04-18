@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <g class="stroke-current fill-none">
+    <polygon points="136,29 277,29 383,241 53,241" />
+  </g>
+  <g class="stroke-current">
+    <line x1="136" y1="29" x2="384" y2="242" />
+    <line x1="278" y1="29" x2="53" y2="242" />
+  </g>
+  <g class="fill-current" text-anchor="middle">
+    <text x="136" y="20" text-anchor="middle">A</text>
+    <text x="287" y="20" text-anchor="middle">B</text>
+    <text x="396" y="260" text-anchor="middle">C</text>
+    <text x="44" y="260" text-anchor="middle">D</text>
+    <text x="211" y="112" text-anchor="middle">O</text>
+    <text x="207" y="53" text-anchor="middle">25</text>
+    <text x="278" y="100" text-anchor="middle">35</text>
+  </g>
+</svg>

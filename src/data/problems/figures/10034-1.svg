@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <g class="stroke-current fill-none">
+    <line x1="38.75" y1="200.04" x2="200.04" y2="38.75" />
+    <line x1="54.14" y1="205.86" x2="205.86" y2="54.14" />
+    <line x1="59.96" y1="221.25" x2="221.25" y2="59.96" />
+    <line x1="218.75" y1="59.96" x2="380.04" y2="221.25" />
+    <line x1="230.16" y1="57.23" x2="382.77" y2="209.84" />
+    <line x1="237.23" y1="50.16" x2="389.84" y2="202.77" />
+    <line x1="239.96" y1="38.75" x2="401.25" y2="200.04" />
+    <line x1="59.36" y1="225" x2="380.64" y2="225" />
+    <line x1="53.23" y1="235" x2="386.77" y2="235" />
+  </g>
+  <g class="stroke-current fill-current/10">
+    <circle cx="40" cy="220" r="20" />
+    <circle cx="220" cy="40" r="20" />
+    <circle cx="400" cy="220" r="20" />
+  </g>
+  <g class="fill-current" text-anchor="middle">
+    <text x="40" y="224.8">A</text>
+    <text x="220" y="44.8">B</text>
+    <text x="400" y="224.8">C</text>
+  </g>
+</svg>

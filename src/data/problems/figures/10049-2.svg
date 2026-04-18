@@ -1,0 +1,26 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 440 280"
+>
+  <g class="fill-current" dominant-baseline="middle">
+    <g text-anchor="middle">
+      <text x="220" y="140">22%</text>
+    </g>
+    <g text-anchor="start">
+      <text x="20" y="60">25%</text>
+      <text x="20" y="220">20%</text>
+    </g>
+    <g text-anchor="end">
+      <text x="420" y="60">
+        22 − 20 = 2
+      </text>
+      <text x="420" y="220">25 − 22 = 3</text>
+    </g>
+  </g>
+  <g class="stroke-current">
+    <line x1="60" y1="80" x2="200" y2="130" />
+    <line x1="60" y1="200" x2="200" y2="150" />
+    <line x1="240" y1="130" x2="380" y2="80" />
+    <line x1="240" y1="150" x2="380" y2="200" />
+  </g>
+</svg>
