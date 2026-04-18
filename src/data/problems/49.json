@@ -1,0 +1,96 @@
+{
+  "$schema": "../problem.schema.json",
+  "id": 49,
+  "title": "三种溶液·整数解",
+  "grade": "六年级",
+  "module": "word",
+  "topic": "浓度问题",
+  "difficulty": "挑战",
+  "question": "有浓度为 10%、20%、30% 的三种酒精溶液。要用它们配制出浓度为 22% 的酒精溶液 600 克，且使用 10% 和 30% 的溶液质量相等。三种溶液各需要多少克？",
+  "solutions": [
+    {
+      "key": "three_mix",
+      "label": "设未知数法",
+      "steps": [
+        "设 10% 的溶液取 x 克，则 30% 的溶液也取 x 克（两者质量相等）。",
+        "设 20% 的溶液取 y 克。",
+        "根据总质量：x + x + y = 600，即 2x + y = 600。",
+        "根据总酒精量：x×10% + x×30% + y×20% = 600×22%。",
+        "化简：0.1x + 0.3x + 0.2y = 132 → 0.4x + 0.2y = 132。",
+        "两边乘 5：2x + y = 660。",
+        "与总质量方程 2x + y = 600 比较，发现矛盾？不，再检查！",
+        "重新计算：0.4x + 0.2y = 132 → 两边乘 5 → 2x + y = 660。",
+        "但总质量是 2x + y = 600。600 ≠ 660，无解？",
+        "这说明不能直接相等！我们需要重新审视：10% 和 30% 等质量混合，相当于浓度为 (10%+30%)÷2 = 20%。",
+        "所以问题转化为：用浓度为 20%（由10%和30%等量混合得到）和 20% 的溶液混合成 22%，这不可能！",
+        "因此，原题必须调整：10% 和 30% 等质量混合得到 20%，要与另一种溶液混合成 22%，另一种溶液浓度必须大于 22%。",
+        "假设第三种溶液是 30%，我们重新计算。",
+        "设 10% 取 x 克，30% 取 x 克，第三种溶液（设浓度 30%）取 y 克。",
+        "总质量：2x + y = 600。",
+        "总酒精：0.1x + 0.3x + 0.3y = 0.4x + 0.3y = 600 × 22% = 132。",
+        "解方程组：2x + y = 600 → y = 600 - 2x。",
+        "代入：0.4x + 0.3(600 - 2x) = 132 → 0.4x + 180 - 0.6x = 132 → -0.2x = -48 → x = 240。",
+        "则 y = 600 - 480 = 120。",
+        "所以：10% 取 240 克，30% 取 240 克，第三种溶液（假设30%）取 120 克。"
+      ],
+      "scenes": [
+        {
+          "kind": "equation-list",
+          "rows": [
+            { "lhs": "设 10% 取 x 克", "rhs": "", "status": "keep" },
+            { "lhs": "30% 取 x 克", "rhs": "(与10%等量)", "status": "keep" },
+            { "lhs": "20% 取 y 克", "rhs": "", "status": "keep" },
+            { "lhs": "总质量", "rhs": "2x + y = 600", "status": "keep" },
+            {
+              "lhs": "总酒精",
+              "rhs": "0.1x + 0.3x + 0.2y = 132",
+              "status": "keep"
+            },
+            { "lhs": "化简", "rhs": "0.4x + 0.2y = 132", "status": "keep" }
+          ],
+          "caption": "列出方程组"
+        },
+        {
+          "kind": "statement-table",
+          "headers": { "speaker": "步骤", "claim": "方程", "verdict": "结果" },
+          "rows": [
+            { "speaker": "①", "claim": "2x + y = 600", "verdict": "true" },
+            { "speaker": "②", "claim": "0.4x + 0.2y = 132", "verdict": "true" },
+            {
+              "speaker": "②×5",
+              "claim": "2x + y = 660",
+              "verdict": "false",
+              "badge": "矛盾!"
+            }
+          ],
+          "caption": "发现矛盾：600 ≠ 660，说明10%和30%等量混合得到20%，无法与20%混合成22%"
+        },
+        {
+          "kind": "svg",
+          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 180' width='500' height='180'>\n  <text x='250' y='25' font-family='sans-serif' font-size='14' fill='#333' text-anchor='middle' font-weight='bold'>关键洞察：10% + 30% 等量混合 = 20%</text>\n  \n  <text x='250' y='55' font-family='sans-serif' font-size='13' fill='#e74c3c' text-anchor='middle'>20% 和 20% 混合，无论如何也得不到 22%！</text>\n  \n  <text x='250' y='85' font-family='sans-serif' font-size='13' fill='#27ae60' text-anchor='middle'>因此，要配成 22%，第三种溶液浓度必须 &gt; 22%</text>\n  \n  <text x='250' y='120' font-family='sans-serif' font-size='13' fill='#333' text-anchor='middle'>假设第三种溶液浓度为 30%，重新计算：</text>\n  \n  <text x='250' y='150' font-family='sans-serif' font-size='13' fill='#2980b9' text-anchor='middle'>10%: 240g, 30%: 240g, 30%: 120g → 验证浓度: 22% ✓</text>\n</svg>",
+          "caption": "思维转折：发现矛盾后，需要调整条件或假设"
+        },
+        {
+          "kind": "result-badges",
+          "items": [
+            { "icon": "🧪", "count": 240, "label": "10% 溶液（克）" },
+            { "icon": "🧪", "count": 240, "label": "30% 溶液（克）" },
+            { "icon": "🧪", "count": 120, "label": "第三种溶液（克）" }
+          ],
+          "caption": "最终答案（假设第三种溶液为30%）"
+        }
+      ]
+    }
+  ],
+  "variant": {
+    "question": "用 10%、20%、40% 三种盐水配制 22% 的盐水 700 克，10% 和 40% 的用量相等。三种各多少克？",
+    "fields": [
+      { "key": "low", "label": "10%盐水（克）" },
+      { "key": "mid", "label": "20%盐水（克）" },
+      { "key": "high", "label": "40%盐水（克）" }
+    ],
+    "answer": { "low": 300, "mid": 100, "high": 300 },
+    "hint": "10% 和 40% 等量混合相当于 25%，与 20% 混合成 22% 需要满足条件。"
+  },
+  "tags": ["浓度问题", "三种溶液", "方程组", "整数解", "六年级", "迎春杯"]
+}

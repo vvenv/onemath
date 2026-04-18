@@ -1,0 +1,102 @@
+{
+  "$schema": "../problem.schema.json",
+  "id": 57,
+  "title": "分数比较大小·作差法",
+  "grade": "五年级",
+  "module": "calc",
+  "topic": "比较大小",
+  "question": "比较 2023/2024 和 2024/2025 的大小。",
+  "figures": [
+    {
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 450 120'><text x='20' y='40' font-size='22' font-family='monospace' fill='#333'>2023/2024  ○  2024/2025</text><text x='20' y='70' font-size='14' fill='#888'>两个分数都很接近 1，但哪个更大？</text><text x='20' y='95' font-size='14' fill='#E74C3C'>提示：用 1 减去每个分数，比较差值</text></svg>",
+      "caption": "比较大小：用“1 − 分数”的方法（作差法）",
+      "alt": "分数比较大小"
+    }
+  ],
+  "solutions": [
+    {
+      "key": "difference",
+      "label": "作差法（与1比较）",
+      "steps": [
+        "两个分数都小于 1 且非常接近 1，考虑用 1 减去每个分数。",
+        "1 − 2023/2024 = 1/2024。",
+        "1 − 2024/2025 = 1/2025。",
+        "比较差值：1/2024 > 1/2025（分子相同，分母越小分数越大）。",
+        "被减数相同（都是1），减去的差值越大，原分数越小。",
+        "因此 2023/2024 < 2024/2025。"
+      ],
+      "scenes": [
+        {
+          "kind": "compare-bars",
+          "rows": [
+            {
+              "label": "2023/2024",
+              "value": "0.9995",
+              "max": 1,
+              "tone": "primary"
+            },
+            {
+              "label": "2024/2025",
+              "value": "0.9995",
+              "max": 1,
+              "tone": "muted"
+            }
+          ],
+          "caption": "两个分数都非常接近 1"
+        },
+        {
+          "kind": "equation-list",
+          "rows": [
+            { "lhs": "1 − 2023/2024", "rhs": "1/2024", "status": "keep" },
+            { "lhs": "1 − 2024/2025", "rhs": "1/2025", "status": "keep" }
+          ],
+          "caption": "步骤1：计算与 1 的差距"
+        },
+        {
+          "kind": "number-line",
+          "min": 0,
+          "max": 1,
+          "points": [
+            { "value": 0.9995, "label": "2023/2024", "tone": "primary" },
+            { "value": 0.9995, "label": "2024/2025", "tone": "accent" },
+            { "value": 1, "label": "1", "tone": "default" }
+          ],
+          "segments": [
+            { "from": 0.9995, "to": 1, "label": "1/2024", "tone": "primary" },
+            {
+              "from": 0.9995,
+              "to": 1,
+              "label": "1/2025 (更小)",
+              "tone": "accent"
+            }
+          ],
+          "caption": "步骤2：1/2024 > 1/2025，所以 2023/2024 离 1 更远"
+        },
+        {
+          "kind": "result-badges",
+          "items": [
+            { "icon": "🔹", "count": "2023/2024", "label": "< 2024/2025" }
+          ],
+          "caption": "结论：2023/2024 < 2024/2025"
+        }
+      ]
+    },
+    {
+      "key": "reciprocal",
+      "label": "倒数法",
+      "steps": [
+        "比较倒数：2023/2024 的倒数是 2024/2023 = 1 + 1/2023。",
+        "2024/2025 的倒数是 2025/2024 = 1 + 1/2024。",
+        "因为 1/2023 > 1/2024，所以倒数 2024/2023 > 2025/2024。",
+        "倒数越大，原分数越小。因此 2023/2024 < 2024/2025。"
+      ]
+    }
+  ],
+  "variant": {
+    "question": "比较 777/7777 和 7777/77777 的大小。",
+    "fields": [{ "key": "relation", "label": "大小关系 (>/</=)" }],
+    "answer": { "relation": "<" },
+    "hint": "用 1 减去每个分数，比较差值"
+  },
+  "tags": ["比较大小", "作差法", "分数", "五年级", "计算"]
+}

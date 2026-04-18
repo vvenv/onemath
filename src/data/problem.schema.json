@@ -1,0 +1,467 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://onemath.local/schemas/problem.schema.json",
+  "title": "Problem",
+  "description": "Schema for a single OneMath problem entry.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "grade",
+    "module",
+    "question",
+    "solutions",
+    "variant",
+    "tags"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": { "type": "integer", "minimum": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "grade": {
+      "enum": ["三年级", "四年级", "五年级", "六年级"]
+    },
+    "difficulty": {
+      "description": "Optional fine-grained tier within a grade (e.g. 基础/进阶/挑战)",
+      "type": "string",
+      "minLength": 1
+    },
+    "topic": {
+      "description": "Canonical problem type, e.g. 鸡兔同笼、盈亏问题、周期问题",
+      "type": "string",
+      "minLength": 1
+    },
+    "module": {
+      "enum": [
+        "calc",
+        "geometry",
+        "numberTheory",
+        "word",
+        "travel",
+        "counting",
+        "misc"
+      ]
+    },
+    "question": { "type": "string", "minLength": 1 },
+    "figures": {
+      "description": "Optional SVG figures illustrating the problem statement.",
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/figure" }
+    },
+    "solutions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/solution" }
+    },
+    "variant": { "$ref": "#/definitions/variant" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "definitions": {
+    "figure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["svg"],
+      "properties": {
+        "svg": {
+          "description": "Inline SVG markup (must be a complete <svg>...</svg> element).",
+          "type": "string",
+          "minLength": 1
+        },
+        "caption": { "type": "string" },
+        "alt": { "type": "string" }
+      }
+    },
+    "solution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["key", "label", "steps"],
+      "properties": {
+        "key": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1 },
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "scenes": {
+          "type": "array",
+          "items": {
+            "oneOf": [{ "type": "null" }, { "$ref": "#/definitions/scene" }]
+          }
+        }
+      }
+    },
+    "variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["question", "fields", "answer"],
+      "properties": {
+        "question": { "type": "string", "minLength": 1 },
+        "fields": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/practiceField" }
+        },
+        "answer": {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [
+              { "type": "number" },
+              { "type": "string" },
+              { "type": "boolean" },
+              {
+                "type": "array",
+                "items": {
+                  "type": ["number", "string", "boolean"]
+                }
+              }
+            ]
+          }
+        },
+        "hint": { "type": "string" }
+      }
+    },
+    "practiceField": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["key", "label"],
+      "properties": {
+        "key": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1 },
+        "type": { "enum": ["number", "text"] },
+        "placeholder": { "type": "string" },
+        "enum": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "tickGroup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["count"],
+      "properties": {
+        "count": { "type": "integer", "minimum": 0 },
+        "tone": { "enum": ["default", "primary", "accent", "muted"] }
+      }
+    },
+    "headsFragment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["count"],
+      "properties": {
+        "count": { "type": "integer", "minimum": 0 },
+        "ticks": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/tickGroup" }
+        },
+        "tone": { "enum": ["default", "primary", "accent", "muted"] },
+        "caption": { "type": "string" },
+        "captionTone": { "enum": ["default", "primary", "accent", "muted"] }
+      }
+    },
+    "compareRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "value", "max"],
+      "properties": {
+        "label": { "type": "string" },
+        "value": { "oneOf": [{ "type": "number" }, { "type": "string" }] },
+        "max": { "type": "number" },
+        "tone": { "enum": ["default", "primary", "accent", "muted"] },
+        "marker": { "type": "boolean" }
+      }
+    },
+    "resultBadge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["icon", "count"],
+      "properties": {
+        "icon": { "type": "string" },
+        "count": { "oneOf": [{ "type": "number" }, { "type": "string" }] },
+        "label": { "type": "string" }
+      }
+    },
+    "numberLinePoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value"],
+      "properties": {
+        "value": { "type": "number" },
+        "label": { "type": "string" },
+        "sublabel": { "type": "string" },
+        "tone": { "enum": ["default", "primary", "accent", "muted"] }
+      }
+    },
+    "equationRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lhs"],
+      "properties": {
+        "lhs": { "type": "string", "minLength": 1 },
+        "rhs": { "type": "string" },
+        "note": { "type": "string" },
+        "badge": { "type": "string" },
+        "status": { "enum": ["keep", "cancel", "neutral"] }
+      }
+    },
+    "statementRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["speaker", "claim"],
+      "properties": {
+        "speaker": { "type": "string", "minLength": 1 },
+        "claim": { "type": "string", "minLength": 1 },
+        "verdict": { "enum": ["unknown", "true", "false"] },
+        "badge": { "type": "string" },
+        "highlight": { "enum": ["contradiction", "target", "muted"] }
+      }
+    },
+    "numberLineSegment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to"],
+      "properties": {
+        "from": { "type": "number" },
+        "to": { "type": "number" },
+        "label": { "type": "string" },
+        "tone": { "enum": ["default", "primary", "accent", "muted"] }
+      }
+    },
+    "scene": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "heads"],
+          "properties": {
+            "kind": { "const": "heads" },
+            "heads": { "$ref": "#/definitions/headsFragment" },
+            "caption": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "lattice"],
+          "properties": {
+            "kind": { "const": "lattice" },
+            "lattice": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["rows", "cols"],
+              "properties": {
+                "rows": { "type": "integer", "minimum": 1 },
+                "cols": { "type": "integer", "minimum": 1 },
+                "tone": { "enum": ["default", "primary", "accent", "muted"] }
+              }
+            },
+            "caption": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "left", "right"],
+          "properties": {
+            "kind": { "const": "heads-split" },
+            "left": { "$ref": "#/definitions/headsFragment" },
+            "right": { "$ref": "#/definitions/headsFragment" },
+            "caption": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "rows"],
+          "properties": {
+            "kind": { "const": "compare-bars" },
+            "rows": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/compareRow" }
+            },
+            "caption": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "items"],
+          "properties": {
+            "kind": { "const": "result-badges" },
+            "items": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/resultBadge" }
+            },
+            "separator": { "type": "string" },
+            "caption": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "min", "max", "points"],
+          "properties": {
+            "kind": { "const": "number-line" },
+            "min": { "type": "number" },
+            "max": { "type": "number" },
+            "points": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/numberLinePoint" }
+            },
+            "segments": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/numberLineSegment" }
+            },
+            "caption": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "face"],
+          "properties": {
+            "kind": { "const": "cube-net" },
+            "face": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["rows", "cols"],
+              "properties": {
+                "rows": { "type": "integer", "minimum": 1 },
+                "cols": { "type": "integer", "minimum": 1 },
+                "holes": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["row", "col"],
+                    "properties": {
+                      "row": { "type": "integer", "minimum": 0 },
+                      "col": { "type": "integer", "minimum": 0 }
+                    }
+                  }
+                }
+              }
+            },
+            "tone": { "enum": ["default", "primary", "accent", "muted"] },
+            "caption": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "rows"],
+          "properties": {
+            "kind": { "const": "statement-table" },
+            "rows": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "$ref": "#/definitions/statementRow" }
+            },
+            "headers": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "speaker": { "type": "string" },
+                "claim": { "type": "string" },
+                "verdict": { "type": "string" },
+                "badge": { "type": "string" }
+              }
+            },
+            "note": { "type": "string" },
+            "caption": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "rows"],
+          "properties": {
+            "kind": { "const": "equation-list" },
+            "rows": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "$ref": "#/definitions/equationRow" }
+            },
+            "note": { "type": "string" },
+            "caption": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "rows", "cols", "cells"],
+          "properties": {
+            "kind": { "const": "number-grid" },
+            "rows": { "type": "integer", "minimum": 1 },
+            "cols": { "type": "integer", "minimum": 1 },
+            "cells": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["row", "col", "value"],
+                "properties": {
+                  "row": { "type": "integer", "minimum": 0 },
+                  "col": { "type": "integer", "minimum": 0 },
+                  "value": {
+                    "oneOf": [{ "type": "string" }, { "type": "number" }]
+                  },
+                  "tone": {
+                    "enum": ["default", "primary", "accent", "muted"]
+                  }
+                }
+              }
+            },
+            "rowLabel": { "type": "string" },
+            "colLabel": { "type": "string" },
+            "cellSize": { "type": "number", "minimum": 1 },
+            "caption": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "svg"],
+          "properties": {
+            "kind": { "const": "svg" },
+            "svg": {
+              "description": "Inline SVG markup (must be a complete <svg>...</svg> element).",
+              "type": "string",
+              "minLength": 1
+            },
+            "alt": { "type": "string" },
+            "caption": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "removed", "added"],
+          "properties": {
+            "kind": { "const": "pit-diagram" },
+            "removed": {
+              "type": "array",
+              "items": {
+                "enum": ["top", "bottom", "front", "back", "left", "right"]
+              }
+            },
+            "added": {
+              "type": "array",
+              "items": {
+                "enum": ["top", "bottom", "front", "back", "left", "right"]
+              }
+            },
+            "caption": { "type": "string" }
+          }
+        }
+      ]
+    }
+  }
+}

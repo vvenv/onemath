@@ -1,0 +1,169 @@
+import { useEffect, useState } from "react";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
+import type { PracticeField, VariantAnswerValue } from "@/types/problem";
+
+type PracticeCardProps = {
+  prompt: string;
+  fields: PracticeField[];
+  answer: Record<string, VariantAnswerValue>;
+  hint?: string;
+};
+
+function matchesAnswer(input: string, expected: VariantAnswerValue): boolean {
+  const trimmed = input.trim();
+  if (typeof expected === "number") {
+    return trimmed !== "" && Number(trimmed) === expected;
+  }
+  if (typeof expected === "boolean") {
+    return trimmed === String(expected);
+  }
+  if (Array.isArray(expected)) {
+    return trimmed === expected.join(",");
+  }
+  return trimmed === expected;
+}
+
+function formatAnswer(expected: VariantAnswerValue): string {
+  return Array.isArray(expected) ? expected.join(", ") : String(expected);
+}
+
+export function PracticeCard({
+  prompt,
+  fields,
+  answer,
+  hint,
+}: PracticeCardProps) {
+  const [values, setValues] = useState<Record<string, string>>(() =>
+    Object.fromEntries(fields.map((f) => [f.key, ""])),
+  );
+  const [result, setResult] = useState<"correct" | "wrong" | null>(null);
+  const [showAnswer, setShowAnswer] = useState(false);
+
+  useEffect(() => {
+    setValues(Object.fromEntries(fields.map((f) => [f.key, ""])));
+    setResult(null);
+    setShowAnswer(false);
+  }, [fields]);
+
+  const checkAnswer = () => {
+    const allMatch = fields.every((f) =>
+      matchesAnswer(values[f.key] ?? "", answer[f.key]),
+    );
+    if (allMatch) {
+      setResult("correct");
+      setShowAnswer(false);
+      return;
+    }
+    setResult("wrong");
+    setShowAnswer(true);
+  };
+
+  const standardAnswer = fields
+    .map((f) => `${f.label} ${formatAnswer(answer[f.key])}`)
+    .join("，");
+
+  return (
+    <Card>
+      <CardContent>
+        <p className="mb-3 text-sm text-card-foreground">{prompt}</p>
+        <div className="flex flex-col gap-2">
+          {fields.map((field) => {
+            if (field.enum && field.enum.length > 0) {
+              const current = values[field.key] ?? "";
+              return (
+                <div
+                  key={field.key}
+                  role="radiogroup"
+                  aria-label={field.label}
+                  className="flex flex-wrap gap-1.5"
+                >
+                  {field.enum.map((option) => {
+                    const selected = current === option;
+                    return (
+                      <Button
+                        key={option}
+                        type="button"
+                        role="radio"
+                        aria-checked={selected}
+                        variant={selected ? "default" : "outline"}
+                        size="sm"
+                        onClick={() =>
+                          setValues((prev) => ({
+                            ...prev,
+                            [field.key]: option,
+                          }))
+                        }
+                      >
+                        {option}
+                      </Button>
+                    );
+                  })}
+                </div>
+              );
+            }
+            return (
+              <Input
+                key={field.key}
+                type={field.type ?? "number"}
+                inputMode={field.type === "text" ? "text" : "numeric"}
+                aria-label={field.label}
+                value={values[field.key] ?? ""}
+                onChange={(event) =>
+                  setValues((prev) => ({
+                    ...prev,
+                    [field.key]: event.target.value,
+                  }))
+                }
+                placeholder={field.placeholder ?? field.label}
+              />
+            );
+          })}
+        </div>
+        <div className="mt-2 flex items-center justify-between gap-2">
+          <Button type="button" variant="outline" onClick={checkAnswer}>
+            提交
+          </Button>
+          {result && (
+            <p
+              className={cn(
+                "text-xs font-medium",
+                result === "correct"
+                  ? "text-green-600 dark:text-green-400"
+                  : "text-red-600 dark:text-red-400",
+              )}
+            >
+              {result === "correct"
+                ? "回答正确，继续保持！"
+                : (hint ?? "再试一次，仔细检查。")}
+            </p>
+          )}
+        </div>
+
+        {result && (
+          <Accordion
+            type="single"
+            className="mt-3"
+            value={showAnswer ? "answer" : ""}
+            onValueChange={(value) => setShowAnswer(value === "answer")}
+            collapsible
+          >
+            <AccordionItem value="answer">
+              <AccordionTrigger>标准答案</AccordionTrigger>
+              <AccordionContent>标准答案：{standardAnswer}。</AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
