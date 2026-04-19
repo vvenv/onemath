@@ -1,7 +1,9 @@
-import { Link } from "react-router";
-import { ArrowLeft } from "lucide-react";
+import { Link, useNavigate } from "react-router";
+import { ArrowLeft, Shuffle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { getModule, type ModuleKey } from "@/lib/modules";
+import { getRandomProblem } from "@/lib/problems";
 import { cn } from "@/lib/utils";
 
 type ProblemHeaderProps = {
@@ -19,6 +21,11 @@ export function ProblemHeader({
   module,
   tags,
 }: ProblemHeaderProps) {
+  const navigate = useNavigate();
+  const handleShuffle = () => {
+    const next = getRandomProblem({ module, excludeId: id });
+    if (next) navigate(`/p/${next.id}`);
+  };
   const mod = module ? getModule(module) : undefined;
   const hasMeta = Boolean(grade || mod);
   const metaLabels = new Set(
@@ -43,6 +50,17 @@ export function ProblemHeader({
         <h1 className="font-heading text-xl leading-tight font-semibold tracking-tight text-foreground">
           {title}
         </h1>
+        <Button
+          type="button"
+          variant="ghost"
+          size="icon-sm"
+          onClick={handleShuffle}
+          className="ml-auto text-muted-foreground hover:text-foreground"
+          aria-label={mod ? `换一道${mod.label}题` : "随机换一题"}
+          title={mod ? `换一道${mod.label}题` : "随机换一题"}
+        >
+          <Shuffle />
+        </Button>
       </div>
       {hasMeta ? (
         <div className="flex flex-wrap gap-1.5">

@@ -3,6 +3,7 @@ import { Navigate, useParams, type MetaFunction } from "react-router";
 import { PracticeCard } from "@/components/practice-card";
 import { ProblemHeader } from "@/components/problem-header";
 import { QuestionCard } from "@/components/question-card";
+import { RelatedProblems } from "@/components/related-problems";
 import { SolutionTabs } from "@/components/solution-tabs";
 import { getProblemById } from "@/lib/problems";
 import type { ProblemData } from "@/types/problem";
@@ -57,6 +58,7 @@ export default function ProblemPage() {
           hint={problem.variant.hint}
         />
       </section>
+      <RelatedProblems key={`related-${problem.id}`} id={problem.id} />
     </div>
   );
 }
