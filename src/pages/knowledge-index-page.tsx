@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import { Link, type MetaFunction } from "react-router";
 
 import {
@@ -128,7 +128,6 @@ export default function KnowledgeIndexPage() {
                                 #{entry.tag}
                               </Badge>
                             ) : null}
-                            <ArrowRight className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
                           </CardTitle>
                           <CardDescription>{entry.summary}</CardDescription>
                         </CardHeader>
