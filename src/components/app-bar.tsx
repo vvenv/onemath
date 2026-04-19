@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Theme, getInitialTheme, setSelectedTheme } from "@/lib/theme";
+import { GlobalSearch } from "./global-search";
 import { Logo } from "./logo";
 
 export function AppBar() {
@@ -20,7 +21,7 @@ export function AppBar() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/70 backdrop-blur-md supports-backdrop-filter:bg-background/60">
-      <div className="mx-auto flex h-14 w-full max-w-3xl items-center gap-3 px-4">
+      <div className="relative mx-auto flex h-14 w-full max-w-3xl items-center gap-3 px-4">
         <Link
           to="/"
           aria-label="返回 edao.plus 首页"
@@ -35,6 +36,7 @@ export function AppBar() {
         </Link>
 
         <div className="ml-auto flex items-center gap-1">
+          <GlobalSearch />
           <Button
             type="button"
             variant="ghost"

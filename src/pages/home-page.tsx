@@ -3,7 +3,6 @@ import { Link } from "react-router";
 import { ChevronDown, Search, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { GRADES, MODULES, type ModuleKey } from "@/lib/modules";
 import { problems } from "@/lib/problems";
 import { cn } from "@/lib/utils";
@@ -29,7 +28,6 @@ type PersistedSearchState = {
   grade: Grade | null;
   difficulty: Difficulty | null;
   tag: string | null;
-  keyword: string;
   showMore: boolean;
 };
 
@@ -52,7 +50,6 @@ export default function HomePage() {
     null,
   );
   const [activeTag, setActiveTag] = useState<string | null>(null);
-  const [keyword, setKeyword] = useState("");
   const [showMore, setShowMore] = useState(false);
   const [restored, setRestored] = useState(false);
 
@@ -65,7 +62,6 @@ export default function HomePage() {
         if (s.grade !== undefined) setActiveGrade(s.grade);
         if (s.difficulty !== undefined) setActiveDifficulty(s.difficulty);
         if (s.tag !== undefined) setActiveTag(s.tag);
-        if (typeof s.keyword === "string") setKeyword(s.keyword);
         if (typeof s.showMore === "boolean") setShowMore(s.showMore);
       }
     } catch {
@@ -82,7 +78,6 @@ export default function HomePage() {
         grade: activeGrade,
         difficulty: activeDifficulty,
         tag: activeTag,
-        keyword,
         showMore,
       };
       sessionStorage.setItem("filter", JSON.stringify(payload));
@@ -95,7 +90,6 @@ export default function HomePage() {
     activeGrade,
     activeDifficulty,
     activeTag,
-    keyword,
     showMore,
   ]);
 
@@ -105,29 +99,15 @@ export default function HomePage() {
     return Array.from(set).sort((a, b) => a.localeCompare(b, "zh"));
   }, []);
 
-  const normalizedKeyword = keyword.trim().toLowerCase();
-
   const visibleProblems = useMemo(() => {
     return problems.filter((p) => {
       if (activeModule && p.module !== activeModule) return false;
       if (activeGrade && p.grade !== activeGrade) return false;
       if (activeDifficulty && p.difficulty !== activeDifficulty) return false;
       if (activeTag && !p.tags.includes(activeTag)) return false;
-      if (normalizedKeyword) {
-        const haystack = [p.title, p.question, p.tags.join(" "), `${p.id}`]
-          .join(" ")
-          .toLowerCase();
-        if (!haystack.includes(normalizedKeyword)) return false;
-      }
       return true;
     });
-  }, [
-    activeModule,
-    activeGrade,
-    activeDifficulty,
-    activeTag,
-    normalizedKeyword,
-  ]);
+  }, [activeModule, activeGrade, activeDifficulty, activeTag]);
 
   const moduleCounts = useMemo(() => {
     const counts = new Map<ModuleKey, number>();
@@ -151,58 +131,18 @@ export default function HomePage() {
     activeModule !== null ||
     activeGrade !== null ||
     activeDifficulty !== null ||
-    activeTag !== null ||
-    normalizedKeyword.length > 0;
+    activeTag !== null;
 
   const resetAll = () => {
     setActiveModule(null);
     setActiveGrade(null);
     setActiveDifficulty(null);
     setActiveTag(null);
-    setKeyword("");
   };
 
   return (
     <div className="flex flex-col gap-6">
       <section className="flex flex-col gap-4">
-        <div className="flex items-center gap-2">
-          <div className="relative flex-1 sm:w-64 sm:flex-none">
-            <Search className="pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2 text-muted-foreground" />
-            <Input
-              type="search"
-              value={keyword}
-              onChange={(e) => setKeyword(e.target.value)}
-              placeholder="搜索题目 / 方法 / 编号"
-              className="h-9 pl-8"
-              aria-label="关键字搜索"
-            />
-            {keyword ? (
-              <Button
-                type="button"
-                variant="ghost"
-                size="icon-sm"
-                aria-label="清空关键字"
-                onClick={() => setKeyword("")}
-                className="absolute top-1/2 right-1 -translate-y-1/2"
-              >
-                <X className="size-3.5" />
-              </Button>
-            ) : null}
-          </div>
-          {hasFilter ? (
-            <Button
-              type="button"
-              variant="ghost"
-              size="sm"
-              onClick={resetAll}
-              className="h-9 px-2 text-xs"
-            >
-              <X className="size-3.5" />
-              清空
-            </Button>
-          ) : null}
-        </div>
-
         <div className="flex flex-col gap-2">
           <FilterRow label="模块">
             {MODULES.map((m) => {
@@ -285,6 +225,18 @@ export default function HomePage() {
               />
               {showMore ? "收起筛选" : "更多筛选（难度 / 方法）"}
             </Button>
+            {hasFilter ? (
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                onClick={resetAll}
+                className="h-7 gap-1 px-2 text-xs text-muted-foreground"
+              >
+                <X className="size-3.5" />
+                清空
+              </Button>
+            ) : null}
             <span className="ml-auto tabular-nums">
               {visibleProblems.length}
               <span className="text-muted-foreground/70">
@@ -333,9 +285,7 @@ export default function HomePage() {
           <div className="flex flex-col items-center gap-2 rounded-2xl border border-dashed border-border/70 py-12 text-center">
             <Search className="size-6 text-muted-foreground" />
             <p className="text-sm font-medium">没有符合条件的题目</p>
-            <p className="text-xs text-muted-foreground">
-              试试调整筛选或清空关键字
-            </p>
+            <p className="text-xs text-muted-foreground">试试调整筛选</p>
             {hasFilter ? (
               <Button
                 type="button"
