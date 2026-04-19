@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router";
-import { ArrowLeft, Shuffle } from "lucide-react";
+import { ArrowLeft, Dices, Shuffle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getModule, type ModuleKey } from "@/lib/modules";
@@ -26,6 +26,10 @@ export function ProblemHeader({
     const next = getRandomProblem({ module, excludeId: id });
     if (next) navigate(`/p/${next.id}`);
   };
+  const handleShuffleAll = () => {
+    const next = getRandomProblem({ excludeId: id });
+    if (next) navigate(`/p/${next.id}`);
+  };
   const mod = module ? getModule(module) : undefined;
   const hasMeta = Boolean(grade || mod);
   const metaLabels = new Set(
@@ -50,17 +54,32 @@ export function ProblemHeader({
         <h1 className="font-heading text-xl leading-tight font-semibold tracking-tight text-foreground">
           {title}
         </h1>
-        <Button
-          type="button"
-          variant="ghost"
-          size="icon-sm"
-          onClick={handleShuffle}
-          className="ml-auto text-muted-foreground hover:text-foreground"
-          aria-label={mod ? `换一道${mod.label}题` : "随机换一题"}
-          title={mod ? `换一道${mod.label}题` : "随机换一题"}
-        >
-          <Shuffle />
-        </Button>
+        <div className="ml-auto flex items-center gap-1">
+          {mod ? (
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon-sm"
+              onClick={handleShuffle}
+              className="text-muted-foreground hover:text-foreground"
+              aria-label={`换一道${mod.label}题`}
+              title={`换一道${mod.label}题`}
+            >
+              <Shuffle />
+            </Button>
+          ) : null}
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon-sm"
+            onClick={handleShuffleAll}
+            className="text-muted-foreground hover:text-foreground"
+            aria-label="随机换一题（全部题目）"
+            title="随机换一题（全部题目）"
+          >
+            <Dices />
+          </Button>
+        </div>
       </div>
       {hasMeta ? (
         <div className="flex flex-wrap gap-1.5">
