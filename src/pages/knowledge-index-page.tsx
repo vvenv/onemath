@@ -20,7 +20,7 @@ import {
   knowledgeEntries,
   type KnowledgeCategory,
   type KnowledgeEntry,
-} from "@/lib/knowledge";
+} from "@/data/knowledge";
 
 export const meta: MetaFunction = () => [
   { title: "方法手册 - 一道 / edao.plus" },

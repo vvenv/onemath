@@ -24,7 +24,7 @@ import {
   getProblemsForKnowledge,
   knowledgeEntries,
   type KnowledgeEntry,
-} from "@/lib/knowledge";
+} from "@/data/knowledge";
 import { cn } from "@/lib/utils";
 
 export const meta: MetaFunction = ({ params }) => {

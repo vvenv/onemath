@@ -1,4 +1,4 @@
-import type { KnowledgeFigure } from "@/lib/knowledge/types";
+import type { KnowledgeFigure } from "@/data/knowledge/types";
 import { cn } from "@/lib/utils";
 
 type KnowledgeFiguresProps = {
@@ -6,7 +6,10 @@ type KnowledgeFiguresProps = {
   className?: string;
 };
 
-export function KnowledgeFigures({ figures, className }: KnowledgeFiguresProps) {
+export function KnowledgeFigures({
+  figures,
+  className,
+}: KnowledgeFiguresProps) {
   if (!figures.length) return null;
   return (
     <div

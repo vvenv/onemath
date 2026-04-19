@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
-import { resolveKnowledge } from "@/lib/knowledge";
+import { resolveKnowledge } from "@/data/knowledge";
 import { TAG_WHITELIST } from "@/lib/tags";
 import type { KnowledgePoint } from "@/types/problem";
 
