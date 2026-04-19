@@ -1,4 +1,6 @@
 import type { KnowledgeEntry } from "./types";
+import svg1 from "./figures/word-1.svg?raw";
+import svg2 from "./figures/word-2.svg?raw";
 
 export const wordEntries: KnowledgeEntry[] = [
   {
@@ -97,7 +99,7 @@ export const wordEntries: KnowledgeEntry[] = [
     relatedSlugs: ["hypothesis-method", "equation-method"],
     figures: [
       {
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="20" y="24" width="80" height="22" fill="currentColor" fill-opacity="0.12"/><rect x="20" y="64" width="120" height="22" fill="currentColor" fill-opacity="0.12"/><line x1="100" y1="46" x2="100" y2="98"/><line x1="140" y1="46" x2="140" y2="98"/><g fill="currentColor" stroke="none" font-size="11" font-family="sans-serif"><text x="4" y="40">乙</text><text x="4" y="80">甲</text><text x="104" y="110">多 6</text></g></svg>`,
+        svg: svg1,
         alt: "两条长短不同的线段图示和差问题",
         caption: "和差问题：两条线段差 6、总 30，一眼可见。",
       },
@@ -238,7 +240,7 @@ export const wordEntries: KnowledgeEntry[] = [
     relatedSlugs: ["drawing-method", "hypothesis-method"],
     figures: [
       {
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="20" y="24" width="40" height="22" fill="currentColor" fill-opacity="0.12"/><rect x="20" y="64" width="120" height="22" fill="currentColor" fill-opacity="0.12"/><line x1="60" y1="24" x2="60" y2="86"/><line x1="100" y1="64" x2="100" y2="86"/><line x1="140" y1="46" x2="140" y2="86"/><g fill="currentColor" stroke="none" font-size="11" font-family="sans-serif"><text x="4" y="40">乙</text><text x="4" y="80">甲</text><text x="64" y="110">多 2 格 = 16</text></g></svg>`,
+        svg: svg2,
         alt: "差倍问题的线段图",
         caption: "差倍：甲 3 格、乙 1 格，多出 2 格对应 16。",
       },

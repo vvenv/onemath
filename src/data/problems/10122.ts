@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10122-1.svg?raw";
 
 export default {
   "id": "10122",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，三角形 ABC 的面积为 1。D 在 BC 上，且 BC = 5·BD；E 在 AC 上，且 AC = 4·EC（即 AE = 3·EC）。连接 DE；在线段 DE 上取两点 G、S，使 DG = GS = SE（即 G、S 把 DE 三等分）。连接 AG 并在 AG 上取点 F，使 AF = FG（F 为 AG 的中点）。求三角形 FGS 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 280' font-size='11'><g fill='none' stroke='#1B4F72'><polygon points='40,240 390,240 110,30'/></g><g stroke='#5D6D7E' fill='none'><line x1='110' y1='30' x2='110' y2='240'/><line x1='110' y1='30' x2='110' y2='240'/></g><g stroke='#A93226' fill='none'><line x1='110' y1='240' x2='320' y2='82.5'/></g><g stroke='#5D6D7E' fill='none'><line x1='110' y1='30' x2='180' y2='187.5'/></g><g fill='#2E86C1'><circle cx='40' cy='240' r='3'/><circle cx='390' cy='240' r='3'/><circle cx='110' cy='30' r='3'/><circle cx='110' cy='240' r='3'/><circle cx='320' cy='82.5' r='3'/><circle cx='180' cy='187.5' r='3'/><circle cx='250' cy='135' r='3'/><circle cx='145' cy='108.75' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='32' y='255'>B</text><text x='398' y='255'>C</text><text x='110' y='22'>A</text><text x='110' y='256'>D</text><text x='332' y='80'>E</text><text x='172' y='204'>G</text><text x='260' y='150'>S</text><text x='132' y='105'>F</text></g><g fill='#566573' font-size='10' text-anchor='middle'><text x='80' y='255'>BC = 5BD</text><text x='275' y='235'>AC = 4EC</text><text x='235' y='205'>DG = GS = SE</text></g></svg>",
+      "svg": svg1,
       "caption": "△ABC 内部的多级比例点：D 把 BC 分 1:4；E 把 AC 分 3:1；G、S 三等分 DE；F 是 AG 的中点",
       "alt": "三角形 ABC 中多级比例点构成的小三角形 FGS"
     }

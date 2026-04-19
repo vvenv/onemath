@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10074-1.svg?raw";
 
 export default {
   "id": "10074",
@@ -9,7 +10,7 @@ export default {
   "question": "一条笔直的公路上自西向东有 5 个村子 A、B、C、D、E，它们到公路起点的距离（单位：千米）依次是 0、2、5、8、12。各村的住户数分别是 30、20、40、25、15 户。现在要在 A、B、C、D、E 中选一个村修建车站，使所有村的住户到车站的路程总和（住户数 × 该村到车站的距离，再求和）最小。应当选哪个村？最小总路程是多少（单位：户·千米）？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 130' font-size='13'><line x1='20' y1='70' x2='340' y2='70' stroke='#2E86C1'/><g fill='#d6eaf8' stroke='#2E86C1'><circle cx='30' cy='70' r='10'/><circle cx='70' cy='70' r='10'/><circle cx='130' cy='70' r='10'/><circle cx='190' cy='70' r='10'/><circle cx='270' cy='70' r='10'/></g><g fill='#1B4F72' text-anchor='middle'><text x='30' y='55'>A</text><text x='70' y='55'>B</text><text x='130' y='55'>C</text><text x='190' y='55'>D</text><text x='270' y='55'>E</text><text x='30' y='95'>0 km</text><text x='70' y='95'>2</text><text x='130' y='95'>5</text><text x='190' y='95'>8</text><text x='270' y='95'>12</text><text x='30' y='115'>30 户</text><text x='70' y='115'>20</text><text x='130' y='115'>40</text><text x='190' y='115'>25</text><text x='270' y='115'>15</text></g></svg>",
+      "svg": svg1,
       "caption": "5 个村子的位置（km）与住户数（户）",
       "alt": "公路沿线 5 个村子分布"
     }

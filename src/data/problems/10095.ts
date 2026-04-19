@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10095-1.svg?raw";
 
 export default {
   "id": "10095",
@@ -9,7 +10,7 @@ export default {
   "question": "把 1, 2, 3, 4, 5, 6, 7 这 7 个数字各用一次，填入如图 3 条过中心的直线上（共 1 个中心圆 + 3 × 2 = 6 个外围圆，共 7 个位置），使每条直线上 3 个数字之和都相等。问：中心圆里可以填哪些数字？并各写出一种对应的填法。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' font-size='12'><g stroke='#2E86C1' fill='none'><line x1='30' y1='110' x2='190' y2='110'/><line x1='53' y1='40' x2='167' y2='180'/><line x1='167' y1='40' x2='53' y2='180'/></g><g fill='#fdfefe' stroke='#2E86C1'><circle cx='30' cy='110' r='14'/><circle cx='190' cy='110' r='14'/><circle cx='53' cy='40' r='14'/><circle cx='167' cy='180' r='14'/><circle cx='167' cy='40' r='14'/><circle cx='53' cy='180' r='14'/><circle cx='110' cy='110' r='14'/></g></svg>",
+      "svg": svg1,
       "caption": "3 条过中心的直线，共 7 个圆",
       "alt": "米字形 7 圆"
     }

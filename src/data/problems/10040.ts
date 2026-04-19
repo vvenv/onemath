@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10040-1.svg?raw";
 
 export default {
   "id": "10040",
@@ -65,7 +66,7 @@ export default {
         },
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 150' width='400' height='150'><text x='200' y='30' font-size='14' fill='#333' text-anchor='middle' font-weight='bold'>翻转过程示例（3次操作）</text><!-- 初始 --><text x='60' y='60' font-size='11' fill='#666' text-anchor='middle'>初始</text><circle cx='40' cy='80' r='12' fill='none' stroke='#3498db'/><circle cx='60' cy='80' r='12' fill='none' stroke='#3498db'/><circle cx='80' cy='80' r='12' fill='none' stroke='#3498db'/><text x='40' y='84' font-size='10' fill='#3498db' text-anchor='middle'>↑</text><text x='60' y='84' font-size='10' fill='#3498db' text-anchor='middle'>↑</text><text x='80' y='84' font-size='10' fill='#3498db' text-anchor='middle'>↑</text><text x='130' y='70' font-size='16' fill='#666' text-anchor='middle'>→</text><!-- 第1次 --><text x='180' y='60' font-size='11' fill='#666' text-anchor='middle'>第1次</text><circle cx='160' cy='80' r='12' fill='#e74c3c' stroke='#e74c3c'/><circle cx='180' cy='80' r='12' fill='#e74c3c' stroke='#e74c3c'/><circle cx='200' cy='80' r='12' fill='#e74c3c' stroke='#e74c3c'/><text x='160' y='84' font-size='10' fill='#fff' text-anchor='middle'>↓</text><text x='180' y='84' font-size='10' fill='#fff' text-anchor='middle'>↓</text><text x='200' y='84' font-size='10' fill='#fff' text-anchor='middle'>↓</text><text x='250' y='70' font-size='16' fill='#666' text-anchor='middle'>→</text><!-- 最终 --><text x='330' y='60' font-size='11' fill='#666' text-anchor='middle'>最终</text><circle cx='300' cy='80' r='12' fill='#e74c3c' stroke='#e74c3c'/><circle cx='320' cy='80' r='12' fill='#e74c3c' stroke='#e74c3c'/><circle cx='340' cy='80' r='12' fill='#e74c3c' stroke='#e74c3c'/><circle cx='360' cy='80' r='12' fill='#e74c3c' stroke='#e74c3c'/><circle cx='380' cy='80' r='12' fill='#e74c3c' stroke='#e74c3c'/><text x='300' y='84' font-size='10' fill='#fff' text-anchor='middle'>↓</text><text x='320' y='84' font-size='10' fill='#fff' text-anchor='middle'>↓</text><text x='340' y='84' font-size='10' fill='#fff' text-anchor='middle'>↓</text><text x='360' y='84' font-size='10' fill='#fff' text-anchor='middle'>↓</text><text x='380' y='84' font-size='10' fill='#fff' text-anchor='middle'>↓</text><text x='200' y='130' font-size='12' fill='#27ae60' text-anchor='middle'>✅ 可以实现：经过奇数次操作后，所有杯子杯口朝下</text></svg>",
+          "svg": svg1,
           "caption": "翻转过程示意：每次翻转 3 个杯子，奇偶性必然改变"
         },
         {

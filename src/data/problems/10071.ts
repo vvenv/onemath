@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10071-1.svg?raw";
 
 export default {
   "id": "10071",
@@ -9,7 +10,7 @@ export default {
   "question": "用一口平底锅烙饼，锅里一次最多同时烙 2 张饼。每张饼有正反两面，每面都要烙 3 分钟才熟。现在要烙 3 张饼，最少需要多少分钟？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 130' font-size='14'><g><rect x='30' y='30' width='150' height='70' rx='18' fill='#fdfefe' stroke='#2E86C1'/><text x='105' y='120' text-anchor='middle' fill='#1B4F72'>平底锅（最多放 2 张饼）</text><circle cx='75' cy='65' r='20' fill='#f9e79f' stroke='#b9770e'/><circle cx='135' cy='65' r='20' fill='#f9e79f' stroke='#b9770e'/></g><g fill='#1B4F72' font-size='13'><text x='210' y='45'>共 3 张饼</text><text x='210' y='65'>每面 3 分钟</text><text x='210' y='85'>每张需烙 2 面</text></g></svg>",
+      "svg": svg1,
       "caption": "平底锅每次最多 2 张，单面 3 分钟",
       "alt": "平底锅烙饼示意"
     }

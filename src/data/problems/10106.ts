@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10106-1.svg?raw";
 
 export default {
   "id": "10106",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，两个正方形一大一小彼此嵌套，共有 8 个顶点（大正方形 4 个、小正方形 4 个）。把 1, 2, 3, 4, 5, 6, 7, 8 这 8 个数字各用一次填入这 8 个顶点，使『大正方形 4 顶点之和』等于『小正方形 4 顶点之和』。问：这个相等的和 S 必定等于多少？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' font-size='12'><g fill='none' stroke='#2E86C1'><rect x='30' y='30' width='160' height='160'/><rect x='70' y='70' width='80' height='80' transform='rotate(15 110 110)'/></g><g fill='#fdfefe' stroke='#2E86C1'><circle cx='30' cy='30' r='10'/><circle cx='190' cy='30' r='10'/><circle cx='30' cy='190' r='10'/><circle cx='190' cy='190' r='10'/><circle cx='82' cy='61' r='10'/><circle cx='159' cy='82' r='10'/><circle cx='61' cy='138' r='10'/><circle cx='138' cy='159' r='10'/></g></svg>",
+      "svg": svg1,
       "caption": "大小两个正方形共 8 个顶点",
       "alt": "嵌套正方形数阵"
     }

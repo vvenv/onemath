@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10066-1.svg?raw";
 
 export default {
   "id": "10066",
@@ -9,7 +10,7 @@ export default {
   "question": "甲、乙、丙、丁、戊 5 人站成一排拍照，要求甲不站在排头（最左端），乙不站在排尾（最右端）。一共有多少种不同的站法？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 90'><g font-size='18'><g stroke='#2E86C1' fill='#d6eaf8'><rect x='10' y='25' width='80' height='40'/><rect x='100' y='25' width='80' height='40'/><rect x='190' y='25' width='80' height='40'/><rect x='280' y='25' width='80' height='40'/><rect x='370' y='25' width='80' height='40'/></g><g fill='#1B4F72'><text x='30' y='52'>位 1</text><text x='120' y='52'>位 2</text><text x='210' y='52'>位 3</text><text x='300' y='52'>位 4</text><text x='390' y='52'>位 5</text></g><text x='10' y='82' font-size='13' fill='#C0392B'>甲 ✗</text><text x='370' y='82' font-size='13' fill='#C0392B'>乙 ✗</text></g></svg>",
+      "svg": svg1,
       "caption": "排头不能是甲，排尾不能是乙",
       "alt": "5个位置，1号位禁甲，5号位禁乙"
     }

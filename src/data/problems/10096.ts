@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10096-1.svg?raw";
 
 export default {
   "id": "10096",
@@ -9,7 +10,7 @@ export default {
   "question": "把 1 到 9 这 9 个数字各用一次，填入如图 4 条过中心的直线上（1 个中心圆 + 4 × 2 = 8 个外围圆），使每条直线 3 个数字之和都等于 15。请问中心圆里必须填几？并写出一种完整的填法。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' font-size='12'><g stroke='#2E86C1' fill='none'><line x1='30' y1='110' x2='190' y2='110'/><line x1='110' y1='30' x2='110' y2='190'/><line x1='53' y1='53' x2='167' y2='167'/><line x1='167' y1='53' x2='53' y2='167'/></g><g fill='#fdfefe' stroke='#2E86C1'><circle cx='30' cy='110' r='14'/><circle cx='190' cy='110' r='14'/><circle cx='110' cy='30' r='14'/><circle cx='110' cy='190' r='14'/><circle cx='53' cy='53' r='14'/><circle cx='167' cy='167' r='14'/><circle cx='167' cy='53' r='14'/><circle cx='53' cy='167' r='14'/><circle cx='110' cy='110' r='14'/></g></svg>",
+      "svg": svg1,
       "caption": "4 条过中心的直线，共 9 个圆",
       "alt": "四线共心辐射阵"
     }

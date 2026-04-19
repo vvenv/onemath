@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10043-1.svg?raw";
 
 export default {
   "id": "10043",
@@ -50,7 +51,7 @@ export default {
         },
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200' width='400' height='200'><text x='200' y='30' font-size='14' fill='#333' text-anchor='middle' font-weight='bold'>验证：24 和 18 的短除法</text><!-- 短除式 --><text x='100' y='60' font-size='16' fill='#333'>2 | 24  18</text><text x='100' y='85' font-size='16' fill='#333'>3 | 12   9</text><text x='100' y='110' font-size='16' fill='#333'>    4   3</text><text x='250' y='70' font-size='12' fill='#666'>最大公约数 = 2 × 3 = 6 ✓</text><text x='250' y='95' font-size='12' fill='#666'>最小公倍数 = 2 × 3 × 4 × 3 = 72 ✓</text><text x='200' y='160' font-size='14' fill='#27ae60' text-anchor='middle' font-weight='bold'>✅ 乙数 = 18</text></svg>",
+          "svg": svg1,
           "caption": "验证：24 和 18 的最大公约数为 6，最小公倍数为 72"
         },
         {

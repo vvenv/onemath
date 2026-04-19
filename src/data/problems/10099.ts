@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10099-1.svg?raw";
 
 export default {
   "id": "10099",
@@ -9,7 +10,7 @@ export default {
   "question": "把 7 个分数 1/8, 2/8, 3/8, 4/8, 5/8, 6/8, 7/8 各用一次，填入如图 3 条过中心的直线上（1 个中心圆 + 3 × 2 = 6 个外围圆），使每条直线上 3 个分数之和都相等。请问：中心圆必须填哪一个分数？此时每条直线的和 S 等于多少？并给出一种完整的填法。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' font-size='11'><g stroke='#2E86C1' fill='none'><line x1='30' y1='110' x2='190' y2='110'/><line x1='53' y1='40' x2='167' y2='180'/><line x1='167' y1='40' x2='53' y2='180'/></g><g fill='#fdfefe' stroke='#2E86C1'><circle cx='30' cy='110' r='16'/><circle cx='190' cy='110' r='16'/><circle cx='53' cy='40' r='16'/><circle cx='167' cy='180' r='16'/><circle cx='167' cy='40' r='16'/><circle cx='53' cy='180' r='16'/><circle cx='110' cy='110' r='16'/></g></svg>",
+      "svg": svg1,
       "caption": "3 条过中心的直线，7 个圆各填一个分数",
       "alt": "7 圆辐射阵"
     }

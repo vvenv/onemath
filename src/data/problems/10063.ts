@@ -1,4 +1,6 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10063-1.svg?raw";
+import svg2 from "./figures/10063-2.svg?raw";
 
 export default {
   "id": "10063",
@@ -9,7 +11,7 @@ export default {
   "question": "用 0、1、2、3、4、5 这 6 个数字组成没有重复数字的三位奇数。这样的三位奇数一共有多少个？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 130'><g font-size='18'><rect x='30' y='30' width='100' height='50' fill='#d6eaf8' stroke='#2E86C1'/><text x='55' y='60' fill='#1B4F72'>百位</text><rect x='150' y='30' width='100' height='50' fill='#d6eaf8' stroke='#2E86C1'/><text x='180' y='60' fill='#1B4F72'>十位</text><rect x='270' y='30' width='100' height='50' fill='#d6eaf8' stroke='#2E86C1'/><text x='295' y='60' fill='#1B4F72'>个位</text><text x='30' y='112' font-size='16' fill='#555'>可用数字：0  1  2  3  4  5（不重复）</text></g></svg>",
+      "svg": svg1,
       "caption": "三位数的百位、十位、个位",
       "alt": "三位数的三个数位示意"
     }
@@ -28,7 +30,7 @@ export default {
       "scenes": [
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 110'><g font-size='18'><rect x='30' y='30' width='100' height='50' fill='#d6eaf8' stroke='#2E86C1'/><text x='55' y='60' fill='#1B4F72'>百位</text><rect x='150' y='30' width='100' height='50' fill='#d6eaf8' stroke='#2E86C1'/><text x='180' y='60' fill='#1B4F72'>十位</text><rect x='270' y='30' width='100' height='50' fill='#fdebd0' stroke='#E67E22' stroke-dasharray='4 3'/><text x='295' y='60' fill='#B9770E'>个位</text><text x='30' y='100' font-size='13' fill='#C0392B'>不能填 0</text><text x='270' y='100' font-size='13' fill='#B9770E'>必须填 1/3/5</text></g></svg>",
+          "svg": svg2,
           "caption": "个位（必须奇数）和百位（不能为 0）是两个特殊位置，先处理它们",
           "alt": "特殊位置优先法示意：个位/百位限制"
         },

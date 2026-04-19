@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10107-1.svg?raw";
 
 export default {
   "id": "10107",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，一个三角形由 3 个顶点 + 3 个边中点 + 1 个中心点（三条中线的公共点）构成，共 7 个位置。把 1 到 7 各用一次填入这 7 个位置，要求满足以下两类条件都成立：(A) 三角形每条边上 3 个数字（两个顶点 + 1 个中点）之和都相等；(B) 从每个顶点出发经过中心到对边中点的 3 个位置（顶点 + 中心 + 对边中点）之和也都相等。\n请求出这两个公共和分别等于多少？中心点必须填几？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 220' font-size='12'><g stroke='#2E86C1' fill='none'><polygon points='120,30 30,190 210,190'/><line x1='120' y1='30' x2='120' y2='190'/><line x1='30' y1='190' x2='165' y2='110'/><line x1='210' y1='190' x2='75' y2='110'/></g><g fill='#fdfefe' stroke='#2E86C1'><circle cx='120' cy='30' r='11'/><circle cx='30' cy='190' r='11'/><circle cx='210' cy='190' r='11'/><circle cx='75' cy='110' r='11'/><circle cx='165' cy='110' r='11'/><circle cx='120' cy='190' r='11'/><circle cx='120' cy='130' r='11'/></g></svg>",
+      "svg": svg1,
       "caption": "三角形 3 顶点 + 3 边中点 + 1 中心 = 7 位置",
       "alt": "含中心的三角数阵"
     }

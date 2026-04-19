@@ -1,4 +1,6 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10118-1.svg?raw";
+import svg2 from "./figures/10118-2.svg?raw";
 
 export default {
   "id": "10118",
@@ -9,7 +11,7 @@ export default {
   "question": "如图，在三角形 ABC 中，E 在边 AB 上且 AB = 3AE；D 在边 AC 上且 AC = 2AD。已知三角形 ABC 的面积为 36，求三角形 AED 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 240' font-size='12'><g fill='none' stroke='#1B4F72'><polygon points='60,210 310,210 100,30'/><line x1='226.67' y1='210' x2='205' y2='120'/></g><g fill='#2E86C1'><circle cx='60' cy='210' r='3'/><circle cx='310' cy='210' r='3'/><circle cx='100' cy='30' r='3'/><circle cx='226.67' cy='210' r='3'/><circle cx='205' cy='120' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='52' y='225'>B</text><text x='318' y='225'>A</text><text x='100' y='22'>C</text><text x='227' y='204'>E</text><text x='212' y='118'>D</text></g><g fill='#566573' font-size='11' text-anchor='middle'><text x='140' y='225'>AB = 3 AE</text><text x='260' y='78'>AC = 2 AD</text></g></svg>",
+      "svg": svg1,
       "caption": "共角于 A：E 在 AB 上且 AB = 3AE；D 在 AC 上且 AC = 2AD",
       "alt": "三角形 ABC 中共顶点 A 的小三角形 AED"
     }
@@ -50,7 +52,7 @@ export default {
         },
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 240' font-size='11'><polygon points='60,210 310,210 100,30' fill='rgb(46 134 193 / 0.10)' stroke='#1B4F72'/><polygon points='310,210 226.67,210 205,120' fill='rgb(169 50 38 / 0.35)' stroke='#A93226'/><g fill='#2E86C1'><circle cx='60' cy='210' r='3'/><circle cx='310' cy='210' r='3'/><circle cx='100' cy='30' r='3'/><circle cx='226.67' cy='210' r='3'/><circle cx='205' cy='120' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='52' y='225'>B</text><text x='318' y='225'>A</text><text x='100' y='22'>C</text><text x='227' y='204'>E</text><text x='212' y='118'>D</text></g><g fill='#1B4F72' text-anchor='middle'><text x='150' y='180'>△ABC = 36</text><text x='250' y='180' fill='#A93226'>△AED = 6</text></g></svg>",
+          "svg": svg2,
           "caption": "△AED 占 △ABC 的 1/6"
         },
         {

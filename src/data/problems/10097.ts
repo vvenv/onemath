@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10097-1.svg?raw";
 
 export default {
   "id": "10097",
@@ -9,7 +10,7 @@ export default {
   "question": "把 1, 2, 3, …, 13 这 13 个数字各用一次，填入如图 4 条过中心的直线上（1 个中心圆 + 4 × 3 = 12 个外围圆，共 13 个位置），使每条直线上 4 个数字之和都相等。问：这个相等的和 S 有哪些可能的取值？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260' font-size='11'><g stroke='#2E86C1' fill='none'><line x1='40' y1='130' x2='220' y2='130'/><line x1='130' y1='40' x2='130' y2='220'/><line x1='66' y1='66' x2='194' y2='194'/><line x1='194' y1='66' x2='66' y2='194'/></g><g fill='#fdfefe' stroke='#2E86C1'><circle cx='40' cy='130' r='11'/><circle cx='175' cy='130' r='11'/><circle cx='220' cy='130' r='11'/><circle cx='130' cy='40' r='11'/><circle cx='130' cy='175' r='11'/><circle cx='130' cy='220' r='11'/><circle cx='66' cy='66' r='11'/><circle cx='162' cy='162' r='11'/><circle cx='194' cy='194' r='11'/><circle cx='194' cy='66' r='11'/><circle cx='162' cy='98' r='11'/><circle cx='66' cy='194' r='11'/><circle cx='130' cy='130' r='11'/></g></svg>",
+      "svg": svg1,
       "caption": "4 条过中心的直线，每线 4 格（中心 + 3 外围），共 13 个圆",
       "alt": "13 圆辐射阵：中心 1 个圆，4 条过中心的直线上各有 3 个外围圆，共 12 个外围圆"
     }

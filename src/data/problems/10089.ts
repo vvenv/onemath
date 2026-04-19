@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10089-1.svg?raw";
 
 export default {
   "id": "10089",
@@ -9,7 +10,7 @@ export default {
   "question": "把 1, 2, 3, …, 25 这 25 个数字各用一次，填入 5 × 5 方格中，使每一行、每一列、两条对角线上 5 个数之和都相等。问：这个公共和（幻和）是多少？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' font-size='12'><g fill='#fdfefe' stroke='#2E86C1'><rect x='20' y='20' width='180' height='180'/><g><line x1='56' y1='20' x2='56' y2='200'/><line x1='92' y1='20' x2='92' y2='200'/><line x1='128' y1='20' x2='128' y2='200'/><line x1='164' y1='20' x2='164' y2='200'/><line x1='20' y1='56' x2='200' y2='56'/><line x1='20' y1='92' x2='200' y2='92'/><line x1='20' y1='128' x2='200' y2='128'/><line x1='20' y1='164' x2='200' y2='164'/></g></g></svg>",
+      "svg": svg1,
       "caption": "空的 5×5 方格",
       "alt": "空的 5×5 方格"
     }

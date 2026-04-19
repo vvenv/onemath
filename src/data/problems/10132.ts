@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10132-1.svg?raw";
 
 export default {
   "id": "10132",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，长方形 ABCD 中 AB = 8，BC = 6。E 是 CD 的中点。连接 AE 与对角线 BD 相交于点 F。(1) 求 AF : FE；(2) 求三角形 ABF 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 230' font-size='12'><g fill='rgb(46 134 193 / 0.06)' stroke='#1B4F72'><rect x='30' y='30' width='240' height='160'/></g><g stroke='#5D6D7E' fill='none'><line x1='30' y1='30' x2='150' y2='190'/><line x1='30' y1='30' x2='270' y2='190'/></g><g fill='#2E86C1'><circle cx='30' cy='30' r='3'/><circle cx='270' cy='30' r='3'/><circle cx='270' cy='190' r='3'/><circle cx='30' cy='190' r='3'/><circle cx='150' cy='190' r='3'/><circle cx='110' cy='136.7' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='22' y='26'>A</text><text x='280' y='26'>B</text><text x='280' y='204'>C</text><text x='22' y='204'>D</text><text x='150' y='204'>E</text><text x='100' y='134'>F</text></g><g fill='#566573' font-size='11' text-anchor='middle'><text x='150' y='22'>AB = 8</text><text x='290' y='110'>BC = 6</text></g></svg>",
+      "svg": svg1,
       "caption": "长方形 ABCD，E 是 CD 的中点；AE 与 BD 交于 F",
       "alt": "长方形中点与对角线交点"
     }

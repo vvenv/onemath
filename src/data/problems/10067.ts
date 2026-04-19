@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10067-1.svg?raw";
 
 export default {
   "id": "10067",
@@ -9,7 +10,7 @@ export default {
   "question": "有 4 封信分别写给 4 位不同的收信人，对应有 4 个编号的信封（第 i 封信的“正确信封”就是编号为 i 的那个）。现在把这 4 封信装进 4 个信封里，每个信封恰好装 1 封。要求每封信都装错——即 4 封信全部都没有装进自己的正确信封。一共有多少种装法？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 110'><g font-size='16'><g stroke='#2E86C1' fill='#fdfefe'><rect x='10' y='20' width='90' height='60'/><rect x='120' y='20' width='90' height='60'/><rect x='230' y='20' width='90' height='60'/><rect x='340' y='20' width='90' height='60'/></g><g fill='#1B4F72' font-size='14'><text x='34' y='42'>信封 1</text><text x='144' y='42'>信封 2</text><text x='254' y='42'>信封 3</text><text x='364' y='42'>信封 4</text></g><g fill='#C0392B' font-size='14'><text x='30' y='70'>≠ 信 1</text><text x='140' y='70'>≠ 信 2</text><text x='250' y='70'>≠ 信 3</text><text x='360' y='70'>≠ 信 4</text></g></g></svg>",
+      "svg": svg1,
       "caption": "每个信封里装的信，编号都要与信封编号不同",
       "alt": "4封信全部错位装入4个信封"
     }

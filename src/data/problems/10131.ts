@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10131-1.svg?raw";
 
 export default {
   "id": "10131",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，正方形 ABCD 的边长为 6。E 是边 BC 的中点。连接 DE 与对角线 AC 相交于点 F。求三角形 DFC 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260' font-size='12'><g fill='rgb(46 134 193 / 0.06)' stroke='#1B4F72'><rect x='30' y='30' width='180' height='180'/></g><g stroke='#5D6D7E' fill='none'><line x1='30' y1='30' x2='210' y2='210'/><line x1='30' y1='210' x2='210' y2='120'/></g><g fill='rgb(169 50 38 / 0.25)' stroke='#A93226'><polygon points='30,210 150,150 210,210'/></g><g fill='#2E86C1'><circle cx='30' cy='30' r='3'/><circle cx='210' cy='30' r='3'/><circle cx='210' cy='210' r='3'/><circle cx='30' cy='210' r='3'/><circle cx='210' cy='120' r='3'/><circle cx='150' cy='150' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='22' y='26'>A</text><text x='220' y='26'>B</text><text x='220' y='226'>C</text><text x='22' y='226'>D</text><text x='222' y='124'>E</text><text x='160' y='148'>F</text></g></svg>",
+      "svg": svg1,
       "caption": "正方形 ABCD 边长 6；E 为 BC 中点；F = DE ∩ AC",
       "alt": "正方形内的中点连线与对角线交点"
     }

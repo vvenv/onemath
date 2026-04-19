@@ -1,4 +1,6 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10119-1.svg?raw";
+import svg2 from "./figures/10119-2.svg?raw";
 
 export default {
   "id": "10119",
@@ -9,7 +11,7 @@ export default {
   "question": "如图，在三角形 ABC 中，D 在 BA 的延长线上（即 A 在 B、D 之间），AB : AD = 5 : 2；E 在边 AC 上，AE : EC = 3 : 2。已知三角形 ADE 的面积为 12，求三角形 ABC 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 260' font-size='12'><g fill='none' stroke='#1B4F72'><polygon points='50,220 370,220 220,90'/></g><g stroke='#A93226' stroke-dasharray='4 3'><line x1='220' y1='90' x2='288' y2='38'/><line x1='288' y1='38' x2='310' y2='168'/></g><g fill='#2E86C1'><circle cx='50' cy='220' r='3'/><circle cx='370' cy='220' r='3'/><circle cx='220' cy='90' r='3'/><circle cx='288' cy='38' r='3'/><circle cx='310' cy='168' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='42' y='235'>B</text><text x='378' y='235'>C</text><text x='214' y='82'>A</text><text x='298' y='32'>D</text><text x='322' y='172'>E</text></g><g fill='#566573' font-size='11' text-anchor='middle'><text x='110' y='150'>AB : AD = 5 : 2</text><text x='310' y='130'>AE : EC = 3 : 2</text></g></svg>",
+      "svg": svg1,
       "caption": "D 在 BA 延长线（A 外侧），AB : AD = 5 : 2；E 在 AC 上，AE : EC = 3 : 2",
       "alt": "三角形外延伸一点 D 与三角形内一点 E 构成的小三角形"
     }
@@ -50,7 +52,7 @@ export default {
         },
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 260' font-size='11'><polygon points='50,220 370,220 220,90' fill='rgb(46 134 193 / 0.12)' stroke='#1B4F72'/><polygon points='220,90 288,38 310,168' fill='rgb(169 50 38 / 0.30)' stroke='#A93226'/><g fill='#2E86C1'><circle cx='50' cy='220' r='3'/><circle cx='370' cy='220' r='3'/><circle cx='220' cy='90' r='3'/><circle cx='288' cy='38' r='3'/><circle cx='310' cy='168' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='42' y='235'>B</text><text x='378' y='235'>C</text><text x='214' y='82'>A</text><text x='298' y='32'>D</text><text x='322' y='172'>E</text></g><g text-anchor='middle'><text x='150' y='200' fill='#1B4F72'>△ABC = 50</text><text x='278' y='108' fill='#A93226'>△ADE = 12</text></g></svg>",
+          "svg": svg2,
           "caption": "△ADE 占 △ABC 的 6/25"
         },
         {

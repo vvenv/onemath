@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10068-1.svg?raw";
 
 export default {
   "id": "10068",
@@ -9,7 +10,7 @@ export default {
   "question": "5 个小朋友围着一张圆桌坐下玩游戏。如果两种坐法可以通过整体旋转圆桌而互相重合，就看作同一种坐法（例如：大家都向左挪一个座位，不算新的一种）。那么一共有多少种不同的坐法？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'><circle cx='110' cy='110' r='70' fill='#fdfefe' stroke='#2E86C1'/><g font-size='16' fill='#1B4F72'><circle cx='110' cy='40' r='14' fill='#d6eaf8' stroke='#2E86C1'/><text x='104' y='45'>A</text><circle cx='177' cy='88' r='14' fill='#d6eaf8' stroke='#2E86C1'/><text x='171' y='93'>B</text><circle cx='150' cy='170' r='14' fill='#d6eaf8' stroke='#2E86C1'/><text x='144' y='175'>C</text><circle cx='70' cy='170' r='14' fill='#d6eaf8' stroke='#2E86C1'/><text x='65' y='175'>D</text><circle cx='43' cy='88' r='14' fill='#d6eaf8' stroke='#2E86C1'/><text x='38' y='93'>E</text></g></svg>",
+      "svg": svg1,
       "caption": "围圆桌而坐，旋转看作同一种",
       "alt": "5人围圆桌"
     }

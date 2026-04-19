@@ -1,4 +1,6 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10030-1.svg?raw";
+import svg2 from "./figures/10030-2.svg?raw";
 
 export default {
   "id": "10030",
@@ -11,7 +13,7 @@ export default {
     {
       "alt": "机器零件横截面示意图",
       "caption": "横截面：长方形带上方和左侧两个凸起的正方形。",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-30 -30 370 250' width='100%'><path d='M60 60 L120 60 L120 0 L180 0 L180 60 L300 60 L300 180 L60 180 L60 150 L0 150 L0 90 L60 90 Z' fill='rgb(59 130 246 / 0.12)' stroke='currentColor' stroke-linejoin='round'/><text x='180' y='205' text-anchor='middle' font-size='12' fill='currentColor'>12 厘米</text><text x='325' y='130' text-anchor='middle' font-size='12' fill='currentColor' transform='rotate(90 325 120)'>6 厘米</text><text x='150' y='-10' text-anchor='middle' font-size='11' fill='currentColor'>3 厘米</text><text x='-15' y='120' text-anchor='middle' font-size='11' fill='currentColor' transform='rotate(-90 -15 120)'>3 厘米</text><text x='192' y='35' font-size='10' fill='currentColor' opacity='0.75'>3</text><text x='30' y='145' text-anchor='middle' font-size='10' fill='currentColor' opacity='0.75'>3</text></svg>"
+      "svg": svg1
     }
   ],
   "solutions": [
@@ -53,7 +55,7 @@ export default {
           "kind": "svg",
           "alt": "平移法补齐后的大长方形示意图",
           "caption": "平移后，原图形的周长等价于外接大长方形（绿色）的周长：15 × 9 厘米。",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-30 -30 370 250' width='100%'><path d='M60 60 L120 60 L120 0 L180 0 L180 60 L300 60 L300 180 L60 180 L60 150 L0 150 L0 90 L60 90 Z' fill='rgb(59 130 246 / 0.08)' stroke='currentColor' stroke-linejoin='round' stroke-dasharray='4 3'/><rect x='0' y='0' width='300' height='180' fill='rgb(16 185 129 / 0.10)' stroke='rgb(16 185 129)'/><path d='M120 60 L120 0 M180 0 L180 60 M60 150 L0 150 M0 90 L60 90' stroke='rgb(59 130 246)' stroke-dasharray='3 3' fill='none'/><path d='M120 0 L180 0' stroke='rgb(239 68 68)' fill='none'/><path d='M0 90 L0 150' stroke='rgb(239 68 68)' fill='none'/><text x='150' y='205' text-anchor='middle' font-size='12' fill='rgb(16 185 129)'>长 = 12 + 3 = 15 厘米</text><text x='325' y='100' text-anchor='middle' font-size='12' fill='rgb(16 185 129)' transform='rotate(90 325 90)'>宽 = 6 + 3 = 9 厘米</text></svg>"
+          "svg": svg2
         },
         {
           "kind": "compare-bars",

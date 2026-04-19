@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10109-1.svg?raw";
 
 export default {
   "id": "10109",
@@ -9,7 +10,7 @@ export default {
   "question": "把 1, 2, 3 这 3 个数字填入 3×3 方格，使每行、每列都恰好出现 1, 2, 3 各一次（即 3 阶拉丁方）。此外还要满足以下 5 条不等号约束：(1) (1,1) < (1,2)(2) (2,1) > (2,2)(3) (3,2) < (3,3)(4) (1,3) > (2,3)(5) (2,2) > (3,2)\n请给出满足上述所有条件的填法（可以证明此填法唯一）。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' font-size='12'><g fill='#fdfefe' stroke='#2E86C1'><rect x='20' y='20' width='160' height='160'/><line x1='73' y1='20' x2='73' y2='180'/><line x1='127' y1='20' x2='127' y2='180'/><line x1='20' y1='73' x2='180' y2='73'/><line x1='20' y1='127' x2='180' y2='127'/></g><g fill='#1B4F72' text-anchor='middle'><text x='73' y='53' font-size='18'>&lt;</text><text x='73' y='106' font-size='18'>&gt;</text><text x='127' y='160' font-size='18'>&lt;</text><text x='153' y='79' font-size='18'>∨</text><text x='100' y='133' font-size='18'>∨</text></g></svg>",
+      "svg": svg1,
       "caption": "3×3 方格及 5 条不等号约束位置（&lt;, &gt; 为行方向；∨ 为列方向，尖端指向较小者）",
       "alt": "含不等号的数阵"
     }

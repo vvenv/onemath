@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10136-1.svg?raw";
 
 export default {
   "id": "10136",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，正方形 ABCD 的面积为 120。E 是 AB 的中点，F 是 BC 的中点。连接 AF 与 CE 相交于点 G。求三角形 BGF 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260' font-size='12'><g fill='rgb(46 134 193 / 0.06)' stroke='#1B4F72'><rect x='30' y='30' width='180' height='180'/></g><g stroke='#5D6D7E' fill='none'><line x1='30' y1='30' x2='210' y2='120'/><line x1='210' y1='210' x2='120' y2='30'/></g><g fill='rgb(169 50 38 / 0.28)' stroke='#A93226'><polygon points='210,30 210,120 150,90'/></g><g fill='#2E86C1'><circle cx='30' cy='30' r='3'/><circle cx='210' cy='30' r='3'/><circle cx='210' cy='210' r='3'/><circle cx='30' cy='210' r='3'/><circle cx='120' cy='30' r='3'/><circle cx='210' cy='120' r='3'/><circle cx='150' cy='90' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='22' y='26'>A</text><text x='220' y='26'>B</text><text x='220' y='226'>C</text><text x='22' y='226'>D</text><text x='120' y='22'>E</text><text x='222' y='124'>F</text><text x='142' y='102'>G</text></g></svg>",
+      "svg": svg1,
       "caption": "正方形 ABCD 面积 120；E、F 分别是 AB、BC 中点；G = AF ∩ CE（红色为 △BGF）",
       "alt": "正方形内两条中点连线的交点与外围小三角形"
     }

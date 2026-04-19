@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10098-1.svg?raw";
 
 export default {
   "id": "10098",
@@ -9,7 +10,7 @@ export default {
   "question": "把 1, 2, 3, …, 10 这 10 个数字各用一次填入一个『十』字形的 10 个格子中：横排 5 个格子、竖排 6 个格子，中间 1 格被横与竖共用。要求横排 5 数之和等于 26，竖排 6 数之和等于 30。请问：中间那一格（横竖共用）必须填几？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 280' font-size='14'><g fill='#fdfefe' stroke='#2E86C1'><rect x='20' y='120' width='220' height='40'/><rect x='110' y='20' width='40' height='240'/></g></svg>",
+      "svg": svg1,
       "caption": "十字形 10 格（横 5 + 竖 6 − 共用 1 = 10）",
       "alt": "十字形 10 格"
     }

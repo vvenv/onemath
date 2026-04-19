@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10100-1.svg?raw";
 
 export default {
   "id": "10100",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，一个三角形有 3 个顶点和 3 条边上的中点，共 6 个位置。把 1, 2, 3, 4, 5, 6 这 6 个数字各用一次填入这 6 个位置，使三角形每条边上 3 个数（两个顶点 + 1 个中点）的和都相等。问：这个相等的边和 S 可能的取值有几种？请各写出一种填法。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 220' font-size='14'><g stroke='#2E86C1' fill='none'><polygon points='120,30 30,190 210,190'/></g><g fill='#fdfefe' stroke='#2E86C1'><circle cx='120' cy='30' r='12'/><circle cx='30' cy='190' r='12'/><circle cx='210' cy='190' r='12'/><circle cx='75' cy='110' r='12'/><circle cx='165' cy='110' r='12'/><circle cx='120' cy='190' r='12'/></g></svg>",
+      "svg": svg1,
       "caption": "三角形 3 顶点 + 3 边中点 = 6 个位置",
       "alt": "三角形数阵 6 个位置"
     }

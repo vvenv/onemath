@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10086-1.svg?raw";
 
 export default {
   "id": "10086",
@@ -9,7 +10,7 @@ export default {
   "question": "把 1, 3, 5, 7, 9, 11, 13, 15, 17 这 9 个连续奇数各用一次，填入一个 3 × 3 的方格中，使每一行、每一列、两条对角线上三个数之和都相等。问：这个公共和（幻和）是多少？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 120' font-size='14'><g fill='#1B4F72' text-anchor='middle'><text x='120' y='45'>1, 3, 5, 7, 9, 11, 13, 15, 17</text><text x='120' y='80' font-size='12' fill='#555'>（9 个连续奇数，每个用一次，填入 3×3 方格）</text></g></svg>",
+      "svg": svg1,
       "caption": "9 个待填奇数",
       "alt": "待填数字列表"
     }

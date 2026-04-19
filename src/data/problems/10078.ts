@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10078-1.svg?raw";
 
 export default {
   "id": "10078",
@@ -9,7 +10,7 @@ export default {
   "question": "某车间生产甲、乙两种产品。生产 1 件甲需要 4 小时机器工时和 2 千克原料，可获利 7 元；生产 1 件乙需要 2 小时机器工时和 3 千克原料，可获利 5 元。本月共有 40 小时机器工时和 30 千克原料可供使用；产量必须是非负整数。问最多能获得多少元利润？对应的甲、乙分别生产多少件？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 150' font-size='13'><g fill='#d6eaf8' stroke='#2E86C1'><rect x='20' y='20' width='150' height='50' rx='6'/><rect x='20' y='80' width='150' height='50' rx='6'/><rect x='200' y='20' width='140' height='110' rx='6'/></g><g fill='#1B4F72'><text x='35' y='40'>甲：4 h / 2 kg / 7 元</text><text x='35' y='60'>乙：2 h / 3 kg / 5 元</text><text x='35' y='100'>工时上限 40 h</text><text x='35' y='120'>原料上限 30 kg</text><text x='215' y='45'>求最大利润</text><text x='215' y='70'>和对应产量</text><text x='215' y='100'>整数件数</text></g></svg>",
+      "svg": svg1,
       "caption": "两种产品的资源消耗、利润和可用资源",
       "alt": "生产条件与约束"
     }

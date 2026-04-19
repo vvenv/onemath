@@ -1,4 +1,6 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10126-1.svg?raw";
+import svg2 from "./figures/10126-2.svg?raw";
 
 export default {
   "id": "10126",
@@ -9,7 +11,7 @@ export default {
   "question": "如图，正六边形 ABCDEF 的面积为 1。连接对角线 AC 与 BD，它们相交于点 P。求三角形 BCP 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-150 -150 300 300' font-size='12'><g fill='rgb(46 134 193 / 0.08)' stroke='#1B4F72'><polygon points='100,0 50,-86.6 -50,-86.6 -100,0 -50,86.6 50,86.6'/></g><g stroke='#A93226' fill='none'><line x1='100' y1='0' x2='-50' y2='-86.6'/><line x1='50' y1='-86.6' x2='-100' y2='0'/></g><g fill='#2E86C1'><circle cx='100' cy='0' r='3'/><circle cx='50' cy='-86.6' r='3'/><circle cx='-50' cy='-86.6' r='3'/><circle cx='-100' cy='0' r='3'/><circle cx='-50' cy='86.6' r='3'/><circle cx='50' cy='86.6' r='3'/><circle cx='0' cy='-57.7' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='112' y='4'>A</text><text x='56' y='-96'>B</text><text x='-58' y='-96'>C</text><text x='-115' y='4'>D</text><text x='-58' y='102'>E</text><text x='56' y='102'>F</text><text x='0' y='-37' fill='#A93226'>P</text></g></svg>",
+      "svg": svg1,
       "caption": "正六边形 ABCDEF；对角线 AC 与 BD 交于 P",
       "alt": "正六边形内两条对角线的交点"
     }
@@ -56,7 +58,7 @@ export default {
         },
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-150 -150 300 300' font-size='11'><polygon points='100,0 50,-86.6 -50,-86.6 -100,0 -50,86.6 50,86.6' fill='rgb(46 134 193 / 0.06)' stroke='#1B4F72'/><polygon points='100,0 50,-86.6 -50,-86.6 -100,0' fill='rgb(241 196 15 / 0.20)' stroke='#B7950B'/><polygon points='50,-86.6 -50,-86.6 0,-57.7' fill='rgb(169 50 38 / 0.35)' stroke='#A93226'/><g fill='#2E86C1'><circle cx='100' cy='0' r='2.5'/><circle cx='50' cy='-86.6' r='2.5'/><circle cx='-50' cy='-86.6' r='2.5'/><circle cx='-100' cy='0' r='2.5'/><circle cx='-50' cy='86.6' r='2.5'/><circle cx='50' cy='86.6' r='2.5'/><circle cx='0' cy='-57.7' r='2.5'/></g><g fill='#1B4F72' text-anchor='middle' font-size='12'><text x='112' y='4'>A</text><text x='56' y='-96'>B</text><text x='-58' y='-96'>C</text><text x='-115' y='4'>D</text><text x='-58' y='102'>E</text><text x='56' y='102'>F</text><text x='0' y='-40' fill='#A93226'>P</text></g><g fill='#1B4F72' text-anchor='middle' font-size='10'><text x='0' y='-10'>梯形 ABCD = 1/2</text><text x='0' y='-90' fill='#A93226'>△BCP = 1/18</text></g></svg>",
+          "svg": svg2,
           "caption": "黄色区域是梯形 ABCD，红色小三角是 △BCP"
         },
         {

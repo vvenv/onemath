@@ -1,4 +1,11 @@
 import type { KnowledgeEntry } from "./types";
+import birdHeadModelSvg from "./figures/bird-head-model.svg?raw";
+import areaMethodSvg from "./figures/area-method.svg?raw";
+import equalAreaTransformationSvg from "./figures/equal-area-transformation.svg?raw";
+import butterflyModelSvg from "./figures/butterfly-model.svg?raw";
+import similarityModelSvg from "./figures/similarity-model.svg?raw";
+import swallowtailModelSvg from "./figures/swallowtail-model.svg?raw";
+import pythagoreanTheoremSvg from "./figures/pythagorean-theorem.svg?raw";
 
 export const geometryEntries: KnowledgeEntry[] = [
   {
@@ -50,7 +57,7 @@ export const geometryEntries: KnowledgeEntry[] = [
     relatedSlugs: [],
     figures: [
       {
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 140" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="50,20 30,120 200,120"/><line x1="40" y1="70" x2="125" y2="70"/><g fill="currentColor" stroke="none" font-size="11" font-family="serif"><text x="52" y="18">A</text><text x="16" y="130">B</text><text x="202" y="130">C</text><text x="24" y="74">D</text><text x="130" y="74">E</text></g></svg>`,
+        svg: birdHeadModelSvg,
         alt: "A 字型共角三角形",
         caption: "共角 ∠A：△ADE 与 △ABC 共享顶点与夹角。",
       },
@@ -106,7 +113,7 @@ export const geometryEntries: KnowledgeEntry[] = [
     ],
     figures: [
       {
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 140" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="30,30 30,110 190,110"/><line x1="30" y1="30" x2="190" y2="110"/><line x1="30" y1="110" x2="62" y2="46" stroke-dasharray="4 3"/><polyline points="30,102 38,102 38,110"/><g fill="currentColor" stroke="none" font-size="11" font-family="serif"><text x="20" y="24">A</text><text x="20" y="126">B</text><text x="194" y="124">C</text><text x="64" y="44">H</text></g></svg>`,
+        svg: areaMethodSvg,
         alt: "直角三角形的两种底高表达",
         caption: "同一面积两种写法：½·AB·BC = ½·AC·BH。",
       },
@@ -156,7 +163,7 @@ export const geometryEntries: KnowledgeEntry[] = [
     relatedSlugs: ["area-method", "butterfly-model"],
     figures: [
       {
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="10" y1="30" x2="230" y2="30" stroke-dasharray="4 3"/><line x1="10" y1="110" x2="230" y2="110"/><polygon points="80,30 30,110 210,110"/><polygon points="180,30 30,110 210,110" stroke-dasharray="3 3"/><g fill="currentColor" stroke="none" font-size="11" font-family="serif"><text x="72" y="24">A</text><text x="184" y="24">A'</text><text x="20" y="122">B</text><text x="212" y="122">C</text></g></svg>`,
+        svg: equalAreaTransformationSvg,
         alt: "三角形顶点沿平行线平移",
         caption: "A 沿平行线滑到 A'：底与高不变，面积不变。",
       },
@@ -209,7 +216,7 @@ export const geometryEntries: KnowledgeEntry[] = [
     relatedSlugs: ["area-method", "equal-area-transformation"],
     figures: [
       {
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="60,30 180,30 210,110 30,110"/><line x1="60" y1="30" x2="210" y2="110"/><line x1="180" y1="30" x2="30" y2="110"/><g fill="currentColor" stroke="none" font-size="11" font-family="serif"><text x="54" y="24">A</text><text x="176" y="24">B</text><text x="214" y="122">C</text><text x="22" y="122">D</text><text x="116" y="58">O</text><text x="116" y="44">S₂</text><text x="76" y="82">S₁</text><text x="152" y="82">S₃</text><text x="114" y="104">S₄</text></g></svg>`,
+        svg: butterflyModelSvg,
         alt: "四边形两对角线分出的四块面积",
         caption: "对角相乘相等：S₁·S₃ = S₂·S₄。",
       },
@@ -261,7 +268,7 @@ export const geometryEntries: KnowledgeEntry[] = [
     relatedSlugs: ["butterfly-model", "swallowtail-model"],
     figures: [
       {
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="120,20 30,120 210,120"/><line x1="84" y1="60" x2="156" y2="60"/><g fill="currentColor" stroke="none" font-size="11" font-family="serif"><text x="122" y="16">A</text><text x="18" y="130">B</text><text x="214" y="130">C</text><text x="72" y="58">D</text><text x="160" y="58">E</text></g></svg>`,
+        svg: similarityModelSvg,
         alt: "金字塔型相似三角形",
         caption: "金字塔型：DE∥BC，△ADE ∽ △ABC。",
       },
@@ -302,7 +309,7 @@ export const geometryEntries: KnowledgeEntry[] = [
     relatedSlugs: ["bird-head-model", "area-method"],
     figures: [
       {
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 150" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="120,20 30,120 210,120"/><line x1="120" y1="20" x2="120" y2="120"/><line x1="30" y1="120" x2="120" y2="75" stroke-dasharray="3 3"/><line x1="210" y1="120" x2="120" y2="75" stroke-dasharray="3 3"/><circle cx="120" cy="75" r="2.8" fill="currentColor"/><g fill="currentColor" stroke="none" font-size="11" font-family="serif"><text x="122" y="16">A</text><text x="18" y="130">B</text><text x="214" y="130">C</text><text x="126" y="72">G</text><text x="124" y="138">D</text></g></svg>`,
+        svg: swallowtailModelSvg,
         alt: "三角形内点引线构成的燕尾图形",
         caption: "AG 延长交 BC 于 D：S△ABG : S△ACG = BD : DC。",
       },
@@ -343,7 +350,7 @@ export const geometryEntries: KnowledgeEntry[] = [
     relatedSlugs: ["area-method"],
     figures: [
       {
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="90,70 90,150 150,70"/><polygon points="90,70 90,150 10,150 10,70" fill="currentColor" fill-opacity="0.1"/><polygon points="90,70 150,70 150,10 90,10" fill="currentColor" fill-opacity="0.1"/><polygon points="90,150 150,70 230,130 170,210" fill="currentColor" fill-opacity="0.18"/><g fill="currentColor" stroke="none" font-size="12" font-family="serif"><text x="40" y="115">b²</text><text x="115" y="45">a²</text><text x="180" y="150">c²</text></g></svg>`,
+        svg: pythagoreanTheoremSvg,
         alt: "勾股定理三正方形示意",
         caption: "两直角边上正方形之和 = 斜边上正方形：a² + b² = c²。",
       },

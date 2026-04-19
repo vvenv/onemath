@@ -1,4 +1,6 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10062-1.svg?raw";
+import svg2 from "./figures/10062-2.svg?raw";
 
 export default {
   "id": "10062",
@@ -9,7 +11,7 @@ export default {
   "question": "把 10 个完全相同的苹果分给 3 个小朋友，要求每个小朋友至少分到 1 个苹果。一共有多少种不同的分法？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 460 110'><g font-size='22'><text x='10' y='42' fill='#C0392B'>🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎</text><text x='10' y='72' font-size='16' fill='#555'>共 10 个相同的苹果</text><text x='10' y='95' font-size='28'>🧒 🧒 🧒</text><text x='130' y='95' font-size='16' fill='#555'>分给 3 个小朋友</text></g></svg>",
+      "svg": svg1,
       "caption": "把 10 个相同的苹果分给 3 个小朋友",
       "alt": "10个苹果和3个小朋友"
     }
@@ -29,7 +31,7 @@ export default {
       "scenes": [
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 80'><g font-size='22'><text x='10' y='50' fill='#C0392B'>🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎</text><g stroke='#2E86C1'><line x1='160' y1='20' x2='160' y2='62'/><line x1='300' y1='20' x2='300' y2='62'/></g><text x='140' y='78' font-size='14' fill='#1B4F72'>隔板①</text><text x='280' y='78' font-size='14' fill='#1B4F72'>隔板②</text></g></svg>",
+          "svg": svg2,
           "caption": "在 10 个苹果形成的 9 个空隙里放 2 块隔板，把苹果切成 3 段",
           "alt": "隔板法示意：10个苹果+2块隔板"
         },

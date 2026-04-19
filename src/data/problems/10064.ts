@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10064-1.svg?raw";
 
 export default {
   "id": "10064",
@@ -9,7 +10,7 @@ export default {
   "question": "在由 4 行 5 列格点组成的方格网中（点共 4 × 5 = 20 个），小明要从左下角 A 走到右上角 B，每一步只能沿着格子线向右走一格或向上走一格。问从 A 到 B 一共有多少条不同的最短路径？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 200'><g stroke='#999' fill='none'><g><line x1='20' y1='20' x2='220' y2='20'/><line x1='20' y1='70' x2='220' y2='70'/><line x1='20' y1='120' x2='220' y2='120'/><line x1='20' y1='170' x2='220' y2='170'/><line x1='20' y1='20' x2='20' y2='170'/><line x1='70' y1='20' x2='70' y2='170'/><line x1='120' y1='20' x2='120' y2='170'/><line x1='170' y1='20' x2='170' y2='170'/><line x1='220' y1='20' x2='220' y2='170'/></g></g><circle cx='20' cy='170' r='5' fill='#2E86C1'/><text x='4' y='192' font-size='14' fill='#1B4F72'>A</text><circle cx='220' cy='20' r='5' fill='#C0392B'/><text x='225' y='18' font-size='14' fill='#C0392B'>B</text></svg>",
+      "svg": svg1,
       "caption": "4 行 5 列格点，每步只能向右或向上",
       "alt": "4行5列方格网"
     }

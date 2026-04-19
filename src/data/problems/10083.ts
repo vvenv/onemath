@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10083-1.svg?raw";
 
 export default {
   "id": "10083",
@@ -9,7 +10,7 @@ export default {
   "question": "甲、乙两人在一张圆形的桌面上轮流放置同一种大小的圆形硬币。每枚硬币都必须平放在桌面上，不能重叠、也不能放到桌外；甲先放，乙后放，如此交替。最后一个能再放下一枚硬币的人获胜（对方轮到时再也放不下，就算输）。请问甲是否有必胜策略？如果有，请说明第一步怎么放。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' font-size='13'><circle cx='100' cy='100' r='95' fill='#fdfefe' stroke='#2E86C1'/><circle cx='100' cy='100' r='3' fill='#b9770e'/></svg>",
+      "svg": svg1,
       "caption": "圆桌面，两人轮流放同样大小的硬币",
       "alt": "圆桌示意"
     }

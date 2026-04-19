@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10092-1.svg?raw";
 
 export default {
   "id": "10092",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，一张『阶数为 3 的正六边形阵』共有 19 个小格，按三个方向可排成一些直线：每个方向各有 5 条直线，长度分别为 3、4、5、4、3；一共 15 条直线。把 1, 2, 3, …, 19 每个数字恰好填入一个小格，使这 15 条直线上所含数字之和全部相等。问：这个公共和是多少？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' font-size='11'><g fill='#fdfefe' stroke='#2E86C1'><g><circle cx='80' cy='40' r='10'/><circle cx='110' cy='40' r='10'/><circle cx='140' cy='40' r='10'/><circle cx='65' cy='70' r='10'/><circle cx='95' cy='70' r='10'/><circle cx='125' cy='70' r='10'/><circle cx='155' cy='70' r='10'/><circle cx='50' cy='100' r='10'/><circle cx='80' cy='100' r='10'/><circle cx='110' cy='100' r='10'/><circle cx='140' cy='100' r='10'/><circle cx='170' cy='100' r='10'/><circle cx='65' cy='130' r='10'/><circle cx='95' cy='130' r='10'/><circle cx='125' cy='130' r='10'/><circle cx='155' cy='130' r='10'/><circle cx='80' cy='160' r='10'/><circle cx='110' cy='160' r='10'/><circle cx='140' cy='160' r='10'/></g></g></svg>",
+      "svg": svg1,
       "caption": "阶数 3 的六角形阵，共 19 格",
       "alt": "19 个圆圈排成六角阵"
     }

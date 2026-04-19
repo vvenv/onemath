@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10085-1.svg?raw";
 
 export default {
   "id": "10085",
@@ -9,7 +10,7 @@ export default {
   "question": "把 1, 2, 3, 4, 5, 6, 7, 8, 9 这 9 个数字各用一次，填入 3 × 3 方格中，使每一行、每一列以及两条对角线上的三个数之和都相等。问：每行（列、对角线）的三数之和是多少？并给出一种具体的填法。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180' font-size='14'><g fill='#fdfefe' stroke='#2E86C1'><rect x='30' y='30' width='120' height='120'/><line x1='70' y1='30' x2='70' y2='150'/><line x1='110' y1='30' x2='110' y2='150'/><line x1='30' y1='70' x2='150' y2='70'/><line x1='30' y1='110' x2='150' y2='110'/></g></svg>",
+      "svg": svg1,
       "caption": "待填的 3×3 九宫格",
       "alt": "空的 3×3 方格"
     }

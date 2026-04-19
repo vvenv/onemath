@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10133-1.svg?raw";
 
 export default {
   "id": "10133",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，长方形 ABCD 的面积为 12。E 在边 CD 上，且 DE : EC = 1 : 2。连接 AE 与对角线 BD 相交于点 F。求三角形 DEF 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 230' font-size='12'><g fill='rgb(46 134 193 / 0.06)' stroke='#1B4F72'><rect x='30' y='30' width='240' height='160'/></g><g stroke='#5D6D7E' fill='none'><line x1='30' y1='30' x2='110' y2='190'/><line x1='30' y1='30' x2='270' y2='190'/></g><g fill='rgb(169 50 38 / 0.25)' stroke='#A93226'><polygon points='30,190 110,190 90,150'/></g><g fill='#2E86C1'><circle cx='30' cy='30' r='3'/><circle cx='270' cy='30' r='3'/><circle cx='270' cy='190' r='3'/><circle cx='30' cy='190' r='3'/><circle cx='110' cy='190' r='3'/><circle cx='90' cy='150' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='22' y='26'>A</text><text x='280' y='26'>B</text><text x='280' y='204'>C</text><text x='22' y='204'>D</text><text x='110' y='204'>E</text><text x='82' y='148'>F</text></g></svg>",
+      "svg": svg1,
       "caption": "长方形 ABCD（面积 12）；E 在 CD 上，DE : EC = 1 : 2；AE 与 BD 交于 F（阴影为 △DEF）",
       "alt": "长方形内 AE 与 BD 相交形成的小三角形 DEF"
     }

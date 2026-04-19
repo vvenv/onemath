@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10104-1.svg?raw";
 
 export default {
   "id": "10104",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，5 个圆连成一串：相邻两圆各共享 1 个位置（共 4 个『共享格』），其余每圆各有 1 个独占格（共 5 个『独占格』）。总位置数 = 5 + 4 = 9。把 1, 2, 3, …, 9 各用一次填入这 9 格，使每个圆内 2 个或 3 个位置上的数字之和都相等（最左、最右圆有 2 格：1 独占 + 1 共享；中间 3 个圆有 3 格：1 独占 + 2 共享）。请求出这个相等的圆和 S 的最小可能值与最大可能值。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 120' font-size='12'><g fill='none' stroke='#2E86C1'><circle cx='50' cy='60' r='40'/><circle cx='110' cy='60' r='40'/><circle cx='170' cy='60' r='40'/><circle cx='230' cy='60' r='40'/><circle cx='290' cy='60' r='40'/></g></svg>",
+      "svg": svg1,
       "caption": "5 个圆串联，相邻 2 圆共享 1 格",
       "alt": "五圆连环示意"
     }

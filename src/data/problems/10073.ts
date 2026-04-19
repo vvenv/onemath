@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10073-1.svg?raw";
 
 export default {
   "id": "10073",
@@ -9,7 +10,7 @@ export default {
   "question": "一批工件共 5 件（A、B、C、D、E），每件都要先在机床甲上加工，再在机床乙上加工（顺序不能颠倒；同一机床一次只能加工一件）。各工件在两台机床上需要的时间（单位：小时）如下：| 工件 | 机床甲 | 机床乙 || --- | --- | --- || A | 3 | 6 || B | 7 | 2 || C | 4 | 7 || D | 5 | 3 || E | 6 | 4 |\n请合理安排 5 件工件在机床甲上的加工顺序，使全部完成的总工时最短。最短总工时是多少？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 150' font-size='14'><g fill='#d6eaf8' stroke='#2E86C1'><rect x='30' y='40' width='120' height='40' rx='6'/><rect x='210' y='40' width='120' height='40' rx='6'/></g><g fill='#1B4F72' text-anchor='middle'><text x='90' y='65'>机床甲</text><text x='270' y='65'>机床乙</text><text x='180' y='30'>工件先甲后乙</text></g><g stroke='#b9770e' fill='none'><path d='M150 60 L210 60' marker-end='url(#arr)'/></g><defs><marker id='arr' markerWidth='10' markerHeight='10' refX='8' refY='3' orient='auto'><path d='M0,0 L0,6 L9,3 z' fill='#b9770e'/></marker></defs></svg>",
+      "svg": svg1,
       "caption": "5 件工件必须先在甲上加工，再到乙上加工",
       "alt": "双工序流水线示意"
     }

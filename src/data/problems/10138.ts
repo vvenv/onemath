@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10138-1.svg?raw";
 
 export default {
   "id": "10138",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，三角形 ABC 中，D 是 AC 的中点，E、F 是 BC 的三等分点（BE = EF = FC，E 靠近 B）。连接 AE 与 BD 相交于点 M。已知 △ABC 的面积为 1，求四边形 CDMF 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 240' font-size='12'><g fill='none' stroke='#1B4F72'><polygon points='40,210 310,210 100,30'/></g><g stroke='#5D6D7E' fill='none'><line x1='100' y1='30' x2='130' y2='210'/><line x1='40' y1='210' x2='205' y2='120'/></g><g fill='rgb(241 196 15 / 0.32)' stroke='#B7950B'><polygon points='310,210 205,120 122.5,165 220,210'/></g><g fill='#2E86C1'><circle cx='40' cy='210' r='3'/><circle cx='310' cy='210' r='3'/><circle cx='100' cy='30' r='3'/><circle cx='205' cy='120' r='3'/><circle cx='130' cy='210' r='3'/><circle cx='220' cy='210' r='3'/><circle cx='122.5' cy='165' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='32' y='225'>B</text><text x='318' y='225'>C</text><text x='100' y='22'>A</text><text x='217' y='118'>D</text><text x='130' y='225'>E</text><text x='220' y='225'>F</text><text x='113' y='163'>M</text></g><g fill='#566573' font-size='11' text-anchor='middle'><text x='175' y='225'>BE = EF = FC</text><text x='265' y='80'>D 为 AC 中点</text></g></svg>",
+      "svg": svg1,
       "caption": "D 是 AC 中点；E、F 三等分 BC；M = AE ∩ BD（黄色为四边形 CDMF）",
       "alt": "三角形内中点 + 三等分点构造及围出的四边形"
     }

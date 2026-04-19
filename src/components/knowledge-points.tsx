@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import { Link } from "react-router";
 
 import {
@@ -72,7 +72,7 @@ export function KnowledgePoints({ points, tags }: KnowledgePointsProps) {
                   className="group flex items-center gap-2 border-b py-2.5 last:border-b-0"
                 >
                   <BookOpen className="size-4 shrink-0 text-muted-foreground" />
-                  <span className="font-medium group-hover:text-primary">
+                  <span className="font-medium group-hover:text-primary whitespace-nowrap">
                     {point.name}
                   </span>
                   {point.summary ? (
@@ -80,7 +80,6 @@ export function KnowledgePoints({ points, tags }: KnowledgePointsProps) {
                       {point.summary}
                     </span>
                   ) : null}
-                  <ArrowRight className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
                 </Link>
               ) : (
                 <AccordionItem key={point.key} value={point.key}>

@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10108-1.svg?raw";
 
 export default {
   "id": "10108",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，一个大圆上均匀分布 6 个位置 A, B, C, D, E, F；此外，3 条直径 AD、BE、CF 都过圆心（圆心是第 7 个位置 O）。共 7 个位置。把 1, 2, 3, 4, 5, 6, 7 各用一次填入这 7 格，要求：(A) 3 条直径上 3 个数字（两端 + 圆心）之和都相等；(B) 圆周上 6 个数字（A + B + … + F）之和等于某个指定值 K。\n如果规定 K = 21（圆周 6 数之和为 21），请求出圆心必须填几？每条直径的公共和 S 是多少？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240' font-size='12'><g fill='none' stroke='#2E86C1'><circle cx='120' cy='120' r='90'/><line x1='120' y1='30' x2='120' y2='210'/><line x1='42' y1='75' x2='198' y2='165'/><line x1='42' y1='165' x2='198' y2='75'/></g><g fill='#fdfefe' stroke='#2E86C1'><circle cx='120' cy='30' r='12'/><circle cx='120' cy='210' r='12'/><circle cx='42' cy='75' r='12'/><circle cx='198' cy='165' r='12'/><circle cx='42' cy='165' r='12'/><circle cx='198' cy='75' r='12'/><circle cx='120' cy='120' r='12'/></g></svg>",
+      "svg": svg1,
       "caption": "大圆 6 点 + 圆心 1 点 = 7 格；3 条直径",
       "alt": "圆周 + 直径的复合数阵"
     }

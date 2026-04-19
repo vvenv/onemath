@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10090-1.svg?raw";
 
 export default {
   "id": "10090",
@@ -9,7 +10,7 @@ export default {
   "question": "把 1, 2, 3, …, 36 这 36 个数字各用一次，填入 6 × 6 方格中，使每一行、每一列、两条对角线上 6 个数之和都相等。问：这个公共和（幻和）是多少？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' font-size='11'><g fill='#fdfefe' stroke='#2E86C1'><rect x='20' y='20' width='180' height='180'/><g><line x1='50' y1='20' x2='50' y2='200'/><line x1='80' y1='20' x2='80' y2='200'/><line x1='110' y1='20' x2='110' y2='200'/><line x1='140' y1='20' x2='140' y2='200'/><line x1='170' y1='20' x2='170' y2='200'/><line x1='20' y1='50' x2='200' y2='50'/><line x1='20' y1='80' x2='200' y2='80'/><line x1='20' y1='110' x2='200' y2='110'/><line x1='20' y1='140' x2='200' y2='140'/><line x1='20' y1='170' x2='200' y2='170'/></g></g></svg>",
+      "svg": svg1,
       "caption": "空的 6×6 方格",
       "alt": "空的 6×6 方格"
     }

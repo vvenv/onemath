@@ -1,4 +1,6 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10049-1.svg?raw";
+import svg2 from "./figures/10049-2.svg?raw";
 
 export default {
   "id": "10049",
@@ -22,12 +24,12 @@ export default {
       "scenes": [
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 170' width='520' height='170'><rect x='30' y='40' width='120' height='70' rx='8' fill='#dbeafe' stroke='#3b82f6'/><text x='90' y='70' font-size='14' text-anchor='middle' fill='#1e3a8a' font-weight='bold'>10% 溶液</text><text x='90' y='92' font-size='12' text-anchor='middle' fill='#1e3a8a'>x 克</text><rect x='190' y='40' width='120' height='70' rx='8' fill='#fee2e2' stroke='#ef4444'/><text x='250' y='70' font-size='14' text-anchor='middle' fill='#991b1b' font-weight='bold'>40% 溶液</text><text x='250' y='92' font-size='12' text-anchor='middle' fill='#991b1b'>x 克（等量）</text><text x='340' y='80' font-size='22' text-anchor='middle' fill='#374151'>→</text><rect x='370' y='40' width='130' height='70' rx='8' fill='#fef3c7' stroke='#f59e0b'/><text x='435' y='70' font-size='14' text-anchor='middle' fill='#78350f' font-weight='bold'>25% 溶液</text><text x='435' y='92' font-size='12' text-anchor='middle' fill='#78350f'>2x 克</text><text x='260' y='145' font-size='13' text-anchor='middle' fill='#374151'>等质量混合 → 浓度 = (10% + 40%) ÷ 2 = 25%</text></svg>",
+          "svg": svg1,
           "caption": "关键一步：把等量的 10% 与 40% 合并成一瓶 25% 的溶液"
         },
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 200' width='480' height='200'><text x='240' y='28' font-size='14' text-anchor='middle' fill='#111' font-weight='bold'>十字交叉法</text><text x='120' y='70' font-size='14' text-anchor='middle' fill='#b45309'>25%</text><text x='120' y='150' font-size='14' text-anchor='middle' fill='#1e40af'>20%</text><text x='240' y='115' font-size='16' text-anchor='middle' fill='#111' font-weight='bold'>22%</text><line x1='150' y1='75' x2='220' y2='105' stroke='#9ca3af'/><line x1='150' y1='145' x2='220' y2='115' stroke='#9ca3af'/><line x1='260' y1='105' x2='330' y2='75' stroke='#9ca3af'/><line x1='260' y1='115' x2='330' y2='145' stroke='#9ca3af'/><text x='380' y='70' font-size='14' text-anchor='middle' fill='#b45309'>22 − 20 = 2</text><text x='380' y='150' font-size='14' text-anchor='middle' fill='#1e40af'>25 − 22 = 3</text><text x='240' y='185' font-size='13' text-anchor='middle' fill='#374151'>所以 25% : 20% 的质量比 = 2 : 3</text></svg>",
+          "svg": svg2,
           "caption": "两溶液混合用十字交叉法：25% 与 20% 的质量比为 2 : 3"
         },
         {

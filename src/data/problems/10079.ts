@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10079-1.svg?raw";
 
 export default {
   "id": "10079",
@@ -9,7 +10,7 @@ export default {
   "question": "同一种商品，标价都是每件 20 元，三家超市有不同促销：- 甲店：每满 100 元立减 30 元（不足 100 元部分不再减）；- 乙店：所有商品一律按标价的 8 折出售；- 丙店：买 3 件送 1 件（付 3 件的钱即可得到 4 件）。\n小丽想买 5 件这种商品，在哪家店买最省钱？最少要花多少元？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 120' font-size='13'><g fill='#d6eaf8' stroke='#2E86C1'><rect x='15' y='20' width='100' height='80' rx='8'/><rect x='130' y='20' width='100' height='80' rx='8'/><rect x='245' y='20' width='100' height='80' rx='8'/></g><g fill='#1B4F72' text-anchor='middle'><text x='65' y='45'>甲店</text><text x='65' y='70'>满 100 减 30</text><text x='180' y='45'>乙店</text><text x='180' y='70'>全场 8 折</text><text x='295' y='45'>丙店</text><text x='295' y='70'>买 3 送 1</text><text x='180' y='112'>每件标价 20 元 · 需买 5 件</text></g></svg>",
+      "svg": svg1,
       "caption": "三家超市的促销方式",
       "alt": "三家店比价"
     }

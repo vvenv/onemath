@@ -33,3 +33,5 @@
 - Support dark mode: do not hard-code colors like `#000` or `black`/`white`. Use `currentColor` (or theme-aware CSS classes/variables) so strokes and fills adapt to light/dark themes.
 - Prefer the default `stroke-width` of `1`; do not specify `stroke-width` unless the design genuinely requires a different value.
 - Do not include newline characters inside SVG source (including inside `d` attributes or between elements in inline SVG strings); keep the SVG on a single line.
+- Store figure SVGs as separate `.svg` files colocated under `src/data/<problems|knowledge>/figures/`, not as inline string literals inside the TS data files. Import the raw markup via Vite's `?raw` suffix (e.g. `import svg1 from "./figures/10055-1.svg?raw";`) and reference the identifier from the `figures[].svg` / `scenes[].svg` fields.
+- Naming convention: `<file-stem>-<n>.svg` for problem/knowledge data files (e.g. `10055-1.svg`), or a descriptive slug when the figure has a stable name (e.g. `bird-head-model.svg`).

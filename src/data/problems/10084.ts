@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10084-1.svg?raw";
 
 export default {
   "id": "10084",
@@ -9,7 +10,7 @@ export default {
   "question": "一张 8 × 8 的国际象棋棋盘（按黑白相间涂色），去掉位于一条对角线上两端的两个方格（即左上角和右下角）。剩下 62 个方格。每张 1 × 2 的长方形骨牌恰好覆盖相邻的两个方格。问：能否用 31 张这样的骨牌，恰好不重不漏地覆盖剩下的 62 个方格？请说明理由。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' font-size='11'><g stroke='#2E86C1'><rect x='20' y='20' width='160' height='160' fill='#fdfefe'/></g><g><rect x='20' y='20' width='20' height='20' fill='#f1948a'/><rect x='160' y='160' width='20' height='20' fill='#f1948a'/></g><g fill='#d6eaf8'><rect x='40' y='20' width='20' height='20'/><rect x='80' y='20' width='20' height='20'/><rect x='120' y='20' width='20' height='20'/><rect x='160' y='20' width='20' height='20'/><rect x='20' y='40' width='20' height='20'/><rect x='60' y='40' width='20' height='20'/><rect x='100' y='40' width='20' height='20'/><rect x='140' y='40' width='20' height='20'/></g><g fill='#1B4F72' text-anchor='middle' font-size='10'><text x='100' y='195'>8 × 8 棋盘，去掉左上角与右下角（红）两格</text></g></svg>",
+      "svg": svg1,
       "caption": "原始棋盘与被去掉的两个方格",
       "alt": "去角棋盘示意"
     }

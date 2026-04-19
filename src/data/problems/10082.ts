@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10082-1.svg?raw";
 
 export default {
   "id": "10082",
@@ -9,7 +10,7 @@ export default {
   "question": "甲、乙两人轮流报数：甲先报，乙接着报。每人每次可以连着报 1 个、2 个或 3 个连续的自然数（例如上一次报到 7，这次可以只报 8，也可以报 8、9 或 8、9、10）。从 1 开始报起，谁报到 30，谁就获胜。问甲（先手）能否必胜？他第一次应当报到几？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 80' font-size='13'><g fill='#d6eaf8' stroke='#2E86C1'><rect x='10' y='30' width='340' height='30' rx='6'/></g><g fill='#1B4F72' text-anchor='middle'><text x='180' y='50'>1, 2, 3, … , 29, 30    每次报 1–3 个连续数</text></g></svg>",
+      "svg": svg1,
       "caption": "先报到 30 者胜",
       "alt": "抢数游戏说明"
     }

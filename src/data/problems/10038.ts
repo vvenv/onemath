@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10038-1.svg?raw";
 
 export default {
   "id": "10038",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，一条直线上有A、B、C、D、E共5个点。请问：（1）图中共有多少条线段？（2）如果从O点向这5个点各连一条射线，图中共有多少个角？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 60' width='500' height='60'><!-- 直线和点 --><line x1='30' y1='30' x2='470' y2='30' stroke='#333'/><circle cx='60' cy='30' r='4' fill='#e74c3c'/><text x='60' y='50' font-size='14' font-style='italic' fill='#e74c3c' text-anchor='middle'>A</text><circle cx='150' cy='30' r='4' fill='#e74c3c'/><text x='150' y='50' font-size='14' font-style='italic' fill='#e74c3c' text-anchor='middle'>B</text><circle cx='240' cy='30' r='4' fill='#e74c3c'/><text x='240' y='50' font-size='14' font-style='italic' fill='#e74c3c' text-anchor='middle'>C</text><circle cx='330' cy='30' r='4' fill='#e74c3c'/><text x='330' y='50' font-size='14' font-style='italic' fill='#e74c3c' text-anchor='middle'>D</text><circle cx='420' cy='30' r='4' fill='#e74c3c'/><text x='420' y='50' font-size='14' font-style='italic' fill='#e74c3c' text-anchor='middle'>E</text></svg>",
+      "svg": svg1,
       "caption": "直线上有A、B、C、D、E五个点",
       "alt": "一条直线上等距分布着5个点"
     }

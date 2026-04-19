@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10057-1.svg?raw";
 
 export default {
   "id": "10057",
@@ -9,7 +10,7 @@ export default {
   "question": "比较 2023/2024 和 2024/2025 的大小。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 90'><text x='20' y='45' font-size='28' fill='#333'>2023/2024  ○  2024/2025</text><text x='20' y='75' font-size='14' fill='#888'>在 ○ 处填入 &gt;、&lt; 或 =</text></svg>",
+      "svg": svg1,
       "caption": "比较两个分数的大小",
       "alt": "分数比较大小"
     }

@@ -1,4 +1,6 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10120-1.svg?raw";
+import svg2 from "./figures/10120-2.svg?raw";
 
 export default {
   "id": "10120",
@@ -9,7 +11,7 @@ export default {
   "question": "如图，平行四边形 ABCD 的面积为 2。把它的四条边依次向外延伸：在 AB 延长线上取 E，使 BE = AB；在 BC 延长线上取 F，使 CF = 2·CB；在 CD 延长线上取 G，使 DG = 3·DC；在 DA 延长线上取 H，使 AH = 4·AD。连接 EFGH 得到一个四边形。求四边形 EFGH 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-300 -360 500 640' font-size='11'><g fill='rgb(46 134 193 / 0.12)' stroke='#1B4F72'><polygon points='0,0 80,0 80,80 0,80'/></g><g fill='none' stroke='#A93226'><polygon points='160,0 80,240 -240,80 0,-320'/></g><g fill='none' stroke='#7F8C8D' stroke-dasharray='4 3'><line x1='80' y1='0' x2='160' y2='0'/><line x1='80' y1='80' x2='80' y2='240'/><line x1='0' y1='80' x2='-240' y2='80'/><line x1='0' y1='0' x2='0' y2='-320'/></g><g fill='#2E86C1'><circle cx='0' cy='0' r='3'/><circle cx='80' cy='0' r='3'/><circle cx='80' cy='80' r='3'/><circle cx='0' cy='80' r='3'/><circle cx='160' cy='0' r='3'/><circle cx='80' cy='240' r='3'/><circle cx='-240' cy='80' r='3'/><circle cx='0' cy='-320' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='-10' y='-5'>A</text><text x='85' y='-5'>B</text><text x='92' y='88'>C</text><text x='-10' y='88'>D</text><text x='170' y='-5'>E</text><text x='88' y='254'>F</text><text x='-255' y='78'>G</text><text x='-8' y='-328'>H</text></g></svg>",
+      "svg": svg1,
       "caption": "平行四边形 ABCD（阴影）及其四条边依次向外延伸得到的 E、F、G、H",
       "alt": "平行四边形及其四周延伸点构成的四边形"
     }
@@ -62,7 +64,7 @@ export default {
         },
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-300 -360 500 640' font-size='11'><polygon points='0,0 160,0 0,-320' fill='rgb(241 196 15 / 0.35)' stroke='none'/><polygon points='80,0 160,0 80,240' fill='rgb(26 188 156 / 0.35)' stroke='none'/><polygon points='80,80 80,240 -240,80' fill='rgb(142 68 173 / 0.30)' stroke='none'/><polygon points='0,80 -240,80 0,-320' fill='rgb(243 156 18 / 0.30)' stroke='none'/><polygon points='0,0 80,0 80,80 0,80' fill='rgb(46 134 193 / 0.30)' stroke='#1B4F72'/><polygon points='160,0 80,240 -240,80 0,-320' fill='none' stroke='#A93226'/><g fill='none' stroke='#7F8C8D' stroke-dasharray='4 3'><line x1='80' y1='0' x2='160' y2='0'/><line x1='80' y1='80' x2='80' y2='240'/><line x1='0' y1='80' x2='-240' y2='80'/><line x1='0' y1='0' x2='0' y2='-320'/></g><g fill='#2E86C1'><circle cx='0' cy='0' r='3'/><circle cx='80' cy='0' r='3'/><circle cx='80' cy='80' r='3'/><circle cx='0' cy='80' r='3'/><circle cx='160' cy='0' r='3'/><circle cx='80' cy='240' r='3'/><circle cx='-240' cy='80' r='3'/><circle cx='0' cy='-320' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='-10' y='-5'>A</text><text x='85' y='-5'>B</text><text x='92' y='88'>C</text><text x='-10' y='88'>D</text><text x='170' y='-5'>E</text><text x='88' y='254'>F</text><text x='-255' y='78'>G</text><text x='-8' y='-328'>H</text></g><g fill='#1B4F72' text-anchor='middle' font-size='10'><text x='40' y='45'>ABCD = 2</text><text x='60' y='-80'>△AHE = 8</text><text x='115' y='90'>△BEF = 3</text><text x='-30' y='150'>△CFG = 8</text><text x='-110' y='-60'>△DGH = 15</text></g></svg>",
+          "svg": svg2,
           "caption": "EFGH 拆成 ABCD + 四个共角三角形，面积依次为 2, 8, 3, 8, 15"
         },
         {

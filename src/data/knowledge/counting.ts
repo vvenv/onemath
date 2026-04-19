@@ -1,4 +1,6 @@
 import type { KnowledgeEntry } from "./types";
+import svg1 from "./figures/counting-1.svg?raw";
+import svg2 from "./figures/counting-2.svg?raw";
 
 export const countingEntries: KnowledgeEntry[] = [
   {
@@ -46,7 +48,7 @@ export const countingEntries: KnowledgeEntry[] = [
     relatedSlugs: ["parity"],
     figures: [
       {
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="90" cy="70" r="55" fill="currentColor" fill-opacity="0.12"/><circle cx="150" cy="70" r="55" fill="currentColor" fill-opacity="0.12"/><g fill="currentColor" stroke="none" font-size="12" font-family="serif"><text x="50" y="74">A</text><text x="182" y="74">B</text><text x="104" y="74">A∩B</text></g></svg>`,
+        svg: svg1,
         alt: "两圆相交的韦恩图",
         caption: "两圆相交处被数了两次，必须减去一次。",
       },
@@ -373,7 +375,7 @@ export const countingEntries: KnowledgeEntry[] = [
     relatedSlugs: ["bundling", "gap-insertion"],
     figures: [
       {
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60"><g fill="currentColor"><circle cx="20" cy="30" r="7"/><circle cx="40" cy="30" r="7"/><circle cx="60" cy="30" r="7"/></g><line x1="75" y1="10" x2="75" y2="50" stroke="currentColor" stroke-width="2.5"/><g fill="currentColor"><circle cx="90" cy="30" r="7"/><circle cx="110" cy="30" r="7"/><circle cx="130" cy="30" r="7"/><circle cx="150" cy="30" r="7"/></g><line x1="165" y1="10" x2="165" y2="50" stroke="currentColor" stroke-width="2.5"/><g fill="currentColor"><circle cx="180" cy="30" r="7"/><circle cx="200" cy="30" r="7"/><circle cx="220" cy="30" r="7"/></g></svg>`,
+        svg: svg2,
         alt: "10 球与 2 隔板分成三堆",
         caption: "10 个相同球 + 2 块隔板 → 分成 3 堆，一种分法对应一种选板方案。",
       },

@@ -6,7 +6,7 @@ import type { Config } from "@react-router/dev/config";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const problemsDir = path.resolve(__dirname, "./src/data/problems");
-const knowledgeDir = path.resolve(__dirname, "./src/lib/knowledge");
+const knowledgeDir = path.resolve(__dirname, "./src/data/knowledge");
 
 // Problem IDs come from the filename (e.g. `10001.ts` → `10001`) so we avoid
 // parsing TS source at config time.
@@ -15,7 +15,7 @@ const problemIds = readdirSync(problemsDir)
   .map((name) => name.replace(/\.ts$/, ""))
   .sort();
 
-// Knowledge entries are split by category under `src/lib/knowledge/*.ts`.
+// Knowledge entries are split by category under `src/data/knowledge/*.ts`.
 // Every entry still carries a literal `slug: "…"` field, so we can cheaply
 // collect them by regex without evaluating the modules.
 const knowledgeSlugs = readdirSync(knowledgeDir)

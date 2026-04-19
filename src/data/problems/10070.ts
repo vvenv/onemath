@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10070-1.svg?raw";
 
 export default {
   "id": "10070",
@@ -9,7 +10,7 @@ export default {
   "question": "同一个水龙头下，5 个人都要接水。他们各自接水用时分别为 1 分钟、6 分钟、3 分钟、5 分钟、4 分钟（每人只有一个水桶，水龙头一次只能供一个人用）。现在需要安排一个接水顺序，使所有人（从开始排队到自己接完水为止）花的时间之和最少。这个最小总时间是多少分钟？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 120' font-size='14'><g fill='#fdfefe' stroke='#2E86C1'><circle cx='30' cy='60' r='20'/><circle cx='90' cy='60' r='20'/><circle cx='150' cy='60' r='20'/><circle cx='210' cy='60' r='20'/><circle cx='270' cy='60' r='20'/><rect x='315' y='30' width='30' height='60' fill='#d6eaf8'/></g><g fill='#1B4F72' text-anchor='middle'><text x='30' y='65'>1</text><text x='90' y='65'>6</text><text x='150' y='65'>3</text><text x='210' y='65'>5</text><text x='270' y='65'>4</text><text x='330' y='65'>水</text></g></svg>",
+      "svg": svg1,
       "caption": "5 个人的接水用时（分钟），等待同一个水龙头",
       "alt": "5 个人排队接水"
     }

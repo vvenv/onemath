@@ -1,4 +1,6 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10054-1.svg?raw";
+import svg2 from "./figures/10054-2.svg?raw";
 
 export default {
   "id": "10054",
@@ -9,7 +11,7 @@ export default {
   "question": "一艘轮船从甲港开往乙港，顺水航行需要 4 小时，逆水返回需要 6 小时。已知甲、乙两港相距 120 千米。求这艘轮船在静水中的速度和水流的速度。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 550 160'><defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#333'/></marker></defs><line x1='30' y1='90' x2='520' y2='90' stroke='#333'/><circle cx='30' cy='90' r='6' fill='#2ecc71'/><text x='15' y='110' font-size='12' fill='#2ecc71'>甲港</text><circle cx='520' cy='90' r='6' fill='#e74c3c'/><text x='500' y='110' font-size='12' fill='#e74c3c'>乙港</text><text x='230' y='82' font-size='12' fill='#333'>相距 120 千米</text><line x1='120' y1='62' x2='260' y2='62' stroke='#3498db' marker-end='url(#arrow)'/><text x='150' y='54' font-size='11' fill='#3498db'>顺水 4 小时</text><line x1='430' y1='118' x2='290' y2='118' stroke='#e67e22' marker-end='url(#arrow)'/><text x='320' y='136' font-size='11' fill='#e67e22'>逆水 6 小时</text><line x1='60' y1='30' x2='120' y2='30' stroke='#27ae60' marker-end='url(#arrow)'/><text x='125' y='34' font-size='10' fill='#27ae60'>水流方向</text></svg>",
+      "svg": svg1,
       "caption": "轮船从甲港到乙港顺水4小时，返回逆水6小时",
       "alt": "甲港到乙港相距120千米，标注顺水4小时，逆水6小时"
     }
@@ -82,7 +84,7 @@ export default {
         },
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 200'><defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#333'/></marker></defs><text x='40' y='24' font-size='11' fill='#333'>顺水场景</text><rect x='50' y='40' width='60' height='36' fill='#3498db' rx='5'/><text x='62' y='64' font-size='14' fill='white'>船</text><line x1='10' y1='78' x2='490' y2='78' stroke='#7fb3d5' stroke-dasharray='4 3'/><line x1='135' y1='58' x2='215' y2='58' stroke='#27ae60' marker-end='url(#arrow)'/><text x='140' y='50' font-size='11' fill='#27ae60'>水流 5 km/h</text><text x='235' y='62' font-size='12' fill='#333'>顺水：25 + 5 = 30 km/h</text><text x='40' y='112' font-size='11' fill='#333'>逆水场景</text><rect x='50' y='128' width='60' height='36' fill='#e67e22' rx='5'/><text x='62' y='152' font-size='14' fill='white'>船</text><line x1='10' y1='166' x2='490' y2='166' stroke='#7fb3d5' stroke-dasharray='4 3'/><line x1='215' y1='146' x2='135' y2='146' stroke='#27ae60' marker-end='url(#arrow)'/><text x='145' y='138' font-size='11' fill='#27ae60'>水流 5 km/h</text><text x='235' y='150' font-size='12' fill='#333'>逆水：25 - 5 = 20 km/h</text></svg>",
+          "svg": svg2,
           "caption": "顺水：船速 + 水速；逆水：船速 - 水速"
         },
         {

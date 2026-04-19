@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10112-1.svg?raw";
 
 export default {
   "id": "10112",
@@ -9,7 +10,7 @@ export default {
   "question": "在一个 3 × 3 方格中填入 1 到 9 各一次。方格中含有 4 个 2 × 2 的子方格（左上、右上、左下、右下），每个子方格都包含 4 个格子。要求这 4 个 2 × 2 子方格内 4 数之和都相等，记为 S。问：S 的最小可能值是多少？请给出一种使 S 达到最小的具体填法。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' font-size='14'><g fill='#fdfefe' stroke='#2E86C1'><rect x='20' y='20' width='160' height='160'/><line x1='73' y1='20' x2='73' y2='180'/><line x1='127' y1='20' x2='127' y2='180'/><line x1='20' y1='73' x2='180' y2='73'/><line x1='20' y1='127' x2='180' y2='127'/></g></svg>",
+      "svg": svg1,
       "caption": "3×3 方格（含 4 个 2×2 子方）",
       "alt": "3×3 方格"
     }

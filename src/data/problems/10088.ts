@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10088-1.svg?raw";
 
 export default {
   "id": "10088",
@@ -9,7 +10,7 @@ export default {
   "question": "把 1, 2, 3, …, 16 这 16 个数字各用一次，填入 4 × 4 方格中，使每一行、每一列、两条对角线上四个数之和都相等。求这个公共和（幻和）。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' font-size='14'><g fill='#fdfefe' stroke='#2E86C1'><rect x='20' y='20' width='160' height='160'/><line x1='60' y1='20' x2='60' y2='180'/><line x1='100' y1='20' x2='100' y2='180'/><line x1='140' y1='20' x2='140' y2='180'/><line x1='20' y1='60' x2='180' y2='60'/><line x1='20' y1='100' x2='180' y2='100'/><line x1='20' y1='140' x2='180' y2='140'/></g></svg>",
+      "svg": svg1,
       "caption": "空的 4×4 方格，用 1–16 填入",
       "alt": "空的 4×4 方格"
     }

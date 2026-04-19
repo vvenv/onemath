@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10072-1.svg?raw";
 
 export default {
   "id": "10072",
@@ -9,7 +10,7 @@ export default {
   "question": "夜里，甲、乙、丙、丁 4 人要过一座独木桥。他们只有一只手电筒，过桥必须有手电筒照明；桥最多同时承受 2 人。两人同行时，速度要按较慢的那人算。甲、乙、丙、丁单独过桥各需 1、2、5、10 分钟。全部 4 人都过到对岸，至少需要多少分钟？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 140' font-size='14'><g fill='#d6eaf8' stroke='#2E86C1'><rect x='20' y='70' width='100' height='30' rx='6'/><rect x='240' y='70' width='100' height='30' rx='6'/></g><g stroke='#b9770e' stroke-width='3' fill='none'><line x1='120' y1='85' x2='240' y2='85'/></g><g fill='#1B4F72' text-anchor='middle'><text x='70' y='90'>此岸</text><text x='290' y='90'>对岸</text><text x='180' y='78'>独木桥</text></g><g fill='#1B4F72' font-size='13'><text x='30' y='35'>甲 1 min</text><text x='100' y='35'>乙 2 min</text><text x='180' y='35'>丙 5 min</text><text x='260' y='35'>丁 10 min</text></g></svg>",
+      "svg": svg1,
       "caption": "4 人单独过桥用时，一次最多 2 人，共用手电筒",
       "alt": "4 人过独木桥示意"
     }

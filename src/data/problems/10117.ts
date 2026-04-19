@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10117-1.svg?raw";
 
 export default {
   "id": "10117",
@@ -9,7 +10,7 @@ export default {
   "question": "如图，三角形 ABC 中，D 是 BC 的中点，E 在线段 AD 上且 AE : ED = 2 : 1。直线 BE 延长后与边 AC 相交于点 F。已知三角形 ABC 的面积为 60，求三角形 AEF 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 260' font-size='12'><g fill='none' stroke='#1B4F72'><polygon points='40,230 310,230 70,40'/></g><g stroke='#5D6D7E' fill='none'><line x1='70' y1='40' x2='175' y2='230'/><line x1='40' y1='230' x2='190' y2='135'/></g><g fill='#2E86C1'><circle cx='40' cy='230' r='3'/><circle cx='310' cy='230' r='3'/><circle cx='70' cy='40' r='3'/><circle cx='175' cy='230' r='3'/><circle cx='140' cy='166.7' r='3'/><circle cx='190' cy='135' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='32' y='245'>B</text><text x='318' y='245'>C</text><text x='70' y='32'>A</text><text x='175' y='246'>D</text><text x='128' y='162'>E</text><text x='200' y='132'>F</text></g><g fill='#566573' font-size='11' text-anchor='middle'><text x='110' y='245'>D 为 BC 中点</text><text x='190' y='180'>AE : ED = 2 : 1</text></g></svg>",
+      "svg": svg1,
       "caption": "D 是 BC 的中点；E 在 AD 上使 AE : ED = 2 : 1；F 是 BE 与 AC 的交点",
       "alt": "三角形内的中线与比例点及交点 F"
     }

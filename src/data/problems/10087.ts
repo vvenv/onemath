@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10087-1.svg?raw";
 
 export default {
   "id": "10087",
@@ -9,7 +10,7 @@ export default {
   "question": "下面是一个未填完的 3 × 3 幻方，所填数字取自 1–9 且每个数字只用一次，要求每行、每列、两条对角线上三数之和都相等。已知部分格子如下，请把其余格子填完。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180' font-size='16'><g fill='#fdfefe' stroke='#2E86C1'><rect x='30' y='30' width='120' height='120'/><line x1='70' y1='30' x2='70' y2='150'/><line x1='110' y1='30' x2='110' y2='150'/><line x1='30' y1='70' x2='150' y2='70'/><line x1='30' y1='110' x2='150' y2='110'/></g><g fill='#1B4F72' text-anchor='middle'><text x='130' y='56'>6</text><text x='90' y='96'>5</text><text x='130' y='96'>1</text><text x='50' y='136'>4</text></g></svg>",
+      "svg": svg1,
       "caption": "已知 4 个格子的三阶幻方",
       "alt": "部分已填三阶幻方"
     }

@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10056-1.svg?raw";
 
 export default {
   "id": "10056",
@@ -9,7 +10,7 @@ export default {
   "question": "计算：999 + 99 + 9",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 80'><text x='20' y='45' font-size='28' fill='#333'>999 + 99 + 9 = ?</text><text x='20' y='75' font-size='14' fill='#888'>观察：每个数都接近整十、整百、整千</text></svg>",
+      "svg": svg1,
       "caption": "凑整法：把接近整十、整百、整千的数先凑整，再调整",
       "alt": "算式 999 + 99 + 9"
     }

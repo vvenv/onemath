@@ -1,4 +1,5 @@
 import type { KnowledgeEntry } from "./types";
+import svg1 from "./figures/general-1.svg?raw";
 
 export const generalEntries: KnowledgeEntry[] = [
   {
@@ -130,7 +131,7 @@ export const generalEntries: KnowledgeEntry[] = [
     relatedSlugs: ["parity"],
     figures: [
       {
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130"><g fill="currentColor"><rect x="35" y="5" width="30" height="30"/><rect x="95" y="5" width="30" height="30"/><rect x="5" y="35" width="30" height="30"/><rect x="65" y="35" width="30" height="30"/><rect x="35" y="65" width="30" height="30"/><rect x="95" y="65" width="30" height="30"/><rect x="5" y="95" width="30" height="30"/><rect x="65" y="95" width="30" height="30"/></g><g stroke="currentColor" stroke-width="0.8" fill="none"><rect x="5" y="5" width="120" height="120"/><line x1="35" y1="5" x2="35" y2="125"/><line x1="65" y1="5" x2="65" y2="125"/><line x1="95" y1="5" x2="95" y2="125"/><line x1="5" y1="35" x2="125" y2="35"/><line x1="5" y1="65" x2="125" y2="65"/><line x1="5" y1="95" x2="125" y2="95"/><line x1="5" y1="5" x2="35" y2="35" stroke-width="1.5"/><line x1="35" y1="5" x2="5" y2="35" stroke-width="1.5"/><line x1="95" y1="95" x2="125" y2="125" stroke-width="1.5"/><line x1="125" y1="95" x2="95" y2="125" stroke-width="1.5"/></g></svg>`,
+        svg: svg1,
         alt: "去掉同色两角的棋盘",
         caption: "两个对角同色——去掉后黑白格数不相等，骨牌无法覆盖。",
       },
