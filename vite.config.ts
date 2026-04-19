@@ -10,10 +10,16 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // Silence Chrome DevTools' automatic probe for
 // `/.well-known/appspecific/com.chrome.devtools.json` so it doesn't spam the
 // dev server log with "No route matches URL" errors.
+// Also silence probe for /sw.js to prevent 404 errors.
 const silenceChromeDevtoolsProbe = {
   name: "silence-chrome-devtools-probe",
   configureServer(server: import("vite").ViteDevServer) {
     server.middlewares.use((req, res, next) => {
+      if (req.url?.startsWith("/sw.js")) {
+        res.statusCode = 204;
+        res.end();
+        return;
+      }
       if (req.url?.startsWith("/.well-known/appspecific/com.chrome.devtools")) {
         res.statusCode = 204;
         res.end();

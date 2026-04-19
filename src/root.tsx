@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
+import { themeScript } from "@/lib/theme";
+import { Analytics } from "@vercel/analytics/react";
 
 import "@/styles/globals.css";
-import { themeScript } from "./lib/theme";
 
 const pwaRegisterScript = `if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}`;
 
@@ -34,6 +35,7 @@ export function Layout({ children }: { children: ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+        <Analytics />
       </body>
     </html>
   );
