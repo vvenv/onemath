@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router";
-import { Search, SlidersHorizontal, Sparkles, X } from "lucide-react";
+import { ChevronDown, Search, X } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -40,6 +40,7 @@ export default function HomePage() {
   );
   const [activeTopic, setActiveTopic] = useState<string | null>(null);
   const [keyword, setKeyword] = useState("");
+  const [showMore, setShowMore] = useState(false);
 
   const topics = useMemo(() => {
     const set = new Set<string>();
@@ -112,44 +113,15 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <section className="relative overflow-hidden rounded-2xl border border-border/60 bg-linear-to-br from-primary/10 via-background to-background p-5">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-16 -right-16 h-48 w-48 rounded-full bg-primary/20 blur-3xl"
-        />
-        <div className="relative flex flex-col gap-3">
-          <Badge
-            variant="outline"
-            className="w-fit gap-1 border-primary/30 bg-primary/10 text-primary"
-          >
-            <Sparkles className="size-3" />
-            七大模块 · 四个年级
-          </Badge>
-          <h1 className="font-heading text-2xl font-semibold tracking-tight sm:text-3xl">
-            小学奥数题库
-          </h1>
-          <p className="max-w-prose text-sm text-muted-foreground">
-            按年级循序渐进，从典型应用题到综合建模，覆盖 计算 / 几何 / 数论 /
-            应用题 / 行程 / 计数 / 杂题。
-          </p>
-          <div className="mt-1 flex flex-wrap gap-2">
-            <StatPill label="题目" value={problems.length} />
-            <StatPill label="模块" value={MODULES.length} />
-            <StatPill label="年级" value={GRADES.length} />
-            <StatPill label="主题" value={topics.length} />
-          </div>
-        </div>
-      </section>
-
-      <section className="flex flex-col gap-3 rounded-2xl border border-border/60 bg-card/60 p-4 shadow-sm">
-        <div className="flex flex-wrap items-center gap-2">
-          <div className="relative flex-1 min-w-48">
+      <section className="flex flex-col gap-4">
+        <div className="flex items-center gap-2">
+          <div className="relative flex-1 sm:w-64 sm:flex-none">
             <Search className="pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2 text-muted-foreground" />
             <Input
               type="search"
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
-              placeholder="搜索题目 / 标签 / 题干 / 编号"
+              placeholder="搜索题目 / 标签 / 编号"
               className="h-9 pl-8"
               aria-label="关键字搜索"
             />
@@ -166,36 +138,22 @@ export default function HomePage() {
               </Button>
             ) : null}
           </div>
-          <Badge
-            variant="outline"
-            className="h-8 gap-1 rounded-full px-2.5 tabular-nums"
-          >
-            <SlidersHorizontal className="size-3" />
-            {visibleProblems.length}
-            <span className="text-muted-foreground">/ {problems.length}</span>
-          </Badge>
           {hasFilter ? (
             <Button
               type="button"
               variant="ghost"
               size="sm"
               onClick={resetAll}
-              className="h-8 px-2 text-xs"
+              className="h-9 px-2 text-xs"
             >
               <X className="size-3.5" />
-              清空筛选
+              清空
             </Button>
           ) : null}
         </div>
 
-        <div className="flex flex-col gap-2.5 border-t border-border/60 pt-3">
+        <div className="flex flex-col gap-2">
           <FilterRow label="模块">
-            <FilterChip
-              label="全部"
-              count={problems.length}
-              active={activeModule === null}
-              onClick={() => setActiveModule(null)}
-            />
             {MODULES.map((m) => {
               const count = moduleCounts.get(m.key) ?? 0;
               return (
@@ -203,7 +161,6 @@ export default function HomePage() {
                   key={m.key}
                   label={m.label}
                   count={count}
-                  accent={m.accent}
                   active={activeModule === m.key}
                   disabled={count === 0}
                   onClick={() =>
@@ -215,11 +172,6 @@ export default function HomePage() {
           </FilterRow>
 
           <FilterRow label="年级">
-            <FilterChip
-              label="全部"
-              active={activeGrade === null}
-              onClick={() => setActiveGrade(null)}
-            />
             {GRADES.map((g) => (
               <FilterChip
                 key={g.label}
@@ -234,43 +186,64 @@ export default function HomePage() {
             ))}
           </FilterRow>
 
-          <FilterRow label="难度">
-            <FilterChip
-              label="全部"
-              active={activeDifficulty === null}
-              onClick={() => setActiveDifficulty(null)}
-            />
-            {DIFFICULTIES.map((d) => (
-              <FilterChip
-                key={d}
-                label={d}
-                accent={DIFFICULTY_ACCENT[d]}
-                dot={DIFFICULTY_DOT[d]}
-                active={activeDifficulty === d}
-                onClick={() =>
-                  setActiveDifficulty(activeDifficulty === d ? null : d)
-                }
-              />
-            ))}
-          </FilterRow>
+          {showMore ? (
+            <>
+              <FilterRow label="难度">
+                {DIFFICULTIES.map((d) => (
+                  <FilterChip
+                    key={d}
+                    label={d}
+                    dot={DIFFICULTY_DOT[d]}
+                    active={activeDifficulty === d}
+                    onClick={() =>
+                      setActiveDifficulty(activeDifficulty === d ? null : d)
+                    }
+                  />
+                ))}
+              </FilterRow>
 
-          {topics.length > 0 ? (
-            <FilterRow label="主题">
-              <FilterChip
-                label="全部"
-                active={activeTopic === null}
-                onClick={() => setActiveTopic(null)}
-              />
-              {topics.map((t) => (
-                <FilterChip
-                  key={t}
-                  label={t}
-                  active={activeTopic === t}
-                  onClick={() => setActiveTopic(activeTopic === t ? null : t)}
-                />
-              ))}
-            </FilterRow>
+              {topics.length > 0 ? (
+                <FilterRow label="主题">
+                  {topics.map((t) => (
+                    <FilterChip
+                      key={t}
+                      label={t}
+                      active={activeTopic === t}
+                      onClick={() =>
+                        setActiveTopic(activeTopic === t ? null : t)
+                      }
+                    />
+                  ))}
+                </FilterRow>
+              ) : null}
+            </>
           ) : null}
+
+          <div className="flex items-center gap-2 pt-0.5 text-xs text-muted-foreground">
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={() => setShowMore((v) => !v)}
+              className="h-7 gap-1 px-2 text-xs text-muted-foreground"
+              aria-expanded={showMore}
+            >
+              <ChevronDown
+                className={cn(
+                  "size-3.5 transition-transform",
+                  showMore && "rotate-180",
+                )}
+              />
+              {showMore ? "收起筛选" : "更多筛选（难度 / 主题）"}
+            </Button>
+            <span className="ml-auto tabular-nums">
+              {visibleProblems.length}
+              <span className="text-muted-foreground/70">
+                {" "}
+                / {problems.length}
+              </span>
+            </span>
+          </div>
         </div>
       </section>
 
@@ -341,17 +314,6 @@ export default function HomePage() {
   );
 }
 
-function StatPill({ label, value }: { label: string; value: number }) {
-  return (
-    <div className="flex items-baseline gap-1 rounded-full border border-border/60 bg-background/60 px-3 py-1 text-xs backdrop-blur-sm">
-      <span className="font-heading text-sm font-semibold tabular-nums">
-        {value}
-      </span>
-      <span className="text-muted-foreground">{label}</span>
-    </div>
-  );
-}
-
 function FilterRow({
   label,
   children,
@@ -372,7 +334,6 @@ function FilterRow({
 type FilterChipProps = {
   label: string;
   count?: number;
-  accent?: string;
   dot?: string;
   active?: boolean;
   disabled?: boolean;
@@ -382,7 +343,6 @@ type FilterChipProps = {
 function FilterChip({
   label,
   count,
-  accent,
   dot,
   active,
   disabled,
@@ -397,34 +357,19 @@ function FilterChip({
       disabled={disabled}
       aria-pressed={active}
       className={cn(
-        "h-auto gap-1.5 rounded-full px-3 py-1 text-xs font-medium ring-1 ring-inset ring-transparent transition",
+        "h-7 gap-1.5 rounded-full px-2.5 text-xs font-medium ring-1 ring-inset ring-transparent transition",
         "disabled:cursor-not-allowed disabled:opacity-40",
         active
-          ? "bg-primary text-primary-foreground shadow-sm ring-primary hover:bg-primary hover:text-primary-foreground"
-          : accent
-            ? `${accent} hover:brightness-95 dark:hover:brightness-110`
-            : "bg-muted text-foreground ring-border/60 hover:bg-accent",
+          ? "bg-foreground text-background ring-foreground"
+          : "bg-transparent text-muted-foreground ring-border/60",
       )}
     >
       {dot ? (
-        <span
-          aria-hidden
-          className={cn(
-            "size-1.5 rounded-full",
-            active ? "bg-primary-foreground" : dot,
-          )}
-        />
+        <span aria-hidden className={cn("size-1.5 rounded-full", dot)} />
       ) : null}
       <span>{label}</span>
       {typeof count === "number" ? (
-        <span
-          className={cn(
-            "rounded-full px-1.5 text-[10px] leading-4 tabular-nums",
-            active ? "bg-primary-foreground/20" : "bg-background/70",
-          )}
-        >
-          {count}
-        </span>
+        <span className="tabular-nums">{count}</span>
       ) : null}
     </Button>
   );
