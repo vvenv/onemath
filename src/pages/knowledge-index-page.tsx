@@ -1,6 +1,13 @@
+import { useMemo } from "react";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { Link, type MetaFunction } from "react-router";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -43,12 +50,20 @@ const CATEGORY_LABEL: Record<KnowledgeCategory, string> = {
 };
 
 export default function KnowledgeIndexPage() {
-  const grouped = new Map<KnowledgeCategory, KnowledgeEntry[]>();
-  for (const e of knowledgeEntries) {
-    const list = grouped.get(e.category) ?? [];
-    list.push(e);
-    grouped.set(e.category, list);
-  }
+  const grouped = useMemo(() => {
+    const map = new Map<KnowledgeCategory, KnowledgeEntry[]>();
+    for (const e of knowledgeEntries) {
+      const list = map.get(e.category) ?? [];
+      list.push(e);
+      map.set(e.category, list);
+    }
+    return map;
+  }, []);
+
+  const visibleCategories = useMemo(
+    () => CATEGORY_ORDER.filter((cat) => (grouped.get(cat)?.length ?? 0) > 0),
+    [grouped],
+  );
 
   return (
     <div className="flex flex-col gap-5">
@@ -64,53 +79,69 @@ export default function KnowledgeIndexPage() {
         </p>
       </header>
 
-      {CATEGORY_ORDER.map((cat) => {
-        const list = grouped.get(cat);
-        if (!list || list.length === 0) return null;
-        return (
-          <section key={cat} className="flex flex-col gap-2">
-            <div className="flex items-baseline gap-2">
-              <h2 className="text-sm font-semibold tracking-tight text-foreground">
-                {CATEGORY_LABEL[cat]}
-              </h2>
-              <span className="text-xs tabular-nums text-muted-foreground">
-                {list.length}
-              </span>
-            </div>
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-              {list.map((entry) => (
-                <Link
-                  key={entry.slug}
-                  to={`/k/${entry.slug}`}
-                  className="group no-underline"
-                >
-                  <Card
-                    size="sm"
-                    className="h-full transition-all group-hover:-translate-y-0.5 group-hover:border-primary/40 group-hover:shadow-md"
+      <Accordion
+        type="multiple"
+        defaultValue={visibleCategories}
+        className="gap-2"
+      >
+        {visibleCategories.map((cat) => {
+          const list = grouped.get(cat)!;
+          return (
+            <AccordionItem
+              key={cat}
+              value={cat}
+              className="not-last:border-b-0"
+            >
+              <AccordionTrigger className="items-center gap-3 py-2 hover:no-underline">
+                <div className="flex flex-1 items-center gap-2">
+                  <h2 className="font-heading text-lg font-semibold tracking-tight">
+                    {CATEGORY_LABEL[cat]}
+                  </h2>
+                  <Badge
+                    variant="outline"
+                    className="h-5 rounded-full px-2 text-[11px] tabular-nums"
                   >
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <BookOpen className="size-4 shrink-0 text-muted-foreground group-hover:text-primary" />
-                        <span className="group-hover:text-primary">
-                          {entry.name}
-                        </span>
-                        {entry.tag && entry.tag !== entry.name ? (
-                          <Badge variant="outline" className="font-normal">
-                            #{entry.tag}
-                          </Badge>
-                        ) : null}
-                        <ArrowRight className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
-                      </CardTitle>
-                      <CardDescription>{entry.summary}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="pt-0" />
-                  </Card>
-                </Link>
-              ))}
-            </div>
-          </section>
-        );
-      })}
+                    {list.length}
+                  </Badge>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="h-auto px-px pt-1 pb-3 [&_a]:no-underline">
+                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                  {list.map((entry) => (
+                    <Link
+                      key={entry.slug}
+                      to={`/k/${entry.slug}`}
+                      className="group no-underline"
+                    >
+                      <Card
+                        size="sm"
+                        className="h-full transition-all group-hover:-translate-y-0.5 group-hover:border-primary/40 group-hover:shadow-md"
+                      >
+                        <CardHeader>
+                          <CardTitle className="flex items-center gap-2">
+                            <BookOpen className="size-4 shrink-0 text-muted-foreground group-hover:text-primary" />
+                            <span className="group-hover:text-primary">
+                              {entry.name}
+                            </span>
+                            {entry.tag && entry.tag !== entry.name ? (
+                              <Badge variant="outline" className="font-normal">
+                                #{entry.tag}
+                              </Badge>
+                            ) : null}
+                            <ArrowRight className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
+                          </CardTitle>
+                          <CardDescription>{entry.summary}</CardDescription>
+                        </CardHeader>
+                        <CardContent className="pt-0" />
+                      </Card>
+                    </Link>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          );
+        })}
+      </Accordion>
     </div>
   );
 }
