@@ -45,7 +45,7 @@ export function AppBar() {
             aria-label="方法手册"
             title="方法手册"
           >
-            <Link to="/knowledge">
+            <Link to="/k">
               <BookOpen />
             </Link>
           </Button>
