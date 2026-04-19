@@ -35,7 +35,6 @@ type PersistedSearchState = {
   difficulty: Difficulty | null;
   tag: string | null;
   showMore: boolean;
-  collapsedGrades?: Grade[];
 };
 
 const DIFFICULTY_ACCENT: Record<Difficulty, string> = {
@@ -73,8 +72,6 @@ export default function HomePage() {
         if (s.difficulty !== undefined) setActiveDifficulty(s.difficulty);
         if (s.tag !== undefined) setActiveTag(s.tag);
         if (typeof s.showMore === "boolean") setShowMore(s.showMore);
-        if (Array.isArray(s.collapsedGrades))
-          setCollapsedGrades(new Set(s.collapsedGrades));
       }
     } catch {
       // ignore malformed storage
@@ -91,7 +88,6 @@ export default function HomePage() {
         difficulty: activeDifficulty,
         tag: activeTag,
         showMore,
-        collapsedGrades: Array.from(collapsedGrades),
       };
       sessionStorage.setItem("filter", JSON.stringify(payload));
     } catch {
