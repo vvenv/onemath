@@ -3,6 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
+import { VitePWA } from "vite-plugin-pwa";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -24,7 +25,54 @@ const silenceChromeDevtoolsProbe = {
 };
 
 export default defineConfig({
-  plugins: [tailwindcss(), silenceChromeDevtoolsProbe, reactRouter()],
+  plugins: [
+    tailwindcss(),
+    silenceChromeDevtoolsProbe,
+    reactRouter(),
+    VitePWA({
+      registerType: "autoUpdate",
+      injectRegister: null,
+      includeAssets: [
+        "icon.svg",
+        "icon-maskable.svg",
+        "apple-touch-icon.svg",
+      ],
+      manifest: {
+        name: "一道 / edao.plus",
+        short_name: "一道",
+        description: "一道：小学奥数问题集与学习系统",
+        lang: "zh-CN",
+        start_url: "/",
+        scope: "/",
+        display: "standalone",
+        background_color: "#ffffff",
+        theme_color: "#262626",
+        icons: [
+          {
+            src: "/icon.svg",
+            sizes: "any",
+            type: "image/svg+xml",
+            purpose: "any",
+          },
+          {
+            src: "/icon-maskable.svg",
+            sizes: "any",
+            type: "image/svg+xml",
+            purpose: "maskable",
+          },
+        ],
+      },
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,svg,png,ico,webmanifest,woff2}"],
+        navigateFallback: "/index.html",
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
+      },
+      devOptions: {
+        enabled: false,
+      },
+    }),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
