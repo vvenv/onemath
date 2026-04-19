@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import { Moon, Sun } from "lucide-react";
+import { BookOpen, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Theme, getInitialTheme, setSelectedTheme } from "@/lib/theme";
 import { GlobalSearch } from "./global-search";
@@ -37,6 +37,18 @@ export function AppBar() {
 
         <div className="ml-auto flex items-center gap-1">
           <GlobalSearch />
+          <Button
+            asChild
+            variant="ghost"
+            size="icon-sm"
+            className="text-muted-foreground hover:text-foreground"
+            aria-label="方法手册"
+            title="方法手册"
+          >
+            <Link to="/knowledge">
+              <BookOpen />
+            </Link>
+          </Button>
           <Button
             type="button"
             variant="ghost"
