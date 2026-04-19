@@ -324,7 +324,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="pt-1 pb-3 [&_a]:no-underline">
+              <AccordionContent className="h-auto pt-1 pb-3 [&_a]:no-underline">
                 <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                   {list.map((item) => (
                     <ProblemRow key={item.id} problem={item} />
