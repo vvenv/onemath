@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import { themeScript } from "@/lib/theme";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import "@/styles/globals.css";
 
@@ -36,6 +37,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <ScrollRestoration />
         <Scripts />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
