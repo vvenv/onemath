@@ -9,7 +9,6 @@ type ProblemHeaderProps = {
   title: string;
   grade?: string;
   module?: ModuleKey;
-  topic?: string;
   tags?: string[];
 };
 
@@ -18,13 +17,12 @@ export function ProblemHeader({
   title,
   grade,
   module,
-  topic,
   tags,
 }: ProblemHeaderProps) {
   const mod = module ? getModule(module) : undefined;
-  const hasMeta = Boolean(grade || mod || topic);
+  const hasMeta = Boolean(grade || mod);
   const metaLabels = new Set(
-    [grade, mod?.label, topic].filter((v): v is string => Boolean(v)),
+    [grade, mod?.label].filter((v): v is string => Boolean(v)),
   );
   const extraTags = (tags ?? []).filter((t) => !metaLabels.has(t));
   const hasTags = extraTags.length > 0;
@@ -62,11 +60,6 @@ export function ProblemHeader({
               )}
             >
               {mod.label}
-            </Badge>
-          ) : null}
-          {topic ? (
-            <Badge variant="outline" className="font-normal">
-              {topic}
             </Badge>
           ) : null}
         </div>

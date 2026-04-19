@@ -21,7 +21,6 @@ export default function ProblemPage() {
         title={problem.title}
         grade={problem.grade}
         module={problem.module}
-        topic={problem.topic}
         tags={problem.tags}
       />
       <QuestionCard question={problem.question} figures={problem.figures} />

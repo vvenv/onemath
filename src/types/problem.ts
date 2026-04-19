@@ -36,7 +36,6 @@ export type ProblemData = {
   title: string;
   grade: Grade;
   difficulty?: string;
-  topic?: string;
   module: ProblemModule;
   question: string;
   figures?: ProblemFigure[];

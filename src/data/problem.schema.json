@@ -27,11 +27,6 @@
       "type": "string",
       "minLength": 1
     },
-    "topic": {
-      "description": "Canonical problem type, e.g. 鸡兔同笼、盈亏问题、周期问题",
-      "type": "string",
-      "minLength": 1
-    },
     "module": {
       "enum": [
         "calc",

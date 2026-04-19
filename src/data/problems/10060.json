@@ -1,0 +1,124 @@
+{
+  "$schema": "../problem.schema.json",
+  "id": "10060",
+  "title": "排队相邻·捆绑法",
+  "grade": "五年级",
+  "module": "counting",
+  "difficulty": "进阶",
+  "question": "3 个男生和 2 个女生站成一排合影，要求 2 个女生必须相邻。一共有多少种不同的站法？",
+  "figures": [
+    {
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 80'><g font-family='sans-serif' font-size='20'><rect x='10' y='20' width='60' height='40' fill='#d6eaf8' stroke='#2E86C1'/><text x='31' y='47' fill='#1B4F72'>男</text><rect x='80' y='20' width='60' height='40' fill='#d6eaf8' stroke='#2E86C1'/><text x='101' y='47' fill='#1B4F72'>男</text><rect x='150' y='20' width='60' height='40' fill='#d6eaf8' stroke='#2E86C1'/><text x='171' y='47' fill='#1B4F72'>男</text><rect x='220' y='20' width='60' height='40' fill='#fdebd0' stroke='#E67E22'/><text x='241' y='47' fill='#B9770E'>女</text><rect x='290' y='20' width='60' height='40' fill='#fdebd0' stroke='#E67E22'/><text x='311' y='47' fill='#B9770E'>女</text></g></svg>",
+      "caption": "3 个男生和 2 个女生合影（位置待定）",
+      "alt": "3男2女共5人排队示意"
+    }
+  ],
+  "solutions": [
+    {
+      "key": "bundle",
+      "label": "捆绑法",
+      "steps": [
+        "分析：题目要求“2 个女生必须相邻”，这是对相对位置的约束，而 3 个男生没有限制。处理相邻限制的经典做法是把相邻元素视为一个整体。",
+        "把必须相邻的 2 个女生看成一个“大元素”（暂时捆在一起）。",
+        "于是要排的就变成：3 个男生 + 1 个“女生大元素”，共 4 个元素。",
+        "这 4 个元素的全排列共有 4! = 24 种。",
+        "再考虑“大元素”内部：2 个女生可以互换位置，共 2! = 2 种。",
+        "由乘法原理，总站法数 = 4! × 2! = 24 × 2 = 48 种。"
+      ],
+      "scenes": [
+        {
+          "kind": "svg",
+          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 80'><g font-family='sans-serif' font-size='20'><rect x='10' y='20' width='50' height='40' fill='#d6eaf8' stroke='#2E86C1'/><text x='26' y='47' fill='#1B4F72'>男</text><rect x='70' y='20' width='50' height='40' fill='#d6eaf8' stroke='#2E86C1'/><text x='86' y='47' fill='#1B4F72'>男</text><rect x='130' y='20' width='50' height='40' fill='#d6eaf8' stroke='#2E86C1'/><text x='146' y='47' fill='#1B4F72'>男</text><rect x='195' y='20' width='105' height='40' fill='#fdebd0' stroke='#E67E22' stroke-dasharray='4 3'/><text x='206' y='47' fill='#B9770E'>女 女</text><text x='310' y='47' fill='#555' font-size='16'>(捆成一起)</text></g></svg>",
+          "caption": "把 2 个女生捆成一个“大元素”，与 3 个男生一起共 4 个大元素",
+          "alt": "捆绑法示意：2女视为1个大元素"
+        },
+        {
+          "kind": "equation-list",
+          "rows": [
+            {
+              "lhs": "外部排列",
+              "rhs": "4! = 24",
+              "note": "男男男 + (女女) 共 4 个大元素",
+              "status": "keep"
+            },
+            {
+              "lhs": "内部排列",
+              "rhs": "2! = 2",
+              "note": "两个女生互换",
+              "status": "keep"
+            },
+            {
+              "lhs": "总站法",
+              "rhs": "4! × 2! = 48",
+              "badge": "结论"
+            }
+          ],
+          "caption": "捆绑法：先外后内"
+        },
+        {
+          "kind": "result-badges",
+          "items": [
+            {
+              "icon": "🧍",
+              "count": 48,
+              "label": "种站法"
+            }
+          ],
+          "caption": "2 女相邻共 48 种"
+        }
+      ]
+    },
+    {
+      "key": "exclude",
+      "label": "排除法（逆向思维）",
+      "steps": [
+        "分析：换个角度——“女生相邻”不好直接数时，可用总数减去“女生不相邻”的情况。",
+        "5 个人不加限制地全排列共 5! = 120 种。",
+        "求 2 个女生不相邻的站法：先排 3 个男生共 3! = 6 种，他们之间和两端共形成 4 个空位。",
+        "从 4 个空位中选 2 个放女生并考虑顺序：4 × 3 = 12 种。",
+        "所以“女生不相邻”的站法 = 6 × 12 = 72 种。",
+        "“女生相邻”的站法 = 120 − 72 = 48 种，与捆绑法结果一致。"
+      ],
+      "scenes": [
+        {
+          "kind": "equation-list",
+          "rows": [
+            {
+              "lhs": "总排法",
+              "rhs": "5! = 120"
+            },
+            {
+              "lhs": "女不相邻",
+              "rhs": "3! × 4 × 3 = 72",
+              "note": "先排男，再插空"
+            },
+            {
+              "lhs": "女相邻",
+              "rhs": "120 − 72 = 48",
+              "badge": "结论"
+            }
+          ],
+          "caption": "用总数减去不相邻的情况"
+        }
+      ]
+    }
+  ],
+  "variant": {
+    "question": "4 个男生和 3 个女生站成一排，要求 3 个女生必须相邻，一共有多少种站法？",
+    "fields": [
+      {
+        "key": "answer",
+        "label": "站法数",
+        "type": "number"
+      }
+    ],
+    "answer": {
+      "answer": 720
+    },
+    "hint": "捆绑法：把 3 个女生看成一个大元素，外部 5! × 内部 3! = 120 × 6 = 720。"
+  },
+  "tags": [
+    "捆绑法",
+    "排除法"
+  ]
+}

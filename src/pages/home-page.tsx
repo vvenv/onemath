@@ -16,7 +16,7 @@ type PersistedSearchState = {
   module: ModuleKey | null;
   grade: Grade | null;
   difficulty: Difficulty | null;
-  topic: string | null;
+  tag: string | null;
   keyword: string;
   showMore: boolean;
 };
@@ -39,7 +39,7 @@ export default function HomePage() {
   const [activeDifficulty, setActiveDifficulty] = useState<Difficulty | null>(
     null,
   );
-  const [activeTopic, setActiveTopic] = useState<string | null>(null);
+  const [activeTag, setActiveTag] = useState<string | null>(null);
   const [keyword, setKeyword] = useState("");
   const [showMore, setShowMore] = useState(false);
   const [restored, setRestored] = useState(false);
@@ -52,7 +52,7 @@ export default function HomePage() {
         if (s.module !== undefined) setActiveModule(s.module);
         if (s.grade !== undefined) setActiveGrade(s.grade);
         if (s.difficulty !== undefined) setActiveDifficulty(s.difficulty);
-        if (s.topic !== undefined) setActiveTopic(s.topic);
+        if (s.tag !== undefined) setActiveTag(s.tag);
         if (typeof s.keyword === "string") setKeyword(s.keyword);
         if (typeof s.showMore === "boolean") setShowMore(s.showMore);
       }
@@ -69,7 +69,7 @@ export default function HomePage() {
         module: activeModule,
         grade: activeGrade,
         difficulty: activeDifficulty,
-        topic: activeTopic,
+        tag: activeTag,
         keyword,
         showMore,
       };
@@ -82,14 +82,14 @@ export default function HomePage() {
     activeModule,
     activeGrade,
     activeDifficulty,
-    activeTopic,
+    activeTag,
     keyword,
     showMore,
   ]);
 
-  const topics = useMemo(() => {
+  const tags = useMemo(() => {
     const set = new Set<string>();
-    for (const p of problems) if (p.topic) set.add(p.topic);
+    for (const p of problems) for (const t of p.tags) set.add(t);
     return Array.from(set).sort((a, b) => a.localeCompare(b, "zh"));
   }, []);
 
@@ -100,15 +100,9 @@ export default function HomePage() {
       if (activeModule && p.module !== activeModule) return false;
       if (activeGrade && p.grade !== activeGrade) return false;
       if (activeDifficulty && p.difficulty !== activeDifficulty) return false;
-      if (activeTopic && p.topic !== activeTopic) return false;
+      if (activeTag && !p.tags.includes(activeTag)) return false;
       if (normalizedKeyword) {
-        const haystack = [
-          p.title,
-          p.topic ?? "",
-          p.question,
-          p.tags.join(" "),
-          `${p.id}`,
-        ]
+        const haystack = [p.title, p.question, p.tags.join(" "), `${p.id}`]
           .join(" ")
           .toLowerCase();
         if (!haystack.includes(normalizedKeyword)) return false;
@@ -119,7 +113,7 @@ export default function HomePage() {
     activeModule,
     activeGrade,
     activeDifficulty,
-    activeTopic,
+    activeTag,
     normalizedKeyword,
   ]);
 
@@ -145,14 +139,14 @@ export default function HomePage() {
     activeModule !== null ||
     activeGrade !== null ||
     activeDifficulty !== null ||
-    activeTopic !== null ||
+    activeTag !== null ||
     normalizedKeyword.length > 0;
 
   const resetAll = () => {
     setActiveModule(null);
     setActiveGrade(null);
     setActiveDifficulty(null);
-    setActiveTopic(null);
+    setActiveTag(null);
     setKeyword("");
   };
 
@@ -166,7 +160,7 @@ export default function HomePage() {
               type="search"
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
-              placeholder="搜索题目 / 标签 / 编号"
+              placeholder="搜索题目 / 方法 / 编号"
               className="h-9 pl-8"
               aria-label="关键字搜索"
             />
@@ -247,16 +241,14 @@ export default function HomePage() {
                 ))}
               </FilterRow>
 
-              {topics.length > 0 ? (
-                <FilterRow label="主题">
-                  {topics.map((t) => (
+              {tags.length > 0 ? (
+                <FilterRow label="方法">
+                  {tags.map((t) => (
                     <FilterChip
                       key={t}
                       label={t}
-                      active={activeTopic === t}
-                      onClick={() =>
-                        setActiveTopic(activeTopic === t ? null : t)
-                      }
+                      active={activeTag === t}
+                      onClick={() => setActiveTag(activeTag === t ? null : t)}
                     />
                   ))}
                 </FilterRow>
@@ -279,7 +271,7 @@ export default function HomePage() {
                   showMore && "rotate-180",
                 )}
               />
-              {showMore ? "收起筛选" : "更多筛选（难度 / 主题）"}
+              {showMore ? "收起筛选" : "更多筛选（难度 / 方法）"}
             </Button>
             <span className="ml-auto tabular-nums">
               {visibleProblems.length}
@@ -424,19 +416,13 @@ function ProblemRow({ problem }: { problem: ProblemData }) {
           <span className="text-muted-foreground">#{problem.id}</span>{" "}
           {problem.title}
         </span>
-        <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[11px] text-muted-foreground">
-          {problem.topic ? (
-            <span className="font-medium text-foreground/70">
-              {problem.topic}
+        {problem.tags.length > 0 ? (
+          <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[11px] text-muted-foreground">
+            <span className="truncate">
+              {problem.tags.slice(0, 3).join(" / ")}
             </span>
-          ) : null}
-          {problem.topic && problem.tags.length > 0 ? (
-            <span aria-hidden>·</span>
-          ) : null}
-          <span className="truncate">
-            {problem.tags.slice(0, 3).join(" / ")}
-          </span>
-        </div>
+          </div>
+        ) : null}
         <div className="mt-0.5 flex flex-wrap items-center gap-1.5">
           <Badge
             variant="outline"
