@@ -1,6 +1,6 @@
 import { METHOD_TAGS } from "@/lib/tags";
 import { problems } from "@/lib/problems";
-import type { ProblemData } from "@/types/problem";
+import type { ProblemData, ProblemFigure } from "@/types/problem";
 
 /**
  * Knowledge base for method/technique explainer pages (`/k/:slug`).
@@ -40,6 +40,8 @@ export type KnowledgeEntry = {
   pitfalls?: string[];
   /** other knowledge slugs that pair naturally with this one */
   relatedSlugs?: string[];
+  /** illustrative figures rendered alongside the intuition section */
+  figures?: ProblemFigure[];
 };
 
 const ENTRIES: KnowledgeEntry[] = [
@@ -137,6 +139,13 @@ const ENTRIES: KnowledgeEntry[] = [
       "遇到多次变化（比如“再过 3 年”），画两排线段对照更清晰。",
     ],
     relatedSlugs: ["hypothesis-method", "equation-method"],
+    figures: [
+      {
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="20" y="24" width="80" height="22" fill="currentColor" fill-opacity="0.12"/><rect x="20" y="64" width="120" height="22" fill="currentColor" fill-opacity="0.12"/><line x1="100" y1="46" x2="100" y2="98"/><line x1="140" y1="46" x2="140" y2="98"/><g fill="currentColor" stroke="none" font-size="11" font-family="sans-serif"><text x="4" y="40">乙</text><text x="4" y="80">甲</text><text x="104" y="110">多 6</text></g></svg>`,
+        alt: "两条长短不同的线段图示和差问题",
+        caption: "和差问题：两条线段差 6、总 30，一眼可见。",
+      },
+    ],
   },
   {
     slug: "equation-method",
@@ -228,6 +237,13 @@ const ENTRIES: KnowledgeEntry[] = [
       "三交集在题目里常被漏掉，要主动检查是否有“三者同时”这种条件。",
     ],
     relatedSlugs: ["parity"],
+    figures: [
+      {
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="90" cy="70" r="55" fill="currentColor" fill-opacity="0.12"/><circle cx="150" cy="70" r="55" fill="currentColor" fill-opacity="0.12"/><g fill="currentColor" stroke="none" font-size="12" font-family="serif"><text x="50" y="74">A</text><text x="182" y="74">B</text><text x="104" y="74">A∩B</text></g></svg>`,
+        alt: "两圆相交的韦恩图",
+        caption: "两圆相交处被数了两次，必须减去一次。",
+      },
+    ],
   },
   {
     slug: "bird-head-model",
@@ -276,6 +292,13 @@ const ENTRIES: KnowledgeEntry[] = [
       "先把图中所有边的比用同一个基准表达清楚，再套公式。",
     ],
     relatedSlugs: [],
+    figures: [
+      {
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 140" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="50,20 30,120 200,120"/><line x1="40" y1="70" x2="125" y2="70"/><g fill="currentColor" stroke="none" font-size="11" font-family="serif"><text x="52" y="18">A</text><text x="16" y="130">B</text><text x="202" y="130">C</text><text x="24" y="74">D</text><text x="130" y="74">E</text></g></svg>`,
+        alt: "A 字型共角三角形",
+        caption: "共角 ∠A：△ADE 与 △ABC 共享顶点与夹角。",
+      },
+    ],
   },
   {
     slug: "parity",
@@ -372,6 +395,13 @@ const ENTRIES: KnowledgeEntry[] = [
       "bird-head-model",
       "butterfly-model",
     ],
+    figures: [
+      {
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 140" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="30,30 30,110 190,110"/><line x1="30" y1="30" x2="190" y2="110"/><line x1="30" y1="110" x2="62" y2="46" stroke-dasharray="4 3"/><polyline points="30,102 38,102 38,110"/><g fill="currentColor" stroke="none" font-size="11" font-family="serif"><text x="20" y="24">A</text><text x="20" y="126">B</text><text x="194" y="124">C</text><text x="64" y="44">H</text></g></svg>`,
+        alt: "直角三角形的两种底高表达",
+        caption: "同一面积两种写法：½·AB·BC = ½·AC·BH。",
+      },
+    ],
   },
   {
     slug: "equal-area-transformation",
@@ -415,6 +445,13 @@ const ENTRIES: KnowledgeEntry[] = [
       "必须存在平行线或等长底边，才能“等积”。",
     ],
     relatedSlugs: ["area-method", "butterfly-model"],
+    figures: [
+      {
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="10" y1="30" x2="230" y2="30" stroke-dasharray="4 3"/><line x1="10" y1="110" x2="230" y2="110"/><polygon points="80,30 30,110 210,110"/><polygon points="180,30 30,110 210,110" stroke-dasharray="3 3"/><g fill="currentColor" stroke="none" font-size="11" font-family="serif"><text x="72" y="24">A</text><text x="184" y="24">A'</text><text x="20" y="122">B</text><text x="212" y="122">C</text></g></svg>`,
+        alt: "三角形顶点沿平行线平移",
+        caption: "A 沿平行线滑到 A'：底与高不变，面积不变。",
+      },
+    ],
   },
   {
     slug: "butterfly-model",
@@ -461,6 +498,13 @@ const ENTRIES: KnowledgeEntry[] = [
       "梯形特例只在两边平行的四边形里成立。",
     ],
     relatedSlugs: ["area-method", "equal-area-transformation"],
+    figures: [
+      {
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="60,30 180,30 210,110 30,110"/><line x1="60" y1="30" x2="210" y2="110"/><line x1="180" y1="30" x2="30" y2="110"/><g fill="currentColor" stroke="none" font-size="11" font-family="serif"><text x="54" y="24">A</text><text x="176" y="24">B</text><text x="214" y="122">C</text><text x="22" y="122">D</text><text x="116" y="58">O</text><text x="116" y="44">S₂</text><text x="76" y="82">S₁</text><text x="152" y="82">S₃</text><text x="114" y="104">S₄</text></g></svg>`,
+        alt: "四边形两对角线分出的四块面积",
+        caption: "对角相乘相等：S₁·S₃ = S₂·S₄。",
+      },
+    ],
   },
   {
     slug: "similarity-model",
@@ -506,6 +550,13 @@ const ENTRIES: KnowledgeEntry[] = [
       "先证相似（通常靠平行线），再用比例。",
     ],
     relatedSlugs: ["butterfly-model", "swallowtail-model"],
+    figures: [
+      {
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="120,20 30,120 210,120"/><line x1="84" y1="60" x2="156" y2="60"/><g fill="currentColor" stroke="none" font-size="11" font-family="serif"><text x="122" y="16">A</text><text x="18" y="130">B</text><text x="214" y="130">C</text><text x="72" y="58">D</text><text x="160" y="58">E</text></g></svg>`,
+        alt: "金字塔型相似三角形",
+        caption: "金字塔型：DE∥BC，△ADE ∽ △ABC。",
+      },
+    ],
   },
   {
     slug: "swallowtail-model",
@@ -540,6 +591,13 @@ const ENTRIES: KnowledgeEntry[] = [
       "共用的那条线必须过内部交点并与对边相交；不满足时不能套。",
     ],
     relatedSlugs: ["bird-head-model", "area-method"],
+    figures: [
+      {
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 150" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="120,20 30,120 210,120"/><line x1="120" y1="20" x2="120" y2="120"/><line x1="30" y1="120" x2="120" y2="75" stroke-dasharray="3 3"/><line x1="210" y1="120" x2="120" y2="75" stroke-dasharray="3 3"/><circle cx="120" cy="75" r="2.8" fill="currentColor"/><g fill="currentColor" stroke="none" font-size="11" font-family="serif"><text x="122" y="16">A</text><text x="18" y="130">B</text><text x="214" y="130">C</text><text x="126" y="72">G</text><text x="124" y="138">D</text></g></svg>`,
+        alt: "三角形内点引线构成的燕尾图形",
+        caption: "AG 延长交 BC 于 D：S△ABG : S△ACG = BD : DC。",
+      },
+    ],
   },
   {
     slug: "enumeration",
@@ -745,6 +803,13 @@ const ENTRIES: KnowledgeEntry[] = [
       "中心数法只对“3 阶”幻方成立，更大阶需要其他工具。",
     ],
     relatedSlugs: ["accumulation-method"],
+    figures: [
+      {
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130"><rect x="45" y="45" width="40" height="40" fill="currentColor" fill-opacity="0.18"/><g stroke="currentColor" stroke-width="1" fill="none"><rect x="5" y="5" width="120" height="120"/><line x1="45" y1="5" x2="45" y2="125"/><line x1="85" y1="5" x2="85" y2="125"/><line x1="5" y1="45" x2="125" y2="45"/><line x1="5" y1="85" x2="125" y2="85"/></g><g stroke="currentColor" stroke-width="1.4" stroke-opacity="0.55" stroke-dasharray="3 2" fill="none"><line x1="65" y1="5" x2="65" y2="125"/><line x1="5" y1="65" x2="125" y2="65"/><line x1="5" y1="5" x2="125" y2="125"/><line x1="125" y1="5" x2="5" y2="125"/></g><text x="60" y="71" font-size="13" font-family="serif" fill="currentColor" stroke="none">c</text></svg>`,
+        alt: "3×3 幻方过中心的四条线",
+        caption: "四条过中心的线（中列、中行、两条对角线）各等于幻和。",
+      },
+    ],
   },
   {
     slug: "pigeonhole",
@@ -1086,6 +1151,13 @@ const ENTRIES: KnowledgeEntry[] = [
       "使用前要分清哪条是斜边（最长的那条）。",
     ],
     relatedSlugs: ["area-method"],
+    figures: [
+      {
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="90,70 90,150 150,70"/><polygon points="90,70 90,150 10,150 10,70" fill="currentColor" fill-opacity="0.1"/><polygon points="90,70 150,70 150,10 90,10" fill="currentColor" fill-opacity="0.1"/><polygon points="90,150 150,70 230,130 170,210" fill="currentColor" fill-opacity="0.18"/><g fill="currentColor" stroke="none" font-size="12" font-family="serif"><text x="40" y="115">b²</text><text x="115" y="45">a²</text><text x="180" y="150">c²</text></g></svg>`,
+        alt: "勾股定理三正方形示意",
+        caption: "两直角边上正方形之和 = 斜边上正方形：a² + b² = c²。",
+      },
+    ],
   },
   {
     slug: "line-segment-diagram",
@@ -1129,6 +1201,13 @@ const ENTRIES: KnowledgeEntry[] = [
       "画图时长度比例要近似真实，否则误导判断。",
     ],
     relatedSlugs: ["drawing-method", "hypothesis-method"],
+    figures: [
+      {
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="20" y="24" width="40" height="22" fill="currentColor" fill-opacity="0.12"/><rect x="20" y="64" width="120" height="22" fill="currentColor" fill-opacity="0.12"/><line x1="60" y1="24" x2="60" y2="86"/><line x1="100" y1="64" x2="100" y2="86"/><line x1="140" y1="46" x2="140" y2="86"/><g fill="currentColor" stroke="none" font-size="11" font-family="sans-serif"><text x="4" y="40">乙</text><text x="4" y="80">甲</text><text x="64" y="110">多 2 格 = 16</text></g></svg>`,
+        alt: "差倍问题的线段图",
+        caption: "差倍：甲 3 格、乙 1 格，多出 2 格对应 16。",
+      },
+    ],
   },
   {
     slug: "cross-multiplication",
@@ -1325,6 +1404,13 @@ const ENTRIES: KnowledgeEntry[] = [
       "“每人至少 m 个”也可以先借 m 再用。",
     ],
     relatedSlugs: ["bundling", "gap-insertion"],
+    figures: [
+      {
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60"><g fill="currentColor"><circle cx="20" cy="30" r="7"/><circle cx="40" cy="30" r="7"/><circle cx="60" cy="30" r="7"/></g><line x1="75" y1="10" x2="75" y2="50" stroke="currentColor" stroke-width="2.5"/><g fill="currentColor"><circle cx="90" cy="30" r="7"/><circle cx="110" cy="30" r="7"/><circle cx="130" cy="30" r="7"/><circle cx="150" cy="30" r="7"/></g><line x1="165" y1="10" x2="165" y2="50" stroke="currentColor" stroke-width="2.5"/><g fill="currentColor"><circle cx="180" cy="30" r="7"/><circle cx="200" cy="30" r="7"/><circle cx="220" cy="30" r="7"/></g></svg>`,
+        alt: "10 球与 2 隔板分成三堆",
+        caption: "10 个相同球 + 2 块隔板 → 分成 3 堆，一种分法对应一种选板方案。",
+      },
+    ],
   },
   {
     slug: "divisibility",
@@ -1528,6 +1614,13 @@ const ENTRIES: KnowledgeEntry[] = [
       "要证明不变性对“每一种”允许操作都成立。",
     ],
     relatedSlugs: ["parity"],
+    figures: [
+      {
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130"><g fill="currentColor"><rect x="35" y="5" width="30" height="30"/><rect x="95" y="5" width="30" height="30"/><rect x="5" y="35" width="30" height="30"/><rect x="65" y="35" width="30" height="30"/><rect x="35" y="65" width="30" height="30"/><rect x="95" y="65" width="30" height="30"/><rect x="5" y="95" width="30" height="30"/><rect x="65" y="95" width="30" height="30"/></g><g stroke="currentColor" stroke-width="0.8" fill="none"><rect x="5" y="5" width="120" height="120"/><line x1="35" y1="5" x2="35" y2="125"/><line x1="65" y1="5" x2="65" y2="125"/><line x1="95" y1="5" x2="95" y2="125"/><line x1="5" y1="35" x2="125" y2="35"/><line x1="5" y1="65" x2="125" y2="65"/><line x1="5" y1="95" x2="125" y2="95"/><line x1="5" y1="5" x2="35" y2="35" stroke-width="1.5"/><line x1="35" y1="5" x2="5" y2="35" stroke-width="1.5"/><line x1="95" y1="95" x2="125" y2="125" stroke-width="1.5"/><line x1="125" y1="95" x2="95" y2="125" stroke-width="1.5"/></g></svg>`,
+        alt: "去掉同色两角的棋盘",
+        caption: "两个对角同色——去掉后黑白格数不相等，骨牌无法覆盖。",
+      },
+    ],
   },
   {
     slug: "ratio-method",

@@ -26,3 +26,10 @@
 - For `Card`, prefer semantic composition with `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, and `CardFooter` instead of placing all content directly under `Card`.
 - Keep interactive controls accessible (`type`, `aria-*`, labels/associations where needed).
 - Use component props (`variant`, `size`, `asChild`) before introducing custom class overrides. When a design calls for a visual that no existing variant covers (e.g. a chip), pass a minimal `className` override on top of the closest variant (typically `ghost`) rather than falling back to a raw `<button>`.
+
+## SVG Figures
+
+- Keep SVG figures minimal: only include geometry essential to the concept; avoid decorative elements, gradients, and extraneous labels.
+- Support dark mode: do not hard-code colors like `#000` or `black`/`white`. Use `currentColor` (or theme-aware CSS classes/variables) so strokes and fills adapt to light/dark themes.
+- Prefer the default `stroke-width` of `1`; do not specify `stroke-width` unless the design genuinely requires a different value.
+- Do not include newline characters inside SVG source (including inside `d` attributes or between elements in inline SVG strings); keep the SVG on a single line.

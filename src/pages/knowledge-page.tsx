@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { Link, Navigate, useParams, type MetaFunction } from "react-router";
 
+import { ProblemFigures } from "@/components/problem-figures";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -94,6 +95,9 @@ export default function KnowledgePage() {
         <p className="text-sm leading-relaxed text-foreground/90">
           {entry.intuition}
         </p>
+        {entry.figures && entry.figures.length > 0 ? (
+          <ProblemFigures figures={entry.figures} className="mt-3" />
+        ) : null}
       </Section>
 
       <Section icon={<ListChecks className="size-4" />} title="推导思路">
