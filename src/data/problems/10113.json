@@ -8,7 +8,7 @@
   "question": "如图，三角形 ABC 中，D、E、F 分别是 BC、AC、AD 的中点。已知三角形 ABC 的面积为 24，求三角形 DEF 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 220' font-size='12'><g fill='none' stroke='#1B4F72' stroke-width='1'><polygon points='40,190 290,190 120,30'/></g><g fill='#2E86C1'><circle cx='40' cy='190' r='3'/><circle cx='290' cy='190' r='3'/><circle cx='120' cy='30' r='3'/><circle cx='165' cy='190' r='3'/><circle cx='205' cy='110' r='3'/><circle cx='80' cy='110' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='32' y='205'>B</text><text x='298' y='205'>C</text><text x='120' y='22'>A</text><text x='165' y='207'>D</text><text x='219' y='107'>E</text><text x='68' y='107'>F</text></g><g stroke='#A93226' stroke-width='1' fill='none'><line x1='120' y1='30' x2='165' y2='190'/><polygon points='165,190 205,110 80,110' fill='rgb(169 50 38 / 0.12)'/></g></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 220' font-size='12'><g fill='none' stroke='#1B4F72'><polygon points='40,190 290,190 120,30'/></g><g fill='#2E86C1'><circle cx='40' cy='190' r='3'/><circle cx='290' cy='190' r='3'/><circle cx='120' cy='30' r='3'/><circle cx='165' cy='190' r='3'/><circle cx='205' cy='110' r='3'/><circle cx='80' cy='110' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='32' y='205'>B</text><text x='298' y='205'>C</text><text x='120' y='22'>A</text><text x='165' y='207'>D</text><text x='219' y='107'>E</text><text x='68' y='107'>F</text></g><g stroke='#A93226' fill='none'><line x1='120' y1='30' x2='165' y2='190'/><polygon points='165,190 205,110 80,110' fill='rgb(169 50 38 / 0.12)'/></g></svg>",
       "caption": "△ABC 中 D、E、F 分别为 BC、AC、AD 的中点（图中阴影为 △DEF）",
       "alt": "三角形 ABC 及其内部三中点构成的三角形 DEF"
     }

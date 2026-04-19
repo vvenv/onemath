@@ -8,7 +8,7 @@
   "question": "小明从家到学校，如果每分钟走 60 米，会迟到 5 分钟；如果每分钟走 80 米，会提前 3 分钟到达。小明家到学校的距离是多少米？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 550 120'><line x1='30' y1='60' x2='520' y2='60' stroke='#333' stroke-width='1'/><circle cx='30' cy='60' r='6' fill='#2ecc71'/><text x='15' y='45' font-size='12' fill='#2ecc71'>家</text><circle cx='520' cy='60' r='6' fill='#e74c3c'/><text x='505' y='45' font-size='12' fill='#e74c3c'>学校</text><text x='250' y='50' font-size='11' fill='#333'>距离？米</text><rect x='60' y='40' width='20' height='12' fill='#3498db'/><text x='58' y='35' font-size='10' fill='#3498db'>60m/min 迟到5分</text><rect x='60' y='70' width='20' height='12' fill='#e67e22'/><text x='58' y='95' font-size='10' fill='#e67e22'>80m/min 提前3分</text></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 550 120'><line x1='30' y1='60' x2='520' y2='60' stroke='#333'/><circle cx='30' cy='60' r='6' fill='#2ecc71'/><text x='15' y='45' font-size='12' fill='#2ecc71'>家</text><circle cx='520' cy='60' r='6' fill='#e74c3c'/><text x='505' y='45' font-size='12' fill='#e74c3c'>学校</text><text x='250' y='50' font-size='11' fill='#333'>距离？米</text><rect x='60' y='40' width='20' height='12' fill='#3498db'/><text x='58' y='35' font-size='10' fill='#3498db'>60m/min 迟到5分</text><rect x='60' y='70' width='20' height='12' fill='#e67e22'/><text x='58' y='95' font-size='10' fill='#e67e22'>80m/min 提前3分</text></svg>",
       "caption": "小明以两种速度行走，时间相差 5 + 3 = 8 分钟",
       "alt": "线段图：家到学校，标注两种速度和对应的时间差"
     }

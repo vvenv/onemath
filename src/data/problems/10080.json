@@ -6,13 +6,6 @@
   "module": "misc",
   "difficulty": "挑战",
   "question": "把正整数 20 拆成若干个正整数之和（拆成几个都可以，顺序不计），使得这些正整数的乘积尽可能大。最大的乘积是多少？",
-  "figures": [
-    {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 100' font-size='14'><g fill='#d6eaf8' stroke='#2E86C1'><rect x='20' y='30' width='320' height='40' rx='8'/></g><g fill='#1B4F72' text-anchor='middle'><text x='180' y='55'>a₁ + a₂ + … + aₖ = 20，求 a₁ × a₂ × … × aₖ 的最大值</text></g></svg>",
-      "caption": "将 20 拆成若干正整数，求乘积最大",
-      "alt": "拆分的目标"
-    }
-  ],
   "solutions": [
     {
       "key": "exchange",

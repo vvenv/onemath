@@ -28,7 +28,7 @@
       "scenes": [
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 80'><g font-size='22'><text x='10' y='50' fill='#C0392B'>🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎</text><g stroke='#2E86C1' stroke-width='1'><line x1='160' y1='20' x2='160' y2='62'/><line x1='300' y1='20' x2='300' y2='62'/></g><text x='140' y='78' font-size='14' fill='#1B4F72'>隔板①</text><text x='280' y='78' font-size='14' fill='#1B4F72'>隔板②</text></g></svg>",
+          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 80'><g font-size='22'><text x='10' y='50' fill='#C0392B'>🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎</text><g stroke='#2E86C1'><line x1='160' y1='20' x2='160' y2='62'/><line x1='300' y1='20' x2='300' y2='62'/></g><text x='140' y='78' font-size='14' fill='#1B4F72'>隔板①</text><text x='280' y='78' font-size='14' fill='#1B4F72'>隔板②</text></g></svg>",
           "caption": "在 10 个苹果形成的 9 个空隙里放 2 块隔板，把苹果切成 3 段",
           "alt": "隔板法示意：10个苹果+2块隔板"
         },
