@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
 import { ChevronDown, Search, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -11,6 +11,15 @@ import type { Grade, ProblemData } from "@/types/problem";
 
 const DIFFICULTIES = ["基础", "进阶", "挑战"] as const;
 type Difficulty = (typeof DIFFICULTIES)[number];
+
+type PersistedSearchState = {
+  module: ModuleKey | null;
+  grade: Grade | null;
+  difficulty: Difficulty | null;
+  topic: string | null;
+  keyword: string;
+  showMore: boolean;
+};
 
 const DIFFICULTY_ACCENT: Record<Difficulty, string> = {
   基础: "bg-emerald-500/10 text-emerald-700 ring-emerald-500/20 dark:text-emerald-300",
@@ -33,6 +42,50 @@ export default function HomePage() {
   const [activeTopic, setActiveTopic] = useState<string | null>(null);
   const [keyword, setKeyword] = useState("");
   const [showMore, setShowMore] = useState(false);
+  const [restored, setRestored] = useState(false);
+
+  useEffect(() => {
+    try {
+      const raw = sessionStorage.getItem("filter");
+      if (raw) {
+        const s = JSON.parse(raw) as Partial<PersistedSearchState>;
+        if (s.module !== undefined) setActiveModule(s.module);
+        if (s.grade !== undefined) setActiveGrade(s.grade);
+        if (s.difficulty !== undefined) setActiveDifficulty(s.difficulty);
+        if (s.topic !== undefined) setActiveTopic(s.topic);
+        if (typeof s.keyword === "string") setKeyword(s.keyword);
+        if (typeof s.showMore === "boolean") setShowMore(s.showMore);
+      }
+    } catch {
+      // ignore malformed storage
+    }
+    setRestored(true);
+  }, []);
+
+  useEffect(() => {
+    if (!restored) return;
+    try {
+      const payload: PersistedSearchState = {
+        module: activeModule,
+        grade: activeGrade,
+        difficulty: activeDifficulty,
+        topic: activeTopic,
+        keyword,
+        showMore,
+      };
+      sessionStorage.setItem("filter", JSON.stringify(payload));
+    } catch {
+      // ignore quota/availability errors
+    }
+  }, [
+    restored,
+    activeModule,
+    activeGrade,
+    activeDifficulty,
+    activeTopic,
+    keyword,
+    showMore,
+  ]);
 
   const topics = useMemo(() => {
     const set = new Set<string>();
@@ -49,13 +102,7 @@ export default function HomePage() {
       if (activeDifficulty && p.difficulty !== activeDifficulty) return false;
       if (activeTopic && p.topic !== activeTopic) return false;
       if (normalizedKeyword) {
-        const haystack = [
-          p.title,
-          p.topic ?? "",
-          p.question,
-          p.tags.join(" "),
-          String(p.id),
-        ]
+        const haystack = [p.title, p.topic ?? "", p.question, p.tags.join(" ")]
           .join(" ")
           .toLowerCase();
         if (!haystack.includes(normalizedKeyword)) return false;
@@ -113,7 +160,7 @@ export default function HomePage() {
               type="search"
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
-              placeholder="搜索题目 / 标签 / 编号"
+              placeholder="搜索题目 / 标签"
               className="h-9 pl-8"
               aria-label="关键字搜索"
             />
