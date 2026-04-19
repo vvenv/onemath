@@ -64,6 +64,13 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,svg,png,ico,webmanifest,woff2}"],
+        // React Router's prerender step writes `index.html` *after* VitePWA
+        // finalizes the service worker, so it is not picked up by
+        // `globPatterns`. Register it explicitly so `navigateFallback` can
+        // bind a handler to a precached URL.
+        additionalManifestEntries: [
+          { url: "/index.html", revision: `${Date.now()}` },
+        ],
         navigateFallback: "/index.html",
         cleanupOutdatedCaches: true,
         clientsClaim: true,
