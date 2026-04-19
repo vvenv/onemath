@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-
+import { ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { getModule, type ModuleKey } from "@/lib/modules";
 import { cn } from "@/lib/utils";
@@ -31,14 +31,15 @@ export function ProblemHeader({
 
   return (
     <header className="flex flex-col gap-2">
-      <Link
-        to="/"
-        className="inline-flex w-fit items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
-      >
-        ← 返回题库
-      </Link>
-      <div className="flex items-start gap-2">
-        <span className="pt-0.5 text-sm font-medium text-muted-foreground tabular-nums">
+      <div className="flex items-center gap-2">
+        <Link
+          to="/"
+          className="inline-flex w-fit items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
+          title="返回题库"
+        >
+          <ArrowLeft className="h-4 w-4" />
+        </Link>
+        <span className="text-sm font-medium text-muted-foreground tabular-nums">
           #{id}
         </span>
         <h1 className="font-heading text-xl leading-tight font-semibold tracking-tight text-foreground">

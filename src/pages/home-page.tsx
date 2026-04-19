@@ -1,12 +1,11 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router";
 import { ChevronDown, Search, X } from "lucide-react";
-
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { problems } from "@/lib/problems";
 import { GRADES, MODULES, type ModuleKey } from "@/lib/modules";
+import { problems } from "@/lib/problems";
 import { cn } from "@/lib/utils";
 import type { Grade, ProblemData } from "@/types/problem";
 
@@ -23,13 +22,6 @@ const DIFFICULTY_DOT: Record<Difficulty, string> = {
   基础: "bg-emerald-500",
   进阶: "bg-amber-500",
   挑战: "bg-rose-500",
-};
-
-const GRADE_ACCENT: Record<string, string> = {
-  三年级: "from-sky-500/70 to-sky-500/10",
-  四年级: "from-emerald-500/70 to-emerald-500/10",
-  五年级: "from-violet-500/70 to-violet-500/10",
-  六年级: "from-rose-500/70 to-rose-500/10",
 };
 
 export default function HomePage() {
@@ -251,19 +243,10 @@ export default function HomePage() {
         {GRADES.map((grade) => {
           const list = grouped.get(grade.label);
           if (!list || list.length === 0) return null;
-          const accent =
-            GRADE_ACCENT[grade.label] ?? "from-primary/60 to-primary/10";
           return (
             <section key={grade.label} className="flex flex-col gap-3">
               <div className="flex items-end justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <span
-                    aria-hidden
-                    className={cn(
-                      "h-8 w-1 rounded-full bg-linear-to-b",
-                      accent,
-                    )}
-                  />
                   <div className="flex flex-col gap-0.5">
                     <h2 className="font-heading text-lg font-semibold tracking-tight">
                       {grade.label}
@@ -383,14 +366,6 @@ function ProblemRow({ problem }: { problem: ProblemData }) {
       to={`/problems/${problem.id}`}
       className="group relative flex items-start gap-3 overflow-hidden rounded-xl border border-border/70 bg-card p-3 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
     >
-      <div
-        className={cn(
-          "flex size-9 shrink-0 items-center justify-center rounded-lg text-xs font-semibold tabular-nums ring-1 ring-inset",
-          mod.accent,
-        )}
-      >
-        #{problem.id}
-      </div>
       <div className="flex min-w-0 flex-1 flex-col gap-1">
         <span className="truncate text-sm font-medium text-card-foreground group-hover:text-primary">
           {problem.title}

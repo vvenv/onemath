@@ -1,35 +1,22 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Theme, getInitialTheme, setSelectedTheme } from "@/lib/theme";
 import { Logo } from "./logo";
 
-type Theme = "light" | "dark";
-
-const THEME_STORAGE_KEY = "onemath-theme";
-
 export function AppBar() {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme | null>(null);
 
   useEffect(() => {
-    const isDark = document.documentElement.classList.contains("dark");
-    setTheme(isDark ? "dark" : "light");
+    setTheme(getInitialTheme());
   }, []);
 
   const onToggleTheme = () => {
-    setTheme((prev) => {
-      const next = prev === "dark" ? "light" : "dark";
-      document.documentElement.classList.toggle("dark", next === "dark");
-      try {
-        localStorage.setItem(THEME_STORAGE_KEY, next);
-      } catch {
-        // ignore storage failures
-      }
-      return next;
-    });
+    const next: Theme = theme === "dark" ? "light" : "dark";
+    setSelectedTheme(next);
+    setTheme(next);
   };
-
-  const isDark = theme === "dark";
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/70 backdrop-blur-md supports-backdrop-filter:bg-background/60">
@@ -53,13 +40,11 @@ export function AppBar() {
             variant="ghost"
             size="icon-sm"
             className="active:translate-y-0!"
-            aria-label={isDark ? "切换到浅色模式" : "切换到深色模式"}
+            aria-label={theme === "dark" ? "切换到浅色模式" : "切换到深色模式"}
             onClick={onToggleTheme}
-            suppressHydrationWarning
+            disabled={theme === null}
           >
-            <span suppressHydrationWarning className="contents">
-              {isDark ? <Sun /> : <Moon />}
-            </span>
+            {theme === "dark" ? <Sun /> : <Moon />}
           </Button>
         </div>
       </div>
