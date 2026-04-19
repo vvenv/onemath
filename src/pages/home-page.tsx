@@ -1,6 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
 import { ChevronDown, Search, X } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { GRADES, MODULES, type ModuleKey } from "@/lib/modules";
@@ -29,6 +35,7 @@ type PersistedSearchState = {
   difficulty: Difficulty | null;
   tag: string | null;
   showMore: boolean;
+  collapsedGrades?: Grade[];
 };
 
 const DIFFICULTY_ACCENT: Record<Difficulty, string> = {
@@ -51,6 +58,9 @@ export default function HomePage() {
   );
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [showMore, setShowMore] = useState(false);
+  const [collapsedGrades, setCollapsedGrades] = useState<Set<Grade>>(
+    () => new Set(),
+  );
   const [restored, setRestored] = useState(false);
 
   useEffect(() => {
@@ -63,6 +73,8 @@ export default function HomePage() {
         if (s.difficulty !== undefined) setActiveDifficulty(s.difficulty);
         if (s.tag !== undefined) setActiveTag(s.tag);
         if (typeof s.showMore === "boolean") setShowMore(s.showMore);
+        if (Array.isArray(s.collapsedGrades))
+          setCollapsedGrades(new Set(s.collapsedGrades));
       }
     } catch {
       // ignore malformed storage
@@ -79,6 +91,7 @@ export default function HomePage() {
         difficulty: activeDifficulty,
         tag: activeTag,
         showMore,
+        collapsedGrades: Array.from(collapsedGrades),
       };
       sessionStorage.setItem("filter", JSON.stringify(payload));
     } catch {
@@ -91,6 +104,7 @@ export default function HomePage() {
     activeDifficulty,
     activeTag,
     showMore,
+    collapsedGrades,
   ]);
 
   const tags = useMemo(() => {
@@ -132,6 +146,32 @@ export default function HomePage() {
     activeGrade !== null ||
     activeDifficulty !== null ||
     activeTag !== null;
+
+  const visibleGradeLabels = useMemo(
+    () =>
+      GRADES.map((g) => g.label as Grade).filter((label) => {
+        const list = grouped.get(label);
+        return !!list && list.length > 0;
+      }),
+    [grouped],
+  );
+
+  const expandedGradeValues = useMemo(
+    () => visibleGradeLabels.filter((label) => !collapsedGrades.has(label)),
+    [visibleGradeLabels, collapsedGrades],
+  );
+
+  const handleAccordionChange = (next: string[]) => {
+    const nextSet = new Set(next as Grade[]);
+    setCollapsedGrades((prev) => {
+      const updated = new Set(prev);
+      for (const label of visibleGradeLabels) {
+        if (nextSet.has(label)) updated.delete(label);
+        else updated.add(label);
+      }
+      return updated;
+    });
+  };
 
   const resetAll = () => {
     setActiveModule(null);
@@ -248,39 +288,55 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="flex flex-col gap-6">
+      <Accordion
+        type="multiple"
+        value={expandedGradeValues}
+        onValueChange={handleAccordionChange}
+        className="gap-2"
+      >
         {GRADES.map((grade) => {
           const list = grouped.get(grade.label);
           if (!list || list.length === 0) return null;
+          const gradeLabel = grade.label as Grade;
           return (
-            <section key={grade.label} className="flex flex-col gap-3">
-              <div className="flex items-end justify-between gap-3">
-                <div className="flex items-center gap-3">
+            <AccordionItem
+              key={grade.label}
+              value={gradeLabel}
+              className="not-last:border-b-0"
+            >
+              <AccordionTrigger className="items-center gap-3 py-2 hover:no-underline">
+                <div className="flex flex-1 items-center gap-2">
                   <div className="flex flex-col gap-0.5">
-                    <h2 className="font-heading text-lg font-semibold tracking-tight">
-                      {grade.label}
-                    </h2>
+                    <div className="flex items-center gap-2">
+                      <h2 className="font-heading text-lg font-semibold tracking-tight">
+                        {grade.label}
+                      </h2>
+                      <Badge
+                        variant="outline"
+                        className="h-5 rounded-full px-2 text-[11px] tabular-nums"
+                      >
+                        {list.length} 题
+                      </Badge>
+                    </div>
                     <p className="text-xs text-muted-foreground">
                       {grade.subtitle}
                     </p>
                   </div>
                 </div>
-                <Badge
-                  variant="outline"
-                  className="h-6 shrink-0 rounded-full px-2 tabular-nums"
-                >
-                  {list.length} 题
-                </Badge>
-              </div>
-              <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-                {list.map((item) => (
-                  <ProblemRow key={item.id} problem={item} />
-                ))}
-              </div>
-            </section>
+              </AccordionTrigger>
+              <AccordionContent className="pt-1 pb-3 [&_a]:no-underline">
+                <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+                  {list.map((item) => (
+                    <ProblemRow key={item.id} problem={item} />
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
           );
         })}
+      </Accordion>
 
+      <div>
         {visibleProblems.length === 0 ? (
           <div className="flex flex-col items-center gap-2 rounded-2xl border border-dashed border-border/70 py-12 text-center">
             <Search className="size-6 text-muted-foreground" />
