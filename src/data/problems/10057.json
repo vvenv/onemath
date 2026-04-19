@@ -4,6 +4,7 @@
   "title": "分数比较大小·作差法",
   "grade": "五年级",
   "module": "calc",
+  "difficulty": "基础",
   "question": "比较 2023/2024 和 2024/2025 的大小。",
   "figures": [
     {
@@ -46,8 +47,16 @@
         {
           "kind": "equation-list",
           "rows": [
-            { "lhs": "1 − 2023/2024", "rhs": "1/2024", "status": "keep" },
-            { "lhs": "1 − 2024/2025", "rhs": "1/2025", "status": "keep" }
+            {
+              "lhs": "1 − 2023/2024",
+              "rhs": "1/2024",
+              "status": "keep"
+            },
+            {
+              "lhs": "1 − 2024/2025",
+              "rhs": "1/2025",
+              "status": "keep"
+            }
           ],
           "caption": "步骤1：计算与 1 的差距"
         },
@@ -56,12 +65,29 @@
           "min": 0.999,
           "max": 1,
           "points": [
-            { "value": 0.999506, "label": "2023/2024", "tone": "primary" },
-            { "value": 0.999506, "sublabel": "2024/2025", "tone": "accent" },
-            { "value": 1, "label": "1", "tone": "default" }
+            {
+              "value": 0.999506,
+              "label": "2023/2024",
+              "tone": "primary"
+            },
+            {
+              "value": 0.999506,
+              "sublabel": "2024/2025",
+              "tone": "accent"
+            },
+            {
+              "value": 1,
+              "label": "1",
+              "tone": "default"
+            }
           ],
           "segments": [
-            { "from": 0.999506, "to": 1, "label": "1/2024", "tone": "primary" },
+            {
+              "from": 0.999506,
+              "to": 1,
+              "label": "1/2024",
+              "tone": "primary"
+            },
             {
               "from": 0.999506,
               "to": 1,
@@ -74,7 +100,11 @@
         {
           "kind": "result-badges",
           "items": [
-            { "icon": "🔹", "count": "2023/2024", "label": "< 2024/2025" }
+            {
+              "icon": "🔹",
+              "count": "2023/2024",
+              "label": "< 2024/2025"
+            }
           ],
           "caption": "结论：2023/2024 < 2024/2025"
         }
@@ -93,15 +123,27 @@
         {
           "kind": "equation-list",
           "rows": [
-            { "lhs": "倒数 2024/2023", "rhs": "1 + 1/2023", "status": "keep" },
-            { "lhs": "倒数 2025/2024", "rhs": "1 + 1/2024", "status": "keep" },
+            {
+              "lhs": "倒数 2024/2023",
+              "rhs": "1 + 1/2023",
+              "status": "keep"
+            },
+            {
+              "lhs": "倒数 2025/2024",
+              "rhs": "1 + 1/2024",
+              "status": "keep"
+            },
             {
               "lhs": "1/2023",
               "rhs": "> 1/2024",
               "note": "分子同为 1，分母小者大",
               "badge": "关键"
             },
-            { "lhs": "⇒ 2024/2023", "rhs": "> 2025/2024", "status": "keep" },
+            {
+              "lhs": "⇒ 2024/2023",
+              "rhs": "> 2025/2024",
+              "status": "keep"
+            },
             {
               "lhs": "⇒ 2023/2024",
               "rhs": "< 2024/2025",
@@ -114,7 +156,11 @@
         {
           "kind": "result-badges",
           "items": [
-            { "icon": "🔸", "count": "2023/2024", "label": "< 2024/2025" }
+            {
+              "icon": "🔸",
+              "count": "2023/2024",
+              "label": "< 2024/2025"
+            }
           ],
           "caption": "与作差法结论一致"
         }
@@ -128,10 +174,16 @@
         "key": "relation",
         "type": "text",
         "label": "大小关系",
-        "enum": [">", "<", "="]
+        "enum": [
+          ">",
+          "<",
+          "="
+        ]
       }
     ],
-    "answer": { "relation": "<" },
+    "answer": {
+      "relation": "<"
+    },
     "hint": "两个分数都接近 1，试试用 1 减去每个分数，比较差值"
   },
   "tags": []

@@ -1,0 +1,84 @@
+{
+  "$schema": "../problem.schema.json",
+  "id": "10113",
+  "title": "等积变换·三次取中点",
+  "grade": "五年级",
+  "module": "geometry",
+  "difficulty": "基础",
+  "question": "如图，三角形 ABC 中，D、E、F 分别是 BC、AC、AD 的中点。已知三角形 ABC 的面积为 24，求三角形 DEF 的面积。",
+  "figures": [
+    {
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 220' font-family='sans-serif' font-size='12'><g fill='none' stroke='#1B4F72' stroke-width='1.5'><polygon points='40,190 290,190 120,30'/></g><g fill='#2E86C1'><circle cx='40' cy='190' r='3'/><circle cx='290' cy='190' r='3'/><circle cx='120' cy='30' r='3'/><circle cx='165' cy='190' r='3'/><circle cx='205' cy='110' r='3'/><circle cx='80' cy='110' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='32' y='205'>B</text><text x='298' y='205'>C</text><text x='120' y='22'>A</text><text x='165' y='207'>D</text><text x='219' y='107'>E</text><text x='68' y='107'>F</text></g><g stroke='#A93226' stroke-width='1.3' fill='none'><line x1='120' y1='30' x2='165' y2='190'/><polygon points='165,190 205,110 80,110' fill='rgb(169 50 38 / 0.12)'/></g></svg>",
+      "caption": "△ABC 中 D、E、F 分别为 BC、AC、AD 的中点（图中阴影为 △DEF）",
+      "alt": "三角形 ABC 及其内部三中点构成的三角形 DEF"
+    }
+  ],
+  "solutions": [
+    {
+      "key": "halving",
+      "label": "逐次取中点·面积减半",
+      "steps": [
+        "分析：D 是 BC 中点，E 是 CA 中点，F 是 AD 中点。中点连线把三角形分成两个等面积的部分——这是等积变换最基本的用法：等底等高面积相等。",
+        "第一步：D 是 BC 中点 ⇒ △ABD 与 △ADC 等底等高，面积都是 24 ÷ 2 = 12。",
+        "第二步：看 △ADC，E 是 AC 中点 ⇒ 中线 DE 把 △ADC 分成 △ADE 与 △DEC 两个等面积的三角形，各为 12 ÷ 2 = 6。",
+        "第三步：看 △ADE，F 是 AD 中点 ⇒ 中线 EF 把 △ADE 分成 △AEF 与 △DEF 两个等面积的三角形，各为 6 ÷ 2 = 3。",
+        "结论：三角形 DEF 的面积 = 3。"
+      ],
+      "scenes": [
+        {
+          "kind": "equation-list",
+          "rows": [
+            { "lhs": "△ABC", "rhs": "24", "badge": "已知" },
+            { "lhs": "△ADC = 24 ÷ 2", "rhs": "12", "note": "D 为 BC 中点" },
+            { "lhs": "△ADE = 12 ÷ 2", "rhs": "6", "note": "E 为 AC 中点" },
+            { "lhs": "△DEF = 6 ÷ 2", "rhs": "3", "note": "F 为 AD 中点", "badge": "答案" }
+          ],
+          "caption": "三次取中点，每次面积减半"
+        },
+        {
+          "kind": "compare-bars",
+          "rows": [
+            { "label": "△ABC", "value": 24, "max": 24, "tone": "muted" },
+            { "label": "△ADC", "value": 12, "max": 24, "tone": "muted" },
+            { "label": "△ADE", "value": 6, "max": 24, "tone": "muted" },
+            { "label": "△DEF", "value": 3, "max": 24, "tone": "primary" }
+          ],
+          "caption": "面积逐层减半的可视化"
+        },
+        {
+          "kind": "result-badges",
+          "items": [{ "icon": "📐", "count": 3, "label": "△DEF 面积" }]
+        }
+      ]
+    },
+    {
+      "key": "ratio",
+      "label": "比例连乘",
+      "steps": [
+        "分析：三次取中点相当于三次把面积乘以 1/2，可以一次性写成比例连乘。",
+        "△DEF 占 △ADE 的 1/2（F 是 AD 中点，EF 为 △ADE 的中线）。",
+        "△ADE 占 △ADC 的 1/2（E 是 AC 中点，DE 为 △ADC 的中线）。",
+        "△ADC 占 △ABC 的 1/2（D 是 BC 中点，AD 为 △ABC 的中线）。",
+        "因此 △DEF = (1/2)³ × △ABC = 24 × 1/8 = 3。"
+      ],
+      "scenes": [
+        {
+          "kind": "equation-list",
+          "rows": [
+            { "lhs": "△DEF : △ABC", "rhs": "1/2 × 1/2 × 1/2 = 1/8" },
+            { "lhs": "△DEF = 24 × 1/8", "rhs": "3", "badge": "答案" }
+          ]
+        }
+      ]
+    }
+  ],
+  "variant": {
+    "question": "三角形 ABC 的面积为 80。D 是 BC 中点，E 是 AC 中点，F 是 AD 中点，G 是 EF 中点。求三角形 DEG 的面积。",
+    "fields": [{ "key": "area", "label": "△DEG 面积", "type": "number" }],
+    "answer": { "area": 5 },
+    "hint": "把四次取中点理解为面积连乘 1/2，也可一步步用等积变形推出。"
+  },
+  "tags": [
+    "等积变形"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "$schema": "../problem.schema.json",
+  "id": "10126",
+  "title": "蝴蝶模型·正六边形内对角线交点",
+  "grade": "六年级",
+  "module": "geometry",
+  "difficulty": "挑战",
+  "question": "如图，正六边形 ABCDEF 的面积为 1。连接对角线 AC 与 BD，它们相交于点 P。求三角形 BCP 的面积。",
+  "figures": [
+    {
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-150 -150 300 300' font-family='sans-serif' font-size='12'><g fill='rgb(46 134 193 / 0.08)' stroke='#1B4F72' stroke-width='1.5'><polygon points='100,0 50,-86.6 -50,-86.6 -100,0 -50,86.6 50,86.6'/></g><g stroke='#A93226' stroke-width='1.3' fill='none'><line x1='100' y1='0' x2='-50' y2='-86.6'/><line x1='50' y1='-86.6' x2='-100' y2='0'/></g><g fill='#2E86C1'><circle cx='100' cy='0' r='3'/><circle cx='50' cy='-86.6' r='3'/><circle cx='-50' cy='-86.6' r='3'/><circle cx='-100' cy='0' r='3'/><circle cx='-50' cy='86.6' r='3'/><circle cx='50' cy='86.6' r='3'/><circle cx='0' cy='-57.7' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='112' y='4'>A</text><text x='56' y='-96'>B</text><text x='-58' y='-96'>C</text><text x='-115' y='4'>D</text><text x='-58' y='102'>E</text><text x='56' y='102'>F</text><text x='0' y='-67' fill='#A93226'>P</text></g></svg>",
+      "caption": "正六边形 ABCDEF；对角线 AC 与 BD 交于 P",
+      "alt": "正六边形内两条对角线的交点"
+    }
+  ],
+  "solutions": [
+    {
+      "key": "butterfly",
+      "label": "四边形 ABCD 的蝴蝶模型",
+      "steps": [
+        "分析：P 是四边形 ABCD 两条对角线 AC、BD 的交点。只要弄清 ABCD 是什么形状，再套用蝴蝶模型（四边形对角线切分出的四块面积满足 △ABP · △CDP = △BCP · △ADP）即可。",
+        "第一步：ABCD 是哪种四边形？在正六边形中，B、C 是相邻顶点，而 A、D 是它们各自斜对面的顶点；AB ∥ ED 且 CD ∥ FA，其中 AD 是一条长对角线，BC 是一条边。事实上 ABCD 是一个等腰梯形：AD ∥ BC（AD 是主对角线，BC 是边，均水平），且 AB = CD（对称）。",
+        "第二步：AD 是正六边形的主对角线，长度 = 2（若边长为 1）；BC 是一条边，长度 = 1。所以 AD : BC = 2 : 1。",
+        "第三步：梯形蝴蝶：△BCP : △ADP = (BC)² : (AD)² = 1 : 4；两侧三角形相等 △ABP = △CDP；且 △BCP · △ADP = △ABP · △CDP。",
+        "第四步：求梯形 ABCD 的面积。正六边形可看作 6 个边长为 1 的等边三角形之和，面积 = 6 · (√3/4) = 3√3/2，题设正六边形面积 = 1，所以每个单位等边三角形 = 1/6。梯形 ABCD 由 3 个这样的等边三角形拼成（以 AD 为底：两个在 BC 外侧凑出侧边，再加中心一个；也可直接看图），面积 = 3 × 1/6 = 1/2。",
+        "第五步：设 △BCP = x，则 △ADP = 4x，两侧 △ABP = △CDP = √(x · 4x) = 2x。梯形面积 = x + 4x + 2x + 2x = 9x。",
+        "第六步：9x = 1/2 ⇒ x = 1/18。",
+        "结论：三角形 BCP 的面积为 1/18。"
+      ],
+      "scenes": [
+        {
+          "kind": "equation-list",
+          "rows": [
+            { "lhs": "梯形 ABCD 面积", "rhs": "1/2", "note": "六边形的一半" },
+            { "lhs": "AD : BC", "rhs": "2 : 1", "note": "主对角线 : 边" },
+            { "lhs": "△BCP : △ADP : △ABP : △CDP", "rhs": "1 : 4 : 2 : 2" },
+            { "lhs": "9·△BCP = 1/2", "rhs": "△BCP = 1/18", "badge": "答案" }
+          ],
+          "caption": "梯形蝴蝶的 1 : 4 : 2 : 2 分配"
+        },
+        {
+          "kind": "svg",
+          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-150 -150 300 300' font-family='sans-serif' font-size='11'><polygon points='100,0 50,-86.6 -50,-86.6 -100,0 -50,86.6 50,86.6' fill='rgb(46 134 193 / 0.06)' stroke='#1B4F72' stroke-width='1.2'/><polygon points='100,0 50,-86.6 -50,-86.6 -100,0' fill='rgb(241 196 15 / 0.20)' stroke='#B7950B' stroke-width='1.2'/><polygon points='50,-86.6 -50,-86.6 0,-57.7' fill='rgb(169 50 38 / 0.35)' stroke='#A93226'/><g fill='#1B4F72' text-anchor='middle' font-size='10'><text x='0' y='0'>梯形 ABCD = 1/2</text><text x='0' y='-95' fill='#A93226'>△BCP = 1/18</text></g></svg>",
+          "caption": "黄色区域是梯形 ABCD，红色小三角是 △BCP"
+        },
+        {
+          "kind": "result-badges",
+          "items": [{ "icon": "📐", "count": "1/18", "label": "△BCP 面积" }]
+        }
+      ]
+    },
+    {
+      "key": "coord",
+      "label": "坐标法校核",
+      "steps": [
+        "分析：把正六边形放进坐标系，直接算出 P 再用三角形面积公式核对答案。",
+        "建系：取边长 1 的正六边形，中心在原点，A(1, 0)，B(1/2, √3/2)，C(−1/2, √3/2)，D(−1, 0)。六边形面积 = 3√3/2。",
+        "直线 AC：连接 (1,0) 与 (−1/2, √3/2)。",
+        "直线 BD：连接 (1/2, √3/2) 与 (−1, 0)。",
+        "联立求交点得 P = (0, √3/3)。",
+        "△BCP 面积 = (1/2)·|1/2·(√3/2 − √3/3) + (−1/2)·(√3/3 − √3/2) + 0·(√3/2 − √3/2)| = √3/12。",
+        "比例 = (√3/12) ÷ (3√3/2) = 1/18。题目把六边形面积设为 1，所以 △BCP = 1/18，和前解一致。"
+      ],
+      "scenes": [
+        {
+          "kind": "equation-list",
+          "rows": [
+            { "lhs": "P（AC ∩ BD）", "rhs": "(0, √3/3)" },
+            { "lhs": "△BCP / 六边形", "rhs": "1/18", "badge": "验证" }
+          ]
+        }
+      ]
+    }
+  ],
+  "variant": {
+    "question": "正六边形 ABCDEF 的面积为 36。连接 AC 与 BD，它们相交于 P。求三角形 ADP 的面积。",
+    "fields": [{ "key": "area", "label": "△ADP 面积", "type": "number" }],
+    "answer": { "area": 8 },
+    "hint": "由 1 : 4 : 2 : 2 的分配，△ADP 占梯形 ABCD 的 4/9；梯形 = 六边形 ÷ 2 = 18；△ADP = 18 × 4/9 = 8。"
+  },
+  "tags": [
+    "蝴蝶模型"
+  ]
+}

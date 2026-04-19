@@ -4,6 +4,7 @@
   "title": "分糖·盈亏问题",
   "grade": "三年级",
   "module": "word",
+  "difficulty": "基础",
   "question": "老师给小朋友们分糖果。如果每人分 6 颗，会多出 15 颗；如果每人分 8 颗，则还差 9 颗。请问一共有多少位小朋友？一共有多少颗糖果？",
   "solutions": [
     {
@@ -57,15 +58,31 @@
           "kind": "heads",
           "heads": {
             "count": 12,
-            "ticks": [{ "count": 6 }, { "count": 2, "tone": "accent" }]
+            "ticks": [
+              {
+                "count": 6
+              },
+              {
+                "count": 2,
+                "tone": "accent"
+              }
+            ]
           },
           "caption": "人数：24 ÷ 2 = 12 人"
         },
         {
           "kind": "result-badges",
           "items": [
-            { "icon": "👧", "count": 12, "label": "小朋友" },
-            { "icon": "🍬", "count": 87, "label": "糖果总数" }
+            {
+              "icon": "👧",
+              "count": 12,
+              "label": "小朋友"
+            },
+            {
+              "icon": "🍬",
+              "count": 87,
+              "label": "糖果总数"
+            }
           ],
           "caption": "糖果：12 × 6 + 15 = 87 颗"
         }
@@ -84,18 +101,42 @@
         {
           "kind": "equation-list",
           "rows": [
-            { "lhs": "6x + 15", "rhs": "8x − 9", "note": "糖果数相同" },
-            { "lhs": "15 + 9", "rhs": "8x − 6x", "note": "同类项移到同侧" },
-            { "lhs": "24", "rhs": "2x", "status": "keep" },
-            { "lhs": "x", "rhs": "12", "status": "keep" }
+            {
+              "lhs": "6x + 15",
+              "rhs": "8x − 9",
+              "note": "糖果数相同"
+            },
+            {
+              "lhs": "15 + 9",
+              "rhs": "8x − 6x",
+              "note": "同类项移到同侧"
+            },
+            {
+              "lhs": "24",
+              "rhs": "2x",
+              "status": "keep"
+            },
+            {
+              "lhs": "x",
+              "rhs": "12",
+              "status": "keep"
+            }
           ],
           "caption": "解方程求出人数"
         },
         {
           "kind": "result-badges",
           "items": [
-            { "icon": "👧", "count": 12, "label": "人" },
-            { "icon": "🍬", "count": 87, "label": "糖果" }
+            {
+              "icon": "👧",
+              "count": 12,
+              "label": "人"
+            },
+            {
+              "icon": "🍬",
+              "count": 87,
+              "label": "糖果"
+            }
           ],
           "caption": "6 × 12 + 15 = 87"
         }
@@ -105,8 +146,14 @@
   "variant": {
     "question": "学校安排宿舍。如果每间住 4 人，则有 10 人没床位；如果每间住 6 人，则空出 2 间宿舍。请问有多少间宿舍？多少名学生？",
     "fields": [
-      { "key": "rooms", "label": "宿舍间数" },
-      { "key": "students", "label": "学生人数" }
+      {
+        "key": "rooms",
+        "label": "宿舍间数"
+      },
+      {
+        "key": "students",
+        "label": "学生人数"
+      }
     ],
     "answer": {
       "rooms": 11,

@@ -4,6 +4,7 @@
   "title": "鸡兔同笼·基础变式",
   "grade": "三年级",
   "module": "word",
+  "difficulty": "基础",
   "question": "笼子里有🐔和🐰，共30个头，88只脚。问🐔和🐰各有多少只？",
   "solutions": [
     {
@@ -19,18 +20,32 @@
       "scenes": [
         {
           "kind": "heads",
-          "heads": { "count": 30 },
+          "heads": {
+            "count": 30
+          },
           "caption": "30 个头（○ × 30）"
         },
         {
           "kind": "heads",
-          "heads": { "count": 30, "ticks": [{ "count": 2 }] },
+          "heads": {
+            "count": 30,
+            "ticks": [
+              {
+                "count": 2
+              }
+            ]
+          },
           "caption": "假设全是🐔：30 × 2 = 60 只脚"
         },
         {
           "kind": "compare-bars",
           "rows": [
-            { "label": "目标", "value": 88, "max": 88, "tone": "primary" },
+            {
+              "label": "目标",
+              "value": 88,
+              "max": 88,
+              "tone": "primary"
+            },
             {
               "label": "当前",
               "value": 60,
@@ -45,14 +60,26 @@
           "kind": "heads-split",
           "left": {
             "count": 14,
-            "ticks": [{ "count": 2 }, { "count": 2, "tone": "accent" }],
+            "ticks": [
+              {
+                "count": 2
+              },
+              {
+                "count": 2,
+                "tone": "accent"
+              }
+            ],
             "tone": "accent",
             "caption": "补 2 只脚 → 🐰 × 14",
             "captionTone": "primary"
           },
           "right": {
             "count": 16,
-            "ticks": [{ "count": 2 }],
+            "ticks": [
+              {
+                "count": 2
+              }
+            ],
             "caption": "保持不变 → 🐔 × 16"
           },
           "caption": "28 ÷ 2 = 14 只需要变成🐰"
@@ -60,8 +87,14 @@
         {
           "kind": "result-badges",
           "items": [
-            { "icon": "🐰", "count": 14 },
-            { "icon": "🐔", "count": 16 }
+            {
+              "icon": "🐰",
+              "count": 14
+            },
+            {
+              "icon": "🐔",
+              "count": 16
+            }
           ],
           "caption": "头：14 + 16 = 30 ✓ ｜ 脚：4×14 + 2×16 = 88 ✓"
         }
@@ -92,8 +125,18 @@
         {
           "kind": "equation-list",
           "rows": [
-            { "lhs": "x + y", "rhs": "30", "note": "头数", "badge": "①" },
-            { "lhs": "2x + 4y", "rhs": "88", "note": "脚数", "badge": "②" }
+            {
+              "lhs": "x + y",
+              "rhs": "30",
+              "note": "头数",
+              "badge": "①"
+            },
+            {
+              "lhs": "2x + 4y",
+              "rhs": "88",
+              "note": "脚数",
+              "badge": "②"
+            }
           ],
           "caption": "列出两条方程"
         },
@@ -127,8 +170,14 @@
         {
           "kind": "result-badges",
           "items": [
-            { "icon": "🐰", "count": 14 },
-            { "icon": "🐔", "count": 16 }
+            {
+              "icon": "🐰",
+              "count": 14
+            },
+            {
+              "icon": "🐔",
+              "count": 16
+            }
           ],
           "caption": "y = 14，x = 30 − 14 = 16"
         }
@@ -138,8 +187,14 @@
   "variant": {
     "question": "停车场上共有汽车和摩托车 28 辆，轮子总数 86 个，求各有多少辆。",
     "fields": [
-      { "key": "car", "label": "汽车数量" },
-      { "key": "motorcycle", "label": "摩托车数量" }
+      {
+        "key": "car",
+        "label": "汽车数量"
+      },
+      {
+        "key": "motorcycle",
+        "label": "摩托车数量"
+      }
     ],
     "answer": {
       "car": 15,

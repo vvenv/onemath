@@ -4,6 +4,7 @@
   "title": "平均成绩·移多补少",
   "grade": "三年级",
   "module": "word",
+  "difficulty": "基础",
   "question": "小华的前四次数学测验平均分是 88 分。他想在第五次测验后，将平均分提高到 90 分。那么他第五次测验至少要考多少分？",
   "solutions": [
     {
@@ -36,7 +37,13 @@
         },
         {
           "kind": "result-badges",
-          "items": [{ "icon": "📝", "count": 98, "label": "第五次需考分数" }],
+          "items": [
+            {
+              "icon": "📝",
+              "count": 98,
+              "label": "第五次需考分数"
+            }
+          ],
           "caption": "前四次平均 88，要拉到平均 90，第五次需 98 分"
         }
       ]
@@ -56,12 +63,29 @@
           "min": 80,
           "max": 100,
           "points": [
-            { "value": 88, "label": "当前平均", "tone": "muted" },
-            { "value": 90, "label": "目标平均", "tone": "primary" },
-            { "value": 98, "label": "第五次分数", "tone": "accent" }
+            {
+              "value": 88,
+              "label": "当前平均",
+              "tone": "muted"
+            },
+            {
+              "value": 90,
+              "label": "目标平均",
+              "tone": "primary"
+            },
+            {
+              "value": 98,
+              "label": "第五次分数",
+              "tone": "accent"
+            }
           ],
           "segments": [
-            { "from": 88, "to": 90, "label": "每项缺2分", "tone": "muted" }
+            {
+              "from": 88,
+              "to": 90,
+              "label": "每项缺2分",
+              "tone": "muted"
+            }
           ],
           "caption": "第五次成绩 = 90 (基准) + 2×4 (补差) = 98 分"
         }
@@ -70,7 +94,12 @@
   ],
   "variant": {
     "question": "小明前三次语文测验的平均分是 82 分。这次测验后，他的平均分提高到了 84 分。请问他这次语文测验考了多少分？",
-    "fields": [{ "key": "score", "label": "第四次成绩" }],
+    "fields": [
+      {
+        "key": "score",
+        "label": "第四次成绩"
+      }
+    ],
     "answer": {
       "score": 90
     },

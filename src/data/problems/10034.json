@@ -4,6 +4,7 @@
   "title": "加乘原理·路线选择",
   "grade": "四年级",
   "module": "counting",
+  "difficulty": "基础",
   "question": "如图，从A地到B地有3条路可走，从B地到C地有4条路可走，从A地直接到C地有2条路可走。那么从A地到C地一共有多少种不同的走法？",
   "figures": [
     {
@@ -36,9 +37,21 @@
         {
           "kind": "result-badges",
           "items": [
-            { "icon": "🛣️", "count": 12, "label": "经过B" },
-            { "icon": "🛤️", "count": 2, "label": "直达" },
-            { "icon": "✅", "count": 14, "label": "总计" }
+            {
+              "icon": "🛣️",
+              "count": 12,
+              "label": "经过B"
+            },
+            {
+              "icon": "🛤️",
+              "count": 2,
+              "label": "直达"
+            },
+            {
+              "icon": "✅",
+              "count": 14,
+              "label": "总计"
+            }
           ],
           "caption": "加法原理：12 + 2 = 14 种不同的走法"
         }
@@ -47,8 +60,15 @@
   ],
   "variant": {
     "question": "从甲地到乙地有2条路，乙地到丙地有5条路，甲地直接到丙地有3条路。从甲地到丙地有多少种走法？",
-    "fields": [{ "key": "total", "label": "总走法数" }],
-    "answer": { "total": 13 },
+    "fields": [
+      {
+        "key": "total",
+        "label": "总走法数"
+      }
+    ],
+    "answer": {
+      "total": 13
+    },
     "hint": "经过乙地：2×5=10种；直达：3种。合计13种。"
   },
   "tags": []

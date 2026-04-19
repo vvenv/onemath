@@ -4,6 +4,7 @@
   "title": "长方体切割·染色问题",
   "grade": "五年级",
   "module": "geometry",
+  "difficulty": "进阶",
   "question": "一个 5×4×3 的长方体木块，由 60 个棱长为 1 的小正方体组成。在其六个面上都涂上红色油漆，然后沿着小正方体的接缝将它全部切开。请问：恰好有两个面被涂成红色的小正方体有多少个？",
   "figures": [
     {
@@ -44,10 +45,26 @@
         {
           "kind": "result-badges",
           "items": [
-            { "icon": "🧊", "count": 12, "label": "长棱块" },
-            { "icon": "🧊", "count": 8, "label": "中棱块" },
-            { "icon": "🧊", "count": 4, "label": "高棱块" },
-            { "icon": "✅", "count": 24, "label": "总计" }
+            {
+              "icon": "🧊",
+              "count": 12,
+              "label": "长棱块"
+            },
+            {
+              "icon": "🧊",
+              "count": 8,
+              "label": "中棱块"
+            },
+            {
+              "icon": "🧊",
+              "count": 4,
+              "label": "高棱块"
+            },
+            {
+              "icon": "✅",
+              "count": 24,
+              "label": "总计"
+            }
           ],
           "caption": "两面涂色的小正方体总数 = 12 + 8 + 4 = 24 个"
         }
@@ -57,11 +74,24 @@
   "variant": {
     "question": "将一个 6×6×6 的正方体表面涂色后切成小方块。一面涂色、两面涂色、三面涂色的各有多少个？",
     "fields": [
-      { "key": "one_side", "label": "一面涂色" },
-      { "key": "two_side", "label": "两面涂色" },
-      { "key": "three_side", "label": "三面涂色" }
+      {
+        "key": "one_side",
+        "label": "一面涂色"
+      },
+      {
+        "key": "two_side",
+        "label": "两面涂色"
+      },
+      {
+        "key": "three_side",
+        "label": "三面涂色"
+      }
     ],
-    "answer": { "one_side": 96, "two_side": 48, "three_side": 8 },
+    "answer": {
+      "one_side": 96,
+      "two_side": 48,
+      "three_side": 8
+    },
     "hint": "一面涂色在面中心，两面涂色在棱中，三面涂色在顶点。"
   },
   "tags": []

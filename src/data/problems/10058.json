@@ -4,6 +4,7 @@
   "title": "乘法巧算·提取公因数",
   "grade": "四年级",
   "module": "calc",
+  "difficulty": "基础",
   "question": "计算：36 × 47 + 64 × 47",
   "solutions": [
     {
@@ -25,7 +26,11 @@
         {
           "kind": "equation-list",
           "rows": [
-            { "lhs": "原式", "rhs": "36 × 47 + 64 × 47", "status": "keep" },
+            {
+              "lhs": "原式",
+              "rhs": "36 × 47 + 64 × 47",
+              "status": "keep"
+            },
             {
               "lhs": "提公因数",
               "rhs": "(36 + 64) × 47",
@@ -38,13 +43,24 @@
               "status": "keep",
               "badge": "36+64=100"
             },
-            { "lhs": "得数", "rhs": "4700", "status": "keep", "badge": "答案" }
+            {
+              "lhs": "得数",
+              "rhs": "4700",
+              "status": "keep",
+              "badge": "答案"
+            }
           ],
           "caption": "四步写清：原式 → 提因数 → 凑整 → 得数"
         },
         {
           "kind": "result-badges",
-          "items": [{ "icon": "✖️", "count": 4700, "label": "计算结果" }],
+          "items": [
+            {
+              "icon": "✖️",
+              "count": 4700,
+              "label": "计算结果"
+            }
+          ],
           "caption": "100 × 47 = 4700"
         }
       ]
@@ -63,8 +79,16 @@
         {
           "kind": "equation-list",
           "rows": [
-            { "lhs": "第一项", "rhs": "36 × 47 = 1692", "status": "keep" },
-            { "lhs": "第二项", "rhs": "64 × 47 = 3008", "status": "keep" },
+            {
+              "lhs": "第一项",
+              "rhs": "36 × 47 = 1692",
+              "status": "keep"
+            },
+            {
+              "lhs": "第二项",
+              "rhs": "64 × 47 = 3008",
+              "status": "keep"
+            },
             {
               "lhs": "求和",
               "rhs": "1692 + 3008 = 4700",
@@ -99,8 +123,15 @@
   ],
   "variant": {
     "question": "计算：125 × 28 − 25 × 28",
-    "fields": [{ "key": "result", "label": "结果" }],
-    "answer": { "result": 2800 },
+    "fields": [
+      {
+        "key": "result",
+        "label": "结果"
+      }
+    ],
+    "answer": {
+      "result": 2800
+    },
     "hint": "提取公因数 28：(125 − 25) × 28 = 100 × 28"
   },
   "tags": []

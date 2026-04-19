@@ -4,6 +4,7 @@
   "title": "方阵问题·实心方阵",
   "grade": "四年级",
   "module": "geometry",
+  "difficulty": "基础",
   "question": "四年级同学排成一个实心方阵进行广播操表演，最外层每边站了12人。请问这个方阵一共有多少人？最外层一共有多少人？",
   "solutions": [
     {
@@ -17,13 +18,21 @@
       "scenes": [
         {
           "kind": "lattice",
-          "lattice": { "rows": 12, "cols": 12, "tone": "primary" },
+          "lattice": {
+            "rows": 12,
+            "cols": 12,
+            "tone": "primary"
+          },
           "caption": "12×12 实心方阵，总数 = 12 × 12 = 144"
         },
         {
           "kind": "equation-list",
           "rows": [
-            { "lhs": "总人数", "rhs": "12 × 12 = 144", "status": "keep" },
+            {
+              "lhs": "总人数",
+              "rhs": "12 × 12 = 144",
+              "status": "keep"
+            },
             {
               "lhs": "外层",
               "rhs": "(12 − 1) × 4 = 44",
@@ -36,8 +45,16 @@
         {
           "kind": "result-badges",
           "items": [
-            { "icon": "👥", "count": 144, "label": "总人数" },
-            { "icon": "🟥", "count": 44, "label": "最外层" }
+            {
+              "icon": "👥",
+              "count": 144,
+              "label": "总人数"
+            },
+            {
+              "icon": "🟥",
+              "count": 44,
+              "label": "最外层"
+            }
           ],
           "caption": "总 144，外层 44"
         }
@@ -73,7 +90,11 @@
         {
           "kind": "equation-list",
           "rows": [
-            { "lhs": "12² − 10²", "rhs": "144 − 100 = 44", "status": "keep" }
+            {
+              "lhs": "12² − 10²",
+              "rhs": "144 − 100 = 44",
+              "status": "keep"
+            }
           ],
           "caption": "平方差即为外层"
         }
@@ -83,8 +104,14 @@
   "variant": {
     "question": "一个实心方阵花坛，最外层每边摆了15盆花。这个花坛一共用了多少盆花？最外层有多少盆？",
     "fields": [
-      { "key": "total", "label": "总盆数" },
-      { "key": "outer", "label": "最外层盆数" }
+      {
+        "key": "total",
+        "label": "总盆数"
+      },
+      {
+        "key": "outer",
+        "label": "最外层盆数"
+      }
     ],
     "answer": {
       "total": 225,

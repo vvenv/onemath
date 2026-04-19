@@ -4,6 +4,7 @@
   "title": "梯形面积·蝴蝶模型",
   "grade": "四年级",
   "module": "geometry",
+  "difficulty": "进阶",
   "question": "如图，四边形ABCD是一个梯形，上底AD长4，下底BC长8。对角线AC和BD相交于点O。已知三角形AOD的面积是10平方厘米，那么梯形ABCD的总面积是多少平方厘米？",
   "figures": [
     {
@@ -33,8 +34,16 @@
         {
           "kind": "result-badges",
           "items": [
-            { "icon": "🔺", "count": 10, "label": "S△AOD" },
-            { "icon": "🔻", "count": 40, "label": "S△COB" }
+            {
+              "icon": "🔺",
+              "count": 10,
+              "label": "S△AOD"
+            },
+            {
+              "icon": "🔻",
+              "count": 40,
+              "label": "S△COB"
+            }
           ],
           "separator": "→",
           "caption": "S△AOD = 10，所以 S△COB = 10 × 4 = 40"
@@ -47,7 +56,11 @@
         {
           "kind": "result-badges",
           "items": [
-            { "icon": "🔷", "count": 90, "label": "梯形总面积 (平方厘米)" }
+            {
+              "icon": "🔷",
+              "count": 90,
+              "label": "梯形总面积 (平方厘米)"
+            }
           ],
           "caption": "总面积 = S₁ + S₂ + S₃ + S₄ = 10 + 20 + 20 + 40 = 90"
         }
@@ -56,8 +69,15 @@
   ],
   "variant": {
     "question": "梯形ABCD中，AD//BC，对角线交于O。已知S△AOD=4，S△BOC=9，求S△AOB。",
-    "fields": [{ "key": "area", "label": "三角形AOB面积" }],
-    "answer": { "area": 6 },
+    "fields": [
+      {
+        "key": "area",
+        "label": "三角形AOB面积"
+      }
+    ],
+    "answer": {
+      "area": 6
+    },
     "hint": "蝴蝶两翼面积相等，且等于上下两三角形面积之积的平方根。"
   },
   "tags": [

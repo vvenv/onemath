@@ -4,6 +4,7 @@
   "title": "速算与巧算·凑整法",
   "grade": "三年级",
   "module": "calc",
+  "difficulty": "基础",
   "question": "计算：999 + 99 + 9",
   "figures": [
     {
@@ -26,9 +27,21 @@
         {
           "kind": "equation-list",
           "rows": [
-            { "lhs": "999", "rhs": "1000 − 1", "status": "keep" },
-            { "lhs": "99", "rhs": "100 − 1", "status": "keep" },
-            { "lhs": "9", "rhs": "10 − 1", "status": "keep" }
+            {
+              "lhs": "999",
+              "rhs": "1000 − 1",
+              "status": "keep"
+            },
+            {
+              "lhs": "99",
+              "rhs": "100 − 1",
+              "status": "keep"
+            },
+            {
+              "lhs": "9",
+              "rhs": "10 − 1",
+              "status": "keep"
+            }
           ],
           "caption": "步骤1：把每个数写成整数减1的形式"
         },
@@ -53,7 +66,13 @@
         },
         {
           "kind": "result-badges",
-          "items": [{ "icon": "✅", "count": 1107, "label": "最终结果" }],
+          "items": [
+            {
+              "icon": "✅",
+              "count": 1107,
+              "label": "最终结果"
+            }
+          ],
           "caption": "1110 − 3 = 1107"
         }
       ]
@@ -61,8 +80,15 @@
   ],
   "variant": {
     "question": "计算：2998 + 498 + 98",
-    "fields": [{ "key": "result", "label": "结果" }],
-    "answer": { "result": 3594 },
+    "fields": [
+      {
+        "key": "result",
+        "label": "结果"
+      }
+    ],
+    "answer": {
+      "result": 3594
+    },
     "hint": "2998 = 3000 − 2，498 = 500 − 2，98 = 100 − 2"
   },
   "tags": [

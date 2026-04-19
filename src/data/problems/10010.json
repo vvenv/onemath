@@ -4,6 +4,7 @@
   "title": "归一问题·基本归一",
   "grade": "三年级",
   "module": "word",
+  "difficulty": "基础",
   "question": "一台织布机3小时织布24米。照这样计算，8台同样的织布机5小时可以织布多少米？",
   "solutions": [
     {
@@ -17,8 +18,16 @@
         {
           "kind": "result-badges",
           "items": [
-            { "icon": "🧵", "count": 24, "label": "米" },
-            { "icon": "🖨️", "count": 3, "label": "台·小时" }
+            {
+              "icon": "🧵",
+              "count": 24,
+              "label": "米"
+            },
+            {
+              "icon": "🖨️",
+              "count": 3,
+              "label": "台·小时"
+            }
           ],
           "separator": "÷",
           "caption": "归一：24 ÷ 3 = 8（米/台·小时），即每台每小时织 8 米"
@@ -26,9 +35,21 @@
         {
           "kind": "result-badges",
           "items": [
-            { "icon": "⚙️", "count": 8, "label": "米/台·小时（单产）" },
-            { "icon": "🖨️", "count": 8, "label": "台" },
-            { "icon": "⏱️", "count": 5, "label": "小时" }
+            {
+              "icon": "⚙️",
+              "count": 8,
+              "label": "米/台·小时（单产）"
+            },
+            {
+              "icon": "🖨️",
+              "count": 8,
+              "label": "台"
+            },
+            {
+              "icon": "⏱️",
+              "count": 5,
+              "label": "小时"
+            }
           ],
           "separator": "×",
           "caption": "总产量 = 单产 × 台数 × 时间 = 8 × 8 × 5 = 320（米）"
@@ -48,7 +69,12 @@
         {
           "kind": "compare-bars",
           "rows": [
-            { "label": "原方案 (1×3)", "value": 3, "max": 40, "tone": "muted" },
+            {
+              "label": "原方案 (1×3)",
+              "value": 3,
+              "max": 40,
+              "tone": "muted"
+            },
             {
               "label": "新方案 (8×5)",
               "value": 40,
@@ -62,8 +88,15 @@
         {
           "kind": "equation-list",
           "rows": [
-            { "lhs": "24 × (40 ÷ 3)", "rhs": "24 ÷ 3 × 40" },
-            { "lhs": "= 8 × 40", "rhs": "320（米）", "status": "keep" }
+            {
+              "lhs": "24 × (40 ÷ 3)",
+              "rhs": "24 ÷ 3 × 40"
+            },
+            {
+              "lhs": "= 8 × 40",
+              "rhs": "320（米）",
+              "status": "keep"
+            }
           ],
           "caption": "产量按台·时倍数同步放大"
         }
@@ -72,7 +105,12 @@
   ],
   "variant": {
     "question": "5辆卡车4次共运货160吨。照这样计算，同样的7辆卡车运6次，一共可以运货多少吨？",
-    "fields": [{ "key": "total", "label": "运货总吨数" }],
+    "fields": [
+      {
+        "key": "total",
+        "label": "运货总吨数"
+      }
+    ],
     "answer": {
       "total": 336
     },
