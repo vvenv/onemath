@@ -36,11 +36,15 @@ export function AppBar() {
       <div className="mx-auto flex h-14 w-full max-w-3xl items-center gap-3 px-4">
         <Link
           to="/"
-          aria-label="返回首页"
-          className="flex items-center gap-2 rounded-md outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          aria-label="返回 edao.plus 首页"
+          className="flex items-center gap-2.5 rounded-md outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           <Logo />
-          <span className="text-sm font-semibold tracking-tight">一道</span>
+          <span className="flex items-baseline gap-1.5">
+            <span className="font-heading text-base font-semibold tracking-tight">
+              一道 / edao.plus
+            </span>
+          </span>
         </Link>
 
         <div className="ml-auto flex items-center gap-1">
