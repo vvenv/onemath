@@ -31,6 +31,12 @@ export type ProblemFigure = {
   alt?: string;
 };
 
+export type KnowledgePoint = {
+  slug: string;
+  name: string;
+  summary?: string;
+};
+
 export type ProblemData = {
   id: string;
   title: string;
@@ -51,5 +57,6 @@ export type ProblemData = {
     answer: Record<string, VariantAnswerValue>;
     hint?: string;
   };
+  knowledgePoints?: KnowledgePoint[];
   tags: string[];
 };
