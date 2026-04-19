@@ -23,28 +23,41 @@ export function NumberGrid({
   const map = new Map<string, (typeof cells)[number]>();
   for (const c of cells) map.set(`${c.row},${c.col}`, c);
 
+  const maxWidth = cols * cellSize + (cols - 1) * 4;
+
   return (
-    <div className={cn("mx-auto flex w-fit flex-col items-center", className)}>
-      {colLabel ? (
-        <div className="mb-1 text-xs text-muted-foreground">{colLabel}</div>
-      ) : null}
-      <div className="flex items-center gap-2">
+    <div
+      className={cn("mx-auto w-full", className)}
+      style={{ maxWidth: maxWidth + 24 }}
+    >
+      <div
+        className="grid gap-x-2 gap-y-1"
+        style={{
+          gridTemplateColumns: rowLabel
+            ? "auto minmax(0, 1fr)"
+            : "minmax(0, 1fr)",
+        }}
+      >
+        {colLabel ? (
+          <div
+            className="text-center text-xs text-muted-foreground"
+            style={{ gridColumn: rowLabel ? "2" : "1" }}
+          >
+            {colLabel}
+          </div>
+        ) : null}
         {rowLabel ? (
           <div
-            className="text-xs text-muted-foreground"
-            style={{
-              writingMode: "vertical-rl",
-              transform: "rotate(180deg)",
-            }}
+            className="flex items-center justify-center text-xs text-muted-foreground"
+            style={{ writingMode: "vertical-rl" }}
           >
             {rowLabel}
           </div>
         ) : null}
         <div
-          className="grid gap-1"
+          className="@container grid min-w-0 gap-[2px] sm:gap-1"
           style={{
-            gridTemplateColumns: `repeat(${cols}, ${cellSize}px)`,
-            gridTemplateRows: `repeat(${rows}, ${cellSize}px)`,
+            gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
           }}
           role="img"
           aria-label={`${rows} × ${cols} 标数网格`}
@@ -57,7 +70,7 @@ export function NumberGrid({
               return (
                 <span
                   key={i}
-                  className="block rounded border border-dashed border-foreground/20"
+                  className="block aspect-square rounded border border-dashed border-foreground/20"
                   aria-hidden
                 />
               );
@@ -67,7 +80,8 @@ export function NumberGrid({
               <span
                 key={i}
                 className={cn(
-                  "flex items-center justify-center rounded border text-base tabular-nums",
+                  "flex aspect-square items-center justify-center rounded border tabular-nums leading-none",
+                  "text-[clamp(0.625rem,2.2cqi,1rem)]",
                   TONE_CLASS[tone],
                 )}
               >
