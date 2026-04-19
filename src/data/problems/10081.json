@@ -8,7 +8,7 @@
   "question": "探险队有 3 辆完全相同的汽车，每辆油箱加满后恰好能行驶 300 千米。出发时 3 辆车同时从大本营出发，都已加满油；沿途没有任何加油站，但允许一辆车在路上把自己的一部分汽油瞬间倒给另一辆车（不浪费）。要求至少有一辆车尽可能向前走得远，其余车必须安全返回大本营。问那辆最前方的车最远能到达距大本营多少千米的地方？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 120' font-family='sans-serif' font-size='13'><line x1='20' y1='70' x2='340' y2='70' stroke='#2E86C1' stroke-width='2'/><g fill='#d6eaf8' stroke='#2E86C1'><rect x='20' y='55' width='40' height='30' rx='6'/><rect x='80' y='55' width='40' height='30' rx='6'/><rect x='140' y='55' width='40' height='30' rx='6'/></g><g fill='#1B4F72' text-anchor='middle'><text x='40' y='75'>车 1</text><text x='100' y='75'>车 2</text><text x='160' y='75'>车 3</text><text x='40' y='45'>大本营</text><text x='320' y='45'>最远处？</text></g><g fill='#1B4F72' font-size='12'><text x='220' y='95'>每车油箱 = 300 km</text></g></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 120' font-size='13'><line x1='20' y1='70' x2='340' y2='70' stroke='#2E86C1' stroke-width='1'/><g fill='#d6eaf8' stroke='#2E86C1'><rect x='20' y='55' width='40' height='30' rx='6'/><rect x='80' y='55' width='40' height='30' rx='6'/><rect x='140' y='55' width='40' height='30' rx='6'/></g><g fill='#1B4F72' text-anchor='middle'><text x='40' y='75'>车 1</text><text x='100' y='75'>车 2</text><text x='160' y='75'>车 3</text><text x='40' y='45'>大本营</text><text x='320' y='45'>最远处？</text></g><g fill='#1B4F72' font-size='12'><text x='220' y='95'>每车油箱 = 300 km</text></g></svg>",
       "caption": "3 辆车同时出发，每辆油箱 300 km",
       "alt": "三车远征示意"
     }
@@ -31,8 +31,16 @@
           "kind": "equation-list",
           "rows": [
             { "lhs": "车 1 回本营需补油点", "rhs": "4a = 300 → a = 75 km" },
-            { "lhs": "车 2 回本营需补油点", "rhs": "3b − 2a = 300 → b = 150 km" },
-            { "lhs": "车 3 在 b 处满油再跑", "rhs": "150 + 300 = 450 km", "status": "keep", "badge": "最远" }
+            {
+              "lhs": "车 2 回本营需补油点",
+              "rhs": "3b − 2a = 300 → b = 150 km"
+            },
+            {
+              "lhs": "车 3 在 b 处满油再跑",
+              "rhs": "150 + 300 = 450 km",
+              "status": "keep",
+              "badge": "最远"
+            }
           ],
           "caption": "两次转油点的位置与最远距离"
         },
@@ -57,7 +65,11 @@
             { "lhs": "总油量", "rhs": "3 × 300 = 900 km" },
             { "lhs": "车 1 往返消耗", "rhs": "2 × 75 = 150" },
             { "lhs": "车 2 往返消耗", "rhs": "2 × 150 = 300" },
-            { "lhs": "车 3 可用", "rhs": "900 − 150 − 300 = 450", "status": "keep" }
+            {
+              "lhs": "车 3 可用",
+              "rhs": "900 − 150 − 300 = 450",
+              "status": "keep"
+            }
           ],
           "caption": "总油量守恒验证"
         }
@@ -70,7 +82,5 @@
     "answer": { "answer": 400 },
     "hint": "设车 1 在 a 处把多余油给车 2 再返回：4a = 300，a = 75（等——重设：车 1 自己用 a + 回程 a，还要给车 2 补 a；共 3a = 300，a = 100）。车 2 在 a = 100 处满油再跑 300，最远 100 + 300 = 400 km。"
   },
-  "tags": [
-    "逆向推理"
-  ]
+  "tags": ["逆向推理"]
 }

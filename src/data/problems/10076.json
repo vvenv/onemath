@@ -5,10 +5,10 @@
   "grade": "六年级",
   "module": "misc",
   "difficulty": "挑战",
-  "question": "从水源依次向三个用户 P₁、P₂、P₃ 铺设一条总长 300 米的水管，水源到 P₁ 100 米、P₁ 到 P₂ 100 米、P₂ 到 P₃ 100 米。三个用户每秒分别取水 30、20、10 升（即流量）。管道有三种规格：\n\n- 粗管：最大流量 80 升/秒，每米 80 元\n- 中管：最大流量 40 升/秒，每米 50 元\n- 细管：最大流量 15 升/秒，每米 20 元\n\n同一段管道只能用同一种规格；若某段管道流量超过所选规格的上限就不够用。请为三段管道各选一种规格，使总费用最低。最低总费用是多少元？",
+  "question": "从水源依次向三个用户 P₁、P₂、P₃ 铺设一条总长 300 米的水管，水源到 P₁ 100 米、P₁ 到 P₂ 100 米、P₂ 到 P₃ 100 米。三个用户每秒分别取水 30、20、10 升（即流量）。管道有三种规格：- 粗管：最大流量 80 升/秒，每米 80 元- 中管：最大流量 40 升/秒，每米 50 元- 细管：最大流量 15 升/秒，每米 20 元\n同一段管道只能用同一种规格；若某段管道流量超过所选规格的上限就不够用。请为三段管道各选一种规格，使总费用最低。最低总费用是多少元？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 140' font-family='sans-serif' font-size='13'><g fill='#d6eaf8' stroke='#2E86C1'><rect x='10' y='55' width='50' height='30' rx='6'/><circle cx='140' cy='70' r='14'/><circle cx='250' cy='70' r='14'/><circle cx='360' cy='70' r='14'/></g><g stroke='#2E86C1' stroke-width='3' fill='none'><line x1='60' y1='70' x2='126' y2='70'/><line x1='154' y1='70' x2='236' y2='70'/><line x1='264' y1='70' x2='346' y2='70'/></g><g fill='#1B4F72' text-anchor='middle'><text x='35' y='75'>水源</text><text x='140' y='75'>P₁</text><text x='250' y='75'>P₂</text><text x='360' y='75'>P₃</text><text x='93' y='55'>100 m</text><text x='195' y='55'>100 m</text><text x='305' y='55'>100 m</text><text x='140' y='110'>30 L/s</text><text x='250' y='110'>20 L/s</text><text x='360' y='110'>10 L/s</text></g></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 140' font-size='13'><g fill='#d6eaf8' stroke='#2E86C1'><rect x='10' y='55' width='50' height='30' rx='6'/><circle cx='140' cy='70' r='14'/><circle cx='250' cy='70' r='14'/><circle cx='360' cy='70' r='14'/></g><g stroke='#2E86C1' stroke-width='3' fill='none'><line x1='60' y1='70' x2='126' y2='70'/><line x1='154' y1='70' x2='236' y2='70'/><line x1='264' y1='70' x2='346' y2='70'/></g><g fill='#1B4F72' text-anchor='middle'><text x='35' y='75'>水源</text><text x='140' y='75'>P₁</text><text x='250' y='75'>P₂</text><text x='360' y='75'>P₃</text><text x='93' y='55'>100 m</text><text x='195' y='55'>100 m</text><text x='305' y='55'>100 m</text><text x='140' y='110'>30 L/s</text><text x='250' y='110'>20 L/s</text><text x='360' y='110'>10 L/s</text></g></svg>",
       "caption": "三段管道的长度与三位用户的取水量",
       "alt": "分段水管示意"
     }

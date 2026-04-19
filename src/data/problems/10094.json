@@ -8,7 +8,7 @@
   "question": "把 1, 2, 3, 4, 5 这 5 个数字各用一次填入如图的十字形 5 个空格中（横行 3 格、竖行 3 格、中间格共用），使得横行 3 个数之和等于竖行 3 个数之和。问：共有多少种可能的相等和 S？请给出其中一种填法，使得该和达到最小值。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 188 188' font-family='sans-serif' font-size='16'><path d='M60 0 H120 V60 H180 V120 H120 V180 H60 V120 H0 V60 H60 Z M60 60 H120 M60 120 H120 M60 60 V120 M120 60 V120' fill='#fdfefe' stroke='#2E86C1' stroke-width='1' stroke-linejoin='miter' stroke-linecap='square'/></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 188 188' font-size='16'><path d='M60 0 H120 V60 H180 V120 H120 V180 H60 V120 H0 V60 H60 Z M60 60 H120 M60 120 H120 M60 60 V120 M120 60 V120' fill='#fdfefe' stroke='#2E86C1' stroke-width='1' stroke-linejoin='miter' stroke-linecap='square'/></svg>",
       "caption": "十字形 5 个空格",
       "alt": "由 5 个相同方格拼成的十字形，横排 3 格、竖排 3 格、中心格共用"
     }

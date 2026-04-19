@@ -8,7 +8,7 @@
   "question": "如图，在三角形 ABC 中，D 在 BC 上，且 BD = 2DC；E 在 AC 上，且 AE = 3EC。已知三角形 DEC 的面积为 3，求三角形 ABC 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 220' font-family='sans-serif' font-size='12'><g fill='none' stroke='#1B4F72' stroke-width='1.5'><polygon points='40,190 310,190 110,30'/></g><g fill='#2E86C1'><circle cx='40' cy='190' r='3'/><circle cx='310' cy='190' r='3'/><circle cx='110' cy='30' r='3'/><circle cx='220' cy='190' r='3'/><circle cx='260' cy='110' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='32' y='205'>B</text><text x='318' y='205'>C</text><text x='110' y='22'>A</text><text x='220' y='207'>D</text><text x='275' y='108'>E</text></g><g fill='#566573' font-size='11' text-anchor='middle'><text x='130' y='207'>BD = 2 DC</text><text x='210' y='68'>AE = 3 EC</text></g><g stroke='#A93226' stroke-width='1.2' fill='rgb(169 50 38 / 0.18)'><polygon points='220,190 310,190 260,110'/></g></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 220' font-size='12'><g fill='none' stroke='#1B4F72' stroke-width='1.5'><polygon points='40,190 310,190 110,30'/></g><g fill='#2E86C1'><circle cx='40' cy='190' r='3'/><circle cx='310' cy='190' r='3'/><circle cx='110' cy='30' r='3'/><circle cx='220' cy='190' r='3'/><circle cx='260' cy='110' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='32' y='205'>B</text><text x='318' y='205'>C</text><text x='110' y='22'>A</text><text x='220' y='207'>D</text><text x='275' y='108'>E</text></g><g fill='#566573' font-size='11' text-anchor='middle'><text x='130' y='207'>BD = 2 DC</text><text x='210' y='68'>AE = 3 EC</text></g><g stroke='#A93226' stroke-width='1.2' fill='rgb(169 50 38 / 0.18)'><polygon points='220,190 310,190 260,110'/></g></svg>",
       "caption": "△DEC（阴影）面积为 3，两条边上分别有比例分点",
       "alt": "三角形 ABC 中两条边上的比例点构成的小三角形"
     }
@@ -57,7 +57,5 @@
     "answer": { "area": 40 },
     "hint": "△DEC : △ABC = (DC/BC) × (EC/AC) = (1/4) × (1/5) = 1/20。"
   },
-  "tags": [
-    "等积变形"
-  ]
+  "tags": ["等积变形"]
 }

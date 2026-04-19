@@ -8,7 +8,7 @@
   "question": "把 7 个分数 1/8, 2/8, 3/8, 4/8, 5/8, 6/8, 7/8 各用一次，填入如图 3 条过中心的直线上（1 个中心圆 + 3 × 2 = 6 个外围圆），使每条直线上 3 个分数之和都相等。请问：中心圆必须填哪一个分数？此时每条直线的和 S 等于多少？并给出一种完整的填法。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' font-family='sans-serif' font-size='11'><g stroke='#2E86C1' fill='none'><line x1='30' y1='110' x2='190' y2='110'/><line x1='53' y1='40' x2='167' y2='180'/><line x1='167' y1='40' x2='53' y2='180'/></g><g fill='#fdfefe' stroke='#2E86C1'><circle cx='30' cy='110' r='16'/><circle cx='190' cy='110' r='16'/><circle cx='53' cy='40' r='16'/><circle cx='167' cy='180' r='16'/><circle cx='167' cy='40' r='16'/><circle cx='53' cy='180' r='16'/><circle cx='110' cy='110' r='16'/></g></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' font-size='11'><g stroke='#2E86C1' fill='none'><line x1='30' y1='110' x2='190' y2='110'/><line x1='53' y1='40' x2='167' y2='180'/><line x1='167' y1='40' x2='53' y2='180'/></g><g fill='#fdfefe' stroke='#2E86C1'><circle cx='30' cy='110' r='16'/><circle cx='190' cy='110' r='16'/><circle cx='53' cy='40' r='16'/><circle cx='167' cy='180' r='16'/><circle cx='167' cy='40' r='16'/><circle cx='53' cy='180' r='16'/><circle cx='110' cy='110' r='16'/></g></svg>",
       "caption": "3 条过中心的直线，7 个圆各填一个分数",
       "alt": "7 圆辐射阵"
     }
@@ -38,12 +38,16 @@
   ],
   "variant": {
     "question": "在相同辐射阵中填入 7 个分数 1/8, 2/8, …, 7/8，每线三数和相等。问：最小的线和 S 是多少？",
-    "fields": [{ "key": "min", "label": "最小 S", "type": "text", "placeholder": "如 5/4" }],
+    "fields": [
+      {
+        "key": "min",
+        "label": "最小 S",
+        "type": "text",
+        "placeholder": "如 5/4"
+      }
+    ],
     "answer": { "min": "5/4" },
     "hint": "S = (28 + 2c)/3 / 8；c 越小 S 越小，取 c = 1，S = 10/8 = 5/4。"
   },
-  "tags": [
-    "中心数法",
-    "累加法"
-  ]
+  "tags": ["中心数法", "累加法"]
 }

@@ -8,7 +8,7 @@
   "question": "把下面 9 个数字各用一次：1, 2, 4, 8, 16, 32, 64, 128, 256，填入 3 × 3 方格中，使每一行、每一列、两条对角线上三个数的乘积都相等。问：这个公共乘积（幻积）是多少？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 120' font-family='sans-serif' font-size='13'><g fill='#1B4F72' text-anchor='middle'><text x='140' y='50'>1, 2, 4, 8, 16, 32, 64, 128, 256</text><text x='140' y='85' font-size='11' fill='#555'>（9 个数，每个用一次，填入 3×3 方格，每行/列/对角线乘积相等）</text></g></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 120' font-size='13'><g fill='#1B4F72' text-anchor='middle'><text x='140' y='50'>1, 2, 4, 8, 16, 32, 64, 128, 256</text><text x='140' y='85' font-size='11' fill='#555'>（9 个数，每个用一次，填入 3×3 方格，每行/列/对角线乘积相等）</text></g></svg>",
       "caption": "9 个待填数字",
       "alt": "9 个 2 的幂"
     }
@@ -68,8 +68,5 @@
     "answer": { "product": "3^12", "center": 81 },
     "hint": "指数 0 到 8 的和幻方中心为 4，幻和为 12；换回 3 的幂，中心 = 3⁴ = 81，幻积 = 3¹² = 531441。"
   },
-  "tags": [
-    "累加法",
-    "质因数分解"
-  ]
+  "tags": ["累加法", "质因数分解"]
 }

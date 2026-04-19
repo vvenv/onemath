@@ -8,7 +8,7 @@
   "question": "把正整数 20 拆成若干个正整数之和（拆成几个都可以，顺序不计），使得这些正整数的乘积尽可能大。最大的乘积是多少？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 100' font-family='sans-serif' font-size='14'><g fill='#d6eaf8' stroke='#2E86C1'><rect x='20' y='30' width='320' height='40' rx='8'/></g><g fill='#1B4F72' text-anchor='middle'><text x='180' y='55'>a₁ + a₂ + … + aₖ = 20，求 a₁ × a₂ × … × aₖ 的最大值</text></g></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 100' font-size='14'><g fill='#d6eaf8' stroke='#2E86C1'><rect x='20' y='30' width='320' height='40' rx='8'/></g><g fill='#1B4F72' text-anchor='middle'><text x='180' y='55'>a₁ + a₂ + … + aₖ = 20，求 a₁ × a₂ × … × aₖ 的最大值</text></g></svg>",
       "caption": "将 20 拆成若干正整数，求乘积最大",
       "alt": "拆分的目标"
     }
@@ -29,7 +29,12 @@
         {
           "kind": "equation-list",
           "rows": [
-            { "lhs": "拆法 20 = 3+3+3+3+3+3+2", "rhs": "3⁶ · 2 = 1458", "status": "keep", "badge": "最大" },
+            {
+              "lhs": "拆法 20 = 3+3+3+3+3+3+2",
+              "rhs": "3⁶ · 2 = 1458",
+              "status": "keep",
+              "badge": "最大"
+            },
             { "lhs": "对比 4+4+4+4+4", "rhs": "4⁵ = 1024" },
             { "lhs": "对比 5+5+5+5", "rhs": "5⁴ = 625" },
             { "lhs": "对比全是 2（10 个 2）", "rhs": "2¹⁰ = 1024" }
@@ -62,7 +67,13 @@
             { "label": "5×4 (4⁵)", "value": 1024, "max": 1500 },
             { "label": "10×2 (2¹⁰)", "value": 1024, "max": 1500 },
             { "label": "5×3+1×5", "value": 1215, "max": 1500 },
-            { "label": "6×3+1×2", "value": 1458, "max": 1500, "tone": "primary", "marker": true }
+            {
+              "label": "6×3+1×2",
+              "value": 1458,
+              "max": 1500,
+              "tone": "primary",
+              "marker": true
+            }
           ],
           "caption": "不同拆法的乘积对比"
         }
@@ -75,7 +86,5 @@
     "answer": { "answer": 972 },
     "hint": "19 = 3 × 5 + 4，即 5 个 3 加 1 个 4；乘积 = 3⁵ × 4 = 243 × 4 = 972。（若余 1，应把一个 3 与 1 合并成 4。）"
   },
-  "tags": [
-    "枚举法"
-  ]
+  "tags": ["枚举法"]
 }

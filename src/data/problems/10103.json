@@ -8,7 +8,7 @@
   "question": "如图 3 个圆两两相交、互不三圆同交：每两个圆恰好共用 1 格（共 3 个这样的『两两交』格），每圆另有 3 个独占格，共 3 + 3×3 = 12 格。把 1, 2, 3, …, 12 各用一次填入这 12 格，使每个圆内的 5 个数字（3 个独占 + 2 个两两交）之和都相等。请问：3 个『两两交』格上数字的和 O 必须满足什么条件？请给出一种可行的 S 与对应的填法思路。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 240' font-family='sans-serif' font-size='12'><g fill='none' stroke='#2E86C1'><circle cx='100' cy='100' r='70'/><circle cx='160' cy='100' r='70'/><circle cx='130' cy='160' r='70'/></g></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 240' font-size='12'><g fill='none' stroke='#2E86C1'><circle cx='100' cy='100' r='70'/><circle cx='160' cy='100' r='70'/><circle cx='130' cy='160' r='70'/></g></svg>",
       "caption": "3 个两两相交的圆，共 12 格",
       "alt": "三圆相交示意"
     }
@@ -44,8 +44,5 @@
     "answer": { "min": 28, "o": 6 },
     "hint": "3S = O + 78，O 最小为 1+2+3 = 6，此时 S = 84/3 = 28（可验证有具体分配方案）。"
   },
-  "tags": [
-    "累加法",
-    "比较法"
-  ]
+  "tags": ["累加法", "比较法"]
 }

@@ -8,7 +8,7 @@
   "question": "用一口平底锅烙饼，锅里一次最多同时烙 2 张饼。每张饼有正反两面，每面都要烙 3 分钟才熟。现在要烙 3 张饼，最少需要多少分钟？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 130' font-family='sans-serif' font-size='14'><g><rect x='30' y='30' width='150' height='70' rx='18' fill='#fdfefe' stroke='#2E86C1' stroke-width='2'/><text x='105' y='120' text-anchor='middle' fill='#1B4F72'>平底锅（最多放 2 张饼）</text><circle cx='75' cy='65' r='20' fill='#f9e79f' stroke='#b9770e'/><circle cx='135' cy='65' r='20' fill='#f9e79f' stroke='#b9770e'/></g><g fill='#1B4F72' font-size='13'><text x='210' y='45'>共 3 张饼</text><text x='210' y='65'>每面 3 分钟</text><text x='210' y='85'>每张需烙 2 面</text></g></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 130' font-size='14'><g><rect x='30' y='30' width='150' height='70' rx='18' fill='#fdfefe' stroke='#2E86C1' stroke-width='1'/><text x='105' y='120' text-anchor='middle' fill='#1B4F72'>平底锅（最多放 2 张饼）</text><circle cx='75' cy='65' r='20' fill='#f9e79f' stroke='#b9770e'/><circle cx='135' cy='65' r='20' fill='#f9e79f' stroke='#b9770e'/></g><g fill='#1B4F72' font-size='13'><text x='210' y='45'>共 3 张饼</text><text x='210' y='65'>每面 3 分钟</text><text x='210' y='85'>每张需烙 2 面</text></g></svg>",
       "caption": "平底锅每次最多 2 张，单面 3 分钟",
       "alt": "平底锅烙饼示意"
     }
@@ -32,7 +32,12 @@
             { "lhs": "第 1 段 (0–3 min)", "rhs": "锅：A1 + B1" },
             { "lhs": "第 2 段 (3–6 min)", "rhs": "锅：A2 + C1" },
             { "lhs": "第 3 段 (6–9 min)", "rhs": "锅：B2 + C2" },
-            { "lhs": "总时间", "rhs": "3 + 3 + 3 = 9 分钟", "status": "keep", "badge": "最优" }
+            {
+              "lhs": "总时间",
+              "rhs": "3 + 3 + 3 = 9 分钟",
+              "status": "keep",
+              "badge": "最优"
+            }
           ],
           "caption": "让锅在每个时间段都装满 2 面"
         },

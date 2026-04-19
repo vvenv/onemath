@@ -8,7 +8,7 @@
   "question": "如图，三角形 ABC 中，D 是 BC 的中点，E 在线段 AD 上且 AE : ED = 2 : 1。直线 BE 延长后与边 AC 相交于点 F。已知三角形 ABC 的面积为 60，求三角形 AEF 的面积。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 260' font-family='sans-serif' font-size='12'><g fill='none' stroke='#1B4F72' stroke-width='1.5'><polygon points='40,230 310,230 70,40'/></g><g stroke='#5D6D7E' stroke-width='1' fill='none'><line x1='70' y1='40' x2='175' y2='230'/><line x1='40' y1='230' x2='225' y2='115'/></g><g fill='#2E86C1'><circle cx='40' cy='230' r='3'/><circle cx='310' cy='230' r='3'/><circle cx='70' cy='40' r='3'/><circle cx='175' cy='230' r='3'/><circle cx='140' cy='166.7' r='3'/><circle cx='225' cy='115' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='32' y='245'>B</text><text x='318' y='245'>C</text><text x='70' y='32'>A</text><text x='175' y='246'>D</text><text x='128' y='162'>E</text><text x='237' y='114'>F</text></g><g fill='#566573' font-size='11' text-anchor='middle'><text x='110' y='245'>D 为 BC 中点</text><text x='95' y='132'>AE : ED = 2 : 1</text></g></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 260' font-size='12'><g fill='none' stroke='#1B4F72' stroke-width='1.5'><polygon points='40,230 310,230 70,40'/></g><g stroke='#5D6D7E' stroke-width='1' fill='none'><line x1='70' y1='40' x2='175' y2='230'/><line x1='40' y1='230' x2='225' y2='115'/></g><g fill='#2E86C1'><circle cx='40' cy='230' r='3'/><circle cx='310' cy='230' r='3'/><circle cx='70' cy='40' r='3'/><circle cx='175' cy='230' r='3'/><circle cx='140' cy='166.7' r='3'/><circle cx='225' cy='115' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='32' y='245'>B</text><text x='318' y='245'>C</text><text x='70' y='32'>A</text><text x='175' y='246'>D</text><text x='128' y='162'>E</text><text x='237' y='114'>F</text></g><g fill='#566573' font-size='11' text-anchor='middle'><text x='110' y='245'>D 为 BC 中点</text><text x='95' y='132'>AE : ED = 2 : 1</text></g></svg>",
       "caption": "D 是 BC 的中点；E 在 AD 上使 AE : ED = 2 : 1；F 是 BE 与 AC 的交点",
       "alt": "三角形内的中线与比例点及交点 F"
     }
@@ -23,7 +23,7 @@
         "第二步：E 在 AD 上且 AE : AD = 2 : 3。以 AB 为公共边，△ABE 与 △ABD 的高之比 = AE : AD ⇒ △ABE = 30 × 2/3 = 20；同理 △ACE = 30 × 2/3 = 20。",
         "第三步：所以 △ABE = △ACE = 20，即点 E 到 AB、AC 两边的等价面积相同。延长 BE 到 AC 上的 F，考察 △ABF 与 △CBF：它们以 AF、FC 为底、同高（顶点都是 B），故 △ABF : △CBF = AF : FC。",
         "第四步：另一方面，△ABF 和 △CBF 共用高 BF 所在直线 = 高度不同；但都可以拆成 △ABE + △AEF 与 △CBE + △CEF。由 △ABE = △CBE = 20，且 △AEF : △CEF = AF : FC（E 为公共顶点、底共线），记 AF : FC = k，则 △ABF = 20 + k·t，△CBF = 20 + t（t = △CEF），且 △ABF : △CBF = k = (20 + kt)/(20 + t) ⇒ 20k + kt = 20 + kt ⇒ k = 1。故 AF : FC = 1 : 1，F 为 AC 的中点。",
-        "第五步：逐层缩放得到 △AEF：\n  △ADF = △ADC × (AF/AC) = 30 × 1/2 = 15；\n  △AEF = △ADF × (AE/AD) = 15 × 2/3 = 10。",
+        "第五步：逐层缩放得到 △AEF：△ADF = △ADC × (AF/AC) = 30 × 1/2 = 15；△AEF = △ADF × (AE/AD) = 15 × 2/3 = 10。",
         "所以 △AEF 的面积为 10。"
       ],
       "scenes": [
@@ -89,8 +89,5 @@
     "answer": { "area": 3.75 },
     "hint": "只要 D 是 BC 中点，△ABE 就总等于 △ACE，故 F 仍是 AC 的中点。两步缩放：△ADF = 22.5 × 1/2 = 11.25；△AEF = 11.25 × 1/3 = 3.75。"
   },
-  "tags": [
-    "等积变形",
-    "面积法"
-  ]
+  "tags": ["等积变形", "面积法"]
 }

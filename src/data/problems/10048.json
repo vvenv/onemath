@@ -21,7 +21,7 @@
       "scenes": [
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 220' width='500' height='220'><text x='250' y='25' font-family='sans-serif' font-size='14' fill='#333' text-anchor='middle' font-weight='bold'>交换前</text><!-- 甲容器 --><rect x='40' y='40' width='180' height='100' rx='5' fill='#e8f4f8' stroke='#2980b9' stroke-width='2'/><text x='130' y='65' font-family='sans-serif' font-size='13' fill='#333' text-anchor='middle' font-weight='bold'>甲容器</text><text x='130' y='85' font-family='sans-serif' font-size='12' fill='#666' text-anchor='middle'>500g, 浓度 12%</text><text x='130' y='105' font-family='sans-serif' font-size='12' fill='#2980b9' text-anchor='middle'>盐: 60g</text><!-- 乙容器 --><rect x='280' y='40' width='180' height='100' rx='5' fill='#fdedec' stroke='#e74c3c' stroke-width='2'/><text x='370' y='65' font-family='sans-serif' font-size='13' fill='#333' text-anchor='middle' font-weight='bold'>乙容器</text><text x='370' y='85' font-family='sans-serif' font-size='12' fill='#666' text-anchor='middle'>300g, 浓度 20%</text><text x='370' y='105' font-family='sans-serif' font-size='12' fill='#e74c3c' text-anchor='middle'>盐: 60g</text><text x='250' y='170' font-family='sans-serif' font-size='13' fill='#27ae60' text-anchor='middle' font-weight='bold'>总盐: 120g / 总溶液: 800g → 整体浓度 15%</text></svg>",
+          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 220' width='500' height='220'><text x='250' y='25' font-size='14' fill='#333' text-anchor='middle' font-weight='bold'>交换前</text><!-- 甲容器 --><rect x='40' y='40' width='180' height='100' rx='5' fill='#e8f4f8' stroke='#2980b9' stroke-width='1'/><text x='130' y='65' font-size='13' fill='#333' text-anchor='middle' font-weight='bold'>甲容器</text><text x='130' y='85' font-size='12' fill='#666' text-anchor='middle'>500g, 浓度 12%</text><text x='130' y='105' font-size='12' fill='#2980b9' text-anchor='middle'>盐: 60g</text><!-- 乙容器 --><rect x='280' y='40' width='180' height='100' rx='5' fill='#fdedec' stroke='#e74c3c' stroke-width='1'/><text x='370' y='65' font-size='13' fill='#333' text-anchor='middle' font-weight='bold'>乙容器</text><text x='370' y='85' font-size='12' fill='#666' text-anchor='middle'>300g, 浓度 20%</text><text x='370' y='105' font-size='12' fill='#e74c3c' text-anchor='middle'>盐: 60g</text><text x='250' y='170' font-size='13' fill='#27ae60' text-anchor='middle' font-weight='bold'>总盐: 120g / 总溶液: 800g → 整体浓度 15%</text></svg>",
           "caption": "交换前：甲 500g (12%)，乙 300g (20%)。总盐 120g，整体浓度 15%。"
         },
         {
@@ -75,8 +75,5 @@
     "answer": { "amount": 120 },
     "hint": "整体浓度 = (400×8% + 200×14%) ÷ 600 = 10%。"
   },
-  "tags": [
-    "不变量",
-    "方程法"
-  ]
+  "tags": ["不变量", "方程法"]
 }

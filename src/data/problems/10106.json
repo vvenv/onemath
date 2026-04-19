@@ -8,7 +8,7 @@
   "question": "如图，两个正方形一大一小彼此嵌套，共有 8 个顶点（大正方形 4 个、小正方形 4 个）。把 1, 2, 3, 4, 5, 6, 7, 8 这 8 个数字各用一次填入这 8 个顶点，使『大正方形 4 顶点之和』等于『小正方形 4 顶点之和』。问：这个相等的和 S 必定等于多少？",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' font-family='sans-serif' font-size='12'><g fill='none' stroke='#2E86C1'><rect x='30' y='30' width='160' height='160'/><rect x='70' y='70' width='80' height='80' transform='rotate(15 110 110)'/></g><g fill='#fdfefe' stroke='#2E86C1'><circle cx='30' cy='30' r='10'/><circle cx='190' cy='30' r='10'/><circle cx='30' cy='190' r='10'/><circle cx='190' cy='190' r='10'/><circle cx='77' cy='68' r='10'/><circle cx='152' cy='88' r='10'/><circle cx='68' cy='143' r='10'/><circle cx='143' cy='163' r='10'/></g></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' font-size='12'><g fill='none' stroke='#2E86C1'><rect x='30' y='30' width='160' height='160'/><rect x='70' y='70' width='80' height='80' transform='rotate(15 110 110)'/></g><g fill='#fdfefe' stroke='#2E86C1'><circle cx='30' cy='30' r='10'/><circle cx='190' cy='30' r='10'/><circle cx='30' cy='190' r='10'/><circle cx='190' cy='190' r='10'/><circle cx='77' cy='68' r='10'/><circle cx='152' cy='88' r='10'/><circle cx='68' cy='143' r='10'/><circle cx='143' cy='163' r='10'/></g></svg>",
       "caption": "大小两个正方形共 8 个顶点",
       "alt": "嵌套正方形数阵"
     }
@@ -41,8 +41,5 @@
     "answer": { "sum": 27.5 },
     "hint": "2S = 1+2+…+10 = 55，S = 27.5 —— 不是整数，说明这种填法在『10 数各用一次』下不可能；可证明此分配问题无解（作为答案，可写 55/2 = 27.5 并注明不存在整数分配）。"
   },
-  "tags": [
-    "累加法",
-    "比较法"
-  ]
+  "tags": ["累加法", "比较法"]
 }

@@ -8,7 +8,7 @@
   "question": "一张 8 × 8 的国际象棋棋盘（按黑白相间涂色），去掉位于一条对角线上两端的两个方格（即左上角和右下角）。剩下 62 个方格。每张 1 × 2 的长方形骨牌恰好覆盖相邻的两个方格。问：能否用 31 张这样的骨牌，恰好不重不漏地覆盖剩下的 62 个方格？请说明理由。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' font-family='sans-serif' font-size='11'><g stroke='#2E86C1'><rect x='20' y='20' width='160' height='160' fill='#fdfefe'/></g><g><rect x='20' y='20' width='20' height='20' fill='#f1948a'/><rect x='160' y='160' width='20' height='20' fill='#f1948a'/></g><g fill='#d6eaf8'><rect x='40' y='20' width='20' height='20'/><rect x='80' y='20' width='20' height='20'/><rect x='120' y='20' width='20' height='20'/><rect x='160' y='20' width='20' height='20'/><rect x='20' y='40' width='20' height='20'/><rect x='60' y='40' width='20' height='20'/><rect x='100' y='40' width='20' height='20'/><rect x='140' y='40' width='20' height='20'/></g><g fill='#1B4F72' text-anchor='middle' font-size='10'><text x='100' y='195'>8 × 8 棋盘，去掉左上角与右下角（红）两格</text></g></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' font-size='11'><g stroke='#2E86C1'><rect x='20' y='20' width='160' height='160' fill='#fdfefe'/></g><g><rect x='20' y='20' width='20' height='20' fill='#f1948a'/><rect x='160' y='160' width='20' height='20' fill='#f1948a'/></g><g fill='#d6eaf8'><rect x='40' y='20' width='20' height='20'/><rect x='80' y='20' width='20' height='20'/><rect x='120' y='20' width='20' height='20'/><rect x='160' y='20' width='20' height='20'/><rect x='20' y='40' width='20' height='20'/><rect x='60' y='40' width='20' height='20'/><rect x='100' y='40' width='20' height='20'/><rect x='140' y='40' width='20' height='20'/></g><g fill='#1B4F72' text-anchor='middle' font-size='10'><text x='100' y='195'>8 × 8 棋盘，去掉左上角与右下角（红）两格</text></g></svg>",
       "caption": "原始棋盘与被去掉的两个方格",
       "alt": "去角棋盘示意"
     }
@@ -31,7 +31,12 @@
             { "lhs": "原棋盘", "rhs": "32 黑 + 32 白 = 64" },
             { "lhs": "去掉同色两格", "rhs": "30 黑 + 32 白 = 62" },
             { "lhs": "31 张骨牌能覆盖", "rhs": "31 黑 + 31 白" },
-            { "lhs": "黑白不相等", "rhs": "矛盾", "status": "keep", "badge": "不可能" }
+            {
+              "lhs": "黑白不相等",
+              "rhs": "矛盾",
+              "status": "keep",
+              "badge": "不可能"
+            }
           ],
           "caption": "骨牌必盖一黑一白，黑白数须相等"
         },
@@ -46,12 +51,15 @@
   "variant": {
     "question": "把 8 × 8 棋盘去掉“位于同一行、同一边的相邻两格”（比如 a1 和 a2 两格），其他规则不变。问能否用 31 张 1 × 2 骨牌恰好铺满剩下的 62 格？",
     "fields": [
-      { "key": "possible", "label": "能否铺满", "type": "text", "enum": ["能", "不能"] }
+      {
+        "key": "possible",
+        "label": "能否铺满",
+        "type": "text",
+        "enum": ["能", "不能"]
+      }
     ],
     "answer": { "possible": "能" },
     "hint": "相邻两格颜色一黑一白，去掉后仍然黑白各 31 个。可以把剩下区域分成可覆盖的矩形（例如把被挖空行的剩余 6 格与下一行 6 格拼接处理），不难构造出一种覆盖方式。奇偶性这一必要条件满足，本题存在具体铺法。"
   },
-  "tags": [
-    "奇偶性"
-  ]
+  "tags": ["奇偶性"]
 }

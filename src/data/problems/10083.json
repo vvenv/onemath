@@ -8,7 +8,7 @@
   "question": "甲、乙两人在一张圆形的桌面上轮流放置同一种大小的圆形硬币。每枚硬币都必须平放在桌面上，不能重叠、也不能放到桌外；甲先放，乙后放，如此交替。最后一个能再放下一枚硬币的人获胜（对方轮到时再也放不下，就算输）。请问甲是否有必胜策略？如果有，请说明第一步怎么放。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' font-family='sans-serif' font-size='13'><circle cx='110' cy='110' r='95' fill='#fdfefe' stroke='#2E86C1' stroke-width='2'/><circle cx='110' cy='110' r='3' fill='#b9770e'/><text x='110' y='215' text-anchor='middle' fill='#1B4F72'>圆桌（中心已标出）</text></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' font-size='13'><circle cx='100' cy='100' r='95' fill='#fdfefe' stroke='#2E86C1' stroke-width='1'/><circle cx='100' cy='100' r='3' fill='#b9770e'/></svg>",
       "caption": "圆桌面，两人轮流放同样大小的硬币",
       "alt": "圆桌示意"
     }
@@ -30,9 +30,17 @@
           "kind": "equation-list",
           "rows": [
             { "lhs": "第 1 步（甲）", "rhs": "硬币放在圆心" },
-            { "lhs": "之后（甲）", "rhs": "把乙刚放位置 P 作中心对称到 P'，放在 P'" },
+            {
+              "lhs": "之后（甲）",
+              "rhs": "把乙刚放位置 P 作中心对称到 P'，放在 P'"
+            },
             { "lhs": "局面的不变量", "rhs": "每当轮到乙时，桌面关于圆心对称" },
-            { "lhs": "先无处放的一方", "rhs": "乙", "status": "keep", "badge": "乙输" }
+            {
+              "lhs": "先无处放的一方",
+              "rhs": "乙",
+              "status": "keep",
+              "badge": "乙输"
+            }
           ],
           "caption": "先放中心，再模仿对称"
         },
@@ -47,7 +55,12 @@
   "variant": {
     "question": "把上题桌子换成“长方形”桌面，其他规则不变（两人轮流放同样大小圆形硬币，最后放下一枚者胜）。请问先手甲是否有必胜策略？",
     "fields": [
-      { "key": "winner", "label": "必胜方", "type": "text", "enum": ["先手甲", "后手乙", "均无"] }
+      {
+        "key": "winner",
+        "label": "必胜方",
+        "type": "text",
+        "enum": ["先手甲", "后手乙", "均无"]
+      }
     ],
     "answer": { "winner": "先手甲" },
     "hint": "长方形也有对称中心。甲先把硬币放在长方形中心，此后对乙的每一步都做中心对称的镜像，策略与圆桌情形完全相同。"

@@ -5,10 +5,10 @@
   "grade": "五年级",
   "module": "misc",
   "difficulty": "进阶",
-  "question": "把 1, 2, 3, 4, 5, 6, 7 这 7 个数字各用一次填入圆周上依次排列的 7 个圆 A₁, A₂, …, A₇（首尾相接）。已知相邻两圆上的数字之差的绝对值依次为：\n\n|A₂ − A₁| = 2, |A₃ − A₂| = 1, |A₄ − A₃| = 3, |A₅ − A₄| = 1, |A₆ − A₅| = 3, |A₇ − A₆| = 1, |A₁ − A₇| = 5。\n\n若规定 A₁ = 1，请从 A₁ 开始顺时针写出 7 个圆上的数字。",
+  "question": "把 1, 2, 3, 4, 5, 6, 7 这 7 个数字各用一次填入圆周上依次排列的 7 个圆 A₁, A₂, …, A₇（首尾相接）。已知相邻两圆上的数字之差的绝对值依次为：|A₂ − A₁| = 2, |A₃ − A₂| = 1, |A₄ − A₃| = 3, |A₅ − A₄| = 1, |A₆ − A₅| = 3, |A₇ − A₆| = 1, |A₁ − A₇| = 5。\n若规定 A₁ = 1，请从 A₁ 开始顺时针写出 7 个圆上的数字。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260' font-family='sans-serif' font-size='11'><g fill='#fdfefe' stroke='#2E86C1'><circle cx='130' cy='40' r='16'/><circle cx='211' cy='84' r='16'/><circle cx='226' cy='175' r='16'/><circle cx='161' cy='236' r='16'/><circle cx='99' cy='236' r='16'/><circle cx='34' cy='175' r='16'/><circle cx='49' cy='84' r='16'/></g><g fill='#1B4F72' text-anchor='middle' font-size='11'><text x='130' y='44'>A₁</text><text x='211' y='88'>A₂</text><text x='226' y='179'>A₃</text><text x='161' y='240'>A₄</text><text x='99' y='240'>A₅</text><text x='34' y='179'>A₆</text><text x='49' y='88'>A₇</text></g></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260' font-size='11'><g fill='#fdfefe' stroke='#2E86C1'><circle cx='130' cy='40' r='16'/><circle cx='211' cy='84' r='16'/><circle cx='226' cy='175' r='16'/><circle cx='161' cy='236' r='16'/><circle cx='99' cy='236' r='16'/><circle cx='34' cy='175' r='16'/><circle cx='49' cy='84' r='16'/></g><g fill='#1B4F72' text-anchor='middle' font-size='11'><text x='130' y='44'>A₁</text><text x='211' y='88'>A₂</text><text x='226' y='179'>A₃</text><text x='161' y='240'>A₄</text><text x='99' y='240'>A₅</text><text x='34' y='179'>A₆</text><text x='49' y='88'>A₇</text></g></svg>",
       "caption": "7 个圆首尾相接排成闭环",
       "alt": "七圆闭环"
     }
@@ -53,8 +53,5 @@
     "answer": { "a2": 5, "a3": 6 },
     "hint": "把原来的解 1,3,2,5,4,7,6 关于圆周做整体「镜像反转 + 平移」；或直接在 A₁ = 7 下反号重试，得到 7, 5, 6, 3, 4, 1, 2。"
   },
-  "tags": [
-    "枚举法",
-    "递推法"
-  ]
+  "tags": ["枚举法", "递推法"]
 }

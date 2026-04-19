@@ -8,7 +8,7 @@
   "question": "不通过计算（不直接算出具体乘积），比较 31 × 29 和 30 × 30 的大小，并说明理由。",
   "figures": [
     {
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 100'><text x='40' y='56' font-size='28' font-family='monospace' fill='#333'>31 × 29</text><text x='195' y='58' font-size='40' font-family='monospace' fill='#E74C3C'>○</text><text x='260' y='56' font-size='28' font-family='monospace' fill='#333'>30 × 30</text></svg>",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 100'><text x='40' y='56' font-size='28' fill='#333'>31 × 29</text><text x='195' y='58' font-size='40' fill='#E74C3C'>○</text><text x='260' y='56' font-size='28' fill='#333'>30 × 30</text></svg>",
       "caption": "在 ○ 中填入 >、< 或 =",
       "alt": "31乘29与30乘30的大小比较"
     }
@@ -92,7 +92,7 @@
       "scenes": [
         {
           "kind": "svg",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 250'><g transform='translate(20,40)'><rect x='0' y='0' width='180' height='180' fill='#d6eaf8' stroke='#2E86C1' stroke-width='2'/><text x='62' y='98' font-size='18' fill='#1B4F72'>30 × 30</text><text x='62' y='120' font-size='13' fill='#1B4F72'>面积 = 900</text><text x='50' y='208' font-size='12' fill='#555'>图①：30 × 30 正方形</text></g><g transform='translate(300,40)'><rect x='0' y='0' width='180' height='180' fill='#d6eaf8' stroke='#2E86C1' stroke-width='2'/><rect x='180' y='0' width='6' height='180' fill='#abebc6' stroke='#1E8449' stroke-width='1'/><rect x='0' y='0' width='186' height='6' fill='#E74C3C' fill-opacity='0.55' stroke='#C0392B' stroke-width='1'/><rect x='0' y='6' width='186' height='174' fill='none' stroke='#E67E22' stroke-width='2.5' stroke-dasharray='5 3'/><text x='62' y='110' font-size='16' fill='#1B4F72'>30 × 30</text><text x='195' y='98' font-size='11' fill='#1E8449'>+ 1×30</text><text x='0' y='-6' font-size='11' fill='#C0392B'>− 31×1（去掉顶部一行）</text><text x='30' y='208' font-size='12' fill='#E67E22'>图②：虚线框 = 31 × 29 = 899</text></g></svg>",
+          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 250'><g transform='translate(20,40)'><rect x='0' y='0' width='180' height='180' fill='#d6eaf8' stroke='#2E86C1' stroke-width='1'/><text x='62' y='98' font-size='18' fill='#1B4F72'>30 × 30</text><text x='62' y='120' font-size='13' fill='#1B4F72'>面积 = 900</text><text x='50' y='208' font-size='12' fill='#555'>图①：30 × 30 正方形</text></g><g transform='translate(300,40)'><rect x='0' y='0' width='180' height='180' fill='#d6eaf8' stroke='#2E86C1' stroke-width='1'/><rect x='180' y='0' width='6' height='180' fill='#abebc6' stroke='#1E8449' stroke-width='1'/><rect x='0' y='0' width='186' height='6' fill='#E74C3C' fill-opacity='0.55' stroke='#C0392B' stroke-width='1'/><rect x='0' y='6' width='186' height='174' fill='none' stroke='#E67E22' stroke-width='2.5' stroke-dasharray='5 3'/><text x='62' y='110' font-size='16' fill='#1B4F72'>30 × 30</text><text x='195' y='98' font-size='11' fill='#1E8449'>+ 1×30</text><text x='0' y='-6' font-size='11' fill='#C0392B'>− 31×1（去掉顶部一行）</text><text x='30' y='208' font-size='12' fill='#E67E22'>图②：虚线框 = 31 × 29 = 899</text></g></svg>",
           "caption": "右边加一列 30，上方去掉一行 31，净减少 1 → 面积少 1"
         },
         {
@@ -137,11 +137,7 @@
         "key": "relation",
         "type": "text",
         "label": "大小关系（在 25 × 25 ○ 24 × 26 中填 >、< 或 =）",
-        "enum": [
-          ">",
-          "<",
-          "="
-        ]
+        "enum": [">", "<", "="]
       }
     ],
     "answer": {
@@ -149,9 +145,5 @@
     },
     "hint": "把 24 × 26 写成 (25 − 1)(25 + 1) = 25 × 25 − 1，所以 25 × 25 比 24 × 26 多 1。"
   },
-  "tags": [
-    "裂项",
-    "平方差",
-    "面积法"
-  ]
+  "tags": ["裂项", "平方差", "面积法"]
 }
