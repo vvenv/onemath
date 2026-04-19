@@ -81,7 +81,7 @@ export default function KnowledgeIndexPage() {
               {list.map((entry) => (
                 <Link
                   key={entry.slug}
-                  to={`/knowledge/${entry.slug}`}
+                  to={`/k/${entry.slug}`}
                   className="group no-underline"
                 >
                   <Card
@@ -95,10 +95,7 @@ export default function KnowledgeIndexPage() {
                           {entry.name}
                         </span>
                         {entry.tag && entry.tag !== entry.name ? (
-                          <Badge
-                            variant="outline"
-                            className="font-normal"
-                          >
+                          <Badge variant="outline" className="font-normal">
                             #{entry.tag}
                           </Badge>
                         ) : null}

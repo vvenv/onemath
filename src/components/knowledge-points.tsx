@@ -68,7 +68,7 @@ export function KnowledgePoints({ points, tags }: KnowledgePointsProps) {
               point.knowledgeSlug ? (
                 <Link
                   key={point.key}
-                  to={`/knowledge/${point.knowledgeSlug}`}
+                  to={`/k/${point.knowledgeSlug}`}
                   className="group flex items-center gap-2 border-b py-2.5 last:border-b-0"
                 >
                   <BookOpen className="size-4 shrink-0 text-muted-foreground" />

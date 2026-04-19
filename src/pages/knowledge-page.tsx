@@ -1,4 +1,11 @@
-import { ArrowLeft, BookOpen, Lightbulb, ListChecks, Sparkles, TriangleAlert } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpen,
+  Lightbulb,
+  ListChecks,
+  Sparkles,
+  TriangleAlert,
+} from "lucide-react";
 import { Link, Navigate, useParams, type MetaFunction } from "react-router";
 
 import { Badge } from "@/components/ui/badge";
@@ -61,7 +68,7 @@ export default function KnowledgePage() {
             className="text-muted-foreground hover:text-foreground"
             aria-label="返回题库"
           >
-            <Link to="/">
+            <Link to="/k">
               <ArrowLeft />
             </Link>
           </Button>
@@ -151,10 +158,7 @@ export default function KnowledgePage() {
       </Section>
 
       {entry.pitfalls && entry.pitfalls.length > 0 ? (
-        <Section
-          icon={<TriangleAlert className="size-4" />}
-          title="常见误区"
-        >
+        <Section icon={<TriangleAlert className="size-4" />} title="常见误区">
           <ul className="flex flex-col gap-1.5 text-sm text-muted-foreground">
             {entry.pitfalls.map((p, i) => (
               <li key={i} className="flex gap-2">
@@ -221,7 +225,7 @@ export default function KnowledgePage() {
                 size="sm"
                 className="h-8 rounded-full"
               >
-                <Link to={`/knowledge/${r.slug}`}>
+                <Link to={`/k/${r.slug}`}>
                   <BookOpen className="size-3.5" />
                   {r.name}
                 </Link>

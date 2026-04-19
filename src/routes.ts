@@ -4,7 +4,7 @@ export default [
   layout("layout.tsx", [
     index("pages/home-page.tsx"),
     route("p/:id", "pages/problem-page.tsx"),
-    route("knowledge", "pages/knowledge-index-page.tsx"),
-    route("knowledge/:slug", "pages/knowledge-page.tsx"),
+    route("k", "pages/knowledge-index-page.tsx"),
+    route("k/:slug", "pages/knowledge-page.tsx"),
   ]),
 ] satisfies RouteConfig;
