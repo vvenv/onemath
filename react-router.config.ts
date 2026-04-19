@@ -6,6 +6,7 @@ import type { Config } from "@react-router/dev/config";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const problemsDir = path.resolve(__dirname, "./src/data/problems");
+const knowledgeFile = path.resolve(__dirname, "./src/lib/knowledge.ts");
 
 const problemIds = readdirSync(problemsDir)
   .filter((name) => name.endsWith(".json"))
@@ -19,11 +20,21 @@ const problemIds = readdirSync(problemsDir)
   )
   .sort((a, b) => a - b);
 
+const knowledgeSlugs = Array.from(
+  readFileSync(knowledgeFile, "utf-8").matchAll(/^\s*slug:\s*"([^"]+)"/gm),
+  (m) => m[1],
+);
+
 export default {
   appDirectory: "src",
   // Static export: no Node server at runtime; every route is prerendered to HTML.
   ssr: false,
   async prerender() {
-    return ["/", ...problemIds.map((id) => `/p/${id}`)];
+    return [
+      "/",
+      ...problemIds.map((id) => `/p/${id}`),
+      "/k",
+      ...knowledgeSlugs.map((slug) => `/k/${slug}`),
+    ];
   },
 } satisfies Config;
