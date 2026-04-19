@@ -1,0 +1,119 @@
+import type { ProblemData } from "@/types/problem";
+
+export default {
+  "id": "10029",
+  "title": "计算·定义新运算",
+  "grade": "四年级",
+  "module": "calc",
+  "difficulty": "进阶",
+  "question": "定义一种新运算“⊙”：a ⊙ b = 2 × a + b。求 (3 ⊙ 4) ⊙ 5 的值。",
+  "solutions": [
+    {
+      "key": "stepwise",
+      "label": "分步代入法",
+      "steps": [
+        "理解运算规则：a ⊙ b 表示用 2 乘以第一个数 a，再加上第二个数 b。",
+        "先计算括号内的部分：3 ⊙ 4。这里 a=3, b=4。",
+        "代入规则：2 × 3 + 4 = 6 + 4 = 10。",
+        "现在原式变成了 10 ⊙ 5。",
+        "再次代入规则：这里 a=10, b=5。",
+        "计算：2 × 10 + 5 = 20 + 5 = 25。"
+      ],
+      "scenes": [
+        {
+          "kind": "equation-list",
+          "rows": [
+            {
+              "lhs": "a ⊙ b",
+              "rhs": "2a + b",
+              "note": "运算定义",
+              "badge": "📘"
+            }
+          ],
+          "caption": "先把新运算的规则记下来"
+        },
+        {
+          "kind": "equation-list",
+          "rows": [
+            {
+              "lhs": "3 ⊙ 4",
+              "rhs": "2×3 + 4",
+              "note": "a=3, b=4"
+            },
+            {
+              "lhs": "= 6 + 4",
+              "rhs": "10",
+              "status": "keep"
+            }
+          ],
+          "caption": "第一步：计算括号 3 ⊙ 4"
+        },
+        {
+          "kind": "result-badges",
+          "items": [
+            {
+              "icon": "3️⃣",
+              "count": "3",
+              "label": "a"
+            },
+            {
+              "icon": "4️⃣",
+              "count": "4",
+              "label": "b"
+            },
+            {
+              "icon": "🔟",
+              "count": "10",
+              "label": "= 3 ⊙ 4"
+            }
+          ],
+          "separator": "→",
+          "caption": "3 ⊙ 4 = 10，原式化为 10 ⊙ 5"
+        },
+        {
+          "kind": "equation-list",
+          "rows": [
+            {
+              "lhs": "10 ⊙ 5",
+              "rhs": "2×10 + 5",
+              "note": "a=10, b=5"
+            },
+            {
+              "lhs": "= 20 + 5",
+              "rhs": "25",
+              "status": "keep"
+            }
+          ],
+          "caption": "第二步：再用一次规则"
+        },
+        {
+          "kind": "result-badges",
+          "items": [
+            {
+              "icon": "✅",
+              "count": "25",
+              "label": "(3 ⊙ 4) ⊙ 5"
+            }
+          ],
+          "caption": "最终结果 = 25"
+        }
+      ]
+    }
+  ],
+  "variant": {
+    "question": "定义新运算“※”：x ※ y = (x + y) ÷ 2。求 12 ※ (8 ※ 20) 的值。",
+    "fields": [
+      {
+        "key": "value",
+        "label": "计算结果"
+      }
+    ],
+    "answer": {
+      "value": 10
+    },
+    "hint": "先计算括号里的 8 ※ 20，得到平均数14，再计算 12 ※ 14。"
+  },
+  "tags": [
+    "乘法原理"
+  ]
+} satisfies ProblemData;

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 export type ResultBadge = {
   icon: ReactNode;
-  count: number;
+  count: number | string;
   label?: ReactNode;
 };
 

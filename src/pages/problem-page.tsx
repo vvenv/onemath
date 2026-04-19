@@ -7,21 +7,28 @@ import { QuestionCard } from "@/components/question-card";
 import { RelatedProblems } from "@/components/related-problems";
 import { SolutionTabs } from "@/components/solution-tabs";
 import { getProblemById } from "@/lib/problems";
-import type { ProblemData } from "@/types/problem";
+import type { ProblemModule } from "@/types/problem";
 
-export const meta: MetaFunction<typeof loader> = ({ data }) => {
-  const problem = data as ProblemData | null;
+const MODULE_LABEL: Record<ProblemModule, string> = {
+  calc: "计算",
+  geometry: "几何",
+  numberTheory: "数论",
+  word: "应用题",
+  travel: "行程",
+  counting: "计数",
+  misc: "杂题",
+};
+
+export const meta: MetaFunction = ({ params }) => {
+  const problem = getProblemById(params.id);
   if (!problem) {
     return [{ title: "题目未找到 - 一道 / edao.plus" }];
   }
   const title = `${problem.title} (#${problem.id}) - 一道 / edao.plus`;
-  const description = `${problem.grade}数学${problem.module === "calc" ? "计算" : problem.module === "geometry" ? "几何" : problem.module === "numberTheory" ? "数论" : problem.module === "word" ? "应用题" : problem.module === "travel" ? "行程" : problem.module === "counting" ? "计数" : "杂题"}：${problem.question.slice(0, 100)}${problem.question.length > 100 ? "..." : ""}`;
+  const snippet = problem.question.slice(0, 100);
+  const description = `${problem.grade}数学${MODULE_LABEL[problem.module]}：${snippet}${problem.question.length > 100 ? "..." : ""}`;
   return [{ title }, { name: "description", content: description }];
 };
-
-export function loader({ params }: { params: { id: string } }) {
-  return getProblemById(params.id);
-}
 
 export default function ProblemPage() {
   const { id } = useParams<{ id: string }>();

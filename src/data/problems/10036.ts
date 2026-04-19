@@ -1,0 +1,88 @@
+import type { ProblemData } from "@/types/problem";
+
+export default {
+  "id": "10036",
+  "title": "容斥原理·重叠计数",
+  "grade": "四年级",
+  "module": "counting",
+  "difficulty": "进阶",
+  "question": "某班有45人，其中参加数学兴趣小组的有28人，参加语文兴趣小组的有25人，两个小组都参加的有12人。请问：两个小组都没有参加的有多少人？",
+  "solutions": [
+    {
+      "key": "inclusion-exclusion",
+      "label": "容斥原理",
+      "steps": [
+        "根据容斥原理，至少参加一个小组的人数 = 参加数学的人数 + 参加语文的人数 - 两个都参加的人数。",
+        "至少参加一个小组的人数 = 28 + 25 - 12 = 41 人。",
+        "两个小组都没有参加的人数 = 全班总人数 - 至少参加一个小组的人数。",
+        "45 - 41 = 4 人。"
+      ],
+      "scenes": [
+        {
+          "kind": "svg",
+          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260' width='400' height='260'><!-- 全集矩形 --><rect x='30' y='30' width='340' height='210' fill='none' stroke='#333'/><text x='300' y='50' font-size='12' fill='#333'>全班45人</text><!-- 数学集合（左圆） --><circle cx='150' cy='130' r='70' fill='#e74c3c' opacity='0.3' stroke='#e74c3c'/><text x='120' y='90' font-size='13' fill='#c0392b' font-weight='bold'>数学</text><text x='120' y='108' font-size='13' fill='#c0392b'>28人</text><!-- 语文集合（右圆） --><circle cx='250' cy='130' r='70' fill='#3498db' opacity='0.3' stroke='#3498db'/><text x='260' y='90' font-size='13' fill='#2980b9' font-weight='bold'>语文</text><text x='260' y='108' font-size='13' fill='#2980b9'>25人</text><!-- 交集标注 --><text x='200' y='130' font-size='14' fill='#8e44ad' font-weight='bold' text-anchor='middle'>12人</text><!-- 外部标注 --><text x='200' y='220' font-size='12' text-anchor='middle' fill='#27ae60'>都没有参加：？人</text></svg>",
+          "caption": "用韦恩图表示：数学28人，语文25人，交集12人"
+        },
+        {
+          "kind": "equation-list",
+          "rows": [
+            {
+              "lhs": "至少参加一个",
+              "rhs": "28 + 25 − 12",
+              "status": "keep"
+            },
+            {
+              "lhs": "=",
+              "rhs": "41 人",
+              "badge": "容斥结果"
+            }
+          ],
+          "caption": "步骤1：容斥原理求至少参加一个小组的人数"
+        },
+        {
+          "kind": "compare-bars",
+          "rows": [
+            {
+              "label": "全班",
+              "value": 45,
+              "max": 45,
+              "tone": "primary"
+            },
+            {
+              "label": "至少参加一个",
+              "value": 41,
+              "max": 45,
+              "tone": "muted"
+            }
+          ],
+          "caption": "全班45人，至少参加一个的有41人"
+        },
+        {
+          "kind": "result-badges",
+          "items": [
+            {
+              "icon": "📊",
+              "count": 4,
+              "label": "都没有参加"
+            }
+          ],
+          "caption": "45 - 41 = 4 人两个小组都没有参加"
+        }
+      ]
+    }
+  ],
+  "variant": {
+    "question": "在1~100的自然数中，能被2整除或能被3整除的数有多少个？",
+    "fields": [
+      {
+        "key": "count",
+        "label": "个数"
+      }
+    ],
+    "answer": {
+      "count": 67
+    },
+    "hint": "能被2整除：50个；能被3整除：33个；能被6整除（重叠）：16个。50+33-16=67。"
+  },
+  "tags": []
+} satisfies ProblemData;

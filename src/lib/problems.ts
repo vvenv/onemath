@@ -1,6 +1,6 @@
 import type { ProblemData, ProblemModule } from "@/types/problem";
 
-const modules = import.meta.glob<ProblemData>("@/data/problems/*.json", {
+const modules = import.meta.glob<ProblemData>("@/data/problems/*.ts", {
   eager: true,
   import: "default",
 });

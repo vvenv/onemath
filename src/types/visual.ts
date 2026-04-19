@@ -17,7 +17,12 @@ export type HeadsFragment = {
 
 export type CompareRowSpec = {
   label: string;
-  value: number;
+  /**
+   * Numeric value. String is accepted for expressive content
+   * (e.g. `"1/3"`, `"15×2"`); the renderer coerces it to a number
+   * for bar width and displays the original string as the label.
+   */
+  value: number | string;
   max: number;
   tone?: "primary" | "muted";
   marker?: boolean;
@@ -25,7 +30,8 @@ export type CompareRowSpec = {
 
 export type ResultBadgeSpec = {
   icon: string;
-  count: number;
+  /** Displayed after `×`. String is accepted for non-numeric tallies (e.g. `"星期四"`, `"√2,√5,…"`). */
+  count: number | string;
   label?: string;
 };
 
@@ -42,7 +48,7 @@ export type NumberLineSegmentSpec = {
   from: number;
   to: number;
   label?: string;
-  tone?: "default" | "primary" | "accent";
+  tone?: "default" | "primary" | "accent" | "muted";
 };
 
 export type LatticeSpec = {

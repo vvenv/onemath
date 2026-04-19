@@ -1,0 +1,123 @@
+import type { ProblemData } from "@/types/problem";
+
+export default {
+  "id": "10115",
+  "title": "等积变换·直角梯形内三角形（比例点）",
+  "grade": "六年级",
+  "module": "geometry",
+  "difficulty": "挑战",
+  "question": "如图，直角梯形 ABCD 中，AD ∥ BC，AB ⊥ AD，AD = 5，BC = 7，AB = 8。E 是 AB 上一点，AE = 5（即 EB = 3）；F 是 CD 上一点，DF : FC = 2 : 3。求三角形 DEF 的面积。",
+  "figures": [
+    {
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='15 72 290 160' font-size='12'><g fill='#fdfefe' stroke='#1B4F72'><polygon points='40,210 280,210 280,90 40,160'/></g><polygon points='40,160 190,210 136,132' fill='none' stroke='#A93226' stroke-dasharray='4 3'/><g fill='#2E86C1'><circle cx='40' cy='210' r='3'/><circle cx='280' cy='210' r='3'/><circle cx='280' cy='90' r='3'/><circle cx='40' cy='160' r='3'/><circle cx='190' cy='210' r='3'/><circle cx='136' cy='132' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='32' y='224'>A</text><text x='288' y='224'>B</text><text x='290' y='86'>C</text><text x='32' y='156'>D</text><text x='190' y='225'>E</text><text x='128' y='128'>F</text></g><g fill='#566573' font-size='11' text-anchor='middle'><text x='25' y='188'>5</text><text x='295' y='128'>7</text><text x='115' y='222'>5</text><text x='245' y='222'>3</text></g></svg>",
+      "caption": "直角梯形 ABCD（AD=5, BC=7, AB=8），E 在 AB 上且 AE=5，F 在 CD 上且 DF:FC=2:3",
+      "alt": "直角梯形内两个比例点 E、F 与 D 构成的三角形"
+    }
+  ],
+  "solutions": [
+    {
+      "key": "split",
+      "label": "整体减去外围（等积变换）",
+      "steps": [
+        "分析：直接算 △DEF 不容易，但它的三个顶点都落在梯形边上；一种自然思路是先算 △DEC（暂忽略 F），再按 F 在 DC 上的位置比例缩放。",
+        "第一步：算梯形面积。梯形 ABCD 面积 = (AD + BC) × AB ÷ 2 = (5 + 7) × 8 ÷ 2 = 48。",
+        "第二步：算 △ADE。∠A 是直角，两直角边 AD = 5、AE = 5，所以 △ADE = (1/2) × 5 × 5 = 12.5。",
+        "第三步：算 △BCE。∠B 是直角，两直角边 BC = 7、BE = 3，所以 △BCE = (1/2) × 7 × 3 = 10.5。",
+        "第四步：用等积变换思想，梯形 = △ADE + △DCE + △BCE，所以 △DCE = 48 − 12.5 − 10.5 = 25。",
+        "第五步：F 在 DC 上且 DF : DC = 2 : 5。△DEF 与 △DEC 同以 E 为顶点，底分别是 DF 与 DC，底在同一条直线上 ⇒ 等高 ⇒ 面积比 = 底之比。",
+        "所以 △DEF = △DEC × (DF / DC) = 25 × (2/5) = 10。"
+      ],
+      "scenes": [
+        {
+          "kind": "equation-list",
+          "rows": [
+            {
+              "lhs": "梯形 ABCD",
+              "rhs": "(5 + 7) × 8 ÷ 2 = 48"
+            },
+            {
+              "lhs": "△ADE",
+              "rhs": "1/2 × 5 × 5 = 12.5"
+            },
+            {
+              "lhs": "△BCE",
+              "rhs": "1/2 × 7 × 3 = 10.5"
+            },
+            {
+              "lhs": "△DEC = 48 − 12.5 − 10.5",
+              "rhs": "25",
+              "note": "等积变换：整体减去外围"
+            },
+            {
+              "lhs": "△DEF = 25 × (2/5)",
+              "rhs": "10",
+              "badge": "答案"
+            }
+          ],
+          "caption": "先求 △DEC，再按 DF:DC 比例缩放"
+        },
+        {
+          "kind": "svg",
+          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='15 72 290 160' font-size='11'><g fill='none' stroke='#1B4F72'><polygon points='40,210 280,210 280,90 40,160' fill='#fdfefe'/></g><polygon points='40,160 280,90 190,210' fill='rgb(46 134 193 / 0.20)' stroke='#1B4F72'/><polygon points='40,160 136,132 190,210' fill='rgb(169 50 38 / 0.32)' stroke='#A93226'/><g fill='#2E86C1'><circle cx='40' cy='210' r='3'/><circle cx='280' cy='210' r='3'/><circle cx='280' cy='90' r='3'/><circle cx='40' cy='160' r='3'/><circle cx='190' cy='210' r='3'/><circle cx='136' cy='132' r='3'/></g><g fill='#1B4F72' text-anchor='middle' font-size='12'><text x='32' y='224'>A</text><text x='288' y='224'>B</text><text x='290' y='86'>C</text><text x='32' y='156'>D</text><text x='190' y='225'>E</text><text x='128' y='128'>F</text></g><g fill='#1B4F72' text-anchor='middle'><text x='170' y='150'>△DEC = 25</text><text x='120' y='170' fill='#A93226'>△DEF = 10</text></g></svg>",
+          "caption": "△DEF 是 △DEC 的 2/5（因为 DF : DC = 2 : 5）"
+        },
+        {
+          "kind": "result-badges",
+          "items": [
+            {
+              "icon": "📐",
+              "count": 10,
+              "label": "△DEF 面积"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coord",
+      "label": "坐标法验证",
+      "steps": [
+        "分析：把 A 作为原点，AB 沿 x 轴、AD 沿 y 轴建系。这样所有坐标都清清楚楚，最后用三角形面积行列式公式验证。",
+        "建系：A(0, 0)，B(8, 0)，D(0, 5)，C(8, 7)，E(5, 0)。",
+        "F 在 DC 上且 DF : FC = 2 : 3，所以 F = D + (2/5)(C − D) = (0, 5) + (2/5)(8, 2) = (16/5, 29/5)。",
+        "三角形 DEF 面积 = (1/2)|x_D(y_E − y_F) + x_E(y_F − y_D) + x_F(y_D − y_E)|",
+        "= (1/2)|0·(0 − 29/5) + 5·(29/5 − 5) + (16/5)·(5 − 0)|",
+        "= (1/2)|0 + 5·(4/5) + 16| = (1/2)·20 = 10。与前解一致。"
+      ],
+      "scenes": [
+        {
+          "kind": "equation-list",
+          "rows": [
+            {
+              "lhs": "F = D + (2/5)(C − D)",
+              "rhs": "(16/5, 29/5)"
+            },
+            {
+              "lhs": "△DEF (行列式法)",
+              "rhs": "10",
+              "badge": "验证"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variant": {
+    "question": "直角梯形 ABCD 中 AD ∥ BC，AB ⊥ AD，AD = 4，BC = 6，AB = 10。E 在 AB 上使 AE = 4；F 在 CD 上使 DF : FC = 1 : 4。求三角形 DEF 的面积。",
+    "fields": [
+      {
+        "key": "area",
+        "label": "△DEF 面积",
+        "type": "number"
+      }
+    ],
+    "answer": {
+      "area": 4
+    },
+    "hint": "先算 △DEC，再按 DF : DC 的比例缩放。"
+  },
+  "tags": [
+    "等积变形",
+    "面积法"
+  ]
+} satisfies ProblemData;

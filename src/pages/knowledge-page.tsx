@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { Link, Navigate, useParams, type MetaFunction } from "react-router";
 
-import { ProblemFigures } from "@/components/problem-figures";
+import { KnowledgeFigures } from "@/components/knowledge-figures";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -96,7 +96,7 @@ export default function KnowledgePage() {
           {entry.intuition}
         </p>
         {entry.figures && entry.figures.length > 0 ? (
-          <ProblemFigures figures={entry.figures} className="mt-3" />
+          <KnowledgeFigures figures={entry.figures} className="mt-3" />
         ) : null}
       </Section>
 

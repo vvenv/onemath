@@ -1,5 +1,5 @@
+import type { ComponentType } from "react";
 import { METHOD_TAGS } from "@/lib/tags";
-import type { ProblemFigure } from "@/types/problem";
 
 /**
  * Knowledge base for method/technique explainer pages (`/k/:slug`).
@@ -11,6 +11,22 @@ import type { ProblemFigure } from "@/types/problem";
  */
 
 export type KnowledgeCategory = keyof typeof METHOD_TAGS;
+
+/**
+ * Figures shown alongside knowledge entries. Three rendering modes:
+ *   - `svg`: raw SVG markup string (inlined via dangerouslySetInnerHTML)
+ *   - `image`: external/public image URL
+ *   - `component`: a React component rendered directly
+ * The required key acts as the discriminant.
+ */
+export type KnowledgeFigure = {
+  caption?: string;
+  alt?: string;
+} & (
+  | { svg: string }
+  | { image: string }
+  | { component: ComponentType }
+);
 
 export type KnowledgeExample = {
   title?: string;
@@ -40,5 +56,5 @@ export type KnowledgeEntry = {
   /** other knowledge slugs that pair naturally with this one */
   relatedSlugs?: string[];
   /** illustrative figures rendered alongside the intuition section */
-  figures?: ProblemFigure[];
+  figures?: KnowledgeFigure[];
 };

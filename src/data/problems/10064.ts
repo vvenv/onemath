@@ -1,0 +1,202 @@
+import type { ProblemData } from "@/types/problem";
+
+export default {
+  "id": "10064",
+  "title": "最短路径·标数法",
+  "grade": "五年级",
+  "module": "counting",
+  "difficulty": "进阶",
+  "question": "在由 4 行 5 列格点组成的方格网中（点共 4 × 5 = 20 个），小明要从左下角 A 走到右上角 B，每一步只能沿着格子线向右走一格或向上走一格。问从 A 到 B 一共有多少条不同的最短路径？",
+  "figures": [
+    {
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 200'><g stroke='#999' fill='none'><g><line x1='20' y1='20' x2='220' y2='20'/><line x1='20' y1='70' x2='220' y2='70'/><line x1='20' y1='120' x2='220' y2='120'/><line x1='20' y1='170' x2='220' y2='170'/><line x1='20' y1='20' x2='20' y2='170'/><line x1='70' y1='20' x2='70' y2='170'/><line x1='120' y1='20' x2='120' y2='170'/><line x1='170' y1='20' x2='170' y2='170'/><line x1='220' y1='20' x2='220' y2='170'/></g></g><circle cx='20' cy='170' r='5' fill='#2E86C1'/><text x='4' y='192' font-size='14' fill='#1B4F72'>A</text><circle cx='220' cy='20' r='5' fill='#C0392B'/><text x='225' y='18' font-size='14' fill='#C0392B'>B</text></svg>",
+      "caption": "4 行 5 列格点，每步只能向右或向上",
+      "alt": "4行5列方格网"
+    }
+  ],
+  "solutions": [
+    {
+      "key": "label",
+      "label": "标数法",
+      "steps": [
+        "从 A 出发，每个格点只能从它的“左边邻居”或“下面邻居”走过来。",
+        "所以每个格点的最短路径数 = 它左边邻居的路径数 + 它下面邻居的路径数。",
+        "最左一列（向上单行）和最底一行（向右单行）都只有 1 条路径，全部标 1。",
+        "按“从左下向右上”的顺序依次相加填数，像杨辉三角那样。",
+        "填到右上角 B 时，得到的数就是答案：35。"
+      ],
+      "scenes": [
+        {
+          "kind": "number-grid",
+          "rows": 4,
+          "cols": 5,
+          "cells": [
+            {
+              "row": 0,
+              "col": 0,
+              "value": 1,
+              "tone": "primary"
+            },
+            {
+              "row": 0,
+              "col": 1,
+              "value": 4
+            },
+            {
+              "row": 0,
+              "col": 2,
+              "value": 10
+            },
+            {
+              "row": 0,
+              "col": 3,
+              "value": 20
+            },
+            {
+              "row": 0,
+              "col": 4,
+              "value": 35,
+              "tone": "accent"
+            },
+            {
+              "row": 1,
+              "col": 0,
+              "value": 1
+            },
+            {
+              "row": 1,
+              "col": 1,
+              "value": 3
+            },
+            {
+              "row": 1,
+              "col": 2,
+              "value": 6
+            },
+            {
+              "row": 1,
+              "col": 3,
+              "value": 10
+            },
+            {
+              "row": 1,
+              "col": 4,
+              "value": 15
+            },
+            {
+              "row": 2,
+              "col": 0,
+              "value": 1
+            },
+            {
+              "row": 2,
+              "col": 1,
+              "value": 2
+            },
+            {
+              "row": 2,
+              "col": 2,
+              "value": 3
+            },
+            {
+              "row": 2,
+              "col": 3,
+              "value": 4
+            },
+            {
+              "row": 2,
+              "col": 4,
+              "value": 5
+            },
+            {
+              "row": 3,
+              "col": 0,
+              "value": 1,
+              "tone": "primary"
+            },
+            {
+              "row": 3,
+              "col": 1,
+              "value": 1
+            },
+            {
+              "row": 3,
+              "col": 2,
+              "value": 1
+            },
+            {
+              "row": 3,
+              "col": 3,
+              "value": 1
+            },
+            {
+              "row": 3,
+              "col": 4,
+              "value": 1
+            }
+          ],
+          "caption": "每格 = 左邻居 + 下邻居（A 在左下，B 在右上）"
+        },
+        {
+          "kind": "result-badges",
+          "items": [
+            {
+              "icon": "🛤️",
+              "count": 35,
+              "label": "条最短路径"
+            }
+          ],
+          "caption": "标数法得到 B 处为 35"
+        }
+      ]
+    },
+    {
+      "key": "combination",
+      "label": "组合公式法",
+      "steps": [
+        "从 A 到 B 一共需要向右走 4 步、向上走 3 步，总共 7 步。",
+        "每条最短路径就是“把 7 步中的 3 步选出来向上走（其余向右）”的一种方法。",
+        "即从 7 步中选 3 步向上，共 C(7, 3) = 7 × 6 × 5 ÷ (3 × 2 × 1) = 35。",
+        "与标数法结果一致：一共有 35 条最短路径。"
+      ],
+      "scenes": [
+        {
+          "kind": "equation-list",
+          "rows": [
+            {
+              "lhs": "向右步数",
+              "rhs": "5 − 1 = 4"
+            },
+            {
+              "lhs": "向上步数",
+              "rhs": "4 − 1 = 3"
+            },
+            {
+              "lhs": "路径数",
+              "rhs": "C(7, 3) = 35",
+              "badge": "结论"
+            }
+          ],
+          "caption": "把最短路径看作 7 步中选 3 步向上"
+        }
+      ]
+    }
+  ],
+  "variant": {
+    "question": "在 4 行 4 列格点组成的方格网中（水平方向 3 格，竖直方向 3 格），从左下角 A 走到右上角 B，每步只能向右或向上。共有多少条最短路径？",
+    "fields": [
+      {
+        "key": "answer",
+        "label": "路径数",
+        "type": "number"
+      }
+    ],
+    "answer": {
+      "answer": 20
+    },
+    "hint": "向右 3 步，向上 3 步，共 6 步，其中选 3 步向上：C(6, 3) = 20。"
+  },
+  "tags": [
+    "标数法"
+  ]
+} satisfies ProblemData;

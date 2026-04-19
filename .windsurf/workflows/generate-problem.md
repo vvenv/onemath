@@ -32,13 +32,13 @@ description: Given a reference document under docs/, produce a generation plan a
 ### 阶段 1：解析文档并生成计划
 
 1. **读取文档**：完整阅读 `doc`，识别其中的题型表格（通常含"题型分类 / 年级 / 难度 / 所属模块"等列）。
-2. **对齐分类体系**：将文档中的模块/题型映射到 `docs/CATEGORY.md` 与 `src/data/problem.schema.json` 的 enum：
+2. **对齐分类体系**：将文档中的模块/题型映射到 `docs/CATEGORY.md` 与 `src/types/problem.ts` 内的联合类型：
    - 模块 → `calc | geometry | numberTheory | word | travel | counting | misc`
    - 年级 → `三年级 | 四年级 | 五年级 | 六年级`
    - 难度 → `基础 | 进阶 | 挑战`
 3. **查已有 ID**（// turbo）：
    ```bash
-   ls src/data/problems/*.json | sort -V | tail -1 | sed 's/.*\/\([0-9]*\)\.json/\1/'
+   ls src/data/problems/*.ts | sort -V | tail -1 | sed 's/.*\/\([0-9]*\)\.ts/\1/'
    ```
    新 ID 从「最大 ID + 1」开始依次递增（5 位，10001–19999）。
 4. **输出计划表**：以 Markdown 表格形式呈现给用户，包含：
@@ -55,11 +55,20 @@ description: Given a reference document under docs/, produce a generation plan a
 
 对计划表中每一行：
 
-1. **参考同模块已有题目**：至少抽查 1 个 `src/data/problems/*.json`（优先同 `module` + 同 `difficulty`），保持 `solutions` / `scenes` / `variant` 结构风格一致。
-2. **写入** `src/data/problems/{id}.json`，字段对齐 `src/data/problem.schema.json`。
-3. **JSON 自检**（// turbo）：
+1. **参考同模块已有题目**：至少抽查 1 个 `src/data/problems/*.ts`（优先同 `module` + 同 `difficulty`），保持 `solutions` / `scenes` / `variant` 结构风格一致。
+2. **写入** `src/data/problems/{id}.ts`，字段对齐 `ProblemData`（见 `src/types/problem.ts`）；文件骨架：
+
+   ```ts
+   import type { ProblemData } from "@/types/problem";
+
+   export default {
+     /* 题目数据 */
+   } satisfies ProblemData;
+   ```
+
+3. **类型自检**（// turbo）：
    ```bash
-   node -e "JSON.parse(require('fs').readFileSync('src/data/problems/{id}.json','utf8'));console.log('{id} OK')"
+   pnpm exec tsc --noEmit
    ```
 4. 按质量清单自查；全部完成后给出生成汇总（ID 列表 + 标题）。
 
@@ -114,32 +123,33 @@ description: Given a reference document under docs/, produce a generation plan a
 
 ## 输出骨架
 
-```json
-{
-  "$schema": "../problem.schema.json",
-  "id": "10060",
-  "title": "主题·方法（简短）",
-  "grade": "五年级",
-  "module": "counting",
-  "difficulty": "进阶",
-  "question": "只含题面，不含解法提示……",
-  "figures": [{ "svg": "<svg …></svg>", "caption": "…", "alt": "…" }],
-  "solutions": [
+```ts
+import type { ProblemData } from "@/types/problem";
+
+export default {
+  id: "10060",
+  title: "主题·方法（简短）",
+  grade: "五年级",
+  module: "counting",
+  difficulty: "进阶",
+  question: "只含题面，不含解法提示……",
+  figures: [{ svg: "<svg …></svg>", caption: "…", alt: "…" }],
+  solutions: [
     {
-      "key": "bundle",
-      "label": "捆绑法",
-      "steps": ["…", "…"],
-      "scenes": [{ "kind": "equation-list", "rows": [], "caption": "…" }]
-    }
+      key: "bundle",
+      label: "捆绑法",
+      steps: ["…", "…"],
+      scenes: [{ kind: "equation-list", rows: [], caption: "…" }],
+    },
   ],
-  "variant": {
-    "question": "同主题变式…",
-    "fields": [{ "key": "answer", "label": "答案" }],
-    "answer": { "answer": 0 },
-    "hint": "简短引导"
+  variant: {
+    question: "同主题变式…",
+    fields: [{ key: "answer", label: "答案" }],
+    answer: { answer: 0 },
+    hint: "简短引导",
   },
-  "tags": ["方法1", "方法2"]
-}
+  tags: ["方法1", "方法2"],
+} satisfies ProblemData;
 ```
 
 ### tags（方法白名单）
@@ -158,19 +168,20 @@ description: Given a reference document under docs/, produce a generation plan a
 ## 质量检查清单（每题生成后逐项核对）
 
 - [ ] `id` 为 5 位字符串，在本批次内唯一且连续递增
-- [ ] `grade` / `module` / `difficulty` 在 schema enum 内
+- [ ] `grade` / `module` / `difficulty` 在 `ProblemData` 联合类型允许的值内
 - [ ] `question` 与任一 `figures[].svg` / `caption` 均不含解法、提示、公式、答案
 - [ ] 任一 `figures[]` 未出现方法名或等效暗示（"捆在一起"、"隔板"、"插空"、"只能填…"、"固定一人"、"每格 = 左 + 下" 等）
 - [ ] 每个 `solutions[i].steps[0]` 以"分析"开头，承载了题面约束/特殊位置/对称性等背景推理
 - [ ] `solutions.length >= 1`，步骤完整、结论明确
-- [ ] 所有 `scenes[].kind` 为 schema 中列出的合法值
+- [ ] 所有 `scenes[].kind` 为 `SceneSpec`（见 `src/types/visual.ts`）允许的值
 - [ ] `variant.answer` 的键与 `variant.fields[].key` 一一对应
 - [ ] `tags` 仅含 `@/src/lib/tags.ts` 白名单内的方法（0–3 个），不含年级/难度/模块
-- [ ] `node -e "JSON.parse(…)"` 通过
+- [ ] `pnpm exec tsc --noEmit` 通过（文件尾端 `satisfies ProblemData` 会自动校验类型）
 
 ## 参考资料
 
-- Schema：`src/data/problem.schema.json`
+- 类型源头：`src/types/problem.ts`、`src/types/visual.ts`
+- 旧 JSON Schema（仅供字段形状参考，不再被运行时引用）：`src/data/problem.schema.json`
 - 知识点分布：`docs/CATEGORY.md`
 - 输入文档示例：`docs/排列组合.md`
-- 题目示例：`src/data/problems/10054.json`（行程）、`src/data/problems/10057.json`、`src/data/problems/10059.json`
+- 题目示例：`src/data/problems/10054.ts`（行程）、`src/data/problems/10057.ts`、`src/data/problems/10059.ts`

@@ -1,0 +1,92 @@
+import type { ProblemData } from "@/types/problem";
+
+export default {
+  "id": "10042",
+  "title": "质因数分解·乘积问题",
+  "grade": "四年级",
+  "module": "numberTheory",
+  "difficulty": "基础",
+  "question": "三个连续自然数的乘积是 210，求这三个数的和。",
+  "solutions": [
+    {
+      "key": "factorization",
+      "label": "质因数分解法",
+      "steps": [
+        "将 210 分解质因数：210 = 2 × 3 × 5 × 7。",
+        "三个连续自然数，尝试组合这些质因数。",
+        "观察 5、6、7：5 × 6 × 7 = 5 × (2 × 3) × 7 = 2 × 3 × 5 × 7 = 210。",
+        "验证：5、6、7 确实是三个连续自然数。",
+        "它们的和为：5 + 6 + 7 = 18。"
+      ],
+      "scenes": [
+        {
+          "kind": "svg",
+          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200' width='400' height='200'><text x='200' y='30' font-size='14' fill='#333' text-anchor='middle' font-weight='bold'>210 的质因数分解树</text><!-- 树根 --><text x='200' y='60' font-size='18' fill='#e74c3c' text-anchor='middle' font-weight='bold'>210</text><!-- 第一层分支 --><line x1='200' y1='70' x2='140' y2='100' stroke='#666'/><line x1='200' y1='70' x2='260' y2='100' stroke='#666'/><text x='130' y='115' font-size='14' fill='#3498db' text-anchor='middle'>10</text><text x='270' y='115' font-size='14' fill='#3498db' text-anchor='middle'>21</text><!-- 第二层分支 --><line x1='130' y1='125' x2='100' y2='150' stroke='#666'/><line x1='130' y1='125' x2='160' y2='150' stroke='#666'/><line x1='270' y1='125' x2='240' y2='150' stroke='#666'/><line x1='270' y1='125' x2='300' y2='150' stroke='#666'/><text x='90' y='165' font-size='14' fill='#27ae60' text-anchor='middle'>2</text><text x='170' y='165' font-size='14' fill='#27ae60' text-anchor='middle'>5</text><text x='230' y='165' font-size='14' fill='#27ae60' text-anchor='middle'>3</text><text x='310' y='165' font-size='14' fill='#27ae60' text-anchor='middle'>7</text><text x='200' y='195' font-size='12' fill='#666' text-anchor='middle'>210 = 2 × 3 × 5 × 7</text></svg>",
+          "caption": "步骤1：将 210 分解质因数，得到 2 × 3 × 5 × 7"
+        },
+        {
+          "kind": "number-line",
+          "min": 0,
+          "max": 12,
+          "points": [
+            {
+              "value": 5,
+              "label": "5",
+              "tone": "primary"
+            },
+            {
+              "value": 6,
+              "label": "6",
+              "tone": "primary"
+            },
+            {
+              "value": 7,
+              "label": "7",
+              "tone": "primary"
+            }
+          ],
+          "caption": "步骤2：组合质因数，发现 5 × 6 × 7 = 210"
+        },
+        {
+          "kind": "result-badges",
+          "items": [
+            {
+              "icon": "5️⃣",
+              "count": 5
+            },
+            {
+              "icon": "6️⃣",
+              "count": 6
+            },
+            {
+              "icon": "7️⃣",
+              "count": 7
+            },
+            {
+              "icon": "➕",
+              "count": 18,
+              "label": "总和"
+            }
+          ],
+          "caption": "三个连续自然数为 5、6、7，和为 18"
+        }
+      ]
+    }
+  ],
+  "variant": {
+    "question": "两个质数的和是 30，求这两个质数的乘积。",
+    "fields": [
+      {
+        "key": "product",
+        "label": "乘积"
+      }
+    ],
+    "answer": {
+      "product": 161
+    },
+    "hint": "从最小的质数开始尝试，30 以内的质数对有 (7,23)、(11,19)、(13,17)。"
+  },
+  "tags": [
+    "质因数分解"
+  ]
+} satisfies ProblemData;

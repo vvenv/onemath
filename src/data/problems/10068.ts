@@ -1,0 +1,111 @@
+import type { ProblemData } from "@/types/problem";
+
+export default {
+  "id": "10068",
+  "title": "环形排列·圆桌就座",
+  "grade": "六年级",
+  "module": "counting",
+  "difficulty": "挑战",
+  "question": "5 个小朋友围着一张圆桌坐下玩游戏。如果两种坐法可以通过整体旋转圆桌而互相重合，就看作同一种坐法（例如：大家都向左挪一个座位，不算新的一种）。那么一共有多少种不同的坐法？",
+  "figures": [
+    {
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'><circle cx='110' cy='110' r='70' fill='#fdfefe' stroke='#2E86C1'/><g font-size='16' fill='#1B4F72'><circle cx='110' cy='40' r='14' fill='#d6eaf8' stroke='#2E86C1'/><text x='104' y='45'>A</text><circle cx='177' cy='88' r='14' fill='#d6eaf8' stroke='#2E86C1'/><text x='171' y='93'>B</text><circle cx='150' cy='170' r='14' fill='#d6eaf8' stroke='#2E86C1'/><text x='144' y='175'>C</text><circle cx='70' cy='170' r='14' fill='#d6eaf8' stroke='#2E86C1'/><text x='65' y='175'>D</text><circle cx='43' cy='88' r='14' fill='#d6eaf8' stroke='#2E86C1'/><text x='38' y='93'>E</text></g></svg>",
+      "caption": "围圆桌而坐，旋转看作同一种",
+      "alt": "5人围圆桌"
+    }
+  ],
+  "solutions": [
+    {
+      "key": "fixReference",
+      "label": "固定参照物法",
+      "steps": [
+        "圆桌的本质是“只看相邻关系”，整体转一圈后每个人的位置都变了，但相对关系没变，所以要把这些算成同一种。",
+        "固定一个人（比如小 A）的位置不动，作为参照物；这样就“打破”了旋转对称。",
+        "剩下 4 个人围着小 A 坐下，就相当于 4 个人在 4 个不同位置上的普通排列。",
+        "4 个人的全排列共 4! = 4 × 3 × 2 × 1 = 24 种。",
+        "所以 5 人围圆桌的坐法共 24 种。"
+      ],
+      "scenes": [
+        {
+          "kind": "equation-list",
+          "rows": [
+            {
+              "lhs": "固定小 A",
+              "rhs": "打破旋转对称"
+            },
+            {
+              "lhs": "剩下 4 人排 4 个位置",
+              "rhs": "4! = 24"
+            },
+            {
+              "lhs": "环形坐法",
+              "rhs": "(5 − 1)! = 24",
+              "badge": "结论"
+            }
+          ],
+          "caption": "n 人围圆桌的坐法为 (n−1)!"
+        },
+        {
+          "kind": "result-badges",
+          "items": [
+            {
+              "icon": "🔄",
+              "count": 24,
+              "label": "种坐法"
+            }
+          ],
+          "caption": "5 人围圆桌共 24 种"
+        }
+      ]
+    },
+    {
+      "key": "quotient",
+      "label": "直线排列除以旋转数",
+      "steps": [
+        "先把 5 个人排成一条直线，共有 5! = 120 种排法。",
+        "再考虑环形的特点：把直线首尾相连形成一个圆，每个圆上的坐法都能通过“依次整体旋转”产生 5 种首尾不同的直线排法（对应 5 个不同的起点）。",
+        "也就是说，直线排法是环形排法的 5 倍，所以要除以 5。",
+        "环形坐法 = 5! ÷ 5 = 120 ÷ 5 = 24，与固定参照物法结果一致。"
+      ],
+      "scenes": [
+        {
+          "kind": "equation-list",
+          "rows": [
+            {
+              "lhs": "直线排列",
+              "rhs": "5! = 120"
+            },
+            {
+              "lhs": "每个环对应直线数",
+              "rhs": "5（旋转起点）"
+            },
+            {
+              "lhs": "环形坐法",
+              "rhs": "120 ÷ 5 = 24",
+              "badge": "结论"
+            }
+          ],
+          "caption": "消序法：5! ÷ 5 = (5−1)!"
+        }
+      ]
+    }
+  ],
+  "variant": {
+    "question": "7 个人围着圆桌坐，旋转看作同一种坐法，一共有多少种不同的坐法？",
+    "fields": [
+      {
+        "key": "answer",
+        "label": "坐法数",
+        "type": "number"
+      }
+    ],
+    "answer": {
+      "answer": 720
+    },
+    "hint": "环形排列公式：(n − 1)!，当 n = 7 时为 6! = 720。"
+  },
+  "tags": [
+    "固定参照物法",
+    "消序法"
+  ]
+} satisfies ProblemData;

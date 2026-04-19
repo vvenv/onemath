@@ -1,0 +1,123 @@
+import type { ProblemData } from "@/types/problem";
+
+export default {
+  "id": "10127",
+  "title": "蝴蝶模型·一般四边形对角线四块",
+  "grade": "六年级",
+  "module": "geometry",
+  "difficulty": "挑战",
+  "question": "如图，四边形 ABCD 的两条对角线 AC、BD 相交于点 O，把四边形分成四个三角形。已知三角形 AOB、BOC、COD 的面积依次是 4、6、9。求三角形 AOD 的面积以及四边形 ABCD 的总面积。",
+  "figures": [
+    {
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 260' font-size='12'><g fill='rgb(46 134 193 / 0.08)' stroke='#1B4F72'><polygon points='80,40 270,60 320,210 40,200'/></g><g stroke='#1B4F72'><line x1='80' y1='40' x2='320' y2='210'/><line x1='270' y1='60' x2='40' y2='200'/></g><g fill='#2E86C1'><circle cx='80' cy='40' r='3'/><circle cx='270' cy='60' r='3'/><circle cx='320' cy='210' r='3'/><circle cx='40' cy='200' r='3'/><circle cx='165' cy='116' r='3'/></g><g fill='#1B4F72' text-anchor='middle'><text x='72' y='34'>A</text><text x='280' y='54'>B</text><text x='330' y='220'>C</text><text x='32' y='215'>D</text><text x='170' y='112'>O</text></g><g fill='#566573' font-size='11' text-anchor='middle'><text x='165' y='80'>△AOB = 4</text><text x='240' y='130'>△BOC = 6</text><text x='200' y='180'>△COD = 9</text><text x='100' y='140'>△AOD = ?</text></g></svg>",
+      "caption": "一般四边形 ABCD，两条对角线交于 O",
+      "alt": "四边形对角线分出的四个三角形"
+    }
+  ],
+  "solutions": [
+    {
+      "key": "butterfly",
+      "label": "蝴蝶模型（任意四边形都成立）",
+      "steps": [
+        "分析：对于任意两条相交线段 AC、BD 交于 O，在两端连成四边形 ABCD 后，四个小三角形的面积有一个很美的结构。设 OA = a₁, OC = a₂, OB = b₁, OD = b₂，设两对角线的夹角为 θ，则：△AOB = (1/2)·a₁·b₁·sinθ, △BOC = (1/2)·a₂·b₁·sinθ, △COD = (1/2)·a₂·b₂·sinθ, △AOD = (1/2)·a₁·b₂·sinθ。因此 △AOB · △COD = △BOC · △AOD，这就是蝴蝶模型——它对任意四边形都成立，不必是梯形。",
+        "第一步：套公式。△AOB · △COD = △BOC · △AOD ⇒ 4 × 9 = 6 × △AOD ⇒ △AOD = 36 ÷ 6 = 6。",
+        "第二步：总面积 = 4 + 6 + 9 + 6 = 25。",
+        "附注：另一种看法——由 △AOB : △BOC = OA : OC = 4 : 6 = 2 : 3；再由 △AOD : △COD = OA : OC = 2 : 3 ⇒ △AOD = 9 × 2/3 = 6，与上一解法一致。"
+      ],
+      "scenes": [
+        {
+          "kind": "equation-list",
+          "rows": [
+            {
+              "lhs": "△AOB · △COD",
+              "rhs": "4 × 9 = 36",
+              "badge": "蝴蝶"
+            },
+            {
+              "lhs": "△BOC · △AOD",
+              "rhs": "6 × △AOD"
+            },
+            {
+              "lhs": "△AOD",
+              "rhs": "36 ÷ 6 = 6"
+            },
+            {
+              "lhs": "ABCD = 4 + 6 + 9 + 6",
+              "rhs": "25",
+              "badge": "答案"
+            }
+          ],
+          "caption": "一个公式直接给出 △AOD，再加和即得总面积"
+        },
+        {
+          "kind": "compare-bars",
+          "rows": [
+            {
+              "label": "△AOB",
+              "value": 4,
+              "max": 10,
+              "tone": "muted"
+            },
+            {
+              "label": "△BOC",
+              "value": 6,
+              "max": 10,
+              "tone": "muted"
+            },
+            {
+              "label": "△COD",
+              "value": 9,
+              "max": 10,
+              "tone": "primary"
+            },
+            {
+              "label": "△AOD",
+              "value": 6,
+              "max": 10,
+              "tone": "primary"
+            }
+          ],
+          "caption": "四块面积（总和 25）"
+        },
+        {
+          "kind": "result-badges",
+          "items": [
+            {
+              "icon": "🔺",
+              "count": 6,
+              "label": "△AOD"
+            },
+            {
+              "icon": "🔷",
+              "count": 25,
+              "label": "ABCD 总面积"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variant": {
+    "question": "四边形 ABCD 两条对角线交于 O。已知 △AOB = 9，△BOC = 12，△COD = 16。求 △AOD 的面积与四边形总面积。",
+    "fields": [
+      {
+        "key": "aod",
+        "label": "△AOD",
+        "type": "number"
+      },
+      {
+        "key": "total",
+        "label": "总面积",
+        "type": "number"
+      }
+    ],
+    "answer": {
+      "aod": 12,
+      "total": 49
+    },
+    "hint": "△AOD = (9 × 16) ÷ 12 = 12；总 = 9 + 12 + 16 + 12 = 49。"
+  },
+  "tags": [
+    "蝴蝶模型"
+  ]
+} satisfies ProblemData;

@@ -13,7 +13,7 @@ export type NumberLineSegment = {
   from: number;
   to: number;
   label?: string;
-  tone?: "default" | "primary" | "accent";
+  tone?: "default" | "primary" | "accent" | "muted";
 };
 
 const dotToneClass: Record<NumberLinePointTone, string> = {
@@ -30,6 +30,7 @@ const segmentToneClass: Record<
   default: "border-foreground/50 text-foreground",
   primary: "border-primary text-primary",
   accent: "border-primary/70 text-primary",
+  muted: "border-muted-foreground/60 text-muted-foreground",
 };
 
 export function NumberLine({

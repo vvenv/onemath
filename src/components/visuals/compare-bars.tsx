@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 export type CompareRow = {
   label: string;
-  value: number;
+  value: number | string;
   max: number;
   tone?: "primary" | "muted";
   marker?: boolean;
