@@ -9,7 +9,7 @@ type RelatedProblemsProps = {
   limit?: number;
 };
 
-export function RelatedProblems({ id, limit = 6 }: RelatedProblemsProps) {
+export function RelatedProblems({ id, limit = 2 }: RelatedProblemsProps) {
   const related = getRelatedProblems(id, limit);
   if (related.length === 0) return null;
 
