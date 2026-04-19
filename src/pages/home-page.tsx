@@ -8,6 +8,18 @@ import { GRADES, MODULES, type ModuleKey } from "@/lib/modules";
 import { problems } from "@/lib/problems";
 import { cn } from "@/lib/utils";
 import type { Grade, ProblemData } from "@/types/problem";
+import type { MetaFunction } from "react-router";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "一道 / edao.plus - 小学数学思维训练" },
+    {
+      name: "description",
+      content:
+        "一道(edao.plus)是专注小学数学思维训练的在线平台，涵盖计算、几何、数论、应用题等模块，提供经典例题与互动练习。",
+    },
+  ];
+};
 
 const DIFFICULTIES = ["基础", "进阶", "挑战"] as const;
 type Difficulty = (typeof DIFFICULTIES)[number];
