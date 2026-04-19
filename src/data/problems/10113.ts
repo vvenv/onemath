@@ -1,5 +1,6 @@
 import type { ProblemData } from "@/types/problem";
 import svg1 from "./figures/10113-1.svg?raw";
+import svgV from "./figures/10113-v.svg?raw";
 
 export default {
   "id": "10113",
@@ -126,6 +127,13 @@ export default {
   ],
   "variant": {
     "question": "三角形 ABC 的面积为 80。D 是 BC 中点，E 是 AC 中点，F 是 AD 中点，G 是 EF 中点。求三角形 DEG 的面积。",
+    "figures": [
+      {
+        "svg": svgV,
+        "caption": "D、E、F 沿用正题定义，G 为 EF 的中点；阴影为目标 △DEG",
+        "alt": "三角形 ABC 中连续取中点得到的小三角形 DEG"
+      }
+    ],
     "fields": [
       {
         "key": "area",

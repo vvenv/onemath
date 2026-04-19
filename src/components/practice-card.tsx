@@ -9,14 +9,20 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ProblemFigures } from "@/components/problem-figures";
 import { cn } from "@/lib/utils";
-import type { PracticeField, VariantAnswerValue } from "@/types/problem";
+import type {
+  PracticeField,
+  ProblemFigure,
+  VariantAnswerValue,
+} from "@/types/problem";
 
 type PracticeCardProps = {
   prompt: string;
   fields: PracticeField[];
   answer: Record<string, VariantAnswerValue>;
   hint?: string;
+  figures?: ProblemFigure[];
 };
 
 function matchesAnswer(input: string, expected: VariantAnswerValue): boolean {
@@ -42,6 +48,7 @@ export function PracticeCard({
   fields,
   answer,
   hint,
+  figures,
 }: PracticeCardProps) {
   const [values, setValues] = useState<Record<string, string>>(() =>
     Object.fromEntries(fields.map((f) => [f.key, ""])),
@@ -76,6 +83,11 @@ export function PracticeCard({
     <Card>
       <CardContent>
         <p className="mb-3 text-sm text-card-foreground">{prompt}</p>
+        {figures && figures.length > 0 ? (
+          <div className="mb-3">
+            <ProblemFigures figures={figures} />
+          </div>
+        ) : null}
         <div className="flex flex-col gap-2">
           {fields.map((field) => {
             if (field.enum && field.enum.length > 0) {

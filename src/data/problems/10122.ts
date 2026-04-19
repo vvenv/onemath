@@ -1,5 +1,6 @@
 import type { ProblemData } from "@/types/problem";
 import svg1 from "./figures/10122-1.svg?raw";
+import svgV from "./figures/10122-v.svg?raw";
 
 export default {
   "id": "10122",
@@ -137,6 +138,13 @@ export default {
   ],
   "variant": {
     "question": "三角形 ABC 面积为 60。D 在 BC 上且 BD : DC = 1 : 2；E 在 AC 上且 AE : EC = 1 : 1（E 为 AC 的中点）。M 是 DE 的中点，N 是 AM 的中点。求三角形 ADN 的面积。",
+    "figures": [
+      {
+        "svg": svgV,
+        "caption": "D 把 BC 分为 1:2；E 是 AC 中点；M 是 DE 中点；N 是 AM 中点；阴影为 △ADN",
+        "alt": "三角形 ABC 中按比例与取中点构造的三角形 ADN"
+      }
+    ],
     "fields": [
       {
         "key": "area",

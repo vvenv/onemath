@@ -66,6 +66,7 @@ export default function ProblemPage() {
         <PracticeCard
           key={`practice-${problem.id}`}
           prompt={problem.variant.question}
+          figures={problem.variant.figures}
           fields={problem.variant.fields}
           answer={problem.variant.answer}
           hint={problem.variant.hint}

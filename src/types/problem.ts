@@ -53,6 +53,7 @@ export type ProblemData = {
   }>;
   variant: {
     question: string;
+    figures?: ProblemFigure[];
     fields: PracticeField[];
     answer: Record<string, VariantAnswerValue>;
     hint?: string;

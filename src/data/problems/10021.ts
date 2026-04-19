@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svgV from "./figures/10021-v.svg?raw";
 
 export default {
   "id": "10021",
@@ -94,6 +95,13 @@ export default {
   ],
   "variant": {
     "question": "一个棱长 5 厘米的正方体，在它的前后、左右、上下分别打穿一个边长 1 厘米的正方形孔洞（对穿）。求剩下立体图形的表面积。",
+    "figures": [
+      {
+        "svg": svgV,
+        "caption": "棱长 5 的正方体，沿三条方向各打穿一条 1×1 的方形通道（三条通道在中心相交）",
+        "alt": "正方体三方向对穿孔洞示意图"
+      }
+    ],
     "fields": [
       {
         "key": "area",

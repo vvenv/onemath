@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svgV from "./figures/10023-v.svg?raw";
 
 export default {
   "id": "10023",
@@ -211,6 +212,13 @@ export default {
   ],
   "variant": {
     "question": "如果用一些小正方体搭成一个几何体，从正面看是‘田’字形缺左下角，从上面看是‘田’字形，最少需要多少个小正方体？",
+    "figures": [
+      {
+        "svg": svgV,
+        "caption": "左：正视图为 2×2 田字缺左下角；右：俯视图为完整 2×2 田字",
+        "alt": "正视与俯视图"
+      }
+    ],
     "fields": [
       {
         "key": "min_blocks",
