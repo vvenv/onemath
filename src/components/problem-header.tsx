@@ -5,7 +5,7 @@ import { getModule, type ModuleKey } from "@/lib/modules";
 import { cn } from "@/lib/utils";
 
 type ProblemHeaderProps = {
-  id: number;
+  id: string;
   title: string;
   grade?: string;
   module?: ModuleKey;

@@ -24,6 +24,6 @@ export default {
   // Static export: no Node server at runtime; every route is prerendered to HTML.
   ssr: false,
   async prerender() {
-    return ["/", ...problemIds.map((id) => `/problems/${id}`)];
+    return ["/", ...problemIds.map((id) => `/p/${id}`)];
   },
 } satisfies Config;

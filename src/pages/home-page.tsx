@@ -102,7 +102,13 @@ export default function HomePage() {
       if (activeDifficulty && p.difficulty !== activeDifficulty) return false;
       if (activeTopic && p.topic !== activeTopic) return false;
       if (normalizedKeyword) {
-        const haystack = [p.title, p.topic ?? "", p.question, p.tags.join(" ")]
+        const haystack = [
+          p.title,
+          p.topic ?? "",
+          p.question,
+          p.tags.join(" "),
+          `${p.id}`,
+        ]
           .join(" ")
           .toLowerCase();
         if (!haystack.includes(normalizedKeyword)) return false;
@@ -160,7 +166,7 @@ export default function HomePage() {
               type="search"
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
-              placeholder="搜索题目 / 标签"
+              placeholder="搜索题目 / 标签 / 编号"
               className="h-9 pl-8"
               aria-label="关键字搜索"
             />
@@ -410,11 +416,12 @@ function ProblemRow({ problem }: { problem: ProblemData }) {
   const difficulty = problem.difficulty as Difficulty | undefined;
   return (
     <Link
-      to={`/problems/${problem.id}`}
+      to={`/p/${problem.id}`}
       className="group relative flex items-start gap-3 overflow-hidden rounded-xl border border-border/70 bg-card p-3 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
     >
       <div className="flex min-w-0 flex-1 flex-col gap-1">
         <span className="truncate text-sm font-medium text-card-foreground group-hover:text-primary">
+          <span className="text-muted-foreground">#{problem.id}</span>{" "}
           {problem.title}
         </span>
         <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[11px] text-muted-foreground">

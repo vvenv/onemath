@@ -17,7 +17,7 @@
   ],
   "properties": {
     "$schema": { "type": "string" },
-    "id": { "type": "integer", "minimum": 1 },
+    "id": { "type": "string", "pattern": "^[1-9][0-9]{4}$" },
     "title": { "type": "string", "minLength": 1 },
     "grade": {
       "enum": ["三年级", "四年级", "五年级", "六年级"]

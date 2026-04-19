@@ -5,10 +5,10 @@ const modules = import.meta.glob<ProblemData>("@/data/problems/*.json", {
   import: "default",
 });
 
-export const problems: ProblemData[] = Object.values(modules).sort(
-  (a, b) => a.id - b.id,
+export const problems: ProblemData[] = Object.values(modules).sort((a, b) =>
+  a.id.localeCompare(b.id),
 );
 
 export function getProblemById(id: string | undefined) {
-  return problems.find((p) => String(p.id) === id);
+  return problems.find((p) => p.id === id);
 }

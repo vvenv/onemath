@@ -32,7 +32,7 @@ export type ProblemFigure = {
 };
 
 export type ProblemData = {
-  id: number;
+  id: string;
   title: string;
   grade: Grade;
   difficulty?: string;
