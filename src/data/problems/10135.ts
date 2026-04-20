@@ -3,7 +3,7 @@ import svg1 from "./figures/10135-1.svg?raw";
 
 export default {
   "id": "10135",
-  "title": "燕尾模型·两条 cevian 围出的四边形",
+  "title": "燕尾模型·两条塞瓦线围出的四边形",
   "grade": "六年级",
   "module": "geometry",
   "difficulty": "进阶",
@@ -11,8 +11,8 @@ export default {
   "figures": [
     {
       "svg": svg1,
-      "caption": "两条 cevian AD、BE 交于 F；四边形 DFEC（黄色）已知为 22",
-      "alt": "三角形内两条 cevian 与外围四边形"
+      "caption": "两条塞瓦线 AD、BE 交于 F；四边形 DFEC（黄色）已知为 22",
+      "alt": "三角形内两条塞瓦线与外围四边形"
     }
   ],
   "solutions": [
@@ -20,8 +20,8 @@ export default {
       "key": "swallowtail",
       "label": "燕尾定理 + 底比分割",
       "steps": [
-        "分析：AD、BE 两条 cevian 交于 F，把 △ABC 分成四块：△ABF、△BDF、四边形 DFEC、△AEF。先用燕尾定理求出 △ABC 被 F 分成的 △ABF : △BCF : △ACF，再把 △BCF 和 △ACF 分别按 D、E 的位置拆出 DFEC 占 △ABC 的比例。",
-        "第一步：燕尾定理。· 由 cevian AD（D 在 BC 上）：△ABF : △ACF = BD : DC = 1 : 2。· 由 cevian BE（E 在 AC 上）：△ABF : △BCF = AE : EC = 2 : 3。",
+        "分析：AD、BE 两条塞瓦线交于 F，把 △ABC 分成四块：△ABF、△BDF、四边形 DFEC、△AEF。先用燕尾定理求出 △ABC 被 F 分成的 △ABF : △BCF : △ACF，再把 △BCF 和 △ACF 分别按 D、E 的位置拆出 DFEC 占 △ABC 的比例。",
+        "第一步：燕尾定理。· 由塞瓦线 AD（D 在 BC 上）：△ABF : △ACF = BD : DC = 1 : 2。· 由塞瓦线 BE（E 在 AC 上）：△ABF : △BCF = AE : EC = 2 : 3。",
         "第二步：设 △ABF = 2k。则 △ACF = 4k（由比 1:2）、△BCF = 3k（由比 2:3）。整体 △ABC = 2k + 3k + 4k = 9k。",
         "第三步：把 △BCF 按 D 在 BC 上的位置拆。△BDF 与 △CDF 同以 F 为顶点、底在 BC 上 ⇒ 比 = BD : DC = 1 : 2 ⇒ △BDF = k，△CDF = 2k。",
         "第四步：把 △ACF 按 E 在 AC 上的位置拆。△AEF 与 △CEF 同以 F 为顶点、底在 AC 上 ⇒ 比 = AE : EC = 2 : 3 ⇒ △AEF = 8k/5，△CEF = 12k/5。",
@@ -61,7 +61,7 @@ export default {
               "badge": "答案"
             }
           ],
-          "caption": "燕尾三块 + 两条 cevian 各自的底比，即可写出 DFEC 的比例"
+          "caption": "燕尾三块 + 两条塞瓦线各自的底比，即可写出 DFEC 的比例"
         },
         {
           "kind": "compare-bars",

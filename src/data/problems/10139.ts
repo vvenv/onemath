@@ -11,8 +11,8 @@ export default {
   "figures": [
     {
       "svg": svg1,
-      "caption": "两条 cevian AD、BE 交于 F；△BDF（红色）已知为 4",
-      "alt": "三角形内两条 cevian 围出的一个小三角形"
+      "caption": "两条 塞瓦线 AD、BE 交于 F；△BDF（红色）已知为 4",
+      "alt": "三角形内两条 塞瓦线 围出的一个小三角形"
     }
   ],
   "solutions": [
@@ -21,7 +21,7 @@ export default {
       "label": "燕尾三块 + F 在 AD 上的底比",
       "steps": [
         "分析：想由 △BDF 反推 △ABC，可以先用燕尾定理给出 △ABF : △ACF : △BCF 的比例，把 △BDF 写成 △BCF 的一部分，再反求整体面积。",
-        "第一步：燕尾。· cevian AD（D 在 BC 上）：△ABF : △ACF = BD : DC = 1 : 2。· cevian BE（E 在 AC 上）：△ABF : △BCF = AE : EC = 2 : 3。",
+        "第一步：燕尾。· 塞瓦线 AD（D 在 BC 上）：△ABF : △ACF = BD : DC = 1 : 2。· 塞瓦线 BE（E 在 AC 上）：△ABF : △BCF = AE : EC = 2 : 3。",
         "第二步：设 △ABF = 2k。则 △ACF = 4k（由 1:2）、△BCF = 3k（由 2:3）。整体 △ABC = 2k + 3k + 4k = 9k。",
         "第三步：把 △BCF 按 D 在 BC 上的位置拆成 △BDF 和 △CDF：△BDF : △CDF = BD : DC = 1 : 2 ⇒ △BDF = △BCF / 3 = 3k / 3 = k。",
         "第四步：代入 △BDF = k = 4 ⇒ △ABC = 9k = 36。"
@@ -103,7 +103,7 @@ export default {
       "key": "ratio-along-ad",
       "label": "换一种拆法：沿 AD 看 F",
       "steps": [
-        "分析：F 在 cevian AD 上；如果先算出 AF : FD，也能把 △BDF 跟 △ABC 直接联系起来。",
+        "分析：F 在 塞瓦线 AD 上；如果先算出 AF : FD，也能把 △BDF 跟 △ABC 直接联系起来。",
         "第一步：由 △ABF = 2k、△BDF = k，两三角形同以 BF 为公共边、顶点 A、D 在直线 AD 上 ⇒ AF : FD = △ABF : △BDF = 2 : 1。",
         "第二步：△ABD 是 △ABC 的 (BD/BC) = 1/3 ⇒ △ABD = △ABC / 3。",
         "第三步：F 在 AD 上且 FD : AD = 1 : 3（由 AF:FD = 2:1）。△BDF 与 △ABD 同以 BD 为公共底 ⇒ △BDF = △ABD × FD/AD = △ABC × 1/3 × 1/3 = △ABC / 9。",

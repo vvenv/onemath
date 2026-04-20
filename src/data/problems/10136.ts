@@ -20,9 +20,9 @@ export default {
       "key": "swallowtail",
       "label": "燕尾定理定位 G",
       "steps": [
-        "分析：G 在两条 cevian AF 与 CE 的交点上。在 △ABC 中（把正方形对角线 AC 看成一条辅助线），F 在 BC 上、E 在 AB 上，AF、CE 是两条 cevian。用燕尾定理可以算出 G 把 △ABC 分成的三块比例，再和正方形面积挂钩。",
+        "分析：G 在两条 塞瓦线 AF 与 CE 的交点上。在 △ABC 中（把正方形对角线 AC 看成一条辅助线），F 在 BC 上、E 在 AB 上，AF、CE 是两条 塞瓦线。用燕尾定理可以算出 G 把 △ABC 分成的三块比例，再和正方形面积挂钩。",
         "第一步：△ABC 是正方形的一半 = 120 ÷ 2 = 60。",
-        "第二步：燕尾：· cevian AF（F 在 BC 上），BF : FC = 1 : 1 ⇒ △ABG : △ACG = 1 : 1。· cevian CE（E 在 AB 上），AE : EB = 1 : 1 ⇒ △ACG : △BCG = 1 : 1。所以 △ABG : △ACG : △BCG = 1 : 1 : 1，每块 = 60 ÷ 3 = 20。",
+        "第二步：燕尾：· 塞瓦线 AF（F 在 BC 上），BF : FC = 1 : 1 ⇒ △ABG : △ACG = 1 : 1。· 塞瓦线 CE（E 在 AB 上），AE : EB = 1 : 1 ⇒ △ACG : △BCG = 1 : 1。所以 △ABG : △ACG : △BCG = 1 : 1 : 1，每块 = 60 ÷ 3 = 20。",
         "第三步：把 △BCG 按 F 在 BC 上的位置拆。△BFG 与 △CFG 同以 G 为顶点、底在 BC 上 ⇒ 比 = BF : FC = 1 : 1 ⇒ △BFG = △BCG ÷ 2 = 10。",
         "结论：△BGF 的面积为 10。"
       ],

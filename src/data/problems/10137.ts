@@ -3,16 +3,16 @@ import svg1 from "./figures/10137-1.svg?raw";
 
 export default {
   "id": "10137",
-  "title": "燕尾模型·三条 cevian 围成的中心三角形",
+  "title": "燕尾模型·三条 塞瓦线 围成的中心三角形",
   "grade": "六年级",
   "module": "geometry",
   "difficulty": "挑战",
-  "question": "如图，三角形 ABC 中，D 在 AB 上使 BD = 2·DA（即 DA : DB = 1 : 2）；E 在 BC 上使 CE = 2·EB（即 EB : EC = 1 : 2）；F 在 CA 上使 AF = 2·FC（即 FC : FA = 1 : 2）。连接三条 cevian AE、BF、CD，它们两两相交形成一个中心小三角形 GHI。证明：△ABC 的面积恰好是 △GHI 面积的 7 倍。",
+  "question": "如图，三角形 ABC 中，D 在 AB 上使 BD = 2·DA（即 DA : DB = 1 : 2）；E 在 BC 上使 CE = 2·EB（即 EB : EC = 1 : 2）；F 在 CA 上使 AF = 2·FC（即 FC : FA = 1 : 2）。连接三条 塞瓦线 AE、BF、CD，它们两两相交形成一个中心小三角形 GHI。证明：△ABC 的面积恰好是 △GHI 面积的 7 倍。",
   "figures": [
     {
       "svg": svg1,
-      "caption": "三条 cevian AE、BF、CD 两两相交围出中心三角形 GHI（红色）",
-      "alt": "三角形内三条 cevian 围成的中心小三角形"
+      "caption": "三条 塞瓦线 AE、BF、CD 两两相交围出中心三角形 GHI（红色）",
+      "alt": "三角形内三条 塞瓦线 围成的中心小三角形"
     }
   ],
   "solutions": [
@@ -20,10 +20,10 @@ export default {
       "key": "routh",
       "label": "燕尾定理 + 巧分中心三角形",
       "steps": [
-        "分析：三条 cevian AE、BF、CD 把 △ABC 分成 1 个中心小三角形 △GHI 加 3 个外围小三角形（各自贴着一个顶点）加 3 个四边形（各自贴着一条边）。核心思路：先用燕尾定理算出每个 cevian 把 △ABC 分成两块的比例，把 △ABC 看作 21 份等分，然后逐块累加。",
+        "分析：三条 塞瓦线 AE、BF、CD 把 △ABC 分成 1 个中心小三角形 △GHI 加 3 个外围小三角形（各自贴着一个顶点）加 3 个四边形（各自贴着一条边）。核心思路：先用燕尾定理算出每个 塞瓦线 把 △ABC 分成两块的比例，把 △ABC 看作 21 份等分，然后逐块累加。",
         "第一步：设 G = BF ∩ CD，H = CD ∩ AE，I = AE ∩ BF。",
-        "第二步：对于 cevian CD，D 在 AB 上且 DA : DB = 1 : 2，所以它把 △ABC 分成 △CAD : △CBD = 1 : 2。",
-        "第三步：对 G = BF ∩ CD 用燕尾。在 △ABC 中以 G 为内点考察两条过 G 的 cevian CD、BF：· △BCG : △BAG = CD 的分点位置 = DA : DB？——更直接：G 在 CD 上，所以 △BCG : △ACG = BG 所对的 ... 用坐标更稳妥。",
+        "第二步：对于 塞瓦线 CD，D 在 AB 上且 DA : DB = 1 : 2，所以它把 △ABC 分成 △CAD : △CBD = 1 : 2。",
+        "第三步：对 G = BF ∩ CD 用燕尾。在 △ABC 中以 G 为内点考察两条过 G 的 塞瓦线 CD、BF：· △BCG : △BAG = CD 的分点位置 = DA : DB？——更直接：G 在 CD 上，所以 △BCG : △ACG = BG 所对的 ... 用坐标更稳妥。",
         "第四步：建系核算。取 A(0, 1)、B(0, 0)、C(1, 0)（△ABC 面积 = 1/2）。D 在 AB 上 DA:DB = 1:2 ⇒ D = (0, 2/3)。E 在 BC 上 EB:EC = 1:2 ⇒ E = (1/3, 0)。F 在 CA 上 FC:FA = 1:2 ⇒ F = (2/3, 1/3)。",
         "第五步：三条直线方程。· AE：从 (0,1) 到 (1/3,0)，方程 y = 1 − 3x。· BF：从 (0,0) 到 (2/3,1/3)，方程 y = x/2。· CD：从 (1,0) 到 (0,2/3)，方程 y = (2/3)(1 − x) = 2/3 − 2x/3。",
         "第六步：两两求交点。· I = AE ∩ BF：1 − 3x = x/2 ⇒ 7x/2 = 1 ⇒ x = 2/7, y = 1/7。I = (2/7, 1/7)。· G = BF ∩ CD：x/2 = 2/3 − 2x/3 ⇒ 3x/6 + 4x/6 = 2/3 ⇒ 7x/6 = 2/3 ⇒ x = 4/7, y = 2/7。G = (4/7, 2/7)。· H = CD ∩ AE：1 − 3x = 2/3 − 2x/3 ⇒ 1 − 2/3 = 3x − 2x/3 = 7x/3 ⇒ x = 1/7, y = 4/7。H = (1/7, 4/7)。",
@@ -72,7 +72,7 @@ export default {
       "label": "Routh 定理（选学）",
       "steps": [
         "分析：高中/竞赛中的 Routh 定理给出一般结论。",
-        "设三条 cevian 分别把三边分成比例 x = BD/DA = 2、y = CE/EB = 2、z = AF/FC = 2（沿同方向循环）。中心三角形与原三角形面积比为：△GHI / △ABC = (xyz − 1)² / [(xy + y + 1)(yz + z + 1)(zx + x + 1)]。",
+        "设三条 塞瓦线 分别把三边分成比例 x = BD/DA = 2、y = CE/EB = 2、z = AF/FC = 2（沿同方向循环）。中心三角形与原三角形面积比为：△GHI / △ABC = (xyz − 1)² / [(xy + y + 1)(yz + z + 1)(zx + x + 1)]。",
         "代入 x = y = z = 2：分子 (2·2·2 − 1)² = 7² = 49；分母 (4 + 2 + 1)³ = 7³ = 343；比 = 49/343 = 1/7，与坐标法一致。"
       ],
       "scenes": [
@@ -94,7 +94,7 @@ export default {
     }
   ],
   "variant": {
-    "question": "三角形 ABC 面积为 49。D、E、F 分别在 AB、BC、CA 上，BD = 2DA、CE = 2EB、AF = 2FC。三条 cevian AE、BF、CD 围出中心三角形 GHI。求 △GHI 的面积。",
+    "question": "三角形 ABC 面积为 49。D、E、F 分别在 AB、BC、CA 上，BD = 2DA、CE = 2EB、AF = 2FC。三条 塞瓦线 AE、BF、CD 围出中心三角形 GHI。求 △GHI 的面积。",
     "fields": [
       {
         "key": "area",
