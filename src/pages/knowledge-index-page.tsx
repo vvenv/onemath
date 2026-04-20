@@ -1,14 +1,13 @@
 import { useMemo } from "react";
-import { BookOpen } from "lucide-react";
+import { BookOpen, ChevronDown } from "lucide-react";
 import { Link, type MetaFunction } from "react-router";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import {
   Card,
   CardContent,
@@ -79,20 +78,12 @@ export default function KnowledgeIndexPage() {
         </p>
       </header>
 
-      <Accordion
-        type="multiple"
-        defaultValue={visibleCategories}
-        className="gap-2"
-      >
+      <div className="flex flex-col">
         {visibleCategories.map((cat) => {
           const list = grouped.get(cat)!;
           return (
-            <AccordionItem
-              key={cat}
-              value={cat}
-              className="not-last:border-b-0"
-            >
-              <AccordionTrigger className="items-center gap-3 py-2 hover:no-underline">
+            <Collapsible key={cat} defaultOpen>
+              <CollapsibleTrigger className="group flex w-full items-center gap-3 py-2">
                 <div className="flex flex-1 items-center gap-2">
                   <h2 className="font-heading text-lg font-semibold tracking-tight">
                     {CATEGORY_LABEL[cat]}
@@ -104,9 +95,10 @@ export default function KnowledgeIndexPage() {
                     {list.length}
                   </Badge>
                 </div>
-              </AccordionTrigger>
-              <AccordionContent className="h-auto px-px pt-1 pb-3 [&_a]:no-underline">
-                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <ChevronDown className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
+              </CollapsibleTrigger>
+              <CollapsibleContent asChild>
+                <div className="grid grid-cols-1 gap-2 pt-1 pb-3 sm:grid-cols-2">
                   {list.map((entry) => (
                     <Link
                       key={entry.slug}
@@ -136,11 +128,11 @@ export default function KnowledgeIndexPage() {
                     </Link>
                   ))}
                 </div>
-              </AccordionContent>
-            </AccordionItem>
+              </CollapsibleContent>
+            </Collapsible>
           );
         })}
-      </Accordion>
+      </div>
     </div>
   );
 }

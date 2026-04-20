@@ -1,14 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
 import { ChevronDown, Search, X } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import { GRADES, MODULES, type ModuleKey } from "@/lib/modules";
 import { problems } from "@/lib/problems";
 import { cn } from "@/lib/utils";
@@ -57,9 +56,6 @@ export default function HomePage() {
   );
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [showMore, setShowMore] = useState(false);
-  const [collapsedGrades, setCollapsedGrades] = useState<Set<Grade>>(
-    () => new Set(),
-  );
   const [restored, setRestored] = useState(false);
 
   useEffect(() => {
@@ -100,7 +96,6 @@ export default function HomePage() {
     activeDifficulty,
     activeTag,
     showMore,
-    collapsedGrades,
   ]);
 
   const tags = useMemo(() => {
@@ -142,32 +137,6 @@ export default function HomePage() {
     activeGrade !== null ||
     activeDifficulty !== null ||
     activeTag !== null;
-
-  const visibleGradeLabels = useMemo(
-    () =>
-      GRADES.map((g) => g.label as Grade).filter((label) => {
-        const list = grouped.get(label);
-        return !!list && list.length > 0;
-      }),
-    [grouped],
-  );
-
-  const expandedGradeValues = useMemo(
-    () => visibleGradeLabels.filter((label) => !collapsedGrades.has(label)),
-    [visibleGradeLabels, collapsedGrades],
-  );
-
-  const handleAccordionChange = (next: string[]) => {
-    const nextSet = new Set(next as Grade[]);
-    setCollapsedGrades((prev) => {
-      const updated = new Set(prev);
-      for (const label of visibleGradeLabels) {
-        if (nextSet.has(label)) updated.delete(label);
-        else updated.add(label);
-      }
-      return updated;
-    });
-  };
 
   const resetAll = () => {
     setActiveModule(null);
@@ -284,23 +253,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Accordion
-        type="multiple"
-        value={expandedGradeValues}
-        onValueChange={handleAccordionChange}
-        className="gap-2"
-      >
+      <div className="flex flex-col">
         {GRADES.map((grade) => {
           const list = grouped.get(grade.label);
           if (!list || list.length === 0) return null;
-          const gradeLabel = grade.label as Grade;
           return (
-            <AccordionItem
-              key={grade.label}
-              value={gradeLabel}
-              className="not-last:border-b-0"
-            >
-              <AccordionTrigger className="items-center gap-3 py-2 hover:no-underline">
+            <Collapsible key={grade.label} defaultOpen>
+              <CollapsibleTrigger className="group flex w-full items-center gap-3 py-2">
                 <div className="flex flex-1 items-center gap-2">
                   <div className="flex flex-col gap-0.5">
                     <div className="flex items-center gap-2">
@@ -319,18 +278,19 @@ export default function HomePage() {
                     </p>
                   </div>
                 </div>
-              </AccordionTrigger>
-              <AccordionContent className="h-auto pt-1 pb-3 [&_a]:no-underline">
+                <ChevronDown className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
+              </CollapsibleTrigger>
+              <CollapsibleContent asChild>
                 <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                   {list.map((item) => (
                     <ProblemRow key={item.id} problem={item} />
                   ))}
                 </div>
-              </AccordionContent>
-            </AccordionItem>
+              </CollapsibleContent>
+            </Collapsible>
           );
         })}
-      </Accordion>
+      </div>
 
       <div>
         {visibleProblems.length === 0 ? (

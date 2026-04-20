@@ -54,11 +54,12 @@ export function AppBar() {
             variant="ghost"
             size="icon-sm"
             className="active:translate-y-0!"
-            aria-label={theme === "dark" ? "切换到浅色模式" : "切换到深色模式"}
+            aria-label="切换主题"
             onClick={onToggleTheme}
             disabled={theme === null}
           >
-            {theme === "dark" ? <Sun /> : <Moon />}
+            <Moon className="block dark:hidden" />
+            <Sun className="hidden dark:block" />
           </Button>
         </div>
       </div>

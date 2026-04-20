@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { Input } from "@/components/ui/input";
 import { ProblemFigures } from "@/components/problem-figures";
 import { cn } from "@/lib/utils";
 import type {
@@ -54,25 +54,17 @@ export function PracticeCard({
     Object.fromEntries(fields.map((f) => [f.key, ""])),
   );
   const [result, setResult] = useState<"correct" | "wrong" | null>(null);
-  const [showAnswer, setShowAnswer] = useState(false);
 
   useEffect(() => {
     setValues(Object.fromEntries(fields.map((f) => [f.key, ""])));
     setResult(null);
-    setShowAnswer(false);
   }, [fields]);
 
   const checkAnswer = () => {
     const allMatch = fields.every((f) =>
       matchesAnswer(values[f.key] ?? "", answer[f.key]),
     );
-    if (allMatch) {
-      setResult("correct");
-      setShowAnswer(false);
-      return;
-    }
-    setResult("wrong");
-    setShowAnswer(true);
+    setResult(allMatch ? "correct" : "wrong");
   };
 
   const standardAnswer = fields
@@ -162,18 +154,19 @@ export function PracticeCard({
         </div>
 
         {result && (
-          <Accordion
-            type="single"
+          <Collapsible
+            key={result}
+            defaultOpen={result === "wrong"}
             className="mt-3"
-            value={showAnswer ? "answer" : ""}
-            onValueChange={(value) => setShowAnswer(value === "answer")}
-            collapsible
           >
-            <AccordionItem value="answer">
-              <AccordionTrigger>标准答案</AccordionTrigger>
-              <AccordionContent>标准答案：{standardAnswer}。</AccordionContent>
-            </AccordionItem>
-          </Accordion>
+            <CollapsibleTrigger className="group flex w-full items-center gap-2 py-2.5 text-left text-sm font-medium">
+              <span>标准答案</span>
+              <ChevronDown className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="pb-2.5 text-sm">
+              标准答案：{standardAnswer}。
+            </CollapsibleContent>
+          </Collapsible>
         )}
       </CardContent>
     </Card>
