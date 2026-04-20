@@ -83,6 +83,7 @@ export default {
         },
         {
           "kind": "result-badges",
+          "layout": "label-first",
           "items": [
             {
               "icon": "🔷",

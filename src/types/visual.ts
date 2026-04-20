@@ -142,6 +142,7 @@ export type SceneSpec =
       kind: "result-badges";
       items: ResultBadgeSpec[];
       separator?: string;
+      layout?: "count-first" | "label-first";
       caption?: string;
     }
   | {

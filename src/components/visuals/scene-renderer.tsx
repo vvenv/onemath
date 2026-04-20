@@ -79,7 +79,11 @@ export function SceneRenderer({ spec }: { spec: SceneSpec }) {
     case "result-badges":
       return (
         <Scene>
-          <ResultBadges items={spec.items} separator={spec.separator} />
+          <ResultBadges
+            items={spec.items}
+            separator={spec.separator}
+            layout={spec.layout}
+          />
           {spec.caption ? <Caption>{spec.caption}</Caption> : null}
         </Scene>
       );

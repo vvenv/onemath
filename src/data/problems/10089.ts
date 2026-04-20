@@ -57,6 +57,7 @@ export default {
       "scenes": [
         {
           "kind": "result-badges",
+          "layout": "label-first",
           "items": [
             {
               "icon": "🎯",
