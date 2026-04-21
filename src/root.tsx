@@ -1,12 +1,11 @@
 import type { ReactNode } from "react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import { themeScript } from "@/lib/theme";
+import { pwaRegisterScript } from "@/lib/pwa";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import "@/styles/globals.css";
-
-const pwaRegisterScript = `if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}`;
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
@@ -26,7 +25,6 @@ export function Layout({ children }: { children: ReactNode }) {
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
-        <title>一道 / edao.plus</title>
         <Meta />
         <Links />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
