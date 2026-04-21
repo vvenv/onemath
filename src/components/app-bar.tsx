@@ -1,24 +1,11 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { BookOpen, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Theme, getInitialTheme, setSelectedTheme } from "@/lib/theme";
+import { toggleTheme } from "@/lib/theme";
 import { GlobalSearch } from "./global-search";
 import { Logo } from "./logo";
 
 export function AppBar() {
-  const [theme, setTheme] = useState<Theme | null>(null);
-
-  useEffect(() => {
-    setTheme(getInitialTheme());
-  }, []);
-
-  const onToggleTheme = () => {
-    const next: Theme = theme === "dark" ? "light" : "dark";
-    setSelectedTheme(next);
-    setTheme(next);
-  };
-
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/70 backdrop-blur-md supports-backdrop-filter:bg-background/60">
       <div className="relative mx-auto flex h-14 w-full max-w-3xl items-center gap-3 px-4">
@@ -55,8 +42,7 @@ export function AppBar() {
             size="icon-sm"
             className="active:translate-y-0!"
             aria-label="切换主题"
-            onClick={onToggleTheme}
-            disabled={theme === null}
+            onClick={toggleTheme}
           >
             <Moon className="block dark:hidden" />
             <Sun className="hidden dark:block" />
