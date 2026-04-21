@@ -5,7 +5,21 @@ import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
+import { getPrerenderPaths } from "./prerender-paths";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// Seed the Service Worker precache with every prerendered route's HTML so the
+// custom navigation handler in `src/sw.ts` can serve them path-aware. RR
+// writes these files *after* VitePWA finalizes the SW, so `globPatterns`
+// alone cannot pick them up — we register them explicitly here and let
+// Workbox fetch them from the deployment on SW install. A single
+// build-timestamp revision invalidates them all on every deploy.
+const buildRevision = `${Date.now()}`;
+const prerenderedHtmlEntries = getPrerenderPaths().map((routePath) => ({
+  url: routePath === "/" ? "/index.html" : `${routePath}/index.html`,
+  revision: buildRevision,
+}));
 
 // Silence Chrome DevTools' automatic probe for
 // `/.well-known/appspecific/com.chrome.devtools.json` so it doesn't spam the
@@ -32,6 +46,9 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       injectRegister: null,
+      strategies: "injectManifest",
+      srcDir: "src",
+      filename: "sw.ts",
       includeAssets: [
         "icon.svg",
         "icon-maskable.svg",
@@ -62,18 +79,9 @@ export default defineConfig({
           },
         ],
       },
-      workbox: {
-        globPatterns: ["**/*.{js,css,html,svg,png,ico,webmanifest,woff2}"],
-        // React Router's prerender step writes `index.html` *after* VitePWA
-        // finalizes the service worker, so it is not picked up by
-        // `globPatterns`. Register it explicitly so `navigateFallback` can
-        // bind a handler to a precached URL.
-        additionalManifestEntries: [
-          { url: "/index.html", revision: `${Date.now()}` },
-        ],
-        navigateFallback: "/index.html",
-        cleanupOutdatedCaches: true,
-        clientsClaim: true,
+      injectManifest: {
+        globPatterns: ["**/*.{js,css,svg,png,ico,webmanifest,woff2}"],
+        additionalManifestEntries: prerenderedHtmlEntries,
       },
       devOptions: {
         enabled: false,
