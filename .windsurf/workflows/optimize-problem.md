@@ -52,6 +52,7 @@ description: Audit and optimize an existing OneMath problem TS file against the 
      - "分析"步是否已经覆盖了完整解法路径，却又在后续 steps 里把同样的推导再拆成多条；此时应**二选一**：要么删掉冗余的分步推导，保留分析 + 一条紧凑推导链；要么把"分析"收敛成只讲洞察，由后续 steps 展开推导。
      - `steps` 是否把 `scenes`（尤其 `equation-list`）已经逐行展示的内容又复述了一遍；若是，合并为一条叙事。
      - 对照 / 备选解法是否把例行算术拆得过细，而对比结论反而被淹没。
+     - **单步可读性**：是否存在某条 `step` 把多个逻辑独立的动作（如"分组 + 组内排序 + 合并顺序 + 结论"）用分号/逗号堆成一整段长句，阅读时需要扫多行才能抓到关键；若是，拆成多条短 step 或把枚举/清单下沉到 `scenes`（`equation-list` / `statement-table` 等）。
    - **variant**：
      - `question` 同主题不同数值、难度相近。
      - `fields[]` 至少 1 项、键名语义清晰；比较类用 `type: "text"` + `enum: [">","<","="]`。

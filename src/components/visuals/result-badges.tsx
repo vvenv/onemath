@@ -49,7 +49,7 @@ export function ResultBadges({
               <span className="text-xl" aria-hidden>
                 {item.icon}
               </span>
-              <span className="font-medium">× {item.count}</span>
+              = <span className="font-medium">{item.count}</span>
               {item.label ? (
                 <span className="text-muted-foreground">{item.label}</span>
               ) : null}

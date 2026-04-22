@@ -107,6 +107,7 @@ description: Given a reference document under docs/, produce a generation plan a
     - 反过来，如果打算把推导细分成多步，"分析"就不要剧透每一步的算式，只讲洞察与策略。
     - `steps` 与 `scenes` 分工：`scenes`（尤其是 `equation-list`）负责逐行可视化推导；`steps` 只承担叙事，**不要把每一个 equation-list 行再复述成一条 step**。
     - **禁止"合并复述"**：如果 `scenes` 里的 `equation-list` 已经把完整推导逐行展示，就不要再加一条仅把这些行串成一整条等式链的 `step`（例如 `a × b + a × c = a × (b + c) = a × 100 = …`）。分析步 + 场景即可，推导别写两遍。
+    - **单步可读性**：每条 `step` 自身要短、能一眼扫完——推荐 1–2 个短句；**不要**把逻辑上独立的多步（如"分组 + 组内排序 + 合并顺序 + 结论"）用分号/逗号堆成一整段长句。若一条 step 在普通阅读栏里要换行超过 ~2 行，就应该拆成多条短 step、把机械推导下沉到 `scenes`（如 `equation-list`），或用结构化场景行承载枚举/清单。
     - 对照 / 备选解法（`对照`、`直接法` 等）更要紧凑：合并例行算术为一行，只保留与主解法形成对比的结论。
   - `scenes[]` 选用合适的 scene 类型辅助理解（见下）。
 - 解法应真正解决题目，不能绕过关键推理。
@@ -181,6 +182,7 @@ export default {
 - [ ] 每个 `solutions[i].steps[0]` 以"分析"开头，承载了题面约束/特殊位置/对称性等背景推理
 - [ ] `solutions.length >= 1`，步骤完整、结论明确
 - [ ] 每个 `solutions[i].steps` 精炼（约 2–4 条），`分析` 与后续 `steps`、`scenes` 不重复相同内容；推导可用一条紧凑等式链呈现
+- [ ] 每条 `step` 自身短而可读，逻辑独立的多步未被分号/逗号堆成长句；超长 step 已拆分或下沉到 `scenes`
 - [ ] 所有 `scenes[].kind` 为 `SceneSpec`（见 `src/types/visual.ts`）允许的值
 - [ ] `variant.answer` 的键与 `variant.fields[].key` 一一对应
 - [ ] `tags` 仅含 `@/src/lib/tags.ts` 白名单内的方法（0–3 个），不含年级/难度/模块
