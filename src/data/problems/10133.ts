@@ -5,7 +5,7 @@ export default {
   "id": "10133",
   "title": "相似模型·长方形内沙漏切小三角形",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "进阶",
   "question": "如图，长方形 ABCD 的面积为 12。E 在边 CD 上，且 DE : EC = 1 : 2。连接 AE 与对角线 BD 相交于点 F。求三角形 DEF 的面积。",
   "figures": [

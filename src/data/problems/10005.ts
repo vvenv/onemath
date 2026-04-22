@@ -4,7 +4,7 @@ export default {
   "id": "10005",
   "title": "彩灯之谜·余数周期",
   "grade": "三年级",
-  "module": "misc",
+  "module": "杂题",
   "difficulty": "基础",
   "question": "为迎接节日，公园里安装了一排彩灯，按照“3盏红灯、2盏黄灯、1盏蓝灯、2盏绿灯”的顺序循环排列。请问第2026盏灯是什么颜色？在这2026盏灯中，红灯一共有多少盏？",
   "solutions": [
@@ -137,5 +137,5 @@ export default {
     },
     "hint": "先算出周期长度，再根据余数判断最后一人身份。计算总数时，先算整周期内的数量，再加上余数中对应的数量。"
   },
-  "tags": []
+  "tags": ["周期问题"]
 } satisfies ProblemData;

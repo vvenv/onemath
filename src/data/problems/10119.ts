@@ -6,7 +6,7 @@ export default {
   "id": "10119",
   "title": "共角三角形·互补型（延长线上取点）",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "进阶",
   "question": "如图，在三角形 ABC 中，D 在 BA 的延长线上（即 A 在 B、D 之间），AB : AD = 5 : 2；E 在边 AC 上，AE : EC = 3 : 2。已知三角形 ADE 的面积为 12，求三角形 ABC 的面积。",
   "figures": [

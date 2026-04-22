@@ -6,7 +6,7 @@ export default {
   "id": "10118",
   "title": "共角三角形·A 字型面积比",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "基础",
   "question": "如图，在三角形 ABC 中，E 在边 AB 上且 AB = 3AE；D 在边 AC 上且 AC = 2AD。已知三角形 ABC 的面积为 36，求三角形 AED 的面积。",
   "figures": [

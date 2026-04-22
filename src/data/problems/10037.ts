@@ -4,7 +4,7 @@ export default {
   "id": "10037",
   "title": "抽屉原理·摸球问题",
   "grade": "四年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "进阶",
   "question": "一个袋子里有红、黄、蓝三种颜色的球各5个。至少要摸出多少个球，才能保证摸出的球中一定有2个颜色相同？",
   "solutions": [

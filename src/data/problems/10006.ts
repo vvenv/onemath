@@ -4,7 +4,7 @@ export default {
   "id": "10006",
   "title": "棋盘上的线段·计数最值",
   "grade": "六年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "挑战",
   "question": "在一个由 4 × 4 个边长为1厘米的小正方形组成的方格棋盘上，连接两个不同的格点，可以画出多少条长度为整厘米数的线段？（格点是指方格的顶点）",
   "solutions": [

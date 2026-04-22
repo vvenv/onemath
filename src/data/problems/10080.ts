@@ -4,7 +4,7 @@ export default {
   "id": "10080",
   "title": "拆数乘积最大·20 的拆分",
   "grade": "六年级",
-  "module": "misc",
+  "module": "杂题",
   "difficulty": "挑战",
   "question": "把正整数 20 拆成若干个正整数之和（拆成几个都可以，顺序不计），使得这些正整数的乘积尽可能大。最大的乘积是多少？",
   "solutions": [

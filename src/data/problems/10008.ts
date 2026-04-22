@@ -4,7 +4,7 @@ export default {
   "id": "10008",
   "title": "平均成绩·移多补少",
   "grade": "三年级",
-  "module": "word",
+  "module": "应用题",
   "difficulty": "基础",
   "question": "小华的前四次数学测验平均分是 88 分。他想在第五次测验后，将平均分提高到 90 分。那么他第五次测验至少要考多少分？",
   "solutions": [
@@ -107,5 +107,5 @@ export default {
     },
     "hint": "试试移多补少法：第四次成绩 = 新的平均分 + (前几次与平均分的总差额)。"
   },
-  "tags": []
+  "tags": ["画图法"]
 } satisfies ProblemData;

@@ -5,7 +5,7 @@ export default {
   "id": "10058",
   "title": "乘法巧算·提取公因数",
   "grade": "四年级",
-  "module": "calc",
+  "module": "计算",
   "difficulty": "基础",
   "question": "计算：36 × 47 + 64 × 47",
   "solutions": [
@@ -137,5 +137,5 @@ export default {
     },
     "hint": "提取公因数 28：(125 − 25) × 28 = 100 × 28"
   },
-  "tags": []
+  "tags": ["乘法分配律"]
 } satisfies ProblemData;

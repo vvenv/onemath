@@ -5,7 +5,7 @@ export default {
   "id": "10137",
   "title": "燕尾模型·三条 塞瓦线 围成的中心三角形",
   "grade": "六年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "挑战",
   "question": "如图，三角形 ABC 中，D 在 AB 上使 BD = 2·DA（即 DA : DB = 1 : 2）；E 在 BC 上使 CE = 2·EB（即 EB : EC = 1 : 2）；F 在 CA 上使 AF = 2·FC（即 FC : FA = 1 : 2）。连接三条 塞瓦线 AE、BF、CD，它们两两相交形成一个中心小三角形 GHI。证明：△ABC 的面积恰好是 △GHI 面积的 7 倍。",
   "figures": [

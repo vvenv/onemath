@@ -4,7 +4,7 @@ export default {
   "id": "10029",
   "title": "计算·定义新运算",
   "grade": "四年级",
-  "module": "calc",
+  "module": "计算",
   "difficulty": "进阶",
   "question": "定义一种新运算“⊙”：a ⊙ b = 2 × a + b。求 (3 ⊙ 4) ⊙ 5 的值。",
   "solutions": [

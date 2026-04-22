@@ -5,7 +5,7 @@ export default {
   "id": "10124",
   "title": "蝴蝶模型·梯形对角线四块面积",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "进阶",
   "question": "如图，梯形 ABCD 中 AB ∥ CD，两条对角线 AC 与 BD 相交于点 O。已知三角形 AOB 的面积为 25，三角形 BOC 的面积为 35。求梯形 ABCD 的总面积。",
   "figures": [

@@ -4,7 +4,7 @@ export default {
   id: "10142",
   title: "速算·隐藏“乘 1”的分配律",
   grade: "五年级",
-  module: "calc",
+  module: "计算",
   difficulty: "进阶",
   question: "用简便方法计算：47 × 36 + 47 × 63 + 47。",
   solutions: [

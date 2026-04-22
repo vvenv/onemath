@@ -5,7 +5,7 @@ export default {
   "id": "10065",
   "title": "均匀分组·消序去重",
   "grade": "六年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "挑战",
   "question": "把 6 本各不相同的书，平均分成 3 堆（3 堆之间没有顺序之分，只看“哪几本书放在一起”）。一共有多少种不同的分法？",
   "figures": [

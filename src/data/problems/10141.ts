@@ -4,7 +4,7 @@ export default {
   id: "10141",
   title: "速算·提取公因数凑整",
   grade: "四年级",
-  module: "calc",
+  module: "计算",
   difficulty: "基础",
   question: "用简便方法计算：38 × 17 + 38 × 83。",
   solutions: [

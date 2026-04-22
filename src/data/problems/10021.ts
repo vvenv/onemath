@@ -5,7 +5,7 @@ export default {
   "id": "10021",
   "title": "立体图形·挖洞后的表面积",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "进阶",
   "question": "一个棱长为 4 厘米的正方体，在它的上下、前后、左右的正中位置各挖去一个棱长为 1 厘米的小正方体。挖洞后物体的表面积是多少平方厘米？",
   "solutions": [
@@ -108,5 +108,5 @@ export default {
     },
     "hint": "打通的情况下，减少的面积是 2 个面，但增加了内部的侧面积。"
   },
-  "tags": []
+  "tags": ["平移法"]
 } satisfies ProblemData;

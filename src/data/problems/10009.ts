@@ -4,7 +4,7 @@ export default {
   "id": "10009",
   "title": "周期问题·算星期",
   "grade": "三年级",
-  "module": "numberTheory",
+  "module": "数论",
   "difficulty": "基础",
   "question": "2024年10月1日是星期二，那么2024年10月31日是星期几？",
   "solutions": [
@@ -313,5 +313,5 @@ export default {
     },
     "hint": "从1日到25日，经过了多少天？"
   },
-  "tags": []
+  "tags": ["周期问题"]
 } satisfies ProblemData;

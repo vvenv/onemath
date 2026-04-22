@@ -4,7 +4,7 @@ export default {
   "id": "10044",
   "title": "同余问题·韩信点兵",
   "grade": "五年级",
-  "module": "numberTheory",
+  "module": "数论",
   "difficulty": "挑战",
   "question": "一篮鸡蛋，每次拿 2 个还剩 1 个，每次拿 3 个还剩 2 个，每次拿 5 个还剩 4 个。这篮鸡蛋最少有多少个？",
   "solutions": [

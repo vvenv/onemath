@@ -5,7 +5,7 @@ export default {
   "id": "10036",
   "title": "容斥原理·重叠计数",
   "grade": "四年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "进阶",
   "question": "某班有45人，其中参加数学兴趣小组的有28人，参加语文兴趣小组的有25人，两个小组都参加的有12人。请问：两个小组都没有参加的有多少人？",
   "solutions": [
@@ -85,5 +85,5 @@ export default {
     },
     "hint": "能被2整除：50个；能被3整除：33个；能被6整除（重叠）：16个。50+33-16=67。"
   },
-  "tags": []
+  "tags": ["容斥原理"]
 } satisfies ProblemData;

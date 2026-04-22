@@ -4,7 +4,7 @@ export default {
   "id": "10020",
   "title": "整除特征·数字谜",
   "grade": "五年级",
-  "module": "numberTheory",
+  "module": "数论",
   "difficulty": "进阶",
   "question": "在四位数 56⬜2 的方框中填上一个数字，使得这个数能同时被 3 和 4 整除。那么方框中可以填的数字之和是多少？",
   "solutions": [

@@ -6,7 +6,7 @@ export default {
   "id": "10126",
   "title": "蝴蝶模型·正六边形内对角线交点",
   "grade": "六年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "挑战",
   "question": "如图，正六边形 ABCDEF 的面积为 1。连接对角线 AC 与 BD，它们相交于点 P。求三角形 BCP 的面积。",
   "figures": [

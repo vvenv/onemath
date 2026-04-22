@@ -4,7 +4,7 @@ export default {
   "id": "10004",
   "title": "探险队分帐篷·盈亏转化",
   "grade": "三年级",
-  "module": "word",
+  "module": "应用题",
   "difficulty": "进阶",
   "question": "一支探险队准备在野外露营。如果每顶帐篷住 5 人，则有 14 人没有地方住；如果每顶帐篷住 7 人，则刚好空出 4 顶帐篷。问探险队共有多少人？帐篷共有多少顶？",
   "solutions": [

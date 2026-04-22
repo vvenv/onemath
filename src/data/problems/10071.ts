@@ -5,7 +5,7 @@ export default {
   "id": "10071",
   "title": "烙饼问题·3 张饼最短时间",
   "grade": "四年级",
-  "module": "misc",
+  "module": "杂题",
   "difficulty": "基础",
   "question": "用一口平底锅烙饼，锅里一次最多同时烙 2 张饼。每张饼有正反两面，每面都要烙 3 分钟才熟。现在要烙 3 张饼，最少需要多少分钟？",
   "figures": [
@@ -105,5 +105,5 @@ export default {
     },
     "hint": "5 张饼共 10 个面，下限 = 10 ÷ 2 × 3 = 15 分钟，存在可行排法。"
   },
-  "tags": []
+  "tags": ["时间统筹"]
 } satisfies ProblemData;

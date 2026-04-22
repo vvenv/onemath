@@ -5,7 +5,7 @@ export default {
   "id": "10040",
   "title": "奇偶性·翻杯子",
   "grade": "三年级",
-  "module": "numberTheory",
+  "module": "数论",
   "difficulty": "基础",
   "question": "桌上有 5 个杯子，全部杯口朝上。每次同时翻转 3 个杯子，经过若干次操作后，能否使所有杯子杯口朝下？",
   "solutions": [
@@ -127,5 +127,5 @@ export default {
     },
     "hint": "考虑翻转总次数的奇偶性。"
   },
-  "tags": []
+  "tags": ["奇偶性"]
 } satisfies ProblemData;

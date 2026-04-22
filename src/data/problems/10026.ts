@@ -4,7 +4,7 @@ export default {
   "id": "10026",
   "title": "计算·分组巧算",
   "grade": "三年级",
-  "module": "calc",
+  "module": "计算",
   "difficulty": "基础",
   "question": "计算：1 − 2 + 3 − 4 + 5 − 6 + ... + 99 − 100",
   "solutions": [

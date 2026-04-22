@@ -6,7 +6,7 @@ export default {
   "id": "10114",
   "title": "等积变换·正方形三等分点三角形",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "进阶",
   "question": "如图，正方形 ABCD 的边长为 12。E、F、G 分别在 AB、BC、CD 上，且 AE = 8，BF = 8，CG = 8。连接 EF、FG、GE，求三角形 EFG 的面积。",
   "figures": [

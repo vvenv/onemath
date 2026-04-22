@@ -4,7 +4,7 @@ export default {
   "id": "10018",
   "title": "牛吃草·匀速生长",
   "grade": "五年级",
-  "module": "word",
+  "module": "应用题",
   "difficulty": "进阶",
   "question": "一片匀速生长的草地，可供 27 头牛吃 6 周，或者供 23 头牛吃 9 周。那么这片草地可供 21 头牛吃几周？",
   "solutions": [

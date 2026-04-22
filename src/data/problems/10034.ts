@@ -7,7 +7,7 @@ export default {
   "id": "10034",
   "title": "加乘原理·路线选择",
   "grade": "四年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "基础",
   "question": "如图，从A地到B地有3条路可走，从B地到C地有4条路可走，从A地直接到C地有2条路可走。那么从A地到C地一共有多少种不同的走法？",
   "figures": [
@@ -75,5 +75,5 @@ export default {
     },
     "hint": "经过乙地：2×5=10种；直达：3种。合计13种。"
   },
-  "tags": []
+  "tags": ["加乘原理"]
 } satisfies ProblemData;

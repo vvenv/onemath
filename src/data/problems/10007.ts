@@ -4,7 +4,7 @@ export default {
   "id": "10007",
   "title": "分糖·盈亏问题",
   "grade": "三年级",
-  "module": "word",
+  "module": "应用题",
   "difficulty": "基础",
   "question": "老师给小朋友们分糖果。如果每人分 6 颗，会多出 15 颗；如果每人分 8 颗，则还差 9 颗。请问一共有多少位小朋友？一共有多少颗糖果？",
   "solutions": [

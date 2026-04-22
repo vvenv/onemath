@@ -4,7 +4,7 @@ export default {
   id: "10140",
   title: "速算·拆成整百再分配",
   grade: "四年级",
-  module: "calc",
+  module: "计算",
   difficulty: "基础",
   question: "用简便方法计算：99 × 73。",
   solutions: [

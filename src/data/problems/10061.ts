@@ -6,7 +6,7 @@ export default {
   "id": "10061",
   "title": "节目排序·插空法",
   "grade": "五年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "进阶",
   "question": "学校晚会共有 6 个节目，其中有 2 个是小品。节目单规定：这 2 个小品不能连续出场。问一共有多少种不同的节目安排顺序？",
   "figures": [

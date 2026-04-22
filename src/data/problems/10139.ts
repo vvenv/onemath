@@ -5,7 +5,7 @@ export default {
   "id": "10139",
   "title": "燕尾模型·由一块面积反求整体",
   "grade": "六年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "挑战",
   "question": "如图，三角形 ABC 中，D 在 BC 上使 BD : DC = 1 : 2；E 在 AC 上使 AE : EC = 2 : 3。AD 与 BE 相交于点 F。已知三角形 BDF 的面积为 4，求三角形 ABC 的面积。",
   "figures": [

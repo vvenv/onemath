@@ -4,7 +4,7 @@ export default {
   "id": "10046",
   "title": "余数性质·星期几",
   "grade": "四年级",
-  "module": "numberTheory",
+  "module": "数论",
   "difficulty": "基础",
   "question": "2024 年 1 月 1 日是星期一。2024 年 10 月 1 日是星期几？",
   "solutions": [
@@ -140,5 +140,5 @@ export default {
     },
     "hint": "3月31天，4月30天，5月31天，共92天。92 ÷ 7 = 13 周余 1 天。"
   },
-  "tags": []
+  "tags": ["周期问题"]
 } satisfies ProblemData;

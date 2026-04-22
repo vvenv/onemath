@@ -5,7 +5,7 @@ export default {
   "id": "10121",
   "title": "共角三角形·两条边比例点",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "基础",
   "question": "如图，在三角形 ABC 中，D 是 AB 的中点；E 在 AC 上，AE : EC = 2 : 1。已知三角形 ADE 的面积为 12，求三角形 ABC 的面积。",
   "figures": [

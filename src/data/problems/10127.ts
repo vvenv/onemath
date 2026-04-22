@@ -5,7 +5,7 @@ export default {
   "id": "10127",
   "title": "蝴蝶模型·一般四边形对角线四块",
   "grade": "六年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "挑战",
   "question": "如图，四边形 ABCD 的两条对角线 AC、BD 相交于点 O，把四边形分成四个三角形。已知三角形 AOB、BOC、COD 的面积依次是 4、6、9。求三角形 AOD 的面积以及四边形 ABCD 的总面积。",
   "figures": [

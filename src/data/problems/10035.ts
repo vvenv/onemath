@@ -4,7 +4,7 @@ export default {
   "id": "10035",
   "title": "排列组合·选人组队",
   "grade": "五年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "进阶",
   "question": "从 5 名同学中选出 3 人参加比赛。请问：（1）有多少种不同的选法？（2）如果选出的 3 人还要分配不同的任务（队长、副队长、记录员），有多少种不同的安排方式？",
   "solutions": [

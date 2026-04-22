@@ -4,7 +4,7 @@ export default {
   "id": "10011",
   "title": "差倍问题·基本差倍",
   "grade": "三年级",
-  "module": "word",
+  "module": "应用题",
   "difficulty": "基础",
   "question": "学校合唱队的人数比舞蹈队多24人，合唱队人数是舞蹈队的3倍。合唱队和舞蹈队各有多少人？",
   "solutions": [

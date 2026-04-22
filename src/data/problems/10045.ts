@@ -4,7 +4,7 @@ export default {
   "id": "10045",
   "title": "位值原理·数字谜",
   "grade": "五年级",
-  "module": "numberTheory",
+  "module": "数论",
   "difficulty": "进阶",
   "question": "一个两位数，十位数字与个位数字之和为 10。如果把这个两位数的十位数字与个位数字对调，得到的新数比原数大 36。求原来的两位数。",
   "solutions": [

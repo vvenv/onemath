@@ -4,7 +4,7 @@ export default {
   "id": "10010",
   "title": "归一问题·基本归一",
   "grade": "三年级",
-  "module": "word",
+  "module": "应用题",
   "difficulty": "基础",
   "question": "一台织布机3小时织布24米。照这样计算，8台同样的织布机5小时可以织布多少米？",
   "solutions": [

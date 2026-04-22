@@ -6,7 +6,7 @@ export default {
   "id": "10059",
   "title": "算式比较大小·拆项法",
   "grade": "四年级",
-  "module": "calc",
+  "module": "计算",
   "difficulty": "基础",
   "question": "不通过计算（不直接算出具体乘积），比较 31 × 29 和 30 × 30 的大小，并说明理由。",
   "figures": [

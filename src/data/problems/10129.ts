@@ -5,7 +5,7 @@ export default {
   "id": "10129",
   "title": "蝴蝶模型·梯形平方比（已知上下底）",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "进阶",
   "question": "如图，梯形 ABCD 中 AB ∥ CD，AB = 3，CD = 5，两条对角线交于 O。已知三角形 AOB 的面积为 9，求梯形 ABCD 的总面积。",
   "figures": [

@@ -5,7 +5,7 @@ export default {
   "id": "10131",
   "title": "相似模型·正方形中的沙漏与对角线",
   "grade": "六年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "进阶",
   "question": "如图，正方形 ABCD 的边长为 6。E 是边 BC 的中点。连接 DE 与对角线 AC 相交于点 F。求三角形 DFC 的面积。",
   "figures": [

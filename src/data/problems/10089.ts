@@ -5,7 +5,7 @@ export default {
   "id": "10089",
   "title": "五阶幻方·幻和求值",
   "grade": "五年级",
-  "module": "misc",
+  "module": "杂题",
   "difficulty": "进阶",
   "question": "把 1, 2, 3, …, 25 这 25 个数字各用一次，填入 5 × 5 方格中，使每一行、每一列、两条对角线上 5 个数之和都相等。问：这个公共和（幻和）是多少？",
   "figures": [

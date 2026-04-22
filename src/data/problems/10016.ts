@@ -4,7 +4,7 @@ export default {
   "id": "10016",
   "title": "盈亏问题·一盈一亏",
   "grade": "四年级",
-  "module": "word",
+  "module": "应用题",
   "difficulty": "进阶",
   "question": "老师给小朋友们分糖果。如果每人分5颗，则少3颗；如果每人分4颗，则多2颗。请问有多少个小朋友？有多少颗糖果？",
   "solutions": [

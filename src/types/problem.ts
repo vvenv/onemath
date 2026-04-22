@@ -9,13 +9,13 @@ export type PracticeField = {
 };
 
 export type ProblemModule =
-  | "calc"
-  | "geometry"
-  | "numberTheory"
-  | "word"
-  | "travel"
-  | "counting"
-  | "misc";
+  | "计算"
+  | "几何"
+  | "数论"
+  | "应用题"
+  | "行程"
+  | "计数"
+  | "杂题";
 
 export type Grade = "三年级" | "四年级" | "五年级" | "六年级";
 

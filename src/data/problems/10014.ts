@@ -4,7 +4,7 @@ export default {
   "id": "10014",
   "title": "相遇问题·基本相遇",
   "grade": "四年级",
-  "module": "travel",
+  "module": "行程",
   "difficulty": "基础",
   "question": "小明和小红从相距1200米的两地同时出发，相向而行。小明每分钟走70米，小红每分钟走50米。经过几分钟后两人相遇？",
   "solutions": [
@@ -105,5 +105,5 @@ export default {
     },
     "hint": "相遇时间 = 总路程 ÷ 速度和"
   },
-  "tags": []
+  "tags": ["相遇追及"]
 } satisfies ProblemData;

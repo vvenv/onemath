@@ -5,7 +5,7 @@ export default {
   "id": "10138",
   "title": "燕尾模型·中点与三等分点组合",
   "grade": "六年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "进阶",
   "question": "如图，三角形 ABC 中，D 是 AC 的中点，E、F 是 BC 的三等分点（BE = EF = FC，E 靠近 B）。连接 AE 与 BD 相交于点 M。已知 △ABC 的面积为 1，求四边形 CDMF 的面积。",
   "figures": [

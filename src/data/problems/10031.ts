@@ -7,7 +7,7 @@ export default {
   "id": "10031",
   "title": "梯形面积·蝴蝶模型",
   "grade": "四年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "进阶",
   "question": "如图，四边形 ABCD 是一个梯形，上底 AD 长 4，下底 BC 长 8。对角线 AC 和 BD 相交于点 O。已知三角形 AOD 的面积是 10 平方厘米，那么梯形 ABCD 的总面积是多少平方厘米？",
   "figures": [

@@ -42,6 +42,11 @@ export const METHOD_TAGS = {
     "十字交叉法",
     "整体代换",
   ],
+  travel: [
+    "相遇追及",
+    "火车过桥",
+    "流水行船",
+  ],
   numberCalc: [
     "整除特征",
     "同余",
@@ -52,6 +57,8 @@ export const METHOD_TAGS = {
     "平方差",
     "乘法分配律",
     "首尾配对",
+    "周期问题",
+    "完全平方数",
   ],
   geometry: [
     "面积法",
@@ -64,6 +71,7 @@ export const METHOD_TAGS = {
     "平移法",
   ],
   magicSquare: ["累加法", "中心数法", "比较法", "等差数列法", "试填法"],
+  planning: ["时间统筹", "调运选址"],
   general: ["奇偶性", "不变量", "最不利原则"],
 } as const;
 

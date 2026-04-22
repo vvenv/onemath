@@ -5,7 +5,7 @@ export default {
   "id": "10057",
   "title": "分数比较大小·作差法",
   "grade": "五年级",
-  "module": "calc",
+  "module": "计算",
   "difficulty": "基础",
   "question": "比较 2023/2024 和 2024/2025 的大小。",
   "figures": [

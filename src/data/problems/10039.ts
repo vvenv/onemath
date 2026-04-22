@@ -4,7 +4,7 @@ export default {
   "id": "10039",
   "title": "数字计数·含特定数字",
   "grade": "五年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "进阶",
   "question": "在 1 到 100 的自然数中，数字\"5\"一共出现了多少次？",
   "solutions": [

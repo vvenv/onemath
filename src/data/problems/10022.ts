@@ -4,7 +4,7 @@ export default {
   "id": "10022",
   "title": "逻辑推理·真假话",
   "grade": "五年级",
-  "module": "misc",
+  "module": "杂题",
   "difficulty": "进阶",
   "question": "警察抓获了四个嫌疑人 A, B, C, D。已知只有一人是小偷。他们的供词如下：\nA：不是我。\nB：是 C。\nC：是 D。\nD：C 在胡说。\n已知只有一个人说了真话。请问谁是小偷？",
   "solutions": [
@@ -258,5 +258,5 @@ export default {
     },
     "hint": "找出哪两个人说的话是互斥的（甲和丙）。"
   },
-  "tags": []
+  "tags": ["分类讨论"]
 } satisfies ProblemData;

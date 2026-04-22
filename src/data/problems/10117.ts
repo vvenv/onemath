@@ -5,7 +5,7 @@ export default {
   "id": "10117",
   "title": "等积变换·中线与比例交点",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "进阶",
   "question": "如图，三角形 ABC 中，D 是 BC 的中点，E 在线段 AD 上且 AE : ED = 2 : 1。直线 BE 延长后与边 AC 相交于点 F。已知三角形 ABC 的面积为 60，求三角形 AEF 的面积。",
   "figures": [

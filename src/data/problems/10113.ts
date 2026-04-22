@@ -6,7 +6,7 @@ export default {
   "id": "10113",
   "title": "等积变换·三次取中点",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "基础",
   "question": "如图，三角形 ABC 中，D、E、F 分别是 BC、AC、AD 的中点。已知三角形 ABC 的面积为 24，求三角形 DEF 的面积。",
   "figures": [

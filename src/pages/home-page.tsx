@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router";
+import { useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router";
 import { ChevronDown, Search, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -28,81 +28,64 @@ export const meta: MetaFunction = () => {
 const DIFFICULTIES = ["基础", "进阶", "挑战"] as const;
 type Difficulty = (typeof DIFFICULTIES)[number];
 
-type PersistedSearchState = {
-  module: ModuleKey | null;
-  grade: Grade | null;
-  difficulty: Difficulty | null;
-  tag: string | null;
-  showMore: boolean;
-};
-
-const DIFFICULTY_ACCENT: Record<Difficulty, string> = {
-  基础: "bg-emerald-500/10 text-emerald-700 ring-emerald-500/20 dark:text-emerald-300",
-  进阶: "bg-amber-500/10 text-amber-700 ring-amber-500/20 dark:text-amber-300",
-  挑战: "bg-rose-500/10 text-rose-700 ring-rose-500/20 dark:text-rose-300",
-};
-
 const DIFFICULTY_DOT: Record<Difficulty, string> = {
-  基础: "bg-emerald-500",
-  进阶: "bg-amber-500",
-  挑战: "bg-rose-500",
+  基础: "bg-emerald-500/50",
+  进阶: "bg-amber-500/50",
+  挑战: "bg-rose-500/50",
 };
 
 export default function HomePage() {
-  const [activeModule, setActiveModule] = useState<ModuleKey | null>(null);
-  const [activeGrade, setActiveGrade] = useState<Grade | null>(null);
-  const [activeDifficulty, setActiveDifficulty] = useState<Difficulty | null>(
-    null,
-  );
-  const [activeTag, setActiveTag] = useState<string | null>(null);
+  const [searchParams, setSearchParams] = useSearchParams();
   const [showMore, setShowMore] = useState(false);
-  const [restored, setRestored] = useState(false);
 
-  useEffect(() => {
-    try {
-      const raw = sessionStorage.getItem("filter");
-      if (raw) {
-        const s = JSON.parse(raw) as Partial<PersistedSearchState>;
-        if (s.module !== undefined) setActiveModule(s.module);
-        if (s.grade !== undefined) setActiveGrade(s.grade);
-        if (s.difficulty !== undefined) setActiveDifficulty(s.difficulty);
-        if (s.tag !== undefined) setActiveTag(s.tag);
-        if (typeof s.showMore === "boolean") setShowMore(s.showMore);
-      }
-    } catch {
-      // ignore malformed storage
-    }
-    setRestored(true);
-  }, []);
-
-  useEffect(() => {
-    if (!restored) return;
-    try {
-      const payload: PersistedSearchState = {
-        module: activeModule,
-        grade: activeGrade,
-        difficulty: activeDifficulty,
-        tag: activeTag,
-        showMore,
-      };
-      sessionStorage.setItem("filter", JSON.stringify(payload));
-    } catch {
-      // ignore quota/availability errors
-    }
-  }, [
-    restored,
-    activeModule,
-    activeGrade,
-    activeDifficulty,
-    activeTag,
-    showMore,
-  ]);
-
+  const moduleKeys = useMemo(
+    () => new Set<ModuleKey>(MODULES.map((m) => m.key)),
+    [],
+  );
+  const gradeLabels = useMemo(
+    () => new Set<string>(GRADES.map((g) => g.label)),
+    [],
+  );
   const tags = useMemo(() => {
     const set = new Set<string>();
     for (const p of problems) for (const t of p.tags) set.add(t);
     return Array.from(set).sort((a, b) => a.localeCompare(b, "zh"));
   }, []);
+  const tagSet = useMemo(() => new Set(tags), [tags]);
+
+  const rawModule = searchParams.get("module");
+  const activeModule: ModuleKey | null =
+    rawModule && moduleKeys.has(rawModule as ModuleKey)
+      ? (rawModule as ModuleKey)
+      : null;
+  const rawGrade = searchParams.get("grade");
+  const activeGrade: Grade | null =
+    rawGrade && gradeLabels.has(rawGrade) ? (rawGrade as Grade) : null;
+  const rawDifficulty = searchParams.get("difficulty");
+  const activeDifficulty: Difficulty | null =
+    rawDifficulty && (DIFFICULTIES as readonly string[]).includes(rawDifficulty)
+      ? (rawDifficulty as Difficulty)
+      : null;
+  const rawTag = searchParams.get("tag");
+  const activeTag: string | null = rawTag && tagSet.has(rawTag) ? rawTag : null;
+
+  const updateParam = (key: string, value: string | null) => {
+    setSearchParams(
+      (prev) => {
+        const next = new URLSearchParams(prev);
+        if (value === null) next.delete(key);
+        else next.set(key, value);
+        return next;
+      },
+      { replace: true },
+    );
+  };
+
+  const setActiveModule = (v: ModuleKey | null) => updateParam("module", v);
+  const setActiveGrade = (v: Grade | null) => updateParam("grade", v);
+  const setActiveDifficulty = (v: Difficulty | null) =>
+    updateParam("difficulty", v);
+  const setActiveTag = (v: string | null) => updateParam("tag", v);
 
   const visibleProblems = useMemo(() => {
     return problems.filter((p) => {
@@ -139,10 +122,7 @@ export default function HomePage() {
     activeTag !== null;
 
   const resetAll = () => {
-    setActiveModule(null);
-    setActiveGrade(null);
-    setActiveDifficulty(null);
-    setActiveTag(null);
+    setSearchParams(new URLSearchParams(), { replace: true });
   };
 
   return (
@@ -386,45 +366,16 @@ function ProblemRow({ problem }: { problem: ProblemData }) {
       className="group relative flex items-start gap-3 overflow-hidden rounded-xl border border-border/70 bg-card p-3 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
     >
       <div className="flex min-w-0 flex-1 flex-col gap-1">
-        <span className="truncate text-sm font-medium text-card-foreground group-hover:text-primary">
-          <span className="text-muted-foreground">#{problem.id}</span>{" "}
+        <span className="truncate text-base font-semibold text-card-foreground group-hover:text-primary">
+          <span className="font-normal text-muted-foreground">
+            #{problem.id}
+          </span>{" "}
           {problem.title}
         </span>
-        {problem.tags.length > 0 ? (
-          <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[11px] text-muted-foreground">
-            <span className="truncate">
-              {problem.tags.slice(0, 3).join(" / ")}
-            </span>
-          </div>
-        ) : null}
-        <div className="mt-0.5 flex flex-wrap items-center gap-1.5">
-          <Badge
-            variant="outline"
-            className={cn(
-              "h-5 border-transparent px-1.5 text-[10px] ring-1 ring-inset",
-              mod.accent,
-            )}
-          >
-            {mod.label}
-          </Badge>
-          {difficulty ? (
-            <Badge
-              variant="outline"
-              className={cn(
-                "h-5 gap-1 border-transparent px-1.5 text-[10px] ring-1 ring-inset",
-                DIFFICULTY_ACCENT[difficulty],
-              )}
-            >
-              <span
-                aria-hidden
-                className={cn(
-                  "size-1.5 rounded-full",
-                  DIFFICULTY_DOT[difficulty],
-                )}
-              />
-              {difficulty}
-            </Badge>
-          ) : null}
+        <div className="truncate text-[11px] text-muted-foreground">
+          {[mod.label, difficulty, problem.tags.slice(0, 3).join(" / ") || null]
+            .filter(Boolean)
+            .join(" · ")}
         </div>
       </div>
     </Link>

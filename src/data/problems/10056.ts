@@ -5,7 +5,7 @@ export default {
   "id": "10056",
   "title": "速算与巧算·凑整法",
   "grade": "三年级",
-  "module": "calc",
+  "module": "计算",
   "difficulty": "基础",
   "question": "计算：999 + 99 + 9",
   "figures": [

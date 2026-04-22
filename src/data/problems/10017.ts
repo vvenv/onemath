@@ -4,7 +4,7 @@ export default {
   "id": "10017",
   "title": "植树问题·两端都种",
   "grade": "三年级",
-  "module": "word",
+  "module": "应用题",
   "difficulty": "基础",
   "question": "一条长200米的小路，现在要在路的一旁每隔5米种一棵树，并且两端都要种。请问一共需要多少棵树苗？",
   "solutions": [
@@ -142,5 +142,5 @@ export default {
     },
     "hint": "注意是在“两侧”安装，并且“从头到尾”。"
   },
-  "tags": []
+  "tags": ["线段图法"]
 } satisfies ProblemData;

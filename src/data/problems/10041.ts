@@ -4,7 +4,7 @@ export default {
   "id": "10041",
   "title": "整除特征·数字谜",
   "grade": "五年级",
-  "module": "numberTheory",
+  "module": "数论",
   "difficulty": "进阶",
   "question": "在四位数 2A7B 中，A、B 各代表一个数字。已知这个四位数能同时被 3 和 5 整除，求 A + B 的最大值。",
   "solutions": [

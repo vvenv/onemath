@@ -6,7 +6,7 @@ export default {
   "id": "10063",
   "title": "数字组数·特殊位置优先法",
   "grade": "五年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "进阶",
   "question": "用 0、1、2、3、4、5 这 6 个数字组成没有重复数字的三位奇数。这样的三位奇数一共有多少个？",
   "figures": [

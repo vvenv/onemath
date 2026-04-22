@@ -5,7 +5,7 @@ export default {
   "id": "10038",
   "title": "几何计数·数线段和角",
   "grade": "三年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "基础",
   "question": "如图，一条直线上有A、B、C、D、E共5个点。请问：（1）图中共有多少条线段？（2）如果从O点向这5个点各连一条射线，图中共有多少个角？",
   "figures": [
@@ -150,5 +150,5 @@ export default {
     },
     "hint": "每两个点确定一条直线：C(6,2) = 15。"
   },
-  "tags": []
+  "tags": ["加法原理"]
 } satisfies ProblemData;

@@ -4,7 +4,7 @@ export default {
   "id": "10003",
   "title": "时光之谜·变倍年龄",
   "grade": "三年级",
-  "module": "word",
+  "module": "应用题",
   "difficulty": "进阶",
   "question": "父亲对儿子说：“我像你这么大时，你才 3 岁；当你像我这么大时，我就 78 岁了。” 问父亲和儿子现在各多少岁？",
   "solutions": [

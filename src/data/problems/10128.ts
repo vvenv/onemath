@@ -5,7 +5,7 @@ export default {
   "id": "10128",
   "title": "蝴蝶模型·正方形中点三连跳",
   "grade": "六年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "进阶",
   "question": "如图，正方形 ABCD 的边长为 10。E 是 AD 的中点；F 是线段 CE 的中点；G 是线段 BF 的中点。求三角形 BDG 的面积。",
   "figures": [

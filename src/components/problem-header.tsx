@@ -1,10 +1,8 @@
 import { Link, useNavigate } from "react-router";
 import { ArrowLeft, Dices, Shuffle } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getModule, type ModuleKey } from "@/lib/modules";
 import { getRandomProblem } from "@/lib/problems";
-import { cn } from "@/lib/utils";
 
 type ProblemHeaderProps = {
   id: string;
@@ -31,12 +29,30 @@ export function ProblemHeader({
     if (next) navigate(`/p/${next.id}`);
   };
   const mod = module ? getModule(module) : undefined;
-  const hasMeta = Boolean(grade || mod);
   const metaLabels = new Set(
     [grade, mod?.label].filter((v): v is string => Boolean(v)),
   );
   const extraTags = (tags ?? []).filter((t) => !metaLabels.has(t));
-  const hasTags = extraTags.length > 0;
+  type MetaLink = { key: string; label: string; to: string };
+  const metaLinks: MetaLink[] = [];
+  if (grade)
+    metaLinks.push({
+      key: "grade",
+      label: grade,
+      to: `/?grade=${encodeURIComponent(grade)}`,
+    });
+  if (mod)
+    metaLinks.push({
+      key: "module",
+      label: mod.label,
+      to: `/?module=${encodeURIComponent(mod.key)}`,
+    });
+  for (const t of extraTags)
+    metaLinks.push({
+      key: `tag:${t}`,
+      label: t,
+      to: `/?tag=${encodeURIComponent(t)}`,
+    });
 
   return (
     <header className="flex flex-col gap-2">
@@ -56,34 +72,26 @@ export function ProblemHeader({
         </h1>
       </div>
       <div className="flex items-center gap-2">
-        {hasMeta ? (
-          <div className="flex flex-wrap gap-1.5">
-            {grade ? (
-              <Badge variant="secondary" className="font-normal">
-                {grade}
-              </Badge>
-            ) : null}
-            {mod ? (
-              <Badge
-                variant="outline"
-                className={cn(
-                  "border-transparent ring-1 font-normal",
-                  mod.accent,
-                )}
-              >
-                {mod.label}
-              </Badge>
-            ) : null}
-          </div>
-        ) : null}
-        {hasTags ? (
-          <div className="flex flex-wrap gap-x-2 gap-y-1 text-xs text-muted-foreground">
-            {extraTags.map((tag) => (
-              <span key={tag}>#{tag}</span>
+        {metaLinks.length > 0 ? (
+          <div className="min-w-0 flex-1 truncate text-xs text-muted-foreground">
+            {metaLinks.map((m, i) => (
+              <span key={m.key}>
+                {i > 0 ? (
+                  <span className="mx-1 text-muted-foreground/60">·</span>
+                ) : null}
+                <Link
+                  to={m.to}
+                  className="transition-colors hover:text-foreground hover:underline"
+                >
+                  {m.label}
+                </Link>
+              </span>
             ))}
           </div>
-        ) : null}
-        <div className="ml-auto flex items-center gap-1">
+        ) : (
+          <div className="flex-1" />
+        )}
+        <div className="flex items-center gap-1">
           {mod ? (
             <Button
               type="button"

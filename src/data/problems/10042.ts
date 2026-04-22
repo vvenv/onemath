@@ -5,7 +5,7 @@ export default {
   "id": "10042",
   "title": "质因数分解·乘积问题",
   "grade": "四年级",
-  "module": "numberTheory",
+  "module": "数论",
   "difficulty": "基础",
   "question": "三个连续自然数的乘积是 210，求这三个数的和。",
   "solutions": [

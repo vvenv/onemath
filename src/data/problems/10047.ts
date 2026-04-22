@@ -4,7 +4,7 @@ export default {
   "id": "10047",
   "title": "完全平方数·因数个数",
   "grade": "六年级",
-  "module": "numberTheory",
+  "module": "数论",
   "difficulty": "挑战",
   "question": "一个自然数的因数个数是奇数，这个数在 100 到 200 之间。这样的数有哪些？",
   "solutions": [
@@ -122,5 +122,5 @@ export default {
     },
     "hint": "即 200 以内的完全平方数个数。14² = 196，15² = 225。"
   },
-  "tags": []
+  "tags": ["完全平方数"]
 } satisfies ProblemData;

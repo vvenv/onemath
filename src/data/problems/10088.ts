@@ -5,7 +5,7 @@ export default {
   "id": "10088",
   "title": "四阶幻方·1 到 16 填 4×4",
   "grade": "四年级",
-  "module": "misc",
+  "module": "杂题",
   "difficulty": "进阶",
   "question": "把 1, 2, 3, …, 16 这 16 个数字各用一次，填入 4 × 4 方格中，使每一行、每一列、两条对角线上四个数之和都相等。求这个公共和（幻和）。",
   "figures": [

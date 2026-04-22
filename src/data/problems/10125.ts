@@ -5,7 +5,7 @@ export default {
   "id": "10125",
   "title": "蝴蝶模型·梯形平方比",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "基础",
   "question": "如图，梯形 ABCD 中 AB ∥ CD，两条对角线交于 O，把梯形分成四个三角形 S₁（△AOB，顶）、S₂（△BOC，右）、S₃（△COD，底）、S₄（△AOD，左）。已知 S₂ = 2，S₃ = 4，求梯形 ABCD 的总面积。",
   "figures": [

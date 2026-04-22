@@ -4,7 +4,7 @@ export default {
   "id": "10015",
   "title": "方阵问题·实心方阵",
   "grade": "四年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "基础",
   "question": "四年级同学排成一个实心方阵进行广播操表演，最外层每边站了12人。请问这个方阵一共有多少人？最外层一共有多少人？",
   "solutions": [

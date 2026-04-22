@@ -4,7 +4,7 @@ export default {
   "id": "10033",
   "title": "枚举法·数字计数",
   "grade": "三年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "基础",
   "question": "用数字 1、2、3 可以组成多少个没有重复数字的两位数？请按从小到大的顺序写出来。",
   "solutions": [
@@ -179,5 +179,5 @@ export default {
     },
     "hint": "注意：十位不能是 0。"
   },
-  "tags": []
+  "tags": ["枚举法"]
 } satisfies ProblemData;

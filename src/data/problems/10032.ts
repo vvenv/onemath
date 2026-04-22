@@ -8,7 +8,7 @@ export default {
   "id": "10032",
   "title": "长方体切割·染色问题",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "进阶",
   "question": "一个 5×4×3 的长方体木块，由 60 个棱长为 1 的小正方体组成。在其六个面上都涂上红色油漆，然后沿着小正方体的接缝将它全部切开。请问：恰好有两个面被涂成红色的小正方体有多少个？",
   "figures": [
@@ -94,5 +94,5 @@ export default {
     },
     "hint": "一面涂色在面中心，两面涂色在棱中，三面涂色在顶点。"
   },
-  "tags": []
+  "tags": ["分类讨论"]
 } satisfies ProblemData;

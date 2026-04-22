@@ -5,7 +5,7 @@ export default {
   "id": "10043",
   "title": "最大公约数·短除模型",
   "grade": "五年级",
-  "module": "numberTheory",
+  "module": "数论",
   "difficulty": "进阶",
   "question": "甲、乙两个数的最大公约数是 6，最小公倍数是 72。已知甲数是 24，求乙数。",
   "solutions": [

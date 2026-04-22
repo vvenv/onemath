@@ -4,7 +4,7 @@ export default {
   "id": "10028",
   "title": "计算·分数裂项",
   "grade": "六年级",
-  "module": "calc",
+  "module": "计算",
   "difficulty": "挑战",
   "question": "计算：1/2 + 1/6 + 1/12 + 1/20 + 1/30",
   "solutions": [

@@ -4,7 +4,7 @@ export default {
   "id": "10012",
   "title": "和倍问题·基本和倍",
   "grade": "三年级",
-  "module": "word",
+  "module": "应用题",
   "difficulty": "基础",
   "question": "小明和小红一共有63张卡片，小明的卡片数量是小红的2倍。请问小明和小红各有多少张卡片？",
   "solutions": [

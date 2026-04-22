@@ -4,7 +4,7 @@ export default {
   "id": "10013",
   "title": "追及问题·基本追及",
   "grade": "四年级",
-  "module": "travel",
+  "module": "行程",
   "difficulty": "基础",
   "question": "哥哥和弟弟去上学，弟弟先出发，每分钟走40米。5分钟后，哥哥从同一地点出发去追弟弟，哥哥每分钟走60米。请问哥哥几分钟后能追上弟弟？",
   "solutions": [
@@ -110,5 +110,5 @@ export default {
     },
     "hint": "先算出货车在轿车出发前已经走了多远。"
   },
-  "tags": []
+  "tags": ["相遇追及"]
 } satisfies ProblemData;

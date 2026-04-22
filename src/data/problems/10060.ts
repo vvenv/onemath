@@ -6,7 +6,7 @@ export default {
   "id": "10060",
   "title": "排队相邻·捆绑法",
   "grade": "五年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "进阶",
   "question": "3 个男生和 2 个女生站成一排合影，要求 2 个女生必须相邻。一共有多少种不同的站法？",
   "figures": [

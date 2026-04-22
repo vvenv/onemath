@@ -5,7 +5,7 @@ export default {
   "id": "10134",
   "title": "相似模型·正方形两中点连线所围四边形",
   "grade": "六年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "挑战",
   "question": "如图，正方形 ABCD 的边长为 12。E 是 AB 的中点，F 是 BC 的中点。连接 AF 与 CE 相交于点 G。求四边形 AGCD 的面积。",
   "figures": [

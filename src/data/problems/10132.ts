@@ -5,7 +5,7 @@ export default {
   "id": "10132",
   "title": "相似模型·长方形中点线与对角线相交",
   "grade": "六年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "挑战",
   "question": "如图，长方形 ABCD 中 AB = 8，BC = 6。E 是 CD 的中点。连接 AE 与对角线 BD 相交于点 F。(1) 求 AF : FE；(2) 求三角形 ABF 的面积。",
   "figures": [

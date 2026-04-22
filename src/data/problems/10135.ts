@@ -5,7 +5,7 @@ export default {
   "id": "10135",
   "title": "燕尾模型·两条塞瓦线围出的四边形",
   "grade": "六年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "进阶",
   "question": "如图，三角形 ABC 中，D 在 BC 上，BD : DC = 1 : 2；E 在 AC 上，AE : EC = 2 : 3。AD 与 BE 相交于点 F。已知四边形 DFEC 的面积为 22，求三角形 ABC 的面积。",
   "figures": [

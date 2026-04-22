@@ -6,7 +6,7 @@ export default {
   "id": "10122",
   "title": "共角模型·多级比例点综合",
   "grade": "六年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "挑战",
   "question": "如图，三角形 ABC 的面积为 1。D 在 BC 上，且 BC = 5·BD；E 在 AC 上，且 AC = 4·EC（即 AE = 3·EC）。连接 DE；在线段 DE 上取两点 G、S，使 DG = GS = SE（即 G、S 把 DE 三等分）。连接 AG 并在 AG 上取点 F，使 AF = FG（F 为 AG 的中点）。求三角形 FGS 的面积。",
   "figures": [

@@ -39,9 +39,11 @@ export const meta: MetaFunction = ({ params }) => {
 const CATEGORY_LABEL: Record<KnowledgeEntry["category"], string> = {
   counting: "计数",
   word: "应用题",
+  travel: "行程",
   numberCalc: "计算 / 数论",
   geometry: "几何",
   magicSquare: "幻方",
+  planning: "统筹规划",
   general: "通用思想",
 };
 

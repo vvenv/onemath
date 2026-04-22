@@ -4,7 +4,7 @@ export default {
   "id": "10051",
   "title": "多次操作·浓度递推",
   "grade": "六年级",
-  "module": "word",
+  "module": "应用题",
   "difficulty": "挑战",
   "question": "容器中有浓度为 a% 的酒精溶液 100 克。每次操作：倒出 25 克溶液，再加入 25 克水。经过 3 次操作后，浓度变为 27%。求原来浓度 a%。",
   "solutions": [

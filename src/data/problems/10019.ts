@@ -4,7 +4,7 @@ export default {
   "id": "10019",
   "title": "环形跑道·相遇与追及",
   "grade": "五年级",
-  "module": "travel",
+  "module": "行程",
   "difficulty": "进阶",
   "question": "甲、乙两人在 400 米的环形跑道上练习跑步。甲每秒跑 6 米，乙每秒跑 4 米。两人同时同地反向出发，经过多少秒两人第一次相遇？如果是同向出发，经过多少秒甲第一次追上乙？",
   "solutions": [
@@ -127,5 +127,5 @@ export default {
     },
     "hint": "注意单位的一致性。"
   },
-  "tags": []
+  "tags": ["相遇追及"]
 } satisfies ProblemData;

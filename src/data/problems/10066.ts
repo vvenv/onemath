@@ -5,7 +5,7 @@ export default {
   "id": "10066",
   "title": "多重限制排列·甲不排头乙不排尾",
   "grade": "六年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "挑战",
   "question": "甲、乙、丙、丁、戊 5 人站成一排拍照，要求甲不站在排头（最左端），乙不站在排尾（最右端）。一共有多少种不同的站法？",
   "figures": [

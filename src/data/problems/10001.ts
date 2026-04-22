@@ -4,7 +4,7 @@ export default {
   "id": "10001",
   "title": "鸡兔同笼·基础变式",
   "grade": "三年级",
-  "module": "word",
+  "module": "应用题",
   "difficulty": "基础",
   "question": "笼子里有🐔和🐰，共30个头，88只脚。问🐔和🐰各有多少只？",
   "solutions": [

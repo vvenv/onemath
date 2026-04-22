@@ -6,7 +6,7 @@ export default {
   "id": "10115",
   "title": "等积变换·直角梯形内三角形（比例点）",
   "grade": "六年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "挑战",
   "question": "如图，直角梯形 ABCD 中，AD ∥ BC，AB ⊥ AD，AD = 5，BC = 7，AB = 8。E 是 AB 上一点，AE = 5（即 EB = 3）；F 是 CD 上一点，DF : FC = 2 : 3。求三角形 DEF 的面积。",
   "figures": [

@@ -4,7 +4,7 @@ export default {
   "id": "10025",
   "title": "韩信点兵·余同问题",
   "grade": "六年级",
-  "module": "numberTheory",
+  "module": "数论",
   "difficulty": "进阶",
   "question": "一筐鸡蛋，1个1个拿正好拿完；2个2个拿剩1个；3个3个拿剩1个；4个4个拿剩1个；5个5个拿剩1个；6个6个拿剩1个；7个7个拿正好拿完。问这筐鸡蛋最少有多少个？",
   "solutions": [

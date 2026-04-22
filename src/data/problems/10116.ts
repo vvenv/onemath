@@ -5,7 +5,7 @@ export default {
   "id": "10116",
   "title": "等积变换·两条边上的比例点",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "基础",
   "question": "如图，在三角形 ABC 中，D 在 BC 上，且 BD = 2DC；E 在 AC 上，且 AE = 3EC。已知三角形 DEC 的面积为 3，求三角形 ABC 的面积。",
   "figures": [

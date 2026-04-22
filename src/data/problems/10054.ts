@@ -6,7 +6,7 @@ export default {
   "id": "10054",
   "title": "流水行船·基础",
   "grade": "五年级",
-  "module": "travel",
+  "module": "行程",
   "difficulty": "基础",
   "question": "一艘轮船从甲港开往乙港，顺水航行需要 4 小时，逆水返回需要 6 小时。已知甲、乙两港相距 120 千米。求这艘轮船在静水中的速度和水流的速度。",
   "figures": [
@@ -115,5 +115,5 @@ export default {
     },
     "hint": "顺水速度 = 15 + 3 = 18 km/h，逆水速度 = 15 - 3 = 12 km/h。设距离为 x，则 x/18 + x/12 = 8，解得 x = 57.6 千米。"
   },
-  "tags": []
+  "tags": ["流水行船"]
 } satisfies ProblemData;

@@ -5,7 +5,7 @@ export default {
   "id": "10064",
   "title": "最短路径·标数法",
   "grade": "五年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "进阶",
   "question": "在由 4 行 5 列格点组成的方格网中（点共 4 × 5 = 20 个），小明要从左下角 A 走到右上角 B，每一步只能沿着格子线向右走一格或向上走一格。问从 A 到 B 一共有多少条不同的最短路径？",
   "figures": [

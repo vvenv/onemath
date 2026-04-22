@@ -4,7 +4,7 @@ export default {
   "id": "10027",
   "title": "计算·等差数列",
   "grade": "四年级",
-  "module": "calc",
+  "module": "计算",
   "difficulty": "进阶",
   "question": "计算：1 + 3 + 5 + 7 + ... + 19",
   "solutions": [

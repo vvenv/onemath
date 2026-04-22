@@ -5,7 +5,7 @@ export default {
   "id": "10050",
   "title": "浓度三角·最值配比",
   "grade": "六年级",
-  "module": "word",
+  "module": "应用题",
   "difficulty": "挑战",
   "question": "有浓度为 5% 的盐水 100 克和浓度为 20% 的盐水 200 克。现在要用这两种盐水配制成浓度为 15% 的盐水，最多能配制多少克？",
   "solutions": [

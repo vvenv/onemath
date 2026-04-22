@@ -6,7 +6,7 @@ export default {
   "id": "10120",
   "title": "共角三角形·平行四边形四角延伸",
   "grade": "六年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "挑战",
   "question": "如图，平行四边形 ABCD 的面积为 2。把它的四条边依次向外延伸：在 AB 延长线上取 E，使 BE = AB；在 BC 延长线上取 F，使 CF = 2·CB；在 CD 延长线上取 G，使 DG = 3·DC；在 DA 延长线上取 H，使 AH = 4·AD。连接 EFGH 得到一个四边形。求四边形 EFGH 的面积。",
   "figures": [

@@ -6,7 +6,7 @@ export default {
   "id": "10062",
   "title": "分苹果·隔板法",
   "grade": "五年级",
-  "module": "counting",
+  "module": "计数",
   "difficulty": "进阶",
   "question": "把 10 个完全相同的苹果分给 3 个小朋友，要求每个小朋友至少分到 1 个苹果。一共有多少种不同的分法？",
   "figures": [

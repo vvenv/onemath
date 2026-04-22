@@ -5,7 +5,7 @@ export default {
   "id": "10130",
   "title": "相似模型·沙漏（平行四边形内外延伸）",
   "grade": "五年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "基础",
   "question": "如图，平行四边形 ABCD 中，AB = 16，AD = 10。E 在 AD 上且 AE = 4。连接 BE 并延长，与 CD 所在直线的延长线相交于点 F（F 在 D 的外侧）。求 DF 的长度。",
   "figures": [

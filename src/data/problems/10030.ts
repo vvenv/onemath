@@ -6,7 +6,7 @@ export default {
   "id": "10030",
   "title": "巧求周长·平移法",
   "grade": "三年级",
-  "module": "geometry",
+  "module": "几何",
   "difficulty": "基础",
   "question": "如图，一个机器零件的横截面由一个长方形和两个凸起的正方形组成。已知长方形的长是 12 厘米，宽是 6 厘米。两个正方形的边长都是 3 厘米。这个横截面的周长是多少厘米？",
   "figures": [
