@@ -39,12 +39,9 @@ export function SolutionTabs({ methods }: SolutionTabsProps) {
       </div>
       <Card>
         <CardContent>
-          <ol className="space-y-3 text-sm">
+          <ol className="space-y-3 text-sm list-decimal list-inside">
             {activeMethod?.steps.map((step, index) => (
-              <li key={step} className="leading-6">
-                <span className="mr-1 font-medium text-foreground">
-                  {index + 1}.
-                </span>
+              <li key={step} className="leading-6 only:list-none">
                 {step}
                 {activeMethod?.scenes?.length ? (
                   <DrawingVisual step={index} scenes={activeMethod.scenes} />

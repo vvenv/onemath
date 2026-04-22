@@ -21,14 +21,10 @@ export default {
       "key": "bird-head-sum",
       "label": "四个角上的共角三角形相加",
       "steps": [
-        "分析：四边形 EFGH 可以拆成中间的平行四边形 ABCD 加上四个「角上」的三角形：△AHE、△BEF、△CFG、△DGH。在 ABCD 的每个顶点处，相邻两条延长线与顶点构成一个共角三角形（鸟头模型，互补型），可以直接由夹边乘积比求出面积。",
-        "第一步：取参考。平行四边形 ABCD 的一条对角线把它分成两个面积相等的三角形，每个面积为 1。以下所用的 △ABD、△ABC、△BCD、△CDA 都各占 ABCD 的一半，面积都等于 1。",
-        "第二步：顶点 A 处 △AHE。AH = 4·AD，AE = 2·AB（因 BE = AB，所以 AE = AB + BE = 2AB）。∠HAE 与 ∠DAB 互补，△AHE : △DAB = (AH · AE) : (AD · AB) = 4 · 2 = 8 ⇒ △AHE = 8 × 1 = 8。",
-        "第三步：顶点 B 处 △BEF。BE = AB，BF = 3·BC（F 在 BC 延长线且 CF = 2BC，所以 BF = BC + CF = 3BC）。△BEF : △ABC = (BE · BF) : (BA · BC) = 1 · 3 = 3 ⇒ △BEF = 3 × 1 = 3。",
-        "第四步：顶点 C 处 △CFG。CF = 2·CB，CG = 4·CD（G 在 CD 延长线且 DG = 3DC，所以 CG = CD + DG = 4CD）。△CFG : △BCD = (CF · CG) : (CB · CD) = 2 · 4 = 8 ⇒ △CFG = 8 × 1 = 8。",
-        "第五步：顶点 D 处 △DGH。DG = 3·DC，DH = 5·DA（H 在 DA 延长线且 AH = 4AD，所以 DH = DA + AH = 5DA）。△DGH : △CDA = (DG · DH) : (DC · DA) = 3 · 5 = 15 ⇒ △DGH = 15 × 1 = 15。",
-        "第六步：把所有部分加起来。EFGH = ABCD + △AHE + △BEF + △CFG + △DGH = 2 + 8 + 3 + 8 + 15 = 36。",
-        "结论：四边形 EFGH 的面积为 36，是 ABCD 的 18 倍。"
+        "分析：EFGH 可以拆成中间的平行四边形 ABCD 加上四个「角上」的共角三角形 △AHE、△BEF、△CFG、△DGH。每个顶点处两条延长线与原顶点夹角和平行四边形相应角互补，可以直接用鸟头模型（互补型）的夹边乘积比求面积。",
+        "取 ABCD 一条对角线把它分成两块，每块面积 = 1（即 △ABD = △ABC = △BCD = △CDA = 1），作为四个角上共角三角形的参照。",
+        "四角按夹边乘积比计算（详见 scenes 的 equation-list）：△AHE : △ABD = 4 · 2 = 8，△BEF : △ABC = 1 · 3 = 3，△CFG : △BCD = 2 · 4 = 8，△DGH : △CDA = 3 · 5 = 15；各自乘以参照 1 即为自身面积。",
+        "EFGH = ABCD + 8 + 3 + 8 + 15 = 2 + 34 = 36，是 ABCD 的 18 倍。"
       ],
       "scenes": [
         {

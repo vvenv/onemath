@@ -20,11 +20,9 @@ export default {
       "key": "butterfly",
       "label": "梯形蝴蝶模型",
       "steps": [
-        "分析：两条对角线把梯形分成 4 个三角形：△AOB（顶）、△BOC 与 △AOD（左右两侧）、△COD（底）。对于任意梯形，有两条关键结论：(1) △BOC = △AOD（由于 AB ∥ CD，△ABC = △ABD，同减去 △AOB 得 △BOC = △AOD）；(2) △AOB · △COD = △BOC · △AOD（蝴蝶定理）。",
-        "第一步：由结论 (1)，△AOD = △BOC = 35。",
-        "第二步：由结论 (2)，△AOB · △COD = △BOC · △AOD = 35 × 35 = 1225。",
-        "第三步：△COD = 1225 ÷ 25 = 49。",
-        "第四步：梯形总面积 = 25 + 35 + 35 + 49 = 144。"
+        "分析：两条对角线把梯形分成四块 △AOB、△BOC、△AOD、△COD。由 AB ∥ CD 得 △ABD = △ABC（等底同高），同减 △AOB 即 △AOD = △BOC；再由蝴蝶模型，△AOB · △COD = △BOC · △AOD。已知两块，用这两条结论就能补出另外两块。",
+        "四块面积依次为 25、35、35、49，其中 △COD 这一块最大。",
+        "答：梯形 ABCD 的面积为 144。"
       ],
       "scenes": [
         {
@@ -97,31 +95,36 @@ export default {
     },
     {
       "key": "ratio",
-      "label": "由比例直接得到",
+      "label": "相似比直接得到",
       "steps": [
-        "分析：梯形蝴蝶还有一个更直观的形式——△AOB : △BOC = AO : OC（两三角形同以 OB 为公共边），而 AO : OC = AB : CD。因此可以从相邻两块的比直接推出上下底之比。",
-        "第一步：△AOB : △BOC = 25 : 35 = 5 : 7，所以 AB : CD = 5 : 7。",
-        "第二步：△AOB : △COD = (AB)² : (CD)² = 25 : 49，所以 △COD = 25 × 49/25 = 49。",
-        "第三步：△AOD = △BOC = 35。总面积 = 25 + 35 + 35 + 49 = 144。"
+        "分析：△AOB 与 △BOC 共用边 OB（底在同一条直线 AC 上），面积比等于 AO : OC；而 AB ∥ CD 使 △AOB ∽ △COD，相似比也是 AO : OC = AB : CD。所以从 △AOB : △BOC = 25 : 35 就能读出上下底之比，再用面积比 = 相似比² 求出 △COD。",
+        "答：梯形 ABCD 的面积为 144。"
       ],
       "scenes": [
         {
           "kind": "equation-list",
           "rows": [
             {
-              "lhs": "AB : CD = 25 : 35",
-              "rhs": "5 : 7"
+              "lhs": "AB : CD",
+              "rhs": "25 : 35 = 5 : 7",
+              "note": "= △AOB : △BOC"
             },
             {
-              "lhs": "△COD : △AOB = 49 : 25",
-              "rhs": "△COD = 49"
+              "lhs": "△COD",
+              "rhs": "25 × (7/5)² = 49",
+              "note": "面积比 = 相似比²"
             },
             {
-              "lhs": "总面积",
+              "lhs": "△AOD",
+              "rhs": "= △BOC = 35"
+            },
+            {
+              "lhs": "梯形 = 25 + 35 + 35 + 49",
               "rhs": "144",
-              "badge": "验证"
+              "badge": "答案"
             }
-          ]
+          ],
+          "caption": "抓住 AB : CD = 5 : 7，四块面积一步到位"
         }
       ]
     }
@@ -141,6 +144,8 @@ export default {
     "hint": "△AOD = △BOC = 6；△AOB · △COD = 6 × 6 ⇒ △COD = 9；总和 = 4+6+6+9 = 25。"
   },
   "tags": [
-    "蝴蝶模型"
+    "蝴蝶模型",
+    "相似模型",
+    "比例法"
   ]
 } satisfies ProblemData;

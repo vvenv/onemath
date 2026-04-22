@@ -20,13 +20,9 @@ export default {
       "key": "swallowtail",
       "label": "燕尾三块 + 两次底比",
       "steps": [
-        "分析：M 是 AE 与 BD 这两条 塞瓦线 的交点。先用燕尾定理算出 M 把 △ABC 分成的三块比例，再把需要的 △ACM 按 D 的位置拆、把 △BCM 按 F 的位置拆即可得到 CDMF = △CDM + △CMF。",
-        "第一步：燕尾。· 塞瓦线 AE（E 在 BC 上），BE : EC = 1 : 2 ⇒ △ABM : △ACM = 1 : 2。· 塞瓦线 BD（D 在 AC 上），AD : DC = 1 : 1 ⇒ △ABM : △BCM = 1 : 1。",
-        "第二步：设 △ABM = 1k。则 △ACM = 2k、△BCM = 1k。总 △ABC = 4k = 1 ⇒ k = 1/4。",
-        "第三步：把 △ACM 按 D 在 AC 上的位置拆。D 是 AC 中点 ⇒ △CDM : △ADM = DC : DA = 1 : 1 ⇒ △CDM = △ACM ÷ 2 = k = 1/4。",
-        "第四步：把 △BCM 按 F 在 BC 上的位置拆。F 满足 CF : CB = 1 : 3 ⇒ △CFM : △BCM = CF : CB = 1 : 3 ⇒ △CFM = △BCM / 3 = k/3 = 1/12。",
-        "第五步：CDMF = △CDM + △CMF = 1/4 + 1/12 = 3/12 + 1/12 = 4/12 = 1/3。",
-        "结论：四边形 CDMF 的面积为 1/3。"
+        "分析：M 是塞瓦线 AE、BD 的交点。燕尾定理：由 BE : EC = 1 : 2 得 △ABM : △ACM = 1 : 2；由 AD : DC = 1 : 1 得 △ABM : △BCM = 1 : 1。设 △ABM = k，则 △ACM = 2k、△BCM = k，总 △ABC = 4k = 1，k = 1/4。",
+        "再按 D、F 位置两次拆块：△CDM = △ACM · (DC/AC) = 2k · 1/2 = k = 1/4；△CFM = △BCM · (CF/CB) = k · 1/3 = 1/12。",
+        "CDMF = 1/4 + 1/12 = 1/3。"
       ],
       "scenes": [
         {

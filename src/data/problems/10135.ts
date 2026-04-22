@@ -20,13 +20,9 @@ export default {
       "key": "swallowtail",
       "label": "燕尾定理 + 底比分割",
       "steps": [
-        "分析：AD、BE 两条塞瓦线交于 F，把 △ABC 分成四块：△ABF、△BDF、四边形 DFEC、△AEF。先用燕尾定理求出 △ABC 被 F 分成的 △ABF : △BCF : △ACF，再把 △BCF 和 △ACF 分别按 D、E 的位置拆出 DFEC 占 △ABC 的比例。",
-        "第一步：燕尾定理。· 由塞瓦线 AD（D 在 BC 上）：△ABF : △ACF = BD : DC = 1 : 2。· 由塞瓦线 BE（E 在 AC 上）：△ABF : △BCF = AE : EC = 2 : 3。",
-        "第二步：设 △ABF = 2k。则 △ACF = 4k（由比 1:2）、△BCF = 3k（由比 2:3）。整体 △ABC = 2k + 3k + 4k = 9k。",
-        "第三步：把 △BCF 按 D 在 BC 上的位置拆。△BDF 与 △CDF 同以 F 为顶点、底在 BC 上 ⇒ 比 = BD : DC = 1 : 2 ⇒ △BDF = k，△CDF = 2k。",
-        "第四步：把 △ACF 按 E 在 AC 上的位置拆。△AEF 与 △CEF 同以 F 为顶点、底在 AC 上 ⇒ 比 = AE : EC = 2 : 3 ⇒ △AEF = 8k/5，△CEF = 12k/5。",
-        "第五步：四边形 DFEC = △CDF + △CEF = 2k + 12k/5 = 22k/5。",
-        "第六步：代入 22k/5 = 22 ⇒ k = 5 ⇒ △ABC = 9k = 45。"
+        "分析：F 是 AD、BE 的交点。用燕尾定理得 △ABF : △ACF = BD : DC = 1 : 2，△ABF : △BCF = AE : EC = 2 : 3；设 △ABF = 2k，则 △ACF = 4k、△BCF = 3k，总 △ABC = 9k。",
+        "把 △BCF 按 D 点拆成 △BDF = k、△CDF = 2k；把 △ACF 按 E 点拆成 △AEF = 8k/5、△CEF = 12k/5。",
+        "DFEC = △CDF + △CEF = 2k + 12k/5 = 22k/5 = 22 ⇒ k = 5，△ABC = 9k = 45。"
       ],
       "scenes": [
         {

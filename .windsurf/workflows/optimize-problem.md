@@ -44,9 +44,14 @@ description: Audit and optimize an existing OneMath problem TS file against the 
    - **figures 泄露**：`figures[].svg` / `caption` / `alt` 是否出现方法暗示（捆绑框、∧ 形空位、隔板①②、"只能填…"、"固定一人"、"每格 = 左 + 下" 等）。若 SVG 本身优秀但有方法暗示，标记为"应移入 `solutions[i].scenes`"。
    - **solutions 质量**：
      - `solutions.length >= 1`，推荐 2–3 种不同思路。
-     - 每个 `solutions[i].steps[0]` 是否以"分析"开头，并承载题面约束 / 特殊位置 / 对称性等。
+     - 对于复杂的题目，`solutions[i].steps[0]` 是否以"分析"开头，并承载题面约束 / 特殊位置 / 对称性等。
      - `key` 为英文短标识、`label` 为中文方法名；`steps` 关键结论是否单列。
      - `scenes[].kind` 是否为 `SceneSpec` 合法值；选型是否合理（见下）。
+   - **解法冗余（重要）**：
+     - 每个 `solutions[i].steps` 是否过于啰嗦（>4 条且含大量例行算术）。
+     - "分析"步是否已经覆盖了完整解法路径，却又在后续 steps 里把同样的推导再拆成多条；此时应**二选一**：要么删掉冗余的分步推导，保留分析 + 一条紧凑推导链；要么把"分析"收敛成只讲洞察，由后续 steps 展开推导。
+     - `steps` 是否把 `scenes`（尤其 `equation-list`）已经逐行展示的内容又复述了一遍；若是，合并为一条叙事。
+     - 对照 / 备选解法是否把例行算术拆得过细，而对比结论反而被淹没。
    - **variant**：
      - `question` 同主题不同数值、难度相近。
      - `fields[]` 至少 1 项、键名语义清晰；比较类用 `type: "text"` + `enum: [">","<","="]`。
@@ -66,7 +71,7 @@ description: Audit and optimize an existing OneMath problem TS file against the 
    - `id` 不变；文件尾部的 `satisfies ProblemData` 不动。
    - 未被诊断标记的内容尽量不动（最小改动原则）。
 3. **把泄露方法的 figure 搬家**：若原 `figures[]` 中某张 SVG 只有在知道方法后才画得出，将其以 `{ "kind": "svg", "svg": "…", "caption": "…" }` 放入对应 `solutions[i].scenes`（通常接在该方法的分析/建模步骤之后），并在 `figures[]` 留一张中性示意图。
-4. **补齐"分析"步**：若 `solutions[i].steps[0]` 不是"分析"开头，前置一条以"分析"开头的步骤，把从 figure 移除的约束翻译成文字放入此处。
+4. **补齐"分析"步**：对于复杂的题目，若 `solutions[i].steps[0]` 不是"分析"开头，前置一条以"分析"开头的步骤，把从 figure 移除的约束翻译成文字放入此处。
 5. **收敛 tags**：只保留 `solutions` 实际用到的方法；不在白名单内的 tag 删除或改写；若一个合适的 tag 都没有，设为 `[]`，不硬凑。
 6. **variant 自洽**：确保 `variant.answer` 的键集合 = `variant.fields[].key` 集合。
 
@@ -92,26 +97,15 @@ description: Audit and optimize an existing OneMath problem TS file against the 
 
 ## scenes 选型建议
 
-- 数值/公式推演：`equation-list`
-- 数量或大小对比：`compare-bars`、`number-line`
-- 最终结论徽标：`result-badges`
-- 图形/几何/面积变化：`svg`（完整 `<svg>…</svg>`）或 `lattice`/`cube-net`
-- 枚举/真假/逻辑：`statement-table`、`number-grid`
-- 排列/排队、插空、捆绑等计数题：优先 `equation-list` 承载计数式，辅以 `svg` 画座位/空位示意
-- 鸡兔同笼类：`heads`、`heads-split`
+见 `generate-problem.md` 的 "scenes 选型建议" 小节。
 
 ## 质量检查清单（优化后逐项核对）
 
+先完整过一遍 `generate-problem.md` 的 "质量检查清单"，再补充 `optimize` 专属项：
+
 - [ ] `pnpm exec tsc --noEmit` 通过；`id` 未被改动
-- [ ] `grade` / `module` / `difficulty` 在 `ProblemData` 联合类型允许的值内
-- [ ] `question` 与任一 `figures[].svg` / `caption` 均不含解法、提示、公式、答案
-- [ ] 任一 `figures[]` 未出现方法名或等效暗示（"捆在一起"、"隔板"、"插空"、"只能填…"、"固定一人"、"每格 = 左 + 下" 等）
-- [ ] 每个 `solutions[i].steps[0]` 以"分析"开头，承载了题面约束/特殊位置/对称性等背景推理
-- [ ] `solutions.length >= 1`，步骤完整、结论明确；推荐 2–3 种不同思路
-- [ ] 所有 `scenes[].kind` 为 `SceneSpec` 允许的值
-- [ ] `variant.answer` 的键与 `variant.fields[].key` 一一对应
-- [ ] `tags` 仅含 `src/lib/tags.ts` 白名单内的方法（0–3 个），不含年级/难度/模块
 - [ ] `node scripts/normalize-tags.mjs` 无改动
+- [ ] 对照 / 备选解法已合并例行算术，未淹没对比结论
 
 ## 输出格式
 
@@ -123,9 +117,5 @@ description: Audit and optimize an existing OneMath problem TS file against the 
 
 ## 参考资料
 
-- 类型源头：`src/types/problem.ts`、`src/types/visual.ts`
-- 旧 JSON Schema（仅字段形状参考，不再被运行时引用）：`src/data/problem.schema.json`
-- 生成规范（父规范）：`.windsurf/workflows/generate-problem.md`
-- 分类体系：`docs/CATEGORY.md`
-- 方法白名单：`src/lib/tags.ts`
+- 生成规范（父规范，含题目内容规范 / scenes 选型 / 质量检查清单 / tags 白名单说明）：`.windsurf/workflows/generate-problem.md`
 - 结构对标示例：`src/data/problems/10054.ts`（行程）、`src/data/problems/10057.ts`、`src/data/problems/10059.ts`

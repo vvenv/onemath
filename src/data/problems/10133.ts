@@ -20,12 +20,8 @@ export default {
       "key": "hourglass",
       "label": "沙漏相似 + 等高三角形",
       "steps": [
-        "分析：AB ∥ DE（都在长方形的对边上），在 F 处形成沙漏：△ABF ∼ △EDF。由相似比可得 DF : FB，再与底比结合算出 △DEF。",
-        "第一步：AB = CD = DE + EC = DE + 2DE = 3DE，所以 AB : DE = 3 : 1。",
-        "第二步：由沙漏相似 △ABF ∼ △EDF，BF : FD = AB : DE = 3 : 1，即 DF : DB = 1 : 4。",
-        "第三步：求 △BDE。△BDE 以 DE 为底，高 = 长方形的宽 BC（因 E 在 CD 上、B 在 AB 上对面）。所以 △BDE : △BDC = DE : DC = 1 : 3 ⇒ △BDE = △BDC × 1/3 = (长方形 / 2) × 1/3 = 6 × 1/3 = 2。",
-        "第四步：△DEF 与 △DEB 同以 DE 为公共底，顶点 F、B 在直线 DB 上 ⇒ 面积比 = DF : DB = 1 : 4 ⇒ △DEF = 2 × 1/4 = 1/2。",
-        "结论：三角形 DEF 的面积为 1/2。"
+        "分析：AB ∥ DE（都在长方形的对边上），在 F 形成沙漏：△ABF ∼ △EDF。由 AB = CD = 3DE 知 AB : DE = 3 : 1，故沙漏给 BF : FD = 3 : 1，即 DF : DB = 1 : 4。",
+        "△BDE 以 DE 为底、长方形宽为高，△BDE = △BDC · (DE/DC) = (12/2)·(1/3) = 2；再按 △DEF : △DEB = DF : DB = 1 : 4 ⇒ △DEF = 2 · 1/4 = 1/2。"
       ],
       "scenes": [
         {
