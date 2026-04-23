@@ -44,7 +44,7 @@ function sitemapPlugin(): Plugin {
         })
         .join("\n");
       const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
-      const robots = `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`;
+      const robots = `User-agent: *\nAllow: /\nContent-Signal: ai-train=no, search=yes, ai-input=no\n\nSitemap: ${SITE_URL}/sitemap.xml\n`;
       writeFileSync(path.join(publicDir, "sitemap.xml"), sitemap);
       writeFileSync(path.join(publicDir, "robots.txt"), robots);
     },
