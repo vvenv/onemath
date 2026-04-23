@@ -1,13 +1,59 @@
 import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
+import { writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { defineConfig } from "vite";
+import { defineConfig, type Plugin } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
 import { getPrerenderPaths } from "./prerender-paths";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const SITE_URL = "https://edao.plus";
+
+const viteConfigDir = path.dirname(fileURLToPath(import.meta.url));
+
+/**
+ * Write `sitemap.xml` into the static build output after the React Router
+ * build finishes. Uses the same route list as the prerender step so the
+ * sitemap always matches the set of HTML files actually emitted.
+ */
+function sitemapPlugin(): Plugin {
+  let outDir = "";
+  return {
+    name: "onemath-sitemap",
+    apply: "build",
+    configResolved(config) {
+      // RR writes the browser bundle to `build/client`; the first vite env
+      // to resolve sets our target output dir.
+      if (!outDir && config.build?.outDir?.includes("client")) {
+        outDir = path.resolve(config.root, config.build.outDir);
+      }
+    },
+    closeBundle: {
+      order: "post",
+      sequential: true,
+      async handler() {
+        const target = outDir || path.resolve(viteConfigDir, "build/client");
+        const lastmod = new Date().toISOString().split("T")[0];
+        const body = getPrerenderPaths()
+          .map(
+            (p) =>
+              `  <url>\n    <loc>${SITE_URL}${p === "/" ? "/" : p}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${p === "/" ? "1.0" : "0.7"}</priority>\n  </url>`,
+          )
+          .join("\n");
+        const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
+        try {
+          await writeFile(path.join(target, "sitemap.xml"), xml, "utf-8");
+        } catch {
+          // build/client might not exist yet on the SSR pass; the client pass
+          // will emit the sitemap.
+        }
+      },
+    },
+  };
+}
+
+const __dirname = viteConfigDir;
 
 // Seed the Service Worker precache with every prerendered route's HTML so the
 // custom navigation handler in `src/sw.ts` can serve them path-aware. RR
@@ -43,6 +89,7 @@ export default defineConfig({
     tailwindcss(),
     silenceChromeDevtoolsProbe,
     reactRouter(),
+    sitemapPlugin(),
     VitePWA({
       registerType: "autoUpdate",
       injectRegister: null,

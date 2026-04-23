@@ -7,16 +7,56 @@ import { QuestionCard } from "@/components/question-card";
 import { RelatedProblems } from "@/components/related-problems";
 import { SolutionTabs } from "@/components/solution-tabs";
 import { getProblemById } from "@/lib/problems";
+import { SITE_NAME, SITE_URL, buildMeta } from "@/lib/seo";
 
 export const meta: MetaFunction = ({ params }) => {
   const problem = getProblemById(params.id);
   if (!problem) {
-    return [{ title: "题目未找到 - 一道 / edao.plus" }];
+    return buildMeta({
+      title: "题目未找到 - 一道 / edao.plus",
+      description: "抱歉，该题目不存在或已被移除。",
+      path: `/p/${params.id ?? ""}`,
+    });
   }
   const title = `${problem.title} (#${problem.id}) - 一道 / edao.plus`;
   const snippet = problem.question.slice(0, 100);
-  const description = `${problem.grade}数学${problem.module}：${snippet}${problem.question.length > 100 ? "..." : ""}`;
-  return [{ title }, { name: "description", content: description }];
+  const truncated = problem.question.length > 100;
+  const description = `${problem.grade}数学${problem.module}：${snippet}${truncated ? "..." : ""}`;
+  const path = `/p/${problem.id}`;
+  const keywords = [
+    "小学奥数",
+    problem.grade,
+    problem.module,
+    problem.title,
+    ...(problem.difficulty ? [problem.difficulty] : []),
+    ...problem.tags,
+  ];
+  return buildMeta({
+    title,
+    description,
+    path,
+    type: "article",
+    keywords,
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "LearningResource",
+      name: problem.title,
+      identifier: problem.id,
+      url: `${SITE_URL}${path}`,
+      inLanguage: "zh-CN",
+      learningResourceType: "Problem",
+      educationalLevel: problem.grade,
+      educationalUse: "奥数训练",
+      about: [problem.module, ...problem.tags],
+      keywords: keywords.join(","),
+      description,
+      isPartOf: {
+        "@type": "WebSite",
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
+    },
+  });
 };
 
 export default function ProblemPage() {

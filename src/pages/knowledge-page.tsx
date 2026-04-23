@@ -25,15 +25,50 @@ import {
   knowledgeEntries,
   type KnowledgeEntry,
 } from "@/data/knowledge";
+import { SITE_NAME, SITE_URL, buildMeta } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
 export const meta: MetaFunction = ({ params }) => {
   const entry = getKnowledgeBySlug(params.slug as string | undefined);
-  if (!entry) return [{ title: "知识点未找到 - 一道 / edao.plus" }];
-  return [
-    { title: `${entry.name} - 知识点讲解 - 一道 / edao.plus` },
-    { name: "description", content: entry.summary },
+  if (!entry) {
+    return buildMeta({
+      title: "知识点未找到 - 一道 / edao.plus",
+      description: "抱歉，该知识点不存在或已被移除。",
+      path: `/k/${params.slug ?? ""}`,
+    });
+  }
+  const title = `${entry.name} - 知识点讲解 - 一道 / edao.plus`;
+  const path = `/k/${entry.slug}`;
+  const keywords = [
+    "小学奥数",
+    "方法手册",
+    entry.name,
+    ...(entry.tag ? [entry.tag] : []),
   ];
+  return buildMeta({
+    title,
+    description: entry.summary,
+    path,
+    type: "article",
+    keywords,
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "LearningResource",
+      name: entry.name,
+      url: `${SITE_URL}${path}`,
+      inLanguage: "zh-CN",
+      learningResourceType: "Lesson",
+      educationalUse: "奥数训练",
+      about: entry.tag ?? entry.name,
+      description: entry.summary,
+      keywords: keywords.join(","),
+      isPartOf: {
+        "@type": "WebSite",
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
+    },
+  });
 };
 
 const CATEGORY_LABEL: Record<KnowledgeEntry["category"], string> = {

@@ -10,20 +10,38 @@ import {
 } from "@/components/ui/collapsible";
 import { GRADES, MODULES, type ModuleKey } from "@/lib/modules";
 import { problems } from "@/lib/problems";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, buildMeta } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 import type { Grade, ProblemData } from "@/types/problem";
 import type { MetaFunction } from "react-router";
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "一道 / edao.plus - 小学数学思维训练" },
-    {
-      name: "description",
-      content:
-        "一道(edao.plus)是专注小学数学思维训练的在线平台，涵盖计算、几何、数论、应用题等模块，提供经典例题与互动练习。",
-    },
-  ];
-};
+const HOME_TITLE = "一道 / edao.plus - 小学数学思维训练";
+
+export const meta: MetaFunction = () =>
+  buildMeta({
+    title: HOME_TITLE,
+    description: SITE_DESCRIPTION,
+    path: "/",
+    type: "website",
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: SITE_NAME,
+        alternateName: ["一道", "edao.plus"],
+        url: SITE_URL,
+        inLanguage: "zh-CN",
+        description: SITE_DESCRIPTION,
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        name: SITE_NAME,
+        url: SITE_URL,
+        description: SITE_DESCRIPTION,
+      },
+    ],
+  });
 
 const DIFFICULTIES = ["基础", "进阶", "挑战"] as const;
 type Difficulty = (typeof DIFFICULTIES)[number];
@@ -134,6 +152,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col gap-6">
+      <h1 className="sr-only">一道 / edao.plus — 小学数学思维训练题库</h1>
       <section className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <FilterRow label="模块">
