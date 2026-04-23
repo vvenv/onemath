@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://onemath.local/schemas/problem.schema.json",
   "title": "Problem",
-  "description": "Schema for a single OneMath problem entry.",
+  "description": "Schema for a single edao.plus problem entry.",
   "type": "object",
   "additionalProperties": false,
   "required": [
