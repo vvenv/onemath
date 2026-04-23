@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import { defineConfig, type Plugin } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 import { getPrerenderPaths } from "./prerender-paths";
+import { agentSkills } from "./vite-plugins/agent-skills";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SITE_URL = "https://edao.plus";
@@ -82,6 +83,18 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     silenceChromeDevtoolsProbe,
+    agentSkills({
+      skills: [
+        {
+          name: "generate-problem",
+          sourceFile: ".windsurf/workflows/generate-problem.md",
+        },
+        {
+          name: "optimize-problem",
+          sourceFile: ".windsurf/workflows/optimize-problem.md",
+        },
+      ],
+    }),
     sitemapPlugin(),
     reactRouter(),
     VitePWA({

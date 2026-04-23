@@ -1,5 +1,5 @@
 ---
-description: Audit and optimize an existing edao.plus problem TS file against the project's quality standards.
+description: Audit and optimize an existing edao.plus problem TS file against the project's quality standards. Use when revising a single file under src/data/problems/.
 ---
 
 # 优化单题题目 (/optimize-problem)

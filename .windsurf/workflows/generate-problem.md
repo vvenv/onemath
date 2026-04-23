@@ -1,5 +1,5 @@
 ---
-description: Given a reference document under docs/, produce a generation plan and then create edao.plus problems covering its topics.
+description: Given a reference document under docs/, produce a generation plan and then create edao.plus problems covering its topics. Use when authoring new items for src/data/problems/.
 ---
 
 # 基于文档批量生成题目 (/generate-problem)
