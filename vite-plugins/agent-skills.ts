@@ -33,7 +33,19 @@ type GeneratedFile = {
 const DEFAULT_SCHEMA =
   "https://schemas.agentskills.io/discovery/0.2.0/schema.json";
 const DEFAULT_BASE = "/.well-known/agent-skills/";
-const NAME_RE = /^[a-z0-9](?:[a-z0-9]|-(?!-)){0,62}[a-z0-9]$/;
+
+/**
+ * Validate a skill name per the Agent Skills naming spec:
+ * 1–64 chars, lowercase alphanumeric + hyphens only, no leading/trailing
+ * hyphen, no consecutive hyphens.
+ */
+function isValidSkillName(name: string): boolean {
+  if (name.length < 1 || name.length > 64) return false;
+  if (!/^[a-z0-9-]+$/.test(name)) return false;
+  if (name.startsWith("-") || name.endsWith("-")) return false;
+  if (name.includes("--")) return false;
+  return true;
+}
 
 type Frontmatter = { order: string[]; values: Record<string, string> };
 
@@ -84,7 +96,7 @@ function generate(
   } = { $schema: opts.schema, skills: [] };
 
   for (const s of opts.skills) {
-    if (!NAME_RE.test(s.name)) {
+    if (!isValidSkillName(s.name)) {
       throw new Error(
         `[agent-skills] invalid skill name ${JSON.stringify(s.name)}: ` +
           "must be 1-64 chars, lowercase alphanumeric + hyphens, no leading/trailing/consecutive hyphens",
