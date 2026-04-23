@@ -1,10 +1,10 @@
 ---
-description: Given a reference document under docs/, produce a generation plan and then create OneMath problems covering its topics.
+description: Given a reference document under docs/, produce a generation plan and then create edao.plus problems covering its topics.
 ---
 
 # 基于文档批量生成题目 (/generate-problem)
 
-给定一份位于 `docs/` 下的知识点文档（例如 `docs/排列组合.md`），先**生成计划**（列出要新增哪些题目），再**逐题生成**符合 OneMath 数据结构的完整题目文件。
+给定一份位于 `docs/` 下的知识点文档（例如 `docs/排列组合.md`），先**生成计划**（列出要新增哪些题目），再**逐题生成**符合 edao.plus 数据结构的完整题目文件。
 
 ## 使用方式
 

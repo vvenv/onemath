@@ -4,16 +4,16 @@
     {
       "name": "generate-problem",
       "type": "skill-md",
-      "description": "Given a reference document under docs/, produce a generation plan and then create OneMath problems covering its topics. Use when authoring new items for src/data/problems/.",
+      "description": "Given a reference document under docs/, produce a generation plan and then create edao.plus problems covering its topics. Use when authoring new items for src/data/problems/.",
       "url": "/.well-known/agent-skills/generate-problem/SKILL.md",
-      "digest": "sha256:14a4bb3f64533991a535097b57fae3c5b06a80bd013c91b2f62733faa2d4a351"
+      "digest": "sha256:6e41bd07d7d9d10651c762c71bbed65e218e80b2a5ce071bb632b27b83a701a5"
     },
     {
       "name": "optimize-problem",
       "type": "skill-md",
-      "description": "Audit and optimize an existing OneMath problem TS file against the project's quality standards. Use when revising a single file under src/data/problems/.",
+      "description": "Audit and optimize an existing edao.plus problem TS file against the project's quality standards. Use when revising a single file under src/data/problems/.",
       "url": "/.well-known/agent-skills/optimize-problem/SKILL.md",
-      "digest": "sha256:2a2c1f995503603e6d0ce669609c2ee27b73745f28a360f4cf9e8ee424599a04"
+      "digest": "sha256:e5de56dd6e61801f9b1c9d9a8d228345ea7a896551660906f3bdb77f49fd6b95"
     }
   ]
 }
