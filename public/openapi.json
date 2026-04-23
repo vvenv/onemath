@@ -1,0 +1,161 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "edao.plus Content API",
+    "version": "0.1.0",
+    "summary": "Static content endpoints for 一道 / edao.plus — problem and knowledge pages.",
+    "description": "一道 / edao.plus is a statically prerendered site for 小学奥数 (primary-school math). This OpenAPI document describes the public HTTP endpoints through which its problem and knowledge content, as well as the service's machine-readable discovery documents, are served.",
+    "contact": {
+      "name": "edao.plus",
+      "url": "https://edao.plus/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://edao.plus"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Home page with the full problem catalog and filters",
+        "operationId": "getHome",
+        "responses": {
+          "200": {
+            "description": "HTML home page",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/p/{id}": {
+      "get": {
+        "summary": "Render a single problem page",
+        "operationId": "getProblem",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Numeric problem id (e.g. 10001).",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d+$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "HTML problem page",
+            "content": {
+              "text/html": {}
+            }
+          },
+          "404": {
+            "description": "Problem not found"
+          }
+        }
+      }
+    },
+    "/k": {
+      "get": {
+        "summary": "Knowledge index (方法手册)",
+        "operationId": "getKnowledgeIndex",
+        "responses": {
+          "200": {
+            "description": "HTML knowledge index",
+            "content": {
+              "text/html": {}
+            }
+          }
+        }
+      }
+    },
+    "/k/{slug}": {
+      "get": {
+        "summary": "Render a single knowledge entry",
+        "operationId": "getKnowledge",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "description": "Slug of the knowledge entry (e.g. chicken-rabbit).",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "HTML knowledge page",
+            "content": {
+              "text/html": {}
+            }
+          },
+          "404": {
+            "description": "Knowledge entry not found"
+          }
+        }
+      }
+    },
+    "/.well-known/api-catalog": {
+      "get": {
+        "summary": "RFC 9727 API catalog document (Linkset)",
+        "operationId": "getApiCatalog",
+        "responses": {
+          "200": {
+            "description": "Linkset describing this service's APIs",
+            "content": {
+              "application/linkset+json": {}
+            }
+          }
+        }
+      }
+    },
+    "/openapi.json": {
+      "get": {
+        "summary": "This OpenAPI description",
+        "operationId": "getOpenApi",
+        "responses": {
+          "200": {
+            "description": "OpenAPI 3.1 document",
+            "content": {
+              "application/openapi+json": {}
+            }
+          }
+        }
+      }
+    },
+    "/status.json": {
+      "get": {
+        "summary": "Service health check",
+        "operationId": "getStatus",
+        "responses": {
+          "200": {
+            "description": "JSON document reporting service health",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "enum": ["ok"]
+                    },
+                    "service": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["status", "service"]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
