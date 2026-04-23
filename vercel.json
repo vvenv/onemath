@@ -1,27 +1,51 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "headers": [
+  "routes": [
     {
-      "source": "/.well-known/api-catalog",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/linkset+json; profile=\"https://www.rfc-editor.org/info/rfc9727\""
-        },
-        {
-          "key": "Link",
-          "value": "</.well-known/api-catalog>; rel=\"api-catalog\""
-        }
-      ]
+      "src": "^/\\.well-known/api-catalog$",
+      "headers": {
+        "Content-Type": "application/linkset+json; profile=\"https://www.rfc-editor.org/info/rfc9727\"",
+        "Link": "</.well-known/api-catalog>; rel=\"api-catalog\""
+      },
+      "continue": true
     },
     {
-      "source": "/openapi.json",
-      "headers": [
+      "src": "^/openapi\\.json$",
+      "headers": {
+        "Content-Type": "application/openapi+json"
+      },
+      "continue": true
+    },
+    {
+      "src": "^/$",
+      "has": [
         {
-          "key": "Content-Type",
-          "value": "application/openapi+json"
+          "type": "header",
+          "key": "accept",
+          "value": "(.*)text/markdown(.*)"
         }
-      ]
-    }
+      ],
+      "dest": "/index.md",
+      "headers": {
+        "Content-Type": "text/markdown; charset=utf-8",
+        "Vary": "Accept"
+      }
+    },
+    {
+      "src": "^/(.+?)/?$",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(.*)text/markdown(.*)"
+        }
+      ],
+      "dest": "/$1/index.md",
+      "headers": {
+        "Content-Type": "text/markdown; charset=utf-8",
+        "Vary": "Accept"
+      }
+    },
+    { "handle": "filesystem" }
   ]
 }
