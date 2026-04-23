@@ -20,15 +20,32 @@ import {
   type KnowledgeCategory,
   type KnowledgeEntry,
 } from "@/data/knowledge";
+import { SITE_NAME, SITE_URL, buildMeta } from "@/lib/seo";
 
-export const meta: MetaFunction = () => [
-  { title: "方法手册 - 一道 / edao.plus" },
-  {
-    name: "description",
-    content:
-      "一道(edao.plus) 方法手册：小学奥数常用解题方法与模型的直观讲解与例题。",
-  },
-];
+const KNOWLEDGE_INDEX_TITLE = "方法手册 - 一道 / edao.plus";
+const KNOWLEDGE_INDEX_DESCRIPTION =
+  "一道(edao.plus) 方法手册：小学奥数常用解题方法与几何模型的直观讲解、推导与典型例题。";
+
+export const meta: MetaFunction = () =>
+  buildMeta({
+    title: KNOWLEDGE_INDEX_TITLE,
+    description: KNOWLEDGE_INDEX_DESCRIPTION,
+    path: "/k",
+    type: "website",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: KNOWLEDGE_INDEX_TITLE,
+      description: KNOWLEDGE_INDEX_DESCRIPTION,
+      url: `${SITE_URL}/k`,
+      inLanguage: "zh-CN",
+      isPartOf: {
+        "@type": "WebSite",
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
+    },
+  });
 
 const CATEGORY_ORDER: KnowledgeCategory[] = [
   "word",
