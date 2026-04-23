@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
-    "build": "react-router build",
+    "build": "node scripts/generate-sitemap.mjs && react-router build",
     "typecheck": "react-router typegen && tsc -b",
     "preview": "vite preview"
   },
@@ -36,11 +36,11 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
+    "sitemap-ts": "^1.10.1",
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.3",
     "vite": "^8.0.8",
     "vite-plugin-pwa": "^1.2.0",
-    "vite-plugin-sitemap": "^0.8.2",
     "workbox-precaching": "^7.4.0",
     "workbox-routing": "^7.4.0"
   },

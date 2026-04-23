@@ -4,11 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
-import Sitemap from "vite-plugin-sitemap";
-
-import { getPrerenderPaths } from "./prerender-paths";
-
-const SITE_URL = "https://edao.plus";
+import { getPrerenderPaths } from "./prerender-paths.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -46,25 +42,6 @@ export default defineConfig({
     tailwindcss(),
     silenceChromeDevtoolsProbe,
     reactRouter(),
-    // Emits `sitemap.xml` and `robots.txt` into the client build output,
-    // seeded from the same `getPrerenderPaths()` helper that drives RR's
-    // prerender step and the Service Worker precache — so all three stay
-    // in sync.
-    Sitemap({
-      hostname: SITE_URL,
-      // React Router's SSR:false build writes the static assets to
-      // `build/client`, not Vite's default `dist`.
-      outDir: "build/client",
-      dynamicRoutes: getPrerenderPaths(),
-      // RR emits `__spa-fallback.html` alongside the prerendered routes; it
-      // is an internal shell, not a crawlable page.
-      exclude: ["/__spa-fallback"],
-      generateRobotsTxt: true,
-      readable: true,
-      changefreq: "weekly",
-      priority: { "/": 1.0, "*": 0.7 },
-      lastmod: new Date(),
-    }),
     VitePWA({
       registerType: "autoUpdate",
       injectRegister: null,
