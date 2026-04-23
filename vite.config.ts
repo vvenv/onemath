@@ -2,11 +2,41 @@ import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { defineConfig } from "vite";
+import { generateSitemap } from "sitemap-ts";
+import { defineConfig, type Plugin } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 import { getPrerenderPaths } from "./prerender-paths.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const SITE_URL = "https://edao.plus";
+
+/**
+ * Emit `public/sitemap.xml` and `public/robots.txt` at `buildStart` so that
+ * Vite's built-in public-dir copy (which runs in `writeBundle`) picks them
+ * up and places them into the static build output alongside the other
+ * `public/*` assets. Keeping the write inside Vite's plugin pipeline means
+ * any invocation of `react-router build` produces a usable sitemap without
+ * requiring a separate npm script or host-specific `buildCommand` override.
+ */
+function sitemapPlugin(): Plugin {
+  return {
+    name: "onemath-sitemap",
+    apply: "build",
+    buildStart() {
+      const publicDir = path.resolve(__dirname, "public");
+      generateSitemap({
+        hostname: SITE_URL,
+        outDir: publicDir,
+        dynamicRoutes: getPrerenderPaths(),
+        generateRobotsTxt: true,
+        readable: true,
+        changefreq: "weekly",
+        priority: { "/": 1.0, "*": 0.7 },
+        lastmod: new Date(),
+      });
+    },
+  };
+}
 
 // Seed the Service Worker precache with every prerendered route's HTML so the
 // custom navigation handler in `src/sw.ts` can serve them path-aware. RR
@@ -41,6 +71,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     silenceChromeDevtoolsProbe,
+    sitemapPlugin(),
     reactRouter(),
     VitePWA({
       registerType: "autoUpdate",
