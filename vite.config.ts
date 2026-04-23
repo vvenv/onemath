@@ -1,14 +1,23 @@
 import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
+import { writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { generateSitemap } from "sitemap-ts";
 import { defineConfig, type Plugin } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 import { getPrerenderPaths } from "./prerender-paths.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SITE_URL = "https://edao.plus";
+
+function xmlEscape(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
 
 /**
  * Emit `public/sitemap.xml` and `public/robots.txt` at `buildStart` so that
@@ -24,16 +33,18 @@ function sitemapPlugin(): Plugin {
     apply: "build",
     buildStart() {
       const publicDir = path.resolve(__dirname, "public");
-      generateSitemap({
-        hostname: SITE_URL,
-        outDir: publicDir,
-        dynamicRoutes: getPrerenderPaths(),
-        generateRobotsTxt: true,
-        readable: true,
-        changefreq: "weekly",
-        priority: { "/": 1.0, "*": 0.7 },
-        lastmod: new Date(),
-      });
+      const lastmod = new Date().toISOString().slice(0, 10);
+      const urls = getPrerenderPaths()
+        .map((routePath) => {
+          const loc = xmlEscape(`${SITE_URL}${routePath}`);
+          const priority = routePath === "/" ? "1.0" : "0.7";
+          return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+        })
+        .join("\n");
+      const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
+      const robots = `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`;
+      writeFileSync(path.join(publicDir, "sitemap.xml"), sitemap);
+      writeFileSync(path.join(publicDir, "robots.txt"), robots);
     },
   };
 }
