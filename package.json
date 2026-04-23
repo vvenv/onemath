@@ -40,6 +40,7 @@
     "typescript": "^6.0.3",
     "vite": "^8.0.8",
     "vite-plugin-pwa": "^1.2.0",
+    "vite-plugin-sitemap": "^0.8.2",
     "workbox-precaching": "^7.4.0",
     "workbox-routing": "^7.4.0"
   },
