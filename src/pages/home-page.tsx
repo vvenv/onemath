@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router";
 import { ChevronDown, Search, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -37,6 +37,13 @@ const DIFFICULTY_DOT: Record<Difficulty, string> = {
 export default function HomePage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [showMore, setShowMore] = useState(false);
+  // Avoid hydration mismatch: the prerendered HTML is built with empty
+  // searchParams, so on the first client render we must also ignore
+  // query params. After mount we switch to URL-driven state.
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
 
   const moduleKeys = useMemo(
     () => new Set<ModuleKey>(MODULES.map((m) => m.key)),
@@ -53,20 +60,20 @@ export default function HomePage() {
   }, []);
   const tagSet = useMemo(() => new Set(tags), [tags]);
 
-  const rawModule = searchParams.get("module");
+  const rawModule = hydrated ? searchParams.get("module") : null;
   const activeModule: ModuleKey | null =
     rawModule && moduleKeys.has(rawModule as ModuleKey)
       ? (rawModule as ModuleKey)
       : null;
-  const rawGrade = searchParams.get("grade");
+  const rawGrade = hydrated ? searchParams.get("grade") : null;
   const activeGrade: Grade | null =
     rawGrade && gradeLabels.has(rawGrade) ? (rawGrade as Grade) : null;
-  const rawDifficulty = searchParams.get("difficulty");
+  const rawDifficulty = hydrated ? searchParams.get("difficulty") : null;
   const activeDifficulty: Difficulty | null =
     rawDifficulty && (DIFFICULTIES as readonly string[]).includes(rawDifficulty)
       ? (rawDifficulty as Difficulty)
       : null;
-  const rawTag = searchParams.get("tag");
+  const rawTag = hydrated ? searchParams.get("tag") : null;
   const activeTag: string | null = rawTag && tagSet.has(rawTag) ? rawTag : null;
 
   const updateParam = (key: string, value: string | null) => {
