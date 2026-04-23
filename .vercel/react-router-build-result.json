@@ -1,0 +1,133 @@
+{
+  "buildManifest": {
+    "routes": {
+      "root": {
+        "id": "root",
+        "file": "root.tsx",
+        "path": ""
+      },
+      "layout": {
+        "id": "layout",
+        "parentId": "root",
+        "file": "layout.tsx"
+      },
+      "pages/home-page": {
+        "id": "pages/home-page",
+        "parentId": "layout",
+        "file": "pages/home-page.tsx",
+        "index": true
+      },
+      "pages/problem-page": {
+        "id": "pages/problem-page",
+        "parentId": "layout",
+        "file": "pages/problem-page.tsx",
+        "path": "p/:id"
+      },
+      "pages/knowledge-index-page": {
+        "id": "pages/knowledge-index-page",
+        "parentId": "layout",
+        "file": "pages/knowledge-index-page.tsx",
+        "path": "k"
+      },
+      "pages/knowledge-page": {
+        "id": "pages/knowledge-page",
+        "parentId": "layout",
+        "file": "pages/knowledge-page.tsx",
+        "path": "k/:slug"
+      }
+    }
+  },
+  "reactRouterConfig": {
+    "appDirectory": "/home/ubuntu/repos/onemath/src",
+    "basename": "/",
+    "buildDirectory": "/home/ubuntu/repos/onemath/build",
+    "future": {
+      "unstable_optimizeDeps": false,
+      "unstable_passThroughRequests": false,
+      "unstable_subResourceIntegrity": false,
+      "unstable_trailingSlashAwareDataRequests": false,
+      "unstable_previewServerPrerendering": false,
+      "v8_middleware": false,
+      "v8_splitRouteModules": false,
+      "v8_viteEnvironmentApi": false
+    },
+    "routes": {
+      "root": {
+        "id": "root",
+        "file": "root.tsx",
+        "path": ""
+      },
+      "layout": {
+        "id": "layout",
+        "parentId": "root",
+        "file": "layout.tsx"
+      },
+      "pages/home-page": {
+        "id": "pages/home-page",
+        "parentId": "layout",
+        "file": "pages/home-page.tsx",
+        "index": true
+      },
+      "pages/problem-page": {
+        "id": "pages/problem-page",
+        "parentId": "layout",
+        "file": "pages/problem-page.tsx",
+        "path": "p/:id"
+      },
+      "pages/knowledge-index-page": {
+        "id": "pages/knowledge-index-page",
+        "parentId": "layout",
+        "file": "pages/knowledge-index-page.tsx",
+        "path": "k"
+      },
+      "pages/knowledge-page": {
+        "id": "pages/knowledge-page",
+        "parentId": "layout",
+        "file": "pages/knowledge-page.tsx",
+        "path": "k/:slug"
+      }
+    },
+    "routeDiscovery": {
+      "mode": "initial"
+    },
+    "serverBuildFile": "index.js",
+    "serverModuleFormat": "esm",
+    "ssr": false,
+    "allowedActionOrigins": false,
+    "unstable_routeConfig": [
+      {
+        "id": "root",
+        "path": "",
+        "file": "root.tsx",
+        "children": [
+          {
+            "file": "layout.tsx",
+            "children": [
+              {
+                "file": "pages/home-page.tsx",
+                "index": true
+              },
+              {
+                "file": "pages/problem-page.tsx",
+                "path": "p/:id"
+              },
+              {
+                "file": "pages/knowledge-index-page.tsx",
+                "path": "k"
+              },
+              {
+                "file": "pages/knowledge-page.tsx",
+                "path": "k/:slug"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "viteConfig": {
+    "build": {
+      "assetsDir": "assets"
+    }
+  }
+}
