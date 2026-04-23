@@ -5,7 +5,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig, type Plugin } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
-import { getPrerenderPaths } from "./prerender-paths.js";
+import { getPrerenderPaths } from "./prerender-paths";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SITE_URL = "https://edao.plus";

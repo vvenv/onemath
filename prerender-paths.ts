@@ -13,7 +13,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
  * missing a prerendered route, which would force it to fall back to the SPA
  * shell HTML and lose per-route meta / first-paint content.
  */
-export function getPrerenderPaths() {
+export function getPrerenderPaths(): string[] {
   const problemsDir = path.resolve(here, "./src/data/problems");
   const knowledgeDir = path.resolve(here, "./src/data/knowledge");
 

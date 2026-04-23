@@ -1,6 +1,6 @@
 import type { Config } from "@react-router/dev/config";
 
-import { getPrerenderPaths } from "./prerender-paths.js";
+import { getPrerenderPaths } from "./prerender-paths";
 
 export default {
   appDirectory: "src",
