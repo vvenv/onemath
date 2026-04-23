@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://edao.plus/",
+      "service-desc": [
+        {
+          "href": "https://edao.plus/openapi.json",
+          "type": "application/openapi+json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://edao.plus/",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://edao.plus/status.json",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}
