@@ -1,0 +1,32 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  "serverInfo": {
+    "name": "plus.edao/onemath",
+    "version": "0.1.0"
+  },
+  "name": "plus.edao/onemath",
+  "version": "0.1.0",
+  "title": "一 / edao.plus",
+  "description": "Read-only MCP server exposing edao.plus math problems and knowledge entries as resources, plus a full-text search tool.",
+  "websiteUrl": "https://edao.plus",
+  "endpoint": "/mcp",
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "/mcp"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://edao.plus/mcp",
+      "supportedProtocolVersions": ["2025-06-18", "2025-03-26", "2024-11-05"]
+    }
+  ],
+  "capabilities": {
+    "tools": { "listChanged": false },
+    "resources": { "listChanged": false }
+  },
+  "repository": {
+    "url": "https://github.com/vvenv/onemath",
+    "source": "github"
+  }
+}
