@@ -1,12 +1,12 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "edao.plus Content API",
+    "title": "一道 / edao.plus 内容接口",
     "version": "0.1.0",
-    "summary": "Static content endpoints for 一道 / edao.plus — problem and knowledge pages.",
-    "description": "一道 / edao.plus is a statically prerendered site for 小学奥数 (primary-school math). This OpenAPI document describes the public HTTP endpoints through which its problem and knowledge content, as well as the service's machine-readable discovery documents, are served.",
+    "summary": "一道 / edao.plus 对外提供的题目页、知识点页与发现文档的 HTTP 接口。",
+    "description": "一道 / edao.plus 是一个面向小学奥数的静态预渲染站点。本 OpenAPI 文档描述其对外公开的 HTTP 端点——包括题目与知识点内容页，以及本服务的机器可读发现文档（api-catalog、openapi、status）。",
     "contact": {
-      "name": "edao.plus",
+      "name": "一道 / edao.plus",
       "url": "https://edao.plus/"
     }
   },
@@ -18,11 +18,11 @@
   "paths": {
     "/": {
       "get": {
-        "summary": "Home page with the full problem catalog and filters",
+        "summary": "首页：题目总览与筛选",
         "operationId": "getHome",
         "responses": {
           "200": {
-            "description": "HTML home page",
+            "description": "首页 HTML",
             "content": {
               "text/html": {}
             }
@@ -32,14 +32,14 @@
     },
     "/p/{id}": {
       "get": {
-        "summary": "Render a single problem page",
+        "summary": "题目详情页",
         "operationId": "getProblem",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "description": "Numeric problem id (e.g. 10001).",
+            "description": "题目编号（纯数字，例如 10001）。",
             "schema": {
               "type": "string",
               "pattern": "^\\d+$"
@@ -48,24 +48,24 @@
         ],
         "responses": {
           "200": {
-            "description": "HTML problem page",
+            "description": "题目详情 HTML",
             "content": {
               "text/html": {}
             }
           },
           "404": {
-            "description": "Problem not found"
+            "description": "未找到对应题目"
           }
         }
       }
     },
     "/k": {
       "get": {
-        "summary": "Knowledge index (方法手册)",
+        "summary": "方法手册索引",
         "operationId": "getKnowledgeIndex",
         "responses": {
           "200": {
-            "description": "HTML knowledge index",
+            "description": "方法手册索引 HTML",
             "content": {
               "text/html": {}
             }
@@ -75,14 +75,14 @@
     },
     "/k/{slug}": {
       "get": {
-        "summary": "Render a single knowledge entry",
+        "summary": "方法手册条目详情",
         "operationId": "getKnowledge",
         "parameters": [
           {
             "name": "slug",
             "in": "path",
             "required": true,
-            "description": "Slug of the knowledge entry (e.g. chicken-rabbit).",
+            "description": "知识点条目的 slug（例如 chicken-rabbit）。",
             "schema": {
               "type": "string"
             }
@@ -90,24 +90,24 @@
         ],
         "responses": {
           "200": {
-            "description": "HTML knowledge page",
+            "description": "知识点条目 HTML",
             "content": {
               "text/html": {}
             }
           },
           "404": {
-            "description": "Knowledge entry not found"
+            "description": "未找到对应知识点"
           }
         }
       }
     },
     "/.well-known/api-catalog": {
       "get": {
-        "summary": "RFC 9727 API catalog document (Linkset)",
+        "summary": "RFC 9727 API 目录文档（Linkset）",
         "operationId": "getApiCatalog",
         "responses": {
           "200": {
-            "description": "Linkset describing this service's APIs",
+            "description": "描述本服务对外 API 的 Linkset 文档",
             "content": {
               "application/linkset+json": {}
             }
@@ -117,11 +117,11 @@
     },
     "/openapi.json": {
       "get": {
-        "summary": "This OpenAPI description",
+        "summary": "本 OpenAPI 描述文档",
         "operationId": "getOpenApi",
         "responses": {
           "200": {
-            "description": "OpenAPI 3.1 document",
+            "description": "OpenAPI 3.1 文档",
             "content": {
               "application/openapi+json": {}
             }
@@ -131,11 +131,11 @@
     },
     "/status.json": {
       "get": {
-        "summary": "Service health check",
+        "summary": "服务健康检查",
         "operationId": "getStatus",
         "responses": {
           "200": {
-            "description": "JSON document reporting service health",
+            "description": "描述服务健康状态的 JSON 文档",
             "content": {
               "application/json": {
                 "schema": {
