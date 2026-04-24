@@ -25,7 +25,8 @@ function FaceTile({ state, label }: { state: FaceState; label: string }) {
   const classes: Record<FaceState, string> = {
     removed:
       "border-dashed border-destructive/70 bg-destructive/15 text-destructive",
-    added: "border-emerald-500/70 bg-emerald-500/15 text-emerald-700",
+    added:
+      "border-emerald-500/70 bg-emerald-500/15 text-emerald-700 dark:text-emerald-400",
     neutral: "border-foreground/30 bg-muted/50 text-muted-foreground",
   };
   const marker: Record<FaceState, string> = {
@@ -103,7 +104,7 @@ export function PitDiagram({
           减 {removed.length}
         </span>
         <span className="text-muted-foreground">+</span>
-        <span className="rounded border border-emerald-500/50 bg-emerald-500/10 px-2 py-0.5 text-emerald-700">
+        <span className="rounded border border-emerald-500/50 bg-emerald-500/10 px-2 py-0.5 text-emerald-700 dark:text-emerald-400">
           增 {added.length}
         </span>
         <span className="text-muted-foreground">=</span>

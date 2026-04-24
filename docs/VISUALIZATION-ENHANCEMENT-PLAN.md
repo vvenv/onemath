@@ -93,13 +93,15 @@ scene 类型频次（高 → 低）：
 * 如未来 `/generate-problem` / `/optimize-problem` 工作流中出现明确表达不了的记号，再拉起本 Phase。候选仍为 `fraction-strips`、`timeline`、`permutation-tree`。
 * 纪律不变：任何新增类型必须同时动 `src/types/visual.ts` + `scene-renderer.tsx` + 独立组件 + `src/components/visuals/index.ts` 导出，且在首个 PR 里就上至少 1 处真实调用。
 
-### Phase 5 · Scene 容器与 UI 细节打磨
+### Phase 5 · Scene 容器与 UI 细节打磨（本 PR）
 
-* 审计 `src/components/visuals/*.tsx` 中是否还有：
-  * 硬编码十六进制颜色（应换成 `currentColor` 或 `text-*` 工具类）。
-  * 在浅色背景上叠 `currentColor` 文本（暗色翻转后不可读）。
-  * 不必要的 `stroke-width` 显式声明。
-* 调整 `Scene` 容器在小屏的 padding / 间距，确保上文 → 图 → caption 之间留白一致。
+* 审计结论（`src/components/visuals/*.tsx`）：
+  * 硬编码十六进制 / `rgb()` / `hsl()` 颜色：**0 处**，全部已走主题变量或 `currentColor`。
+  * 浅色背景上叠 `currentColor` 文本：**0 处**。
+  * 不必要的 `stroke-width` 显式声明：**0 处**（Phase 2 已清理）。
+  * Tailwind 调色板颜色缺 `dark:` 变体：**2 处**，集中在 `pit-diagram.tsx`（`text-emerald-700` 在 `bg-emerald-500/10~15` 上，暗色模式下近乎不可读）——本 PR 修正，补齐 `dark:text-emerald-400`，与 `statement-table.tsx` 既有模式一致。
+* `Scene` 容器 padding / 间距：当前 `p-3` + `mt-2` caption 在 PR #13 的明暗测试中均可读且对齐，无需改动。响应式方面 shadcn `Table` 已内置 `overflow-x-auto`，`equation-list` 的 `whitespace-nowrap` rhs 在窄屏下可横向滚动，不会破版。
+* 结论：除上述 2 处 `dark:` 变体外，Phase 5 无其他可见改动。
 
 ## 4. 验收标准
 
@@ -109,7 +111,7 @@ scene 类型频次（高 → 低）：
 | 2 | `svg-builders.ts` 全部 helper 通过 `tsc -b`；不再含 `hsl(var(--*))`；至少 1 个 helper 在某个题目中实际被使用以验证渲染。 |
 | 3 | 弱覆盖题目数从 35 → 0；每个新增 scene 都通过 AGENTS.md "Scene Labels" 自检（无 `5×4` 表"5 个 4"等违规）。 |
 | 4 | 新增类型有完整类型链（types → renderer → 组件 → 导出 → 至少 1 处真实用例）。 |
-| 5 | 全部 visuals 组件不再出现硬编码 `#xxxxxx` 颜色；浅色 / 暗色截图对比无可读性问题。 |
+| 5 | 全部 visuals 组件不再出现硬编码 `#xxxxxx` 颜色；Tailwind 调色板颜色均成对给出 `dark:` 变体；浅色 / 暗色截图对比无可读性问题。 |
 
 ## 5. 不做的事
 
