@@ -1,286 +1,329 @@
 /**
- * SVG Helper Builders for Mathematical Visualizations
- * 提供常用的数学题图形生成工具函数，避免手写 <svg> 标签
+ * SVG figure builders for math problem visualizations.
+ *
+ * Each helper returns a single-line SVG string suitable for `SvgFigure` (and
+ * therefore for the `svg` scene kind). All helpers follow the project's SVG
+ * conventions:
+ *
+ *   - Strokes and text use `currentColor`; recolor at the call site by setting
+ *     a Tailwind text color on the wrapping `SvgFigure` (e.g. `text-primary`).
+ *   - "Highlighted" regions are drawn with `fill="currentColor"
+ *     fill-opacity="0.18"` so they remain readable in both light and dark
+ *     themes without depending on hard-coded hex / `hsl(var(--*))` values
+ *     (the project uses `oklch(...)` theme variables, so `hsl(var(--*))` does
+ *     not resolve to the right color).
+ *   - `stroke-width` is omitted unless a heavier line is genuinely required;
+ *     SVG defaults to 1.
+ *   - Output is a single line — no newlines inside the returned string — to
+ *     match the convention used by the standalone `.svg` files under
+ *     `src/data/<problems|knowledge>/figures/`.
+ *
+ * See `AGENTS.md` ("SVG Figures") for the underlying rules.
  */
 
-type SVGColor = string;
-type Position = { x: number; y: number };
+type Cell = readonly [number, number];
+
+type SeatingChartOptions = {
+  /** Cells to highlight, as `[row, col]` (0-indexed). */
+  highlight?: Cell[];
+  /** Optional per-cell labels keyed by `"row,col"`. Defaults to a 1-based index. */
+  labels?: Record<string, string>;
+  /** Cell radius in user units. Defaults to 14. */
+  size?: number;
+  /** Gap between cells. Defaults to 6. */
+  gap?: number;
+};
 
 /**
- * 生成座位图：n 行 m 列的网格，支持标记特定位置
- * 用于：排列、排队、座位分配等题型
+ * Generate a seating chart: `rows × cols` of circles. Suitable for排队 / 排座
+ * / 排列 problems where the geometry of "where each person sits" matters.
  */
 export function createSeatingChart(
   rows: number,
   cols: number,
-  options?: {
-    highlight?: [number, number][]; // 需要高亮的 [行, 列]
-    labels?: Record<string, string>; // 座位标签
-    size?: number; // 座位大小，默认 30
-    gap?: number; // 间距，默认 5
-  }
+  options?: SeatingChartOptions,
 ): string {
-  const size = options?.size ?? 30;
-  const gap = options?.gap ?? 5;
-  const cellSize = size + gap;
-  const width = cols * cellSize + gap;
-  const height = rows * cellSize + gap;
+  const radius = options?.size ?? 14;
+  const gap = options?.gap ?? 6;
+  const step = radius * 2 + gap;
+  const width = cols * step + gap;
+  const height = rows * step + gap;
 
-  let svg = `<svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">`;
+  const highlightSet = new Set(
+    (options?.highlight ?? []).map(([r, c]) => `${r},${c}`),
+  );
 
-  // 背景
-  svg += `<rect width="${width}" height="${height}" fill="none" stroke="none"/>`;
-
-  // 绘制座位
-  const highlightSet = new Set(options?.highlight?.map(([r, c]) => `${r},${c}`) ?? []);
+  const parts: string[] = [];
+  parts.push(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}">`,
+  );
 
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
-      const x = gap + c * cellSize + size / 2;
-      const y = gap + r * cellSize + size / 2;
-      const isHighlight = highlightSet.has(`${r},${c}`);
-      const fill = isHighlight ? "hsl(var(--primary))" : "hsl(var(--muted))";
-      const stroke = isHighlight ? "hsl(var(--primary))" : "hsl(var(--border))";
-
-      svg += `<circle cx="${x}" cy="${y}" r="${size / 2}" fill="${fill}" stroke="${stroke}" stroke-width="2"/>`;
-
-      // 标签
-      const label = options?.labels?.[`${r},${c}`] ?? `${r * cols + c + 1}`;
-      svg += `<text x="${x}" y="${y}" text-anchor="middle" dy="0.3em" font-size="12" fill="currentColor" font-weight="500">${label}</text>`;
+      const cx = gap + c * step + radius;
+      const cy = gap + r * step + radius;
+      const key = `${r},${c}`;
+      const label = options?.labels?.[key] ?? `${r * cols + c + 1}`;
+      const fill = highlightSet.has(key)
+        ? `fill="currentColor" fill-opacity="0.18"`
+        : `fill="none"`;
+      parts.push(
+        `<circle cx="${cx}" cy="${cy}" r="${radius}" ${fill} stroke="currentColor"/>`,
+      );
+      parts.push(
+        `<text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="central" font-size="12" fill="currentColor">${label}</text>`,
+      );
     }
   }
 
-  svg += `</svg>`;
-  return svg;
+  parts.push(`</svg>`);
+  return parts.join("");
 }
 
+type MatrixDiagramOptions = {
+  /** Highlight the main diagonal. */
+  highlightDiagonal?: boolean;
+  /** Cells to fill, as `[row, col]` (0-indexed). */
+  highlightCells?: Cell[];
+  /** Cell side length in user units. Defaults to 32. */
+  cellSize?: number;
+};
+
 /**
- * 生成方阵对角线图：n×n 方阵，支持标记对角线或特定单元格
- * 用于：排列组合、矩阵类题目
+ * Generate an `n × n` matrix grid with optional diagonal / cell highlights.
+ * Useful for排列 / 组合 / 配对 problems where pairs `(i, j)` are enumerated.
  */
 export function createMatrixDiagram(
   n: number,
-  options?: {
-    highlightDiagonal?: boolean;
-    highlightCells?: [number, number][]; // [行, 列]
-    cellSize?: number;
-  }
+  options?: MatrixDiagramOptions,
 ): string {
-  const cellSize = options?.cellSize ?? 40;
-  const size = n * cellSize;
-
-  let svg = `<svg viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">`;
+  const cell = options?.cellSize ?? 32;
+  const size = n * cell;
 
   const highlightSet = new Set(
-    options?.highlightCells?.map(([r, c]) => `${r},${c}`) ?? []
+    (options?.highlightCells ?? []).map(([r, c]) => `${r},${c}`),
   );
 
-  // 网格线
-  for (let i = 0; i <= n; i++) {
-    const pos = i * cellSize;
-    svg += `<line x1="${pos}" y1="0" x2="${pos}" y2="${size}" stroke="hsl(var(--border))" stroke-width="1"/>`;
-    svg += `<line x1="0" y1="${pos}" x2="${size}" y2="${pos}" stroke="hsl(var(--border))" stroke-width="1"/>`;
-  }
+  const parts: string[] = [];
+  parts.push(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${size} ${size}">`,
+  );
 
-  // 高亮对角线
-  if (options?.highlightDiagonal) {
-    for (let i = 0; i < n; i++) {
-      const x1 = i * cellSize;
-      const y1 = i * cellSize;
-      const x2 = (i + 1) * cellSize;
-      const y2 = (i + 1) * cellSize;
-      svg += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="hsl(var(--primary))" stroke-width="3"/>`;
-    }
-  }
-
-  // 高亮特定单元格
+  // Highlighted cells are filled first so grid lines paint on top.
   for (const key of highlightSet) {
     const [r, c] = key.split(",").map(Number);
-    const x = c * cellSize;
-    const y = r * cellSize;
-    svg += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" fill="hsl(var(--primary) / 0.1)" stroke="hsl(var(--primary))" stroke-width="2"/>`;
+    const x = c * cell;
+    const y = r * cell;
+    parts.push(
+      `<rect x="${x}" y="${y}" width="${cell}" height="${cell}" fill="currentColor" fill-opacity="0.18" stroke="none"/>`,
+    );
   }
 
-  svg += `</svg>`;
-  return svg;
+  // Grid lines.
+  for (let i = 0; i <= n; i++) {
+    const pos = i * cell;
+    parts.push(
+      `<line x1="${pos}" y1="0" x2="${pos}" y2="${size}" stroke="currentColor"/>`,
+    );
+    parts.push(
+      `<line x1="0" y1="${pos}" x2="${size}" y2="${pos}" stroke="currentColor"/>`,
+    );
+  }
+
+  if (options?.highlightDiagonal) {
+    parts.push(
+      `<line x1="0" y1="0" x2="${size}" y2="${size}" stroke="currentColor" stroke-width="1.5"/>`,
+    );
+  }
+
+  parts.push(`</svg>`);
+  return parts.join("");
 }
 
+type DecisionTreeOptions = {
+  /** Node circle radius. Defaults to 18. */
+  size?: number;
+  /** Vertical distance between levels. Defaults to 80. */
+  levelHeight?: number;
+  /** Total SVG width. Defaults to 480. */
+  width?: number;
+};
+
 /**
- * 生成排列树图：展示路径/选择树
- * 用于：排列、组合、决策树题目
+ * Generate a layered decision tree where every node at level `k` connects to
+ * every node at level `k + 1`. Useful for枚举 / 排列 problems where the size
+ * of the search space is the visualization itself (e.g. "3 衬衫 × 4 裤子").
  */
 export function createDecisionTree(
   levels: string[][],
-  options?: {
-    size?: number;
-  }
+  options?: DecisionTreeOptions,
 ): string {
-  const size = options?.size ?? 30;
-  const levelHeight = 100;
-  const width = 800;
-  const height = levels.length * levelHeight;
+  const r = options?.size ?? 18;
+  const levelH = options?.levelHeight ?? 80;
+  const width = options?.width ?? 480;
+  const height = (levels.length - 1) * levelH + r * 2 + 8;
 
-  let svg = `<svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">`;
-
-  // 从上到下绘制
-  const positions: Position[][] = [];
-
-  for (let level = 0; level < levels.length; level++) {
-    const items = levels[level];
-    const y = level * levelHeight + 50;
+  const positions = levels.map((items, level) => {
+    const y = r + 4 + level * levelH;
     const spacing = width / (items.length + 1);
-    positions[level] = items.map((_, i) => ({
-      x: spacing * (i + 1),
-      y,
-    }));
-  }
+    return items.map((_, i) => ({ x: spacing * (i + 1), y }));
+  });
 
-  // 绘制连接线
+  const parts: string[] = [];
+  parts.push(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}">`,
+  );
+
+  // Connectors first so node circles paint on top.
   for (let level = 0; level < levels.length - 1; level++) {
-    for (const parentPos of positions[level]) {
-      for (const childPos of positions[level + 1]) {
-        svg += `<line x1="${parentPos.x}" y1="${parentPos.y}" x2="${childPos.x}" y2="${childPos.y}" stroke="hsl(var(--border))" stroke-width="1"/>`;
+    for (const parent of positions[level]) {
+      for (const child of positions[level + 1]) {
+        parts.push(
+          `<line x1="${parent.x}" y1="${parent.y}" x2="${child.x}" y2="${child.y}" stroke="currentColor" stroke-opacity="0.4"/>`,
+        );
       }
     }
   }
 
-  // 绘制节点
   for (let level = 0; level < levels.length; level++) {
     for (let i = 0; i < levels[level].length; i++) {
-      const pos = positions[level][i];
-      const label = levels[level][i];
-      svg += `<circle cx="${pos.x}" cy="${pos.y}" r="${size}" fill="hsl(var(--primary))" stroke="hsl(var(--primary-foreground))" stroke-width="2"/>`;
-      svg += `<text x="${pos.x}" y="${pos.y}" text-anchor="middle" dy="0.3em" font-size="14" fill="hsl(var(--primary-foreground))" font-weight="600">${label}</text>`;
+      const { x, y } = positions[level][i];
+      parts.push(
+        `<circle cx="${x}" cy="${y}" r="${r}" fill="currentColor" fill-opacity="0.08" stroke="currentColor"/>`,
+      );
+      parts.push(
+        `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" font-size="13" fill="currentColor">${levels[level][i]}</text>`,
+      );
     }
   }
 
-  svg += `</svg>`;
-  return svg;
+  parts.push(`</svg>`);
+  return parts.join("");
 }
 
+type BarChartDatum = {
+  label: string;
+  value: number;
+};
+
+type BarChartOptions = {
+  /** Y-axis maximum. Defaults to `max(values)`. */
+  maxValue?: number;
+  /** Width of each bar. Defaults to 40. */
+  barWidth?: number;
+  /** Plot height (excluding label / axis padding). Defaults to 140. */
+  plotHeight?: number;
+};
+
 /**
- * 生成竖排条形对比图（轻量版）
- * 用于：简单的数值对比
+ * Lightweight vertical bar chart. Prefer the `compare-bars` scene kind for
+ * inline comparisons; this helper exists for cases that genuinely need a
+ * standalone SVG figure (e.g. embedding a chart inside a multi-figure layout).
  */
 export function createBarChart(
-  data: { label: string; value: number; color?: string }[],
-  options?: {
-    maxValue?: number;
-    barWidth?: number;
-  }
+  data: BarChartDatum[],
+  options?: BarChartOptions,
 ): string {
-  const maxValue = options?.maxValue ?? Math.max(...data.map((d) => d.value));
-  const barWidth = options?.barWidth ?? 60;
-  const gap = 10;
-  const height = 200;
+  const values = data.map((d) => d.value);
+  const max = options?.maxValue ?? Math.max(...values, 1);
+  const barWidth = options?.barWidth ?? 40;
+  const plotHeight = options?.plotHeight ?? 140;
+  const gap = 12;
+  const labelPadding = 18;
+  const valuePadding = 14;
   const width = data.length * (barWidth + gap) + gap;
+  const height = plotHeight + labelPadding + valuePadding;
+  const baselineY = height - labelPadding;
 
-  let svg = `<svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">`;
-
-  // 横坐标线
-  svg += `<line x1="0" y1="${height - 20}" x2="${width}" y2="${height - 20}" stroke="hsl(var(--border))" stroke-width="1"/>`;
+  const parts: string[] = [];
+  parts.push(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}">`,
+  );
+  parts.push(
+    `<line x1="0" y1="${baselineY}" x2="${width}" y2="${baselineY}" stroke="currentColor" stroke-opacity="0.4"/>`,
+  );
 
   for (let i = 0; i < data.length; i++) {
     const x = gap + i * (barWidth + gap);
-    const barHeight = (data[i].value / maxValue) * (height - 40);
-    const color = data[i].color ?? "hsl(var(--primary))";
-
-    // 条形
-    svg += `<rect x="${x}" y="${height - 20 - barHeight}" width="${barWidth}" height="${barHeight}" fill="${color}" stroke="none"/>`;
-
-    // 标签
-    svg += `<text x="${x + barWidth / 2}" y="${height - 5}" text-anchor="middle" font-size="12" fill="hsl(var(--muted-foreground))">${data[i].label}</text>`;
-
-    // 数值
-    svg += `<text x="${x + barWidth / 2}" y="${height - 20 - barHeight - 5}" text-anchor="middle" font-size="11" fill="hsl(var(--foreground))" font-weight="600">${data[i].value}</text>`;
+    const barHeight = (data[i].value / max) * plotHeight;
+    const y = baselineY - barHeight;
+    parts.push(
+      `<rect x="${x}" y="${y}" width="${barWidth}" height="${barHeight}" fill="currentColor" fill-opacity="0.5" stroke="currentColor"/>`,
+    );
+    parts.push(
+      `<text x="${x + barWidth / 2}" y="${baselineY + 13}" text-anchor="middle" font-size="12" fill="currentColor">${data[i].label}</text>`,
+    );
+    parts.push(
+      `<text x="${x + barWidth / 2}" y="${y - 4}" text-anchor="middle" font-size="11" fill="currentColor">${data[i].value}</text>`,
+    );
   }
 
-  svg += `</svg>`;
-  return svg;
+  parts.push(`</svg>`);
+  return parts.join("");
 }
 
-/**
- * 生成数轴图（简化版，通过 SceneRenderer 的 number-line 通常更好用）
- * 这里提供 SVG 版本供特殊需求使用
- */
-export function createNumberLine(
-  min: number,
-  max: number,
-  points: { value: number; label?: string; highlight?: boolean }[],
-  options?: {
-    height?: number;
-  }
-): string {
-  const height = options?.height ?? 60;
-  const width = 600;
-  const lineY = 30;
-  const padding = 40;
-
-  let svg = `<svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">`;
-
-  // 主线
-  svg += `<line x1="${padding}" y1="${lineY}" x2="${width - padding}" y2="${lineY}" stroke="hsl(var(--border))" stroke-width="2"/>`;
-
-  // 刻度
-  const getX = (val: number) => padding + ((val - min) / (max - min)) * (width - 2 * padding);
-
-  for (const point of points) {
-    const x = getX(point.value);
-    const color = point.highlight ? "hsl(var(--primary))" : "hsl(var(--border))";
-    const size = point.highlight ? 6 : 4;
-
-    svg += `<circle cx="${x}" cy="${lineY}" r="${size}" fill="${color}"/>`;
-
-    if (point.label) {
-      svg += `<text x="${x}" y="${lineY + 20}" text-anchor="middle" font-size="12" fill="hsl(var(--foreground))">${point.label}</text>`;
-    }
-  }
-
-  svg += `</svg>`;
-  return svg;
-}
+type VennDiagramOptions = {
+  /** Circle radius. Defaults to 56. */
+  radius?: number;
+  /** Horizontal overlap between the two circles. Defaults to `radius`. */
+  overlap?: number;
+};
 
 /**
- * 生成分组/集合维恩图简图（两个圆相交）
- * 用于：逻辑分组、交集题目
+ * Two-set Venn diagram with counts in each region. Useful for集合 / 容斥
+ * problems with two attributes.
  */
 export function createVennDiagram(
   leftLabel: string,
   rightLabel: string,
-  leftValue: number,
-  intersectionValue: number,
-  rightValue: number,
-  options?: {
-    size?: number;
-  }
+  leftOnly: number | string,
+  intersection: number | string,
+  rightOnly: number | string,
+  options?: VennDiagramOptions,
 ): string {
-  const size = options?.size ?? 60;
-  const gap = 20;
-  const viewWidth = size * 2 + gap + 100;
-  const viewHeight = size + 100;
+  const r = options?.radius ?? 56;
+  const overlap = options?.overlap ?? r;
+  const centerGap = r * 2 - overlap;
+  const padding = 24;
+  const width = r * 2 + centerGap + padding * 2;
+  const height = r * 2 + padding * 2 + 16;
+  const leftCx = padding + r;
+  const rightCx = leftCx + centerGap;
+  const cy = padding + r;
+  const intersectionCx = (leftCx + rightCx) / 2;
 
-  let svg = `<svg viewBox="0 0 ${viewWidth} ${viewHeight}" xmlns="http://www.w3.org/2000/svg">`;
+  const parts: string[] = [];
+  parts.push(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}">`,
+  );
+  parts.push(
+    `<circle cx="${leftCx}" cy="${cy}" r="${r}" fill="currentColor" fill-opacity="0.08" stroke="currentColor"/>`,
+  );
+  parts.push(
+    `<circle cx="${rightCx}" cy="${cy}" r="${r}" fill="currentColor" fill-opacity="0.08" stroke="currentColor"/>`,
+  );
 
-  const leftCx = 60;
-  const rightCx = 60 + size + gap;
-  const cy = viewHeight / 2;
+  // Region counts.
+  const leftCenterX = leftCx - centerGap / 2;
+  const rightCenterX = rightCx + centerGap / 2;
+  parts.push(
+    `<text x="${leftCenterX}" y="${cy}" text-anchor="middle" dominant-baseline="central" font-size="14" fill="currentColor">${leftOnly}</text>`,
+  );
+  parts.push(
+    `<text x="${intersectionCx}" y="${cy}" text-anchor="middle" dominant-baseline="central" font-size="14" fill="currentColor">${intersection}</text>`,
+  );
+  parts.push(
+    `<text x="${rightCenterX}" y="${cy}" text-anchor="middle" dominant-baseline="central" font-size="14" fill="currentColor">${rightOnly}</text>`,
+  );
 
-  // 左圆
-  svg += `<circle cx="${leftCx}" cy="${cy}" r="${size}" fill="hsl(var(--primary) / 0.1)" stroke="hsl(var(--primary))" stroke-width="2"/>`;
+  // Set labels.
+  parts.push(
+    `<text x="${leftCx - r * 0.6}" y="${cy - r - 6}" text-anchor="middle" font-size="13" fill="currentColor">${leftLabel}</text>`,
+  );
+  parts.push(
+    `<text x="${rightCx + r * 0.6}" y="${cy - r - 6}" text-anchor="middle" font-size="13" fill="currentColor">${rightLabel}</text>`,
+  );
 
-  // 右圆
-  svg += `<circle cx="${rightCx}" cy="${cy}" r="${size}" fill="hsl(var(--primary) / 0.1)" stroke="hsl(var(--primary))" stroke-width="2"/>`;
-
-  // 标签与数值
-  svg += `<text x="${leftCx - size / 2}" y="${10}" font-size="12" font-weight="600" fill="hsl(var(--foreground))">${leftLabel}</text>`;
-  svg += `<text x="${leftCx - size / 2 - 10}" y="${cy}" text-anchor="middle" dy="0.3em" font-size="14" fill="hsl(var(--foreground))" font-weight="600">${leftValue}</text>`;
-
-  svg += `<text x="${rightCx + size / 2 - 30}" y="${10}" font-size="12" font-weight="600" fill="hsl(var(--foreground))">${rightLabel}</text>`;
-  svg += `<text x="${rightCx + size / 2 + 10}" y="${cy}" text-anchor="middle" dy="0.3em" font-size="14" fill="hsl(var(--foreground))" font-weight="600">${rightValue}</text>`;
-
-  // 交集（中间）
-  svg += `<text x="${(leftCx + rightCx) / 2}" y="${cy}" text-anchor="middle" dy="0.3em" font-size="14" fill="hsl(var(--accent))" font-weight="700">${intersectionValue}</text>`;
-
-  svg += `</svg>`;
-  return svg;
+  parts.push(`</svg>`);
+  return parts.join("");
 }
