@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
-    "build": "react-router build && node scripts/emit-vercel-output.mjs",
+    "build": "react-router build",
     "typecheck": "react-router typegen && tsc -b",
     "preview": "vite preview"
   },
