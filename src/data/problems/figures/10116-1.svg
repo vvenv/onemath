@@ -1,1 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 220" font-size="12"><g fill="none" stroke="currentColor"><polygon points="40,190 310,190 110,30"/></g><g fill="currentColor"><circle cx="40" cy="190" r="3"/><circle cx="310" cy="190" r="3"/><circle cx="110" cy="30" r="3"/><circle cx="220" cy="190" r="3"/><circle cx="260" cy="150" r="3"/></g><g fill="currentColor" text-anchor="middle"><text x="32" y="205">B</text><text x="318" y="205">C</text><text x="110" y="22">A</text><text x="220" y="207">D</text><text x="275" y="148">E</text></g><g stroke="#A93226" fill="rgb(169 50 38 / 0.18)"><polygon points="220,190 310,190 260,150"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 220">
+  <g class="stroke-current fill-none">
+    <polygon points="40,190 310,190 110,30" />
+  </g>
+  <g class="fill-current">
+    <circle cx="40" cy="190" r="3" />
+    <circle cx="310" cy="190" r="3" />
+    <circle cx="110" cy="30" r="3" />
+    <circle cx="220" cy="190" r="3" />
+    <circle cx="260" cy="150" r="3" />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="32" y="205" text-anchor="middle">B</text>
+    <text x="318" y="205" text-anchor="middle">C</text>
+    <text x="110" y="22" text-anchor="middle">A</text>
+    <text x="220" y="207" text-anchor="middle">D</text>
+    <text x="275" y="148" text-anchor="middle">E</text>
+  </g>
+  <g class="stroke-red-500" fill="rgb(169 50 38 / 0.18)">
+    <polygon points="220,190 310,190 260,150" />
+  </g>
+</svg>

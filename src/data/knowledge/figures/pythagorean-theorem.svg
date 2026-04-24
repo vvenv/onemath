@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="90,70 90,150 150,70"/><polygon points="90,70 90,150 10,150 10,70" fill="currentColor" fill-opacity="0.1"/><polygon points="90,70 150,70 150,10 90,10" fill="currentColor" fill-opacity="0.1"/><polygon points="90,150 150,70 230,130 170,210" fill="currentColor" fill-opacity="0.18"/><g fill="currentColor" stroke="none" font-size="12" font-family="serif"><text x="40" y="115">b²</text><text x="115" y="45">a²</text><text x="180" y="150">c²</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220" font-size="12">
+  <g class="stroke-current fill-none" stroke-width="1.5">
+    <polygon points="90,70 90,150 150,70" />
+    <polygon points="90,70 90,150 10,150 10,70" class="fill-current/10" />
+    <polygon points="90,70 150,70 150,10 90,10" class="fill-current/10" />
+    <polygon points="90,150 150,70 230,130 170,210" class="fill-current/18" />
+  </g>
+  <g class="fill-current stroke-none" font-family="serif">
+    <text x="40" y="115">b²</text>
+    <text x="115" y="45">a²</text>
+    <text x="180" y="150">c²</text>
+  </g>
+</svg>

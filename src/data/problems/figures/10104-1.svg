@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" font-size="12"><g fill="none" stroke="currentColor"><circle cx="50" cy="60" r="40"/><circle cx="110" cy="60" r="40"/><circle cx="170" cy="60" r="40"/><circle cx="230" cy="60" r="40"/><circle cx="290" cy="60" r="40"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120">
+  <g class="stroke-current fill-none">
+    <circle cx="50" cy="60" r="40" />
+    <circle cx="110" cy="60" r="40" />
+    <circle cx="170" cy="60" r="40" />
+    <circle cx="230" cy="60" r="40" />
+    <circle cx="290" cy="60" r="40" />
+  </g>
+</svg>

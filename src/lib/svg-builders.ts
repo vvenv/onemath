@@ -71,7 +71,7 @@ export function createSeatingChart(
         `<circle cx="${cx}" cy="${cy}" r="${radius}" ${fill} stroke="currentColor"/>`,
       );
       parts.push(
-        `<text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="central" font-size="12" fill="currentColor">${label}</text>`,
+        `<text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="central" fill="currentColor">${label}</text>`,
       );
     }
   }
@@ -192,7 +192,7 @@ export function createDecisionTree(
         `<circle cx="${x}" cy="${y}" r="${r}" fill="currentColor" fill-opacity="0.08" stroke="currentColor"/>`,
       );
       parts.push(
-        `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" font-size="13" fill="currentColor">${levels[level][i]}</text>`,
+        `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" fill="currentColor">${levels[level][i]}</text>`,
       );
     }
   }
@@ -251,10 +251,10 @@ export function createBarChart(
       `<rect x="${x}" y="${y}" width="${barWidth}" height="${barHeight}" fill="currentColor" fill-opacity="0.5" stroke="currentColor"/>`,
     );
     parts.push(
-      `<text x="${x + barWidth / 2}" y="${baselineY + 13}" text-anchor="middle" font-size="12" fill="currentColor">${data[i].label}</text>`,
+      `<text x="${x + barWidth / 2}" y="${baselineY + 13}" text-anchor="middle" fill="currentColor">${data[i].label}</text>`,
     );
     parts.push(
-      `<text x="${x + barWidth / 2}" y="${y - 4}" text-anchor="middle" font-size="11" fill="currentColor">${data[i].value}</text>`,
+      `<text x="${x + barWidth / 2}" y="${y - 4}" text-anchor="middle" fill="currentColor">${data[i].value}</text>`,
     );
   }
 
@@ -308,21 +308,21 @@ export function createVennDiagram(
   const leftCenterX = intersectionCx - r;
   const rightCenterX = intersectionCx + r;
   parts.push(
-    `<text x="${leftCenterX}" y="${cy}" text-anchor="middle" dominant-baseline="central" font-size="14" fill="currentColor">${leftOnly}</text>`,
+    `<text x="${leftCenterX}" y="${cy}" text-anchor="middle" dominant-baseline="central" fill="currentColor">${leftOnly}</text>`,
   );
   parts.push(
-    `<text x="${intersectionCx}" y="${cy}" text-anchor="middle" dominant-baseline="central" font-size="14" fill="currentColor">${intersection}</text>`,
+    `<text x="${intersectionCx}" y="${cy}" text-anchor="middle" dominant-baseline="central" fill="currentColor">${intersection}</text>`,
   );
   parts.push(
-    `<text x="${rightCenterX}" y="${cy}" text-anchor="middle" dominant-baseline="central" font-size="14" fill="currentColor">${rightOnly}</text>`,
+    `<text x="${rightCenterX}" y="${cy}" text-anchor="middle" dominant-baseline="central" fill="currentColor">${rightOnly}</text>`,
   );
 
   // Set labels.
   parts.push(
-    `<text x="${leftCx - r * 0.6}" y="${cy - r - 6}" text-anchor="middle" font-size="13" fill="currentColor">${leftLabel}</text>`,
+    `<text x="${leftCx - r * 0.6}" y="${cy - r - 6}" text-anchor="middle" fill="currentColor">${leftLabel}</text>`,
   );
   parts.push(
-    `<text x="${rightCx + r * 0.6}" y="${cy - r - 6}" text-anchor="middle" font-size="13" fill="currentColor">${rightLabel}</text>`,
+    `<text x="${rightCx + r * 0.6}" y="${cy - r - 6}" text-anchor="middle" fill="currentColor">${rightLabel}</text>`,
   );
 
   parts.push(`</svg>`);

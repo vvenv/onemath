@@ -1,1 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200"><text x="200" y="30" font-size="14" fill="currentColor" text-anchor="middle" font-weight="bold">210 的质因数分解树</text><!-- 树根 --><text x="200" y="60" font-size="18" fill="#e74c3c" text-anchor="middle" font-weight="bold">210</text><!-- 第一层分支 --><line x1="200" y1="70" x2="140" y2="100" stroke="currentColor"/><line x1="200" y1="70" x2="260" y2="100" stroke="currentColor"/><text x="130" y="115" font-size="14" fill="#3498db" text-anchor="middle">10</text><text x="270" y="115" font-size="14" fill="#3498db" text-anchor="middle">21</text><!-- 第二层分支 --><line x1="130" y1="125" x2="100" y2="150" stroke="currentColor"/><line x1="130" y1="125" x2="160" y2="150" stroke="currentColor"/><line x1="270" y1="125" x2="240" y2="150" stroke="currentColor"/><line x1="270" y1="125" x2="300" y2="150" stroke="currentColor"/><text x="90" y="165" font-size="14" fill="#27ae60" text-anchor="middle">2</text><text x="170" y="165" font-size="14" fill="#27ae60" text-anchor="middle">5</text><text x="230" y="165" font-size="14" fill="#27ae60" text-anchor="middle">3</text><text x="310" y="165" font-size="14" fill="#27ae60" text-anchor="middle">7</text><text x="200" y="195" font-size="12" fill="currentColor" text-anchor="middle">210 = 2 × 3 × 5 × 7</text></svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 400 200"
+  width="400"
+  height="200"
+>
+  <text
+    x="200"
+    y="30"
+    fill="currentColor"
+    text-anchor="middle"
+    font-weight="bold"
+  >
+    210 的质因数分解树
+  </text>
+  <!--
+    树根 -->
+  <text
+    x="200"
+    y="60"
+    class="fill-red-500"
+    text-anchor="middle"
+    font-weight="bold"
+  >
+    210
+  </text>
+  <!-- 第一层分支 -->
+  <line x1="200" y1="70" x2="140" y2="100" class="stroke-current" />
+  <line x1="200" y1="70" x2="260" y2="100" class="stroke-current" />
+  <text x="130" y="115" class="fill-blue-500" text-anchor="middle">10</text>
+  <text x="270" y="115" class="fill-blue-500" text-anchor="middle">21</text>
+  <!-- 第二层分支 -->
+  <line x1="130" y1="125" x2="100" y2="150" class="stroke-current" />
+  <line x1="130" y1="125" x2="160" y2="150" class="stroke-current" />
+  <line x1="270" y1="125" x2="240" y2="150" class="stroke-current" />
+  <line x1="270" y1="125" x2="300" y2="150" class="stroke-current" />
+  <text x="90" y="165" class="fill-green-600" text-anchor="middle">2</text>
+  <text x="170" y="165" class="fill-green-600" text-anchor="middle">5</text>
+  <text x="230" y="165" class="fill-green-600" text-anchor="middle">3</text>
+  <text x="310" y="165" class="fill-green-600" text-anchor="middle">7</text>
+  <text x="200" y="195" fill="currentColor" text-anchor="middle">
+    210 = 2 × 3 × 5 × 7
+  </text>
+</svg>

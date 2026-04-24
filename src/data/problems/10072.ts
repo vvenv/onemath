@@ -1,5 +1,4 @@
 import type { ProblemData } from "@/types/problem";
-import svg1 from "./figures/10072-1.svg?raw";
 
 export default {
   "id": "10072",
@@ -8,13 +7,6 @@ export default {
   "module": "杂题",
   "difficulty": "进阶",
   "question": "夜里，甲、乙、丙、丁 4 人要过一座独木桥。他们只有一只手电筒，过桥必须有手电筒照明；桥最多同时承受 2 人。两人同行时，速度要按较慢的那人算。甲、乙、丙、丁单独过桥各需 1、2、5、10 分钟。全部 4 人都过到对岸，至少需要多少分钟？",
-  "figures": [
-    {
-      "svg": svg1,
-      "caption": "4 人单独过桥用时，一次最多 2 人，共用手电筒",
-      "alt": "4 人过独木桥示意"
-    }
-  ],
   "solutions": [
     {
       "key": "pairSlow",

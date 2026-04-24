@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 150"><rect x="80" y="60" width="380" height="8" fill="currentColor" rx="2"/><text x="250" y="50" font-size="11" fill="currentColor">大桥 420米</text><line x1="80" y1="58" x2="80" y2="68" stroke="currentColor"/><line x1="460" y1="58" x2="460" y2="68" stroke="currentColor"/><rect x="390" y="70" width="60" height="20" fill="#e74c3c" rx="3" opacity="0.3"/><text x="200" y="100" font-size="11" fill="currentColor">开始：车头在桥头</text><rect x="440" y="120" width="60" height="20" fill="#e74c3c" rx="3"/><text x="200" y="140" font-size="11" fill="currentColor">结束：车尾离桥</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100">
+  <rect x="100" y="30" width="300" height="8" class="fill-current" />
+  <rect x="40" y="50" width="60" height="20" class="fill-green-900" />
+  <g class="fill-yellow-400">
+    <rect x="45" y="54" width="8" height="6" />
+    <rect x="55" y="54" width="8" height="6" />
+    <rect x="65" y="54" width="8" height="6" />
+    <rect x="75" y="54" width="8" height="6" />
+    <rect x="85" y="54" width="8" height="6" />
+  </g>
+  <rect x="400" y="50" width="60" height="20" class="fill-green-900" />
+  <g class="fill-yellow-400">
+    <rect x="405" y="54" width="8" height="6" />
+    <rect x="415" y="54" width="8" height="6" />
+    <rect x="425" y="54" width="8" height="6" />
+    <rect x="435" y="54" width="8" height="6" />
+    <rect x="445" y="54" width="8" height="6" />
+  </g>
+</svg>

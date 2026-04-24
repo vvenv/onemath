@@ -1,5 +1,4 @@
 import type { ProblemData } from "@/types/problem";
-import svg1 from "./figures/10055-1.svg?raw";
 
 export default {
   "id": "10055",
@@ -8,13 +7,6 @@ export default {
   "module": "行程",
   "difficulty": "进阶",
   "question": "小明从家到学校，如果每分钟走 60 米，会迟到 5 分钟；如果每分钟走 80 米，会提前 3 分钟到达。小明家到学校的距离是多少米？",
-  "figures": [
-    {
-      "svg": svg1,
-      "caption": "小明以两种速度行走，时间相差 5 + 3 = 8 分钟",
-      "alt": "线段图：家到学校，标注两种速度和对应的时间差"
-    }
-  ],
   "solutions": [
     {
       "key": "ratio",

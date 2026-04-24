@@ -1,1 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280"><polygon points="60,60 340,60 370,220 30,220" fill="none" stroke="currentColor"/><line x1="60" y1="60" x2="370" y2="220" stroke="currentColor" stroke-dasharray="6,3"/><line x1="340" y1="60" x2="30" y2="220" stroke="currentColor" stroke-dasharray="6,3"/><polygon points="60,60 340,60 200,132" fill="#f59e0b" fill-opacity="0.22" stroke="none"/><circle cx="200" cy="132" r="4" fill="currentColor"/><text x="45" y="50" font-size="16" fill="currentColor">A</text><text x="348" y="50" font-size="16" fill="currentColor">D</text><text x="378" y="235" font-size="16" fill="currentColor">C</text><text x="8" y="235" font-size="16" fill="currentColor">B</text><text x="210" y="138" font-size="14" fill="currentColor">O</text><text x="200" y="50" font-size="13" fill="currentColor" text-anchor="middle">4</text><text x="200" y="238" font-size="13" fill="currentColor" text-anchor="middle">8</text><text x="200" y="95" font-size="13" fill="#b45309" text-anchor="middle" font-weight="bold">S△AOD = 10</text></svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 400 280"
+  width="400"
+  height="280"
+>
+  <polygon
+    points="60,60 340,60 370,220 30,220"
+    class="stroke-current fill-none"
+  />
+  <line
+    x1="60"
+    y1="60"
+    x2="370"
+    y2="220"
+    stroke-dasharray="6,3"
+    class="stroke-current"
+  />
+  <line
+    x1="340"
+    y1="60"
+    x2="30"
+    y2="220"
+    stroke-dasharray="6,3"
+    class="stroke-current"
+  />
+  <polygon
+    points="60,60 340,60 200,132"
+    fill-opacity="0.22"
+    stroke="none"
+    class="fill-current"
+  />
+  <circle cx="200" cy="132" r="4" class="fill-current" />
+  <text x="45" y="50" fill="currentColor" text-anchor="middle">A</text>
+  <text x="348" y="50" fill="currentColor" text-anchor="middle">D</text>
+  <text x="378" y="235" fill="currentColor" text-anchor="middle">C</text>
+  <text x="8" y="235" fill="currentColor" text-anchor="middle">B</text>
+  <text x="200" y="150" fill="currentColor" text-anchor="middle">O</text>
+  <text x="200" y="50" fill="currentColor" text-anchor="middle">4</text>
+  <text x="200" y="240" fill="currentColor" text-anchor="middle">8</text>
+  <text
+    x="200"
+    y="95"
+    fill="currentColor"
+    text-anchor="middle"
+    font-weight="bold"
+  >
+    S△AOD = 10
+  </text>
+</svg>

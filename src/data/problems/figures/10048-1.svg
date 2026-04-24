@@ -1,1 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 170" width="500" height="170"><text x="250" y="22" font-size="14" fill="currentColor" text-anchor="middle" font-weight="bold">交换前</text><rect x="40" y="40" width="180" height="110" rx="5" fill="none" stroke="currentColor"/><text x="130" y="70" font-size="13" fill="currentColor" text-anchor="middle" font-weight="bold">甲容器</text><text x="130" y="95" font-size="12" fill="currentColor" text-anchor="middle">500g，浓度 12%</text><text x="130" y="120" font-size="12" fill="currentColor" text-anchor="middle">盐 60g</text><rect x="280" y="40" width="180" height="110" rx="5" fill="none" stroke="currentColor"/><text x="370" y="70" font-size="13" fill="currentColor" text-anchor="middle" font-weight="bold">乙容器</text><text x="370" y="95" font-size="12" fill="currentColor" text-anchor="middle">300g，浓度 20%</text><text x="370" y="120" font-size="12" fill="currentColor" text-anchor="middle">盐 60g</text></svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 500 170"
+  width="500"
+  height="170"
+>
+  <text
+    x="250"
+    y="22"
+    fill="currentColor"
+    text-anchor="middle"
+    font-weight="bold"
+  >
+    交换前
+  </text>
+  <rect
+    x="40"
+    y="40"
+    width="180"
+    height="110"
+    rx="5"
+    class="stroke-current fill-none"
+  />
+  <text
+    x="130"
+    y="70"
+    fill="currentColor"
+    text-anchor="middle"
+    font-weight="bold"
+  >
+    甲容器
+  </text>
+  <text x="130" y="95" fill="currentColor" text-anchor="middle">
+    500g，浓度 12%
+  </text>
+  <text x="130" y="120" fill="currentColor" text-anchor="middle">盐 60g</text>
+  <rect
+    x="280"
+    y="40"
+    width="180"
+    height="110"
+    rx="5"
+    class="stroke-current fill-none"
+  />
+  <text
+    x="370"
+    y="70"
+    fill="currentColor"
+    text-anchor="middle"
+    font-weight="bold"
+  >
+    乙容器
+  </text>
+  <text x="370" y="95" fill="currentColor" text-anchor="middle">
+    300g，浓度 20%
+  </text>
+  <text x="370" y="120" fill="currentColor" text-anchor="middle">盐 60g</text>
+</svg>

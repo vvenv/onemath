@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" font-size="16"><g fill="none" stroke="currentColor"><rect x="30" y="30" width="120" height="120"/><line x1="70" y1="30" x2="70" y2="150"/><line x1="110" y1="30" x2="110" y2="150"/><line x1="30" y1="70" x2="150" y2="70"/><line x1="30" y1="110" x2="150" y2="110"/></g><g fill="currentColor" text-anchor="middle"><text x="130" y="56">6</text><text x="90" y="96">5</text><text x="130" y="96">1</text><text x="50" y="136">4</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <g class="stroke-current fill-none">
+    <rect x="30" y="30" width="120" height="120" />
+    <line x1="70" y1="30" x2="70" y2="150" />
+    <line x1="110" y1="30" x2="110" y2="150" />
+    <line x1="30" y1="70" x2="150" y2="70" />
+    <line x1="30" y1="110" x2="150" y2="110" />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="130" y="56" text-anchor="middle">6</text>
+    <text x="90" y="96" text-anchor="middle">5</text>
+    <text x="130" y="96" text-anchor="middle">1</text>
+    <text x="50" y="136" text-anchor="middle">4</text>
+  </g>
+</svg>

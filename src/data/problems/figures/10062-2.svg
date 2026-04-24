@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 80"><g font-size="22"><text x="10" y="50" fill="#C0392B">🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎</text><g stroke="currentColor"><line x1="160" y1="20" x2="160" y2="62"/><line x1="300" y1="20" x2="300" y2="62"/></g><text x="140" y="78" font-size="14" fill="currentColor">隔板①</text><text x="280" y="78" font-size="14" fill="currentColor">隔板②</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 80">
+  <g>
+    <text x="10" y="50" class="fill-red-800" text-anchor="middle">
+      🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎
+    </text>
+    <g class="stroke-current">
+      <line x1="160" y1="20" x2="160" y2="62" />
+      <line x1="300" y1="20" x2="300" y2="62" />
+    </g>
+    <text x="140" y="78" fill="currentColor" text-anchor="middle">隔板①</text>
+    <text x="280" y="78" fill="currentColor" text-anchor="middle">隔板②</text>
+  </g>
+</svg>

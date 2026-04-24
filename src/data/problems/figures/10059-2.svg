@@ -1,1 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 250"><g transform="translate(20,40)"><rect x="0" y="0" width="180" height="180" fill="currentColor" fill-opacity="0.12" stroke="currentColor"/><text x="62" y="98" font-size="18" fill="currentColor">30 × 30</text><text x="62" y="120" font-size="13" fill="currentColor">面积 = 900</text><text x="50" y="208" font-size="12" fill="currentColor">图①：30 × 30 正方形</text></g><g transform="translate(300,40)"><rect x="0" y="0" width="180" height="180" fill="currentColor" fill-opacity="0.12" stroke="currentColor"/><rect x="180" y="0" width="6" height="180" fill="#abebc6" stroke="#1E8449"/><rect x="0" y="0" width="186" height="6" fill="#E74C3C" fill-opacity="0.55" stroke="#C0392B"/><rect x="0" y="6" width="186" height="174" fill="none" stroke="#E67E22" stroke-width="2.5" stroke-dasharray="5 3"/><text x="62" y="110" font-size="16" fill="currentColor">30 × 30</text><text x="195" y="98" font-size="11" fill="#1E8449">+ 1×30</text><text x="0" y="-6" font-size="11" fill="#C0392B">− 31×1（去掉顶部一行）</text><text x="30" y="208" font-size="12" fill="#E67E22">图②：虚线框 = 31 × 29 = 899</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 250">
+  <g transform="translate(20,40)">
+    <rect
+      x="0"
+      y="0"
+      width="180"
+      height="180"
+      fill-opacity="0.12"
+      class="stroke-current fill-current"
+    />
+    <text x="62" y="98" fill="currentColor" text-anchor="middle">30 × 30</text>
+    <text x="62" y="120" fill="currentColor" text-anchor="middle">
+      面积 = 900
+    </text>
+    <text x="50" y="208" fill="currentColor" text-anchor="middle">
+      图①：30 × 30 正方形
+    </text>
+  </g>
+  <g transform="translate(300,40)">
+    <rect
+      x="0"
+      y="0"
+      width="180"
+      height="180"
+      fill-opacity="0.12"
+      class="stroke-current fill-current"
+    />
+    <rect
+      x="180"
+      y="0"
+      width="6"
+      height="180"
+      class="fill-green-200 stroke-green-800"
+    />
+    <rect
+      x="0"
+      y="0"
+      width="186"
+      height="6"
+      class="fill-red-500 stroke-red-500"
+      fill-opacity="0.55"
+    />
+    <rect
+      x="0"
+      y="6"
+      width="186"
+      height="174"
+      class="stroke-orange-600 fill-none"
+      stroke-width="2.5"
+      stroke-dasharray="5 3"
+    />
+    <text x="62" y="110" fill="currentColor" text-anchor="middle">30 × 30</text>
+    <text x="195" y="98" class="fill-green-800" text-anchor="middle">
+      + 1×30
+    </text>
+    <text x="0" y="-6" class="fill-red-800" text-anchor="middle">
+      − 31×1（去掉顶部一行）
+    </text>
+    <text x="30" y="208" class="fill-orange-600" text-anchor="middle">
+      图②：虚线框 = 31 × 29 = 899
+    </text>
+  </g>
+</svg>

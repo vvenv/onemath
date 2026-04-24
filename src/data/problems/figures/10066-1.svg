@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 90"><g font-size="18"><g stroke="currentColor" fill="currentColor" fill-opacity="0.12"><rect x="10" y="25" width="80" height="40"/><rect x="100" y="25" width="80" height="40"/><rect x="190" y="25" width="80" height="40"/><rect x="280" y="25" width="80" height="40"/><rect x="370" y="25" width="80" height="40"/></g><g fill="currentColor"><text x="30" y="52">位 1</text><text x="120" y="52">位 2</text><text x="210" y="52">位 3</text><text x="300" y="52">位 4</text><text x="390" y="52">位 5</text></g><text x="10" y="82" font-size="13" fill="#C0392B">甲 ✗</text><text x="370" y="82" font-size="13" fill="#C0392B">乙 ✗</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 90">
+  <g>
+    <g fill-opacity="0.12" class="stroke-current fill-current">
+      <rect x="10" y="25" width="80" height="40" />
+      <rect x="100" y="25" width="80" height="40" />
+      <rect x="190" y="25" width="80" height="40" />
+      <rect x="280" y="25" width="80" height="40" />
+      <rect x="370" y="25" width="80" height="40" />
+    </g>
+    <g class="fill-current">
+      <text x="30" y="52" text-anchor="middle">位 1</text>
+      <text x="120" y="52" text-anchor="middle">位 2</text>
+      <text x="210" y="52" text-anchor="middle">位 3</text>
+      <text x="300" y="52" text-anchor="middle">位 4</text>
+      <text x="390" y="52" text-anchor="middle">位 5</text>
+    </g>
+    <text x="10" y="82" class="fill-red-800" text-anchor="middle">甲 ✗</text>
+    <text x="370" y="82" class="fill-red-800" text-anchor="middle">乙 ✗</text>
+  </g>
+</svg>

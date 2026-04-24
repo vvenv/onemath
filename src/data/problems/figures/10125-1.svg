@@ -1,1 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" font-size="12"><g fill="none" stroke="currentColor"><polygon points="130,40 220,40 320,220 40,220"/></g><g stroke="currentColor"><line x1="130" y1="40" x2="320" y2="220"/><line x1="220" y1="40" x2="40" y2="220"/></g><g fill="currentColor"><circle cx="130" cy="40" r="3"/><circle cx="220" cy="40" r="3"/><circle cx="320" cy="220" r="3"/><circle cx="40" cy="220" r="3"/><circle cx="176" cy="84" r="3"/></g><g fill="currentColor" text-anchor="middle"><text x="130" y="32">A</text><text x="228" y="32">B</text><text x="330" y="235">C</text><text x="32" y="235">D</text><text x="174" y="75">O</text></g><g fill="currentColor" font-size="11" text-anchor="middle"><text x="174" y="60">S₁</text><text x="235" y="140">S₂ = 2</text><text x="180" y="195">S₃ = 4</text><text x="110" y="140">S₄</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
+  <g class="stroke-current fill-none">
+    <polygon points="130,40 220,40 320,220 40,220" />
+  </g>
+  <g class="stroke-current">
+    <line x1="130" y1="40" x2="320" y2="220" />
+    <line x1="220" y1="40" x2="40" y2="220" />
+  </g>
+  <g class="fill-current">
+    <circle cx="130" cy="40" r="3" />
+    <circle cx="220" cy="40" r="3" />
+    <circle cx="320" cy="220" r="3" />
+    <circle cx="40" cy="220" r="3" />
+    <circle cx="176" cy="84" r="3" />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="130" y="32" text-anchor="middle">A</text>
+    <text x="228" y="32" text-anchor="middle">B</text>
+    <text x="330" y="235" text-anchor="middle">C</text>
+    <text x="32" y="235" text-anchor="middle">D</text>
+    <text x="174" y="75" text-anchor="middle">O</text>
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="174" y="60" text-anchor="middle">S₁</text>
+    <text x="235" y="140" text-anchor="middle">S₂ = 2</text>
+    <text x="180" y="195" text-anchor="middle">S₃ = 4</text>
+    <text x="110" y="140" text-anchor="middle">S₄</text>
+  </g>
+</svg>

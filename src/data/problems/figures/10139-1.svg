@@ -1,1 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 240" font-size="12"><g fill="none" stroke="currentColor"><polygon points="40,210 310,210 100,30"/></g><g stroke="currentColor" fill="none"><line x1="100" y1="30" x2="130" y2="210"/><line x1="40" y1="210" x2="184" y2="102"/></g><g fill="rgb(169 50 38 / 0.28)" stroke="#A93226"><polygon points="40,210 130,210 120,150"/></g><g fill="currentColor"><circle cx="40" cy="210" r="3"/><circle cx="310" cy="210" r="3"/><circle cx="100" cy="30" r="3"/><circle cx="130" cy="210" r="3"/><circle cx="184" cy="102" r="3"/><circle cx="120" cy="150" r="3"/></g><g fill="currentColor" text-anchor="middle"><text x="32" y="225">B</text><text x="318" y="225">C</text><text x="100" y="22">A</text><text x="130" y="225">D</text><text x="196" y="100">E</text><text x="108" y="150">F</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 240">
+  <g class="stroke-current fill-none">
+    <polygon points="40,210 310,210 100,30" />
+  </g>
+  <g class="stroke-current fill-none">
+    <line x1="100" y1="30" x2="130" y2="210" />
+    <line x1="40" y1="210" x2="184" y2="102" />
+  </g>
+  <g class="fill-red-700/28 stroke-red-500">
+    <polygon points="40,210 130,210 120,150" />
+  </g>
+  <g class="fill-current">
+    <circle cx="40" cy="210" r="3" />
+    <circle cx="310" cy="210" r="3" />
+    <circle cx="100" cy="30" r="3" />
+    <circle cx="130" cy="210" r="3" />
+    <circle cx="184" cy="102" r="3" />
+    <circle cx="120" cy="150" r="3" />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="32" y="225" text-anchor="middle">B</text>
+    <text x="318" y="225" text-anchor="middle">C</text>
+    <text x="100" y="22" text-anchor="middle">A</text>
+    <text x="130" y="225" text-anchor="middle">D</text>
+    <text x="196" y="100" text-anchor="middle">E</text>
+    <text x="108" y="150" text-anchor="middle">F</text>
+  </g>
+</svg>

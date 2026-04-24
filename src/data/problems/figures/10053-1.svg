@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 150"><rect x="80" y="60" width="380" height="8" fill="currentColor" rx="2"/><text x="250" y="50" font-size="11" fill="currentColor">大桥 420米</text><line x1="80" y1="58" x2="80" y2="68" stroke="currentColor"/><line x1="460" y1="58" x2="460" y2="68" stroke="currentColor"/><rect x="30" y="70" width="60" height="20" fill="#e74c3c" rx="3"/><rect x="35" y="72" width="8" height="6" fill="#f1c40f"/><rect x="45" y="72" width="8" height="6" fill="#f1c40f"/><rect x="55" y="72" width="8" height="6" fill="#f1c40f"/><rect x="65" y="72" width="8" height="6" fill="#f1c40f"/><rect x="75" y="72" width="8" height="6" fill="#f1c40f"/><text x="40" y="108" font-size="11" fill="#e74c3c">火车 180米</text><text x="200" y="130" font-size="12" fill="currentColor">20米/秒</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 80">
+  <rect x="100" y="30" width="300" height="8" class="fill-current" />
+  <rect x="40" y="50" width="60" height="20" class="fill-green-900" />
+  <g class="fill-yellow-400">
+    <rect x="45" y="54" width="8" height="6" />
+    <rect x="55" y="54" width="8" height="6" />
+    <rect x="65" y="54" width="8" height="6" />
+    <rect x="75" y="54" width="8" height="6" />
+    <rect x="85" y="54" width="8" height="6" />
+  </g>
+</svg>

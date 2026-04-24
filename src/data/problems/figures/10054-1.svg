@@ -1,1 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 160"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs><line x1="30" y1="90" x2="520" y2="90" stroke="currentColor"/><circle cx="30" cy="90" r="6" fill="#2ecc71"/><text x="15" y="110" font-size="12" fill="#2ecc71">甲港</text><circle cx="520" cy="90" r="6" fill="#e74c3c"/><text x="500" y="110" font-size="12" fill="#e74c3c">乙港</text><text x="230" y="82" font-size="12" fill="currentColor">相距 120 千米</text><line x1="120" y1="62" x2="260" y2="62" stroke="#3498db" marker-end="url(#arrow)"/><text x="150" y="54" font-size="11" fill="#3498db">顺水 4 小时</text><line x1="430" y1="118" x2="290" y2="118" stroke="#e67e22" marker-end="url(#arrow)"/><text x="320" y="136" font-size="11" fill="#e67e22">逆水 6 小时</text><line x1="60" y1="30" x2="120" y2="30" stroke="#27ae60" marker-end="url(#arrow)"/><text x="125" y="34" font-size="10" fill="#27ae60">水流方向</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 160">
+  <defs>
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="9"
+      refY="5"
+      markerWidth="6"
+      markerHeight="6"
+      orient="auto-start-reverse"
+    >
+      <path d="M0,0 L10,5 L0,10 z" class="fill-current" />
+    </marker>
+  </defs>
+  <line x1="30" y1="90" x2="520" y2="90" class="stroke-current" />
+  <circle cx="30" cy="90" r="6" fill="#2ecc71" />
+  <text x="15" y="110" fill="#2ecc71" text-anchor="middle">甲港</text>
+  <circle cx="520" cy="90" r="6" class="fill-red-500" />
+  <text x="500" y="110" class="fill-red-500" text-anchor="middle">乙港</text>
+  <text x="230" y="82" fill="currentColor" text-anchor="middle">
+    相距 120 千米
+  </text>
+  <line
+    x1="120"
+    y1="62"
+    x2="260"
+    y2="62"
+    class="stroke-blue-500"
+    marker-end="url(#arrow)"
+  />
+  <text x="150" y="54" class="fill-blue-500" text-anchor="middle">
+    顺水 4 小时
+  </text>
+  <line
+    x1="430"
+    y1="118"
+    x2="290"
+    y2="118"
+    class="stroke-orange-600"
+    marker-end="url(#arrow)"
+  />
+  <text x="320" y="136" class="fill-orange-600" text-anchor="middle">
+    逆水 6 小时
+  </text>
+  <line
+    x1="60"
+    y1="30"
+    x2="120"
+    y2="30"
+    class="stroke-green-600"
+    marker-end="url(#arrow)"
+  />
+  <text x="125" y="34" class="fill-green-600" text-anchor="middle">
+    水流方向
+  </text>
+</svg>

@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="90" cy="70" r="55" fill="currentColor" fill-opacity="0.12"/><circle cx="150" cy="70" r="55" fill="currentColor" fill-opacity="0.12"/><g fill="currentColor" stroke="none" font-size="12" font-family="serif"><text x="50" y="74">A</text><text x="182" y="74">B</text><text x="104" y="74">A∩B</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" font-size="12">
+  <g class="stroke-current fill-none" stroke-width="1.5">
+    <circle cx="90" cy="70" r="55" class="fill-current/12" />
+    <circle cx="150" cy="70" r="55" class="fill-current/12" />
+  </g>
+  <g class="fill-current stroke-none" font-family="serif">
+    <text x="50" y="74">A</text>
+    <text x="182" y="74">B</text>
+    <text x="104" y="74">A∩B</text>
+  </g>
+</svg>

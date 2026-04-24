@@ -1,1 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs><text x="40" y="24" font-size="11" fill="currentColor">顺水场景</text><rect x="50" y="40" width="60" height="36" fill="#3498db" rx="5"/><text x="62" y="64" font-size="14" fill="currentColor">船</text><line x1="10" y1="78" x2="490" y2="78" stroke="#7fb3d5" stroke-dasharray="4 3"/><line x1="135" y1="58" x2="215" y2="58" stroke="#27ae60" marker-end="url(#arrow)"/><text x="140" y="50" font-size="11" fill="#27ae60">水流 5 km/h</text><text x="235" y="62" font-size="12" fill="currentColor">顺水：25 + 5 = 30 km/h</text><text x="40" y="112" font-size="11" fill="currentColor">逆水场景</text><rect x="50" y="128" width="60" height="36" fill="#e67e22" rx="5"/><text x="62" y="152" font-size="14" fill="currentColor">船</text><line x1="10" y1="166" x2="490" y2="166" stroke="#7fb3d5" stroke-dasharray="4 3"/><line x1="215" y1="146" x2="135" y2="146" stroke="#27ae60" marker-end="url(#arrow)"/><text x="145" y="138" font-size="11" fill="#27ae60">水流 5 km/h</text><text x="235" y="150" font-size="12" fill="currentColor">逆水：25 - 5 = 20 km/h</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200">
+  <defs>
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="9"
+      refY="5"
+      markerWidth="6"
+      markerHeight="6"
+      orient="auto-start-reverse"
+    >
+      <path d="M0,0 L10,5 L0,10 z" class="fill-current" />
+    </marker>
+  </defs>
+  <text x="40" y="24" fill="currentColor" text-anchor="middle">顺水场景</text>
+  <rect x="50" y="40" width="60" height="36" class="fill-blue-500" rx="5" />
+  <text x="62" y="64" fill="currentColor" text-anchor="middle">船</text>
+  <line
+    x1="10"
+    y1="78"
+    x2="490"
+    y2="78"
+    stroke="#7fb3d5"
+    stroke-dasharray="4 3"
+  />
+  <line
+    x1="135"
+    y1="58"
+    x2="215"
+    y2="58"
+    class="stroke-green-600"
+    marker-end="url(#arrow)"
+  />
+  <text x="140" y="50" class="fill-green-600" text-anchor="middle">
+    水流 5 km/h
+  </text>
+  <text x="235" y="62" fill="currentColor" text-anchor="middle">
+    顺水：25 + 5 = 30 km/h
+  </text>
+  <text x="40" y="112" fill="currentColor" text-anchor="middle">逆水场景</text>
+  <rect x="50" y="128" width="60" height="36" class="fill-orange-600" rx="5" />
+  <text x="62" y="152" fill="currentColor" text-anchor="middle">船</text>
+  <line
+    x1="10"
+    y1="166"
+    x2="490"
+    y2="166"
+    stroke="#7fb3d5"
+    stroke-dasharray="4 3"
+  />
+  <line
+    x1="215"
+    y1="146"
+    x2="135"
+    y2="146"
+    class="stroke-green-600"
+    marker-end="url(#arrow)"
+  />
+  <text x="145" y="138" class="fill-green-600" text-anchor="middle">
+    水流 5 km/h
+  </text>
+  <text x="235" y="150" fill="currentColor" text-anchor="middle">
+    逆水：25 - 5 = 20 km/h
+  </text>
+</svg>

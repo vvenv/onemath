@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" font-size="12"><g fill="none" stroke="currentColor"><rect x="30" y="30" width="200" height="200"/></g><g fill="currentColor"><circle cx="30" cy="30" r="3"/><circle cx="230" cy="30" r="3"/><circle cx="230" cy="230" r="3"/><circle cx="30" cy="230" r="3"/><circle cx="163.3" cy="30" r="3"/><circle cx="230" cy="163.3" r="3"/><circle cx="96.7" cy="230" r="3"/></g><g fill="currentColor" text-anchor="middle"><text x="22" y="26">A</text><text x="238" y="26">B</text><text x="240" y="242">C</text><text x="22" y="242">D</text><text x="163" y="22">E</text><text x="248" y="167">F</text><text x="97" y="248">G</text></g><g stroke="#A93226" fill="rgb(169 50 38 / 0.12)"><polygon points="163.3,30 230,163.3 96.7,230"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260">
+  <g class="stroke-current fill-none">
+    <rect x="30" y="30" width="200" height="200" />
+  </g>
+  <g class="fill-current">
+    <circle cx="30" cy="30" r="3" />
+    <circle cx="230" cy="30" r="3" />
+    <circle cx="230" cy="230" r="3" />
+    <circle cx="30" cy="230" r="3" />
+    <circle cx="163.3" cy="30" r="3" />
+    <circle cx="230" cy="163.3" r="3" />
+    <circle cx="96.7" cy="230" r="3" />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="22" y="26" text-anchor="middle">A</text>
+    <text x="238" y="26" text-anchor="middle">B</text>
+    <text x="240" y="242" text-anchor="middle">C</text>
+    <text x="22" y="242" text-anchor="middle">D</text>
+    <text x="163" y="22" text-anchor="middle">E</text>
+    <text x="248" y="167" text-anchor="middle">F</text>
+    <text x="97" y="248" text-anchor="middle">G</text>
+  </g>
+  <g class="stroke-red-500" fill="rgb(169 50 38 / 0.12)">
+    <polygon points="163.3,30 230,163.3 96.7,230" />
+  </g>
+</svg>

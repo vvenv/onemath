@@ -1,1 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 260" font-size="12"><g fill="none" stroke="currentColor"><polygon points="40,230 310,230 70,40"/></g><g stroke="currentColor" fill="none"><line x1="70" y1="40" x2="175" y2="230"/><line x1="40" y1="230" x2="190" y2="135"/></g><g fill="currentColor"><circle cx="40" cy="230" r="3"/><circle cx="310" cy="230" r="3"/><circle cx="70" cy="40" r="3"/><circle cx="175" cy="230" r="3"/><circle cx="140" cy="166.7" r="3"/><circle cx="190" cy="135" r="3"/></g><g fill="currentColor" text-anchor="middle"><text x="32" y="245">B</text><text x="318" y="245">C</text><text x="70" y="32">A</text><text x="175" y="246">D</text><text x="128" y="162">E</text><text x="200" y="132">F</text></g><g fill="currentColor" font-size="11" text-anchor="middle"><text x="110" y="245">D 为 BC 中点</text><text x="190" y="180">AE : ED = 2 : 1</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 260">
+  <g class="stroke-current fill-none">
+    <polygon points="40,230 310,230 70,40" />
+  </g>
+  <g class="stroke-current fill-none">
+    <line x1="70" y1="40" x2="175" y2="230" />
+    <line x1="40" y1="230" x2="190" y2="135" />
+  </g>
+  <g class="fill-current">
+    <circle cx="40" cy="230" r="3" />
+    <circle cx="310" cy="230" r="3" />
+    <circle cx="70" cy="40" r="3" />
+    <circle cx="175" cy="230" r="3" />
+    <circle cx="140" cy="166.7" r="3" />
+    <circle cx="190" cy="135" r="3" />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="32" y="245" text-anchor="middle">B</text>
+    <text x="318" y="245" text-anchor="middle">C</text>
+    <text x="70" y="32" text-anchor="middle">A</text>
+    <text x="175" y="246" text-anchor="middle">D</text>
+    <text x="152" y="175" text-anchor="middle">E</text>
+    <text x="200" y="132" text-anchor="middle">F</text>
+  </g>
+</svg>

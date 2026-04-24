@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120"><g fill="none" stroke="currentColor"><rect x="20" y="30" width="160" height="70" rx="14"/><rect x="180" y="55" width="30" height="20" rx="6"/><circle cx="70" cy="65" r="22" fill="currentColor" fill-opacity="0.12"/><circle cx="130" cy="65" r="22" fill="currentColor" fill-opacity="0.12"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120">
+  <g class="stroke-current fill-none">
+    <rect x="20" y="30" width="160" height="70" rx="14" />
+    <rect x="180" y="55" width="30" height="20" rx="6" />
+  </g>
+  <g class="stroke-none fill-current">
+    <circle cx="70" cy="65" r="22" />
+    <circle cx="130" cy="65" r="22" />
+  </g>
+</svg>

@@ -1,5 +1,4 @@
 import type { ProblemData } from "@/types/problem";
-import svg1 from "./figures/10078-1.svg?raw";
 
 export default {
   "id": "10078",
@@ -8,13 +7,6 @@ export default {
   "module": "杂题",
   "difficulty": "挑战",
   "question": "某车间生产甲、乙两种产品。生产 1 件甲需要 4 小时机器工时和 2 千克原料，可获利 7 元；生产 1 件乙需要 2 小时机器工时和 3 千克原料，可获利 5 元。本月共有 40 小时机器工时和 30 千克原料可供使用；产量必须是非负整数。问最多能获得多少元利润？对应的甲、乙分别生产多少件？",
-  "figures": [
-    {
-      "svg": svg1,
-      "caption": "两种产品的资源消耗、利润和可用资源",
-      "alt": "生产条件与约束"
-    }
-  ],
   "solutions": [
     {
       "key": "enumerate",

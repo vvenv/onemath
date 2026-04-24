@@ -1,5 +1,4 @@
 import type { ProblemData } from "@/types/problem";
-import svg1 from "./figures/10056-1.svg?raw";
 
 export default {
   "id": "10056",
@@ -8,13 +7,6 @@ export default {
   "module": "计算",
   "difficulty": "基础",
   "question": "计算：999 + 99 + 9",
-  "figures": [
-    {
-      "svg": svg1,
-      "caption": "凑整法：把接近整十、整百、整千的数先凑整，再调整",
-      "alt": "算式 999 + 99 + 9"
-    }
-  ],
   "solutions": [
     {
       "key": "rounding",

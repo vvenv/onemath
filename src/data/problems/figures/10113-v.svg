@@ -1,1 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" font-size="12"><g fill="none" stroke="currentColor"><polygon points="40,190 290,190 120,30"/></g><g stroke="currentColor" fill="none"><line x1="120" y1="30" x2="165" y2="190"/><line x1="205" y1="110" x2="142.5" y2="110"/></g><g fill="currentColor"><circle cx="40" cy="190" r="3"/><circle cx="290" cy="190" r="3"/><circle cx="120" cy="30" r="3"/><circle cx="165" cy="190" r="3"/><circle cx="205" cy="110" r="3"/><circle cx="142.5" cy="110" r="3"/><circle cx="173.75" cy="110" r="3"/></g><g fill="currentColor" text-anchor="middle"><text x="32" y="205">B</text><text x="298" y="205">C</text><text x="120" y="22">A</text><text x="165" y="207">D</text><text x="215" y="107">E</text><text x="134" y="107">F</text><text x="174" y="100">G</text></g><g stroke="#A93226" fill="rgb(169 50 38 / 0.12)"><polygon points="165,190 205,110 173.75,110"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220">
+  <g class="stroke-current fill-none">
+    <polygon points="40,190 290,190 120,30" />
+  </g>
+  <g class="stroke-current fill-none">
+    <line x1="120" y1="30" x2="165" y2="190" />
+    <line x1="205" y1="110" x2="142.5" y2="110" />
+  </g>
+  <g class="fill-current">
+    <circle cx="40" cy="190" r="3" />
+    <circle cx="290" cy="190" r="3" />
+    <circle cx="120" cy="30" r="3" />
+    <circle cx="165" cy="190" r="3" />
+    <circle cx="205" cy="110" r="3" />
+    <circle cx="142.5" cy="110" r="3" />
+    <circle cx="173.75" cy="110" r="3" />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="32" y="205" text-anchor="middle">B</text>
+    <text x="298" y="205" text-anchor="middle">C</text>
+    <text x="120" y="22" text-anchor="middle">A</text>
+    <text x="165" y="207" text-anchor="middle">D</text>
+    <text x="215" y="107" text-anchor="middle">E</text>
+    <text x="134" y="107" text-anchor="middle">F</text>
+    <text x="174" y="100" text-anchor="middle">G</text>
+  </g>
+  <g class="stroke-red-500" fill="rgb(169 50 38 / 0.12)">
+    <polygon points="165,190 205,110 173.75,110" />
+  </g>
+</svg>

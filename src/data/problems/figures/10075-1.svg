@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 170" font-size="13"><g fill="currentColor" fill-opacity="0.12" stroke="currentColor"><rect x="20" y="20" width="80" height="40" rx="6"/><rect x="20" y="110" width="80" height="40" rx="6"/><rect x="260" y="20" width="80" height="40" rx="6"/><rect x="260" y="110" width="80" height="40" rx="6"/></g><g fill="currentColor" text-anchor="middle"><text x="60" y="45">A 存 15</text><text x="60" y="135">B 存 25</text><text x="300" y="45">甲 需 20</text><text x="300" y="135">乙 需 20</text></g><g stroke="currentColor" fill="none"><line x1="100" y1="40" x2="260" y2="40"/><line x1="100" y1="40" x2="260" y2="130"/><line x1="100" y1="130" x2="260" y2="40"/><line x1="100" y1="130" x2="260" y2="130"/></g><g fill="currentColor" text-anchor="middle"><text x="180" y="35">4</text><text x="150" y="90">7</text><text x="210" y="90">5</text><text x="180" y="145">3</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 170">
+  <g fill-opacity="0.12" class="stroke-current fill-current">
+    <rect x="20" y="20" width="80" height="40" rx="6" />
+    <rect x="20" y="110" width="80" height="40" rx="6" />
+    <rect x="260" y="20" width="80" height="40" rx="6" />
+    <rect x="260" y="110" width="80" height="40" rx="6" />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="60" y="45" text-anchor="middle">A 存 15</text>
+    <text x="60" y="135" text-anchor="middle">B 存 25</text>
+    <text x="300" y="45" text-anchor="middle">甲 需 20</text>
+    <text x="300" y="135" text-anchor="middle">乙 需 20</text>
+  </g>
+  <g class="stroke-current fill-none">
+    <line x1="100" y1="40" x2="260" y2="40" />
+    <line x1="100" y1="40" x2="260" y2="130" />
+    <line x1="100" y1="130" x2="260" y2="40" />
+    <line x1="100" y1="130" x2="260" y2="130" />
+  </g>
+  <g text-anchor="middle" class="fill-current">
+    <text x="180" y="35" text-anchor="middle">4</text>
+    <text x="150" y="90" text-anchor="middle">7</text>
+    <text x="210" y="90" text-anchor="middle">5</text>
+    <text x="180" y="145" text-anchor="middle">3</text>
+  </g>
+</svg>

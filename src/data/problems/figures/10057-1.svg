@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80"><text x="20" y="52" font-size="28" fill="currentColor">2023/2024 ○ 2024/2025</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80">
+  <text x="20" y="52" fill="currentColor" text-anchor="middle">
+    2023/2024 ○ 2024/2025
+  </text>
+</svg>

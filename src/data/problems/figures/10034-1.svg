@@ -1,1 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" width="500" height="200"><defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="currentColor"/></marker></defs><!-- 地点 A, B, C --><circle cx="60" cy="100" r="20" fill="#e74c3c" opacity="0.8"/><text x="60" y="106" font-size="16" fill="currentColor" text-anchor="middle" font-weight="bold">A</text><circle cx="250" cy="100" r="20" fill="#3498db" opacity="0.8"/><text x="250" y="106" font-size="16" fill="currentColor" text-anchor="middle" font-weight="bold">B</text><circle cx="440" cy="100" r="20" fill="#2ecc71" opacity="0.8"/><text x="440" y="106" font-size="16" fill="currentColor" text-anchor="middle" font-weight="bold">C</text><!-- A 到 B 的 3 条路 --><path d="M80,85 Q165,70 230,85" fill="none" stroke="#e74c3c" marker-end="url(#arrow)"/><path d="M80,100 L230,100" fill="none" stroke="#e74c3c" marker-end="url(#arrow)"/><path d="M80,115 Q165,130 230,115" fill="none" stroke="#e74c3c" marker-end="url(#arrow)"/><!-- B 到 C 的 4 条路 --><path d="M270,85 Q355,70 420,85" fill="none" stroke="#3498db" marker-end="url(#arrow)"/><path d="M270,93 Q355,90 420,93" fill="none" stroke="#3498db" marker-end="url(#arrow)"/><path d="M270,107 Q355,110 420,107" fill="none" stroke="#3498db" marker-end="url(#arrow)"/><path d="M270,115 Q355,130 420,115" fill="none" stroke="#3498db" marker-end="url(#arrow)"/><!-- A 直接到 C 的 2 条路 --><path d="M80,160 Q250,180 420,160" fill="none" stroke="#2ecc71" stroke-dasharray="8,4" marker-end="url(#arrow)"/><path d="M80,175 Q250,195 420,175" fill="none" stroke="#2ecc71" stroke-dasharray="8,4" marker-end="url(#arrow)"/><!-- 标注 --><text x="155" y="75" font-size="12" fill="#e74c3c" text-anchor="middle">3条</text><text x="345" y="75" font-size="12" fill="#3498db" text-anchor="middle">4条</text><text x="250" y="165" font-size="12" fill="#2ecc71" text-anchor="middle">2条(直达)</text></svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 500 200"
+  width="500"
+  height="200"
+>
+  <defs>
+    <marker
+      id="arrow"
+      markerWidth="8"
+      markerHeight="6"
+      refX="8"
+      refY="3"
+      orient="auto"
+    >
+      <path d="M0,0 L8,3 L0,6 Z" class="fill-current" />
+    </marker>
+  </defs>
+  <!-- 地点 A,
+    B, C -->
+  <circle cx="60" cy="100" r="20" class="fill-red-500" opacity="0.8" />
+  <text
+    x="60"
+    y="106"
+    fill="currentColor"
+    text-anchor="middle"
+    font-weight="bold"
+  >
+    A
+  </text>
+  <circle cx="250" cy="100" r="20" class="fill-blue-500" opacity="0.8" />
+  <text
+    x="250"
+    y="106"
+    fill="currentColor"
+    text-anchor="middle"
+    font-weight="bold"
+  >
+    B
+  </text>
+  <circle cx="440" cy="100" r="20" fill="#2ecc71" opacity="0.8" />
+  <text
+    x="440"
+    y="106"
+    fill="currentColor"
+    text-anchor="middle"
+    font-weight="bold"
+  >
+    C
+  </text>
+  <!-- A
+    到 B 的 3 条路 -->
+  <path
+    d="M80,85 Q165,70 230,85"
+    class="stroke-red-500 fill-none"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M80,100 L230,100"
+    class="stroke-red-500 fill-none"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M80,115 Q165,130 230,115"
+    class="stroke-red-500 fill-none"
+    marker-end="url(#arrow)"
+  />
+  <!--
+    B 到 C 的 4 条路 -->
+  <path
+    d="M270,85 Q355,70 420,85"
+    class="stroke-blue-500 fill-none"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M270,93 Q355,90 420,93"
+    class="stroke-blue-500 fill-none"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M270,107 Q355,110 420,107"
+    class="stroke-blue-500 fill-none"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M270,115 Q355,130 420,115"
+    class="stroke-blue-500 fill-none"
+    marker-end="url(#arrow)"
+  />
+  <!--
+    A 直接到 C 的 2 条路 -->
+  <path
+    d="M80,160 Q250,180 420,160"
+    stroke="#2ecc71"
+    stroke-dasharray="8,4"
+    marker-end="url(#arrow)"
+    class="fill-none"
+  />
+  <path
+    d="M80,175 Q250,195 420,175"
+    stroke="#2ecc71"
+    stroke-dasharray="8,4"
+    marker-end="url(#arrow)"
+    class="fill-none"
+  />
+  <!-- 标注 -->
+  <text x="155" y="75" class="fill-red-500" text-anchor="middle">3条</text>
+  <text x="345" y="75" class="fill-blue-500" text-anchor="middle">4条</text>
+  <text x="250" y="165" fill="#2ecc71" text-anchor="middle">2条(直达)</text>
+</svg>
