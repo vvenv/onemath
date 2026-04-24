@@ -37,7 +37,7 @@
 
 - Do NOT use Markdown syntax in any text fields of `src/data/problems/*.ts` or `src/data/knowledge/*.ts` (e.g. problem `stem`/`question`, solution `分析`/`step` text, knowledge `content`, captions, descriptions). The renderer displays these as plain text and does not parse Markdown.
 - Specifically avoid: `**bold**`, `*italic*`, `_emphasis_`, `` `code` ``, `#`/`##` headings, `-`/`*`/`1.` list markers, `[text](url)` links, `> ` blockquotes, and fenced code blocks.
-- For math, use the project's LaTeX/KaTeX delimiters (as already used in existing data files) rather than Markdown. For emphasis, rely on sentence structure and scene composition instead of inline formatting.
+- For math, use Unicode characters and symbols (e.g. ×, ÷, ², ₁, ₂, −) as already used in existing data files. Do not use LaTeX, KaTeX, or Markdown syntax — the renderer displays text as plain text. For emphasis, rely on sentence structure and scene composition instead of inline formatting.
 
 ## Scene Labels (`compare-bars`, `equation-list`, etc.)
 
