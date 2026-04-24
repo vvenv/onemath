@@ -25,10 +25,10 @@
 ### 1.3 覆盖度审计（脚本统计）
 
 * 题目总数：143
-* 解法总数：382
-* 场景块总数：462
 * 完全无场景的题目：**0**（每题至少 1 个 scene）
-* 弱覆盖（某些 solution 没有对应 scene）：**35 题**
+* 弱覆盖（某些 solution 没有对应 scene）：**2 题**
+  * `10001.ts`：solution `hypothesis` 缺 scene
+  * `10143.ts`：solution `enumeration` 缺 scene
 
 scene 类型频次（高 → 低）：
 
@@ -47,23 +47,11 @@ scene 类型频次（高 → 低）：
   1  cube-net
 ```
 
-弱覆盖题目清单（`scenes/solutions`）：
-
-```
-10011 (3/4)  10012 (3/4)  10032 (1/4)  10074 (3/4)
-10079 (2/3)  10080 (2/3)  10085 (2/4)  10086 (2/4)
-10087 (1/3)  10088 (2/3)  10089 (2/3)  10090 (1/2)
-10091 (2/3)  10092 (1/2)  10093 (1/2)  10094 (2/3)
-10095 (1/2)  10096 (1/3)  10097 (1/3)  10098 (1/2)
-10099 (1/2)  10100 (2/3)  10101 (2/3)  10102 (1/3)
-10103 (1/3)  10104 (1/3)  10105 (1/2)  10106 (1/2)
-10107 (1/3)  10108 (1/2)  10110 (1/3)  10111 (1/3)
-10112 (2/3)  10141 (2/3)  10143 (2/3)
-```
+> **审计修正**：本计划第一版（PR #11）报告了 35 题弱覆盖，使用的是只看全文 `"key":` / `"kind":` 出现次数的粗略正则——它把 `variant.fields[].key`（题目下方变式的字段名）也算进了 "solutions" 计数，导致虚高。换用对每个 `solutions[]` 数组成员单独计数 `kind` 的解析后，真实数字是 **2 题**。Phase 3 因此从 "3–4 个分批 PR" 收敛为 1 个 PR。
 
 ### 1.4 已存在但未启用的工具
 
-* `src/lib/svg-builders.ts` 提供了 `createSeatingChart` / `createMatrixDiagram` / `createDecisionTree` / `createBarChart` / `createNumberLine` / `createVennDiagram`，但全仓 0 处引用，且实现存在 AGENTS.md 合规问题：使用了 `hsl(var(--primary))`（与 oklch 变量不兼容）、硬编码 `stroke-width="2"`、未走 `currentColor`。Phase 2 将整治。
+* `src/lib/svg-builders.ts` 提供了 `createSeatingChart` / `createMatrixDiagram` / `createDecisionTree` / `createBarChart` / `createVennDiagram`。Phase 2（PR #12）已将其重写为 `currentColor` + 单行 SVG、删除 `createNumberLine`（`number-line` scene 已覆盖）。首处实际调用会随 Phase 3 之后的题目出现。
 
 ## 2. 目标
 
@@ -77,33 +65,33 @@ scene 类型频次（高 → 低）：
 
 > 每个 Phase 一个 PR，互不阻塞。Phase 1 仅文档；Phase 2 起进入代码改动。
 
-### Phase 1 · 计划文档 + 覆盖度审计（本 PR）
+### Phase 1 · 计划文档 + 覆盖度审计（已合 PR #11）
 
 * 重写 `docs/VISUALIZATION-ENHANCEMENT-PLAN.md`（即本文件）。
-* 输出 35 题弱覆盖清单作为 Phase 3 输入。
+* 输出弱覆盖清单作为 Phase 3 输入。
 * 不动业务代码、不动 UI。
 
-### Phase 2 · SVG Helper 收敛
+### Phase 2 · SVG Helper 收敛（已合 PR #12）
 
-* 修复或重写 `src/lib/svg-builders.ts`：
+* 重写 `src/lib/svg-builders.ts`：
   * 一律使用 `currentColor`（强调色用 `text-primary` 等 className 包裹外层，而非在 SVG 内嵌 `hsl(var(--primary))`）。
   * 默认不写 `stroke-width`（沿用 AGENTS.md 默认 1）。
   * 容器矩形 `fill="none"`，不再压字暗色不可读的浅色背景。
-* 不在 Phase 2 引入新业务调用，先把库改对、再加测试样例。
+* 删除与 `number-line` scene 重叠的 `createNumberLine`。
+* Devin Review 发现并修复 Venn 图非默认 overlap 下区域文字定位 bug。
 
-### Phase 3 · 弱覆盖题目补 scene（分批）
+### Phase 3 · 弱覆盖题目补 scene（本 PR）
 
-* 按上表 35 题分 3–4 批小 PR，每批 8–10 题。
-* 每题选择最贴合解法的 scene 类型，遵循 AGENTS.md "Problem Solutions" 节：不在 step 文本里复述 `equation-list` 已经走过的推导。
-* 涉及几何题的，把内联 `<svg>...</svg>` 拆到 `src/data/problems/figures/<id>-<n>.svg`，再以 `?raw` 引入。
+* 仅 2 题需要补 scene，本 PR 一次性完成：
+  * `10001.ts` `hypothesis` 补 `equation-list`（全鸡假设 → 脸额差 → 摄回到兔子数）。
+  * `10143.ts` `enumeration` 补 `equation-list`（逐级枚举路径清单 · 与递推法不重复），并把原本重复枚举的 step 文本收敛为两句总结。
+* 本轮不动几何题中的内联 SVG（未发现未拆分例）。
 
-### Phase 4 · 按需扩展 SceneSpec
+### Phase 4 · 按需扩展 SceneSpec（暂不启动）
 
-* 仅在 Phase 3 实际遇到无法用现有 12 种类型覆盖的场景时才新增。候选（未确认必要性）：
-  * `fraction-strips`：分数 / 比例条带。
-  * `timeline`：行程、日期、进程类。
-  * `permutation-tree`：排列组合树（如能用 `lattice` + `equation-list` 表达则不增）。
-* 任何新增类型必须：在 `src/types/visual.ts` 增加联合分支 → 在 `scene-renderer.tsx` 加 case → 增加 1 个独立组件文件 → 在 `src/components/visuals/index.ts` 导出。
+* Phase 3 只补了 2 题，没有采集到 "当前 12 种 scene 类型表达不了" 的负面例，所以不主动新增。
+* 如未来 `/generate-problem` / `/optimize-problem` 工作流中出现明确表达不了的记号，再拉起本 Phase。候选仍为 `fraction-strips`、`timeline`、`permutation-tree`。
+* 纪律不变：任何新增类型必须同时动 `src/types/visual.ts` + `scene-renderer.tsx` + 独立组件 + `src/components/visuals/index.ts` 导出，且在首个 PR 里就上至少 1 处真实调用。
 
 ### Phase 5 · Scene 容器与 UI 细节打磨
 
