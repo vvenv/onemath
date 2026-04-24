@@ -303,9 +303,10 @@ export function createVennDiagram(
     `<circle cx="${rightCx}" cy="${cy}" r="${r}" fill="currentColor" fill-opacity="0.08" stroke="currentColor"/>`,
   );
 
-  // Region counts.
-  const leftCenterX = leftCx - centerGap / 2;
-  const rightCenterX = rightCx + centerGap / 2;
+  // Region counts. The visual centers of the left-only and right-only crescents
+  // are `r` away from the intersection center, regardless of `overlap`.
+  const leftCenterX = intersectionCx - r;
+  const rightCenterX = intersectionCx + r;
   parts.push(
     `<text x="${leftCenterX}" y="${cy}" text-anchor="middle" dominant-baseline="central" font-size="14" fill="currentColor">${leftOnly}</text>`,
   );
