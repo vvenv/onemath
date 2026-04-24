@@ -1,5 +1,4 @@
 import type { Config } from "@react-router/dev/config";
-import { vercelPreset } from "@vercel/react-router/vite";
 
 import { getPrerenderPaths } from "./prerender-paths";
 
@@ -7,12 +6,11 @@ export default {
   appDirectory: "src",
   // Static export: no Node server at runtime; every route is prerendered to HTML.
   ssr: false,
-  // Opt into Vercel's react-router preset so the build populates
-  // `.vercel/output/static` with *all* files from `build/client` (including
-  // unreferenced static assets like `sitemap.xml` and `robots.txt`). Without
-  // the preset, Vercel's zero-config adapter only deploys files reachable
-  // from the Vite bundle manifest and silently drops the rest.
-  presets: [vercelPreset()],
+  // Output goes directly to `build/client/`; `scripts/emit-vercel-output.mjs`
+  // then assembles `.vercel/output/` (Vercel Build Output API v3) from it,
+  // adding the `/mcp` serverless function. This replaces the
+  // `@vercel/react-router` preset, which only emitted static assets and
+  // prevented us from registering additional serverless functions.
   async prerender() {
     return getPrerenderPaths();
   },
