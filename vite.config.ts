@@ -8,6 +8,7 @@ import { VitePWA } from "vite-plugin-pwa";
 import { getPrerenderPaths } from "./prerender-paths";
 import { agentSkills } from "./vite-plugins/agent-skills";
 import { markdownNegotiationPlugin } from "./vite-plugins/markdown-negotiation";
+import { vercelOutputPlugin } from "./vite-plugins/vercel-output";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SITE_URL = "https://edao.plus";
@@ -99,6 +100,7 @@ export default defineConfig({
     sitemapPlugin(),
     reactRouter(),
     markdownNegotiationPlugin(),
+    vercelOutputPlugin(),
     VitePWA({
       registerType: "autoUpdate",
       injectRegister: null,
