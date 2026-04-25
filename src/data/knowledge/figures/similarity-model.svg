@@ -1,13 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
-  <g class="stroke-current fill-none" stroke-width="3.06">
+  <g class="stroke-current fill-none">
     <polygon points="220,37 20,241 420,241" />
-    <line x1="155" y1="113" x2="302" y2="113" />
+    <line x1="145" y1="113" x2="295" y2="113" />
   </g>
-  <g class="fill-current stroke-none" font-family="serif">
-    <text x="232" y="24">A</text>
-    <text x="20" y="256">B</text>
-    <text x="420" y="256">C</text>
-    <text x="130" y="109">D</text>
-    <text x="310" y="109">E</text>
+  <g class="fill-current">
+    <circle cx="220" cy="37" r="4" class="fill-current/10" />
+    <circle cx="20" cy="241" r="4" class="fill-current/10" />
+    <circle cx="420" cy="241" r="4" class="fill-current/10" />
+    <circle cx="155" cy="113" r="4" class="fill-current/10" />
+    <circle cx="302" cy="113" r="4" class="fill-current/10" />
+    <g text-anchor="middle">
+      <text x="232" y="24">A</text>
+      <text x="20" y="256">B</text>
+      <text x="420" y="256">C</text>
+      <text x="130" y="109">D</text>
+      <text x="310" y="109">E</text>
+    </g>
   </g>
 </svg>

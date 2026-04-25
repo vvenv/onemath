@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <rect x="153.33" y="153.33" width="133.33" height="133.33" class="fill-current/18" />
-  <g class="stroke-current fill-none" stroke-width="3.33">
+  <g class="stroke-current fill-none">
     <rect x="20.00" y="20.00" width="400.00" height="400.00" />
     <line x1="153.33" y1="20.00" x2="153.33" y2="420.00" />
     <line x1="286.67" y1="20.00" x2="286.67" y2="420.00" />
@@ -9,7 +9,6 @@
   </g>
   <g
     class="stroke-current fill-none"
-    stroke-width="4.67"
     stroke-opacity="0.55"
     stroke-dasharray="6 3"
   >
@@ -18,7 +17,7 @@
     <line x1="20.00" y1="20.00" x2="420.00" y2="420.00" />
     <line x1="420.00" y1="20.00" x2="20.00" y2="420.00" />
   </g>
-  <text x="203.33" y="240.00" class="fill-current stroke-none" font-family="serif">
+  <text x="203.33" y="240.00" class="fill-current stroke-none">
     c
   </text>
 </svg>

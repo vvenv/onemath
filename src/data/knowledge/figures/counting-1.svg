@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
-  <g class="stroke-current fill-none" stroke-width="2.50">
-    <circle cx="170.00" cy="140.00" r="55" class="fill-current/12" />
-    <circle cx="270.00" cy="140.00" r="55" class="fill-current/12" />
+  <g class="stroke-current fill-none">
+    <circle cx="160.00" cy="140.00" r="80" class="fill-current/12" />
+    <circle cx="280.00" cy="140.00" r="80" class="fill-current/12" />
   </g>
-  <g class="fill-current stroke-none" font-family="serif">
-    <text x="103.33" y="146.67">A</text>
-    <text x="323.33" y="146.67">B</text>
-    <text x="193.33" y="146.67">A∩B</text>
+  <g class="fill-current">
+    <text x="60.00" y="146.67" text-anchor="middle">A</text>
+    <text x="380.00" y="146.67" text-anchor="middle">B</text>
+    <text x="220.00" y="146.67" text-anchor="middle">A∩B</text>
   </g>
 </svg>

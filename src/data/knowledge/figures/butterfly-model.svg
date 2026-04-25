@@ -1,18 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
-  <g class="stroke-current fill-none" stroke-width="3.13">
+  <g class="stroke-current fill-none">
     <polygon points="110,37 330,37 384,217 20,217" />
-    <line x1="99" y1="50" x2="412" y2="217" />
-    <line x1="349" y1="50" x2="37" y2="217" />
+    <line x1="110" y1="37" x2="384" y2="217" />
+    <line x1="330" y1="37" x2="20" y2="217" />
   </g>
-  <g class="fill-current stroke-none" font-family="serif">
-    <text x="87" y="38">A</text>
-    <text x="341" y="38">B</text>
-    <text x="420" y="242">C</text>
-    <text x="20" y="242">D</text>
-    <text x="216" y="109">O</text>
-    <text x="216" y="80">S₂</text>
-    <text x="133" y="159">S₁</text>
-    <text x="291" y="159">S₃</text>
-    <text x="212" y="205">S₄</text>
+  <g class="fill-current">
+    <circle cx="110" cy="37" r="3" />
+    <circle cx="330" cy="37" r="3" />
+    <circle cx="384" cy="217" r="3" />
+    <circle cx="20" cy="217" r="3" />
+    <circle cx="213" cy="105" r="3" />
+  </g>
+  <g class="fill-current stroke-none" text-anchor="middle">
+    <text x="110" y="28">A</text>
+    <text x="330" y="28">B</text>
+    <text x="384" y="238">C</text>
+    <text x="20" y="238">D</text>
+    <text x="215" y="125">O</text>
+    <text x="215" y="65">S₂</text>
+    <text x="155" y="105">S₁</text>
+    <text x="285" y="105">S₃</text>
+    <text x="215" y="160">S₄</text>
   </g>
 </svg>

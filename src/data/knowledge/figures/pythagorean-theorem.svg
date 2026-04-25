@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
-  <g class="stroke-current fill-none" stroke-width="2.50">
+  <g class="stroke-current fill-none">
     <polygon points="169,131 169,283 283,131" />
     <polygon points="169,131 169,283 20,283 20,131" class="fill-current/10" />
     <polygon points="169,131 283,131 283,20 169,20" class="fill-current/10" />
     <polygon points="169,283 283,131 440,238 317,396" class="fill-current/18" />
   </g>
-  <g class="fill-current stroke-none" font-family="serif">
+  <g class="fill-current stroke-none">
     <text x="87" y="228">b²</text>
     <text x="212" y="112">a²</text>
     <text x="320" y="287">c²</text>

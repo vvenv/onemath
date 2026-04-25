@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
-  <g class="stroke-current fill-none" stroke-width="3.21">
+  <g class="stroke-current fill-none">
     <polygon points="92,37 20,241 364,241" />
-    <line x1="72" y1="131" x2="254" y2="131" />
+    <line x1="58" y1="131" x2="218" y2="131" />
   </g>
-  <g class="fill-current stroke-none" font-family="serif">
+  <g class="fill-current stroke-none">
     <text x="98" y="20">A</text>
     <text x="21" y="260">B</text>
     <text x="419" y="260">C</text>

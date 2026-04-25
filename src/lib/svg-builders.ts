@@ -132,7 +132,7 @@ export function createMatrixDiagram(
 
   if (options?.highlightDiagonal) {
     parts.push(
-      `<line x1="0" y1="0" x2="${size}" y2="${size}" stroke="currentColor" stroke-width="1.5"/>`,
+      `<line x1="0" y1="0" x2="${size}" y2="${size}" stroke="currentColor"/>`,
     );
   }
 

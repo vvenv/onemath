@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
-  <g class="stroke-current fill-none" stroke-width="1.5">
+  <g class="stroke-current fill-none">
     <polygon points="220,20 80,220 360,220" />
     <line x1="220" y1="20" x2="220" y2="220" />
     <line x1="80" y1="220" x2="220" y2="140" stroke-dasharray="6 3" />
     <line x1="360" y1="220" x2="220" y2="140" stroke-dasharray="6 3" />
   </g>
   <circle cx="220" cy="140" r="2.8" class="fill-current" />
-  <g class="fill-current stroke-none" font-family="serif">
+  <g class="fill-current stroke-none">
     <text x="222" y="16">A</text>
     <text x="68" y="240">B</text>
     <text x="372" y="240">C</text>
