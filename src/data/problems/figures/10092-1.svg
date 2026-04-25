@@ -1,25 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <g class="stroke-current fill-none">
     <g>
-      <circle cx="80" cy="40" r="10" />
-      <circle cx="110" cy="40" r="10" />
-      <circle cx="140" cy="40" r="10" />
-      <circle cx="65" cy="70" r="10" />
-      <circle cx="95" cy="70" r="10" />
-      <circle cx="125" cy="70" r="10" />
-      <circle cx="155" cy="70" r="10" />
-      <circle cx="50" cy="100" r="10" />
-      <circle cx="80" cy="100" r="10" />
-      <circle cx="110" cy="100" r="10" />
-      <circle cx="140" cy="100" r="10" />
-      <circle cx="170" cy="100" r="10" />
-      <circle cx="65" cy="130" r="10" />
-      <circle cx="95" cy="130" r="10" />
-      <circle cx="125" cy="130" r="10" />
-      <circle cx="155" cy="130" r="10" />
-      <circle cx="80" cy="160" r="10" />
-      <circle cx="110" cy="160" r="10" />
-      <circle cx="140" cy="160" r="10" />
+      <circle cx="120.00" cy="20.00" r="10" />
+      <circle cx="220.00" cy="20.00" r="10" />
+      <circle cx="320.00" cy="20.00" r="10" />
+      <circle cx="70.00" cy="120.00" r="10" />
+      <circle cx="170.00" cy="120.00" r="10" />
+      <circle cx="270.00" cy="120.00" r="10" />
+      <circle cx="370.00" cy="120.00" r="10" />
+      <circle cx="20.00" cy="220.00" r="10" />
+      <circle cx="120.00" cy="220.00" r="10" />
+      <circle cx="220.00" cy="220.00" r="10" />
+      <circle cx="320.00" cy="220.00" r="10" />
+      <circle cx="420.00" cy="220.00" r="10" />
+      <circle cx="70.00" cy="320.00" r="10" />
+      <circle cx="170.00" cy="320.00" r="10" />
+      <circle cx="270.00" cy="320.00" r="10" />
+      <circle cx="370.00" cy="320.00" r="10" />
+      <circle cx="120.00" cy="420.00" r="10" />
+      <circle cx="220.00" cy="420.00" r="10" />
+      <circle cx="320.00" cy="420.00" r="10" />
     </g>
   </g>
 </svg>

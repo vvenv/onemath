@@ -1,5 +1,4 @@
 import type { ProblemData } from "@/types/problem";
-import svg1 from "./figures/10110-1.svg?raw";
 
 export default {
   "id": "10110",
@@ -8,13 +7,6 @@ export default {
   "module": "杂题",
   "difficulty": "进阶",
   "question": "把 1, 2, 3, 4, 5, 6, 7 这 7 个数字各用一次填入圆周上依次排列的 7 个圆 A₁, A₂, …, A₇（首尾相接）。已知相邻两圆上的数字之差的绝对值依次为：|A₂ − A₁| = 2, |A₃ − A₂| = 1, |A₄ − A₃| = 3, |A₅ − A₄| = 1, |A₆ − A₅| = 3, |A₇ − A₆| = 1, |A₁ − A₇| = 5。\n若规定 A₁ = 1，请从 A₁ 开始顺时针写出 7 个圆上的数字。",
-  "figures": [
-    {
-      "svg": svg1,
-      "caption": "7 个圆首尾相接排成闭环",
-      "alt": "七圆闭环"
-    }
-  ],
   "solutions": [
     {
       "key": "run",

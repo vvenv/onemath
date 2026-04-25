@@ -1,19 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <g class="stroke-current">
-    <rect x="20" y="20" width="160" height="160" class="fill-none" />
+    <rect x="20.00" y="20.00" width="457.14" height="457.14" class="fill-none" />
   </g>
   <g class="fill-current">
-    <rect x="20" y="20" width="20" height="20" />
-    <rect x="160" y="160" width="20" height="20" />
+    <rect x="20.00" y="20.00" width="57.14" height="57.14" />
+    <rect x="420.00" y="420.00" width="57.14" height="57.14" />
   </g>
   <g fill-opacity="0.12" class="fill-current">
-    <rect x="40" y="20" width="20" height="20" />
-    <rect x="80" y="20" width="20" height="20" />
-    <rect x="120" y="20" width="20" height="20" />
-    <rect x="160" y="20" width="20" height="20" />
-    <rect x="20" y="40" width="20" height="20" />
-    <rect x="60" y="40" width="20" height="20" />
-    <rect x="100" y="40" width="20" height="20" />
-    <rect x="140" y="40" width="20" height="20" />
+    <rect x="77.14" y="20.00" width="57.14" height="57.14" />
+    <rect x="191.43" y="20.00" width="57.14" height="57.14" />
+    <rect x="305.71" y="20.00" width="57.14" height="57.14" />
+    <rect x="420.00" y="20.00" width="57.14" height="57.14" />
+    <rect x="20.00" y="77.14" width="57.14" height="57.14" />
+    <rect x="134.29" y="77.14" width="57.14" height="57.14" />
+    <rect x="248.57" y="77.14" width="57.14" height="57.14" />
+    <rect x="362.86" y="77.14" width="57.14" height="57.14" />
   </g>
 </svg>

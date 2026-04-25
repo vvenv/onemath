@@ -1,62 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 250">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
   <g transform="translate(20,40)">
     <rect
-      x="0"
-      y="0"
-      width="180"
-      height="180"
+      x="20.00"
+      y="47.41"
+      width="133.33"
+      height="133.33"
       fill-opacity="0.12"
       class="stroke-current fill-current"
     />
-    <text x="62" y="98" fill="currentColor" text-anchor="middle">30 × 30</text>
-    <text x="62" y="120" fill="currentColor" text-anchor="middle">
+    <text x="65.93" y="120.00" fill="currentColor" text-anchor="middle">30 × 30</text>
+    <text x="65.93" y="136.30" fill="currentColor" text-anchor="middle">
       面积 = 900
     </text>
-    <text x="50" y="208" fill="currentColor" text-anchor="middle">
+    <text x="57.04" y="201.48" fill="currentColor" text-anchor="middle">
       图①：30 × 30 正方形
     </text>
   </g>
   <g transform="translate(300,40)">
     <rect
-      x="0"
-      y="0"
-      width="180"
-      height="180"
+      x="20.00"
+      y="47.41"
+      width="133.33"
+      height="133.33"
       fill-opacity="0.12"
       class="stroke-current fill-current"
     />
     <rect
-      x="180"
-      y="0"
-      width="6"
-      height="180"
+      x="153.33"
+      y="47.41"
+      width="4.44"
+      height="133.33"
       class="fill-green-200 stroke-green-800"
     />
     <rect
-      x="0"
-      y="0"
-      width="186"
-      height="6"
+      x="20.00"
+      y="47.41"
+      width="137.78"
+      height="4.44"
       class="fill-red-500 stroke-red-500"
       fill-opacity="0.55"
     />
     <rect
-      x="0"
-      y="6"
-      width="186"
-      height="174"
+      x="20.00"
+      y="51.85"
+      width="137.78"
+      height="128.89"
       class="stroke-orange-600 fill-none"
-      stroke-width="2.5"
-      stroke-dasharray="5 3"
+      stroke-width="1.85"
+      stroke-dasharray="6 3"
     />
-    <text x="62" y="110" fill="currentColor" text-anchor="middle">30 × 30</text>
-    <text x="195" y="98" class="fill-green-800" text-anchor="middle">
+    <text x="65.93" y="128.89" fill="currentColor" text-anchor="middle">30 × 30</text>
+    <text x="164.44" y="120.00" class="fill-green-800" text-anchor="middle">
       + 1×30
     </text>
-    <text x="0" y="-6" class="fill-red-800" text-anchor="middle">
+    <text x="20.00" y="42.96" class="fill-red-800" text-anchor="middle">
       − 31×1（去掉顶部一行）
     </text>
-    <text x="30" y="208" class="fill-orange-600" text-anchor="middle">
+    <text x="42.22" y="201.48" class="fill-orange-600" text-anchor="middle">
       图②：虚线框 = 31 × 29 = 899
     </text>
   </g>

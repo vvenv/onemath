@@ -1,12 +1,12 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 400 200"
-  width="400"
-  height="200"
+  viewBox="0 0 440 280"
+  width="581.82"
+  height="290.91"
 >
   <text
-    x="200"
-    y="30"
+    x="220.00"
+    y="20.00"
     fill="currentColor"
     text-anchor="middle"
     font-weight="bold"
@@ -16,8 +16,8 @@
   <!--
     树根 -->
   <text
-    x="200"
-    y="60"
+    x="220.00"
+    y="63.64"
     class="fill-red-500"
     text-anchor="middle"
     font-weight="bold"
@@ -25,20 +25,20 @@
     210
   </text>
   <!-- 第一层分支 -->
-  <line x1="200" y1="70" x2="140" y2="100" class="stroke-current" />
-  <line x1="200" y1="70" x2="260" y2="100" class="stroke-current" />
-  <text x="130" y="115" class="fill-blue-500" text-anchor="middle">10</text>
-  <text x="270" y="115" class="fill-blue-500" text-anchor="middle">21</text>
+  <line x1="220.00" y1="78.18" x2="132.73" y2="121.82" class="stroke-current" />
+  <line x1="220.00" y1="78.18" x2="307.27" y2="121.82" class="stroke-current" />
+  <text x="118.18" y="143.64" class="fill-blue-500" text-anchor="middle">10</text>
+  <text x="321.82" y="143.64" class="fill-blue-500" text-anchor="middle">21</text>
   <!-- 第二层分支 -->
-  <line x1="130" y1="125" x2="100" y2="150" class="stroke-current" />
-  <line x1="130" y1="125" x2="160" y2="150" class="stroke-current" />
-  <line x1="270" y1="125" x2="240" y2="150" class="stroke-current" />
-  <line x1="270" y1="125" x2="300" y2="150" class="stroke-current" />
-  <text x="90" y="165" class="fill-green-600" text-anchor="middle">2</text>
-  <text x="170" y="165" class="fill-green-600" text-anchor="middle">5</text>
-  <text x="230" y="165" class="fill-green-600" text-anchor="middle">3</text>
-  <text x="310" y="165" class="fill-green-600" text-anchor="middle">7</text>
-  <text x="200" y="195" fill="currentColor" text-anchor="middle">
+  <line x1="118.18" y1="158.18" x2="74.55" y2="194.55" class="stroke-current" />
+  <line x1="118.18" y1="158.18" x2="161.82" y2="194.55" class="stroke-current" />
+  <line x1="321.82" y1="158.18" x2="278.18" y2="194.55" class="stroke-current" />
+  <line x1="321.82" y1="158.18" x2="365.45" y2="194.55" class="stroke-current" />
+  <text x="60.00" y="216.36" class="fill-green-600" text-anchor="middle">2</text>
+  <text x="176.36" y="216.36" class="fill-green-600" text-anchor="middle">5</text>
+  <text x="263.64" y="216.36" class="fill-green-600" text-anchor="middle">3</text>
+  <text x="380.00" y="216.36" class="fill-green-600" text-anchor="middle">7</text>
+  <text x="220.00" y="260.00" fill="currentColor" text-anchor="middle">
     210 = 2 × 3 × 5 × 7
   </text>
 </svg>

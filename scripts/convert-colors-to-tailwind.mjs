@@ -22,9 +22,9 @@ const COLOR_MAPPINGS = {
   "#3498db": { fill: "fill-blue-500", stroke: "stroke-blue-500" },
 
   // Red tones
-  "rgb(169 50 38 / 0.28)": { fill: "fill-red-700/28", stroke: null },
-  "rgb(169 50 38 / 0.30)": { fill: "fill-red-700/30", stroke: null },
-  "rgb(169 50 38 / 0.35)": { fill: "fill-red-700/35", stroke: null },
+  "rgb(169 50 38 / 0.28)": { fill: "fill-red-500/10", stroke: null },
+  "rgb(169 50 38 / 0.30)": { fill: "fill-red-500/10", stroke: null },
+  "rgb(169 50 38 / 0.35)": { fill: "fill-red-500/10", stroke: null },
   "#A93226": { fill: "fill-red-800", stroke: "stroke-red-800" },
   "#a93226": { fill: "fill-red-800", stroke: "stroke-red-800" },
   "#C0392B": { fill: "fill-red-800", stroke: "stroke-red-800" },

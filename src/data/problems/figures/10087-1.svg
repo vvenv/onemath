@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <g class="stroke-current fill-none">
-    <rect x="30" y="30" width="120" height="120" />
-    <line x1="70" y1="30" x2="70" y2="150" />
-    <line x1="110" y1="30" x2="110" y2="150" />
-    <line x1="30" y1="70" x2="150" y2="70" />
-    <line x1="30" y1="110" x2="150" y2="110" />
+    <rect x="20.00" y="20.00" width="400.00" height="400.00" />
+    <line x1="153.33" y1="20.00" x2="153.33" y2="420.00" />
+    <line x1="286.67" y1="20.00" x2="286.67" y2="420.00" />
+    <line x1="20.00" y1="153.33" x2="420.00" y2="153.33" />
+    <line x1="20.00" y1="286.67" x2="420.00" y2="286.67" />
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="130" y="56" text-anchor="middle">6</text>
-    <text x="90" y="96" text-anchor="middle">5</text>
-    <text x="130" y="96" text-anchor="middle">1</text>
-    <text x="50" y="136" text-anchor="middle">4</text>
+    <text x="353.33" y="106.67" text-anchor="middle">6</text>
+    <text x="220.00" y="240.00" text-anchor="middle">5</text>
+    <text x="353.33" y="240.00" text-anchor="middle">1</text>
+    <text x="86.67" y="373.33" text-anchor="middle">4</text>
   </g>
 </svg>

@@ -1,35 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
   <g class="stroke-current fill-none">
-    <polygon points="40,210 310,210 100,30" />
+    <polygon points="60,242 380,242 131,29" />
   </g>
   <g class="stroke-current fill-none">
-    <line x1="100" y1="30" x2="130" y2="210" />
-    <line x1="40" y1="210" x2="240" y2="150" />
-    <line x1="310" y1="210" x2="80" y2="90" />
+    <line x1="131" y1="29" x2="167" y2="242" />
+    <line x1="60" y1="242" x2="297" y2="171" />
+    <line x1="380" y1="242" x2="108" y2="100" />
   </g>
-  <g class="fill-red-700/30 stroke-red-500">
-    <polygon points="211,159 113,107 126,184" />
+  <g class="fill-red-500/10 stroke-red-500">
+    <polygon points="263,182 147,120 162,212" />
   </g>
   <g class="fill-current">
-    <circle cx="40" cy="210" r="3" />
-    <circle cx="310" cy="210" r="3" />
-    <circle cx="100" cy="30" r="3" />
-    <circle cx="80" cy="90" r="3" />
-    <circle cx="130" cy="210" r="3" />
-    <circle cx="240" cy="150" r="3" />
-    <circle cx="126" cy="184" r="3" />
-    <circle cx="211" cy="159" r="3" />
-    <circle cx="113" cy="107" r="3" />
+    <circle cx="60" cy="242" r="3" />
+    <circle cx="380" cy="242" r="3" />
+    <circle cx="131" cy="29" r="3" />
+    <circle cx="108" cy="100" r="3" />
+    <circle cx="167" cy="242" r="3" />
+    <circle cx="297" cy="171" r="3" />
+    <circle cx="162" cy="212" r="3" />
+    <circle cx="263" cy="182" r="3" />
+    <circle cx="147" cy="120" r="3" />
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="32" y="225" text-anchor="middle">B</text>
-    <text x="318" y="225" text-anchor="middle">C</text>
-    <text x="100" y="22" text-anchor="middle">A</text>
-    <text x="68" y="88" text-anchor="middle">D</text>
-    <text x="130" y="225" text-anchor="middle">E</text>
-    <text x="252" y="146" text-anchor="middle">F</text>
-    <text x="120" y="198" text-anchor="middle">G</text>
-    <text x="222" y="156" text-anchor="middle">H</text>
-    <text x="102" y="102" text-anchor="middle">I</text>
+    <text x="51" y="260" text-anchor="middle">B</text>
+    <text x="389" y="260" text-anchor="middle">C</text>
+    <text x="131" y="20" text-anchor="middle">A</text>
+    <text x="94" y="98" text-anchor="middle">D</text>
+    <text x="167" y="260" text-anchor="middle">E</text>
+    <text x="311" y="167" text-anchor="middle">F</text>
+    <text x="155" y="228" text-anchor="middle">G</text>
+    <text x="276" y="178" text-anchor="middle">H</text>
+    <text x="134" y="115" text-anchor="middle">I</text>
   </g>
 </svg>

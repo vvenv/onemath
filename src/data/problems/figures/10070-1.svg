@@ -1,25 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
   <g class="stroke-current fill-none">
-    <circle cx="30" cy="60" r="20" />
-    <circle cx="90" cy="60" r="20" />
-    <circle cx="150" cy="60" r="20" />
-    <circle cx="210" cy="60" r="20" />
-    <circle cx="270" cy="60" r="20" />
+    <circle cx="53.33" cy="140.00" r="20" />
+    <circle cx="120.00" cy="140.00" r="20" />
+    <circle cx="186.67" cy="140.00" r="20" />
+    <circle cx="253.33" cy="140.00" r="20" />
+    <circle cx="320.00" cy="140.00" r="20" />
     <rect
-      x="315"
-      y="30"
-      width="30"
-      height="60"
+      x="370.00"
+      y="106.67"
+      width="33.33"
+      height="66.67"
       fill-opacity="0.12"
       class="fill-current"
     />
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="30" y="65" text-anchor="middle">1</text>
-    <text x="90" y="65" text-anchor="middle">6</text>
-    <text x="150" y="65" text-anchor="middle">3</text>
-    <text x="210" y="65" text-anchor="middle">5</text>
-    <text x="270" y="65" text-anchor="middle">4</text>
-    <text x="330" y="65" text-anchor="middle">水</text>
+    <text x="53.33" y="145.56" text-anchor="middle">1</text>
+    <text x="120.00" y="145.56" text-anchor="middle">6</text>
+    <text x="186.67" y="145.56" text-anchor="middle">3</text>
+    <text x="253.33" y="145.56" text-anchor="middle">5</text>
+    <text x="320.00" y="145.56" text-anchor="middle">4</text>
+    <text x="386.67" y="145.56" text-anchor="middle">水</text>
   </g>
 </svg>

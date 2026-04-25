@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <g class="stroke-current fill-none">
-    <circle cx="120" cy="120" r="90" />
-    <line x1="120" y1="30" x2="120" y2="210" />
-    <line x1="42" y1="75" x2="198" y2="165" />
-    <line x1="42" y1="165" x2="198" y2="75" />
+    <circle cx="220.00" cy="220.00" r="90" />
+    <line x1="220.00" y1="20.00" x2="220.00" y2="420.00" />
+    <line x1="46.67" y1="120.00" x2="393.33" y2="320.00" />
+    <line x1="46.67" y1="320.00" x2="393.33" y2="120.00" />
   </g>
   <g class="stroke-current fill-none">
-    <circle cx="120" cy="30" r="12" />
-    <circle cx="120" cy="210" r="12" />
-    <circle cx="42" cy="75" r="12" />
-    <circle cx="198" cy="165" r="12" />
-    <circle cx="42" cy="165" r="12" />
-    <circle cx="198" cy="75" r="12" />
-    <circle cx="120" cy="120" r="12" />
+    <circle cx="220.00" cy="20.00" r="12" />
+    <circle cx="220.00" cy="420.00" r="12" />
+    <circle cx="46.67" cy="120.00" r="12" />
+    <circle cx="393.33" cy="320.00" r="12" />
+    <circle cx="46.67" cy="320.00" r="12" />
+    <circle cx="393.33" cy="120.00" r="12" />
+    <circle cx="220.00" cy="220.00" r="12" />
   </g>
 </svg>

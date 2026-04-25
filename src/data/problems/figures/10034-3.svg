@@ -1,8 +1,8 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 500 200"
-  width="500"
-  height="200"
+  viewBox="0 0 440 280"
+  width="526.32"
+  height="210.53"
 >
   <defs>
     <marker
@@ -16,30 +16,30 @@
       <path d="M0,0 L8,3 L0,6 Z" class="fill-current" />
     </marker>
   </defs>
-  <circle cx="60" cy="100" r="20" fill="#2ecc71" opacity="0.8" />
+  <circle cx="20.00" cy="140.00" r="20" fill="#2ecc71" opacity="0.8" />
   <text
-    x="60"
-    y="106"
+    x="20.00"
+    y="146.32"
     fill="currentColor"
     text-anchor="middle"
     font-weight="bold"
   >
     A
   </text>
-  <circle cx="250" cy="100" r="20" opacity="0.3" class="fill-current" />
+  <circle cx="220.00" cy="140.00" r="20" opacity="0.3" class="fill-current" />
   <text
-    x="250"
-    y="106"
+    x="220.00"
+    y="146.32"
     fill="currentColor"
     text-anchor="middle"
     font-weight="bold"
   >
     B
   </text>
-  <circle cx="440" cy="100" r="20" fill="#2ecc71" opacity="0.8" />
+  <circle cx="420.00" cy="140.00" r="20" fill="#2ecc71" opacity="0.8" />
   <text
-    x="440"
-    y="106"
+    x="420.00"
+    y="146.32"
     fill="currentColor"
     text-anchor="middle"
     font-weight="bold"
@@ -49,23 +49,23 @@
   <!--
     高亮直达路线 -->
   <path
-    d="M80,160 Q250,180 420,160"
+    d="M104,169 Q264,190 442,169"
     stroke="#2ecc71"
     stroke-dasharray="8,4"
     marker-end="url(#arrow3)"
     class="fill-none"
   />
   <path
-    d="M80,175 Q250,195 420,175"
+    d="M104,184 Q264,205 442,184"
     stroke="#2ecc71"
     stroke-dasharray="8,4"
     marker-end="url(#arrow3)"
     class="fill-none"
   />
-  <text x="250" y="150" fill="#2ecc71" text-anchor="middle" font-weight="bold">
+  <text x="220.00" y="192.63" fill="#2ecc71" text-anchor="middle" font-weight="bold">
     2 种
   </text>
-  <text x="250" y="50" fill="currentColor" text-anchor="middle">
+  <text x="220.00" y="87.37" fill="currentColor" text-anchor="middle">
     第二类：直达（不经过B）
   </text>
 </svg>

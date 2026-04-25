@@ -1,54 +1,54 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 400 260"
-  width="400"
-  height="260"
+  viewBox="0 0 440 280"
+  width="505.26"
+  height="328.42"
 >
   <!-- 全集矩形 -->
   <rect
-    x="30"
-    y="30"
-    width="340"
-    height="210"
+    x="49.47"
+    y="20.00"
+    width="429.47"
+    height="265.26"
     class="stroke-current fill-none"
   />
-  <text x="300" y="50" fill="currentColor" text-anchor="middle">全班45人</text>
+  <text x="390.53" y="45.26" fill="currentColor" text-anchor="middle">全班45人</text>
   <!-- 数学集合（左圆） -->
   <circle
-    cx="150"
-    cy="130"
+    cx="201.05"
+    cy="146.32"
     r="70"
     class="fill-red-500 stroke-red-500"
     opacity="0.3"
   />
   <text
-    x="120"
-    y="90"
+    x="163.16"
+    y="95.79"
     class="fill-red-800"
     font-weight="bold"
     text-anchor="middle"
   >
     数学
   </text>
-  <text x="120" y="108" class="fill-red-800" text-anchor="middle">28人</text>
+  <text x="163.16" y="118.53" class="fill-red-800" text-anchor="middle">28人</text>
   <!-- 语文集合（右圆） -->
   <circle
-    cx="250"
-    cy="130"
+    cx="327.37"
+    cy="146.32"
     r="70"
     class="fill-blue-500 stroke-blue-500"
     opacity="0.3"
   />
-  <text x="260" y="90" fill="#2980b9" font-weight="bold" text-anchor="middle">
+  <text x="340.00" y="95.79" fill="#2980b9" font-weight="bold" text-anchor="middle">
     语文
   </text>
-  <text x="260" y="108" fill="#2980b9" text-anchor="middle">25人</text>
+  <text x="340.00" y="118.53" fill="#2980b9" text-anchor="middle">25人</text>
   <!-- 交集标注 -->
-  <text x="200" y="130" fill="#8e44ad" font-weight="bold" text-anchor="middle">
+  <text x="264.21" y="146.32" fill="#8e44ad" font-weight="bold" text-anchor="middle">
     12人
   </text>
   <!-- 外部标注 -->
-  <text x="200" y="220" text-anchor="middle" class="fill-green-600">
+  <text x="264.21" y="260.00" text-anchor="middle" class="fill-green-600">
     都没有参加：？人
   </text>
 </svg>

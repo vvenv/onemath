@@ -1,30 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260">
-  <g fill="rgb(46 134 193 / 0.06)" class="stroke-current">
-    <rect x="30" y="30" width="180" height="180" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
+  <g class="stroke-current fill-none">
+    <rect x="40" y="36" width="353" height="353" />
   </g>
   <g class="stroke-current fill-none">
-    <line x1="30" y1="30" x2="210" y2="120" />
-    <line x1="210" y1="210" x2="120" y2="30" />
+    <line x1="40" y1="36" x2="393" y2="212" />
+    <line x1="393" y1="389" x2="216" y2="36" />
   </g>
-  <g class="fill-red-700/28 stroke-red-500">
-    <polygon points="210,30 210,120 150,90" />
+  <g class="fill-red-500/10 stroke-red-500">
+    <polygon points="393,36 393,212 275,153" />
   </g>
   <g class="fill-current">
-    <circle cx="30" cy="30" r="3" />
-    <circle cx="210" cy="30" r="3" />
-    <circle cx="210" cy="210" r="3" />
-    <circle cx="30" cy="210" r="3" />
-    <circle cx="120" cy="30" r="3" />
-    <circle cx="210" cy="120" r="3" />
-    <circle cx="150" cy="90" r="3" />
+    <circle cx="40" cy="36" r="3" />
+    <circle cx="393" cy="36" r="3" />
+    <circle cx="393" cy="389" r="3" />
+    <circle cx="40" cy="389" r="3" />
+    <circle cx="216" cy="36" r="3" />
+    <circle cx="393" cy="212" r="3" />
+    <circle cx="275" cy="153" r="3" />
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="22" y="26" text-anchor="middle">A</text>
-    <text x="220" y="26" text-anchor="middle">B</text>
-    <text x="220" y="226" text-anchor="middle">C</text>
-    <text x="22" y="226" text-anchor="middle">D</text>
-    <text x="120" y="22" text-anchor="middle">E</text>
-    <text x="222" y="124" text-anchor="middle">F</text>
-    <text x="142" y="102" text-anchor="middle">G</text>
+    <text x="24" y="28" text-anchor="middle">A</text>
+    <text x="412" y="28" text-anchor="middle">B</text>
+    <text x="412" y="420" text-anchor="middle">C</text>
+    <text x="24" y="420" text-anchor="middle">D</text>
+    <text x="216" y="20" text-anchor="middle">E</text>
+    <text x="416" y="220" text-anchor="middle">F</text>
+    <text x="259" y="177" text-anchor="middle">G</text>
   </g>
 </svg>

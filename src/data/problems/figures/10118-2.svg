@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 240">
-  <polygon points="60,210 310,210 100,30" class="fill-none stroke-current" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <polygon points="87,248 385,248 158,55" class="fill-none stroke-current" />
   <polygon
-    points="310,210 226.67,210 205,120"
+    points="385,248 286,248 271.5,151.5"
     class="fill-red-500/10 stroke-red-500"
   />
   <g class="fill-current">
-    <circle cx="60" cy="210" r="3" />
-    <circle cx="310" cy="210" r="3" />
-    <circle cx="100" cy="30" r="3" />
-    <circle cx="226.67" cy="210" r="3" />
-    <circle cx="205" cy="120" r="3" />
+    <circle cx="87" cy="248" r="3" />
+    <circle cx="385" cy="248" r="3" />
+    <circle cx="158" cy="55" r="3" />
+    <circle cx="286" cy="248" r="3" />
+    <circle cx="271.5" cy="151.5" r="3" />
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="52" y="225" text-anchor="middle">B</text>
-    <text x="318" y="225" text-anchor="middle">A</text>
-    <text x="100" y="22" text-anchor="middle">C</text>
-    <text x="237" y="204" text-anchor="middle">E</text>
-    <text x="217" y="118" text-anchor="middle">D</text>
+    <text x="77" y="268" text-anchor="middle">B</text>
+    <text x="395" y="268" text-anchor="middle">A</text>
+    <text x="158" y="45" text-anchor="middle">C</text>
+    <text x="296" y="235" text-anchor="middle">E</text>
+    <text x="281.5" y="149.5" text-anchor="middle">D</text>
   </g>
 </svg>

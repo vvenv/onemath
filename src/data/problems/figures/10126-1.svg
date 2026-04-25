@@ -1,27 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -150 300 300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <g class="fill-blue-500/8 stroke-current">
-    <polygon points="100,0 50,-86.6 -50,-86.6 -100,0 -50,86.6 50,86.6" />
+    <polygon points="399,215 311,62 135,62 46,215 135,367 311,367" />
   </g>
   <g class="stroke-red-500 fill-none">
-    <line x1="100" y1="0" x2="-50" y2="-86.6" />
-    <line x1="50" y1="-86.6" x2="-100" y2="0" />
+    <line x1="399" y1="215" x2="135" y2="62" />
+    <line x1="311" y1="62" x2="46" y2="215" />
   </g>
   <g class="fill-current">
-    <circle cx="100" cy="0" r="3" />
-    <circle cx="50" cy="-86.6" r="3" />
-    <circle cx="-50" cy="-86.6" r="3" />
-    <circle cx="-100" cy="0" r="3" />
-    <circle cx="-50" cy="86.6" r="3" />
-    <circle cx="50" cy="86.6" r="3" />
-    <circle cx="0" cy="-57.7" r="3" />
+    <circle cx="399" cy="215" r="3" />
+    <circle cx="311" cy="62" r="3" />
+    <circle cx="135" cy="62" r="3" />
+    <circle cx="46" cy="215" r="3" />
+    <circle cx="135" cy="367" r="3" />
+    <circle cx="311" cy="367" r="3" />
+    <circle cx="223" cy="113" r="3" />
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="112" y="4" text-anchor="middle">A</text>
-    <text x="56" y="-96" text-anchor="middle">B</text>
-    <text x="-58" y="-96" text-anchor="middle">C</text>
-    <text x="-115" y="4" text-anchor="middle">D</text>
-    <text x="-58" y="102" text-anchor="middle">E</text>
-    <text x="56" y="102" text-anchor="middle">F</text>
-    <text x="0" y="-37" class="fill-red-800" text-anchor="middle">P</text>
+    <text x="420" y="222" text-anchor="middle">A</text>
+    <text x="321" y="46" text-anchor="middle">B</text>
+    <text x="120" y="46" text-anchor="middle">C</text>
+    <text x="20" y="222" text-anchor="middle">D</text>
+    <text x="120" y="394" text-anchor="middle">E</text>
+    <text x="321" y="394" text-anchor="middle">F</text>
+    <text x="223" y="150" class="fill-red-800" text-anchor="middle">P</text>
   </g>
 </svg>

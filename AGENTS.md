@@ -67,3 +67,9 @@
 - **Format and readability**: For `.svg` files in `src/data/<problems|knowledge>/figures/`, use multi-line indented format with one element per line for easier diff and manual editing. Only avoid meaningless newlines inside `d` attributes or inline SVG strings.
 - Store figure SVGs as separate `.svg` files colocated under `src/data/<problems|knowledge>/figures/`, not as inline string literals inside the TS data files. Import the raw markup via Vite's `?raw` suffix (e.g. `import svg1 from "./figures/10055-1.svg?raw";`) and reference the identifier from the `figures[].svg` / `scenes[].svg` fields.
 - Naming convention: `<file-stem>-<n>.svg` for problem/knowledge data files (e.g. `10055-1.svg`), or a descriptive slug when the figure has a stable name (e.g. `bird-head-model.svg`).
+- **ViewBox standardization**: Use consistent viewBox sizing with 20px bleed on all sides. Preserve aspect ratios based on content shape. Recommended standard sizes:
+  - Square: content 400x400 → viewBox "0 0 440 440"
+  - Horizontal: content 400x240 → viewBox "0 0 440 280"
+  - Strip: content 400x80 → viewBox "0 0 440 120"
+  - Vertical: content 240x400 → viewBox "0 0 280 440"
+    Adjust content coordinates to center within the effective content area (e.g., for 440x440 viewBox, center content at x=20, y=20 with width=400, height=400).

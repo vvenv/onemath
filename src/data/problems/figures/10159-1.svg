@@ -1,0 +1,23 @@
+<svg viewBox="0 0 440 280" xmlns="http://www.w3.org/2000/svg">
+  <g class="stroke-current fill-none">
+    <polygon points="87,248 385,248 158,55" />
+    <line x1="158" y1="55" x2="220" y2="248" />
+    <line x1="87" y1="248" x2="256" y2="140" />
+  </g>
+  <g class="fill-current">
+    <circle cx="87" cy="248" r="4" />
+    <circle cx="385" cy="248" r="4" />
+    <circle cx="158" cy="55" r="4" />
+    <circle cx="220" cy="248" r="4" />
+    <circle cx="256" cy="140" r="4" />
+    <circle cx="197" cy="178" r="4" />
+    <g text-anchor="middle">
+      <text x="77" y="268">B</text>
+      <text x="395" y="268">C</text>
+      <text x="158" y="45">A</text>
+      <text x="220" y="268">D</text>
+      <text x="270" y="138">E</text>
+      <text x="180" y="177">G</text>
+    </g>
+  </g>
+</svg>

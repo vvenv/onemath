@@ -1,5 +1,4 @@
 import type { ProblemData } from "@/types/problem";
-import svg1 from "./figures/10079-1.svg?raw";
 
 export default {
   "id": "10079",
@@ -8,13 +7,6 @@ export default {
   "module": "杂题",
   "difficulty": "进阶",
   "question": "同一种商品，标价都是每件 20 元，三家超市有不同促销：- 甲店：每满 100 元立减 30 元（不足 100 元部分不再减）；- 乙店：所有商品一律按标价的 8 折出售；- 丙店：买 3 件送 1 件（付 3 件的钱即可得到 4 件）。\n小丽想买 5 件这种商品，在哪家店买最省钱？最少要花多少元？",
-  "figures": [
-    {
-      "svg": svg1,
-      "caption": "三家超市的促销方式",
-      "alt": "三家店比价"
-    }
-  ],
   "solutions": [
     {
       "key": "caseCompare",

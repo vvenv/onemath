@@ -1,31 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
   <g class="stroke-current fill-none">
-    <rect x="40" y="40" width="80" height="80" />
-    <line x1="80" y1="40" x2="80" y2="120" />
-    <line x1="40" y1="80" x2="120" y2="80" />
+    <rect x="20.00" y="31.67" width="133.33" height="133.33" />
+    <line x1="86.67" y1="31.67" x2="86.67" y2="165.00" />
+    <line x1="20.00" y1="98.33" x2="153.33" y2="98.33" />
     <rect
-      x="80"
-      y="80"
-      width="40"
-      height="40"
+      x="86.67"
+      y="98.33"
+      width="66.67"
+      height="66.67"
       fill-opacity="0"
       class="fill-current"
     />
   </g>
   <g fill-opacity="0.12" class="fill-current">
-    <rect x="40" y="80" width="40" height="40" />
+    <rect x="20.00" y="98.33" width="66.67" height="66.67" />
   </g>
   <g class="stroke-current fill-none">
-    <rect x="200" y="40" width="80" height="80" />
-    <line x1="240" y1="40" x2="240" y2="120" />
-    <line x1="200" y1="80" x2="280" y2="80" />
+    <rect x="286.67" y="31.67" width="133.33" height="133.33" />
+    <line x1="353.33" y1="31.67" x2="353.33" y2="165.00" />
+    <line x1="286.67" y1="98.33" x2="420.00" y2="98.33" />
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="80" y="145" text-anchor="middle">正视（田缺左下角）</text>
-    <text x="240" y="145" text-anchor="middle">俯视（田字）</text>
+    <text x="86.67" y="206.67" text-anchor="middle">正视（田缺左下角）</text>
+    <text x="353.33" y="206.67" text-anchor="middle">俯视（田字）</text>
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="160" y="170" text-anchor="middle">
+    <text x="220.00" y="248.33" text-anchor="middle">
       缺角处无方块；其余列高由正视决定
     </text>
   </g>

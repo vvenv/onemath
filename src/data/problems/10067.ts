@@ -1,5 +1,4 @@
 import type { ProblemData } from "@/types/problem";
-import svg1 from "./figures/10067-1.svg?raw";
 
 export default {
   "id": "10067",
@@ -8,13 +7,6 @@ export default {
   "module": "杂题",
   "difficulty": "挑战",
   "question": "有 4 封信分别写给 4 位不同的收信人，对应有 4 个编号的信封（第 i 封信的“正确信封”就是编号为 i 的那个）。现在把这 4 封信装进 4 个信封里，每个信封恰好装 1 封。要求每封信都装错——即 4 封信全部都没有装进自己的正确信封。一共有多少种装法？",
-  "figures": [
-    {
-      "svg": svg1,
-      "caption": "每个信封里装的信，编号都要与信封编号不同",
-      "alt": "4封信全部错位装入4个信封"
-    }
-  ],
   "solutions": [
     {
       "key": "enumerate",

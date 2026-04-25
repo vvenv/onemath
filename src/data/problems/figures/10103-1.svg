@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <g class="stroke-current fill-none">
-    <circle cx="100" cy="100" r="70" />
-    <circle cx="160" cy="100" r="70" />
-    <circle cx="130" cy="160" r="70" />
+    <circle cx="173.85" cy="189.23" r="70" />
+    <circle cx="266.15" cy="189.23" r="70" />
+    <circle cx="220.00" cy="281.54" r="70" />
   </g>
 </svg>

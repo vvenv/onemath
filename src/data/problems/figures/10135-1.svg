@@ -1,28 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
   <g class="stroke-current fill-none">
-    <polygon points="40,210 310,210 100,30" />
+    <polygon points="60,242 380,242 131,29" />
   </g>
   <g class="stroke-current fill-none">
-    <line x1="100" y1="30" x2="130" y2="210" />
-    <line x1="40" y1="210" x2="184" y2="102" />
+    <line x1="131" y1="29" x2="167" y2="242" />
+    <line x1="60" y1="242" x2="231" y2="115" />
   </g>
   <g class="fill-amber-500/10 stroke-amber-500">
-    <polygon points="130,210 310,210 184,102 120,150" />
+    <polygon points="167,242 380,242 231,115 155,171" />
   </g>
   <g class="fill-current">
-    <circle cx="40" cy="210" r="3" />
-    <circle cx="310" cy="210" r="3" />
-    <circle cx="100" cy="30" r="3" />
-    <circle cx="130" cy="210" r="3" />
-    <circle cx="184" cy="102" r="3" />
-    <circle cx="120" cy="150" r="3" />
+    <circle cx="60" cy="242" r="3" />
+    <circle cx="380" cy="242" r="3" />
+    <circle cx="131" cy="29" r="3" />
+    <circle cx="167" cy="242" r="3" />
+    <circle cx="231" cy="115" r="3" />
+    <circle cx="155" cy="171" r="3" />
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="32" y="225" text-anchor="middle">B</text>
-    <text x="318" y="225" text-anchor="middle">C</text>
-    <text x="100" y="22" text-anchor="middle">A</text>
-    <text x="130" y="225" text-anchor="middle">D</text>
-    <text x="192" y="96" text-anchor="middle">E</text>
-    <text x="110" y="148" text-anchor="middle">F</text>
+    <text x="51" y="260" text-anchor="middle">B</text>
+    <text x="389" y="260" text-anchor="middle">C</text>
+    <text x="131" y="20" text-anchor="middle">A</text>
+    <text x="167" y="260" text-anchor="middle">D</text>
+    <text x="240" y="107" text-anchor="middle">E</text>
+    <text x="143" y="169" text-anchor="middle">F</text>
   </g>
 </svg>

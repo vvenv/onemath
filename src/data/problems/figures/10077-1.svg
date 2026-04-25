@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 130">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
   <g fill-opacity="0.12" class="stroke-current fill-current">
-    <rect x="20" y="40" width="80" height="40" rx="6" />
-    <rect x="260" y="40" width="80" height="40" rx="6" />
+    <rect x="42.22" y="112.22" width="88.89" height="44.44" rx="6" />
+    <rect x="308.89" y="112.22" width="88.89" height="44.44" rx="6" />
   </g>
   <g class="stroke-yellow-700 fill-none" marker-end="url(#ar2)">
-    <path d="M100 55 L260 55" />
-    <path d="M260 72 L100 72" />
+    <path d="M140 130 L300 130" />
+    <path d="M300 147 L140 147" />
   </g>
   <defs>
     <marker
@@ -20,11 +20,11 @@
     </marker>
   </defs>
   <g text-anchor="middle" class="fill-current">
-    <text x="60" y="65" text-anchor="middle">A 仓库</text>
-    <text x="300" y="65" text-anchor="middle">B 工地</text>
-    <text x="180" y="45" text-anchor="middle">15 min</text>
-    <text x="180" y="90" text-anchor="middle">15 min</text>
-    <text x="60" y="100" text-anchor="middle">装 3 min</text>
-    <text x="300" y="100" text-anchor="middle">卸 3 min</text>
+    <text x="86.67" y="140.00" text-anchor="middle">A 仓库</text>
+    <text x="353.33" y="140.00" text-anchor="middle">B 工地</text>
+    <text x="220.00" y="117.78" text-anchor="middle">15 min</text>
+    <text x="220.00" y="167.78" text-anchor="middle">15 min</text>
+    <text x="86.67" y="178.89" text-anchor="middle">装 3 min</text>
+    <text x="353.33" y="178.89" text-anchor="middle">卸 3 min</text>
   </g>
 </svg>

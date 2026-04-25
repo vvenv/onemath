@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 140">
-  <g class="stroke-current fill-none" stroke-width="1.5">
-    <polygon points="30,30 30,110 190,110" />
-    <line x1="30" y1="30" x2="190" y2="110" />
-    <line x1="30" y1="110" x2="62" y2="46" stroke-dasharray="4 3" />
-    <polyline points="30,102 38,102 38,110" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <g class="stroke-current fill-none" stroke-width="3.45">
+    <polygon points="20,37 20,241 364,241" />
+    <line x1="43" y1="37" x2="411" y2="220" />
+    <line x1="43" y1="220" x2="117" y2="73" stroke-dasharray="6 3" />
+    <polyline points="20,228 28,228 28,241" />
   </g>
   <g class="fill-current stroke-none" font-family="serif">
-    <text x="20" y="24">A</text>
-    <text x="20" y="126">B</text>
-    <text x="194" y="124">C</text>
-    <text x="64" y="44">H</text>
+    <text x="20" y="23">A</text>
+    <text x="20" y="257">B</text>
+    <text x="420" y="253">C</text>
+    <text x="121" y="69">H</text>
   </g>
 </svg>

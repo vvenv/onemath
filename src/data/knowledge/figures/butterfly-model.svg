@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140">
-  <g class="stroke-current fill-none" stroke-width="1.5">
-    <polygon points="60,30 180,30 210,110 30,110" />
-    <line x1="60" y1="30" x2="210" y2="110" />
-    <line x1="180" y1="30" x2="30" y2="110" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <g class="stroke-current fill-none" stroke-width="3.13">
+    <polygon points="110,37 330,37 384,217 20,217" />
+    <line x1="99" y1="50" x2="412" y2="217" />
+    <line x1="349" y1="50" x2="37" y2="217" />
   </g>
   <g class="fill-current stroke-none" font-family="serif">
-    <text x="54" y="24">A</text>
-    <text x="176" y="24">B</text>
-    <text x="214" y="122">C</text>
-    <text x="22" y="122">D</text>
-    <text x="116" y="58">O</text>
-    <text x="116" y="44">S₂</text>
-    <text x="76" y="82">S₁</text>
-    <text x="152" y="82">S₃</text>
-    <text x="114" y="104">S₄</text>
+    <text x="87" y="38">A</text>
+    <text x="341" y="38">B</text>
+    <text x="420" y="242">C</text>
+    <text x="20" y="242">D</text>
+    <text x="216" y="109">O</text>
+    <text x="216" y="80">S₂</text>
+    <text x="133" y="159">S₁</text>
+    <text x="291" y="159">S₃</text>
+    <text x="212" y="205">S₄</text>
   </g>
 </svg>

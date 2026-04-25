@@ -1,29 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260">
-  <g class="fill-blue-500/8 stroke-current">
-    <polygon points="80,40 270,60 320,210 40,200" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <g class="fill-none stroke-current">
+    <polygon points="90,28 335,54 399,247 38,234" />
   </g>
   <g class="stroke-current">
-    <line x1="80" y1="40" x2="320" y2="210" />
-    <line x1="270" y1="60" x2="40" y2="200" />
+    <line x1="90" y1="28" x2="399" y2="247" />
+    <line x1="335" y1="54" x2="38" y2="234" />
   </g>
   <g class="fill-current">
-    <circle cx="80" cy="40" r="3" />
-    <circle cx="270" cy="60" r="3" />
-    <circle cx="320" cy="210" r="3" />
-    <circle cx="40" cy="200" r="3" />
-    <circle cx="165" cy="116" r="3" />
-  </g>
-  <g text-anchor="middle" class="fill-current">
-    <text x="72" y="34" text-anchor="middle">A</text>
-    <text x="280" y="54" text-anchor="middle">B</text>
-    <text x="330" y="220" text-anchor="middle">C</text>
-    <text x="32" y="215" text-anchor="middle">D</text>
-    <text x="170" y="112" text-anchor="middle">O</text>
-  </g>
-  <g text-anchor="middle" class="fill-current">
-    <text x="165" y="80" text-anchor="middle">△AOB = 4</text>
-    <text x="240" y="130" text-anchor="middle">△BOC = 6</text>
-    <text x="200" y="180" text-anchor="middle">△COD = 9</text>
-    <text x="100" y="140" text-anchor="middle">△AOD = ?</text>
+    <circle cx="90" cy="28" r="3" />
+    <circle cx="335" cy="54" r="3" />
+    <circle cx="399" cy="247" r="3" />
+    <circle cx="38" cy="234" r="3" />
+    <circle cx="222" cy="122" r="3" />
+    <g text-anchor="middle">
+      <text x="79" y="20" text-anchor="middle">A</text>
+      <text x="348" y="46" text-anchor="middle">B</text>
+      <text x="412" y="260" text-anchor="middle">C</text>
+      <text x="28" y="254" text-anchor="middle">D</text>
+      <text x="222" y="142" text-anchor="middle">O</text>
+    </g>
   </g>
 </svg>

@@ -1,5 +1,4 @@
 import type { ProblemData } from "@/types/problem";
-import svg1 from "./figures/10068-1.svg?raw";
 
 export default {
   "id": "10068",
@@ -8,13 +7,6 @@ export default {
   "module": "计数",
   "difficulty": "挑战",
   "question": "5 个小朋友围着一张圆桌坐下玩游戏。如果两种坐法可以通过整体旋转圆桌而互相重合，就看作同一种坐法（例如：大家都向左挪一个座位，不算新的一种）。那么一共有多少种不同的坐法？",
-  "figures": [
-    {
-      "svg": svg1,
-      "caption": "围圆桌而坐，旋转看作同一种",
-      "alt": "5人围圆桌"
-    }
-  ],
   "solutions": [
     {
       "key": "fixReference",

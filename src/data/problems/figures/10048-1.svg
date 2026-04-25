@@ -1,12 +1,12 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 500 170"
-  width="500"
-  height="170"
+  viewBox="0 0 440 280"
+  width="606.06"
+  height="206.06"
 >
   <text
-    x="250"
-    y="22"
+    x="274.55"
+    y="80.61"
     fill="currentColor"
     text-anchor="middle"
     font-weight="bold"
@@ -14,45 +14,45 @@
     交换前
   </text>
   <rect
-    x="40"
-    y="40"
-    width="180"
-    height="110"
+    x="20.00"
+    y="102.42"
+    width="218.18"
+    height="133.33"
     rx="5"
     class="stroke-current fill-none"
   />
   <text
-    x="130"
-    y="70"
+    x="129.09"
+    y="138.79"
     fill="currentColor"
     text-anchor="middle"
     font-weight="bold"
   >
     甲容器
   </text>
-  <text x="130" y="95" fill="currentColor" text-anchor="middle">
+  <text x="129.09" y="169.09" fill="currentColor" text-anchor="middle">
     500g，浓度 12%
   </text>
-  <text x="130" y="120" fill="currentColor" text-anchor="middle">盐 60g</text>
+  <text x="129.09" y="199.39" fill="currentColor" text-anchor="middle">盐 60g</text>
   <rect
-    x="280"
-    y="40"
-    width="180"
-    height="110"
+    x="310.91"
+    y="102.42"
+    width="218.18"
+    height="133.33"
     rx="5"
     class="stroke-current fill-none"
   />
   <text
-    x="370"
-    y="70"
+    x="420.00"
+    y="138.79"
     fill="currentColor"
     text-anchor="middle"
     font-weight="bold"
   >
     乙容器
   </text>
-  <text x="370" y="95" fill="currentColor" text-anchor="middle">
+  <text x="420.00" y="169.09" fill="currentColor" text-anchor="middle">
     300g，浓度 20%
   </text>
-  <text x="370" y="120" fill="currentColor" text-anchor="middle">盐 60g</text>
+  <text x="420.00" y="199.39" fill="currentColor" text-anchor="middle">盐 60g</text>
 </svg>

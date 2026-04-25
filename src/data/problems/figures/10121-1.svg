@@ -1,23 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
   <g class="stroke-current fill-none">
-    <polygon points="60,210 310,210 110,30" />
+    <polygon points="87,248 385,248 158,55" />
+    <line x1="236" y1="248" x2="134.33" y2="119.33" />
   </g>
   <g class="fill-current">
-    <circle cx="60" cy="210" r="3" />
-    <circle cx="310" cy="210" r="3" />
-    <circle cx="110" cy="30" r="3" />
-    <circle cx="85" cy="120" r="3" />
-    <circle cx="243.3" cy="90" r="3" />
+    <circle cx="87" cy="248" r="3" />
+    <circle cx="385" cy="248" r="3" />
+    <circle cx="158" cy="55" r="3" />
+    <circle cx="236" cy="248" r="3" />
+    <circle cx="134.33" cy="119.33" r="3" />
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="52" y="225" text-anchor="middle">A</text>
-    <text x="318" y="225" text-anchor="middle">B</text>
-    <text x="110" y="22" text-anchor="middle">C</text>
-    <text x="72" y="118" text-anchor="middle">D</text>
-    <text x="257" y="88" text-anchor="middle">E</text>
-  </g>
-  <g text-anchor="middle" class="fill-current">
-    <text x="75" y="170" text-anchor="middle">AD = DB</text>
-    <text x="225" y="140" text-anchor="middle">AE : EC = 2 : 1</text>
+    <text x="77" y="268" text-anchor="middle">A</text>
+    <text x="395" y="268" text-anchor="middle">B</text>
+    <text x="158" y="45" text-anchor="middle">C</text>
+    <text x="226" y="268" text-anchor="middle">D</text>
+    <text x="124.33" y="117.33" text-anchor="middle">E</text>
   </g>
 </svg>

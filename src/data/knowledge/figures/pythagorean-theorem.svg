@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220">
-  <g class="stroke-current fill-none" stroke-width="1.5">
-    <polygon points="90,70 90,150 150,70" />
-    <polygon points="90,70 90,150 10,150 10,70" class="fill-current/10" />
-    <polygon points="90,70 150,70 150,10 90,10" class="fill-current/10" />
-    <polygon points="90,150 150,70 230,130 170,210" class="fill-current/18" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
+  <g class="stroke-current fill-none" stroke-width="2.50">
+    <polygon points="169,131 169,283 283,131" />
+    <polygon points="169,131 169,283 20,283 20,131" class="fill-current/10" />
+    <polygon points="169,131 283,131 283,20 169,20" class="fill-current/10" />
+    <polygon points="169,283 283,131 440,238 317,396" class="fill-current/18" />
   </g>
   <g class="fill-current stroke-none" font-family="serif">
-    <text x="40" y="115">b²</text>
-    <text x="115" y="45">a²</text>
-    <text x="180" y="150">c²</text>
+    <text x="87" y="228">b²</text>
+    <text x="212" y="112">a²</text>
+    <text x="320" y="287">c²</text>
   </g>
 </svg>

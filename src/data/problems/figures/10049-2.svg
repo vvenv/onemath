@@ -1,38 +1,38 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 480 200"
-  width="480"
-  height="200"
+  viewBox="0 0 440 280"
+  width="733.76"
+  height="305.73"
 >
   <text
-    x="240"
-    y="28"
+    x="204.71"
+    y="20.00"
     text-anchor="middle"
     fill="currentColor"
     font-weight="bold"
   >
     十字交叉法
   </text>
-  <text x="120" y="70" text-anchor="middle" fill="currentColor">25%</text>
-  <text x="120" y="150" text-anchor="middle" fill="#1e40af">20%</text>
+  <text x="21.27" y="84.20" text-anchor="middle" fill="currentColor">25%</text>
+  <text x="21.27" y="206.50" text-anchor="middle" fill="#1e40af">20%</text>
   <text
-    x="240"
-    y="115"
+    x="204.71"
+    y="152.99"
     text-anchor="middle"
     fill="currentColor"
     font-weight="bold"
   >
     22%
   </text>
-  <line x1="150" y1="75" x2="220" y2="105" stroke="#9ca3af" />
-  <line x1="150" y1="145" x2="220" y2="115" stroke="#9ca3af" />
-  <line x1="260" y1="105" x2="330" y2="75" stroke="#9ca3af" />
-  <line x1="260" y1="115" x2="330" y2="145" stroke="#9ca3af" />
-  <text x="380" y="70" text-anchor="middle" fill="currentColor">
+  <line x1="67.13" y1="91.85" x2="174.14" y2="137.71" stroke="#9ca3af" />
+  <line x1="67.13" y1="198.85" x2="174.14" y2="152.99" stroke="#9ca3af" />
+  <line x1="235.29" y1="137.71" x2="342.29" y2="91.85" stroke="#9ca3af" />
+  <line x1="235.29" y1="152.99" x2="342.29" y2="198.85" stroke="#9ca3af" />
+  <text x="418.73" y="84.20" text-anchor="middle" fill="currentColor">
     22 − 20 = 2
   </text>
-  <text x="380" y="150" text-anchor="middle" fill="#1e40af">25 − 22 = 3</text>
-  <text x="240" y="185" text-anchor="middle" fill="#374151">
+  <text x="418.73" y="206.50" text-anchor="middle" fill="#1e40af">25 − 22 = 3</text>
+  <text x="204.71" y="260.00" text-anchor="middle" fill="#374151">
     所以 25% : 20% 的质量比 = 2 : 3
   </text>
 </svg>

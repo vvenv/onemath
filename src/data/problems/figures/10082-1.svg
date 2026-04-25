@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120">
   <g fill-opacity="0.12" class="stroke-current fill-current">
-    <rect x="10" y="30" width="340" height="30" rx="6" />
+    <rect x="50.00" y="50.00" width="340.00" height="30.00" rx="6" />
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="180" y="50" text-anchor="middle">1, 2, 3, … , 29, 30</text>
+    <text x="220.00" y="70.00" text-anchor="middle">1, 2, 3, … , 29, 30</text>
   </g>
 </svg>

@@ -318,8 +318,9 @@ export function vercelOutputPlugin(
             // and serverless functions under functions/*.func/ — so the MCP
             // handler at functions/mcp.func/ serves /mcp automatically.
             { handle: "filesystem" },
-            // Anything still unmatched falls back to react-router's SPA shell.
-            { src: "^/.*$", dest: "/__spa-fallback.html" },
+            // Anything still unmatched (document routes without extensions)
+            // falls back to react-router's SPA shell.
+            { src: "^/((?!.*\\.).*)$", dest: "/__spa-fallback.html" },
           ],
         };
 

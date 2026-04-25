@@ -1,16 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220">
-  <g class="stroke-current fill-none">
-    <line x1="30" y1="110" x2="190" y2="110" />
-    <line x1="53" y1="40" x2="167" y2="180" />
-    <line x1="167" y1="40" x2="53" y2="180" />
-  </g>
-  <g class="stroke-current fill-none">
-    <circle cx="30" cy="110" r="14" />
-    <circle cx="190" cy="110" r="14" />
-    <circle cx="53" cy="40" r="14" />
-    <circle cx="167" cy="180" r="14" />
-    <circle cx="167" cy="40" r="14" />
-    <circle cx="53" cy="180" r="14" />
-    <circle cx="110" cy="110" r="14" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
+  <g class="stroke-current fill-current">
+    <line x1="40" y1="220" x2="400" y2="220" />
+    <circle cx="400" cy="220" r="40" />
+    <circle cx="40" cy="220" r="40" />
+    <circle cx="220" cy="220" r="40" />
+    <g transform="rotate(60 220 220)">
+      <line x1="40" y1="220" x2="400" y2="220" />
+      <circle cx="400" cy="220" r="40" />
+      <circle cx="40" cy="220" r="40" />
+      <g transform="rotate(60 220 220)">
+        <line x1="40" y1="220" x2="400" y2="220" />
+        <circle cx="400" cy="220" r="40" />
+        <circle cx="40" cy="220" r="40" />
+      </g>
+    </g>
   </g>
 </svg>

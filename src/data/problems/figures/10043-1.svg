@@ -1,12 +1,12 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 400 200"
-  width="400"
-  height="200"
+  viewBox="0 0 440 280"
+  width="400.00"
+  height="200.00"
 >
   <text
-    x="200"
-    y="30"
+    x="220.00"
+    y="70.00"
     fill="currentColor"
     text-anchor="middle"
     font-weight="bold"
@@ -14,18 +14,18 @@
     验证：24 和 18 的短除法
   </text>
   <!-- 短除式 -->
-  <text x="100" y="60" fill="currentColor" text-anchor="middle">2 | 24 18</text>
-  <text x="100" y="85" fill="currentColor" text-anchor="middle">3 | 12 9</text>
-  <text x="100" y="110" fill="currentColor" text-anchor="middle">4 3</text>
-  <text x="250" y="70" fill="currentColor" text-anchor="middle">
+  <text x="120.00" y="100.00" fill="currentColor" text-anchor="middle">2 | 24 18</text>
+  <text x="120.00" y="125.00" fill="currentColor" text-anchor="middle">3 | 12 9</text>
+  <text x="120.00" y="150.00" fill="currentColor" text-anchor="middle">4 3</text>
+  <text x="270.00" y="110.00" fill="currentColor" text-anchor="middle">
     最大公约数 = 2 × 3 = 6 ✓
   </text>
-  <text x="250" y="95" fill="currentColor" text-anchor="middle">
+  <text x="270.00" y="135.00" fill="currentColor" text-anchor="middle">
     最小公倍数 = 2 × 3 × 4 × 3 = 72 ✓
   </text>
   <text
-    x="200"
-    y="160"
+    x="220.00"
+    y="200.00"
     class="fill-green-600"
     text-anchor="middle"
     font-weight="bold"

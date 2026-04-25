@@ -1,32 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 176">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
   <g class="stroke-current fill-none">
-    <rect x="10" y="10" width="240" height="160" />
-    <line x1="80" y1="10" x2="80" y2="170" />
-    <line x1="165" y1="10" x2="165" y2="170" />
-    <line x1="10" y1="38" x2="250" y2="38" />
-    <line x1="10" y1="64" x2="250" y2="64" />
-    <line x1="10" y1="90" x2="250" y2="90" />
-    <line x1="10" y1="116" x2="250" y2="116" />
-    <line x1="10" y1="144" x2="250" y2="144" />
+    <rect x="40.00" y="20.00" width="360.00" height="240.00" />
+    <line x1="145.00" y1="20.00" x2="145.00" y2="260.00" />
+    <line x1="272.50" y1="20.00" x2="272.50" y2="260.00" />
+    <line x1="40.00" y1="62.00" x2="400.00" y2="62.00" />
+    <line x1="40.00" y1="101.00" x2="400.00" y2="101.00" />
+    <line x1="40.00" y1="140.00" x2="400.00" y2="140.00" />
+    <line x1="40.00" y1="179.00" x2="400.00" y2="179.00" />
+    <line x1="40.00" y1="221.00" x2="400.00" y2="221.00" />
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="45" y="28" text-anchor="middle">工件</text>
-    <text x="122" y="28" text-anchor="middle">机床甲</text>
-    <text x="207" y="28" text-anchor="middle">机床乙</text>
-    <text x="45" y="56" text-anchor="middle">A</text>
-    <text x="122" y="56" text-anchor="middle">3</text>
-    <text x="207" y="56" text-anchor="middle">6</text>
-    <text x="45" y="82" text-anchor="middle">B</text>
-    <text x="122" y="82" text-anchor="middle">7</text>
-    <text x="207" y="82" text-anchor="middle">2</text>
-    <text x="45" y="108" text-anchor="middle">C</text>
-    <text x="122" y="108" text-anchor="middle">4</text>
-    <text x="207" y="108" text-anchor="middle">7</text>
-    <text x="45" y="134" text-anchor="middle">D</text>
-    <text x="122" y="134" text-anchor="middle">5</text>
-    <text x="207" y="134" text-anchor="middle">3</text>
-    <text x="45" y="162" text-anchor="middle">E</text>
-    <text x="122" y="162" text-anchor="middle">6</text>
-    <text x="207" y="162" text-anchor="middle">4</text>
+    <text x="92.50" y="47.00" text-anchor="middle">工件</text>
+    <text x="208.00" y="47.00" text-anchor="middle">机床甲</text>
+    <text x="335.50" y="47.00" text-anchor="middle">机床乙</text>
+    <text x="92.50" y="89.00" text-anchor="middle">A</text>
+    <text x="208.00" y="89.00" text-anchor="middle">3</text>
+    <text x="335.50" y="89.00" text-anchor="middle">6</text>
+    <text x="92.50" y="128.00" text-anchor="middle">B</text>
+    <text x="208.00" y="128.00" text-anchor="middle">7</text>
+    <text x="335.50" y="128.00" text-anchor="middle">2</text>
+    <text x="92.50" y="167.00" text-anchor="middle">C</text>
+    <text x="208.00" y="167.00" text-anchor="middle">4</text>
+    <text x="335.50" y="167.00" text-anchor="middle">7</text>
+    <text x="92.50" y="206.00" text-anchor="middle">D</text>
+    <text x="208.00" y="206.00" text-anchor="middle">5</text>
+    <text x="335.50" y="206.00" text-anchor="middle">3</text>
+    <text x="92.50" y="248.00" text-anchor="middle">E</text>
+    <text x="208.00" y="248.00" text-anchor="middle">6</text>
+    <text x="335.50" y="248.00" text-anchor="middle">4</text>
   </g>
 </svg>

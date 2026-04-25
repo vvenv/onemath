@@ -1,26 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <g class="stroke-current fill-none">
-    <rect x="30" y="30" width="200" height="200" />
+    <rect x="34" y="34" width="354" height="354" />
   </g>
   <g class="fill-current">
-    <circle cx="30" cy="30" r="3" />
-    <circle cx="230" cy="30" r="3" />
-    <circle cx="230" cy="230" r="3" />
-    <circle cx="30" cy="230" r="3" />
-    <circle cx="163.3" cy="30" r="3" />
-    <circle cx="230" cy="163.3" r="3" />
-    <circle cx="96.7" cy="230" r="3" />
+    <circle cx="34" cy="34" r="3" />
+    <circle cx="388" cy="34" r="3" />
+    <circle cx="388" cy="388" r="3" />
+    <circle cx="34" cy="388" r="3" />
+    <circle cx="270" cy="34" r="3" />
+    <circle cx="388" cy="270" r="3" />
+    <circle cx="152" cy="388" r="3" />
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="22" y="26" text-anchor="middle">A</text>
-    <text x="238" y="26" text-anchor="middle">B</text>
-    <text x="240" y="242" text-anchor="middle">C</text>
-    <text x="22" y="242" text-anchor="middle">D</text>
-    <text x="163" y="22" text-anchor="middle">E</text>
-    <text x="248" y="167" text-anchor="middle">F</text>
-    <text x="97" y="248" text-anchor="middle">G</text>
+    <text x="20" y="27" text-anchor="middle">A</text>
+    <text x="402" y="27" text-anchor="middle">B</text>
+    <text x="406" y="409" text-anchor="middle">C</text>
+    <text x="20" y="409" text-anchor="middle">D</text>
+    <text x="270" y="20" text-anchor="middle">E</text>
+    <text x="420" y="277" text-anchor="middle">F</text>
+    <text x="153" y="420" text-anchor="middle">G</text>
   </g>
   <g class="stroke-red-500" fill="rgb(169 50 38 / 0.12)">
-    <polygon points="163.3,30 230,163.3 96.7,230" />
+    <polygon points="270,34 388,270 152,388" />
   </g>
 </svg>

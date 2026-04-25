@@ -1,20 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <g stroke-linejoin="round" class="stroke-current fill-none">
-    <polygon points="50,70 150,70 170,50 70,50" />
-    <polygon points="50,70 150,70 150,170 50,170" />
-    <polygon points="150,70 170,50 170,150 150,170" />
-    <line x1="70" y1="50" x2="70" y2="150" stroke-dasharray="4,3" />
-    <line x1="70" y1="150" x2="170" y2="150" stroke-dasharray="4,3" />
-    <line x1="70" y1="150" x2="50" y2="170" stroke-dasharray="4,3" />
+    <polygon points="111,147 293,147 329,111 147,111" />
+    <polygon points="111,147 293,147 293,329 111,329" />
+    <polygon points="293,147 329,111 329,293 293,329" />
+    <line x1="147" y1="111" x2="147" y2="293" stroke-dasharray="4,3" />
+    <line x1="147" y1="293" x2="329" y2="293" stroke-dasharray="4,3" />
+    <line x1="147" y1="293" x2="111" y2="329" stroke-dasharray="4,3" />
   </g>
   <g class="stroke-current fill-none">
-    <circle cx="50" cy="70" r="6" />
-    <circle cx="150" cy="70" r="6" />
-    <circle cx="170" cy="50" r="6" />
-    <circle cx="70" cy="50" r="6" />
-    <circle cx="50" cy="170" r="6" />
-    <circle cx="150" cy="170" r="6" />
-    <circle cx="170" cy="150" r="6" />
-    <circle cx="70" cy="150" r="6" />
+    <circle cx="111" cy="147" r="6" />
+    <circle cx="293" cy="147" r="6" />
+    <circle cx="329" cy="111" r="6" />
+    <circle cx="147" cy="111" r="6" />
+    <circle cx="111" cy="329" r="6" />
+    <circle cx="293" cy="329" r="6" />
+    <circle cx="329" cy="293" r="6" />
+    <circle cx="147" cy="293" r="6" />
   </g>
 </svg>

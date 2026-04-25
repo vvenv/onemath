@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <g class="stroke-current fill-none">
-    <polygon points="120,30 30,190 210,190" />
-    <line x1="120" y1="30" x2="120" y2="190" />
-    <line x1="30" y1="190" x2="165" y2="110" />
-    <line x1="210" y1="190" x2="75" y2="110" />
+    <polygon points="220,60 80,380 360,380" />
+    <line x1="220" y1="60" x2="220" y2="380" />
+    <line x1="80" y1="380" x2="275" y2="220" />
+    <line x1="360" y1="380" x2="165" y2="220" />
   </g>
   <g class="fill-current">
-    <circle cx="120" cy="30" r="11" />
-    <circle cx="30" cy="190" r="11" />
-    <circle cx="210" cy="190" r="11" />
-    <circle cx="75" cy="110" r="11" />
-    <circle cx="165" cy="110" r="11" />
-    <circle cx="120" cy="190" r="11" />
-    <circle cx="120" cy="137" r="11" />
+    <circle cx="220" cy="60" r="11" />
+    <circle cx="80" cy="380" r="11" />
+    <circle cx="360" cy="380" r="11" />
+    <circle cx="165" cy="220" r="11" />
+    <circle cx="275" cy="220" r="11" />
+    <circle cx="220" cy="380" r="11" />
+    <circle cx="220" cy="220" r="11" />
   </g>
 </svg>

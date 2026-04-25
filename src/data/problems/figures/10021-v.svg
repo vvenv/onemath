@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <g class="stroke-current fill-none">
-    <polygon points="40,60 150,30 220,60 220,170 110,200 40,170" />
-    <polyline points="40,60 110,90 220,60" />
-    <line x1="110" y1="90" x2="110" y2="200" />
+    <polygon points="81,112 251,66 358,112 358,281 189,328 81,281" />
+    <polyline points="81,112 189,158 358,112" />
+    <line x1="189" y1="158" x2="189" y2="328" />
   </g>
-  <g stroke-dasharray="3 3" class="stroke-current fill-none">
-    <polygon points="68,116 82,122 82,144 68,138" />
-    <polygon points="154,122 176,116 176,138 154,144" />
-    <polygon points="112,60 134,54 148,60 126,66" />
+  <g stroke-dasharray="6 3" class="stroke-current fill-none">
+    <polygon points="124,198 146,207 146,241 124,232" />
+    <polygon points="257,207 291,198 291,232 257,241" />
+    <polygon points="192,112 226,100 248,112 213,121" />
   </g>
   <g text-anchor="middle" class="fill-current">
-    <text x="130" y="215" text-anchor="middle">
+    <text x="220" y="420" text-anchor="middle">
       棱长 5，三方向各对穿一条 1×1 方孔
     </text>
   </g>

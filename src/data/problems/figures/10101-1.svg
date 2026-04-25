@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <g class="stroke-current fill-none">
-    <rect x="30" y="30" width="160" height="160" />
+    <rect x="20.00" y="20.00" width="400.00" height="400.00" />
   </g>
   <g class="stroke-current fill-none">
-    <circle cx="30" cy="30" r="12" />
-    <circle cx="190" cy="30" r="12" />
-    <circle cx="30" cy="190" r="12" />
-    <circle cx="190" cy="190" r="12" />
-    <circle cx="110" cy="30" r="12" />
-    <circle cx="110" cy="190" r="12" />
-    <circle cx="30" cy="110" r="12" />
-    <circle cx="190" cy="110" r="12" />
+    <circle cx="20.00" cy="20.00" r="12" />
+    <circle cx="420.00" cy="20.00" r="12" />
+    <circle cx="20.00" cy="420.00" r="12" />
+    <circle cx="420.00" cy="420.00" r="12" />
+    <circle cx="220.00" cy="20.00" r="12" />
+    <circle cx="220.00" cy="420.00" r="12" />
+    <circle cx="20.00" cy="220.00" r="12" />
+    <circle cx="420.00" cy="220.00" r="12" />
   </g>
 </svg>

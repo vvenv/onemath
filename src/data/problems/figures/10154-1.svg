@@ -1,0 +1,31 @@
+<svg viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg">
+  <g class="stroke-current fill-none">
+    <!-- Square 1: side length 1 -->
+    <rect x="93.33" y="26.67" width="20.00" height="20.00" />
+    <text x="103.33" y="56.67" text-anchor="middle" class="fill-current">①</text>
+
+    <!-- Square 2: diagonal of square 1 -->
+    <rect x="126.67" y="26.67" width="28.29" height="28.29" transform="rotate(45, 81.215, 31.215)" />
+    <text x="140.81" y="64.67" text-anchor="middle" class="fill-current">②</text>
+
+    <!-- Square 3: diagonal of square 2 -->
+    <rect x="173.33" y="26.67" width="40.00" height="40.00" />
+    <text x="193.33" y="76.67" text-anchor="middle" class="fill-current">③</text>
+  </g>
+
+  <g class="fill-current">
+    <!-- Arrow from 1 to 2 -->
+    <path d="M 65 25 L 75 25" class="stroke-current fill-none" marker-end="url(#arrowhead)" />
+    <text x="140.00" y="33.33" text-anchor="middle" class="fill-current">对角线</text>
+
+    <!-- Arrow from 2 to 3 -->
+    <path d="M 130 31 L 145 31" class="stroke-current fill-none" marker-end="url(#arrowhead)" />
+    <text x="185.00" y="37.33" text-anchor="middle" class="fill-current">对角线</text>
+  </g>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="fill-current" />
+    </marker>
+  </defs>
+</svg>

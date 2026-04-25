@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 150">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
   <g class="stroke-current fill-none" stroke-width="1.5">
-    <polygon points="120,20 30,120 210,120" />
-    <line x1="120" y1="20" x2="120" y2="120" />
-    <line x1="30" y1="120" x2="120" y2="75" stroke-dasharray="3 3" />
-    <line x1="210" y1="120" x2="120" y2="75" stroke-dasharray="3 3" />
+    <polygon points="220,20 80,220 360,220" />
+    <line x1="220" y1="20" x2="220" y2="220" />
+    <line x1="80" y1="220" x2="220" y2="140" stroke-dasharray="6 3" />
+    <line x1="360" y1="220" x2="220" y2="140" stroke-dasharray="6 3" />
   </g>
-  <circle cx="120" cy="75" r="2.8" class="fill-current" />
+  <circle cx="220" cy="140" r="2.8" class="fill-current" />
   <g class="fill-current stroke-none" font-family="serif">
-    <text x="122" y="16">A</text>
-    <text x="18" y="130">B</text>
-    <text x="214" y="130">C</text>
-    <text x="126" y="72">G</text>
-    <text x="124" y="138">D</text>
+    <text x="222" y="16">A</text>
+    <text x="68" y="240">B</text>
+    <text x="372" y="240">C</text>
+    <text x="226" y="136">G</text>
+    <text x="224" y="260">D</text>
   </g>
 </svg>

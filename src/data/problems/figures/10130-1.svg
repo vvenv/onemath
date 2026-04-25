@@ -1,31 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-120 -30 480 240">
-  <g class="fill-blue-500/8 stroke-current">
-    <polygon points="0,140 240,140 280,20 40,20" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <g class="fill-none stroke-current">
+    <polygon points="123,196 369,196 410,73 164,73" />
   </g>
   <g class="stroke-red-500 fill-none">
-    <line x1="240" y1="140" x2="-80" y2="20" />
+    <line x1="369" y1="196" x2="41" y2="73" />
   </g>
-  <g stroke-dasharray="3 3" class="stroke-current">
-    <line x1="40" y1="20" x2="-100" y2="20" />
+  <g stroke-dasharray="6 3" class="stroke-current">
+    <line x1="164" y1="73" x2="20" y2="73" />
   </g>
   <g class="fill-current">
-    <circle cx="0" cy="140" r="3" />
-    <circle cx="240" cy="140" r="3" />
-    <circle cx="280" cy="20" r="3" />
-    <circle cx="40" cy="20" r="3" />
-    <circle cx="26.7" cy="60" r="3" />
-    <circle cx="-80" cy="20" r="3" />
-  </g>
-  <g text-anchor="middle" class="fill-current">
-    <text x="-8" y="155" text-anchor="middle">A</text>
-    <text x="248" y="155" text-anchor="middle">B</text>
-    <text x="290" y="15" text-anchor="middle">C</text>
-    <text x="48" y="15" text-anchor="middle">D</text>
-    <text x="14" y="62" text-anchor="middle">E</text>
-    <text x="-88" y="15" text-anchor="middle">F</text>
-  </g>
-  <g text-anchor="middle" class="fill-current">
-    <text x="120" y="155" text-anchor="middle">AB = 16</text>
-    <text x="13" y="100" text-anchor="middle">AE = 4</text>
+    <circle cx="123" cy="196" r="3" />
+    <circle cx="369" cy="196" r="3" />
+    <circle cx="410" cy="73" r="3" />
+    <circle cx="164" cy="73" r="3" />
+    <circle cx="150" cy="114" r="3" />
+    <circle cx="41" cy="73" r="3" />
+    <g text-anchor="middle">
+      <text x="114" y="212" text-anchor="middle">A</text>
+      <text x="377" y="212" text-anchor="middle">B</text>
+      <text x="420" y="68" text-anchor="middle">C</text>
+      <text x="172" y="68" text-anchor="middle">D</text>
+      <text x="137" y="126" text-anchor="middle">E</text>
+      <text x="32" y="68" text-anchor="middle">F</text>
+    </g>
   </g>
 </svg>

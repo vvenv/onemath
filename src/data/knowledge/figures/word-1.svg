@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120">
-  <g class="stroke-current fill-none" stroke-width="1.5">
-    <rect x="20" y="24" width="80" height="22" class="fill-current/12" />
-    <rect x="20" y="64" width="120" height="22" class="fill-current/12" />
-    <line x1="100" y1="46" x2="100" y2="98" />
-    <line x1="140" y1="46" x2="140" y2="98" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <g class="stroke-current fill-none" stroke-width="4.19">
+    <rect x="74.88" y="20.00" width="223.26" height="61.40" class="fill-current/12" />
+    <rect x="74.88" y="131.63" width="334.88" height="61.40" class="fill-current/12" />
+    <line x1="298.14" y1="81.40" x2="298.14" y2="226.51" />
+    <line x1="409.77" y1="81.40" x2="409.77" y2="226.51" />
   </g>
   <g class="fill-current stroke-none" font-family="sans-serif">
-    <text x="4" y="40">乙</text>
-    <text x="4" y="80">甲</text>
-    <text x="104" y="110">多 6</text>
+    <text x="30.23" y="64.65">乙</text>
+    <text x="30.23" y="176.28">甲</text>
+    <text x="309.30" y="260.00">多 6</text>
   </g>
 </svg>
