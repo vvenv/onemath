@@ -171,6 +171,10 @@ export default {
   - 通用思维：`奇偶性` / `不变量` / `最不利原则`
 - 每题 **0–3 个 tag**，只选 `solutions` 中真正用到的方法。选不出就留 `[]`，不要硬凑。
 - 新增方法必须先在 `src/lib/tags.ts` 注册后才能使用；不要发明一次性标签。
+- **新增 tag 流程**：如果题目用到的方法在现有白名单中没有对应标签，应在 `src/lib/tags.ts` 的 `METHOD_TAGS` 中添加：
+  - 按模块分类（`counting` / `word` / `travel` / `numberCalc` / `geometry` / `magicSquare` / `planning` / `general`）将新标签加入对应数组
+  - 确保标签命名简洁、准确反映方法本质，与现有标签风格一致
+  - 添加后，`TAG_WHITELIST` 会自动包含新标签（通过 `Object.values(METHOD_TAGS).flat()`）
 - 可选自检（// turbo）：重新跑一次 `node scripts/normalize-tags.mjs`，期望无改动。
 
 ## 质量检查清单（每题生成后逐项核对）
