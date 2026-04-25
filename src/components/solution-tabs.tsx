@@ -19,9 +19,7 @@ export function SolutionTabs({ methods }: SolutionTabsProps) {
   return (
     <div className="flex flex-col gap-3">
       <div className="flex items-center justify-between gap-3 overflow-x-auto">
-        <h2 className="text-sm font-semibold tracking-tight text-foreground">
-          解法
-        </h2>
+        <h2 className="font-semibold tracking-tight text-foreground">解法</h2>
         <div className="flex gap-2">
           {methods.map((method) => (
             <Button
@@ -39,7 +37,7 @@ export function SolutionTabs({ methods }: SolutionTabsProps) {
       </div>
       <Card>
         <CardContent>
-          <ol className="space-y-3 text-sm list-decimal list-inside">
+          <ol className="space-y-3 list-decimal list-inside">
             {activeMethod?.steps.map((step, index) => (
               <li key={step} className="leading-6 only:list-none">
                 {step}

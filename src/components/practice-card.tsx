@@ -74,7 +74,7 @@ export function PracticeCard({
   return (
     <Card>
       <CardContent>
-        <p className="mb-3 text-sm text-card-foreground">{prompt}</p>
+        <p className="mb-3 text-card-foreground">{prompt}</p>
         {figures && figures.length > 0 ? (
           <div className="mb-3">
             <ProblemFigures figures={figures} />
@@ -159,11 +159,11 @@ export function PracticeCard({
             defaultOpen={result === "wrong"}
             className="mt-3"
           >
-            <CollapsibleTrigger className="group flex w-full items-center gap-2 py-2.5 text-left text-sm font-medium">
+            <CollapsibleTrigger className="group flex w-full items-center gap-2 py-2.5 text-left font-medium">
               <span>标准答案</span>
               <ChevronDown className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
             </CollapsibleTrigger>
-            <CollapsibleContent className="pb-2.5 text-sm">
+            <CollapsibleContent className="pb-2.5">
               标准答案：{standardAnswer}。
             </CollapsibleContent>
           </Collapsible>

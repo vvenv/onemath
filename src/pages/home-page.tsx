@@ -281,9 +281,7 @@ export default function HomePage() {
                         {list.length} 题
                       </Badge>
                     </div>
-                    <p className="text-xs text-muted-foreground">
-                      {grade.subtitle}
-                    </p>
+                    <p className="text-muted-foreground">{grade.subtitle}</p>
                   </div>
                 </div>
                 <ChevronDown className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
@@ -304,8 +302,8 @@ export default function HomePage() {
         {visibleProblems.length === 0 ? (
           <div className="flex flex-col items-center gap-2 rounded-2xl border border-dashed border-border/70 py-12 text-center">
             <Search className="size-6 text-muted-foreground" />
-            <p className="text-sm font-medium">没有符合条件的题目</p>
-            <p className="text-xs text-muted-foreground">试试调整筛选</p>
+            <p className="font-medium">没有符合条件的题目</p>
+            <p className="text-muted-foreground">试试调整筛选</p>
             {hasFilter ? (
               <Button
                 type="button"

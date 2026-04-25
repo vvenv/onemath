@@ -54,7 +54,7 @@ export function StatementTable({
     <div className="space-y-2">
       <div className="overflow-hidden rounded-md border border-border/70">
         <Table>
-          <TableHeader className="bg-muted/50 text-xs">
+          <TableHeader className="bg-muted/50">
             <TableRow className="hover:bg-transparent">
               <TableHead>{h.speaker}</TableHead>
               <TableHead>{h.claim}</TableHead>

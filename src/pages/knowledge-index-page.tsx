@@ -94,7 +94,7 @@ export default function KnowledgeIndexPage() {
             方法手册
           </h1>
         </div>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-muted-foreground">
           按模块收录小学奥数常用的解题方法与几何模型。点任意条目查看直观场景、推导与例题。
         </p>
       </header>
@@ -126,10 +126,7 @@ export default function KnowledgeIndexPage() {
                       to={`/k/${entry.slug}`}
                       className="group no-underline"
                     >
-                      <Card
-                        size="sm"
-                        className="h-full transition-all group-hover:-translate-y-0.5 group-hover:border-primary/40 group-hover:shadow-md"
-                      >
+                      <Card className="h-full transition-all group-hover:-translate-y-0.5 group-hover:border-primary/40 group-hover:shadow-md">
                         <CardHeader>
                           <CardTitle className="flex items-center gap-2">
                             <BookOpen className="size-4 shrink-0 text-muted-foreground group-hover:text-primary" />

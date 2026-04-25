@@ -1,9 +1,9 @@
 import { Link } from "react-router";
-import { BookOpen, Moon, Sun } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { toggleTheme } from "@/lib/theme";
 import { GlobalSearch } from "./global-search";
 import { Logo } from "./logo";
+import { ThemeSwitcher } from "./theme-switcher";
 
 export function AppBar() {
   return (
@@ -36,17 +36,7 @@ export function AppBar() {
               <BookOpen />
             </Link>
           </Button>
-          <Button
-            type="button"
-            variant="ghost"
-            size="icon-sm"
-            className="active:translate-y-0!"
-            aria-label="切换主题"
-            onClick={toggleTheme}
-          >
-            <Moon className="block dark:hidden" />
-            <Sun className="hidden dark:block" />
-          </Button>
+          <ThemeSwitcher />
         </div>
       </div>
     </header>

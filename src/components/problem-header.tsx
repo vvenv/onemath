@@ -64,7 +64,7 @@ export function ProblemHeader({
         >
           <ArrowLeft className="h-4 w-4" />
         </Link>
-        <span className="text-sm font-medium text-muted-foreground tabular-nums">
+        <span className="text-xs font-medium text-muted-foreground tabular-nums">
           #{id}
         </span>
         <h1 className="font-heading text-xl leading-tight font-semibold tracking-tight text-foreground">

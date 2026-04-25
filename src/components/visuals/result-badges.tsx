@@ -24,7 +24,7 @@ export function ResultBadges({
   return (
     <div
       className={cn(
-        "flex flex-wrap items-center justify-center gap-4 py-1 text-sm",
+        "flex flex-wrap items-center justify-center gap-4 py-1",
         className,
       )}
     >

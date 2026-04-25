@@ -150,7 +150,7 @@ export default function KnowledgePage() {
         </ol>
         {entry.keyPoints && entry.keyPoints.length > 0 ? (
           <div className="mt-3 rounded-lg bg-muted/50 p-3">
-            <p className="mb-1 text-xs font-semibold tracking-wide text-muted-foreground">
+            <p className="mb-1 font-semibold tracking-wide text-muted-foreground">
               公式 / 要点
             </p>
             <ul className="flex flex-col gap-1 text-sm text-foreground/90">
@@ -165,7 +165,7 @@ export default function KnowledgePage() {
       <Section icon={<Lightbulb className="size-4" />} title="典型例题">
         <div className="flex flex-col gap-3">
           {entry.examples.map((ex, i) => (
-            <Card key={i} size="sm">
+            <Card key={i}>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <span className="inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[11px] font-semibold tabular-nums text-primary">
@@ -178,7 +178,7 @@ export default function KnowledgePage() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ol className="flex list-none flex-col gap-1.5 text-sm leading-relaxed text-muted-foreground">
+                <ol className="flex list-none flex-col gap-1.5 leading-relaxed text-muted-foreground">
                   {ex.solution.map((line, j) => (
                     <li key={j} className="flex gap-2">
                       <span className="mt-1 inline-block size-1 shrink-0 rounded-full bg-muted-foreground/50" />
@@ -187,7 +187,7 @@ export default function KnowledgePage() {
                   ))}
                 </ol>
                 {ex.takeaway ? (
-                  <p className="mt-3 rounded-md bg-muted/40 px-3 py-2 text-xs text-foreground/80">
+                  <p className="mt-3 rounded-md bg-muted/40 px-3 py-2 text-foreground/80">
                     <span className="font-medium text-foreground">小结：</span>
                     {ex.takeaway}
                   </p>
@@ -226,7 +226,7 @@ export default function KnowledgePage() {
                   className="group flex items-start gap-3 rounded-xl border border-border/70 bg-card p-3 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
                 >
                   <div className="flex min-w-0 flex-1 flex-col gap-1">
-                    <span className="truncate text-sm font-medium text-card-foreground group-hover:text-primary">
+                    <span className="truncate font-medium text-card-foreground group-hover:text-primary">
                       <span className="text-muted-foreground">#{p.id}</span>{" "}
                       {p.title}
                     </span>
@@ -254,7 +254,7 @@ export default function KnowledgePage() {
 
       {related.length > 0 ? (
         <section className="flex flex-col gap-2">
-          <h2 className="text-sm font-semibold tracking-tight text-foreground">
+          <h2 className="font-semibold tracking-tight text-foreground">
             相关知识点
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -290,11 +290,11 @@ function Section({
 }) {
   return (
     <section className="flex flex-col gap-2">
-      <h2 className="flex items-center gap-1.5 text-sm font-semibold tracking-tight text-foreground">
+      <h2 className="flex items-center gap-1.5 font-semibold tracking-tight text-foreground">
         <span className="text-muted-foreground">{icon}</span>
         {title}
       </h2>
-      <Card size="sm">
+      <Card>
         <CardContent>{children}</CardContent>
       </Card>
     </section>

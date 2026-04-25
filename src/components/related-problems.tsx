@@ -15,9 +15,7 @@ export function RelatedProblems({ id, limit = 2 }: RelatedProblemsProps) {
 
   return (
     <section className="flex flex-col gap-2">
-      <h2 className="text-sm font-semibold tracking-tight text-foreground">
-        相关题目
-      </h2>
+      <h2 className="font-semibold tracking-tight text-foreground">相关题目</h2>
       <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
         {related.map((p) => {
           const mod = getModule(p.module);
@@ -28,7 +26,7 @@ export function RelatedProblems({ id, limit = 2 }: RelatedProblemsProps) {
               className="group relative flex items-start gap-3 overflow-hidden rounded-xl border border-border/70 bg-card p-3 no-underline transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
             >
               <div className="flex min-w-0 flex-1 flex-col gap-1">
-                <span className="truncate text-sm font-medium text-card-foreground group-hover:text-primary">
+                <span className="truncate font-medium text-card-foreground group-hover:text-primary">
                   <span className="text-muted-foreground">#{p.id}</span>{" "}
                   {p.title}
                 </span>

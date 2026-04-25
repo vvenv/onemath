@@ -89,9 +89,7 @@ export default function ProblemPage() {
         tags={problem.tags}
       />
       <section className="flex flex-col gap-2">
-        <h2 className="text-sm font-semibold tracking-tight text-foreground">
-          练一练
-        </h2>
+        <h2 className="font-semibold tracking-tight text-foreground">练一练</h2>
         <PracticeCard
           key={`practice-${problem.id}`}
           prompt={problem.variant.question}

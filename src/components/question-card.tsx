@@ -11,7 +11,7 @@ export function QuestionCard({ question, figures }: QuestionCardProps) {
   return (
     <Card>
       <CardHeader className="pb-2">
-        <CardTitle className="text-sm font-medium text-muted-foreground">
+        <CardTitle className="font-medium text-muted-foreground">
           题目
         </CardTitle>
       </CardHeader>

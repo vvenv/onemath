@@ -57,10 +57,8 @@ export function KnowledgePoints({ points, tags }: KnowledgePointsProps) {
 
   return (
     <section className="flex flex-col gap-2">
-      <h2 className="text-sm font-semibold tracking-tight text-foreground">
-        知识点
-      </h2>
-      <Card size="sm">
+      <h2 className="font-semibold tracking-tight text-foreground">知识点</h2>
+      <Card>
         <CardContent>
           <div className="flex flex-col">
             {resolved.map((point) =>
@@ -85,7 +83,7 @@ export function KnowledgePoints({ points, tags }: KnowledgePointsProps) {
                   key={point.key}
                   className="border-b last:border-b-0"
                 >
-                  <CollapsibleTrigger className="group flex w-full items-center gap-2 py-2.5 text-left text-sm font-medium">
+                  <CollapsibleTrigger className="group flex w-full items-center gap-2 py-2.5 text-left font-medium">
                     <BookOpen className="size-4 shrink-0 text-muted-foreground" />
                     <span className="font-medium">{point.name}</span>
                     {point.summary ? (
@@ -95,7 +93,7 @@ export function KnowledgePoints({ points, tags }: KnowledgePointsProps) {
                     ) : null}
                     <ChevronDown className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="pb-2.5 text-sm text-muted-foreground">
+                  <CollapsibleContent className="pb-2.5 text-muted-foreground">
                     <p>
                       讲解内容正在整理中，敬请期待。想第一时间看到「
                       {point.name}」的直观推导与例题，可以先把这道题收藏起来。

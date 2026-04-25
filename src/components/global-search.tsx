@@ -86,9 +86,7 @@ export function GlobalSearch() {
       const s = scoreProblem(p, q);
       if (s > 0) scored.push({ p, s });
     }
-    scored.sort(
-      (a, b) => b.s - a.s || a.p.id.localeCompare(b.p.id),
-    );
+    scored.sort((a, b) => b.s - a.s || a.p.id.localeCompare(b.p.id));
     return scored.slice(0, MAX_RESULTS).map((x) => x.p);
   }, [keyword]);
 
@@ -194,7 +192,7 @@ export function GlobalSearch() {
                           : "text-muted-foreground hover:bg-muted/60 hover:text-foreground",
                       )}
                     >
-                      <span className="min-w-0 flex-1 truncate text-sm">
+                      <span className="min-w-0 flex-1 truncate">
                         <span className="text-muted-foreground">#{p.id}</span>{" "}
                         <span className="text-foreground">{p.title}</span>
                       </span>
