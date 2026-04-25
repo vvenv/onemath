@@ -214,7 +214,7 @@ export function ThemeSwitcher() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="theme-dialog-title"
-            className="absolute right-0 top-full z-50 mt-2 w-full max-w-md p-4 shadow-lg sm:w-96"
+            className="fixed left-4 right-4 top-20 z-50 max-h-[calc(100vh-6rem)] max-w-md overflow-y-auto p-4 shadow-lg sm:absolute sm:left-auto sm:right-0 sm:top-full sm:mt-2 sm:h-auto sm:w-96 sm:max-h-[80vh]"
           >
             <div className="space-y-4">
               {/* Header */}
