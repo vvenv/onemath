@@ -44,4 +44,10 @@ const navigationHandler = async ({ request }: { request: Request }) => {
   return fetch(request);
 };
 
-registerRoute(new NavigationRoute(navigationHandler));
+// Only handle navigation requests (requests expecting HTML), not static assets
+// Exclude paths that end with a file extension (e.g., .js, .css)
+registerRoute(
+  new NavigationRoute(navigationHandler, {
+    allowlist: [/^\/(?:[^/]+\/)*[^/.]+$/],
+  }),
+);
