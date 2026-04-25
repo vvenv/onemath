@@ -30,6 +30,7 @@ export const METHOD_TAGS = {
     "分类讨论",
     "对应思想",
     "递推法",
+    "排列",
   ],
   word: [
     "方程法",
@@ -72,7 +73,16 @@ export const METHOD_TAGS = {
   ],
   magicSquare: ["累加法", "中心数法", "比较法", "等差数列法", "试填法"],
   planning: ["时间统筹", "调运选址"],
-  general: ["奇偶性", "不变量", "最不利原则"],
+  general: [
+    "奇偶性",
+    "不变量",
+    "最不利原则",
+    "古典概型",
+    "独立事件",
+    "对立事件",
+    "条件概率",
+    "期望值",
+  ],
 } as const;
 
 export const TAG_WHITELIST: ReadonlySet<string> = new Set(

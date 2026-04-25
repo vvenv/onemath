@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/collapsible";
 import { GRADES, MODULES, type ModuleKey } from "@/lib/modules";
 import { problems } from "@/lib/problems";
+import { TAG_WHITELIST } from "@/lib/tags";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, buildMeta } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 import type { Grade, ProblemData } from "@/types/problem";
@@ -73,10 +74,10 @@ export default function HomePage() {
   );
   const tags = useMemo(() => {
     const set = new Set<string>();
-    for (const p of problems) for (const t of p.tags) set.add(t);
+    for (const p of problems)
+      for (const t of p.tags) if (TAG_WHITELIST.has(t)) set.add(t);
     return Array.from(set).sort((a, b) => a.localeCompare(b, "zh"));
   }, []);
-  const tagSet = useMemo(() => new Set(tags), [tags]);
 
   const rawModule = hydrated ? searchParams.get("module") : null;
   const activeModule: ModuleKey | null =
@@ -92,7 +93,8 @@ export default function HomePage() {
       ? (rawDifficulty as Difficulty)
       : null;
   const rawTag = hydrated ? searchParams.get("tag") : null;
-  const activeTag: string | null = rawTag && tagSet.has(rawTag) ? rawTag : null;
+  const activeTag: string | null =
+    rawTag && TAG_WHITELIST.has(rawTag) ? rawTag : null;
 
   const updateParam = (key: string, value: string | null) => {
     setSearchParams(
