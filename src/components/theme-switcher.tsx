@@ -1,4 +1,10 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  useLayoutEffect,
+} from "react";
 import { Moon, Sun, Palette, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -33,7 +39,7 @@ const colorToHex = (color: string): string => {
   return `#${r.toString(16).padStart(2, "0")}${g.toString(16).padStart(2, "0")}${b.toString(16).padStart(2, "0")}`;
 };
 
-// Get preview colors for a color scheme
+// Get preview colors for a color scheme using a temporary detached element
 const getThemePreviewColors = (
   scheme: ColorScheme,
   mode: ThemeMode,
@@ -41,16 +47,16 @@ const getThemePreviewColors = (
   if (typeof document === "undefined")
     return ["#ffffff", "#000000", "#000000", "#f5f5f5"];
 
-  const root = document.documentElement;
+  // Create a temporary detached element to avoid DOM manipulation
+  const tempDiv = document.createElement("div");
+  tempDiv.setAttribute("data-color-scheme", scheme);
+  if (mode === "dark") {
+    tempDiv.classList.add("dark");
+  }
+  // Append to body to inherit CSS variables
+  document.body.appendChild(tempDiv);
 
-  // Temporarily set the scheme to get computed colors
-  const previousScheme = root.getAttribute("data-color-scheme");
-  const previousDark = root.classList.contains("dark");
-
-  root.setAttribute("data-color-scheme", scheme);
-  root.classList.toggle("dark", mode === "dark");
-
-  const computed = getComputedStyle(root);
+  const computed = getComputedStyle(tempDiv);
   const colors = [
     computed.getPropertyValue("--background").trim(),
     computed.getPropertyValue("--foreground").trim(),
@@ -58,13 +64,8 @@ const getThemePreviewColors = (
     computed.getPropertyValue("--muted").trim(),
   ];
 
-  // Restore previous state
-  if (previousScheme) {
-    root.setAttribute("data-color-scheme", previousScheme);
-  } else {
-    root.removeAttribute("data-color-scheme");
-  }
-  root.classList.toggle("dark", previousDark);
+  // Remove temporary element
+  document.body.removeChild(tempDiv);
 
   return colors;
 };
@@ -186,6 +187,37 @@ export function ThemeSwitcher() {
 
   const hasCustomColors = Object.keys(theme.customColors || {}).length > 0;
 
+  // Pre-compute all preview colors for both modes once on mount to avoid any reflows
+  const previewColorsCacheRef = useRef<
+    Record<"light" | "dark", Record<string, string[]>>
+  >({
+    light: {},
+    dark: {},
+  });
+
+  useLayoutEffect(() => {
+    if (typeof document === "undefined") return;
+
+    // Compute all preview colors for both light and dark modes once
+    const cache: Record<"light" | "dark", Record<string, string[]>> = {
+      light: {},
+      dark: {},
+    };
+
+    BUILT_IN_THEMES.forEach((builtInTheme) => {
+      cache.light[builtInTheme.id] = getThemePreviewColors(
+        builtInTheme.id,
+        "light",
+      );
+      cache.dark[builtInTheme.id] = getThemePreviewColors(
+        builtInTheme.id,
+        "dark",
+      );
+    });
+
+    previewColorsCacheRef.current = cache;
+  }, []); // Only run once on mount
+
   return (
     <div className="relative">
       <Button
@@ -270,10 +302,10 @@ export function ThemeSwitcher() {
                 </div>
                 <div className="grid grid-cols-1 gap-2">
                   {BUILT_IN_THEMES.map((builtInTheme) => {
-                    const previewColors = getThemePreviewColors(
-                      builtInTheme.id,
-                      theme.mode,
-                    );
+                    const previewColors =
+                      previewColorsCacheRef.current[theme.mode][
+                        builtInTheme.id
+                      ];
                     return (
                       <Button
                         key={builtInTheme.id}
