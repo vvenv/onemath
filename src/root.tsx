@@ -25,14 +25,14 @@ export function Layout({ children }: { children: ReactNode }) {
           content="black-translucent"
         />
         {!isDev && <link rel="manifest" href="/manifest.webmanifest" />}
+        {!isDev && (
+          <script dangerouslySetInnerHTML={{ __html: pwaRegisterScript }} />
+        )}
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
         <Meta />
         <Links />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        {!isDev && (
-          <script dangerouslySetInnerHTML={{ __html: pwaRegisterScript }} />
-        )}
       </head>
       <body>
         {children}

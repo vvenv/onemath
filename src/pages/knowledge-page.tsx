@@ -125,26 +125,21 @@ export default function KnowledgePage() {
             {entry.name}
           </h1>
         </div>
-        <p className="text-sm text-muted-foreground">{entry.summary}</p>
+        <p className="text-muted-foreground">{entry.summary}</p>
       </header>
 
       <Section icon={<Sparkles className="size-4" />} title="直观场景">
-        <p className="text-sm leading-relaxed text-foreground/90">
-          {entry.intuition}
-        </p>
+        <p className="leading-relaxed text-foreground/90">{entry.intuition}</p>
         {entry.figures && entry.figures.length > 0 ? (
           <KnowledgeFigures figures={entry.figures} className="mt-3" />
         ) : null}
       </Section>
 
       <Section icon={<ListChecks className="size-4" />} title="推导思路">
-        <ol className="flex list-none flex-col gap-2 text-sm leading-relaxed text-foreground/90">
-          {entry.derivation.map((step, i) => (
-            <li key={i} className="flex gap-2">
-              <span className="mt-0.5 inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-muted text-[11px] font-semibold tabular-nums text-muted-foreground">
-                {i + 1}
-              </span>
-              <span>{step}</span>
+        <ol className="list-decimal list-inside">
+          {entry.derivation.map((step) => (
+            <li key={step} className="leading-loose only:list-none">
+              {step}
             </li>
           ))}
         </ol>
@@ -153,16 +148,22 @@ export default function KnowledgePage() {
             <p className="mb-1 font-semibold tracking-wide text-muted-foreground">
               公式 / 要点
             </p>
-            <ul className="flex flex-col gap-1 text-sm text-foreground/90">
-              {entry.keyPoints.map((k, i) => (
-                <li key={i}>· {k}</li>
+            <ul className="list-disc list-inside">
+              {entry.keyPoints.map((k) => (
+                <li key={k} className="leading-loose only:list-none">
+                  {k}
+                </li>
               ))}
             </ul>
           </div>
         ) : null}
       </Section>
 
-      <Section icon={<Lightbulb className="size-4" />} title="典型例题">
+      <Section
+        icon={<Lightbulb className="size-4" />}
+        title="典型例题"
+        seamless
+      >
         <div className="flex flex-col gap-3">
           {entry.examples.map((ex, i) => (
             <Card key={i}>
@@ -178,16 +179,15 @@ export default function KnowledgePage() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ol className="flex list-none flex-col gap-1.5 leading-relaxed text-muted-foreground">
-                  {ex.solution.map((line, j) => (
-                    <li key={j} className="flex gap-2">
-                      <span className="mt-1 inline-block size-1 shrink-0 rounded-full bg-muted-foreground/50" />
-                      <span>{line}</span>
+                <ol className="list-decimal list-inside">
+                  {ex.solution.map((line) => (
+                    <li key={line} className="leading-loose only:list-none">
+                      {line}
                     </li>
                   ))}
                 </ol>
                 {ex.takeaway ? (
-                  <p className="mt-3 rounded-md bg-muted/40 px-3 py-2 text-foreground/80">
+                  <p className="mt-3 rounded-md bg-muted/40 text-foreground/80">
                     <span className="font-medium text-foreground">小结：</span>
                     {ex.takeaway}
                   </p>
@@ -200,11 +200,10 @@ export default function KnowledgePage() {
 
       {entry.pitfalls && entry.pitfalls.length > 0 ? (
         <Section icon={<TriangleAlert className="size-4" />} title="常见误区">
-          <ul className="flex flex-col gap-1.5 text-sm text-muted-foreground">
+          <ul className="list-disc list-inside">
             {entry.pitfalls.map((p, i) => (
-              <li key={i} className="flex gap-2">
-                <span className="mt-1 inline-block size-1 shrink-0 rounded-full bg-amber-500/70" />
-                <span>{p}</span>
+              <li key={i} className="leading-loose only:list-none">
+                {p}
               </li>
             ))}
           </ul>
@@ -212,10 +211,11 @@ export default function KnowledgePage() {
       ) : null}
 
       {problems.length > 0 ? (
-        <section className="flex flex-col gap-2">
-          <h2 className="text-sm font-semibold tracking-tight text-foreground">
-            用到「{entry.name}」的题目
-          </h2>
+        <Section
+          icon={<BookOpen className="size-4" />}
+          title={`用到「{entry.name}」的题目`}
+          seamless
+        >
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
             {problems.map((p) => {
               const mod = getModule(p.module);
@@ -249,7 +249,7 @@ export default function KnowledgePage() {
               );
             })}
           </div>
-        </section>
+        </Section>
       ) : null}
 
       {related.length > 0 ? (
@@ -282,10 +282,12 @@ export default function KnowledgePage() {
 function Section({
   icon,
   title,
+  seamless,
   children,
 }: {
   icon: React.ReactNode;
   title: string;
+  seamless?: boolean;
   children: React.ReactNode;
 }) {
   return (
@@ -294,9 +296,13 @@ function Section({
         <span className="text-muted-foreground">{icon}</span>
         {title}
       </h2>
-      <Card>
-        <CardContent>{children}</CardContent>
-      </Card>
+      {seamless ? (
+        children
+      ) : (
+        <Card>
+          <CardContent>{children}</CardContent>
+        </Card>
+      )}
     </section>
   );
 }
