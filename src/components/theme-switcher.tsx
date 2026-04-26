@@ -192,7 +192,7 @@ export function ThemeSwitcher() {
                 onClick={() => handleModeSet("light")}
                 className="flex-1"
               >
-                <Sun className="mr-1 size-3" />
+                <Sun className="mr-1 size-4" />
                 亮色
               </Button>
               <Button
@@ -201,7 +201,7 @@ export function ThemeSwitcher() {
                 onClick={() => handleModeSet("dark")}
                 className="flex-1"
               >
-                <Moon className="mr-1 size-3" />
+                <Moon className="mr-1 size-4" />
                 暗色
               </Button>
             </div>
@@ -261,7 +261,7 @@ export function ThemeSwitcher() {
               aria-expanded={showCustomColors}
               aria-controls="custom-colors-panel"
             >
-              <Palette className="mr-1 size-3" />
+              <Palette className="mr-1 size-4" />
               {showCustomColors ? "收起" : "展开"}自定义颜色
             </Button>
 

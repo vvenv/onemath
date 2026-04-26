@@ -41,7 +41,13 @@ description: Given a reference document under docs/, produce a generation plan a
    ls src/data/problems/*.ts | sort -V | tail -1 | sed 's/.*\/\([0-9]*\)\.ts/\1/'
    ```
    新 ID 从「最大 ID + 1」开始依次递增（5 位，10001–19999）。
-4. **输出计划表**：以 Markdown 表格形式呈现给用户，包含：
+4. **查重与去重**：
+   - 搜索现有题库中是否存在相同或高度相似的题目：
+     - 检查 `question` 文本是否完全相同或仅数值不同
+     - 检查是否已有相同题型 + 相同方法标签 + 相同年级的题目
+   - 如发现重复或高度相似题目，在计划表中标注"跳过（已存在类似题目）"并说明相似题目的 ID
+   - 仅对确实新颖的题型或变式进行生成
+5. **输出计划表**：以 Markdown 表格形式呈现给用户，包含：
 
    | 序号 | 预分配 ID | 题型 | 方法标签 | 年级 | 难度 | 模块 | 一句话题面构思 |
    | ---- | --------- | ---- | -------- | ---- | ---- | ---- | -------------- |
@@ -49,7 +55,7 @@ description: Given a reference document under docs/, produce a generation plan a
    - 同一题型若文档中跨多个难度/年级，按行拆分。
    - 题面构思必须**只描述问题**，不泄露解法。
 
-5. **等待/自动确认**：如用户未明确确认数量或范围，询问是否按此计划生成；若请求已包含明确范围或数量，直接进入阶段 2。
+6. **等待/自动确认**：如用户未明确确认数量或范围，询问是否按此计划生成；若请求已包含明确范围或数量，直接进入阶段 2。
 
 ### 阶段 2：逐题生成
 
@@ -73,6 +79,12 @@ description: Given a reference document under docs/, produce a generation plan a
 4. 按质量清单自查；全部完成后给出生成汇总（ID 列表 + 标题）。
 
 ## 题目内容规范（重要）
+
+### 难度定位
+
+- **题目要围绕小学奥数体系**：题目难度必须符合小学奥数标准，既不要太超纲（超出小学知识范围），也不要太简单（低于奥数水平）。
+- 确保题目难度与标注的 `grade`（年级）和 `difficulty`（基础/进阶/挑战）相匹配。
+- 避免引入初中及以上的数学概念（如二次方程、函数、三角函数等），除非是小学奥数中明确涉及的拓展内容。
 
 ### 题干与 figures（呈现给学生的部分）
 
@@ -119,6 +131,27 @@ description: Given a reference document under docs/, produce a generation plan a
 - `answer` 精确可判分；数值给最简/准确形式。
 - `hint` 为简短引导（可含方法名），`hint` 是练习提示可含方法线索，但主 `question` 不可。
 
+### knowledgePoints（知识点关联）
+
+- **当题目涉及的核心方法或概念在 `src/data/knowledge/` 中已有对应条目时，应关联该知识点**：
+  - 在 `knowledgePoints` 字段中添加 `{ slug: "知识点slug", name: "知识点名称", summary?: "简短摘要" }`
+  - slug 必须与 `src/data/knowledge/*.ts` 中某个条目的 `slug` 完全一致
+  - 优先关联与 `tags` 中方法标签对应的知识点（例如 `tags: ["捆绑法"]` 应关联 `slug: "bundle"` 的知识点条目）
+- **当题目涉及的方法或概念在知识点库中不存在时，应创建新的知识点条目**（如必要）：
+  - 新知识点文件应放在对应的模块文件中（`src/data/knowledge/counting.ts`、`geometry.ts`、`word.ts` 等）
+  - 知识点结构对齐 `KnowledgeEntry` 类型（见 `src/data/knowledge/types.ts`），包含：
+    - `slug`: 唯一标识符（kebab-case，英文小写）
+    - `name`: 中文标题
+    - `tag`: 对应的方法标签（如适用）
+    - `category`: 所属类别（与 `@/lib/tags.ts` 中的 `METHOD_TAGS` 键对齐）
+    - `summary`: 一句话定位
+    - `intuition`: 直觉化场景描述
+    - `derivation`: 推导步骤数组
+    - `examples`: 2–3 个进阶示例
+    - `figures`: 可选的说明性图形
+  - 创建后，在题目中通过 `knowledgePoints` 关联新知识点
+- 知识点创建是**可选的**：仅当该方法/概念确实是该题目的核心、且现有知识点库中无合适条目时才创建。避免为每个细小技巧都新建知识点。
+
 ### scenes 选型建议
 
 - 数值/公式推演：`equation-list`
@@ -128,6 +161,17 @@ description: Given a reference document under docs/, produce a generation plan a
 - 枚举/真假/逻辑：`statement-table`、`number-grid`
 - 排列/排队、插空、捆绑等计数题：优先 `equation-list` 承载计数式，辅以 `svg` 画座位/空位示意
 - 鸡兔同笼类：`heads`、`heads-split`
+
+### 图形化要求
+
+- **主动判断是否需要图形化**：在生成题目时，应评估图形化是否能显著提升解法的清晰度和可理解性。
+- **优先图形化的场景**：
+  - 几何类题目：必须提供几何图形（`figures` 中的 `svg`）
+  - 行程问题：提供路线示意图（如相遇、追及、流水行船的场景图）
+  - 计数问题：提供中性示意图（如座位、物品排列），方法可视化图放入 `solutions.scenes`
+  - 应用题：提供场景示意图（如工程图、容器图、面积图）
+- **图形化应服务于理解**：图形应帮助学生直观理解题目条件和关系，而非装饰性元素。
+- **方法可视化图应放入解法场景**：如前述"带方法暗示的好图不要浪费"规则，将方法可视化图放入 `solutions[i].scenes` 中，而非题面 `figures`。
 
 ## 输出骨架
 
@@ -156,6 +200,13 @@ export default {
     answer: { answer: 0 },
     hint: "简短引导",
   },
+  knowledgePoints: [
+    {
+      slug: "bundle",
+      name: "捆绑法",
+      summary: "将相邻元素视为一个整体进行排列",
+    },
+  ],
   tags: ["方法1", "方法2"],
 } satisfies ProblemData;
 ```
@@ -181,8 +232,10 @@ export default {
 
 - [ ] `id` 为 5 位字符串，在本批次内唯一且连续递增
 - [ ] `grade` / `module` / `difficulty` 在 `ProblemData` 联合类型允许的值内
+- [ ] **查重**：题目与现有题库无重复或高度相似（已通过阶段1的查重步骤）
 - [ ] `question` 与任一 `figures[].svg` / `caption` 均不含解法、提示、公式、答案
 - [ ] 任一 `figures[]` 未出现方法名或等效暗示（"捆在一起"、"隔板"、"插空"、"只能填…"、"固定一人"、"每格 = 左 + 下" 等）
+- [ ] **图形化**：根据题型判断是否需要图形化，几何类/行程类/应用题已提供必要的中性示意图；方法可视化图已放入 `solutions.scenes` 而非 `figures`
 - [ ] 每个 `solutions[i].steps[0]` 以"分析"开头，承载了题面约束/特殊位置/对称性等背景推理
 - [ ] `solutions.length >= 1`，步骤完整、结论明确
 - [ ] 每个 `solutions[i].steps` 精炼（约 2–4 条），`分析` 与后续 `steps`、`scenes` 不重复相同内容；推导可用一条紧凑等式链呈现
@@ -190,12 +243,16 @@ export default {
 - [ ] 所有 `scenes[].kind` 为 `SceneSpec`（见 `src/types/visual.ts`）允许的值
 - [ ] `variant.answer` 的键与 `variant.fields[].key` 一一对应
 - [ ] `tags` 仅含 `@/src/lib/tags.ts` 白名单内的方法（0–3 个），不含年级/难度/模块
+- [ ] **知识点关联**：如题目涉及的核心方法在知识点库中存在，已在 `knowledgePoints` 中正确关联；如创建了新知识点，其结构对齐 `KnowledgeEntry` 且已放入对应模块文件
 - [ ] `pnpm exec tsc --noEmit` 通过（文件尾端 `satisfies ProblemData` 会自动校验类型）
 
 ## 参考资料
 
 - 类型源头：`src/types/problem.ts`、`src/types/visual.ts`
+- 知识点类型定义：`src/data/knowledge/types.ts`
+- 方法标签白名单：`src/lib/tags.ts`
 - 旧 JSON Schema（仅供字段形状参考，不再被运行时引用）：`src/data/problem.schema.json`
 - 知识点分布：`docs/CATEGORY.md`
 - 输入文档示例：`docs/排列组合.md`
 - 题目示例：`src/data/problems/10054.ts`（行程）、`src/data/problems/10057.ts`、`src/data/problems/10059.ts`
+- 知识点示例：`src/data/knowledge/counting.ts`、`src/data/knowledge/geometry.ts`、`src/data/knowledge/word.ts`

@@ -29,6 +29,7 @@
 
 ## Problem Solutions (`src/data/problems/*.ts`)
 
+- **Difficulty alignment**: Problems must revolve around the elementary school Olympiad system (小学奥数体系). Do not create problems that are too advanced (beyond elementary curriculum) or too simple (below Olympiad level). Ensure appropriate challenge for the target grade level.
 - Keep `solutions[].steps` concise and non-redundant: do not duplicate content between `分析`, subsequent `steps`, and `scenes` (e.g. `equation-list` rows). See `/optimize-problem` and `/generate-problem` workflows for the detailed rubric.
 - In particular, if a `scenes` entry (typically `equation-list`) already walks through the full derivation row by row, do NOT add a `step` whose sole purpose is to restate that derivation as a single equation chain. Let the analysis step carry the narrative and the scene carry the computation.
 - Readability of each `step`: keep every single `steps[]` entry short and skimmable — prefer 1–2 short sentences per step; do not cram multiple logically distinct moves (e.g. 分组 + 组内排序 + 合并顺序 + 结论) into one long run-on sentence separated by 分号/逗号. If a step would otherwise become a wall of text, split it into several short steps, push the mechanical derivation into a `scenes` entry (e.g. `equation-list`), or move list-like enumerations into structured scene rows. A useful heuristic: if a step wraps to more than ~2 lines on a typical reading column, it should be split or off-loaded to a scene.

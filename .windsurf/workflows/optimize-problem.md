@@ -40,6 +40,7 @@ description: Audit and optimize an existing edao.plus problem TS file against th
 3. **对照已有题目风格**：至少抽查 1 个同 `module` + 同 `difficulty` 的 `src/data/problems/*.ts`，用作 `solutions` / `scenes` / `variant` 结构对标。
 4. **逐项诊断**，按以下维度列出问题清单（带证据引用原文片段）：
    - **类型合规**：`id` / `grade` / `module` / `difficulty` 是否在 `ProblemData` 的联合值内；必填字段是否齐全（`tsc --noEmit` 可一次全盖）。
+   - **难度定位**：题目是否符合小学奥数体系，是否过于超纲（超出小学知识范围）或过于简单（低于奥数水平）；难度是否与标注的 `grade` 和 `difficulty` 匹配。
    - **题干泄露**：`question` 是否包含 "提示：…"、"可写成…"、"令 x = …"、方法名、关键中间量等解法线索。
    - **figures 泄露**：`figures[].svg` / `caption` / `alt` 是否出现方法暗示（捆绑框、∧ 形空位、隔板①②、"只能填…"、"固定一人"、"每格 = 左 + 下" 等）。若 SVG 本身优秀但有方法暗示，标记为"应移入 `solutions[i].scenes`"。
    - **solutions 质量**：
