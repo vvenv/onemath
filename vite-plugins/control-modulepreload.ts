@@ -8,27 +8,31 @@ export function controlModulePreloadPosition(): Plugin {
   return {
     name: "control-modulepreload-position",
     transformIndexHtml(html) {
-      const lines = html.split('\n');
-      const preloadLines: string[] = [];
-      const otherLines: string[] = [];
+      // 使用正则表达式匹配所有 modulepreload 标签
+      const preloadRegex = /<link[^>]*rel="modulepreload"[^>]*>/g;
+      const preloadMatches: string[] = [];
+      let match;
 
-      lines.forEach((line) => {
-        if (line.includes('rel="modulepreload"')) {
-          preloadLines.push(line);
-        } else {
-          otherLines.push(line);
-        }
-      });
+      while ((match = preloadRegex.exec(html)) !== null) {
+        preloadMatches.push(match[0]);
+      }
 
-      // 找到 </head> 的位置
-      const headEndIndex = otherLines.findIndex((line) =>
-        line.includes('</head>')
-      );
+      if (preloadMatches.length === 0) {
+        return html;
+      }
 
-      if (headEndIndex !== -1 && preloadLines.length > 0) {
-        // 在 </head> 之前插入所有 modulepreload 标签
-        otherLines.splice(headEndIndex, 0, ...preloadLines);
-        return otherLines.join('\n');
+      // 移除原有的 modulepreload 标签
+      const htmlWithoutPreloads = html.replace(preloadRegex, '');
+
+      // 在 </head> 之前插入所有 modulepreload 标签
+      const headEndIndex = htmlWithoutPreloads.indexOf('</head>');
+      if (headEndIndex !== -1) {
+        return (
+          htmlWithoutPreloads.slice(0, headEndIndex) +
+          preloadMatches.join('\n') +
+          '\n' +
+          htmlWithoutPreloads.slice(headEndIndex)
+        );
       }
 
       return html;
