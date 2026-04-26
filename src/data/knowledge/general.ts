@@ -1,4 +1,4 @@
-import type { KnowledgeEntry } from "./types";
+import type { KnowledgeEntry } from "@/types/knowledge";
 import svg1 from "./figures/general-1.svg?raw";
 
 export const generalEntries: KnowledgeEntry[] = [
@@ -62,10 +62,7 @@ export const generalEntries: KnowledgeEntry[] = [
       "要保证“至少发生 k 个 X”——先想“最多能连续不发生多少次”。",
       "答案 = 最多不发生次数 + 需要发生的次数。",
     ],
-    keyPoints: [
-      "“保证” = 最坏情况也成立。",
-      "与抽屉原理组合使用最常见。",
-    ],
+    keyPoints: ["“保证” = 最坏情况也成立。", "与抽屉原理组合使用最常见。"],
     examples: [
       {
         title: "袜子",
@@ -89,9 +86,7 @@ export const generalEntries: KnowledgeEntry[] = [
         takeaway: "“最差 + 1”是这个套路的公式。",
       },
     ],
-    pitfalls: [
-      "最坏情况要考虑全——别遗漏某种“更坏”的分配。",
-    ],
+    pitfalls: ["最坏情况要考虑全——别遗漏某种“更坏”的分配。"],
     relatedSlugs: ["pigeonhole"],
   },
   {
@@ -125,9 +120,7 @@ export const generalEntries: KnowledgeEntry[] = [
         takeaway: "找到合适的“染色”是构造不变量最常见的手段。",
       },
     ],
-    pitfalls: [
-      "要证明不变性对“每一种”允许操作都成立。",
-    ],
+    pitfalls: ["要证明不变性对“每一种”允许操作都成立。"],
     relatedSlugs: ["parity"],
     figures: [
       {

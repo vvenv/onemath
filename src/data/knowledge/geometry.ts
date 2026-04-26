@@ -1,4 +1,4 @@
-import type { KnowledgeEntry } from "./types";
+import type { KnowledgeEntry } from "@/types/knowledge";
 import birdHeadModelSvg from "./figures/bird-head-model.svg?raw";
 import areaMethodSvg from "./figures/area-method.svg?raw";
 import equalAreaTransformationSvg from "./figures/equal-area-transformation.svg?raw";
@@ -46,8 +46,7 @@ export const geometryEntries: KnowledgeEntry[] = [
           "S△ADE / S△ABC = (AD × AE) / (AB × AC) = (2/5) × (3/5) = 6/25。",
           "所以 S△ABC = 12 × 25/6 = 50。",
         ],
-        takeaway:
-          "判断出“共角或互补角”就能直接写比例，比算坐标快得多。",
+        takeaway: "判断出“共角或互补角”就能直接写比例，比算坐标快得多。",
       },
     ],
     pitfalls: [
@@ -84,8 +83,7 @@ export const geometryEntries: KnowledgeEntry[] = [
     examples: [
       {
         title: "用面积求高",
-        problem:
-          "直角三角形两直角边为 6 和 8，斜边为 10。求斜边上的高。",
+        problem: "直角三角形两直角边为 6 和 8，斜边为 10。求斜边上的高。",
         solution: [
           "以两直角边为底 × 高：面积 = ½ × 6 × 8 = 24。",
           "以斜边为底：面积 = ½ × 10 × h。",
@@ -95,17 +93,14 @@ export const geometryEntries: KnowledgeEntry[] = [
       },
       {
         title: "用面积求线段比",
-        problem:
-          "△ABC 中，D 在 BC 上，S△ABD = 6，S△ACD = 9。求 BD:DC。",
+        problem: "△ABC 中，D 在 BC 上，S△ABD = 6，S△ACD = 9。求 BD:DC。",
         solution: [
           "△ABD 与 △ACD 同高（都以 A 到 BC 的高为高）。",
           "面积比 = 底边比，即 BD:DC = 6:9 = 2:3。",
         ],
       },
     ],
-    pitfalls: [
-      "“同高”“同底”要看仔细——随便换底会让高也跟着变。",
-    ],
+    pitfalls: ["“同高”“同底”要看仔细——随便换底会让高也跟着变。"],
     relatedSlugs: [
       "equal-area-transformation",
       "bird-head-model",
@@ -124,7 +119,8 @@ export const geometryEntries: KnowledgeEntry[] = [
     name: "等积变形",
     tag: "等积变形",
     category: "geometry",
-    summary: "在平行线之间平移顶点，三角形面积不变；用来“把难算的图形搬到好算的位置”。",
+    summary:
+      "在平行线之间平移顶点，三角形面积不变；用来“把难算的图形搬到好算的位置”。",
     intuition:
       "把一个三角形的顶点沿着与底平行的直线左右滑动，底没变、高没变，面积自然也不变。这就是“等积变形”——不动的只是面积，图形却可以变得规整得多。",
     derivation: [
@@ -157,9 +153,7 @@ export const geometryEntries: KnowledgeEntry[] = [
         takeaway: "平行四边形、梯形里对角线分出的两块，面积比就是两底之比。",
       },
     ],
-    pitfalls: [
-      "必须存在平行线或等长底边，才能“等积”。",
-    ],
+    pitfalls: ["必须存在平行线或等长底边，才能“等积”。"],
     relatedSlugs: ["area-method", "butterfly-model"],
     figures: [
       {
@@ -174,7 +168,8 @@ export const geometryEntries: KnowledgeEntry[] = [
     name: "蝴蝶模型",
     tag: "蝴蝶模型",
     category: "geometry",
-    summary: "四边形两条对角线分出的四块，对角相乘相等；梯形里的面积比等于上下底平方比。",
+    summary:
+      "四边形两条对角线分出的四块，对角相乘相等；梯形里的面积比等于上下底平方比。",
     intuition:
       "任意四边形被两条对角线分成四个小三角形，像蝴蝶的四只翅膀。对角两块（上翅与下翅）面积之积 = 另一对角两块之积——蝴蝶左右配对。",
     derivation: [
@@ -227,7 +222,8 @@ export const geometryEntries: KnowledgeEntry[] = [
     name: "相似模型",
     tag: "相似模型",
     category: "geometry",
-    summary: "平行线截三角形得沙漏/金字塔，对应边成比例，面积比 = 相似比的平方。",
+    summary:
+      "平行线截三角形得沙漏/金字塔，对应边成比例，面积比 = 相似比的平方。",
     intuition:
       "把三角形“压扁”或“放大”，只要角不变，它就只是自己的缩放版。用平行线一截，大三角套小三角（金字塔），或上下倒置（沙漏），边比立刻抄出来。",
     derivation: [
@@ -243,8 +239,7 @@ export const geometryEntries: KnowledgeEntry[] = [
     examples: [
       {
         title: "金字塔",
-        problem:
-          "△ABC 中，DE∥BC，AD:DB = 2:3。S△ABC = 50，求 S△ADE。",
+        problem: "△ABC 中，DE∥BC，AD:DB = 2:3。S△ABC = 50，求 S△ADE。",
         solution: [
           "AD:AB = 2:5，相似比 k = 2/5。",
           "面积比 = (2/5)² = 4/25。",
@@ -279,7 +274,8 @@ export const geometryEntries: KnowledgeEntry[] = [
     name: "燕尾模型",
     tag: "燕尾模型",
     category: "geometry",
-    summary: "三角形内三线共点，分成的面积比 = 对应底边比；常用于三角形内部“枢纽点”问题。",
+    summary:
+      "三角形内三线共点，分成的面积比 = 对应底边比；常用于三角形内部“枢纽点”问题。",
     intuition:
       "在三角形 ABC 中，从顶点 A 引一条线到 BC 上一点 D，再有两条线把点 D 与其它顶点相连，构成像燕尾一样的图形。共用一点的两个三角形，面积之比由它们“没共用的那条底”的比决定。",
     derivation: [
@@ -303,9 +299,7 @@ export const geometryEntries: KnowledgeEntry[] = [
         ],
       },
     ],
-    pitfalls: [
-      "共用的那条线必须过内部交点并与对边相交；不满足时不能套。",
-    ],
+    pitfalls: ["共用的那条线必须过内部交点并与对边相交；不满足时不能套。"],
     relatedSlugs: ["bird-head-model", "area-method"],
     figures: [
       {

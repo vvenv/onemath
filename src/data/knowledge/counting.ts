@@ -1,4 +1,4 @@
-import type { KnowledgeEntry } from "./types";
+import type { KnowledgeEntry } from "@/types/knowledge";
 import svg1 from "./figures/counting-1.svg?raw";
 import svg2 from "./figures/counting-2.svg?raw";
 
@@ -95,9 +95,7 @@ export const countingEntries: KnowledgeEntry[] = [
         takeaway: "“按百位分类 + 小范围枚举”是典型组合。",
       },
     ],
-    pitfalls: [
-      "没有排序就容易漏或重复，先定顺序再开枚举。",
-    ],
+    pitfalls: ["没有排序就容易漏或重复，先定顺序再开枚举。"],
     relatedSlugs: ["case-analysis", "inclusion-exclusion"],
   },
   {
@@ -105,7 +103,8 @@ export const countingEntries: KnowledgeEntry[] = [
     name: "分类讨论",
     tag: "分类讨论",
     category: "counting",
-    summary: "按关键特征把所有情况拆成互不重叠且覆盖全体的几类，逐类计算后相加。",
+    summary:
+      "按关键特征把所有情况拆成互不重叠且覆盖全体的几类，逐类计算后相加。",
     intuition:
       "遇到“看情况”的题，与其正面硬算，不如把“情况”明确切开：每类内部规则统一，整体加起来就是答案。关键是分类要做到“互斥 + 穷举”。",
     derivation: [
@@ -132,9 +131,7 @@ export const countingEntries: KnowledgeEntry[] = [
         takeaway: "分类后发现“交集”再用容斥修正，是常见组合。",
       },
     ],
-    pitfalls: [
-      "分类标准不清晰会导致漏/重；交集一定要检查。",
-    ],
+    pitfalls: ["分类标准不清晰会导致漏/重；交集一定要检查。"],
     relatedSlugs: ["enumeration", "inclusion-exclusion"],
   },
   {
@@ -187,27 +184,19 @@ export const countingEntries: KnowledgeEntry[] = [
     name: "加乘原理",
     tag: "加乘原理",
     category: "counting",
-    summary:
-      "分类相加，分步相乘。判断“分类”还是“分步”，是计数题的第一关。",
+    summary: "分类相加，分步相乘。判断“分类”还是“分步”，是计数题的第一关。",
     intuition:
       "如果一件事可以分成几种情况独立完成 → 情况数相加；如果必须按顺序完成几步 → 每步的方案数相乘。一句话：OR 用加，AND 用乘。",
     derivation: [
       "加法原理：完成一件事有 n 类办法，每类分别有 a₁, a₂, …, aₙ 种，共 a₁ + a₂ + … + aₙ 种。",
       "乘法原理：完成一件事分 n 步，每步分别有 b₁, b₂, …, bₙ 种选择（步间独立），共 b₁ × b₂ × … × bₙ 种。",
     ],
-    keyPoints: [
-      "并列选择（或）→ 加。",
-      "依次确定（且）→ 乘。",
-    ],
+    keyPoints: ["并列选择（或）→ 加。", "依次确定（且）→ 乘。"],
     examples: [
       {
         title: "纯加法",
-        problem:
-          "从甲地到乙地有 3 班汽车或 2 班火车可乘，共有多少种走法？",
-        solution: [
-          "“或”：两类方式并列。",
-          "3 + 2 = 5 种。",
-        ],
+        problem: "从甲地到乙地有 3 班汽车或 2 班火车可乘，共有多少种走法？",
+        solution: ["“或”：两类方式并列。", "3 + 2 = 5 种。"],
       },
       {
         title: "纯乘法",
@@ -218,17 +207,11 @@ export const countingEntries: KnowledgeEntry[] = [
         title: "混合",
         problem:
           "从 A 地到 B 地有 2 条路，从 B 地到 C 地有 3 条路；也可以从 A 直达 C 有 4 条。从 A 到 C 共几种走法？",
-        solution: [
-          "经 B：2 × 3 = 6。",
-          "直达：4。",
-          "总数 6 + 4 = 10。",
-        ],
+        solution: ["经 B：2 × 3 = 6。", "直达：4。", "总数 6 + 4 = 10。"],
         takeaway: "外层分类加，内层分步乘——典型两层结构。",
       },
     ],
-    pitfalls: [
-      "分类必须互斥、分步必须独立，否则会漏或重。",
-    ],
+    pitfalls: ["分类必须互斥、分步必须独立，否则会漏或重。"],
     relatedSlugs: ["enumeration", "inclusion-exclusion"],
   },
   {
@@ -253,8 +236,7 @@ export const countingEntries: KnowledgeEntry[] = [
     examples: [
       {
         title: "爬楼梯",
-        problem:
-          "楼梯有 10 级，每步上 1 级或 2 级。有多少种不同走法？",
+        problem: "楼梯有 10 级，每步上 1 级或 2 级。有多少种不同走法？",
         solution: [
           "a_1 = 1, a_2 = 2。",
           "a_n = a_{n-1} + a_{n-2}。",
@@ -263,10 +245,7 @@ export const countingEntries: KnowledgeEntry[] = [
         ],
       },
     ],
-    pitfalls: [
-      "初值算错，整条链都错。",
-      "“分析最后一步”时情形不要漏。",
-    ],
+    pitfalls: ["初值算错，整条链都错。", "“分析最后一步”时情形不要漏。"],
     relatedSlugs: ["enumeration"],
   },
   {
@@ -282,10 +261,7 @@ export const countingEntries: KnowledgeEntry[] = [
       "这个整体内部还能相互换位置，贡献 k! 种。",
       "答案 = (n − k + 1)! × k!。",
     ],
-    keyPoints: [
-      "相邻 → 捆绑。",
-      "别忘了内部还要乘 k!。",
-    ],
+    keyPoints: ["相邻 → 捆绑。", "别忘了内部还要乘 k!。"],
     examples: [
       {
         title: "必须相邻",
@@ -297,9 +273,7 @@ export const countingEntries: KnowledgeEntry[] = [
         ],
       },
     ],
-    pitfalls: [
-      "多于两个人相邻时，捆内排列是 k! 不是 2。",
-    ],
+    pitfalls: ["多于两个人相邻时，捆内排列是 k! 不是 2。"],
     relatedSlugs: ["gap-insertion", "additive-multiplicative"],
   },
   {
@@ -332,9 +306,7 @@ export const countingEntries: KnowledgeEntry[] = [
         takeaway: "也可用“总排列 − 相邻排列 = 120 − 48 = 72”验证。",
       },
     ],
-    pitfalls: [
-      "空隙数要按“已排对象 + 1”计，容易漏掉两端的空隙。",
-    ],
+    pitfalls: ["空隙数要按“已排对象 + 1”计，容易漏掉两端的空隙。"],
     relatedSlugs: ["bundling"],
   },
   {
@@ -377,7 +349,8 @@ export const countingEntries: KnowledgeEntry[] = [
       {
         svg: svg2,
         alt: "10 球与 2 隔板分成三堆",
-        caption: "10 个相同球 + 2 块隔板 → 分成 3 堆，一种分法对应一种选板方案。",
+        caption:
+          "10 个相同球 + 2 块隔板 → 分成 3 堆，一种分法对应一种选板方案。",
       },
     ],
   },
@@ -394,14 +367,12 @@ export const countingEntries: KnowledgeEntry[] = [
       "每类分别有 a₁, a₂, …, aₙ 种具体做法。",
       "总方案数 = a₁ + a₂ + … + aₙ。",
     ],
-    keyPoints: [
-      "关键词：“或”“分类”“并列”。",
-      "分类必须互斥，不然会重复计数。",
-    ],
+    keyPoints: ["关键词：“或”“分类”“并列”。", "分类必须互斥，不然会重复计数。"],
     examples: [
       {
         title: "分类出行",
-        problem: "从甲地到乙地有 3 班汽车、2 班火车、1 班飞机。共有多少种走法？",
+        problem:
+          "从甲地到乙地有 3 班汽车、2 班火车、1 班飞机。共有多少种走法？",
         solution: ["三种方式互斥并列，加法：3 + 2 + 1 = 6 种。"],
       },
       {
@@ -415,17 +386,20 @@ export const countingEntries: KnowledgeEntry[] = [
         takeaway: "外层按“位数”分类加，内层按“数位”分步乘。",
       },
     ],
-    pitfalls: [
-      "不同类有重叠时不能直接加，要用容斥。",
+    pitfalls: ["不同类有重叠时不能直接加，要用容斥。"],
+    relatedSlugs: [
+      "multiplication-principle",
+      "additive-multiplicative",
+      "inclusion-exclusion",
     ],
-    relatedSlugs: ["multiplication-principle", "additive-multiplicative", "inclusion-exclusion"],
   },
   {
     slug: "multiplication-principle",
     name: "乘法原理",
     tag: "乘法原理",
     category: "counting",
-    summary: "一件事必须按顺序完成若干“步”且各步独立时，各步方案数相乘就是总方案。",
+    summary:
+      "一件事必须按顺序完成若干“步”且各步独立时，各步方案数相乘就是总方案。",
     intuition:
       "穿衣服：先挑上衣 3 种，再挑裤子 4 种，两步都要完成才算“穿好”。每一件上衣都能搭配每一条裤子，组合数是 3 × 4 = 12。",
     derivation: [
@@ -532,8 +506,7 @@ export const countingEntries: KnowledgeEntry[] = [
       },
       {
         title: "带禁行点",
-        problem:
-          "3 × 3 网格从 A 到 B，中心交点被封禁不能走，多少条最短路径？",
+        problem: "3 × 3 网格从 A 到 B，中心交点被封禁不能走，多少条最短路径？",
         solution: [
           "中心标 0；其余按“左 + 下”推。",
           "手动推出 A→B 原有 C(6,3) = 20 条；经过中心的 C(4,2)·C(2,1) = 12 条。",
@@ -619,8 +592,7 @@ export const countingEntries: KnowledgeEntry[] = [
       },
       {
         title: "首位限制",
-        problem:
-          "用 0, 1, 2, 3, 4 组成不同的三位数，首位不能是 0，多少个？",
+        problem: "用 0, 1, 2, 3, 4 组成不同的三位数，首位不能是 0，多少个？",
         solution: [
           "首位先选：0 除外共 4 种。",
           "剩下两位从剩 4 个数字中排：A(4, 2) = 12。",
@@ -629,9 +601,7 @@ export const countingEntries: KnowledgeEntry[] = [
         takeaway: "首位 = 最特殊元素，必须最先定。",
       },
     ],
-    pitfalls: [
-      "特殊元素之间还可能互相影响，先放时要一并讨论互斥情形。",
-    ],
+    pitfalls: ["特殊元素之间还可能互相影响，先放时要一并讨论互斥情形。"],
     relatedSlugs: ["additive-multiplicative", "bundling", "gap-insertion"],
   },
   {

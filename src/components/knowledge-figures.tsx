@@ -1,4 +1,4 @@
-import type { KnowledgeFigure } from "@/data/knowledge/types";
+import type { KnowledgeFigure } from "@/types/knowledge";
 import { cn } from "@/lib/utils";
 
 type KnowledgeFiguresProps = {

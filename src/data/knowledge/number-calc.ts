@@ -1,4 +1,4 @@
-import type { KnowledgeEntry } from "./types";
+import type { KnowledgeEntry } from "@/types/knowledge";
 
 export const numberCalcEntries: KnowledgeEntry[] = [
   {
@@ -40,9 +40,7 @@ export const numberCalcEntries: KnowledgeEntry[] = [
         takeaway: "公差不是 1 时，前面要加“1 / 公差”作为系数。",
       },
     ],
-    pitfalls: [
-      "先验证每项真的能拆成相邻差；不要乱拆。",
-    ],
+    pitfalls: ["先验证每项真的能拆成相邻差；不要乱拆。"],
     relatedSlugs: ["distributive-law"],
   },
   {
@@ -50,8 +48,7 @@ export const numberCalcEntries: KnowledgeEntry[] = [
     name: "乘法分配律",
     tag: "乘法分配律",
     category: "numberCalc",
-    summary:
-      "(a + b) × c = a × c + b × c；正反两用，是速算与巧算的主力工具。",
+    summary: "(a + b) × c = a × c + b × c；正反两用，是速算与巧算的主力工具。",
     intuition:
       "分配律就像“批发共同因数”：几笔相似的乘积里如果有同一个因数，就把它提出来一次算；反过来，难算的乘积里也可以主动“凑”出共同因数。",
     derivation: [
@@ -59,10 +56,7 @@ export const numberCalcEntries: KnowledgeEntry[] = [
       "反向使用（提公因数）：a · c + b · c = (a + b) · c。",
       "速算：把一个复杂因数拆成 (整 + 尾) 或 (整 − 尾)，分别与另一因数相乘再合并。",
     ],
-    keyPoints: [
-      "正用：拆开；反用：合并。",
-      "“凑整”是速算的核心动机。",
-    ],
+    keyPoints: ["正用：拆开；反用：合并。", "“凑整”是速算的核心动机。"],
     examples: [
       {
         title: "正用拆开",
@@ -80,9 +74,7 @@ export const numberCalcEntries: KnowledgeEntry[] = [
         solution: ["= 37 × (24 + 76) = 37 × 100 = 3700。"],
       },
     ],
-    pitfalls: [
-      "分配只对“乘 + 加/减”成立，不要对“加 × 加”乱用。",
-    ],
+    pitfalls: ["分配只对“乘 + 加/减”成立，不要对“加 × 加”乱用。"],
     relatedSlugs: ["rounding", "telescoping"],
   },
   {
@@ -164,10 +156,7 @@ export const numberCalcEntries: KnowledgeEntry[] = [
       {
         title: "星期几",
         problem: "今天是星期三，100 天后是星期几？",
-        solution: [
-          "100 ≡ 2 (mod 7)。",
-          "星期三 + 2 天 = 星期五。",
-        ],
+        solution: ["100 ≡ 2 (mod 7)。", "星期三 + 2 天 = 星期五。"],
       },
     ],
     pitfalls: [
@@ -181,7 +170,8 @@ export const numberCalcEntries: KnowledgeEntry[] = [
     name: "整除特征",
     tag: "整除特征",
     category: "numberCalc",
-    summary: "常见小因数的整除规律：看尾数、看数字和、看奇偶位差——秒判能否整除。",
+    summary:
+      "常见小因数的整除规律：看尾数、看数字和、看奇偶位差——秒判能否整除。",
     intuition:
       "想知道一个大数能不能被某个小数整除，不必真的除，只要看它的“特征部位”：末位、数字和、倒数几位……一眼定论。",
     derivation: [
@@ -248,10 +238,7 @@ export const numberCalcEntries: KnowledgeEntry[] = [
       {
         title: "约数个数",
         problem: "360 有多少个正约数？",
-        solution: [
-          "360 = 2³ × 3² × 5。",
-          "约数个数 = (3+1)(2+1)(1+1) = 24。",
-        ],
+        solution: ["360 = 2³ × 3² × 5。", "约数个数 = (3+1)(2+1)(1+1) = 24。"],
       },
       {
         title: "GCD 与 LCM",
@@ -291,9 +278,7 @@ export const numberCalcEntries: KnowledgeEntry[] = [
       {
         title: "加法凑整",
         problem: "37 + 48 + 63 + 52 = ?",
-        solution: [
-          "(37 + 63) + (48 + 52) = 100 + 100 = 200。",
-        ],
+        solution: ["(37 + 63) + (48 + 52) = 100 + 100 = 200。"],
       },
       {
         title: "乘法凑整",
@@ -301,9 +286,7 @@ export const numberCalcEntries: KnowledgeEntry[] = [
         solution: ["25 × 4 = 100；100 × 36 = 3600。"],
       },
     ],
-    pitfalls: [
-      "凑整要用律，不是胡拼凑——先确认加/乘的交换或结合成立。",
-    ],
+    pitfalls: ["凑整要用律，不是胡拼凑——先确认加/乘的交换或结合成立。"],
     relatedSlugs: ["distributive-law", "head-tail-pairing"],
   },
   {
@@ -338,9 +321,7 @@ export const numberCalcEntries: KnowledgeEntry[] = [
         ],
       },
     ],
-    pitfalls: [
-      "项数要用公式算清楚，不能数手指。",
-    ],
+    pitfalls: ["项数要用公式算清楚，不能数手指。"],
     relatedSlugs: ["arithmetic-sequence-method", "telescoping"],
   },
   {
@@ -369,9 +350,7 @@ export const numberCalcEntries: KnowledgeEntry[] = [
       {
         title: "因式分解",
         problem: "求 2024² − 2023²。",
-        solution: [
-          "= (2024 + 2023)(2024 − 2023) = 4047 × 1 = 4047。",
-        ],
+        solution: ["= (2024 + 2023)(2024 − 2023) = 4047 × 1 = 4047。"],
         takeaway: "连续整数平方差 = 它们之和，心算即可。",
       },
       {

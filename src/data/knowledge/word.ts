@@ -1,4 +1,4 @@
-import type { KnowledgeEntry } from "./types";
+import type { KnowledgeEntry } from "@/types/knowledge";
 import svg1 from "./figures/word-1.svg?raw";
 import svg2 from "./figures/word-2.svg?raw";
 
@@ -166,14 +166,11 @@ export const wordEntries: KnowledgeEntry[] = [
       "反操作对应：+ ↔ −，× ↔ ÷，“去掉一半” ↔ “乘 2”…",
       "回到最初，就是要求的原值。",
     ],
-    keyPoints: [
-      "顺着算是正向方程；倒着算是逆向推理，两者等价但后者更省脑。",
-    ],
+    keyPoints: ["顺着算是正向方程；倒着算是逆向推理，两者等价但后者更省脑。"],
     examples: [
       {
         title: "倒推还原",
-        problem:
-          "一个数先加 5，再乘 3，再减 7，得 26。原数是多少？",
+        problem: "一个数先加 5，再乘 3，再减 7，得 26。原数是多少？",
         solution: [
           "倒推：26 + 7 = 33。",
           "33 ÷ 3 = 11。",
@@ -191,9 +188,7 @@ export const wordEntries: KnowledgeEntry[] = [
         takeaway: "带分数操作的题，倒推往往比列方程更干脆。",
       },
     ],
-    pitfalls: [
-      "要把操作顺序完整记清，缺一步就错。",
-    ],
+    pitfalls: ["要把操作顺序完整记清，缺一步就错。"],
     relatedSlugs: ["equation-method"],
   },
   {
@@ -226,17 +221,14 @@ export const wordEntries: KnowledgeEntry[] = [
       },
       {
         title: "和倍",
-        problem:
-          "甲乙两筐共 42 个苹果，甲是乙的 2 倍。各多少？",
+        problem: "甲乙两筐共 42 个苹果，甲是乙的 2 倍。各多少？",
         solution: [
           "乙 1 格，甲 2 格，共 3 格对应 42。",
           "1 格 = 14。乙 = 14，甲 = 28。",
         ],
       },
     ],
-    pitfalls: [
-      "画图时长度比例要近似真实，否则误导判断。",
-    ],
+    pitfalls: ["画图时长度比例要近似真实，否则误导判断。"],
     relatedSlugs: ["drawing-method", "hypothesis-method"],
     figures: [
       {
@@ -268,21 +260,13 @@ export const wordEntries: KnowledgeEntry[] = [
     examples: [
       {
         title: "浓度混合",
-        problem:
-          "20% 盐水和 5% 盐水混合成 12% 盐水，两种盐水的质量比是多少？",
-        solution: [
-          "20 − 12 = 8；12 − 5 = 7。",
-          "20% 盐水 : 5% 盐水 = 7 : 8。",
-        ],
+        problem: "20% 盐水和 5% 盐水混合成 12% 盐水，两种盐水的质量比是多少？",
+        solution: ["20 − 12 = 8；12 − 5 = 7。", "20% 盐水 : 5% 盐水 = 7 : 8。"],
       },
       {
         title: "买糖",
-        problem:
-          "单价 8 元与 5 元的糖混合后平均每千克 7 元，两种糖的质量比？",
-        solution: [
-          "8 − 7 = 1；7 − 5 = 2。",
-          "8 元 : 5 元 = 2 : 1。",
-        ],
+        problem: "单价 8 元与 5 元的糖混合后平均每千克 7 元，两种糖的质量比？",
+        solution: ["8 − 7 = 1；7 − 5 = 2。", "8 元 : 5 元 = 2 : 1。"],
         takeaway: "谁贵谁对应“便宜端的差”——总结成“交叉”最不易错。",
       },
     ],
@@ -313,8 +297,7 @@ export const wordEntries: KnowledgeEntry[] = [
     examples: [
       {
         title: "按比分配",
-        problem:
-          "一笔 360 元的奖金按 3 : 4 : 5 分给甲乙丙。各多少？",
+        problem: "一笔 360 元的奖金按 3 : 4 : 5 分给甲乙丙。各多少？",
         solution: [
           "总份 = 3 + 4 + 5 = 12 份。",
           "1 份 = 360 ÷ 12 = 30。",
@@ -322,9 +305,7 @@ export const wordEntries: KnowledgeEntry[] = [
         ],
       },
     ],
-    pitfalls: [
-      "三量连比要先“对齐”公共基准，再求份。",
-    ],
+    pitfalls: ["三量连比要先“对齐”公共基准，再求份。"],
     relatedSlugs: ["shares-method", "line-segment-diagram"],
   },
   {
@@ -360,9 +341,7 @@ export const wordEntries: KnowledgeEntry[] = [
           "份数法的效率依赖于“好基数”；数字不整时换基数或直接用分数也行。",
       },
     ],
-    pitfalls: [
-      "基数选错会让 1 份变分数；选最小公倍数最稳。",
-    ],
+    pitfalls: ["基数选错会让 1 份变分数；选最小公倍数最稳。"],
     relatedSlugs: ["ratio-method", "line-segment-diagram"],
   },
   {
@@ -397,7 +376,8 @@ export const wordEntries: KnowledgeEntry[] = [
       },
       {
         title: "归一",
-        problem: "3 台机器 4 小时加工零件 96 个。5 台同样机器 6 小时加工多少个？",
+        problem:
+          "3 台机器 4 小时加工零件 96 个。5 台同样机器 6 小时加工多少个？",
         solution: [
           "“1 台 1 小时”对应产量 = 96 / (3 × 4) = 8 个。",
           "5 × 6 × 8 = 240 个。",

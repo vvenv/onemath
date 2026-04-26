@@ -1,4 +1,4 @@
-import type { KnowledgeEntry } from "./types";
+import type { KnowledgeEntry } from "@/types/knowledge";
 import svg1 from "./figures/magic-square-1.svg?raw";
 
 export const magicSquareEntries: KnowledgeEntry[] = [
@@ -32,14 +32,11 @@ export const magicSquareEntries: KnowledgeEntry[] = [
       },
       {
         title: "部分已填",
-        problem:
-          "三阶幻方中某行已知两个数 8 和 3，求该行第三个。",
+        problem: "三阶幻方中某行已知两个数 8 和 3，求该行第三个。",
         solution: ["幻和 = 15；第三个数 = 15 − 8 − 3 = 4。"],
       },
     ],
-    pitfalls: [
-      "当填入的数字不是 1..n² 时，幻和要按给定数字集合重新算。",
-    ],
+    pitfalls: ["当填入的数字不是 1..n² 时，幻和要按给定数字集合重新算。"],
     relatedSlugs: ["center-number-method"],
   },
   {
@@ -75,9 +72,7 @@ export const magicSquareEntries: KnowledgeEntry[] = [
         ],
       },
     ],
-    pitfalls: [
-      "中心数法只对“3 阶”幻方成立，更大阶需要其他工具。",
-    ],
+    pitfalls: ["中心数法只对“3 阶”幻方成立，更大阶需要其他工具。"],
     relatedSlugs: ["accumulation-method"],
     figures: [
       {
@@ -102,10 +97,7 @@ export const magicSquareEntries: KnowledgeEntry[] = [
       "幻和 = 总和 / n = n × (首 + 末) / 2。",
       "3 阶幻方的中心 = 平均值 = (首 + 末) / 2。",
     ],
-    keyPoints: [
-      "等差数列求和公式是入口。",
-      "幻和 = n × 平均值（n 阶）。",
-    ],
+    keyPoints: ["等差数列求和公式是入口。", "幻和 = n × 平均值（n 阶）。"],
     examples: [
       {
         title: "非 1..9 的 3 阶",
@@ -117,10 +109,12 @@ export const magicSquareEntries: KnowledgeEntry[] = [
         ],
       },
     ],
-    pitfalls: [
-      "不能确定数字真的构成等差时，先验证。",
+    pitfalls: ["不能确定数字真的构成等差时，先验证。"],
+    relatedSlugs: [
+      "center-number-method",
+      "accumulation-method",
+      "head-tail-pairing",
     ],
-    relatedSlugs: ["center-number-method", "accumulation-method", "head-tail-pairing"],
   },
   {
     slug: "comparison-method",
@@ -192,8 +186,7 @@ export const magicSquareEntries: KnowledgeEntry[] = [
     examples: [
       {
         title: "角落试值",
-        problem:
-          "3×3 幻方用 1–9 填，已知中心为 5。左上角可以是哪几个？",
+        problem: "3×3 幻方用 1–9 填，已知中心为 5。左上角可以是哪几个？",
         solution: [
           "幻和 15。左上角在“行 + 列 + 对角”三条线上，约束最强。",
           "设左上 = a，则右下 = 10 − a（过中心的对角）。",
@@ -208,6 +201,10 @@ export const magicSquareEntries: KnowledgeEntry[] = [
       "不做剪枝就硬试，分支爆炸；务必先用幻和缩小集合。",
       "回退时记得恢复之前填入的格子，避免状态串味。",
     ],
-    relatedSlugs: ["accumulation-method", "center-number-method", "comparison-method"],
+    relatedSlugs: [
+      "accumulation-method",
+      "center-number-method",
+      "comparison-method",
+    ],
   },
 ];

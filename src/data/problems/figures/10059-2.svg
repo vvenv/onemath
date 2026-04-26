@@ -1,62 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
-  <g transform="translate(20,40)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 180">
+  <g transform="translate(40,30)">
     <rect
-      x="20.00"
-      y="47.41"
-      width="133.33"
-      height="133.33"
-      fill-opacity="0.12"
-      class="stroke-current fill-current"
+      x="0"
+      y="0"
+      width="120"
+      height="120"
+      class="stroke-current fill-current/5"
     />
-    <text x="65.93" y="120.00" fill="currentColor" text-anchor="middle">30 × 30</text>
-    <text x="65.93" y="136.30" fill="currentColor" text-anchor="middle">
-      面积 = 900
-    </text>
-    <text x="57.04" y="201.48" fill="currentColor" text-anchor="middle">
-      图①：30 × 30 正方形
+    <text x="60" y="66" text-anchor="middle" class="fill-current">
+      30 × 30
     </text>
   </g>
-  <g transform="translate(300,40)">
+  <g transform="translate(240,30)">
     <rect
-      x="20.00"
-      y="47.41"
-      width="133.33"
-      height="133.33"
-      fill-opacity="0.12"
-      class="stroke-current fill-current"
+      x="0"
+      y="0"
+      width="120"
+      height="120"
+      class="stroke-current fill-current/5"
     />
     <rect
-      x="153.33"
-      y="47.41"
-      width="4.44"
-      height="133.33"
-      class="fill-green-200 stroke-green-800"
+      x="120"
+      y="0"
+      width="4"
+      height="120"
+      class="fill-green-500/40 stroke-green-600"
     />
     <rect
-      x="20.00"
-      y="47.41"
-      width="137.78"
-      height="4.44"
-      class="fill-red-500 stroke-red-500"
-      fill-opacity="0.55"
+      x="0"
+      y="0"
+      width="124"
+      height="4"
+      class="fill-red-500/40 stroke-red-600"
     />
     <rect
-      x="20.00"
-      y="51.85"
-      width="137.78"
-      height="128.89"
-      class="stroke-orange-600 fill-none"
-      stroke-dasharray="6 3"
+      x="0"
+      y="4"
+      width="124"
+      height="116"
+      class="stroke-current fill-none"
+      stroke-dasharray="4 3"
     />
-    <text x="65.93" y="128.89" fill="currentColor" text-anchor="middle">30 × 30</text>
-    <text x="164.44" y="120.00" class="fill-green-800" text-anchor="middle">
-      + 1×30
+    <text x="60" y="72" text-anchor="middle" class="fill-current">
+      31 × 29
     </text>
-    <text x="20.00" y="42.96" class="fill-red-800" text-anchor="middle">
-      − 31×1（去掉顶部一行）
-    </text>
-    <text x="42.22" y="201.48" class="fill-orange-600" text-anchor="middle">
-      图②：虚线框 = 31 × 29 = 899
+    <text x="132" y="66" class="fill-green-700">+ 1 × 30</text>
+    <text x="60" y="-6" text-anchor="middle" class="fill-red-700">
+      − 31 × 1
     </text>
   </g>
 </svg>

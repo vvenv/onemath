@@ -1,59 +1,20 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 440 120"
-  width="400.00"
-  height="48.00"
+  viewBox="0 0 440 90"
 >
-  <!-- 直线和点 -->
-  <line x1="44.00" y1="60.00" x2="396.00" y2="60.00" class="stroke-current" />
-  <circle cx="68.00" cy="60.00" r="4" class="fill-current" />
-  <text
-    x="68.00"
-    y="76.00"
-    font-style="italic"
-    fill="currentColor"
-    text-anchor="middle"
-  >
-    A
-  </text>
-  <circle cx="140.00" cy="60.00" r="4" class="fill-current" />
-  <text
-    x="140.00"
-    y="76.00"
-    font-style="italic"
-    fill="currentColor"
-    text-anchor="middle"
-  >
-    B
-  </text>
-  <circle cx="212.00" cy="60.00" r="4" class="fill-current" />
-  <text
-    x="212.00"
-    y="76.00"
-    font-style="italic"
-    fill="currentColor"
-    text-anchor="middle"
-  >
-    C
-  </text>
-  <circle cx="284.00" cy="60.00" r="4" class="fill-current" />
-  <text
-    x="284.00"
-    y="76.00"
-    font-style="italic"
-    fill="currentColor"
-    text-anchor="middle"
-  >
-    D
-  </text>
-  <circle cx="356.00" cy="60.00" r="4" class="fill-current" />
-  <text
-    x="356.00"
-    y="76.00"
-    font-style="italic"
-    fill="currentColor"
-    text-anchor="middle"
-  >
-    E
-  </text>
+  <line x1="20" y1="40" x2="420" y2="40" class="stroke-current" />
+  <g class="fill-current">
+    <circle cx="68" cy="40" r="3" />
+    <circle cx="140" cy="40" r="3" />
+    <circle cx="212" cy="40" r="3" />
+    <circle cx="284" cy="40" r="3" />
+    <circle cx="356" cy="40" r="3" />
+    <g text-anchor="middle">
+      <text x="68" y="60">A</text>
+      <text x="140" y="60">B</text>
+      <text x="212" y="60">C</text>
+      <text x="284" y="60">D</text>
+      <text x="356" y="60">E</text>
+    </g>
+  </g>
 </svg>

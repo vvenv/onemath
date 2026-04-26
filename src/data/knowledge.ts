@@ -5,14 +5,14 @@ import { generalEntries } from "./knowledge/general";
 import { geometryEntries } from "./knowledge/geometry";
 import { magicSquareEntries } from "./knowledge/magic-square";
 import { numberCalcEntries } from "./knowledge/number-calc";
-import type { KnowledgeEntry } from "./knowledge/types";
 import { wordEntries } from "./knowledge/word";
+import type { KnowledgeEntry } from "@/types/knowledge";
 
 export type {
   KnowledgeCategory,
   KnowledgeEntry,
   KnowledgeExample,
-} from "./knowledge/types";
+} from "@/types/knowledge";
 
 const ENTRIES: KnowledgeEntry[] = [
   ...wordEntries,
@@ -50,10 +50,7 @@ export function resolveKnowledge(
   if (typeof key === "string") {
     return BY_SLUG.get(key) ?? BY_TAG.get(key);
   }
-  return (
-    getKnowledgeBySlug(key.slug) ??
-    getKnowledgeByTag(key.tag ?? key.name)
-  );
+  return getKnowledgeBySlug(key.slug) ?? getKnowledgeByTag(key.tag ?? key.name);
 }
 
 export function getProblemsForKnowledge(

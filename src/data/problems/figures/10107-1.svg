@@ -1,17 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <g class="stroke-current fill-none">
     <polygon points="220,60 80,380 360,380" />
-    <line x1="220" y1="60" x2="220" y2="380" />
-    <line x1="80" y1="380" x2="275" y2="220" />
-    <line x1="360" y1="380" x2="165" y2="220" />
   </g>
   <g class="fill-current">
     <circle cx="220" cy="60" r="11" />
     <circle cx="80" cy="380" r="11" />
     <circle cx="360" cy="380" r="11" />
-    <circle cx="165" cy="220" r="11" />
-    <circle cx="275" cy="220" r="11" />
+    <circle cx="150" cy="220" r="11" />
+    <circle cx="290" cy="220" r="11" />
     <circle cx="220" cy="380" r="11" />
-    <circle cx="220" cy="220" r="11" />
   </g>
 </svg>
