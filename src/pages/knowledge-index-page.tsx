@@ -9,13 +9,6 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
   knowledgeEntries,
   type KnowledgeCategory,
   type KnowledgeEntry,
@@ -86,7 +79,7 @@ export default function KnowledgeIndexPage() {
   );
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-4">
       <header className="flex flex-col gap-2">
         <div className="flex items-center gap-2">
           <BookOpen className="size-5 text-primary" />
@@ -99,7 +92,7 @@ export default function KnowledgeIndexPage() {
         </p>
       </header>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-4">
         {visibleCategories.map((cat) => {
           const list = grouped.get(cat)!;
           return (
@@ -119,30 +112,26 @@ export default function KnowledgeIndexPage() {
                 <ChevronDown className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
               </CollapsibleTrigger>
               <CollapsibleContent asChild>
-                <div className="grid grid-cols-1 gap-2 pt-1 pb-3 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {list.map((entry) => (
                     <Link
                       key={entry.slug}
                       to={`/k/${entry.slug}`}
                       className="group no-underline"
                     >
-                      <Card className="h-full transition-all group-hover:-translate-y-0.5 group-hover:border-primary/40 group-hover:shadow-md">
-                        <CardHeader>
-                          <CardTitle className="flex items-center gap-2">
-                            <BookOpen className="size-4 shrink-0 text-muted-foreground group-hover:text-primary" />
-                            <span className="group-hover:text-primary">
-                              {entry.name}
-                            </span>
-                            {entry.tag && entry.tag !== entry.name ? (
-                              <Badge variant="outline" className="font-normal">
-                                #{entry.tag}
-                              </Badge>
-                            ) : null}
-                          </CardTitle>
-                          <CardDescription>{entry.summary}</CardDescription>
-                        </CardHeader>
-                        <CardContent className="pt-0" />
-                      </Card>
+                      <div className="h-full rounded-xl border border-border/70 p-4 transition-all group-hover:-translate-y-0.5 group-hover:border-primary/40 group-hover:shadow-md">
+                        <h3 className="text-sm font-semibold leading-none group-hover:text-primary">
+                          {entry.name}
+                          {entry.tag && entry.tag !== entry.name ? (
+                            <Badge variant="outline" className="font-normal">
+                              #{entry.tag}
+                            </Badge>
+                          ) : null}
+                        </h3>
+                        <p className="mt-2 text-sm text-muted-foreground">
+                          {entry.summary}
+                        </p>
+                      </div>
                     </Link>
                   ))}
                 </div>

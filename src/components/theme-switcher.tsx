@@ -160,9 +160,12 @@ export function ThemeSwitcher() {
           <Palette className="size-4" />
         </Button>
       </DrawerTrigger>
-      <DrawerContent className="w-80 h-screen p-4">
+      <DrawerContent className="h-screen">
         <DrawerHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
-          <DrawerTitle className="text-lg font-semibold">主题设置</DrawerTitle>
+          <DrawerTitle className="flex items-center gap-2 text-base font-semibold">
+            <Palette className="size-4" />
+            主题设置
+          </DrawerTitle>
           <DrawerClose asChild>
             <Button
               type="button"
@@ -174,7 +177,7 @@ export function ThemeSwitcher() {
             </Button>
           </DrawerClose>
         </DrawerHeader>
-        <div className="space-y-4 overflow-y-auto">
+        <div className="space-y-4 overflow-y-auto px-4 pb-4">
           {/* Mode Toggle - Basic Setting */}
           <div className="space-y-2">
             <div className="text-sm font-medium text-muted-foreground">

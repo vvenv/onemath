@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, startTransition } from "react";
 import { Link, useSearchParams } from "react-router";
-import { ChevronDown, Search, X } from "lucide-react";
+import { ChevronDown, Search, X, Filter } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -8,6 +8,14 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 import { GRADES, MODULES, type ModuleKey } from "@/lib/modules";
 import { problems } from "@/lib/problems";
 import { TAG_WHITELIST } from "@/lib/tags";
@@ -55,7 +63,7 @@ const DIFFICULTY_DOT: Record<Difficulty, string> = {
 
 export default function HomePage() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [showMore, setShowMore] = useState(false);
+  const [filterDrawerOpen, setFilterDrawerOpen] = useState(false);
   // Avoid hydration mismatch: the prerendered HTML is built with empty
   // searchParams, so on the first client render we must also ignore
   // query params. After mount we switch to URL-driven state.
@@ -153,7 +161,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-4">
       <h1 className="sr-only">一道 / edao.plus — 小学数学思维训练题库</h1>
       <section className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
@@ -190,54 +198,109 @@ export default function HomePage() {
             ))}
           </FilterRow>
 
-          {showMore ? (
-            <>
-              <FilterRow label="难度">
-                {DIFFICULTIES.map((d) => (
-                  <FilterChip
-                    key={d}
-                    label={d}
-                    dot={DIFFICULTY_DOT[d]}
-                    active={activeDifficulty === d}
-                    onClick={() =>
-                      setActiveDifficulty(activeDifficulty === d ? null : d)
-                    }
-                  />
-                ))}
-              </FilterRow>
-
-              {tags.length > 0 ? (
-                <FilterRow label="方法">
-                  {tags.map((t) => (
-                    <FilterChip
-                      key={t}
-                      label={t}
-                      active={activeTag === t}
-                      onClick={() => setActiveTag(activeTag === t ? null : t)}
-                    />
-                  ))}
-                </FilterRow>
-              ) : null}
-            </>
-          ) : null}
-
           <div className="flex items-center gap-2 pt-0.5 text-xs text-muted-foreground">
-            <Button
-              type="button"
-              variant="ghost"
-              size="sm"
-              onClick={() => setShowMore((v) => !v)}
-              className="h-7 gap-1 px-2 text-xs text-muted-foreground"
-              aria-expanded={showMore}
+            <Drawer
+              open={filterDrawerOpen}
+              onOpenChange={(open) =>
+                startTransition(() => setFilterDrawerOpen(open))
+              }
+              direction="right"
             >
-              <ChevronDown
-                className={cn(
-                  "size-3.5 transition-transform",
-                  showMore && "rotate-180",
-                )}
-              />
-              {showMore ? "收起筛选" : "更多筛选（难度 / 方法）"}
-            </Button>
+              <DrawerTrigger asChild>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  className="h-7 gap-1 px-2 text-xs text-muted-foreground"
+                >
+                  <Filter className="size-3.5" />
+                  更多（难度 / 方法）
+                </Button>
+              </DrawerTrigger>
+              <DrawerContent className="h-screen">
+                <DrawerHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
+                  <DrawerTitle className="flex items-center gap-2 text-base font-semibold">
+                    <Filter className="size-4" />
+                    筛选
+                  </DrawerTitle>
+                  <DrawerClose asChild>
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="icon-sm"
+                      aria-label="关闭"
+                    >
+                      <X className="size-4" />
+                    </Button>
+                  </DrawerClose>
+                </DrawerHeader>
+                <div className="space-y-4 overflow-y-auto px-4 pb-4">
+                  <FilterRow label="模块">
+                    {MODULES.map((m) => {
+                      const count = moduleCounts.get(m.key) ?? 0;
+                      return (
+                        <FilterChip
+                          key={m.key}
+                          label={m.label}
+                          count={count}
+                          active={activeModule === m.key}
+                          disabled={count === 0}
+                          onClick={() =>
+                            setActiveModule(
+                              activeModule === m.key ? null : m.key,
+                            )
+                          }
+                        />
+                      );
+                    })}
+                  </FilterRow>
+
+                  <FilterRow label="年级">
+                    {GRADES.map((g) => (
+                      <FilterChip
+                        key={g.label}
+                        label={g.label}
+                        active={activeGrade === g.label}
+                        onClick={() =>
+                          setActiveGrade(
+                            activeGrade === g.label ? null : (g.label as Grade),
+                          )
+                        }
+                      />
+                    ))}
+                  </FilterRow>
+
+                  <FilterRow label="难度">
+                    {DIFFICULTIES.map((d) => (
+                      <FilterChip
+                        key={d}
+                        label={d}
+                        dot={DIFFICULTY_DOT[d]}
+                        active={activeDifficulty === d}
+                        onClick={() =>
+                          setActiveDifficulty(activeDifficulty === d ? null : d)
+                        }
+                      />
+                    ))}
+                  </FilterRow>
+
+                  {tags.length > 0 ? (
+                    <FilterRow label="方法" twoColumn>
+                      {tags.map((t) => (
+                        <FilterChip
+                          key={t}
+                          label={t}
+                          active={activeTag === t}
+                          onClick={() =>
+                            setActiveTag(activeTag === t ? null : t)
+                          }
+                        />
+                      ))}
+                    </FilterRow>
+                  ) : null}
+                </div>
+              </DrawerContent>
+            </Drawer>
             {hasFilter ? (
               <Button
                 type="button"
@@ -261,7 +324,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-4">
         {GRADES.map((grade) => {
           const list = grouped.get(grade.label);
           if (!list || list.length === 0) return null;
@@ -325,16 +388,25 @@ export default function HomePage() {
 function FilterRow({
   label,
   children,
+  twoColumn = false,
 }: {
   label: string;
   children: React.ReactNode;
+  twoColumn?: boolean;
 }) {
   return (
-    <div className="flex flex-wrap items-center gap-2">
-      <span className="shrink-0 text-xs font-medium text-muted-foreground">
+    <div className="space-y-2">
+      <span className="block text-xs font-medium text-muted-foreground">
         {label}
       </span>
-      {children}
+      <div
+        className={cn(
+          "flex flex-wrap items-center gap-2",
+          twoColumn && "grid grid-cols-2 gap-2",
+        )}
+      >
+        {children}
+      </div>
     </div>
   );
 }
