@@ -1,0 +1,14 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="stroke-current fill-none">
+  <g class="stroke-current fill-none stroke-red-500">
+    <circle cx="40" cy="60" r="40" stroke-width="1" />
+    <circle cx="80" cy="60" r="40" stroke-width="1" />
+    <line x1="40" y1="60" x2="80" y2="60" stroke-dasharray="3 3" />
+    <line x1="40" y1="60" x2="60" y2="25" stroke-dasharray="3 3" />
+    <line x1="40" y1="60" x2="60" y2="95" stroke-dasharray="3 3" />
+    <line x1="80" y1="60" x2="60" y2="25" stroke-dasharray="3 3" />
+    <line x1="80" y1="60" x2="60" y2="95" stroke-dasharray="3 3" />
+  </g>
+  <g class="fill-current fill-red-500/10">
+    <path d="M 40 60 L 60 25 L 80 60 L 60 95 Z" fill-opacity="0.2" />
+  </g>
+</svg>

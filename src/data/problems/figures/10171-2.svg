@@ -1,0 +1,22 @@
+<svg viewBox="0 0 440 200" xmlns="http://www.w3.org/2000/svg"
+  class="stroke-current fill-none">
+  <g class="stroke-current fill-none">
+    <rect x="70" y="50" width="300" height="24" />
+    <rect x="70" y="100" width="200" height="24" />
+  </g>
+  <g class="fill-red-500/10 stroke-red-500">
+    <rect x="270" y="50" width="100" height="24" />
+  </g>
+  <g class="fill-current">
+    <text x="220" y="66" text-anchor="middle">桥长 600 米（50 秒）</text>
+    <text x="170" y="116" text-anchor="middle">隧道长 400 米（40 秒）</text>
+  </g>
+  <g class="fill-red-500">
+    <text x="320" y="44" text-anchor="middle">路程差 200 米</text>
+    <text x="320" y="148" text-anchor="middle">时间差 10 秒</text>
+  </g>
+  <g class="stroke-red-500 fill-none">
+    <line x1="270" y1="80" x2="270" y2="140" stroke-dasharray="3 3" />
+    <line x1="370" y1="80" x2="370" y2="140" stroke-dasharray="3 3" />
+  </g>
+</svg>

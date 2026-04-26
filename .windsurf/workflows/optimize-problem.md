@@ -43,6 +43,7 @@ description: Audit and optimize an existing edao.plus problem TS file against th
    - **难度定位**：题目是否符合小学奥数体系，是否过于超纲（超出小学知识范围）或过于简单（低于奥数水平）；难度是否与标注的 `grade` 和 `difficulty` 匹配。
    - **题干泄露**：`question` 是否包含 "提示：…"、"可写成…"、"令 x = …"、方法名、关键中间量等解法线索。
    - **figures 泄露**：`figures[].svg` / `caption` / `alt` 是否出现方法暗示（捆绑框、∧ 形空位、隔板①②、"只能填…"、"固定一人"、"每格 = 左 + 下" 等）。若 SVG 本身优秀但有方法暗示，标记为"应移入 `solutions[i].scenes`"。
+   - **SVG 属性冗余**：`<svg>` 根元素或子元素是否带有非必要属性（如 `font-size`、`width`/`height`、`font-family`、`color`、与默认值相同的 `stroke-width` 等）。这些应当删除以保持最小化，仅保留 `viewBox`、`xmlns` 和必要的 `class`。详见 `AGENTS.md` 的 "SVG Figures" 小节。
    - **solutions 质量**：
      - `solutions.length >= 1`，推荐 2–3 种不同思路。
      - 对于复杂的题目，`solutions[i].steps[0]` 是否以"分析"开头，并承载题面约束 / 特殊位置 / 对称性等。
@@ -54,6 +55,8 @@ description: Audit and optimize an existing edao.plus problem TS file against th
      - `steps` 是否把 `scenes`（尤其 `equation-list`）已经逐行展示的内容又复述了一遍；若是，合并为一条叙事。
      - 对照 / 备选解法是否把例行算术拆得过细，而对比结论反而被淹没。
      - **单步可读性**：是否存在某条 `step` 把多个逻辑独立的动作（如"分组 + 组内排序 + 合并顺序 + 结论"）用分号/逗号堆成一整段长句，阅读时需要扫多行才能抓到关键；若是，拆成多条短 step 或把枚举/清单下沉到 `scenes`（`equation-list` / `statement-table` 等）。
+     - **步骤紧凑性**：对于简单的算术或公式类题目，是否过度细分步骤（如"先算 A = B"，"再算 C = D"，"所以 E = F"）。应将相关计算合并为一条紧凑步骤，展示完整推导链。目标是每解法 2–4 步。
+     - **奥卡姆剃刀原则**：对于非常简单的题目，是否使用了不必要的解释性前缀（如"观察"、"分析"）。若计算从题面显而易见，应直接展示计算，无需前缀。
    - **variant**：
      - `question` 同主题不同数值、难度相近。
      - `fields[]` 至少 1 项、键名语义清晰；比较类用 `type: "text"` + `enum: [">","<","="]`。

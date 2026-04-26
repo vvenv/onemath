@@ -1,0 +1,9 @@
+<svg viewBox="0 0 440 280" xmlns="http://www.w3.org/2000/svg" class="stroke-current fill-none">
+  <path d="M 22 248 L 310 248 L 310 104 L 22 104 Z" />
+  <path d="M 22 104 L 130 32 L 418 32 L 310 104" />
+  <path d="M 310 248 L 418 176 L 418 32" />
+  <g stroke-dasharray="6 6">
+    <path d="M 22 248 L 130 176 L 130 32" />
+    <path d="M 130 176 L 418 176" />
+  </g>
+</svg>

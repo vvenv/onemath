@@ -119,8 +119,7 @@ export default {
               "claim": "22",
               "verdict": "false"
             }
-          ],
-          "caption": "在候选中继续检验能否被 3 整除：只有 ⬜ = 5"
+          ]
         },
         {
           "kind": "result-badges",
