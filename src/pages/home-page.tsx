@@ -9,13 +9,14 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { GRADES, MODULES, type ModuleKey } from "@/lib/modules";
 import { problems } from "@/lib/problems";
 import { TAG_WHITELIST } from "@/lib/tags";
@@ -199,14 +200,13 @@ export default function HomePage() {
           </FilterRow>
 
           <div className="flex items-center gap-2 pt-0.5 text-xs text-muted-foreground">
-            <Drawer
+            <Sheet
               open={filterDrawerOpen}
               onOpenChange={(open) =>
                 startTransition(() => setFilterDrawerOpen(open))
               }
-              direction="right"
             >
-              <DrawerTrigger asChild>
+              <SheetTrigger asChild>
                 <Button
                   type="button"
                   variant="ghost"
@@ -216,14 +216,17 @@ export default function HomePage() {
                   <Filter className="size-3.5" />
                   更多（难度 / 方法）
                 </Button>
-              </DrawerTrigger>
-              <DrawerContent className="h-screen">
-                <DrawerHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
-                  <DrawerTitle className="flex items-center gap-2 text-base font-semibold">
+              </SheetTrigger>
+              <SheetContent side="right">
+                <SheetHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
+                  <SheetTitle className="flex items-center gap-2 text-base font-semibold">
                     <Filter className="size-4" />
                     筛选
-                  </DrawerTitle>
-                  <DrawerClose asChild>
+                  </SheetTitle>
+                  <SheetDescription>
+                    按模块、年级、难度和方法筛选题目
+                  </SheetDescription>
+                  <SheetClose asChild>
                     <Button
                       type="button"
                       variant="ghost"
@@ -232,8 +235,8 @@ export default function HomePage() {
                     >
                       <X className="size-4" />
                     </Button>
-                  </DrawerClose>
-                </DrawerHeader>
+                  </SheetClose>
+                </SheetHeader>
                 <div className="space-y-4 overflow-y-auto px-4 pb-4">
                   <FilterRow label="模块">
                     {MODULES.map((m) => {
@@ -299,8 +302,8 @@ export default function HomePage() {
                     </FilterRow>
                   ) : null}
                 </div>
-              </DrawerContent>
-            </Drawer>
+              </SheetContent>
+            </Sheet>
             {hasFilter ? (
               <Button
                 type="button"

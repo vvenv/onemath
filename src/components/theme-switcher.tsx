@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { Moon, Sun, Palette, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Input } from "@/components/ui/input";
 import {
   getTheme,
@@ -148,8 +149,8 @@ export function ThemeSwitcher() {
   ];
 
   return (
-    <Drawer open={isOpen} onOpenChange={setIsOpen} direction="right">
-      <DrawerTrigger asChild>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+      <SheetTrigger asChild>
         <Button
           type="button"
           variant="ghost"
@@ -159,14 +160,15 @@ export function ThemeSwitcher() {
         >
           <Palette className="size-4" />
         </Button>
-      </DrawerTrigger>
-      <DrawerContent className="h-screen">
-        <DrawerHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
-          <DrawerTitle className="flex items-center gap-2 text-base font-semibold">
+      </SheetTrigger>
+      <SheetContent side="right">
+        <SheetHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
+          <SheetTitle className="flex items-center gap-2 text-base font-semibold">
             <Palette className="size-4" />
             主题设置
-          </DrawerTitle>
-          <DrawerClose asChild>
+          </SheetTitle>
+          <SheetDescription>自定义显示模式和配色方案</SheetDescription>
+          <SheetClose asChild>
             <Button
               type="button"
               variant="ghost"
@@ -175,8 +177,8 @@ export function ThemeSwitcher() {
             >
               <X className="size-4" />
             </Button>
-          </DrawerClose>
-        </DrawerHeader>
+          </SheetClose>
+        </SheetHeader>
         <div className="space-y-4 overflow-y-auto px-4 pb-4">
           {/* Mode Toggle - Basic Setting */}
           <div className="space-y-2">
@@ -304,7 +306,7 @@ export function ThemeSwitcher() {
             )}
           </div>
         </div>
-      </DrawerContent>
-    </Drawer>
+      </SheetContent>
+    </Sheet>
   );
 }

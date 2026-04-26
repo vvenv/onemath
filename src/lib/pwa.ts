@@ -32,9 +32,36 @@ export const pwaRegisterScript = `
     });
   }
 
-  // Normal service worker registration
+  // Normal service worker registration.
+  // Proactively check for updates on every page load and, when a new SW
+  // finishes installing, reload the page so users stuck on a stale precached
+  // HTML (referencing deleted hashed chunks) auto-recover within one extra
+  // refresh, without waiting for them to hit a 404 first.
+  var hadController = !!navigator.serviceWorker.controller;
+  var reloadedForUpdate = false;
+  function reloadOnce() {
+    if (reloadedForUpdate) return;
+    reloadedForUpdate = true;
+    window.location.reload();
+  }
+  navigator.serviceWorker.addEventListener('controllerchange', function () {
+    // Only reload if the page was already controlled by an old SW; on first
+    // ever registration we don't want to bounce the user.
+    if (hadController) reloadOnce();
+  });
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js').catch(function (err) {
+    navigator.serviceWorker.register('/sw.js').then(function (registration) {
+      try { registration.update(); } catch (e) { /* noop */ }
+      registration.addEventListener('updatefound', function () {
+        var installing = registration.installing;
+        if (!installing) return;
+        installing.addEventListener('statechange', function () {
+          if (installing.state === 'installed' && hadController) {
+            reloadOnce();
+          }
+        });
+      });
+    }).catch(function (err) {
       console.error('Service worker registration failed:', err);
     });
   });

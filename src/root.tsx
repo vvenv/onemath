@@ -13,6 +13,9 @@ export function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <head>
+        {!isDev && (
+          <script dangerouslySetInnerHTML={{ __html: pwaRegisterScript }} />
+        )}
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="darkreader-lock" />
@@ -29,9 +32,6 @@ export function Layout({ children }: { children: ReactNode }) {
         <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
         <Links />
         {!isDev && <link rel="manifest" href="/manifest.webmanifest" />}
-        {!isDev && (
-          <script dangerouslySetInnerHTML={{ __html: pwaRegisterScript }} />
-        )}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
