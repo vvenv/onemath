@@ -1,4 +1,14 @@
-export type ColorScheme = "default" | "warm" | "sepia" | "green" | "blue-light";
+export type ColorScheme =
+  | "default"
+  | "warm"
+  | "sepia"
+  | "green"
+  | "blue-light"
+  | "cool"
+  | "high-contrast"
+  | "reading"
+  | "monochrome"
+  | "custom";
 export type ThemeMode = "light" | "dark";
 
 export interface Theme {
@@ -22,16 +32,32 @@ export const BUILT_IN_THEMES: BuiltInTheme[] = [
     name: "暖色",
   },
   {
-    id: "sepia",
-    name: "护眼黄",
+    id: "green",
+    name: "绿色护眼",
   },
   {
-    id: "green",
-    name: "护眼绿",
+    id: "sepia",
+    name: "复古黄",
   },
   {
     id: "blue-light",
-    name: "蓝光过滤",
+    name: "蓝光护眼",
+  },
+  {
+    id: "cool",
+    name: "冷色",
+  },
+  {
+    id: "reading",
+    name: "阅读模式",
+  },
+  {
+    id: "high-contrast",
+    name: "高对比度",
+  },
+  {
+    id: "monochrome",
+    name: "灰度",
   },
 ];
 
@@ -101,13 +127,17 @@ export const setTheme = (theme: Theme) => {
 
 export const setColorScheme = (colorScheme: ColorScheme) => {
   const current = getTheme();
-  // Clear custom colors when switching to a built-in theme
-  const { customColors, ...rest } = current;
-  const root = document.documentElement;
-  Object.keys(customColors || {}).forEach((key) => {
-    root.style.removeProperty(`--custom-${key}`);
-  });
-  setTheme({ ...rest, colorScheme });
+  // Clear custom colors when switching to a built-in theme (but not for "custom")
+  if (colorScheme !== "custom") {
+    const { customColors, ...rest } = current;
+    const root = document.documentElement;
+    Object.keys(customColors || {}).forEach((key) => {
+      root.style.removeProperty(`--custom-${key}`);
+    });
+    setTheme({ ...rest, colorScheme });
+  } else {
+    setTheme({ ...current, colorScheme });
+  }
 };
 
 export const setMode = (mode: ThemeMode) => {
