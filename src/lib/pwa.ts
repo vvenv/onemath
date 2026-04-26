@@ -1,38 +1,63 @@
 export const pwaRegisterScript = `
-if ('serviceWorker' in navigator) {
+(function() {
+  if (!('serviceWorker' in navigator)) return;
+
+  // Clear all caches (only called on error)
+  function clearAllCaches() {
+    if ('caches' in window) {
+      return caches.keys().then(function (cacheNames) {
+        return Promise.all(
+          cacheNames.map(function (cacheName) {
+            return caches.delete(cacheName);
+          })
+        );
+      });
+    }
+    return Promise.resolve();
+  }
+
+  // Force service worker update and clear caches
+  function forceUpdateServiceWorker() {
+    return navigator.serviceWorker.getRegistration().then(function (registration) {
+      if (registration) {
+        return registration.unregister().then(function () {
+          return clearAllCaches();
+        });
+      }
+      return clearAllCaches();
+    }).then(function () {
+      return navigator.serviceWorker.register('/sw.js');
+    }).catch(function (err) {
+      console.error('Service worker registration failed:', err);
+    });
+  }
+
+  // Normal service worker registration
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js').catch(function () {});
+    navigator.serviceWorker.register('/sw.js').catch(function (err) {
+      console.error('Service worker registration failed:', err);
+    });
   });
 
-  // Global error handler for module load failures
+  // Global error handler - only clear caches on actual errors
   window.addEventListener('error', function (event) {
     // Detect module script load errors (like manifest-*.js 404)
     if (event.target && event.target.tagName === 'SCRIPT') {
-      console.error('Module load error:', event);
-      // Clear caches and reload
-      if ('caches' in window) {
-        caches.keys().then(function (cacheNames) {
-          return Promise.all(
-            cacheNames.map(function (cacheName) {
-              return caches.delete(cacheName);
-            })
-          );
-        }).then(function () {
-          // Reload after clearing caches
-          window.location.reload();
-        });
-      } else {
+      console.error('Module load error, forcing cache clear:', event);
+      forceUpdateServiceWorker().then(function () {
         window.location.reload();
-      }
+      });
     }
   });
 
   // Handle unhandled promise rejections
   window.addEventListener('unhandledrejection', function (event) {
     console.error('Unhandled rejection:', event.reason);
-    // If it's a network error, try to reload
+    // If it's a network error, force update
     if (event.reason && event.reason.name === 'TypeError') {
-      window.location.reload();
+      forceUpdateServiceWorker().then(function () {
+        window.location.reload();
+      });
     }
   });
-}`;
+})();`;
