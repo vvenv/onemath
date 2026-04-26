@@ -5,7 +5,6 @@ import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 import { getPrerenderPaths } from "./prerender-paths";
 import { agentSkills } from "./vite-plugins/agent-skills";
-import { controlModulePreloadPosition } from "./vite-plugins/control-modulepreload";
 import { markdownNegotiationPlugin } from "./vite-plugins/markdown-negotiation";
 import { sitemapPlugin } from "./vite-plugins/sitemap";
 import { silenceChromeDevtoolsProbe } from "./vite-plugins/silence-chrome-devtools-probe";
@@ -27,7 +26,6 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     silenceChromeDevtoolsProbe,
-    controlModulePreloadPosition(),
     agentSkills({
       skills: [
         {

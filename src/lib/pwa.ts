@@ -39,16 +39,24 @@ export const pwaRegisterScript = `
     });
   });
 
-  // Global error handler - only clear caches on actual errors
+  // Global error handler - only clear caches on actual errors.
+  // Resource load errors (e.g. <script src="...manifest-XXX.js"> 404) do NOT
+  // bubble; we must listen in the capture phase to see them at window.
+  var recovering = false;
+  function recover() {
+    if (recovering) return;
+    recovering = true;
+    forceUpdateServiceWorker().then(function () {
+      window.location.reload();
+    });
+  }
   window.addEventListener('error', function (event) {
-    // Detect module script load errors (like manifest-*.js 404)
-    if (event.target && event.target.tagName === 'SCRIPT') {
-      console.error('Module load error, forcing cache clear:', event);
-      forceUpdateServiceWorker().then(function () {
-        window.location.reload();
-      });
+    var target = event.target;
+    if (target && (target.tagName === 'SCRIPT' || target.tagName === 'LINK')) {
+      console.error('Asset load error, forcing cache clear:', target.src || target.href);
+      recover();
     }
-  });
+  }, true);
 
   // Handle unhandled promise rejections
   window.addEventListener('unhandledrejection', function (event) {

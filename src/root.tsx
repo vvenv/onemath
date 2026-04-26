@@ -24,14 +24,14 @@ export function Layout({ children }: { children: ReactNode }) {
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
+        <Meta />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
+        <Links />
         {!isDev && <link rel="manifest" href="/manifest.webmanifest" />}
         {!isDev && (
           <script dangerouslySetInnerHTML={{ __html: pwaRegisterScript }} />
         )}
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
-        <Meta />
-        <Links />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
