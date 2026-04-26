@@ -7,6 +7,8 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import "@/styles/globals.css";
 
+const isDev = import.meta.env.DEV;
+
 export function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
@@ -22,13 +24,15 @@ export function Layout({ children }: { children: ReactNode }) {
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
-        <link rel="manifest" href="/manifest.webmanifest" />
+        {!isDev && <link rel="manifest" href="/manifest.webmanifest" />}
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
         <Meta />
         <Links />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        <script dangerouslySetInnerHTML={{ __html: pwaRegisterScript }} />
+        {!isDev && (
+          <script dangerouslySetInnerHTML={{ __html: pwaRegisterScript }} />
+        )}
       </head>
       <body>
         {children}
