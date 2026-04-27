@@ -15,7 +15,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#262626" />
+        <meta name="theme-color" content="#3b82f6" />
         <meta name="application-name" content="一道+" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-title" content="一道+" />

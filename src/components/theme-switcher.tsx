@@ -46,7 +46,7 @@ const THEME_PREVIEW_COLORS: Record<
 > = {
   default: {
     light: ["#ffffff", "#0a0a0a", "#004981", "#f5f5f5"],
-    dark: ["#0a0a0a", "#fafafa", "#0089d5", "#262626"],
+    dark: ["#0a0a0a", "#fafafa", "#3b82f6", "#1e3a5f"],
   },
   warm: {
     light: ["#fff6ea", "#2d1d14", "#004077", "#eee3d7"],
