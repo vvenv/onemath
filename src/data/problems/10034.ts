@@ -1,76 +1,53 @@
 import type { ProblemData } from "@/types/problem";
 import svg1 from "./figures/10034-1.svg?raw";
-import svg2 from "./figures/10034-2.svg?raw";
-import svg3 from "./figures/10034-3.svg?raw";
 
 export default {
-  "id": "10034",
-  "title": "加乘原理·路线选择",
-  "grade": "四年级",
-  "module": "计数",
-  "difficulty": "基础",
-  "question": "如图，从A地到B地有3条路可走，从B地到C地有4条路可走，从A地直接到C地有2条路可走。那么从A地到C地一共有多少种不同的走法？",
-  "figures": [
+  id: "10034",
+  title: "加乘原理·路线选择",
+  grade: "四年级",
+  module: "计数",
+  difficulty: "基础",
+  question:
+    "如图，从 A 地到 B 地有 3 条路可走，从 B 地到 C 地有 4 条路可走，从 A 地直接到 C 地有 2 条路可走。那么从 A 地到 C 地一共有多少种不同的走法？",
+  figures: [
     {
-      "svg": svg1,
-      "caption": "A到B有3条路，B到C有4条路，A直达C有2条路",
-      "alt": "路线图：A、B、C三地之间的道路连接情况"
-    }
-  ],
-  "solutions": [
-    {
-      "key": "addition-multiplication",
-      "label": "加乘原理分析法",
-      "steps": [
-        "经过B：3 × 4 = 12 种；直达：2 种；总计 = 12 + 2 = 14 种。"
-      ],
-      "scenes": [
-        {
-          "kind": "svg",
-          "svg": svg2,
-          "caption": "第一类：经过B。A→B有3种，B→C有4种，乘法原理：3×4=12种"
-        },
-        {
-          "kind": "svg",
-          "svg": svg3,
-          "caption": "第二类：直达。A直接到C有2种走法"
-        },
-        {
-          "kind": "result-badges",
-          "items": [
-            {
-              "icon": "🛣️",
-              "count": 12,
-              "label": "经过B"
-            },
-            {
-              "icon": "🛤️",
-              "count": 2,
-              "label": "直达"
-            },
-            {
-              "icon": "✅",
-              "count": 14,
-              "label": "总计"
-            }
-          ],
-          "caption": "加法原理：12 + 2 = 14 种不同的走法"
-        }
-      ]
-    }
-  ],
-  "variant": {
-    "question": "从甲地到乙地有2条路，乙地到丙地有5条路，甲地直接到丙地有3条路。从甲地到丙地有多少种走法？",
-    "fields": [
-      {
-        "key": "total",
-        "label": "总走法数"
-      }
-    ],
-    "answer": {
-      "total": 13
+      svg: svg1,
+      caption: "A 到 B 有 3 条路，B 到 C 有 4 条路，A 直达 C 有 2 条路",
+      alt: "路线图：A、B、C三地之间的道路连接情况",
     },
-    "hint": "经过乙地：2×5=10种；直达：3种。合计13种。"
+  ],
+  solutions: [
+    {
+      key: "addition-multiplication",
+      label: "加乘原理分析法",
+      steps: [
+        "按是否经过 B 把所有走法分成两类：经过 B（A→B→C）用乘法原理，直达（A→C）单独计数，再用加法原理合并。",
+      ],
+      scenes: [
+        {
+          kind: "equation-list",
+          rows: [
+            { lhs: "经过 B", rhs: "3 × 4 = 12 种" },
+            { lhs: "直达", rhs: "2 种" },
+            { lhs: "总计", rhs: "12 + 2 = 14 种", badge: "答案" },
+          ],
+        },
+      ],
+    },
+  ],
+  variant: {
+    question:
+      "从甲地到乙地有 2 条路，乙地到丙地有 5 条路，甲地直接到丙地有 3 条路。从甲地到丙地有多少种走法？",
+    fields: [
+      {
+        key: "total",
+        label: "总走法数",
+      },
+    ],
+    answer: {
+      total: 13,
+    },
+    hint: "经过乙地：2 × 5 = 10 种；直达：3 种。合计 13 种。",
   },
-  "tags": ["加乘原理"]
+  tags: ["加乘原理"],
 } satisfies ProblemData;

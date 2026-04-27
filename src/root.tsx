@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import { themeScript } from "@/lib/theme";
-import { pwaRegisterScript } from "@/lib/pwa";
+import { pwaUnregisterScript } from "@/lib/pwa";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
@@ -29,7 +29,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <Links />
         {!isDev && <link rel="manifest" href="/manifest.webmanifest" />}
         {!isDev && (
-          <script dangerouslySetInnerHTML={{ __html: pwaRegisterScript }} />
+          <script dangerouslySetInnerHTML={{ __html: pwaUnregisterScript }} />
         )}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

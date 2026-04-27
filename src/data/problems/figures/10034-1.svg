@@ -1,110 +1,23 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 440 280"
-  width="400.00"
-  height="160.00"
->
-  <defs>
-    <marker
-      id="arrow"
-      markerWidth="8"
-      markerHeight="6"
-      refX="8"
-      refY="3"
-      orient="auto"
-    >
-      <path d="M0,0 L8,3 L0,6 Z" class="fill-current" />
-    </marker>
-  </defs>
-  <!-- 地点 A,
-    B, C -->
-  <circle cx="68.00" cy="140.00" r="20" class="fill-red-500" opacity="0.8" />
-  <text
-    x="68.00"
-    y="144.80"
-    fill="currentColor"
-    text-anchor="middle"
-    font-weight="bold"
-  >
-    A
-  </text>
-  <circle cx="220.00" cy="140.00" r="20" class="fill-blue-500" opacity="0.8" />
-  <text
-    x="220.00"
-    y="144.80"
-    fill="currentColor"
-    text-anchor="middle"
-    font-weight="bold"
-  >
-    B
-  </text>
-  <circle cx="372.00" cy="140.00" r="20" fill="#2ecc71" opacity="0.8" />
-  <text
-    x="372.00"
-    y="144.80"
-    fill="currentColor"
-    text-anchor="middle"
-    font-weight="bold"
-  >
-    C
-  </text>
-  <!-- A
-    到 B 的 3 条路 -->
-  <path
-    d="M64,85 Q149,70 234,85"
-    class="stroke-red-500 fill-none"
-    marker-end="url(#arrow)"
-  />
-  <path
-    d="M64,100 L234,100"
-    class="stroke-red-500 fill-none"
-    marker-end="url(#arrow)"
-  />
-  <path
-    d="M64,115 Q149,130 234,115"
-    class="stroke-red-500 fill-none"
-    marker-end="url(#arrow)"
-  />
-  <!--
-    B 到 C 的 4 条路 -->
-  <path
-    d="M274,85 Q359,70 444,85"
-    class="stroke-blue-500 fill-none"
-    marker-end="url(#arrow)"
-  />
-  <path
-    d="M274,93 Q359,90 444,93"
-    class="stroke-blue-500 fill-none"
-    marker-end="url(#arrow)"
-  />
-  <path
-    d="M274,107 Q359,110 444,107"
-    class="stroke-blue-500 fill-none"
-    marker-end="url(#arrow)"
-  />
-  <path
-    d="M274,115 Q359,130 444,115"
-    class="stroke-blue-500 fill-none"
-    marker-end="url(#arrow)"
-  />
-  <!--
-    A 直接到 C 的 2 条路 -->
-  <path
-    d="M64,160 Q234,180 444,160"
-    stroke="#2ecc71"
-    stroke-dasharray="8,4"
-    marker-end="url(#arrow)"
-    class="fill-none"
-  />
-  <path
-    d="M64,175 Q234,195 444,175"
-    stroke="#2ecc71"
-    stroke-dasharray="8,4"
-    marker-end="url(#arrow)"
-    class="fill-none"
-  />
-  <!-- 标注 -->
-  <text x="144.00" y="120.00" class="fill-red-500" text-anchor="middle">3条</text>
-  <text x="296.00" y="120.00" class="fill-blue-500" text-anchor="middle">4条</text>
-  <text x="220.00" y="192.00" fill="#2ecc71" text-anchor="middle">2条(直达)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <g class="stroke-current fill-none">
+    <line x1="38.75" y1="200.04" x2="200.04" y2="38.75" />
+    <line x1="54.14" y1="205.86" x2="205.86" y2="54.14" />
+    <line x1="59.96" y1="221.25" x2="221.25" y2="59.96" />
+    <line x1="218.75" y1="59.96" x2="380.04" y2="221.25" />
+    <line x1="230.16" y1="57.23" x2="382.77" y2="209.84" />
+    <line x1="237.23" y1="50.16" x2="389.84" y2="202.77" />
+    <line x1="239.96" y1="38.75" x2="401.25" y2="200.04" />
+    <line x1="59.36" y1="225" x2="380.64" y2="225" />
+    <line x1="53.23" y1="235" x2="386.77" y2="235" />
+  </g>
+  <g class="stroke-current fill-current/10">
+    <circle cx="40" cy="220" r="20" />
+    <circle cx="220" cy="40" r="20" />
+    <circle cx="400" cy="220" r="20" />
+  </g>
+  <g class="fill-current" text-anchor="middle">
+    <text x="40" y="224.8">A</text>
+    <text x="220" y="44.8">B</text>
+    <text x="400" y="224.8">C</text>
+  </g>
 </svg>

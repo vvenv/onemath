@@ -8,6 +8,7 @@ export type ColorScheme =
   | "high-contrast"
   | "reading"
   | "monochrome"
+  | "focus"
   | "custom";
 export type ThemeMode = "light" | "dark";
 
@@ -49,7 +50,7 @@ export const BUILT_IN_THEMES: BuiltInTheme[] = [
   },
   {
     id: "reading",
-    name: "阅读模式",
+    name: "阅读",
   },
   {
     id: "high-contrast",
@@ -58,6 +59,10 @@ export const BUILT_IN_THEMES: BuiltInTheme[] = [
   {
     id: "monochrome",
     name: "灰度",
+  },
+  {
+    id: "focus",
+    name: "专注",
   },
 ];
 
