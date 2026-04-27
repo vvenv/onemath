@@ -23,9 +23,11 @@
 
 - Import from `@/components/ui/*`; avoid ad-hoc duplicate wrappers.
 - Outside of `src/components/ui/`, do not use raw HTML primitives when a shadcn counterpart exists. Always use `Button` from `@/components/ui/button` instead of `<button>`, `Input` instead of `<input>`, `Badge` for pill-like tags, `Card` (with its subcomponents) for card surfaces, etc. For links, use React Router `Link` or `Button` with `asChild` wrapping a `Link`.
+- Prefer official shadcn/ui components over hand-rolled equivalents. Before building a UI pattern from scratch (carousel, dialog, dropdown, tooltip, tabs, command palette, etc.), check the shadcn registry and install the primitive via `pnpm dlx shadcn@latest add <component>`. Only fall back to a custom implementation when no shadcn component fits, and document the reason in the file.
 - For `Card`, prefer semantic composition with `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, and `CardFooter` instead of placing all content directly under `Card`.
 - Keep interactive controls accessible (`type`, `aria-*`, labels/associations where needed).
 - Use component props (`variant`, `size`, `asChild`) before introducing custom class overrides. When a design calls for a visual that no existing variant covers (e.g. a chip), pass a minimal `className` override on top of the closest variant (typically `ghost`) rather than falling back to a raw `<button>`.
+- **Occam's Razor for shadcn components**: When using a shadcn primitive, trust its built-in styling and behavior. Do not add unnecessary `className` overrides, wrapper `<div>`s, or redundant props that replicate the component's defaults (e.g. re-specifying padding/rounding/border that the variant already provides, wrapping a `Button` in a styled `<div>` purely for layout a `flex` utility on the parent would handle, or overriding typography on `CardTitle`/`CardDescription` to match what they already render). Only add overrides when the design genuinely diverges from the default; otherwise let the primitive speak for itself.
 
 ## Problem Solutions (`src/data/problems/*.ts`)
 

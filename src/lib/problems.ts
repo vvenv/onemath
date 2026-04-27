@@ -13,6 +13,15 @@ export function getProblemById(id: string | undefined) {
   return problems.find((p) => p.id === id);
 }
 
+/**
+ * Return all problems flagged for the home hero, in id order. Tag a small
+ * curated set with `featured: true` in their data file. Order is deterministic
+ * so SSR/CSR stay in sync.
+ */
+export function getFeaturedProblems(): ProblemData[] {
+  return problems.filter((p) => p.featured);
+}
+
 export function getRandomProblem(opts?: {
   module?: ProblemModule;
   excludeId?: string;

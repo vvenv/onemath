@@ -60,4 +60,10 @@ export type ProblemData = {
   };
   knowledgePoints: KnowledgePoint[];
   tags: string[];
+  /**
+   * If true, the problem is eligible to be showcased on the home page hero.
+   * Tag a small handful of visually strong problems; the home page picks one
+   * deterministically.
+   */
+  featured?: boolean;
 };

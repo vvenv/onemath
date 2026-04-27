@@ -1,8 +1,16 @@
 import { useEffect, useMemo, useState, startTransition } from "react";
 import { Link, useSearchParams } from "react-router";
-import { ChevronDown, Search, X, Filter } from "lucide-react";
+import { ArrowRight, ChevronDown, Search, X, Filter } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  type CarouselApi,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import {
   Collapsible,
   CollapsibleContent,
@@ -17,8 +25,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { SvgFigure } from "@/components/visuals/svg-figure";
+import { knowledgeEntries } from "@/data/knowledge";
 import { GRADES, MODULES, type ModuleKey } from "@/lib/modules";
-import { problems } from "@/lib/problems";
+import { getFeaturedProblems, problems } from "@/lib/problems";
 import { TAG_WHITELIST } from "@/lib/tags";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, buildMeta } from "@/lib/seo";
 import { cn } from "@/lib/utils";
@@ -61,6 +71,8 @@ const DIFFICULTY_DOT: Record<Difficulty, string> = {
   进阶: "bg-amber-500/50",
   挑战: "bg-rose-500/50",
 };
+
+const FEATURED = getFeaturedProblems();
 
 export default function HomePage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -163,7 +175,33 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col gap-4">
-      <h1 className="sr-only">一道+ / edao.plus — 小学数学思维训练题库</h1>
+      <section className="flex flex-col gap-4 border-b border-border/60 pb-6">
+        <div className="flex flex-col gap-3">
+          <h1 className="font-heading text-2xl font-bold tracking-tight sm:text-3xl">
+            小学数学思维训练题库
+          </h1>
+          <p className="text-muted-foreground">
+            按小学奥数体系整理，每题配可视化解法与知识点讲解。
+          </p>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+            <span className="tabular-nums">
+              已收录 {problems.length} 题 · {knowledgeEntries.length} 个知识点
+            </span>
+            <Button
+              asChild
+              variant="ghost"
+              size="sm"
+              className="h-7 gap-1 px-2 text-xs"
+            >
+              <Link to="/knowledge">
+                浏览知识点体系
+                <ArrowRight className="size-3.5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+        {FEATURED.length > 0 ? <FeaturedCarousel items={FEATURED} /> : null}
+      </section>
       <section className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <FilterRow label="模块">
@@ -455,6 +493,100 @@ function FilterChip({
         <span className="tabular-nums">{count}</span>
       ) : null}
     </Button>
+  );
+}
+
+function FeaturedCarousel({ items }: { items: ProblemData[] }) {
+  const [api, setApi] = useState<CarouselApi>();
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+    setIndex(api.selectedScrollSnap());
+    const onSelect = () => setIndex(api.selectedScrollSnap());
+    api.on("select", onSelect);
+    api.on("reInit", onSelect);
+    return () => {
+      api.off("select", onSelect);
+      api.off("reInit", onSelect);
+    };
+  }, [api]);
+
+  const showArrows = items.length > 1;
+
+  return (
+    <Carousel
+      setApi={setApi}
+      opts={{ align: "start", loop: false }}
+      className="flex flex-col gap-3"
+    >
+      <div className="relative">
+        <CarouselContent className="-ml-3">
+          {items.map((p) => {
+            const fig = p.figures?.[0];
+            if (!fig) return null;
+            return (
+              <CarouselItem key={p.id} className="pl-3">
+                <Link
+                  to={`/p/${p.id}`}
+                  aria-label={`查看示例题：${p.title}`}
+                  className="group relative flex flex-col gap-2 overflow-hidden rounded-2xl border border-border/70 bg-card p-4 transition-all hover:border-primary/40 hover:shadow-md"
+                >
+                  <SvgFigure
+                    svg={fig.svg}
+                    alt={fig.alt}
+                    className="[&>svg]:max-w-lg"
+                  />
+                  <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+                    <span className="truncate">
+                      <span className="font-normal text-muted-foreground/70">
+                        #{p.id}
+                      </span>{" "}
+                      <span className="text-card-foreground">{p.title}</span>
+                    </span>
+                    <span className="inline-flex shrink-0 items-center gap-1 text-muted-foreground group-hover:text-primary">
+                      看解题过程
+                      <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+                    </span>
+                  </div>
+                </Link>
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+        {showArrows ? (
+          <>
+            <CarouselPrevious variant="ghost" />
+            <CarouselNext variant="ghost" />
+          </>
+        ) : null}
+      </div>
+      {items.length > 1 ? (
+        <div
+          className="flex justify-center gap-1.5"
+          role="tablist"
+          aria-label="精选题目"
+        >
+          {items.map((p, i) => (
+            <Button
+              key={p.id}
+              type="button"
+              variant="ghost"
+              role="tab"
+              aria-selected={i === index}
+              aria-label={`第 ${i + 1} / ${items.length} 张：${p.title}`}
+              onClick={() => api?.scrollTo(i)}
+              className={cn(
+                "h-1.5 rounded-full p-0 transition-all hover:bg-foreground/70",
+                i === index
+                  ? "w-6 bg-foreground"
+                  : "w-1.5 bg-border hover:bg-muted-foreground",
+              )}
+            />
+          ))}
+        </div>
+      ) : null}
+    </Carousel>
   );
 }
 
