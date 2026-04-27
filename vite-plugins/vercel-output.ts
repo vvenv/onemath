@@ -14,21 +14,6 @@ import type { Plugin } from "vite";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-/**
- * Names of the modules under `src/data/knowledge/` whose default exports are
- * flat `KnowledgeEntry[]` arrays. Enumerated explicitly so the catalog bundle
- * stays decoupled from `src/data/knowledge.ts`, which transitively imports
- * `import.meta.glob` (unsupported by esbuild).
- */
-const KNOWLEDGE_MODULES = [
-  ["countingEntries", "counting"],
-  ["generalEntries", "general"],
-  ["geometryEntries", "geometry"],
-  ["magicSquareEntries", "magic-square"],
-  ["numberCalcEntries", "number-calc"],
-  ["wordEntries", "word"],
-] as const;
-
 type Problem = Record<string, unknown>;
 type Knowledge = Record<string, unknown>;
 
@@ -41,17 +26,22 @@ async function generateCatalog(
     .map((f) => f.replace(/\.ts$/, ""))
     .sort();
 
+  const knowledgeDir = path.join(repoRoot, "src/data/knowledge");
+  const knowledgeSlugs = readdirSync(knowledgeDir)
+    .filter((f) => f.endsWith(".ts"))
+    .map((f) => f.replace(/\.ts$/, ""))
+    .sort();
+
   const entrySource = [
     ...problemIds.map(
       (id, i) => `import p${i} from "${path.join(problemsDir, id)}";`,
     ),
-    ...KNOWLEDGE_MODULES.map(
-      ([name, file]) =>
-        `import { ${name} } from "${path.join(repoRoot, "src/data/knowledge", file)}";`,
+    ...knowledgeSlugs.map(
+      (slug, i) => `import k${i} from "${path.join(knowledgeDir, slug)}";`,
     ),
     "",
     `export const problems = [${problemIds.map((_, i) => `p${i}`).join(", ")}];`,
-    `export const knowledge = [${KNOWLEDGE_MODULES.map(([n]) => `...${n}`).join(", ")}];`,
+    `export const knowledge = [${knowledgeSlugs.map((_, i) => `k${i}`).join(", ")}];`,
     "",
   ].join("\n");
 
@@ -85,7 +75,13 @@ async function generateCatalog(
             b.onResolve({ filter: /^@\// }, (args) => {
               const rel = args.path.replace(/^@\//, "");
               const base = path.resolve(repoRoot, "src", rel);
-              for (const ext of ["", ".ts", ".tsx", "/index.ts", "/index.tsx"]) {
+              for (const ext of [
+                "",
+                ".ts",
+                ".tsx",
+                "/index.ts",
+                "/index.tsx",
+              ]) {
                 if (existsSync(base + ext)) return { path: base + ext };
               }
               return { path: base };
@@ -111,9 +107,9 @@ async function generateCatalog(
         question: q.question,
         tags: q.tags,
         knowledgePoints: q.knowledgePoints,
-        solutions: (q.solutions as Array<Record<string, unknown>> | undefined)?.map(
-          (s) => ({ key: s.key, label: s.label, steps: s.steps }),
-        ),
+        solutions: (
+          q.solutions as Array<Record<string, unknown>> | undefined
+        )?.map((s) => ({ key: s.key, label: s.label, steps: s.steps })),
         variant: variant
           ? {
               question: variant.question,
