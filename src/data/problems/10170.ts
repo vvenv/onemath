@@ -107,6 +107,5 @@ export default {
     },
     hint: "设原价为 x，则 x × 0.75 × 1.25 = 180。",
   },
-  knowledgePoints: [],
   tags: [],
 } satisfies ProblemData;

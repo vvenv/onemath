@@ -47,8 +47,16 @@ export default {
         {
           kind: "equation-list",
           rows: [
-            { lhs: "A 在两端", rhs: "2 种情况，B 有 1 个相邻位置", badge: "端点" },
-            { lhs: "A 在中间", rhs: "2 种情况，B 有 2 个相邻位置", badge: "中间" },
+            {
+              lhs: "A 在两端",
+              rhs: "2 种情况，B 有 1 个相邻位置",
+              badge: "端点",
+            },
+            {
+              lhs: "A 在中间",
+              rhs: "2 种情况，B 有 2 个相邻位置",
+              badge: "中间",
+            },
             { lhs: "B 相邻位置总数", rhs: "2×1 + 2×2 = 6", badge: "有利" },
             { lhs: "B 可能位置总数", rhs: "3（除去 A 的位置）", badge: "总数" },
             { lhs: "相邻概率", rhs: "6/12 = 1/2", status: "keep" },
@@ -72,11 +80,5 @@ export default {
     },
     hint: "总排列数是 5! = 120。把指定的 2 人捆在一起，看作 4 个整体排列，内部 2! 种顺序，相邻排列数是 4! × 2 = 48。概率是 48/120 = 2/5。",
   },
-  knowledgePoints: [
-    {
-      slug: "permutation-probability",
-      name: "排列概率",
-    },
-  ],
-  tags: ["排列", "捆绑法"],
+  tags: ["排列", "捆绑法", "排列概率"],
 } satisfies ProblemData;

@@ -31,12 +31,6 @@ export type ProblemFigure = {
   alt?: string;
 };
 
-export type KnowledgePoint = {
-  slug: string;
-  name: string;
-  summary?: string;
-};
-
 export type ProblemData = {
   id: string;
   title: string;
@@ -58,12 +52,5 @@ export type ProblemData = {
     answer: Record<string, VariantAnswerValue>;
     hint?: string;
   };
-  knowledgePoints: KnowledgePoint[];
   tags: string[];
-  /**
-   * If true, the problem is eligible to be showcased on the home page hero.
-   * Tag a small handful of visually strong problems; the home page picks one
-   * deterministically.
-   */
-  featured?: boolean;
 };

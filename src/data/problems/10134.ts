@@ -114,18 +114,6 @@ export default {
     },
     "hint": "用同样的方法可以证明 AGCD 总等于正方形面积的 2/3。边长 6 ⇒ 正方形 = 36，AGCD = 36 × 2/3 = 24。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "similarity-model",
-      "name": "相似模型",
-      "summary": "平行线截三角形得沙漏/金字塔，对应边成比例，面积比 = 相似比的平方。",
-    },
-    {
-      "slug": "equal-area-transformation",
-      "name": "等积变形",
-      "summary": "在平行线之间平移顶点，三角形面积不变；用来“把难算的图形搬到好算的位置”。",
-    },
-  ],
   "tags": [
     "相似模型",
     "等积变形"

@@ -109,13 +109,6 @@ export default {
     },
     "hint": "由 1 : 4 : 2 : 2 的分配，△ADP 占梯形 ABCD 的 4/9；梯形 = 六边形 ÷ 2 = 18；△ADP = 18 × 4/9 = 8。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "butterfly-model",
-      "name": "蝴蝶模型",
-      "summary": "四边形两条对角线分出的四块，对角相乘相等；梯形里的面积比等于上下底平方比。",
-    },
-  ],
   "tags": [
     "蝴蝶模型"
   ]

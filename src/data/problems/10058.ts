@@ -118,12 +118,5 @@ export default {
     },
     hint: "提取公因数 28：(125 − 25) × 28 = 100 × 28",
   },
-  knowledgePoints: [
-    {
-      slug: "distributive-law",
-      name: "乘法分配律",
-      summary: "(a + b) × c = a × c + b × c；正反两用是凑整巧算的主力工具。",
-    },
-  ],
   tags: ["乘法分配律"],
 } satisfies ProblemData;

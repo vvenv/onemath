@@ -83,18 +83,6 @@ export default {
     },
     "hint": "公式：S = n × (n²+1) / 2。n=7 时 S = 7 × 50/2 = 175。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "accumulation-method",
-      "name": "累加法",
-      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
-    },
-    {
-      "slug": "arithmetic-sequence-method",
-      "name": "等差数列法",
-      "summary": "幻方里的数字常形成等差（或多个等差段）；用“首尾配对 + 平均值”一次性算出幻和与中心。",
-    },
-  ],
   "tags": [
     "累加法",
     "等差数列法"

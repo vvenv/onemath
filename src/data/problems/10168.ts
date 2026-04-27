@@ -129,12 +129,5 @@ export default {
     },
     hint: "利用裂项公式 1/(n×(n+1)) = 1/n − 1/(n+1)，中间项会相互抵消。",
   },
-  knowledgePoints: [
-    {
-      slug: "telescoping",
-      name: "裂项",
-      summary: "把一项拆成“相邻两项之差”，前后相消，长和瞬间折叠成头尾两项。",
-    },
-  ],
   tags: ["裂项"],
 } satisfies ProblemData;

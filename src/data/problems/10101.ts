@@ -83,13 +83,6 @@ export default {
     },
     "hint": "4S = V + 36，V 要是 4 的倍数且在 [10,26] 中最小为 12。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "accumulation-method",
-      "name": "累加法",
-      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
-    },
-  ],
   "tags": [
     "累加法"
   ]

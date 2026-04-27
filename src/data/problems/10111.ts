@@ -66,23 +66,6 @@ export default {
     },
     "hint": "3S = V + 21；V 最小 = 1+2+3 = 6，S = 9。对应边中点 {4,5,6}，每边和 9。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "accumulation-method",
-      "name": "累加法",
-      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
-    },
-    {
-      "slug": "comparison-method",
-      "name": "比较法",
-      "summary": "拿两条“和相等”的线作差，公共格子消掉，剩下的格子之间立刻出现一个等式。",
-    },
-    {
-      "slug": "case-analysis",
-      "name": "分类讨论",
-      "summary": "按关键特征把所有情况拆成互不重叠且覆盖全体的几类，逐类计算后相加。",
-    },
-  ],
   "tags": [
     "累加法",
     "比较法",

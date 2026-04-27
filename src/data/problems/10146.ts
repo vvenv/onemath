@@ -71,11 +71,5 @@ export default {
     },
     hint: "先求对立事件：四次都掷出 1-4 点的概率是 (4/6)⁴ = 16/81，再用 1 减去它。",
   },
-  knowledgePoints: [
-    {
-      slug: "complementary-events",
-      name: "对立事件",
-    },
-  ],
   tags: ["对立事件", "独立事件"],
 } satisfies ProblemData;

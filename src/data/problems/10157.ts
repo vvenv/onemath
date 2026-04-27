@@ -127,12 +127,5 @@ export default {
     },
     hint: "旋转正方形边长 = 2.4√10，面积 = (2.4√10)² = 57.6。",
   },
-  knowledgePoints: [
-    {
-      slug: "area-method",
-      name: "面积法",
-      summary: "以面积为“中转货币”：把要求的长度 / 比例问题转化为面积等式。",
-    },
-  ],
   tags: ["面积法"],
 } satisfies ProblemData;

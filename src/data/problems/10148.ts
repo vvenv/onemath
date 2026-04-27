@@ -6,7 +6,8 @@ export default {
   grade: "六年级",
   module: "计数",
   difficulty: "进阶",
-  question: "一个袋子里有 4 个红球和 3 个白球。从中摸出 1 个球后不放回，再摸出 1 个球。求两次都摸到红球的概率。",
+  question:
+    "一个袋子里有 4 个红球和 3 个白球。从中摸出 1 个球后不放回，再摸出 1 个球。求两次都摸到红球的概率。",
   solutions: [
     {
       key: "stepwise",
@@ -65,7 +66,8 @@ export default {
     },
   ],
   variant: {
-    question: "一个盒子里有 5 个蓝球和 2 个黄球。不放回地摸两次球，求两次摸到同色球的概率。",
+    question:
+      "一个盒子里有 5 个蓝球和 2 个黄球。不放回地摸两次球，求两次摸到同色球的概率。",
     fields: [
       {
         key: "probability",
@@ -78,11 +80,5 @@ export default {
     },
     hint: "同色球有两种情况：两次都蓝，或两次都黄。分别计算后相加。",
   },
-  knowledgePoints: [
-    {
-      slug: "without-replacement",
-      name: "不放回抽样",
-    },
-  ],
-  tags: ["条件概率"],
+  tags: ["条件概率", "不放回抽样"],
 } satisfies ProblemData;

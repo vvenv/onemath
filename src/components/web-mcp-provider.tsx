@@ -178,7 +178,6 @@ export function WebMCPProvider() {
             label: s.label,
             steps: s.steps,
           })),
-          knowledgePoints: p.knowledgePoints,
         };
       },
     });

@@ -134,26 +134,16 @@ description: Given a reference document under docs/, produce a generation plan a
 - `answer` 精确可判分；数值给最简/准确形式。
 - `hint` 为简短引导（可含方法名），`hint` 是练习提示可含方法线索，但主 `question` 不可。
 
-### knowledgePoints（知识点关联）
+### tags（方法标签 = 方法手册入口）
 
-- **当题目涉及的核心方法或概念在 `src/data/knowledge/` 中已有对应条目时，应关联该知识点**：
-  - 在 `knowledgePoints` 字段中添加 `{ slug: "知识点slug", name: "知识点名称", summary?: "简短摘要" }`
-  - slug 必须与 `src/data/knowledge/*.ts` 中某个条目的 `slug` 完全一致
-  - 优先关联与 `tags` 中方法标签对应的知识点（例如 `tags: ["捆绑法"]` 应关联 `slug: "bundle"` 的知识点条目）
-- **当题目涉及的方法或概念在知识点库中不存在时，应创建新的知识点条目**（如必要）：
-  - 新知识点文件应放在对应的模块文件中（`src/data/knowledge/counting.ts`、`geometry.ts`、`word.ts` 等）
-  - 知识点结构对齐 `KnowledgeEntry` 类型（见 `src/data/knowledge/types.ts`），包含：
-    - `slug`: 唯一标识符（kebab-case，英文小写）
-    - `name`: 中文标题
-    - `tag`: 对应的方法标签（如适用）
-    - `category`: 所属类别（与 `@/lib/tags.ts` 中的 `METHOD_TAGS` 键对齐）
-    - `summary`: 一句话定位
-    - `intuition`: 直觉化场景描述
-    - `derivation`: 推导步骤数组
-    - `examples`: 2–3 个进阶示例
-    - `figures`: 可选的说明性图形
-  - 创建后，在题目中通过 `knowledgePoints` 关联新知识点
-- 知识点创建是**可选的**：仅当该方法/概念确实是该题目的核心、且现有知识点库中无合适条目时才创建。避免为每个细小技巧都新建知识点。
+- `tags` 是方法的**唯一**字段，既驱动首页筛选，也驱动单题页底部的「方法」section（系统会按 `tag` 字段匹配 `src/data/knowledge/*.ts` 中的知识页并自动生成跳转）。
+- 选词来自 `@/lib/tags.ts` 的 `TAG_WHITELIST`；每题 0–3 个，宁缺毋滥。年级/难度/模块**不**进 `tags`，它们已是独立字段。
+- **当题目涉及的核心方法在 `src/data/knowledge/` 中已有对应条目时**，确保所选 tag 与该知识页的 `tag` 字段一致（一致即自动生成跳转，无需额外配置）。
+- **当题目涉及的方法在知识页库中不存在但确实有教学价值时**，可以新增：
+  1. 先在 `@/lib/tags.ts` 的对应分类中加入新的 tag 字符串。
+  2. 在 `src/data/knowledge/<slug>.ts` 创建知识页，`tag` 字段填这个新 tag，`category` 与 `METHOD_TAGS` 的键对齐。
+  3. 题目里直接写 tag 名即可，链接会自动生效。
+- 仅当该方法/概念确实是该题目的核心、且现有知识页库中无合适条目时才新增；避免为细小技巧建条目。
 
 ### scenes 选型建议
 
@@ -204,13 +194,6 @@ export default {
     answer: { answer: 0 },
     hint: "简短引导",
   },
-  knowledgePoints: [
-    {
-      slug: "bundle",
-      name: "捆绑法",
-      summary: "将相邻元素视为一个整体进行排列",
-    },
-  ],
   tags: ["方法1", "方法2"],
 } satisfies ProblemData;
 ```
@@ -247,7 +230,7 @@ export default {
 - [ ] 所有 `scenes[].kind` 为 `SceneSpec`（见 `src/types/visual.ts`）允许的值
 - [ ] `variant.answer` 的键与 `variant.fields[].key` 一一对应
 - [ ] `tags` 仅含 `@/src/lib/tags.ts` 白名单内的方法（0–3 个），不含年级/难度/模块
-- [ ] **知识点关联**：如题目涉及的核心方法在知识点库中存在，已在 `knowledgePoints` 中正确关联；如创建了新知识点，其结构对齐 `KnowledgeEntry` 且已放入对应模块文件
+- [ ] **方法关联**：`tags` 中的每个方法名，若在 `src/data/knowledge/*.ts` 中已有对应知识页（`tag` 字段匹配），则问题页底部会自动渲染跳转条目；若创建了新知识页，其 `tag` 字段与 `@/lib/tags.ts` 中已加入的 tag 字符串一致
 - [ ] `pnpm exec tsc --noEmit` 通过（文件尾端 `satisfies ProblemData` 会自动校验类型）
 
 ## 参考资料

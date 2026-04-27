@@ -83,17 +83,5 @@ export default {
     },
     hint: "3S = V + 45，V 越大 S 越大；V 必为 3 的倍数且最大为 7+8+9 = 24，对应 S = 23。",
   },
-  knowledgePoints: [
-    {
-      slug: "accumulation-method",
-      name: "累加法",
-      summary: "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
-    },
-    {
-      slug: "comparison-method",
-      name: "比较法",
-      summary: "拿两条“和相等”的线作差，公共格子消掉，剩下的格子之间立刻出现一个等式。",
-    },
-  ],
   tags: ["累加法", "比较法"],
 } satisfies ProblemData;

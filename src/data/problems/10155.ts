@@ -108,17 +108,5 @@ export default {
     },
     hint: "总配对数 = 3 × 15 = 45。男生看到的和 = 2 + 8 + 12 = 22。女生看到的和 = 45 − 22 = 23？不对，再算一下：45 − 22 = 23。",
   },
-  knowledgePoints: [
-    {
-      slug: "reverse-reasoning",
-      name: "逆向推理",
-      summary: "从结果倒着走回起点：每一步都反着做那一步的运算。",
-    },
-    {
-      slug: "correspondence",
-      name: "对应思想",
-      summary: "盈亏 / 归一 / 分配等题里，把“每份多少”与“份数”一对一挂钩，让两组条件作差或作比。",
-    },
-  ],
   tags: ["逆向推理", "对应思想"],
 } satisfies ProblemData;

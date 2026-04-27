@@ -159,12 +159,5 @@ export default {
     },
     hint: "设工程总量为30（15和10的最小公倍数），甲每天2份，乙每天3份，合作每天5份，30÷5=6天。",
   },
-  knowledgePoints: [
-    {
-      slug: "reciprocal-method",
-      name: "倒数法",
-      summary: "比较真分数大小或处理“工作效率/速度”问题时，把分数倒过来：a < b ⇔ 1/a > 1/b（同号）。",
-    },
-  ],
   tags: ["倒数法"],
 } satisfies ProblemData;

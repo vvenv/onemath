@@ -1,131 +1,123 @@
 import type { ProblemData } from "@/types/problem";
 
 export default {
-  "id": "10177",
-  "title": "位值原理·数字交换",
-  "grade": "五年级",
-  "module": "数论",
-  "difficulty": "进阶",
-  "question": "一个两位数，个位数字比十位数字大 3。如果把个位数字和十位数字交换位置，得到的新数比原数大 27。求原数。",
-  "solutions": [
+  id: "10177",
+  title: "位值原理·数字交换",
+  grade: "五年级",
+  module: "数论",
+  difficulty: "进阶",
+  question:
+    "一个两位数，个位数字比十位数字大 3。如果把个位数字和十位数字交换位置，得到的新数比原数大 27。求原数。",
+  solutions: [
     {
-      "key": "digit",
-      "label": "位值原理法",
-      "steps": [
+      key: "digit",
+      label: "位值原理法",
+      steps: [
         "分析：设十位为 a，个位为 a + 3，原数 = 10a + b，新数 = 10b + a。",
-        "新数 − 原数 = 9(b − a) = 27，得 b − a = 3，设 a = 1，则 b = 4，原数 = 14。"
+        "新数 − 原数 = 9(b − a) = 27，得 b − a = 3，设 a = 1，则 b = 4，原数 = 14。",
       ],
-      "scenes": [
+      scenes: [
         {
-          "kind": "equation-list",
-          "rows": [
+          kind: "equation-list",
+          rows: [
             {
-              "lhs": "设十位 a，个位 b",
-              "rhs": "b = a + 3"
+              lhs: "设十位 a，个位 b",
+              rhs: "b = a + 3",
             },
             {
-              "lhs": "原数",
-              "rhs": "10a + b"
+              lhs: "原数",
+              rhs: "10a + b",
             },
             {
-              "lhs": "新数",
-              "rhs": "10b + a"
+              lhs: "新数",
+              rhs: "10b + a",
             },
             {
-              "lhs": "新数 − 原数",
-              "rhs": "9(b − a) = 27"
+              lhs: "新数 − 原数",
+              rhs: "9(b − a) = 27",
             },
             {
-              "lhs": "b − a",
-              "rhs": "3",
-              "status": "keep"
+              lhs: "b − a",
+              rhs: "3",
+              status: "keep",
             },
             {
-              "lhs": "原数",
-              "rhs": "14",
-              "status": "keep"
-            }
+              lhs: "原数",
+              rhs: "14",
+              status: "keep",
+            },
           ],
-          "caption": "位值原理分析"
+          caption: "位值原理分析",
         },
         {
-          "kind": "result-badges",
-          "items": [
+          kind: "result-badges",
+          items: [
             {
-              "icon": "🔢",
-              "count": 14,
-              "label": "原数"
-            }
+              icon: "🔢",
+              count: 14,
+              label: "原数",
+            },
           ],
-          "caption": "原数是 14"
-        }
-      ]
+          caption: "原数是 14",
+        },
+      ],
     },
     {
-      "key": "enumeration",
-      "label": "枚举法",
-      "steps": [
+      key: "enumeration",
+      label: "枚举法",
+      steps: [
         "分析：个位数字比十位数字大 3 的两位数有：14、25、36、47、58、69。",
         "分别计算交换后的新数与原数的差。",
         "14 → 41，差 27；25 → 52，差 27；36 → 63，差 27；47 → 74，差 27；58 → 85，差 27；69 → 96，差 27。",
-        "所有符合条件的数都满足差为 27，最小的解是 14。"
+        "所有符合条件的数都满足差为 27，最小的解是 14。",
       ],
-      "scenes": [
+      scenes: [
         {
-          "kind": "equation-list",
-          "rows": [
+          kind: "equation-list",
+          rows: [
             {
-              "lhs": "14 → 41",
-              "rhs": "差 27"
+              lhs: "14 → 41",
+              rhs: "差 27",
             },
             {
-              "lhs": "25 → 52",
-              "rhs": "差 27"
+              lhs: "25 → 52",
+              rhs: "差 27",
             },
             {
-              "lhs": "36 → 63",
-              "rhs": "差 27"
+              lhs: "36 → 63",
+              rhs: "差 27",
             },
             {
-              "lhs": "47 → 74",
-              "rhs": "差 27"
+              lhs: "47 → 74",
+              rhs: "差 27",
             },
             {
-              "lhs": "58 → 85",
-              "rhs": "差 27"
+              lhs: "58 → 85",
+              rhs: "差 27",
             },
             {
-              "lhs": "69 → 96",
-              "rhs": "差 27"
-            }
+              lhs: "69 → 96",
+              rhs: "差 27",
+            },
           ],
-          "caption": "枚举验证"
-        }
-      ]
-    }
+          caption: "枚举验证",
+        },
+      ],
+    },
   ],
-  "variant": {
-    "question": "一个两位数，个位数字比十位数字大 2。如果把个位数字和十位数字交换位置，得到的新数比原数大 18。求原数。",
-    "fields": [
+  variant: {
+    question:
+      "一个两位数，个位数字比十位数字大 2。如果把个位数字和十位数字交换位置，得到的新数比原数大 18。求原数。",
+    fields: [
       {
-        "key": "number",
-        "label": "原数"
-      }
+        key: "number",
+        label: "原数",
+      },
     ],
-    "answer": {
-      "number": 13
+    answer: {
+      number: 13,
     },
-    "hint": "设十位为 a，个位为 a+2，则 9 × 2 = 18，符合题意。"
+    hint: "设十位为 a，个位为 a+2，则 9 × 2 = 18，符合题意。",
   },
-  "knowledgePoints": [
-    {
-      "slug": "place-value",
-      "name": "位值原理",
-      "summary": "一个 n 位数 = 各位数字 × 其位权之和；遇到“数字交换”或“数字约束”的题，必须从位值写起。",
-    },
-  ],
-  "tags": [
-    "位值原理",
-    "数字推理"
-  ]
+  tags: ["位值原理"],
 } satisfies ProblemData;

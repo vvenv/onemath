@@ -212,23 +212,6 @@ export default {
     },
     "hint": "再试一次，检查总辆数和总轮子数。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "drawing-method",
-      "name": "画图法",
-      "summary": "把抽象数量关系画成圆圈、线段、条形，让“多/少/倍”一眼可见。",
-    },
-    {
-      "slug": "hypothesis-method",
-      "name": "假设法",
-      "summary": "先假设一种极端情况，再按差额回退，把两类未知数拆成一次关系。",
-    },
-    {
-      "slug": "equation-method",
-      "name": "方程法",
-      "summary": "用字母表示未知量，按题意列等式，把推理交给代数运算。",
-    },
-  ],
   "tags": [
     "画图法",
     "假设法",

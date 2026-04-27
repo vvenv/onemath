@@ -132,18 +132,6 @@ export default {
     },
     "hint": "用 1+2+…+9 = 45 除以 3 行即得幻和；再用过中心 4 条直线总和 = 4S = 45+3·中心，反推中心。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "accumulation-method",
-      "name": "累加法",
-      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
-    },
-    {
-      "slug": "center-number-method",
-      "name": "中心数法",
-      "summary": "三阶幻方的中心数 = 幻和 ÷ 3 = 所有数字平均值。",
-    },
-  ],
   "tags": [
     "累加法",
     "中心数法"

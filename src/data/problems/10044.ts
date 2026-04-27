@@ -100,13 +100,6 @@ export default {
     },
     "hint": "先找满足除以 3 余 2 且除以 7 余 2 的数（即除以 21 余 2），再从中找除以 5 余 3 的。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "congruence",
-      "name": "同余",
-      "summary": "两个数除以 m 余数相同，记作 a ≡ b (mod m)。余数守加、守减、守乘——整除问题的万能语言。",
-    },
-  ],
   "tags": [
     "同余"
   ]

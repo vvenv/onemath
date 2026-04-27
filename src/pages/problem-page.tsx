@@ -1,6 +1,6 @@
 import { Navigate, useParams, type MetaFunction } from "react-router";
 
-import { KnowledgePoints } from "@/components/knowledge-points";
+import { Methods } from "@/components/methods";
 import { PracticeCard } from "@/components/practice-card";
 import { ProblemHeader } from "@/components/problem-header";
 import { QuestionCard } from "@/components/question-card";
@@ -83,10 +83,7 @@ export default function ProblemPage() {
         key={`solutions-${problem.id}`}
         methods={problem.solutions}
       />
-      <KnowledgePoints
-        key={`knowledge-${problem.id}`}
-        points={problem.knowledgePoints}
-      />
+      <Methods key={`methods-${problem.id}`} tags={problem.tags} />
       <section className="flex flex-col gap-2">
         <h2 className="font-semibold tracking-tight text-foreground">练一练</h2>
         <PracticeCard

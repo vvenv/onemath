@@ -121,13 +121,6 @@ export default {
     },
     "hint": "最不利：每种颜色先各摸2个（共8个），第9个必然使某种颜色达到3个。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "worst-case-principle",
-      "name": "最不利原则",
-      "summary": "考虑“最差的情况”：要保证某事件发生，必须先跨过最差那道坎。常与抽屉原理联用。",
-    },
-  ],
   "tags": [
     "最不利原则"
   ]

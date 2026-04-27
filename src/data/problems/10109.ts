@@ -189,23 +189,6 @@ export default {
     },
     "hint": "第 1 行唯一升序 1 2 3；第 2 行唯一降序 3 2 1。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "enumeration",
-      "name": "枚举法",
-      "summary": "按某个顺序把所有可能性“走一遍”，保证不重不漏。",
-    },
-    {
-      "slug": "case-analysis",
-      "name": "分类讨论",
-      "summary": "按关键特征把所有情况拆成互不重叠且覆盖全体的几类，逐类计算后相加。",
-    },
-    {
-      "slug": "exclusion-method",
-      "name": "排除法",
-      "summary": "正面情况多而杂时，先算总数，再减去“不合要求”的反面——补集思维。",
-    },
-  ],
   "tags": [
     "枚举法",
     "分类讨论",

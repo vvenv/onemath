@@ -56,11 +56,5 @@ export default {
     },
     hint: "用蓝球数量除以总球数。",
   },
-  knowledgePoints: [
-    {
-      slug: "classical-probability",
-      name: "古典概型",
-    },
-  ],
   tags: ["古典概型"],
 } satisfies ProblemData;

@@ -121,12 +121,5 @@ export default {
     },
     hint: "反向跑步时，相对速度 = 甲速 + 乙速。",
   },
-  knowledgePoints: [
-    {
-      slug: "meeting-pursuit",
-      name: "相遇追及",
-      summary: "相向而行用速度和：相遇时间 = 距离 ÷ (v₁ + v₂)；同向追及用速度差：追及时间 = 距离 ÷ (v₁ − v₂)。",
-    },
-  ],
   tags: ["相遇追及"],
 } satisfies ProblemData;

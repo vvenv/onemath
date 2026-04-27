@@ -208,13 +208,6 @@ export default {
     },
     "hint": "提示：先用 d = 2b 化简头、脚两式，再用脚式减头式消去 a。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "overall-substitution",
-      "name": "整体代换",
-      "summary": "把反复出现的一段式子（或量）当作一个整体变量 t，把复杂关系压缩成对 t 的简单方程。",
-    },
-  ],
   "tags": [
     "整体代换"
   ]

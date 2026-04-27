@@ -83,13 +83,6 @@ export default {
     },
     "hint": "从最小的质数开始尝试，30 以内的质数对有 (7,23)、(11,19)、(13,17)。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "prime-factorization",
-      "name": "质因数分解",
-      "summary": "每个合数都能唯一写成质数的乘积；求约数个数、公约数、最小公倍数的底层语言。",
-    },
-  ],
   "tags": [
     "质因数分解"
   ]

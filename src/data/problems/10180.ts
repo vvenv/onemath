@@ -130,12 +130,5 @@ export default {
     },
     hint: "25 ÷ 3 = 8 余 1，甲应该取 1 个，给乙留下 24 个。",
   },
-  knowledgePoints: [
-    {
-      slug: "invariant",
-      name: "不变量",
-      summary: "找一个“无论怎么操作都不变”的量，当目标状态里这个量变了，就说明不可能达成。",
-    },
-  ],
   tags: ["不变量"],
 } satisfies ProblemData;

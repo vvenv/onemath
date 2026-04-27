@@ -77,11 +77,5 @@ export default {
     },
     hint: "考虑地面最右端：要么竖着铺一块 1×1，要么横着铺一块 1×2。这和走楼梯是同一个递推关系。",
   },
-  knowledgePoints: [
-    {
-      slug: "recurrence",
-      name: "递推法",
-    },
-  ],
   tags: ["递推法"],
 } satisfies ProblemData;

@@ -2,6 +2,11 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { IncomingMessage, ServerResponse } from "node:http";
+import type {
+  McpCatalog as Catalog,
+  McpKnowledge as Knowledge,
+  McpProblem as Problem,
+} from "../src/types/mcp";
 
 // Vercel's Node.js launcher adds request/response helpers at runtime when
 // `.vc-config.json` sets `shouldAddHelpers: true`. These types model only
@@ -50,35 +55,6 @@ type JsonRpcResponse = {
   result?: unknown;
   error?: { code: number; message: string; data?: unknown };
 };
-
-type Problem = {
-  id: string;
-  title: string;
-  grade: string;
-  module: string;
-  difficulty?: string;
-  question: string;
-  tags?: string[];
-  knowledgePoints?: Array<{ slug: string; name: string; summary?: string }>;
-  solutions?: Array<{ key: string; label: string; steps: string[] }>;
-  variant?: unknown;
-};
-
-type Knowledge = {
-  slug: string;
-  name: string;
-  tag?: string;
-  category?: string;
-  summary: string;
-  intuition: string;
-  derivation: string[];
-  keyPoints?: string[];
-  examples?: unknown[];
-  pitfalls?: string[];
-  relatedSlugs?: string[];
-};
-
-type Catalog = { problems: Problem[]; knowledge: Knowledge[] };
 
 let cached: Catalog | null = null;
 function loadCatalog(): Catalog {
@@ -160,7 +136,13 @@ const searchTool = {
 function runSearch(catalog: Catalog, query: string, limit: number) {
   const needle = query.trim().toLowerCase();
   if (!needle) return [];
-  const matches: Array<{ kind: "problem" | "knowledge"; uri: string; title: string; snippet: string; score: number }> = [];
+  const matches: Array<{
+    kind: "problem" | "knowledge";
+    uri: string;
+    title: string;
+    snippet: string;
+    score: number;
+  }> = [];
 
   for (const p of catalog.problems) {
     const haystack = [
@@ -318,8 +300,7 @@ function handleRpc(msg: JsonRpcRequest): JsonRpcResponse | null {
       const text = results.length
         ? results
             .map(
-              (r) =>
-                `[${r.kind}] ${r.title}\n  uri: ${r.uri}\n  ${r.snippet}`,
+              (r) => `[${r.kind}] ${r.title}\n  uri: ${r.uri}\n  ${r.snippet}`,
             )
             .join("\n\n")
         : `No matches for "${query}".`;
@@ -337,10 +318,7 @@ function handleRpc(msg: JsonRpcRequest): JsonRpcResponse | null {
 
 function setCorsHeaders(res: VercelResponse) {
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS",
-  );
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader(
     "Access-Control-Allow-Headers",
     "Content-Type, Accept, Mcp-Session-Id, MCP-Protocol-Version, Authorization",
@@ -351,10 +329,7 @@ function setCorsHeaders(res: VercelResponse) {
   );
 }
 
-export default async function handler(
-  req: VercelRequest,
-  res: VercelResponse,
-) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   setCorsHeaders(res);
   res.setHeader("MCP-Protocol-Version", PROTOCOL_VERSION);
 
@@ -365,16 +340,14 @@ export default async function handler(
 
   if (req.method === "GET") {
     res.setHeader("Content-Type", "application/json; charset=utf-8");
-    res
-      .status(200)
-      .send(
-        JSON.stringify({
-          serverInfo: { name: SERVER_NAME, version: SERVER_VERSION },
-          protocolVersion: PROTOCOL_VERSION,
-          transport: "streamable-http",
-          hint: "POST JSON-RPC 2.0 requests to this endpoint to interact with the MCP server.",
-        }),
-      );
+    res.status(200).send(
+      JSON.stringify({
+        serverInfo: { name: SERVER_NAME, version: SERVER_VERSION },
+        protocolVersion: PROTOCOL_VERSION,
+        transport: "streamable-http",
+        hint: "POST JSON-RPC 2.0 requests to this endpoint to interact with the MCP server.",
+      }),
+    );
     return;
   }
 
@@ -397,14 +370,13 @@ export default async function handler(
     return;
   }
 
-  const isBatch = Array.isArray(body);
-  if (isBatch && body.length === 0) {
+  if (Array.isArray(body) && body.length === 0) {
     // JSON-RPC 2.0 §6: an empty batch is not a valid request.
     res.status(400).json(failure(null, -32600, "Invalid Request: empty batch"));
     return;
   }
 
-  const messages = isBatch ? body : [body];
+  const messages = Array.isArray(body) ? body : [body];
   const responses: JsonRpcResponse[] = [];
   for (const msg of messages) {
     if (!msg || typeof msg !== "object" || msg.jsonrpc !== "2.0") {
@@ -421,5 +393,7 @@ export default async function handler(
   }
 
   res.setHeader("Content-Type", "application/json; charset=utf-8");
-  res.status(200).send(JSON.stringify(Array.isArray(body) ? responses : responses[0]));
+  res
+    .status(200)
+    .send(JSON.stringify(Array.isArray(body) ? responses : responses[0]));
 }

@@ -137,18 +137,6 @@ export default {
     },
     "hint": "AB ∥ DF ⇒ △ABG ∼ △FDG，AB : DF = 10 : 2 = 5 : 1 ⇒ BG : GD = 5 : 1；△ABD = 30，△ABG = 30 × 5/6 = 25。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "similarity-model",
-      "name": "相似模型",
-      "summary": "平行线截三角形得沙漏/金字塔，对应边成比例，面积比 = 相似比的平方。",
-    },
-    {
-      "slug": "area-method",
-      "name": "面积法",
-      "summary": "以面积为“中转货币”：把要求的长度 / 比例问题转化为面积等式。",
-    },
-  ],
   "tags": [
     "相似模型",
     "面积法"

@@ -63,13 +63,6 @@ export default {
     },
     "hint": "1+2+…+19 = 190，在任一方向上 5 条直线覆盖全部 19 格，所以 S = 190/5 = 38。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "accumulation-method",
-      "name": "累加法",
-      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
-    },
-  ],
   "tags": [
     "累加法"
   ]

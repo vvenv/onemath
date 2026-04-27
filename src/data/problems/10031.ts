@@ -80,18 +80,6 @@ export default {
     },
     "hint": "蝴蝶两翼面积相等，且等于上下两三角形面积之积的平方根。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "butterfly-model",
-      "name": "蝴蝶模型",
-      "summary": "四边形两条对角线分出的四块，对角相乘相等；梯形里的面积比等于上下底平方比。",
-    },
-    {
-      "slug": "equal-area-transformation",
-      "name": "等积变形",
-      "summary": "在平行线之间平移顶点，三角形面积不变；用来“把难算的图形搬到好算的位置”。",
-    },
-  ],
   "tags": [
     "蝴蝶模型",
     "等积变形"

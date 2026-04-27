@@ -129,12 +129,5 @@ export default {
     },
     hint: "点数之和为 8 的情况有：(2,6)、(3,5)、(4,4)、(5,3)、(6,2)，共 5 种。",
   },
-  knowledgePoints: [
-    {
-      slug: "independent-events",
-      name: "独立事件",
-      summary: "两事件互不影响时，称为独立。独立事件“同时发生”的概率等于各自概率之乘积：P(A 且 B) = P(A) × P(B)。",
-    },
-  ],
   tags: ["独立事件"],
 } satisfies ProblemData;

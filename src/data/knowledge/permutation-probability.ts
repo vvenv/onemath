@@ -3,6 +3,7 @@ import type { KnowledgeEntry } from "@/types/knowledge";
 const entry: KnowledgeEntry = {
   slug: "permutation-probability",
   name: "排列概率",
+  tag: "排列概率",
   category: "general",
   summary:
     "样本空间和事件都是“排成一列 / 一圈”的排列方式时，用排列数计算 P(A) = 满足条件的排列数 ÷ 总排列数。",
@@ -37,14 +38,20 @@ const entry: KnowledgeEntry = {
         "插空法：先排 2 名女生 = 2!；女生之间和两端形成 3 个空位，3 名男生插入这 3 空 = 3!。好结果 = 2 × 6 = 12。",
         "P = 12 ÷ 120 = 1/10。",
       ],
-      takeaway: "“相邻 = 捆绑、不相邻 = 插空”，记牢这两条让排列概率题秒变填数题。",
+      takeaway:
+        "“相邻 = 捆绑、不相邻 = 插空”，记牢这两条让排列概率题秒变填数题。",
     },
   ],
   pitfalls: [
     "捆绑法别忘了乘内部 k!；插空法别忘了空位数 = 已排对象数 + 1。",
     "环形排列别用 n!，要用 (n − 1)!；同时要确认题目把镜像视为相同还是不同。",
   ],
-  relatedSlugs: ["permutation", "bundling", "insert-method", "classical-probability"],
+  relatedSlugs: [
+    "permutation",
+    "bundling",
+    "insert-method",
+    "classical-probability",
+  ],
 };
 
 export default entry;

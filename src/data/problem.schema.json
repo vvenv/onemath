@@ -43,11 +43,6 @@
       "items": { "$ref": "#/definitions/solution" }
     },
     "variant": { "$ref": "#/definitions/variant" },
-    "knowledgePoints": {
-      "description": "Optional list of related theorems / methods that warrant their own explanation page. Used by the problem page to render a dedicated 'related knowledge points' entry. If omitted, the UI falls back to deriving points from the method tag whitelist.",
-      "type": "array",
-      "items": { "$ref": "#/definitions/knowledgePoint" }
-    },
     "tags": {
       "type": "array",
       "items": { "type": "string" }
@@ -122,27 +117,6 @@
           }
         },
         "hint": { "type": "string" }
-      }
-    },
-    "knowledgePoint": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["slug", "name"],
-      "properties": {
-        "slug": {
-          "description": "URL-safe identifier for the future knowledge-point article (e.g. 'niao-tou-ding-li').",
-          "type": "string",
-          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-        },
-        "name": {
-          "description": "Human-readable name shown in the UI (e.g. '鸟头模型').",
-          "type": "string",
-          "minLength": 1
-        },
-        "summary": {
-          "description": "Optional one-line teaser shown alongside the entry.",
-          "type": "string"
-        }
       }
     },
     "practiceField": {

@@ -82,12 +82,5 @@ export default {
     },
     "hint": "长方形也有对称中心。甲先把硬币放在长方形中心，此后对乙的每一步都做中心对称的镜像，策略与圆桌情形完全相同。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "invariant",
-      "name": "不变量",
-      "summary": "找一个“无论怎么操作都不变”的量，当目标状态里这个量变了，就说明不可能达成。",
-    },
-  ],
   "tags": ["不变量"]
 } satisfies ProblemData;

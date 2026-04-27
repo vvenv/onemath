@@ -313,23 +313,6 @@ export default {
     },
     "hint": "画出时间轴，找出年龄差是解题关键。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "line-segment-diagram",
-      "name": "线段图法",
-      "summary": "用线段的长短表示数量，把“和/差/倍”翻译成一张可测量的图，复杂条件一眼可读。",
-    },
-    {
-      "slug": "equation-method",
-      "name": "方程法",
-      "summary": "用字母表示未知量，按题意列等式，把推理交给代数运算。",
-    },
-    {
-      "slug": "invariant",
-      "name": "不变量",
-      "summary": "找一个“无论怎么操作都不变”的量，当目标状态里这个量变了，就说明不可能达成。",
-    },
-  ],
   "tags": [
     "线段图法",
     "方程法",

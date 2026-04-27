@@ -148,18 +148,6 @@ export default {
     },
     "hint": "△ADC = 60 × 2/3 = 40；△ADE = 40 × 1/2 = 20；△ADM = △ADE × 1/2 = 10（M 是 DE 中点）；△ADN = 10 × 1/2 = 5（N 是 AM 中点）。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "bird-head-model",
-      "name": "鸟头模型",
-      "summary": "共角三角形面积比 = 夹该角的两邻边乘积之比；相等角或互补角都适用。",
-    },
-    {
-      "slug": "equal-area-transformation",
-      "name": "等积变形",
-      "summary": "在平行线之间平移顶点，三角形面积不变；用来“把难算的图形搬到好算的位置”。",
-    },
-  ],
   "tags": [
     "鸟头模型",
     "等积变形"

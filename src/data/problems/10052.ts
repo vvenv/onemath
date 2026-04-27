@@ -80,13 +80,6 @@ export default {
     },
     "hint": "酒精保留比例 = (40−10)(40−20) / 40² = 3/8，最终浓度 = 80% × 3/8 = 30%。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "reverse-reasoning",
-      "name": "逆向推理",
-      "summary": "从结果倒着走回起点：每一步都反着做那一步的运算。",
-    },
-  ],
   "tags": [
     "逆向推理"
   ]

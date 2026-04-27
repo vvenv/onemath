@@ -73,12 +73,5 @@ export default {
     },
     hint: "8 = 8 = 4×2 = 2×2×2，对应形式 p⁷、p³q¹、p¹q¹r¹，最小值分别为 128、24、30",
   },
-  knowledgePoints: [
-    {
-      slug: "prime-factorization",
-      name: "质因数分解",
-      summary: "每个合数都能唯一写成质数的乘积；求约数个数、公约数、最小公倍数的底层语言。",
-    },
-  ],
   tags: ["质因数分解"],
 } satisfies ProblemData;

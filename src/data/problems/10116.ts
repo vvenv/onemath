@@ -104,13 +104,6 @@ export default {
     },
     "hint": "△DEC : △ABC = (DC/BC) × (EC/AC) = (1/4) × (1/5) = 1/20。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "equal-area-transformation",
-      "name": "等积变形",
-      "summary": "在平行线之间平移顶点，三角形面积不变；用来“把难算的图形搬到好算的位置”。",
-    },
-  ],
   "tags": [
     "等积变形"
   ]

@@ -72,12 +72,5 @@ export default {
     },
     "hint": "升序 2,3,4,5,6,7，总和 = 6·2 + 5·3 + 4·4 + 3·5 + 2·6 + 1·7 = 12+15+16+15+12+7 = 70。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "time-scheduling",
-      "name": "时间统筹",
-      "summary": "在“能并行的就并行”的原则下，总时间由最长的那条串行链（关键路径）决定，而不是把所有任务时间相加。",
-    },
-  ],
   "tags": ["时间统筹"]
 } satisfies ProblemData;

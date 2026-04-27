@@ -84,17 +84,5 @@ export default {
     },
     hint: "6×6 方格被中线分成四个 3×3 象限，只有跨越中线的 2×2 子方格才满足条件。"
   },
-  knowledgePoints: [
-    {
-      slug: "case-analysis",
-      name: "分类讨论",
-      summary: "按关键特征把所有情况拆成互不重叠且覆盖全体的几类，逐类计算后相加。",
-    },
-    {
-      slug: "enumeration",
-      name: "枚举法",
-      summary: "按某个顺序把所有可能性“走一遍”，保证不重不漏。",
-    },
-  ],
   tags: ["分类讨论", "枚举法"]
 } satisfies ProblemData;

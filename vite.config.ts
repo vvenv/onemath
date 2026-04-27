@@ -23,6 +23,12 @@ const prerenderedHtmlEntries = getPrerenderPaths().map((routePath) => ({
 }));
 
 export default defineConfig({
+  define: {
+    // Frozen at build time so SSG HTML and client hydration observe the same
+    // value. Consumed by deterministic helpers (e.g. seeded shuffle for the
+    // home-page figured carousel) that must stay stable per deploy.
+    __BUILD_ID__: JSON.stringify(buildRevision),
+  },
   plugins: [
     tailwindcss(),
     silenceChromeDevtoolsProbe,

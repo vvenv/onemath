@@ -69,18 +69,6 @@ export default {
     },
     "hint": "4S = 45 + 3c，c = 5 时 S = 15；只有 c = 5 能让剩余 8 数恰分 4 对每对和 10。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "center-number-method",
-      "name": "中心数法",
-      "summary": "三阶幻方的中心数 = 幻和 ÷ 3 = 所有数字平均值。",
-    },
-    {
-      "slug": "accumulation-method",
-      "name": "累加法",
-      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
-    },
-  ],
   "tags": [
     "中心数法",
     "累加法"

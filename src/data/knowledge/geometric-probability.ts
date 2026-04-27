@@ -3,6 +3,7 @@ import type { KnowledgeEntry } from "@/types/knowledge";
 const entry: KnowledgeEntry = {
   slug: "geometric-probability",
   name: "几何概型",
+  tag: "几何概型",
   category: "general",
   summary:
     "样本空间是连续的几何区域时，事件的概率 = 有利区域的“度量” ÷ 总区域的“度量”（长度、面积或角度的比值）。",
@@ -23,10 +24,7 @@ const entry: KnowledgeEntry = {
       title: "转盘指针",
       problem:
         "一个圆形转盘平均分成 8 个相等的扇形，其中 3 个红色、5 个蓝色。转动转盘，求指针停在红色区域的概率。",
-      solution: [
-        "圆周等分 8 份，每份 45°。红色区域共 3 份。",
-        "P = 3 ÷ 8。",
-      ],
+      solution: ["圆周等分 8 份，每份 45°。红色区域共 3 份。", "P = 3 ÷ 8。"],
     },
     {
       title: "等公交",

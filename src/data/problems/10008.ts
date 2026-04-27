@@ -105,12 +105,5 @@ export default {
     },
     "hint": "试试移多补少法：第四次成绩 = 新的平均分 + (前几次与平均分的总差额)。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "drawing-method",
-      "name": "画图法",
-      "summary": "把抽象数量关系画成圆圈、线段、条形，让“多/少/倍”一眼可见。",
-    },
-  ],
   "tags": ["画图法"]
 } satisfies ProblemData;

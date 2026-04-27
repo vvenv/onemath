@@ -108,12 +108,5 @@ export default {
     },
     hint: "一副扑克牌有 52 张，其中红桃有 13 张。",
   },
-  knowledgePoints: [
-    {
-      slug: "classical-probability",
-      name: "古典概型",
-      summary: "所有基本结果机会均等且数量有限时，事件 A 的概率 = A 包含的结果数 ÷ 总结果数。",
-    },
-  ],
   tags: ["古典概型"],
 } satisfies ProblemData;

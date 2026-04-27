@@ -7,13 +7,14 @@ export default {
   grade: "六年级",
   module: "计数",
   difficulty: "进阶",
-  question: "一个圆形转盘被平均分成 8 个相等的扇形区域，其中 3 个区域是红色，5 个区域是蓝色。转动转盘，求指针停在红色区域的概率。",
+  question:
+    "一个圆形转盘被平均分成 8 个相等的扇形区域，其中 3 个区域是红色，5 个区域是蓝色。转动转盘，求指针停在红色区域的概率。",
   figures: [
     {
       svg: svg1,
       caption: "圆形转盘分成8个扇形区域",
-      alt: "转盘示意图"
-    }
+      alt: "转盘示意图",
+    },
   ],
   solutions: [
     {
@@ -37,7 +38,8 @@ export default {
     },
   ],
   variant: {
-    question: "一个圆形转盘被平均分成 10 个相等的扇形区域，其中 4 个区域是黄色，6 个区域是绿色。转动转盘，求指针停在黄色区域的概率。",
+    question:
+      "一个圆形转盘被平均分成 10 个相等的扇形区域，其中 4 个区域是黄色，6 个区域是绿色。转动转盘，求指针停在黄色区域的概率。",
     fields: [
       {
         key: "probability",
@@ -50,11 +52,5 @@ export default {
     },
     hint: "用黄色区域数除以总区域数计算概率，记得约分。",
   },
-  knowledgePoints: [
-    {
-      slug: "geometric-probability",
-      name: "几何概型",
-    },
-  ],
-  tags: [],
+  tags: ["几何概型"],
 } satisfies ProblemData;

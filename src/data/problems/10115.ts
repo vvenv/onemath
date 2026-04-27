@@ -111,18 +111,6 @@ export default {
     },
     "hint": "梯形面积 (4 + 6)·10/2 = 50；△ADE = (1/2)·4·4 = 8，△BCE = (1/2)·6·6 = 18；△DEC = 50 − 8 − 18 = 24。DF : DC = 1 : 5 ⇒ △DEF = 24/5 = 4.8。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "equal-area-transformation",
-      "name": "等积变形",
-      "summary": "在平行线之间平移顶点，三角形面积不变；用来“把难算的图形搬到好算的位置”。",
-    },
-    {
-      "slug": "area-method",
-      "name": "面积法",
-      "summary": "以面积为“中转货币”：把要求的长度 / 比例问题转化为面积等式。",
-    },
-  ],
   "tags": [
     "等积变形",
     "面积法"

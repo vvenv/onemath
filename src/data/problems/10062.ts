@@ -106,13 +106,6 @@ export default {
     },
     "hint": "隔板法：12 本之间有 11 个空隙，放 3 块隔板：C(11, 3) = 165。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "stars-and-bars",
-      "name": "隔板法",
-      "summary": "把 n 个相同的物品分给 k 个人，每人至少 1 个 → C(n−1, k−1)；可以为 0 → C(n+k−1, k−1)。",
-    },
-  ],
   "tags": [
     "隔板法"
   ]

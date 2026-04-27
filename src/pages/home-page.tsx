@@ -1,21 +1,7 @@
 import { useEffect, useMemo, useState, startTransition } from "react";
 import { Link, useSearchParams } from "react-router";
-import { ArrowRight, ChevronDown, Search, X, Filter } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Filter, RefreshCw, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  type CarouselApi,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
 import {
   Sheet,
   SheetClose,
@@ -28,7 +14,11 @@ import {
 import { SvgFigure } from "@/components/visuals/svg-figure";
 import { knowledgeEntries } from "@/data/knowledge";
 import { GRADES, MODULES, type ModuleKey } from "@/lib/modules";
-import { getFeaturedProblems, problems } from "@/lib/problems";
+import {
+  getDefaultFiguredProblem,
+  getRandomFiguredProblem,
+  problems,
+} from "@/lib/problems";
 import { TAG_WHITELIST } from "@/lib/tags";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, buildMeta } from "@/lib/seo";
 import { cn } from "@/lib/utils";
@@ -71,8 +61,6 @@ const DIFFICULTY_DOT: Record<Difficulty, string> = {
   进阶: "bg-amber-500/50",
   挑战: "bg-rose-500/50",
 };
-
-const FEATURED = getFeaturedProblems();
 
 export default function HomePage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -125,7 +113,7 @@ export default function HomePage() {
         else next.set(key, value);
         return next;
       },
-      { replace: true },
+      { replace: true, preventScrollReset: true },
     );
   };
 
@@ -145,32 +133,15 @@ export default function HomePage() {
     });
   }, [activeModule, activeGrade, activeDifficulty, activeTag]);
 
-  const moduleCounts = useMemo(() => {
-    const counts = new Map<ModuleKey, number>();
-    for (const p of problems) {
-      counts.set(p.module, (counts.get(p.module) ?? 0) + 1);
-    }
-    return counts;
-  }, []);
-
-  const grouped = useMemo(() => {
-    const map = new Map<string, ProblemData[]>();
-    for (const p of visibleProblems) {
-      const list = map.get(p.grade) ?? [];
-      list.push(p);
-      map.set(p.grade, list);
-    }
-    return map;
-  }, [visibleProblems]);
-
-  const hasFilter =
-    activeModule !== null ||
-    activeGrade !== null ||
-    activeDifficulty !== null ||
-    activeTag !== null;
+  const hasDrawerFilter =
+    activeGrade !== null || activeDifficulty !== null || activeTag !== null;
+  const hasFilter = activeModule !== null || hasDrawerFilter;
 
   const resetAll = () => {
-    setSearchParams(new URLSearchParams(), { replace: true });
+    setSearchParams(new URLSearchParams(), {
+      replace: true,
+      preventScrollReset: true,
+    });
   };
 
   return (
@@ -183,165 +154,47 @@ export default function HomePage() {
           <p className="text-muted-foreground">
             按小学奥数体系整理，每题配可视化解法与知识点讲解。
           </p>
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
-            <span className="tabular-nums">
-              已收录 {problems.length} 题 · {knowledgeEntries.length} 个知识点
-            </span>
-            <Button
-              asChild
-              variant="ghost"
-              size="sm"
-              className="h-7 gap-1 px-2 text-xs"
-            >
-              <Link to="/knowledge">
-                浏览知识点体系
-                <ArrowRight className="size-3.5" />
-              </Link>
-            </Button>
-          </div>
+          <p className="text-xs tabular-nums text-muted-foreground">
+            已收录 {problems.length} 题 · {knowledgeEntries.length} 种方法
+          </p>
         </div>
-        {FEATURED.length > 0 ? <FeaturedCarousel items={FEATURED} /> : null}
+        <FeaturedProblem />
       </section>
       <section className="flex flex-col gap-4">
-        <div className="flex flex-col gap-2">
-          <FilterRow label="模块">
-            {MODULES.map((m) => {
-              const count = moduleCounts.get(m.key) ?? 0;
-              return (
-                <FilterChip
-                  key={m.key}
-                  label={m.label}
-                  count={count}
-                  active={activeModule === m.key}
-                  disabled={count === 0}
-                  onClick={() =>
-                    setActiveModule(activeModule === m.key ? null : m.key)
-                  }
-                />
-              );
-            })}
-          </FilterRow>
-
-          <FilterRow label="年级">
-            {GRADES.map((g) => (
+        <Sheet
+          open={filterDrawerOpen}
+          onOpenChange={(open) =>
+            startTransition(() => setFilterDrawerOpen(open))
+          }
+        >
+          <div className="flex flex-wrap items-center gap-2">
+            {MODULES.map((m) => (
               <FilterChip
-                key={g.label}
-                label={g.label}
-                active={activeGrade === g.label}
+                key={m.key}
+                label={m.label}
+                active={activeModule === m.key}
                 onClick={() =>
-                  setActiveGrade(
-                    activeGrade === g.label ? null : (g.label as Grade),
-                  )
+                  setActiveModule(activeModule === m.key ? null : m.key)
                 }
               />
             ))}
-          </FilterRow>
-
-          <div className="flex items-center gap-2 pt-0.5 text-xs text-muted-foreground">
-            <Sheet
-              open={filterDrawerOpen}
-              onOpenChange={(open) =>
-                startTransition(() => setFilterDrawerOpen(open))
-              }
-            >
-              <SheetTrigger asChild>
-                <Button
-                  type="button"
-                  variant="ghost"
-                  size="sm"
-                  className="h-7 gap-1 px-2 text-xs text-muted-foreground"
-                >
-                  <Filter className="size-3.5" />
-                  更多（难度 / 方法）
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right">
-                <SheetHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
-                  <SheetTitle className="flex items-center gap-2 text-base font-semibold">
-                    <Filter className="size-4" />
-                    筛选
-                  </SheetTitle>
-                  <SheetDescription>
-                    按模块、年级、难度和方法筛选题目
-                  </SheetDescription>
-                  <SheetClose asChild>
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      size="icon-sm"
-                      aria-label="关闭"
-                    >
-                      <X className="size-4" />
-                    </Button>
-                  </SheetClose>
-                </SheetHeader>
-                <div className="space-y-4 overflow-y-auto px-4 pb-4">
-                  <FilterRow label="模块">
-                    {MODULES.map((m) => {
-                      const count = moduleCounts.get(m.key) ?? 0;
-                      return (
-                        <FilterChip
-                          key={m.key}
-                          label={m.label}
-                          count={count}
-                          active={activeModule === m.key}
-                          disabled={count === 0}
-                          onClick={() =>
-                            setActiveModule(
-                              activeModule === m.key ? null : m.key,
-                            )
-                          }
-                        />
-                      );
-                    })}
-                  </FilterRow>
-
-                  <FilterRow label="年级">
-                    {GRADES.map((g) => (
-                      <FilterChip
-                        key={g.label}
-                        label={g.label}
-                        active={activeGrade === g.label}
-                        onClick={() =>
-                          setActiveGrade(
-                            activeGrade === g.label ? null : (g.label as Grade),
-                          )
-                        }
-                      />
-                    ))}
-                  </FilterRow>
-
-                  <FilterRow label="难度">
-                    {DIFFICULTIES.map((d) => (
-                      <FilterChip
-                        key={d}
-                        label={d}
-                        dot={DIFFICULTY_DOT[d]}
-                        active={activeDifficulty === d}
-                        onClick={() =>
-                          setActiveDifficulty(activeDifficulty === d ? null : d)
-                        }
-                      />
-                    ))}
-                  </FilterRow>
-
-                  {tags.length > 0 ? (
-                    <FilterRow label="方法" twoColumn>
-                      {tags.map((t) => (
-                        <FilterChip
-                          key={t}
-                          label={t}
-                          active={activeTag === t}
-                          onClick={() =>
-                            setActiveTag(activeTag === t ? null : t)
-                          }
-                        />
-                      ))}
-                    </FilterRow>
-                  ) : null}
-                </div>
-              </SheetContent>
-            </Sheet>
+            <SheetTrigger asChild>
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="relative h-7 gap-1 rounded-full px-2.5 text-xs font-medium text-muted-foreground ring-1 ring-inset ring-border/60"
+              >
+                <Filter className="size-3.5" />
+                筛选
+                {hasDrawerFilter ? (
+                  <span
+                    aria-hidden
+                    className="absolute right-0.5 top-0.5 size-1.5 rounded-full bg-rose-500"
+                  />
+                ) : null}
+              </Button>
+            </SheetTrigger>
             {hasFilter ? (
               <Button
                 type="button"
@@ -354,7 +207,7 @@ export default function HomePage() {
                 清空
               </Button>
             ) : null}
-            <span className="ml-auto tabular-nums">
+            <span className="ml-auto text-xs tabular-nums text-muted-foreground">
               {visibleProblems.length}
               <span className="text-muted-foreground/70">
                 {" "}
@@ -362,45 +215,93 @@ export default function HomePage() {
               </span>
             </span>
           </div>
-        </div>
+          <SheetContent side="right">
+            <SheetHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
+              <SheetTitle className="flex items-center gap-2 text-base font-semibold">
+                <Filter className="size-4" />
+                筛选
+              </SheetTitle>
+              <SheetDescription>
+                按模块、年级、难度和方法筛选题目
+              </SheetDescription>
+              <SheetClose asChild>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon-sm"
+                  aria-label="关闭"
+                >
+                  <X className="size-4" />
+                </Button>
+              </SheetClose>
+            </SheetHeader>
+            <div className="space-y-4 overflow-y-auto px-4 pb-4">
+              <FilterRow label="模块">
+                {MODULES.map((m) => (
+                  <FilterChip
+                    key={m.key}
+                    label={m.label}
+                    active={activeModule === m.key}
+                    onClick={() =>
+                      setActiveModule(activeModule === m.key ? null : m.key)
+                    }
+                  />
+                ))}
+              </FilterRow>
+
+              <FilterRow label="年级">
+                {GRADES.map((g) => (
+                  <FilterChip
+                    key={g.label}
+                    label={g.label}
+                    active={activeGrade === g.label}
+                    onClick={() =>
+                      setActiveGrade(
+                        activeGrade === g.label ? null : (g.label as Grade),
+                      )
+                    }
+                  />
+                ))}
+              </FilterRow>
+
+              <FilterRow label="难度">
+                {DIFFICULTIES.map((d) => (
+                  <FilterChip
+                    key={d}
+                    label={d}
+                    dot={DIFFICULTY_DOT[d]}
+                    active={activeDifficulty === d}
+                    onClick={() =>
+                      setActiveDifficulty(activeDifficulty === d ? null : d)
+                    }
+                  />
+                ))}
+              </FilterRow>
+
+              {tags.length > 0 ? (
+                <FilterRow label="方法" twoColumn>
+                  {tags.map((t) => (
+                    <FilterChip
+                      key={t}
+                      label={t}
+                      active={activeTag === t}
+                      onClick={() => setActiveTag(activeTag === t ? null : t)}
+                    />
+                  ))}
+                </FilterRow>
+              ) : null}
+            </div>
+          </SheetContent>
+        </Sheet>
       </section>
 
-      <div className="flex flex-col gap-4">
-        {GRADES.map((grade) => {
-          const list = grouped.get(grade.label);
-          if (!list || list.length === 0) return null;
-          return (
-            <Collapsible key={grade.label} defaultOpen>
-              <CollapsibleTrigger className="group flex w-full items-center gap-3 py-2">
-                <div className="flex flex-1 items-center gap-2">
-                  <div className="flex flex-col gap-0.5">
-                    <div className="flex items-center gap-2">
-                      <h2 className="font-heading text-lg font-semibold tracking-tight">
-                        {grade.label}
-                      </h2>
-                      <Badge
-                        variant="outline"
-                        className="h-5 rounded-full px-2 text-[11px] tabular-nums"
-                      >
-                        {list.length} 题
-                      </Badge>
-                    </div>
-                    <p className="text-muted-foreground">{grade.subtitle}</p>
-                  </div>
-                </div>
-                <ChevronDown className="ml-auto size-4 shrink-0 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
-              </CollapsibleTrigger>
-              <CollapsibleContent asChild>
-                <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-                  {list.map((item) => (
-                    <ProblemRow key={item.id} problem={item} />
-                  ))}
-                </div>
-              </CollapsibleContent>
-            </Collapsible>
-          );
-        })}
-      </div>
+      {visibleProblems.length > 0 ? (
+        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+          {visibleProblems.map((item) => (
+            <ProblemRow key={item.id} problem={item} />
+          ))}
+        </div>
+      ) : null}
 
       <div>
         {visibleProblems.length === 0 ? (
@@ -454,7 +355,6 @@ function FilterRow({
 
 type FilterChipProps = {
   label: string;
-  count?: number;
   dot?: string;
   active?: boolean;
   disabled?: boolean;
@@ -463,7 +363,6 @@ type FilterChipProps = {
 
 function FilterChip({
   label,
-  count,
   dot,
   active,
   disabled,
@@ -489,104 +388,64 @@ function FilterChip({
         <span aria-hidden className={cn("size-1.5 rounded-full", dot)} />
       ) : null}
       <span>{label}</span>
-      {typeof count === "number" ? (
-        <span className="tabular-nums">{count}</span>
-      ) : null}
     </Button>
   );
 }
 
-function FeaturedCarousel({ items }: { items: ProblemData[] }) {
-  const [api, setApi] = useState<CarouselApi>();
-  const [index, setIndex] = useState(0);
+function FeaturedProblem() {
+  // Initial state is a deterministic per-deploy pick so SSR HTML is stable
+  // and hydration-safe. User explicitly reshuffles via the refresh button.
+  const [featured, setFeatured] = useState<ProblemData | undefined>(() =>
+    getDefaultFiguredProblem(),
+  );
 
-  useEffect(() => {
-    if (!api) return;
-    setIndex(api.selectedScrollSnap());
-    const onSelect = () => setIndex(api.selectedScrollSnap());
-    api.on("select", onSelect);
-    api.on("reInit", onSelect);
-    return () => {
-      api.off("select", onSelect);
-      api.off("reInit", onSelect);
-    };
-  }, [api]);
+  if (!featured) return null;
+  const fig = featured.figures?.[0];
+  if (!fig) return null;
 
-  const showArrows = items.length > 1;
+  const reshuffle = () => {
+    const next = getRandomFiguredProblem(featured.id);
+    if (next) setFeatured(next);
+  };
 
   return (
-    <Carousel
-      setApi={setApi}
-      opts={{ align: "start", loop: false }}
-      className="flex flex-col gap-3"
-    >
-      <div className="relative">
-        <CarouselContent className="-ml-3">
-          {items.map((p) => {
-            const fig = p.figures?.[0];
-            if (!fig) return null;
-            return (
-              <CarouselItem key={p.id} className="pl-3">
-                <Link
-                  to={`/p/${p.id}`}
-                  aria-label={`查看示例题：${p.title}`}
-                  className="group relative flex flex-col gap-2 overflow-hidden rounded-2xl border border-border/70 bg-card p-4 transition-all hover:border-primary/40 hover:shadow-md"
-                >
-                  <SvgFigure
-                    svg={fig.svg}
-                    alt={fig.alt}
-                    className="[&>svg]:max-w-lg"
-                  />
-                  <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
-                    <span className="truncate">
-                      <span className="font-normal text-muted-foreground/70">
-                        #{p.id}
-                      </span>{" "}
-                      <span className="text-card-foreground">{p.title}</span>
-                    </span>
-                    <span className="inline-flex shrink-0 items-center gap-1 text-muted-foreground group-hover:text-primary">
-                      看解题过程
-                      <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
-                    </span>
-                  </div>
-                </Link>
-              </CarouselItem>
-            );
-          })}
-        </CarouselContent>
-        {showArrows ? (
-          <>
-            <CarouselPrevious variant="ghost" />
-            <CarouselNext variant="ghost" />
-          </>
-        ) : null}
-      </div>
-      {items.length > 1 ? (
-        <div
-          className="flex justify-center gap-1.5"
-          role="tablist"
-          aria-label="精选题目"
-        >
-          {items.map((p, i) => (
-            <Button
-              key={p.id}
-              type="button"
-              variant="ghost"
-              role="tab"
-              aria-selected={i === index}
-              aria-label={`第 ${i + 1} / ${items.length} 张：${p.title}`}
-              onClick={() => api?.scrollTo(i)}
-              className={cn(
-                "h-1.5 rounded-full p-0 transition-all hover:bg-foreground/70",
-                i === index
-                  ? "w-6 bg-foreground"
-                  : "w-1.5 bg-border hover:bg-muted-foreground",
-              )}
-            />
-          ))}
+    <div className="relative">
+      <Button
+        type="button"
+        variant="ghost"
+        size="icon-sm"
+        onClick={reshuffle}
+        aria-label="换一道"
+        className="absolute right-2 top-2 z-10 text-muted-foreground hover:text-foreground"
+      >
+        <RefreshCw className="size-4" />
+      </Button>
+      <Link
+        to={`/p/${featured.id}`}
+        aria-label={`查看示例题：${featured.title}`}
+        className="group relative flex flex-col gap-2 overflow-hidden rounded-2xl border border-border/70 bg-card p-4 transition-all hover:border-primary/40 hover:shadow-md"
+      >
+        <div className="flex h-[440px] w-full items-center justify-center">
+          <SvgFigure
+            svg={fig.svg}
+            alt={fig.alt}
+            className="max-w-[440px] [&>svg]:max-h-[440px]"
+          />
         </div>
-      ) : null}
-    </Carousel>
+        <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+          <span className="truncate">
+            <span className="font-normal text-muted-foreground/70">
+              #{featured.id}
+            </span>{" "}
+            <span className="text-card-foreground">{featured.title}</span>
+          </span>
+          <span className="inline-flex shrink-0 items-center gap-1 text-muted-foreground group-hover:text-primary">
+            看解题过程
+            <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+          </span>
+        </div>
+      </Link>
+    </div>
   );
 }
 

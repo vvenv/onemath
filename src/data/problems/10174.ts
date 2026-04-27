@@ -113,6 +113,5 @@ export default {
     },
     hint: "每条棱长可以分成 12 ÷ 3 = 4 段，总共 4 × 4 × 4 = 64 块。",
   },
-  knowledgePoints: [],
   tags: [],
 } satisfies ProblemData;

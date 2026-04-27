@@ -86,18 +86,6 @@ export default {
     },
     "hint": "正方形面积 100；EB = FC = GD = 4。△BEF = (1/2)·4·6 = 12，△CFG = (1/2)·4·6 = 12，梯形 AEGD = (6 + 4)·10/2 = 50。△EFG = 100 − 12 − 12 − 50 = 26。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "equal-area-transformation",
-      "name": "等积变形",
-      "summary": "在平行线之间平移顶点，三角形面积不变；用来“把难算的图形搬到好算的位置”。",
-    },
-    {
-      "slug": "area-method",
-      "name": "面积法",
-      "summary": "以面积为“中转货币”：把要求的长度 / 比例问题转化为面积等式。",
-    },
-  ],
   "tags": [
     "等积变形",
     "面积法"

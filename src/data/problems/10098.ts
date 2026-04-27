@@ -62,18 +62,6 @@ export default {
     },
     "hint": "S₁ + S₂ = c + 55。若 S₁ = S₂ = S，则 2S = c + 55，c = 5 → S = 30。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "accumulation-method",
-      "name": "累加法",
-      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
-    },
-    {
-      "slug": "overall-substitution",
-      "name": "整体代换",
-      "summary": "把反复出现的一段式子（或量）当作一个整体变量 t，把复杂关系压缩成对 t 的简单方程。",
-    },
-  ],
   "tags": [
     "累加法",
     "整体代换"

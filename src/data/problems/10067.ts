@@ -126,23 +126,6 @@ export default {
     },
     "hint": "用错排递推 D_n = (n−1)(D_{n−1} + D_{n−2})：D_5 = 4 × (9 + 2) = 44。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "recurrence",
-      "name": "递推法",
-      "summary": "用“上一步怎么办”写出公式，把未知规模的问题一层层推回已知的小规模。",
-    },
-    {
-      "slug": "inclusion-exclusion",
-      "name": "容斥原理",
-      "summary": "两圈相交要减重合；三圈相交要“加单、减双、加三”。",
-    },
-    {
-      "slug": "enumeration",
-      "name": "枚举法",
-      "summary": "按某个顺序把所有可能性“走一遍”，保证不重不漏。",
-    },
-  ],
   "tags": [
     "递推法",
     "容斥原理",

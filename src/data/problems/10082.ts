@@ -77,13 +77,6 @@ export default {
     },
     "hint": "每次最多推进 2，20 倒退每次减 3 → 制胜点 20, 17, 14, 11, 8, 5, 2；先手首报到 2。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "reverse-reasoning",
-      "name": "逆向推理",
-      "summary": "从结果倒着走回起点：每一步都反着做那一步的运算。",
-    },
-  ],
   "tags": [
     "逆向推理"
   ]

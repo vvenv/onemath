@@ -106,7 +106,6 @@ async function generateCatalog(
         difficulty: q.difficulty,
         question: q.question,
         tags: q.tags,
-        knowledgePoints: q.knowledgePoints,
         solutions: (
           q.solutions as Array<Record<string, unknown>> | undefined
         )?.map((s) => ({ key: s.key, label: s.label, steps: s.steps })),

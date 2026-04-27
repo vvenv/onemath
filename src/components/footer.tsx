@@ -3,7 +3,7 @@ export function Footer() {
     <footer className="border-t border-border/40 bg-muted/30 py-6 text-center text-sm text-muted-foreground">
       <div className="mx-auto max-w-3xl px-4">
         <p className="mb-2">
-          © {new Date().getFullYear()} 一道+. 本站内容采用{" "}
+          © {new Date().getFullYear()} 一道<sup>+</sup>. 本站内容采用{" "}
           <a
             href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
             target="_blank"

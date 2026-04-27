@@ -175,12 +175,5 @@ export default {
     },
     "hint": "注意：十位不能是 0。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "enumeration",
-      "name": "枚举法",
-      "summary": "按某个顺序把所有可能性“走一遍”，保证不重不漏。",
-    },
-  ],
   "tags": ["枚举法"]
 } satisfies ProblemData;

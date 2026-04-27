@@ -130,13 +130,6 @@ export default {
     },
     "hint": "净注水效率 = 1/4 − 1/6 = 1/12。需要注满的部分是 3/4。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "correspondence",
-      "name": "对应思想",
-      "summary": "盈亏 / 归一 / 分配等题里，把“每份多少”与“份数”一对一挂钩，让两组条件作差或作比。",
-    },
-  ],
   "tags": [
     "对应思想"
   ]

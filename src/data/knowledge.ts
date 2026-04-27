@@ -35,8 +35,8 @@ export function getKnowledgeByTag(tag: string | undefined) {
 }
 
 /**
- * Resolve a knowledge entry from either an explicit slug (as declared on
- * a problem's `knowledgePoints[].slug`) or a raw method tag name.
+ * Resolve a knowledge entry from either an explicit slug or a method tag
+ * (as declared on a problem's `tags`).
  */
 export function resolveKnowledge(
   key: { slug?: string; tag?: string; name?: string } | string,

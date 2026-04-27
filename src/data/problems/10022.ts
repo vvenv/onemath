@@ -256,12 +256,5 @@ export default {
     },
     "hint": "找出哪两个人说的话是互斥的（甲和丙）。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "case-analysis",
-      "name": "分类讨论",
-      "summary": "按关键特征把所有情况拆成互不重叠且覆盖全体的几类，逐类计算后相加。",
-    },
-  ],
   "tags": ["分类讨论"]
 } satisfies ProblemData;

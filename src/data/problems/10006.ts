@@ -153,23 +153,6 @@ export default {
     },
     "hint": "先找出所有可能的整数长度（L=3, L=4, L=5...），然后按方向向量 (dx, dy) 分类计算。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "case-analysis",
-      "name": "分类讨论",
-      "summary": "按关键特征把所有情况拆成互不重叠且覆盖全体的几类，逐类计算后相加。",
-    },
-    {
-      "slug": "enumeration",
-      "name": "枚举法",
-      "summary": "按某个顺序把所有可能性“走一遍”，保证不重不漏。",
-    },
-    {
-      "slug": "pythagorean-theorem",
-      "name": "勾股定理",
-      "summary": "直角三角形两直角边平方之和 = 斜边平方：a² + b² = c²。",
-    },
-  ],
   "tags": [
     "分类讨论",
     "枚举法",

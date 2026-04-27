@@ -114,18 +114,6 @@ export default {
     },
     "hint": "互补型鸟头：△ADE / △ABC = (1/3)·(2/3) = 2/9。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "bird-head-model",
-      "name": "鸟头模型",
-      "summary": "共角三角形面积比 = 夹该角的两邻边乘积之比；相等角或互补角都适用。",
-    },
-    {
-      "slug": "area-method",
-      "name": "面积法",
-      "summary": "以面积为“中转货币”：把要求的长度 / 比例问题转化为面积等式。",
-    },
-  ],
   "tags": [
     "鸟头模型",
     "面积法"

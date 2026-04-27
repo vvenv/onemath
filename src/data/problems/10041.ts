@@ -98,13 +98,6 @@ export default {
     },
     "hint": "被 2 整除：B 为偶数。被 3 整除：数字和是 3 的倍数。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "divisibility",
-      "name": "整除特征",
-      "summary": "常见小因数的整除规律：看尾数、看数字和、看奇偶位差——秒判能否整除。",
-    },
-  ],
   "tags": [
     "整除特征"
   ]

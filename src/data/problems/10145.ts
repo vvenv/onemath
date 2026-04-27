@@ -68,11 +68,5 @@ export default {
     },
     hint: "枚举所有可能结果：(正,正)、(正,反)、(反,正)、(反,反)，其中恰好一次正面的有2种。",
   },
-  knowledgePoints: [
-    {
-      slug: "independent-events",
-      name: "独立事件",
-    },
-  ],
   tags: ["独立事件", "乘法原理"],
 } satisfies ProblemData;

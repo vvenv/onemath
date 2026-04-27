@@ -74,11 +74,5 @@ export default {
     },
     hint: "同色球有两种情况：两次都蓝，或两次都黄。分别计算后相加。",
   },
-  knowledgePoints: [
-    {
-      slug: "conditional-probability",
-      name: "条件概率",
-    },
-  ],
   tags: ["条件概率", "对立事件"],
 } satisfies ProblemData;

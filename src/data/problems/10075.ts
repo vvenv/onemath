@@ -110,12 +110,5 @@ export default {
     },
     "hint": "设 A→甲 = x，则 A→乙 = 20−x，B→甲 = 25−x，B→乙 = 5+x，x ∈ [0,20]。费用 = 6x + 5(20−x) + 4(25−x) + 7(5+x) = (6−5−4+7)x + 235 = 4x + 235，x 越小越好，x = 0：A→乙 20，B→甲 25，B→乙 5，费用 = 0 + 100 + 100 + 35 = 235。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "equation-method",
-      "name": "方程法",
-      "summary": "用字母表示未知量，按题意列等式，把推理交给代数运算。",
-    },
-  ],
   "tags": ["调运选址", "方程法"]
 } satisfies ProblemData;

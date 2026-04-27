@@ -107,18 +107,6 @@ export default {
     },
     "hint": "卡片数 N 满足 N−2 是 3, 5, 7 的公倍数。[3,5,7]=105，所以 N=105+2=107。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "congruence",
-      "name": "同余",
-      "summary": "两个数除以 m 余数相同，记作 a ≡ b (mod m)。余数守加、守减、守乘——整除问题的万能语言。",
-    },
-    {
-      "slug": "enumeration",
-      "name": "枚举法",
-      "summary": "按某个顺序把所有可能性“走一遍”，保证不重不漏。",
-    },
-  ],
   "tags": [
     "同余",
     "枚举法"

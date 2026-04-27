@@ -120,18 +120,6 @@ export default {
     },
     "hint": "25 × 4 = 100，试着把 48 拆成 4 × 12。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "rounding",
-      "name": "凑整法",
-      "summary": "把数配成 10、100、1000 的整数倍，借助分配律/结合律让算式秒算。",
-    },
-    {
-      "slug": "distributive-law",
-      "name": "乘法分配律",
-      "summary": "(a + b) × c = a × c + b × c；正反两用，是速算与巧算的主力工具。",
-    },
-  ],
   "tags": [
     "凑整法",
     "乘法分配律"

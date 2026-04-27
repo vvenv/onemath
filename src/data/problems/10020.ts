@@ -154,13 +154,6 @@ export default {
     },
     "hint": "被 2 和 5 整除意味着 B 只能是 0。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "divisibility",
-      "name": "整除特征",
-      "summary": "常见小因数的整除规律：看尾数、看数字和、看奇偶位差——秒判能否整除。",
-    },
-  ],
   "tags": [
     "整除特征"
   ]

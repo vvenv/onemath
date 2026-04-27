@@ -158,7 +158,7 @@
 ### 3.5 方法手册（相关知识点讲解）
 
 - **位置**：题目解析模块之后、练习模块之前，以「知识点」小节呈现
-- **内容来源**：优先读取题目中的可选字段 `knowledgePoints: [{ slug, name, summary? }]`；若未显式声明，则从 `tags` 中按白名单自动派生
+- **内容来源**：从题目 `tags` 中逐个按白名单查找对应的 `KnowledgeEntry`（通过知识页的 `tag` 字段匹配），命中则生成跳转条目
 - **入口形态**：
   - **已收录** 的方法：条目直接跳转到 `/k/:slug` 手册页
   - **未收录** 的方法：保留可展开的占位条目，展示“讲解内容正在整理中”文案，继续作为需求信号探针
@@ -225,7 +225,6 @@ export default {
     answer: { car: 15, motorcycle: 13 },
     hint: "提示：先假设全是摩托车…",
   },
-  knowledgePoints: [{ slug: "hypothesis-method", name: "假设法" }],
   tags: ["假设法", "方程法"],
 };
 ```
@@ -284,7 +283,7 @@ ProblemPage
 ├── ProblemHeader       返回、题号、标题、年级/模块 Badge、方法标签、随机一题
 ├── QuestionCard        题干 + 可选 SVG 图示
 ├── SolutionTabs        多解法图文解析（全部默认开放，Scene + 文字步骤）
-├── KnowledgePoints     已收录方法跳转手册；未收录方法保留占位
+├── Methods             按 `tags` 生成方法手册跳转条目
 ├── PracticeCard        举一反三练习（结构化输入 + 正误 + hint）
 └── RelatedProblems     基于标签 / 模块 / 年级打分的推荐
 ```

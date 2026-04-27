@@ -113,12 +113,5 @@ export default {
     },
     hint: "其他 5 个篮子各放 2 个苹果，共 10 个，剩下 20 个放入目标篮子。",
   },
-  knowledgePoints: [
-    {
-      slug: "extremal-principle",
-      name: "极端原理",
-      summary: "把目标量推到极端：要让一个量取最大，就让其它量取最小；要让一个量取最小，就让其它量取最大。",
-    },
-  ],
   tags: ["极端原理"],
 } satisfies ProblemData;

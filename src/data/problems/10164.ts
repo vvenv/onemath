@@ -100,12 +100,5 @@ export default {
     },
     hint: "份数 = gcd(60, 90, 120) = 30",
   },
-  knowledgePoints: [
-    {
-      slug: "gcd",
-      name: "最大公约数",
-      summary: "几个整数公有的约数中最大的那个。求法：质因数分解取“共有质因数的最小指数之积”，或用短除法。",
-    },
-  ],
   tags: ["最大公约数"],
 } satisfies ProblemData;

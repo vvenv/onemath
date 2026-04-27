@@ -101,12 +101,5 @@ export default {
     },
     "hint": "仍用“慢人结伴”：1+2 过→1 回→6+8 过→2 回→1+2 过 = 2+1+8+2+2 = 15。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "time-scheduling",
-      "name": "时间统筹",
-      "summary": "在“能并行的就并行”的原则下，总时间由最长的那条串行链（关键路径）决定，而不是把所有任务时间相加。",
-    },
-  ],
   "tags": ["时间统筹"]
 } satisfies ProblemData;

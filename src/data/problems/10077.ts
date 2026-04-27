@@ -85,12 +85,5 @@ export default {
     },
     "hint": "一圈 4+12+4+12 = 32 min，6 辆车节拍 = 32 ÷ 6 ≈ 5.33 min/车。装卸均 4 min，小于节拍，A、B 各 1 人即可，共 2 人。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "transportation-siting",
-      "name": "调运选址",
-      "summary": "一维货量固定时，最优集合点在“累计货量过半”那一点（加权中位数），最小化总运费 ∑ q_i × |x_i − x|。",
-    },
-  ],
   "tags": ["调运选址"]
 } satisfies ProblemData;

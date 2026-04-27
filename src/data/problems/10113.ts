@@ -147,13 +147,6 @@ export default {
     },
     "hint": "把四次取中点理解为面积连乘 1/2，也可一步步用等积变形推出。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "equal-area-transformation",
-      "name": "等积变形",
-      "summary": "在平行线之间平移顶点，三角形面积不变；用来“把难算的图形搬到好算的位置”。",
-    },
-  ],
   "tags": [
     "等积变形"
   ]

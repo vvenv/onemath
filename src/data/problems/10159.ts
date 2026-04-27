@@ -145,12 +145,5 @@ export default {
     },
     hint: "重心性质保证 AG:GD = BG:GE，比例值不影响最终结果。",
   },
-  knowledgePoints: [
-    {
-      slug: "pythagorean-theorem",
-      name: "勾股定理",
-      summary: "直角三角形两直角边平方之和 = 斜边平方：a² + b² = c²。",
-    },
-  ],
   tags: ["勾股定理"],
 } satisfies ProblemData;

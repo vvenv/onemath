@@ -172,23 +172,6 @@ export default {
     },
     "hint": "两个分数都接近 1，试试用 1 减去每个分数，比较差值"
   },
-  "knowledgePoints": [
-    {
-      "slug": "subtraction-method",
-      "name": "作差法",
-      "summary": "把两组含有相同未知量的式子相减，让公共部分自动消去，直接得到差值或比例关系。",
-    },
-    {
-      "slug": "reciprocal-method",
-      "name": "倒数法",
-      "summary": "比较真分数大小或处理“工作效率/速度”问题时，把分数倒过来：a < b ⇔ 1/a > 1/b（同号）。",
-    },
-    {
-      "slug": "fraction-comparison",
-      "name": "分数比较",
-      "summary": "同分子比分母（小者大）；同分母比分子（大者大）；都不同则交叉相乘 ad ↔ bc，或与 1/2、1 比距离。",
-    },
-  ],
   "tags": [
     "作差法",
     "倒数法",

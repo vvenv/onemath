@@ -122,12 +122,5 @@ export default {
     },
     hint: "9 张饼可以分成 3 组，每组 3 张用交替烙法，每组需要 6 分钟。",
   },
-  knowledgePoints: [
-    {
-      slug: "time-scheduling",
-      name: "时间统筹",
-      summary: "在“能并行的就并行”的原则下，总时间由最长的那条串行链（关键路径）决定，而不是把所有任务时间相加。",
-    },
-  ],
   tags: ["时间统筹"],
 } satisfies ProblemData;

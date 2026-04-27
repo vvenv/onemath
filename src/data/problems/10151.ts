@@ -76,11 +76,5 @@ export default {
     },
     hint: "大于 4 的点数是 5 和 6，共 2 种，概率是 2/6 = 1/3。期望值 = 10 × (1/3) + 0 × (2/3) = 10/3。",
   },
-  knowledgePoints: [
-    {
-      slug: "expected-value",
-      name: "期望值",
-    },
-  ],
   tags: ["期望值"],
 } satisfies ProblemData;

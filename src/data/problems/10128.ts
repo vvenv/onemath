@@ -106,18 +106,6 @@ export default {
     },
     "hint": "与本题同样方法：在边长 a 的正方形里 △BDG = a² / 16。代入 a = 8 得 4。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "butterfly-model",
-      "name": "蝴蝶模型",
-      "summary": "四边形两条对角线分出的四块，对角相乘相等；梯形里的面积比等于上下底平方比。",
-    },
-    {
-      "slug": "area-method",
-      "name": "面积法",
-      "summary": "以面积为“中转货币”：把要求的长度 / 比例问题转化为面积等式。",
-    },
-  ],
   "tags": [
     "蝴蝶模型",
     "面积法"

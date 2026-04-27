@@ -127,17 +127,5 @@ export default {
     },
     hint: "第二次相遇距 A 地 30 千米，说明甲行了全程 − 30 千米，即 2 × 80 − 30 = 130 千米。",
   },
-  knowledgePoints: [
-    {
-      slug: "meeting-pursuit",
-      name: "相遇追及",
-      summary: "相向而行用速度和：相遇时间 = 距离 ÷ (v₁ + v₂)；同向追及用速度差：追及时间 = 距离 ÷ (v₁ − v₂)。",
-    },
-    {
-      slug: "ratio-method",
-      name: "比例法",
-      summary: "把未知量写成比，再按比分配总量；遇到“倍”“占比”“比 a:b”都能直接用。",
-    },
-  ],
   tags: ["相遇追及", "比例法"],
 } satisfies ProblemData;

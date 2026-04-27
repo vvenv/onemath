@@ -118,13 +118,6 @@ export default {
     },
     "hint": "从6本中选4本排列：A(6,4) = 6×5×4×3 = 360。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "multiplication-principle",
-      "name": "乘法原理",
-      "summary": "一件事必须按顺序完成若干“步”且各步独立时，各步方案数相乘就是总方案。",
-    },
-  ],
   "tags": [
     "组合",
     "排列",

@@ -117,13 +117,6 @@ export default {
     },
     "hint": "指数 0 到 8 的和幻方中心为 4，幻和为 12；换回 3 的幂，中心 = 3⁴ = 81，幻积 = 3¹² = 531441。"
   },
-  "knowledgePoints": [
-    {
-      "slug": "accumulation-method",
-      "name": "累加法",
-      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
-    },
-  ],
   "tags": [
     "累加法"
   ]

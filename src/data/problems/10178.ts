@@ -130,12 +130,5 @@ export default {
     },
     hint: "从 N ≡ 3 (mod 7) 开始，N = 7k + 3，逐步求解。",
   },
-  knowledgePoints: [
-    {
-      slug: "congruence",
-      name: "同余",
-      summary: "两个数除以 m 余数相同，记作 a ≡ b (mod m)。余数守加、守减、守乘——整除问题的万能语言。",
-    },
-  ],
   tags: ["同余"],
 } satisfies ProblemData;

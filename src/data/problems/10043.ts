@@ -59,22 +59,5 @@ export default {
     },
     hint: "两数之积 = 最大公约数 × 最小公倍数",
   },
-  knowledgePoints: [
-    {
-      slug: "gcd",
-      name: "最大公约数",
-      summary: "几个整数公有的约数中最大的那个。求法：质因数分解取“共有质因数的最小指数之积”，或用短除法。",
-    },
-    {
-      slug: "lcm",
-      name: "最小公倍数",
-      summary: "几个整数公有的倍数中最小的那个。求法：质因数分解取“所有质因数的最大指数之积”，或用短除法。",
-    },
-    {
-      slug: "short-division",
-      name: "短除法",
-      summary: "用一个共同的质因数依次去除所给的数，直到商两两互质；左侧所有除数之积即 gcd，左侧除数与底部商之积即 lcm。",
-    },
-  ],
   tags: ["最大公约数", "最小公倍数", "短除法"],
 } satisfies ProblemData;
