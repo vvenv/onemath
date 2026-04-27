@@ -8,8 +8,10 @@ export type ColorScheme =
   | "high-contrast"
   | "reading"
   | "monochrome"
-  | "focus"
+  | "nord"
+  | "sunset"
   | "custom";
+
 export type ThemeMode = "light" | "dark";
 
 export interface Theme {
@@ -29,28 +31,36 @@ export const BUILT_IN_THEMES: BuiltInTheme[] = [
     name: "默认",
   },
   {
-    id: "warm",
-    name: "暖色",
+    id: "reading",
+    name: "沉浸阅读",
+  },
+  {
+    id: "sepia",
+    name: "复古纸质",
   },
   {
     id: "green",
     name: "绿色护眼",
   },
   {
-    id: "sepia",
-    name: "复古黄",
+    id: "blue-light",
+    name: "蓝光过滤",
   },
   {
-    id: "blue-light",
-    name: "蓝光护眼",
+    id: "warm",
+    name: "暖色",
   },
   {
     id: "cool",
     name: "冷色",
   },
   {
-    id: "reading",
-    name: "阅读",
+    id: "nord",
+    name: "极光",
+  },
+  {
+    id: "sunset",
+    name: "日落",
   },
   {
     id: "high-contrast",
@@ -59,10 +69,6 @@ export const BUILT_IN_THEMES: BuiltInTheme[] = [
   {
     id: "monochrome",
     name: "灰度",
-  },
-  {
-    id: "focus",
-    name: "专注",
   },
 ];
 
@@ -117,7 +123,7 @@ const applyTheme = (theme: Theme) => {
   }
 };
 
-export const themeScript = `(function(){try{var s=localStorage.getItem("theme");var t=s?JSON.parse(s):null;if(t){document.documentElement.classList.toggle("dark",t.mode==="dark");document.documentElement.setAttribute("data-color-scheme",t.colorScheme);if(t.customColors)for(var k in t.customColors)document.documentElement.style.setProperty("--custom-"+k,t.customColors[k]);}else{var d=window.matchMedia("(prefers-color-scheme: dark)").matches;if(d)document.documentElement.classList.add("dark");}}catch(e){console.error(e)}})();`;
+export const themeScript = `(function(){try{var s=localStorage.getItem("theme");var t=s?JSON.parse(s):null;if(t){document.documentElement.classList.toggle("dark",t.mode==="dark");document.documentElement.setAttribute("data-color-scheme",t.colorScheme);if(t.customColors)for(var k in t.customColors)document.documentElement.style.setProperty("--custom-"+k,t.customColors[k]);}else{var d=window.matchMedia("(prefers-color-scheme: dark)").matches;if(d)document.documentElement.classList.add("dark");}}catch{}})();`;
 
 export const getTheme = (): Theme => {
   if (typeof document === "undefined") return DEFAULT_THEME;

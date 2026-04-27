@@ -45,40 +45,48 @@ const THEME_PREVIEW_COLORS: Record<
   { light: string[]; dark: string[] }
 > = {
   default: {
-    light: ["#ffffff", "#242424", "#343434", "#f7f7f7"],
-    dark: ["#242424", "#fbfbfb", "#ebebEB", "#444444"],
+    light: ["#ffffff", "#0a0a0a", "#004981", "#f5f5f5"],
+    dark: ["#0a0a0a", "#fafafa", "#0089d5", "#262626"],
   },
   warm: {
-    light: ["#faf8f6", "#403830", "#6b5a48", "#ebe8e4"],
-    dark: ["2e2a28", "#f2ede6", "#d9cfc4", "#52504e"],
+    light: ["#fff6ea", "#2d1d14", "#004077", "#eee3d7"],
+    dark: ["#171008", "#f8ece0", "#0089d5", "#3a3128"],
   },
   sepia: {
-    light: ["#e8dcd0", "#4d4338", "#665542", "#d9cfc4"],
-    dark: ["38342f", "#ebe4dc", "#e0d6c6", "#59554e"],
+    light: ["#ffdaad", "#44250c", "#003674", "#eac6a5"],
+    dark: ["#271605", "#ffddbb", "#0081d5", "#493624"],
   },
   green: {
-    light: ["#f7f8f7", "#333333", "#5a6666", "#e5e7e5"],
-    dark: ["262726", "#f0f1f0", "#e0e2e0", "#474847"],
+    light: ["#f1f7f2", "#101911", "#004777", "#dae0da"],
+    dark: ["#080c09", "#e7ede8", "#008ad3", "#262a26"],
   },
   "blue-light": {
-    light: ["#f5f4f3", "#383635", "#6a6460", "#e0dedb"],
-    dark: ["2b2a29", "#ecebe9", "#dedbd7", "#4d4c4b"],
+    light: ["#f8f1e3", "#23190a", "#004077", "#ddd7c9"],
+    dark: ["#130f06", "#eee7d9", "#0089d5", "#322d22"],
   },
   cool: {
-    light: ["#f7f8f9", "#333339", "#595a6a", "#e5e6e9"],
-    dark: ["262729", "#f0f1f2", "#e0e1e4", "#47484a"],
+    light: ["#eff6fb", "#0f171f", "#003f79", "#d8dfe4"],
+    dark: ["#080c0f", "#e6ecf2", "#0082cf", "#252a2d"],
   },
   "high-contrast": {
-    light: ["#ffffff", "#000000", "#1a1a1a", "#f2f2f2"],
-    dark: ["#000000", "#ffffff", "#ffffff", "#191919"],
+    light: ["#ffffff", "#000000", "#001a4b", "#eeeeee"],
+    dark: ["#000000", "#ffffff", "#006dbd", "#030303"],
   },
   reading: {
-    light: ["#f0f0ed", "#47453e", "#67655e", "#dcdad5"],
-    dark: ["393835", "#ebeae6", "#e6e5df", "#434240"],
+    light: ["#eeebe4", "#2f281e", "#004475", "#d4d1ca"],
+    dark: ["#0b0905", "#e9e4dd", "#008bcd", "#26241f"],
   },
   monochrome: {
-    light: ["#fafafa", "#262626", "#404040", "#e5e5e5"],
-    dark: ["1f1f1f", "#f2f2f2", "#e6e6e6", "#3d3d3d"],
+    light: ["#f8f8f8", "#0b0b0b", "#003767", "#dedede"],
+    dark: ["#060606", "#eeeeee", "#0089d5", "#1f1f1f"],
+  },
+  nord: {
+    light: ["#edf2f8", "#121b29", "#004981", "#ced9e5"],
+    dark: ["#08121f", "#dbe6f2", "#0089d5", "#222f3c"],
+  },
+  sunset: {
+    light: ["#fff2e1", "#311b11", "#00467e", "#f4d8c5"],
+    dark: ["#211208", "#fce6d9", "#0090da", "#442d20"],
   },
   custom: {
     light: ["#ffffff", "#000000", "#000000", "#f5f5f5"],
