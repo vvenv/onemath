@@ -158,6 +158,18 @@ export default {
     },
     "hint": "第二种分法可以转化为“如果住满需要再增加多少人”，或者直接用方程试试。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "equation-method",
+      "name": "方程法",
+      "summary": "用字母表示未知量，按题意列等式，把推理交给代数运算。",
+    },
+    {
+      "slug": "correspondence",
+      "name": "对应思想",
+      "summary": "盈亏 / 归一 / 分配等题里，把“每份多少”与“份数”一对一挂钩，让两组条件作差或作比。",
+    },
+  ],
   "tags": [
     "方程法",
     "对应思想"

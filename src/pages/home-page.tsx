@@ -25,7 +25,7 @@ import { cn } from "@/lib/utils";
 import type { Grade, ProblemData } from "@/types/problem";
 import type { MetaFunction } from "react-router";
 
-const HOME_TITLE = "一道 / edao.plus - 小学数学思维训练";
+const HOME_TITLE = "一道+ / edao.plus - 小学数学思维训练";
 
 export const meta: MetaFunction = () =>
   buildMeta({
@@ -38,7 +38,7 @@ export const meta: MetaFunction = () =>
         "@context": "https://schema.org",
         "@type": "WebSite",
         name: SITE_NAME,
-        alternateName: ["一道", "edao.plus"],
+        alternateName: ["一道+", "edao.plus"],
         url: SITE_URL,
         inLanguage: "zh-CN",
         description: SITE_DESCRIPTION,
@@ -163,7 +163,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col gap-4">
-      <h1 className="sr-only">一道 / edao.plus — 小学数学思维训练题库</h1>
+      <h1 className="sr-only">一道+ / edao.plus — 小学数学思维训练题库</h1>
       <section className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <FilterRow label="模块">

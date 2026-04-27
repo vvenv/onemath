@@ -118,6 +118,13 @@ export default {
     },
     "hint": "最外层人数 = (每边人数 - 1) × 4"
   },
+  "knowledgePoints": [
+    {
+      "slug": "difference-of-squares",
+      "name": "平方差",
+      "summary": "a² − b² = (a + b)(a − b)：把平方之差立刻改写为一次乘积。",
+    },
+  ],
   "tags": [
     "平方差"
   ]

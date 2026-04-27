@@ -78,6 +78,13 @@ export default {
     },
     "hint": "枚举整数 (x,y)：x=8,y=0 时 3·8=24, 2·8=16 均不超，P=40；x=7,y=1：P=39；x=6,y=2：P=38；x=8,y=0 最大，利润 40 元。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "enumeration",
+      "name": "枚举法",
+      "summary": "按某个顺序把所有可能性“走一遍”，保证不重不漏。",
+    },
+  ],
   "tags": [
     "枚举法"
   ]

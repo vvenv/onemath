@@ -1,47 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120">
-  <g>
-    <rect
-      x="50.00"
-      y="40.00"
-      width="60.00"
-      height="40.00"
-      fill-opacity="0.12"
-      class="stroke-current fill-current"
-    />
-    <text x="71.00" y="67.00" fill="currentColor" text-anchor="middle">男</text>
-    <rect
-      x="120.00"
-      y="40.00"
-      width="60.00"
-      height="40.00"
-      fill-opacity="0.12"
-      class="stroke-current fill-current"
-    />
-    <text x="141.00" y="67.00" fill="currentColor" text-anchor="middle">男</text>
-    <rect
-      x="190.00"
-      y="40.00"
-      width="60.00"
-      height="40.00"
-      fill-opacity="0.12"
-      class="stroke-current fill-current"
-    />
-    <text x="211.00" y="67.00" fill="currentColor" text-anchor="middle">男</text>
-    <rect
-      x="260.00"
-      y="40.00"
-      width="60.00"
-      height="40.00"
-      class="fill-orange-100 stroke-orange-600"
-    />
-    <text x="281.00" y="67.00" class="fill-yellow-700" text-anchor="middle">女</text>
-    <rect
-      x="330.00"
-      y="40.00"
-      width="60.00"
-      height="40.00"
-      class="fill-orange-100 stroke-orange-600"
-    />
-    <text x="351.00" y="67.00" class="fill-yellow-700" text-anchor="middle">女</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120" font-size="14">
+  <g class="fill-current/10 stroke-current" text-anchor="middle">
+    <rect x="50" y="40" width="60" height="40" />
+    <rect x="120" y="40" width="60" height="40" />
+    <rect x="190" y="40" width="60" height="40" />
+  </g>
+  <g class="fill-amber-500/15 stroke-amber-500" text-anchor="middle">
+    <rect x="260" y="40" width="60" height="40" />
+    <rect x="330" y="40" width="60" height="40" />
+  </g>
+  <g class="fill-current" text-anchor="middle">
+    <text x="80" y="65">男</text>
+    <text x="150" y="65">男</text>
+    <text x="220" y="65">男</text>
+    <text x="290" y="65">女</text>
+    <text x="360" y="65">女</text>
   </g>
 </svg>

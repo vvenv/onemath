@@ -216,6 +216,13 @@ export default {
     },
     "hint": "分母的规律是 3×4， 4×5， 5×6， 6×7， 7×8。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "telescoping",
+      "name": "裂项",
+      "summary": "把一项拆成“相邻两项之差”，前后相消，长和瞬间折叠成头尾两项。",
+    },
+  ],
   "tags": [
     "裂项"
   ]

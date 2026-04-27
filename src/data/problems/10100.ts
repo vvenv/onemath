@@ -76,6 +76,18 @@ export default {
     },
     "hint": "3S = V + 21，V 越大 S 越大；V = 4+5+6 = 15 时 S = 12，中点分别填 1, 2, 3。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "accumulation-method",
+      "name": "累加法",
+      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
+    },
+    {
+      "slug": "comparison-method",
+      "name": "比较法",
+      "summary": "拿两条“和相等”的线作差，公共格子消掉，剩下的格子之间立刻出现一个等式。",
+    },
+  ],
   "tags": [
     "累加法",
     "比较法"

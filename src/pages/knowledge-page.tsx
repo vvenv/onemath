@@ -32,12 +32,12 @@ export const meta: MetaFunction = ({ params }) => {
   const entry = getKnowledgeBySlug(params.slug as string | undefined);
   if (!entry) {
     return buildMeta({
-      title: "知识点未找到 - 一道 / edao.plus",
+      title: "知识点未找到 - 一道+ / edao.plus",
       description: "抱歉，该知识点不存在或已被移除。",
       path: `/k/${params.slug ?? ""}`,
     });
   }
-  const title = `${entry.name} - 知识点讲解 - 一道 / edao.plus`;
+  const title = `${entry.name} - 知识点讲解 - 一道+ / edao.plus`;
   const path = `/k/${entry.slug}`;
   const keywords = [
     "小学奥数",

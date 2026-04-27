@@ -91,6 +91,18 @@ export default {
     },
     "hint": "将 98 改写为 100 − 2，102 改写为 100 + 2，利用平方差公式。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "distributive-law",
+      "name": "乘法分配律",
+      "summary": "(a + b) × c = a × c + b × c；正反两用，是速算与巧算的主力工具。",
+    },
+    {
+      "slug": "difference-of-squares",
+      "name": "平方差",
+      "summary": "a² − b² = (a + b)(a − b)：把平方之差立刻改写为一次乘积。",
+    },
+  ],
   "tags": [
     "巧算",
     "乘法分配律",

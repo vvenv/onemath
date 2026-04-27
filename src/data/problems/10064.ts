@@ -193,6 +193,13 @@ export default {
     },
     "hint": "向右 3 步，向上 3 步，共 6 步，其中选 3 步向上：C(6, 3) = 20。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "label-counting",
+      "name": "标数法",
+      "summary": "在网格 / 图的每个交点写上“从起点走到这里的路径数”，从起点逐格推到终点。",
+    },
+  ],
   "tags": [
     "标数法"
   ]

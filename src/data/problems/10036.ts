@@ -82,5 +82,12 @@ export default {
     },
     "hint": "能被2整除：50个；能被3整除：33个；能被6整除（重叠）：16个。50+33-16=67。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "inclusion-exclusion",
+      "name": "容斥原理",
+      "summary": "两圈相交要减重合；三圈相交要“加单、减双、加三”。",
+    },
+  ],
   "tags": ["容斥原理"]
 } satisfies ProblemData;

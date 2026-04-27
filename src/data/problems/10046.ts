@@ -139,5 +139,12 @@ export default {
     },
     "hint": "3月31天，4月30天，5月31天，共92天。92 ÷ 7 = 13 周余 1 天。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "periodicity",
+      "name": "周期问题",
+      "summary": "找到循环节长度 T，用 n 除以 T 的余数定位第 n 项；余数为 0 时取一个完整周期的末项。",
+    },
+  ],
   "tags": ["周期问题"]
 } satisfies ProblemData;

@@ -74,5 +74,17 @@ export default {
     },
     "hint": "由 3S = V + 21，V 取最小 1 + 2 + 3 = 6 时 S = 9，取最大 4 + 5 + 6 = 15 时 S = 12，两端均能给出合法填法。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "accumulation-method",
+      "name": "累加法",
+      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
+    },
+    {
+      "slug": "case-analysis",
+      "name": "分类讨论",
+      "summary": "按关键特征把所有情况拆成互不重叠且覆盖全体的几类，逐类计算后相加。",
+    },
+  ],
   "tags": ["累加法", "分类讨论"]
 } satisfies ProblemData;

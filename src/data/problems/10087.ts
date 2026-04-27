@@ -106,6 +106,18 @@ export default {
     },
     "hint": "幻和=15；关于中心对称的两格之和恒等于 2×中心 = 10，所以与右上角 2 对称的左下角 = 10 − 2 = 8。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "comparison-method",
+      "name": "比较法",
+      "summary": "拿两条“和相等”的线作差，公共格子消掉，剩下的格子之间立刻出现一个等式。",
+    },
+    {
+      "slug": "accumulation-method",
+      "name": "累加法",
+      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
+    },
+  ],
   "tags": [
     "比较法",
     "累加法"

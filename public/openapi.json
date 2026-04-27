@@ -1,12 +1,12 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "一道 / edao.plus 内容接口",
+    "title": "一道+ / edao.plus 内容接口",
     "version": "0.1.0",
-    "summary": "一道 / edao.plus 对外提供的题目页、知识点页与发现文档的 HTTP 接口。",
-    "description": "一道 / edao.plus 是一个面向小学奥数的静态预渲染站点。本 OpenAPI 文档描述其对外公开的 HTTP 端点——包括题目与知识点内容页，以及本服务的机器可读发现文档（api-catalog、openapi、status）。",
+    "summary": "一道+ / edao.plus 对外提供的题目页、知识点页与发现文档的 HTTP 接口。",
+    "description": "一道+ / edao.plus 是一个面向小学奥数的静态预渲染站点。本 OpenAPI 文档描述其对外公开的 HTTP 端点——包括题目与知识点内容页，以及本服务的机器可读发现文档（api-catalog、openapi、status）。",
     "contact": {
-      "name": "一道 / edao.plus",
+      "name": "一道+ / edao.plus",
       "url": "https://edao.plus/"
     }
   },

@@ -146,6 +146,18 @@ export default {
     },
     "hint": "只要 D 是 BC 中点，△ABE 就总等于 △ACE，故 F 仍是 AC 的中点。两步缩放：△ADF = 22.5 × 1/2 = 11.25；△AEF = 11.25 × 1/3 = 3.75。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "equal-area-transformation",
+      "name": "等积变形",
+      "summary": "在平行线之间平移顶点，三角形面积不变；用来“把难算的图形搬到好算的位置”。",
+    },
+    {
+      "slug": "area-method",
+      "name": "面积法",
+      "summary": "以面积为“中转货币”：把要求的长度 / 比例问题转化为面积等式。",
+    },
+  ],
   "tags": [
     "等积变形",
     "面积法"

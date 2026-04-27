@@ -146,6 +146,13 @@ export default {
     },
     "hint": "先计算项数，再使用首尾配对法。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "head-tail-pairing",
+      "name": "首尾配对",
+      "summary": "等差数列求和：头尾两两配对，每对和相同，总和 = 对数 × 配对和。",
+    },
+  ],
   "tags": [
     "首尾配对"
   ]

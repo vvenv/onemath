@@ -1,8 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
-  <g class="stroke-current fill-none">
-    <rect x="20.00" y="20.00" width="400.00" height="400.00" />
-  </g>
-  <g class="stroke-current fill-none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" class="stroke-current fill-none">
+  <rect x="20.00" y="20.00" width="400.00" height="400.00" />
+  <g class="fill-current">
     <circle cx="20.00" cy="20.00" r="12" />
     <circle cx="420.00" cy="20.00" r="12" />
     <circle cx="20.00" cy="420.00" r="12" />

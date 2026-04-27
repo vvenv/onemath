@@ -136,6 +136,13 @@ export default {
     },
     "hint": "△AOB : △COD = 16 : 36 ⇒ △AOB = 18 × 16/36 = 8；△AOD = △BOC = √(8 × 18) = 12；总 = 8+12+12+18 = 50。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "butterfly-model",
+      "name": "蝴蝶模型",
+      "summary": "四边形两条对角线分出的四块，对角相乘相等；梯形里的面积比等于上下底平方比。",
+    },
+  ],
   "tags": [
     "蝴蝶模型"
   ]

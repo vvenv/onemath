@@ -156,6 +156,18 @@ export default {
     },
     "hint": "1+2+…+16 = 136，4 行等和，各为 34；列也同理。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "accumulation-method",
+      "name": "累加法",
+      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
+    },
+    {
+      "slug": "head-tail-pairing",
+      "name": "首尾配对",
+      "summary": "等差数列求和：头尾两两配对，每对和相同，总和 = 对数 × 配对和。",
+    },
+  ],
   "tags": [
     "累加法",
     "首尾配对"

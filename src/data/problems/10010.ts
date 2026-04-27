@@ -116,6 +116,13 @@ export default {
     },
     "hint": "先算出“一辆卡车一次”的运货量。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "ratio-method",
+      "name": "比例法",
+      "summary": "把未知量写成比，再按比分配总量；遇到“倍”“占比”“比 a:b”都能直接用。",
+    },
+  ],
   "tags": [
     "比例法"
   ]

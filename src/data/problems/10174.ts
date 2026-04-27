@@ -3,116 +3,116 @@ import svg1 from "./figures/10174-1.svg?raw";
 import svg2 from "./figures/10174-2.svg?raw";
 
 export default {
-  "id": "10174",
-  "title": "立体几何·三视图",
-  "grade": "五年级",
-  "module": "几何",
-  "difficulty": "进阶",
-  "question": "一个长方体长 8 厘米、宽 6 厘米、高 4 厘米。如果把它切成棱长 2 厘米的小正方体，可以切成多少块？",
-  "figures": [
+  id: "10174",
+  title: "立体几何·三视图",
+  grade: "五年级",
+  module: "几何",
+  difficulty: "进阶",
+  question:
+    "一个长方体长 8 厘米、宽 6 厘米、高 4 厘米。如果把它切成棱长 2 厘米的小正方体，可以切成多少块？",
+  figures: [
     {
-      "svg": svg1,
-      "caption": "长方体示意图",
-      "alt": "长8cm、宽6cm、高4cm的长方体"
-    }
+      svg: svg1,
+      caption: "长方体示意图",
+      alt: "长8cm、宽6cm、高4cm的长方体",
+    },
   ],
-  "solutions": [
+  solutions: [
     {
-      "key": "volume",
-      "label": "体积法",
-      "steps": [
+      key: "volume",
+      label: "体积法",
+      steps: [
         "长方体体积 = 8 × 6 × 4 = 192 立方厘米，小正方体体积 = 2 × 2 × 2 = 8 立方厘米。",
-        "数量 = 192 ÷ 8 = 24 块。"
+        "数量 = 192 ÷ 8 = 24 块。",
       ],
-      "scenes": [
+      scenes: [
         {
-          "kind": "svg",
-          "svg": svg2,
-          "caption": "分割示意图"
+          kind: "svg",
+          svg: svg2,
+          caption: "分割示意图",
         },
         {
-          "kind": "equation-list",
-          "rows": [
+          kind: "equation-list",
+          rows: [
             {
-              "lhs": "长方体体积",
-              "rhs": "8 × 6 × 4 = 192",
-              "status": "keep"
+              lhs: "长方体体积",
+              rhs: "8 × 6 × 4 = 192",
+              status: "keep",
             },
             {
-              "lhs": "小正方体体积",
-              "rhs": "2 × 2 × 2 = 8",
-              "status": "keep"
+              lhs: "小正方体体积",
+              rhs: "2 × 2 × 2 = 8",
+              status: "keep",
             },
             {
-              "lhs": "数量",
-              "rhs": "192 ÷ 8 = 24",
-              "status": "keep"
-            }
+              lhs: "数量",
+              rhs: "192 ÷ 8 = 24",
+              status: "keep",
+            },
           ],
-          "caption": "体积计算法"
+          caption: "体积计算法",
         },
         {
-          "kind": "result-badges",
-          "items": [
+          kind: "result-badges",
+          items: [
             {
-              "icon": "🧊",
-              "count": 24,
-              "label": "小正方体块数"
-            }
+              icon: "🧊",
+              count: 24,
+              label: "小正方体块数",
+            },
           ],
-          "caption": "可以切成 24 块"
-        }
-      ]
+          caption: "可以切成 24 块",
+        },
+      ],
     },
     {
-      "key": "edge",
-      "label": "棱长分割法",
-      "steps": [
+      key: "edge",
+      label: "棱长分割法",
+      steps: [
         "沿长、宽、高分别可分 8 ÷ 2 = 4 段、6 ÷ 2 = 3 段、4 ÷ 2 = 2 段。",
-        "总数 = 4 × 3 × 2 = 24 块。"
+        "总数 = 4 × 3 × 2 = 24 块。",
       ],
-      "scenes": [
+      scenes: [
         {
-          "kind": "equation-list",
-          "rows": [
+          kind: "equation-list",
+          rows: [
             {
-              "lhs": "长边分段",
-              "rhs": "8 ÷ 2 = 4"
+              lhs: "长边分段",
+              rhs: "8 ÷ 2 = 4",
             },
             {
-              "lhs": "宽边分段",
-              "rhs": "6 ÷ 2 = 3"
+              lhs: "宽边分段",
+              rhs: "6 ÷ 2 = 3",
             },
             {
-              "lhs": "高边分段",
-              "rhs": "4 ÷ 2 = 2"
+              lhs: "高边分段",
+              rhs: "4 ÷ 2 = 2",
             },
             {
-              "lhs": "总数",
-              "rhs": "4 × 3 × 2 = 24",
-              "status": "keep"
-            }
+              lhs: "总数",
+              rhs: "4 × 3 × 2 = 24",
+              status: "keep",
+            },
           ],
-          "caption": "棱长分割法"
-        }
-      ]
-    }
-  ],
-  "variant": {
-    "question": "一个正方体棱长 12 厘米，如果把它切成棱长 3 厘米的小正方体，可以切成多少块？",
-    "fields": [
-      {
-        "key": "count",
-        "label": "小正方体块数"
-      }
-    ],
-    "answer": {
-      "count": 64
+          caption: "棱长分割法",
+        },
+      ],
     },
-    "hint": "每条棱长可以分成 12 ÷ 3 = 4 段，总共 4 × 4 × 4 = 64 块。"
+  ],
+  variant: {
+    question:
+      "一个正方体棱长 12 厘米，如果把它切成棱长 3 厘米的小正方体，可以切成多少块？",
+    fields: [
+      {
+        key: "count",
+        label: "小正方体块数",
+      },
+    ],
+    answer: {
+      count: 64,
+    },
+    hint: "每条棱长可以分成 12 ÷ 3 = 4 段，总共 4 × 4 × 4 = 64 块。",
   },
-  "tags": [
-    "立体几何",
-    "三视图"
-  ]
+  knowledgePoints: [],
+  tags: [],
 } satisfies ProblemData;

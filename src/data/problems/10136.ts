@@ -106,6 +106,18 @@ export default {
     },
     "hint": "一般结论 △BGF = 正方形面积 / 12 = 72 / 12 = 6。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "swallowtail-model",
+      "name": "燕尾模型",
+      "summary": "三角形内三线共点，分成的面积比 = 对应底边比；常用于三角形内部“枢纽点”问题。",
+    },
+    {
+      "slug": "equal-area-transformation",
+      "name": "等积变形",
+      "summary": "在平行线之间平移顶点，三角形面积不变；用来“把难算的图形搬到好算的位置”。",
+    },
+  ],
   "tags": [
     "燕尾模型",
     "等积变形"

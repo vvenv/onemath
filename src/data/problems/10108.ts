@@ -61,6 +61,18 @@ export default {
     },
     "hint": "K = 28 − 1 = 27；3S = K + 3c = 27 + 3 = 30；S = 10。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "accumulation-method",
+      "name": "累加法",
+      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
+    },
+    {
+      "slug": "center-number-method",
+      "name": "中心数法",
+      "summary": "三阶幻方的中心数 = 幻和 ÷ 3 = 所有数字平均值。",
+    },
+  ],
   "tags": [
     "累加法",
     "中心数法"

@@ -72,5 +72,12 @@ export default {
     },
     "hint": "经过乙地：2×5=10种；直达：3种。合计13种。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "additive-multiplicative",
+      "name": "加乘原理",
+      "summary": "分类相加，分步相乘。判断“分类”还是“分步”，是计数题的第一关。",
+    },
+  ],
   "tags": ["加乘原理"]
 } satisfies ProblemData;

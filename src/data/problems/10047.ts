@@ -118,5 +118,12 @@ export default {
     },
     "hint": "即 200 以内的完全平方数个数。14² = 196，15² = 225。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "perfect-square",
+      "name": "完全平方数",
+      "summary": "可以写成某个整数平方的数：1, 4, 9, 16, 25, …。等价刻画：所有质因数的指数都是偶数。",
+    },
+  ],
   "tags": ["完全平方数"]
 } satisfies ProblemData;

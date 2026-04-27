@@ -108,6 +108,18 @@ export default {
     },
     "hint": "先把总数按倍数关系分成（1+4）份。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "shares-method",
+      "name": "份数法",
+      "summary": "把未知量抽象成整数“份”，把复杂的倍数 / 分数关系简化成整数份的加减。",
+    },
+    {
+      "slug": "equation-method",
+      "name": "方程法",
+      "summary": "用字母表示未知量，按题意列等式，把推理交给代数运算。",
+    },
+  ],
   "tags": [
     "份数法",
     "方程法"

@@ -136,5 +136,12 @@ export default {
     },
     "hint": "先算出周期长度，再根据余数判断最后一人身份。计算总数时，先算整周期内的数量，再加上余数中对应的数量。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "periodicity",
+      "name": "周期问题",
+      "summary": "找到循环节长度 T，用 n 除以 T 的余数定位第 n 项；余数为 0 时取一个完整周期的末项。",
+    },
+  ],
   "tags": ["周期问题"]
 } satisfies ProblemData;

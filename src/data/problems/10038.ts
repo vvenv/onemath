@@ -146,5 +146,12 @@ export default {
     },
     "hint": "每两个点确定一条直线：C(6,2) = 15。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "addition-principle",
+      "name": "加法原理",
+      "summary": "一件事可以按并列的几“类”独立完成时，类数相加就是总方案。",
+    },
+  ],
   "tags": ["加法原理"]
 } satisfies ProblemData;

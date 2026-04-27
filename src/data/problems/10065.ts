@@ -102,6 +102,13 @@ export default {
     },
     "hint": "学生有区别即“有序分配”：C(6,2) × C(4,2) × C(2,2) = 15 × 6 × 1 = 90。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "order-elimination",
+      "name": "消序法",
+      "summary": "把“有顺序”的排列数除以“内部顺序数”，得到“无顺序”的组合数。",
+    },
+  ],
   "tags": [
     "消序法"
   ]

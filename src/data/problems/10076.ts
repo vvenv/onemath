@@ -79,5 +79,12 @@ export default {
     },
     "hint": "三段流量仍为 60、30、10 L/s；第 1 段只能粗管（80×80=6400），第 2 段中管（120×50=6000），第 3 段细管（100×20=2000）；合计 14400 元。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "transportation-siting",
+      "name": "调运选址",
+      "summary": "一维货量固定时，最优集合点在“累计货量过半”那一点（加权中位数），最小化总运费 ∑ q_i × |x_i − x|。",
+    },
+  ],
   "tags": ["调运选址"]
 } satisfies ProblemData;

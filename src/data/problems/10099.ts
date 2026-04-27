@@ -63,6 +63,18 @@ export default {
     },
     "hint": "S = (28 + 2c)/3 / 8；c 越小 S 越小，取 c = 1，S = 10/8 = 5/4。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "center-number-method",
+      "name": "中心数法",
+      "summary": "三阶幻方的中心数 = 幻和 ÷ 3 = 所有数字平均值。",
+    },
+    {
+      "slug": "accumulation-method",
+      "name": "累加法",
+      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
+    },
+  ],
   "tags": [
     "中心数法",
     "累加法"

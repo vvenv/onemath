@@ -60,5 +60,12 @@ export default {
     },
     "hint": "把切菜和取调料安排到烧水的 8 分钟里同时完成：2 + 8 + 4 = 14。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "time-scheduling",
+      "name": "时间统筹",
+      "summary": "在“能并行的就并行”的原则下，总时间由最长的那条串行链（关键路径）决定，而不是把所有任务时间相加。",
+    },
+  ],
   "tags": ["时间统筹"]
 } satisfies ProblemData;

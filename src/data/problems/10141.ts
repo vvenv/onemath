@@ -52,5 +52,17 @@ export default {
     answer: { result: 12500 },
     hint: "公因数 125 提到括号外：125 × (64 + 36) = 125 × 100。",
   },
+  knowledgePoints: [
+    {
+      slug: "distributive-law",
+      name: "乘法分配律",
+      summary: "(a + b) × c = a × c + b × c；正反两用，是速算与巧算的主力工具。",
+    },
+    {
+      slug: "rounding",
+      name: "凑整法",
+      summary: "把数配成 10、100、1000 的整数倍，借助分配律/结合律让算式秒算。",
+    },
+  ],
   tags: ["乘法分配律", "凑整法"],
 } satisfies ProblemData;

@@ -140,5 +140,12 @@ export default {
     },
     "hint": "注意是在“两侧”安装，并且“从头到尾”。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "line-segment-diagram",
+      "name": "线段图法",
+      "summary": "用线段的长短表示数量，把“和/差/倍”翻译成一张可测量的图，复杂条件一眼可读。",
+    },
+  ],
   "tags": ["线段图法"]
 } satisfies ProblemData;

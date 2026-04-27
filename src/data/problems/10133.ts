@@ -103,6 +103,18 @@ export default {
     },
     "hint": "AB : DE = 4 : 1（因为 DC = 4 DE），所以沙漏相似给 DF : DB = 1 : 5。△BDE = (24/2) × (DE/DC) = 12 × 1/4 = 3；△DEF = 3 × (DF/DB) = 3 × 1/5 = 3/5 = 0.6。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "similarity-model",
+      "name": "相似模型",
+      "summary": "平行线截三角形得沙漏/金字塔，对应边成比例，面积比 = 相似比的平方。",
+    },
+    {
+      "slug": "area-method",
+      "name": "面积法",
+      "summary": "以面积为“中转货币”：把要求的长度 / 比例问题转化为面积等式。",
+    },
+  ],
   "tags": [
     "相似模型",
     "面积法"

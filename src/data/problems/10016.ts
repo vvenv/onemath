@@ -145,6 +145,13 @@ export default {
     },
     "hint": "（盈+亏）÷ 两次分配之差 = 份数"
   },
+  "knowledgePoints": [
+    {
+      "slug": "equation-method",
+      "name": "方程法",
+      "summary": "用字母表示未知量，按题意列等式，把推理交给代数运算。",
+    },
+  ],
   "tags": [
     "方程法"
   ]

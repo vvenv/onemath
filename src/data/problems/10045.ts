@@ -109,6 +109,13 @@ export default {
     },
     "hint": "设个位为 x，则十位为 2x。原数 = 20x + x = 21x，新数 = 12x。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "equation-method",
+      "name": "方程法",
+      "summary": "用字母表示未知量，按题意列等式，把推理交给代数运算。",
+    },
+  ],
   "tags": [
     "方程法"
   ]

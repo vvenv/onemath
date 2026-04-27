@@ -1,11 +1,5 @@
 import { problems } from "@/lib/problems";
 import type { ProblemData } from "@/types/problem";
-import { countingEntries } from "./knowledge/counting";
-import { generalEntries } from "./knowledge/general";
-import { geometryEntries } from "./knowledge/geometry";
-import { magicSquareEntries } from "./knowledge/magic-square";
-import { numberCalcEntries } from "./knowledge/number-calc";
-import { wordEntries } from "./knowledge/word";
 import type { KnowledgeEntry } from "@/types/knowledge";
 
 export type {
@@ -14,14 +8,14 @@ export type {
   KnowledgeExample,
 } from "@/types/knowledge";
 
-const ENTRIES: KnowledgeEntry[] = [
-  ...wordEntries,
-  ...countingEntries,
-  ...geometryEntries,
-  ...generalEntries,
-  ...magicSquareEntries,
-  ...numberCalcEntries,
-];
+const modules = import.meta.glob<KnowledgeEntry>("./knowledge/*.ts", {
+  eager: true,
+  import: "default",
+});
+
+const ENTRIES: KnowledgeEntry[] = Object.entries(modules)
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, e]) => e);
 
 const BY_SLUG = new Map(ENTRIES.map((e) => [e.slug, e]));
 const BY_TAG = new Map(

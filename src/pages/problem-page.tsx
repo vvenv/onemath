@@ -13,12 +13,12 @@ export const meta: MetaFunction = ({ params }) => {
   const problem = getProblemById(params.id);
   if (!problem) {
     return buildMeta({
-      title: "题目未找到 - 一道 / edao.plus",
+      title: "题目未找到 - 一道+ / edao.plus",
       description: "抱歉，该题目不存在或已被移除。",
       path: `/p/${params.id ?? ""}`,
     });
   }
-  const title = `${problem.title} (#${problem.id}) - 一道 / edao.plus`;
+  const title = `${problem.title} (#${problem.id}) - 一道+ / edao.plus`;
   const snippet = problem.question.slice(0, 100);
   const truncated = problem.question.length > 100;
   const description = `${problem.grade}数学${problem.module}：${snippet}${truncated ? "..." : ""}`;
@@ -86,7 +86,6 @@ export default function ProblemPage() {
       <KnowledgePoints
         key={`knowledge-${problem.id}`}
         points={problem.knowledgePoints}
-        tags={problem.tags}
       />
       <section className="flex flex-col gap-2">
         <h2 className="font-semibold tracking-tight text-foreground">练一练</h2>

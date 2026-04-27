@@ -73,6 +73,13 @@ export default {
     },
     hint: "求6和9的最小公倍数。6 = 2 × 3，9 = 3²，LCM(6, 9) = 2 × 3² = 18。"
   },
+  knowledgePoints: [
+    {
+      slug: "periodicity",
+      name: "周期问题",
+      summary: "找到循环节长度 T，用 n 除以 T 的余数定位第 n 项；余数为 0 时取一个完整周期的末项。",
+    },
+  ],
   tags: [
     "周期问题"
   ]

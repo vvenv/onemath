@@ -184,6 +184,13 @@ export default {
     },
     hint: "年龄差永远不变，设女儿x岁，列方程求解。"
   },
+  knowledgePoints: [
+    {
+      slug: "equation-method",
+      name: "方程法",
+      summary: "用字母表示未知量，按题意列等式，把推理交给代数运算。",
+    },
+  ],
   tags: [
     "年龄差不变",
     "方程法"

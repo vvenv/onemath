@@ -5,10 +5,10 @@ import type { MetaDescriptor } from "react-router";
  * sitemap entries, and absolute og:image URLs.
  */
 export const SITE_URL = "https://edao.plus";
-export const SITE_NAME = "一道 / edao.plus";
+export const SITE_NAME = "一道+ / edao.plus";
 export const SITE_LOCALE = "zh_CN";
 export const SITE_DESCRIPTION =
-  "一道(edao.plus)是专注小学数学思维训练的在线平台，涵盖计算、几何、数论、应用题等模块，提供经典例题、分步讲解、方法手册与互动练习。";
+  "一道+(edao.plus)是专注小学数学思维训练的在线平台，涵盖计算、几何、数论、应用题等模块，提供经典例题、分步讲解、方法手册与互动练习。";
 
 /**
  * Default social preview image. Absolute URL is built in `buildMeta`.

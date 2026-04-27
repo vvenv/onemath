@@ -107,5 +107,12 @@ export default {
     },
     "hint": "打通的情况下，减少的面积是 2 个面，但增加了内部的侧面积。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "translation-method",
+      "name": "平移法",
+      "summary": "把图形的一部分沿某方向平移，拼出规则图形或抵消阴影。",
+    },
+  ],
   "tags": ["平移法"]
 } satisfies ProblemData;

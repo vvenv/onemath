@@ -143,6 +143,23 @@ export default {
     },
     "hint": "△AOD = △BOC = 6；△AOB · △COD = 6 × 6 ⇒ △COD = 9；总和 = 4+6+6+9 = 25。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "butterfly-model",
+      "name": "蝴蝶模型",
+      "summary": "四边形两条对角线分出的四块，对角相乘相等；梯形里的面积比等于上下底平方比。",
+    },
+    {
+      "slug": "similarity-model",
+      "name": "相似模型",
+      "summary": "平行线截三角形得沙漏/金字塔，对应边成比例，面积比 = 相似比的平方。",
+    },
+    {
+      "slug": "ratio-method",
+      "name": "比例法",
+      "summary": "把未知量写成比，再按比分配总量；遇到“倍”“占比”“比 a:b”都能直接用。",
+    },
+  ],
   "tags": [
     "蝴蝶模型",
     "相似模型",

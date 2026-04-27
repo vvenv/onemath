@@ -58,6 +58,6 @@ export type ProblemData = {
     answer: Record<string, VariantAnswerValue>;
     hint?: string;
   };
-  knowledgePoints?: KnowledgePoint[];
+  knowledgePoints: KnowledgePoint[];
   tags: string[];
 };

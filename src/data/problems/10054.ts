@@ -114,5 +114,12 @@ export default {
     },
     "hint": "顺水速度 = 15 + 3 = 18 km/h，逆水速度 = 15 - 3 = 12 km/h。设距离为 x，则 x/18 + x/12 = 8，解得 x = 57.6 千米。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "boat-in-stream",
+      "name": "流水行船",
+      "summary": "顺水速度 = 船速 + 水速；逆水速度 = 船速 − 水速。船速 = (顺 + 逆) ÷ 2，水速 = (顺 − 逆) ÷ 2。",
+    },
+  ],
   "tags": ["流水行船"]
 } satisfies ProblemData;

@@ -67,6 +67,18 @@ export default {
     },
     "hint": "由 4S = 91 + 3c 得 c 越小 S 越小；c ∈ {3,7,11}，取 c = 3，S = 25。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "center-number-method",
+      "name": "中心数法",
+      "summary": "三阶幻方的中心数 = 幻和 ÷ 3 = 所有数字平均值。",
+    },
+    {
+      "slug": "accumulation-method",
+      "name": "累加法",
+      "summary": "把所有行（或列、对角线）的和累加起来，用“总和的总和”反求单元格之和。",
+    },
+  ],
   "tags": [
     "中心数法",
     "累加法"

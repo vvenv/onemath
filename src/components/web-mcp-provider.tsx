@@ -178,7 +178,7 @@ export function WebMCPProvider() {
             label: s.label,
             steps: s.steps,
           })),
-          knowledgePoints: p.knowledgePoints ?? [],
+          knowledgePoints: p.knowledgePoints,
         };
       },
     });
@@ -320,7 +320,9 @@ export function WebMCPProvider() {
       async execute(input) {
         const { path } = input as { path: string };
         if (typeof path !== "string" || !path.startsWith("/")) {
-          return { error: "path must be a site-relative path starting with '/'" };
+          return {
+            error: "path must be a site-relative path starting with '/'",
+          };
         }
         navigate(path);
         return { ok: true, path };

@@ -98,6 +98,13 @@ export default {
     },
     "hint": "设保留比例 r，r² = 64%，r = 80%。每次倒出 20 克。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "recurrence",
+      "name": "递推法",
+      "summary": "用“上一步怎么办”写出公式，把未知规模的问题一层层推回已知的小规模。",
+    },
+  ],
   "tags": [
     "递推法"
   ]

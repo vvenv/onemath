@@ -226,6 +226,13 @@ export default {
     },
     "hint": "主视图最高处决定了对应列的层数，俯视图决定了底面积。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "label-counting",
+      "name": "标数法",
+      "summary": "在网格 / 图的每个交点写上“从起点走到这里的路径数”，从起点逐格推到终点。",
+    },
+  ],
   "tags": [
     "标数法"
   ]

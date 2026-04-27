@@ -109,5 +109,12 @@ export default {
     },
     hint: "可以用交叉相乘法：5 × 12 = 60，7 × 8 = 56。",
   },
-  tags: ["通分", "交叉相乘"],
+  knowledgePoints: [
+    {
+      slug: "fraction-comparison",
+      name: "分数比较",
+      summary: "同分子比分母（小者大）；同分母比分子（大者大）；都不同则交叉相乘 ad ↔ bc，或与 1/2、1 比距离。",
+    },
+  ],
+  tags: ["分数比较"],
 } satisfies ProblemData;

@@ -83,5 +83,12 @@ export default {
     },
     "hint": "第 1 组 A、C（甲≤乙），按甲升序 A→C；第 2 组 B、D（甲>乙），按乙降序 B→D。顺序 A→C→B→D：甲 0–2, 2–6, 6–12, 12–17；乙 2–7, 7–13, 13–16, 17–19，终点 19。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "time-scheduling",
+      "name": "时间统筹",
+      "summary": "在“能并行的就并行”的原则下，总时间由最长的那条串行链（关键路径）决定，而不是把所有任务时间相加。",
+    },
+  ],
   "tags": ["时间统筹"]
 } satisfies ProblemData;

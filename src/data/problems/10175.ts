@@ -112,6 +112,13 @@ export default {
     },
     "hint": "阴影面积 = 2 × (36π/6 − 36√3/4) = 12π − 18√3。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "inclusion-exclusion",
+      "name": "容斥原理",
+      "summary": "两圈相交要减重合；三圈相交要“加单、减双、加三”。",
+    },
+  ],
   "tags": [
     "圆与扇形",
     "容斥原理"

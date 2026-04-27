@@ -155,6 +155,18 @@ export default {
     },
     "hint": "注意将“空出 3 间”转化为“缺少多少人”。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "comparison-method",
+      "name": "比较法",
+      "summary": "拿两条“和相等”的线作差，公共格子消掉，剩下的格子之间立刻出现一个等式。",
+    },
+    {
+      "slug": "equation-method",
+      "name": "方程法",
+      "summary": "用字母表示未知量，按题意列等式，把推理交给代数运算。",
+    },
+  ],
   "tags": [
     "比较法",
     "方程法"

@@ -93,6 +93,18 @@ export default {
     },
     "hint": "环形排列公式：(n − 1)!，当 n = 7 时为 6! = 720。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "fixed-reference",
+      "name": "固定参照物法",
+      "summary": "环排 / 相对位置题里，固定其中一个对象消除“整体旋转”的重复计数，再把其余对象正常排列。",
+    },
+    {
+      "slug": "order-elimination",
+      "name": "消序法",
+      "summary": "把“有顺序”的排列数除以“内部顺序数”，得到“无顺序”的组合数。",
+    },
+  ],
   "tags": [
     "固定参照物法",
     "消序法"

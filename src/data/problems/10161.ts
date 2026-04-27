@@ -77,5 +77,17 @@ export default {
     },
     hint: "一位数好数：5,10（但10有重复0，不算），所以只有5。两位数从10开始枚举，数字和是5的倍数且数字不重复。"
   },
+  knowledgePoints: [
+    {
+      slug: "enumeration",
+      name: "枚举法",
+      summary: "按某个顺序把所有可能性“走一遍”，保证不重不漏。",
+    },
+    {
+      slug: "place-value",
+      name: "位值原理",
+      summary: "一个 n 位数 = 各位数字 × 其位权之和；遇到“数字交换”或“数字约束”的题，必须从位值写起。",
+    },
+  ],
   tags: ["枚举法", "位值原理"]
 } satisfies ProblemData;

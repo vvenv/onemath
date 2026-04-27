@@ -102,5 +102,12 @@ export default {
     },
     "hint": "5 张饼共 10 个面，下限 = 10 ÷ 2 × 3 = 15 分钟，存在可行排法。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "time-scheduling",
+      "name": "时间统筹",
+      "summary": "在“能并行的就并行”的原则下，总时间由最长的那条串行链（关键路径）决定，而不是把所有任务时间相加。",
+    },
+  ],
   "tags": ["时间统筹"]
 } satisfies ProblemData;

@@ -109,6 +109,13 @@ export default {
     },
     "hint": "先算 8 ※ 20 = (8 + 20)/2 = 14，再算 12 ※ 14 = (12 + 14)/2 = 13。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "multiplication-principle",
+      "name": "乘法原理",
+      "summary": "一件事必须按顺序完成若干“步”且各步独立时，各步方案数相乘就是总方案。",
+    },
+  ],
   "tags": [
     "乘法原理"
   ]

@@ -134,6 +134,13 @@ export default {
     },
     "hint": "路程差 = 800 − 500 = 300 米，时间差 = 60 − 45 = 15 秒。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "train-crossing-bridge",
+      "name": "火车过桥",
+      "summary": "火车“完全过桥”走的路程 = 桥长 + 车长；过隧道、过站台同理，关键是把“车自身的长度”补进路程里。",
+    },
+  ],
   "tags": [
     "火车过桥",
     "路程差"

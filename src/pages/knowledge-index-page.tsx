@@ -15,9 +15,9 @@ import {
 } from "@/data/knowledge";
 import { SITE_NAME, SITE_URL, buildMeta } from "@/lib/seo";
 
-const KNOWLEDGE_INDEX_TITLE = "方法手册 - 一道 / edao.plus";
+const KNOWLEDGE_INDEX_TITLE = "方法手册 - 一道+ / edao.plus";
 const KNOWLEDGE_INDEX_DESCRIPTION =
-  "一道(edao.plus) 方法手册：小学奥数常用解题方法与几何模型的直观讲解、推导与典型例题。";
+  "一道+(edao.plus) 方法手册：小学奥数常用解题方法与几何模型的直观讲解、推导与典型例题。";
 
 export const meta: MetaFunction = () =>
   buildMeta({

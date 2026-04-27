@@ -99,6 +99,13 @@ export default {
     },
     "hint": "对角乘积相等：12 × 24 = 18 × ? ⇒ ? = 16。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "butterfly-model",
+      "name": "蝴蝶模型",
+      "summary": "四边形两条对角线分出的四块，对角相乘相等；梯形里的面积比等于上下底平方比。",
+    },
+  ],
   "tags": [
     "蝴蝶模型"
   ]

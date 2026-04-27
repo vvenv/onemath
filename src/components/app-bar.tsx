@@ -17,7 +17,7 @@ export function AppBar() {
           <Logo />
           <span className="flex items-baseline gap-1.5">
             <span className="font-heading text-base font-semibold tracking-tight">
-              一道 / edao.plus
+              一道+ / edao.plus
             </span>
           </span>
         </Link>

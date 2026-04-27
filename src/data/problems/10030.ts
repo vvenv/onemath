@@ -99,6 +99,13 @@ export default {
     },
     "hint": "挖去内部图形，周长反而会增加，等于大长方形周长加上小长方形周长。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "translation-method",
+      "name": "平移法",
+      "summary": "把图形的一部分沿某方向平移，拼出规则图形或抵消阴影。",
+    },
+  ],
   "tags": [
     "平移法"
   ]

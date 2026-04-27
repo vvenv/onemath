@@ -134,5 +134,17 @@ export default {
     },
     hint: "把 24 × 26 写成 (25 − 1)(25 + 1) = 25 × 25 − 1，所以 25 × 25 比 24 × 26 多 1。",
   },
+  knowledgePoints: [
+    {
+      slug: "difference-of-squares",
+      name: "平方差",
+      summary: "a² − b² = (a + b)(a − b)：把平方之差立刻改写为一次乘积。",
+    },
+    {
+      slug: "area-method",
+      name: "面积法",
+      summary: "以面积为“中转货币”：把要求的长度 / 比例问题转化为面积等式。",
+    },
+  ],
   tags: ["平方差", "面积法"],
 } satisfies ProblemData;

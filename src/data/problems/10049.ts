@@ -182,6 +182,13 @@ export default {
     },
     "hint": "5% 和 45% 等质量混合相当于 25%，再与 20% 按 2 : 3 混合可得 22%。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "cross-multiplication",
+      "name": "十字交叉法",
+      "summary": "两种浓度 / 单价混合，求比例时按“差对交叉写”：所求比 = 对方差值 : 本方差值。",
+    },
+  ],
   "tags": [
     "十字交叉法"
   ]

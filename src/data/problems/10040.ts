@@ -124,5 +124,12 @@ export default {
     },
     "hint": "考虑翻转总次数的奇偶性。"
   },
+  "knowledgePoints": [
+    {
+      "slug": "parity",
+      "name": "奇偶性",
+      "summary": "只看奇偶，不看数值。奇 + 奇 = 偶；奇 × 偶 = 偶；不变量一旦矛盾，题目即无解。",
+    },
+  ],
   "tags": ["奇偶性"]
 } satisfies ProblemData;
