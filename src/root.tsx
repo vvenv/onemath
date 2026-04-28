@@ -1,6 +1,6 @@
-import type { ReactNode } from "react";
+import { type ReactNode, useEffect } from "react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
-import { themeScript } from "@/lib/theme";
+import { applyStoredTheme, themeScript } from "@/lib/theme";
 import { pwaUnregisterScript } from "@/lib/pwa";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -10,6 +10,13 @@ import "@/styles/globals.css";
 const isDev = import.meta.env.DEV;
 
 export function Layout({ children }: { children: ReactNode }) {
+  // Re-apply the stored theme after React hydration. The inline themeScript
+  // in <head> sets the correct class before first paint, but React's
+  // hydration reconciliation may strip attributes it doesn't control.
+  useEffect(() => {
+    applyStoredTheme();
+  }, []);
+
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <head>
