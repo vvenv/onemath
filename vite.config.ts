@@ -1,5 +1,6 @@
 import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
+import { execSync } from "node:child_process";
 import path from "node:path";
 import { defineConfig } from "vite";
 import { agentSkills } from "./vite-plugins/agent-skills";
@@ -8,7 +9,12 @@ import { sitemapPlugin } from "./vite-plugins/sitemap";
 import { silenceChromeDevtoolsProbe } from "./vite-plugins/silence-chrome-devtools-probe";
 import { vercelOutputPlugin } from "./vite-plugins/vercel-output";
 
-const buildRevision = `${Date.now()}`;
+// Use git commit hash so the value is identical across React Router's two
+// build passes (SSR + client).  `Date.now()` differed between passes,
+// causing a hydration mismatch in the featured-problem picker.
+const buildRevision =
+  process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 12) ??
+  execSync("git rev-parse --short HEAD", { encoding: "utf8" }).trim();
 const buildYear = `${new Date().getFullYear()}`;
 
 export default defineConfig({
