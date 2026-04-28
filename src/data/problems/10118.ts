@@ -44,9 +44,8 @@ export default {
               rhs: "1/6",
             },
             {
-              lhs: "△AED = 36 × 1/6",
+              lhs: "△AED = 36 × 1/6 (答案)",
               rhs: "6",
-              badge: "答案",
             },
           ],
           caption: "共角三角形的面积比 = 夹边乘积比",
@@ -86,9 +85,8 @@ export default {
               rhs: "18",
             },
             {
-              lhs: "△AED = 18 × (AE/AB)",
+              lhs: "△AED = 18 × (AE/AB) (答案)",
               rhs: "6",
-              badge: "答案",
             },
           ],
         },

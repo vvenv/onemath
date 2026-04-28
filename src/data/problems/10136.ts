@@ -37,18 +37,16 @@ export default {
               rhs: "60",
             },
             {
-              lhs: "△ABG : △ACG : △BCG",
+              lhs: "△ABG : △ACG : △BCG (双中点 ⇒ 三等分)",
               rhs: "1 : 1 : 1",
-              note: "双中点 ⇒ 三等分",
             },
             {
               lhs: "△BCG = 60 / 3",
               rhs: "20",
             },
             {
-              lhs: "△BFG = △BCG × 1/2",
+              lhs: "△BFG = △BCG × 1/2 (答案)",
               rhs: "10",
-              badge: "答案",
             },
           ],
           caption: "G 是 △ABC 的「重心型」三等分点",
@@ -84,9 +82,8 @@ export default {
               rhs: "(2s/3, 2s/3)",
             },
             {
-              lhs: "△BGF = s² / 12",
+              lhs: "△BGF = s² / 12 (验证)",
               rhs: "10",
-              badge: "验证",
             },
           ],
         },

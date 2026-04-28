@@ -41,9 +41,8 @@ export default {
               rhs: "(7.5, 6.25)",
             },
             {
-              lhs: "△BDG",
+              lhs: "△BDG (答案)",
               rhs: "6.25",
-              badge: "答案",
             },
           ],
           caption: "三次取中点，坐标一路平均即可",
@@ -83,9 +82,8 @@ export default {
               rhs: "",
             },
             {
-              lhs: "△BDG = 1/2 · 10 · 1.25",
+              lhs: "△BDG = 1/2 · 10 · 1.25 (验证)",
               rhs: "6.25",
-              badge: "验证",
             },
           ],
         },

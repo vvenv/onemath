@@ -19,10 +19,22 @@ export default {
           kind: "equation-list",
           rows: [
             { lhs: "原式", rhs: "47 × 36 + 47 × 63 + 47", status: "keep" },
-            { lhs: "补 ×1", rhs: "47 × 36 + 47 × 63 + 47 × 1", status: "keep", badge: "关键" },
-            { lhs: "提公因数", rhs: "47 × (36 + 63 + 1)", status: "keep", badge: "分配律反用" },
-            { lhs: "凑整", rhs: "47 × 100", status: "keep", badge: "36+63+1=100" },
-            { lhs: "得数", rhs: "4700", status: "keep", badge: "答案" },
+            {
+              lhs: "补 ×1 (关键)",
+              rhs: "47 × 36 + 47 × 63 + 47 × 1",
+              status: "keep",
+            },
+            {
+              lhs: "提公因数 (分配律反用)",
+              rhs: "47 × (36 + 63 + 1)",
+              status: "keep",
+            },
+            {
+              lhs: "凑整 (36+63+1=100)",
+              rhs: "47 × 100",
+              status: "keep",
+            },
+            { lhs: "得数 (答案)", rhs: "4700", status: "keep" },
           ],
           caption: "孤立的“47”其实是“47 × 1”，看穿这一点就能三项同提。",
         },
@@ -45,7 +57,11 @@ export default {
           rows: [
             { lhs: "前两项", rhs: "47 × (36 + 63) = 47 × 99", status: "keep" },
             { lhs: "展开 99", rhs: "47 × 100 − 47 = 4653", status: "keep" },
-            { lhs: "加最后一项", rhs: "4653 + 47 = 4700", status: "keep", badge: "答案" },
+            {
+              lhs: "加最后一项 (答案)",
+              rhs: "4653 + 47 = 4700",
+              status: "keep",
+            },
           ],
           caption: "分两步也行，但不如一次性凑出 36+63+1=100 干脆。",
         },

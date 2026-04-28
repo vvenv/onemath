@@ -89,14 +89,12 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "(600 + L) ÷ v",
+              lhs: "(600 + L) ÷ v (①)",
               rhs: "50",
-              badge: "①",
             },
             {
-              lhs: "(400 + L) ÷ v",
+              lhs: "(400 + L) ÷ v (②)",
               rhs: "40",
-              badge: "②",
             },
             {
               lhs: "① − ②",

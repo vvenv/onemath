@@ -37,14 +37,12 @@ export default {
               rhs: "4 / 6 = 2/3",
             },
             {
-              lhs: "AB / DF = AE / DE",
+              lhs: "AB / DF = AE / DE (沙漏相似)",
               rhs: "2/3",
-              note: "沙漏相似",
             },
             {
-              lhs: "DF = 16 × 3/2",
+              lhs: "DF = 16 × 3/2 (答案)",
               rhs: "24",
-              badge: "答案",
             },
           ],
           caption: "沙漏模型：两个对顶三角形相似，对应边成比例",

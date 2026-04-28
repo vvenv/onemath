@@ -11,7 +11,9 @@ export default {
     {
       key: "cross",
       label: "交叉相乘法",
-      steps: ["3 × 9 = 27，4 × 7 = 28，因为 27 < 28，所以 3/7 < 4/9。"],
+      steps: [
+        { text: "3 × 9 = 27，4 × 7 = 28，因为 27 < 28，所以 3/7 < 4/9。" },
+      ],
       scenes: [
         {
           kind: "equation-list",
@@ -70,7 +72,11 @@ export default {
     {
       key: "common",
       label: "通分法",
-      steps: ["3/7 = 27/63，4/9 = 28/63，因为 27/63 < 28/63，所以 3/7 < 4/9。"],
+      steps: [
+        {
+          text: "3/7 = 27/63，4/9 = 28/63，因为 27/63 < 28/63，所以 3/7 < 4/9。",
+        },
+      ],
       scenes: [
         {
           kind: "equation-list",

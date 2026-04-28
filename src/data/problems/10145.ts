@@ -20,8 +20,8 @@ export default {
         {
           kind: "equation-list",
           rows: [
-            { lhs: "第一枚正面概率", rhs: "1/2", badge: "P₁" },
-            { lhs: "第二枚正面概率", rhs: "1/2", badge: "P₂" },
+            { lhs: "第一枚正面概率 (P₁)", rhs: "1/2" },
+            { lhs: "第二枚正面概率 (P₂)", rhs: "1/2" },
             { lhs: "两次都正面", rhs: "1/2 × 1/2 = 1/4", status: "keep" },
           ],
           caption: "独立事件：P(A∩B) = P(A) × P(B)",
@@ -45,8 +45,11 @@ export default {
         {
           kind: "equation-list",
           rows: [
-            { lhs: "所有可能", rhs: "(正,正)、(正,反)、(反,正)、(反,反)", badge: "4种" },
-            { lhs: "满足条件", rhs: "(正,正)", badge: "1种" },
+            {
+              lhs: "所有可能 (4种)",
+              rhs: "(正,正)、(正,反)、(反,正)、(反,反)",
+            },
+            { lhs: "满足条件 (1种)", rhs: "(正,正)" },
             { lhs: "概率", rhs: "1 ÷ 4 = 1/4", status: "keep" },
           ],
           caption: "古典概型：枚举所有等可能结果",

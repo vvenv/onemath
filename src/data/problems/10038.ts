@@ -20,7 +20,9 @@ export default {
     {
       key: "combination-counting",
       label: "组合计数法",
-      steps: ["（1）线段数 = C(5,2) = 10 条；（2）角数 = C(5,2) = 10 个。"],
+      steps: [
+        { text: "（1）线段数 = C(5,2) = 10 条；（2）角数 = C(5,2) = 10 个。" },
+      ],
       scenes: [
         {
           kind: "number-grid",
@@ -74,9 +76,8 @@ export default {
               status: "keep",
             },
             {
-              lhs: "=",
+              lhs: "= (结果)",
               rhs: "10 条",
-              badge: "结果",
             },
           ],
           caption: "组合公式计算线段数",

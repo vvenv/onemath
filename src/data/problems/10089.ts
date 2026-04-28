@@ -38,10 +38,9 @@ export default {
               rhs: "325",
             },
             {
-              lhs: "S",
+              lhs: "S (幻和)",
               rhs: "65",
               status: "keep",
-              badge: "幻和",
             },
           ],
         },

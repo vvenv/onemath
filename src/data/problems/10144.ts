@@ -6,7 +6,8 @@ export default {
   grade: "六年级",
   module: "计数",
   difficulty: "基础",
-  question: "一个不透明的袋子里装有 5 个红球和 3 个白球，这些球除颜色外完全相同。从袋子里任意摸出 1 个球，求摸到红球的概率是多少？",
+  question:
+    "一个不透明的袋子里装有 5 个红球和 3 个白球，这些球除颜色外完全相同。从袋子里任意摸出 1 个球，求摸到红球的概率是多少？",
   solutions: [
     {
       key: "classical",
@@ -28,8 +29,8 @@ export default {
         {
           kind: "equation-list",
           rows: [
-            { lhs: "总结果数", rhs: "5 + 3 = 8", badge: "总数" },
-            { lhs: "有利结果数", rhs: "5", badge: "红球" },
+            { lhs: "总结果数 (总数)", rhs: "5 + 3 = 8" },
+            { lhs: "有利结果数 (红球)", rhs: "5" },
             { lhs: "概率", rhs: "5 ÷ 8 = 5/8", status: "keep" },
           ],
           caption: "古典概型公式：P(A) = 有利结果数 / 总结果数",
@@ -43,7 +44,8 @@ export default {
     },
   ],
   variant: {
-    question: "一个盒子里有 4 个蓝球和 6 个黄球，从中任意摸出 1 个球，求摸到蓝球的概率。",
+    question:
+      "一个盒子里有 4 个蓝球和 6 个黄球，从中任意摸出 1 个球，求摸到蓝球的概率。",
     fields: [
       {
         key: "probability",

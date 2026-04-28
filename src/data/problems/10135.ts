@@ -30,19 +30,16 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "△ABF : △ACF : △BCF",
+              lhs: "△ABF : △ACF : △BCF (燕尾)",
               rhs: "2 : 4 : 3",
-              note: "燕尾",
             },
             {
-              lhs: "△BDF : △CDF",
+              lhs: "△BDF : △CDF (BD : DC)",
               rhs: "1 : 2",
-              note: "BD : DC",
             },
             {
-              lhs: "△AEF : △CEF",
+              lhs: "△AEF : △CEF (AE : EC)",
               rhs: "2 : 3",
-              note: "AE : EC",
             },
             {
               lhs: "DFEC = △CDF + △CEF",
@@ -53,9 +50,8 @@ export default {
               rhs: "k = 5",
             },
             {
-              lhs: "△ABC = 9k",
+              lhs: "△ABC = 9k (答案)",
               rhs: "45",
-              badge: "答案",
             },
           ],
           caption: "燕尾三块 + 两条塞瓦线各自的底比，即可写出 DFEC 的比例",

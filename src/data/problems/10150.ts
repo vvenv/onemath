@@ -21,8 +21,8 @@ export default {
         {
           kind: "equation-list",
           rows: [
-            { lhs: "总排列数", rhs: "A(4,4) = 4! = 24", badge: "总数" },
-            { lhs: "捆绑后排列数", rhs: "3! × 2 = 12", badge: "相邻" },
+            { lhs: "总排列数 (总数)", rhs: "A(4,4) = 4! = 24" },
+            { lhs: "捆绑后排列数 (相邻)", rhs: "3! × 2 = 12" },
             { lhs: "A 和 B 相邻概率", rhs: "12/24 = 1/2", status: "keep" },
           ],
           caption: "捆绑法：把相邻的两人看作整体",
@@ -48,17 +48,15 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "A 在两端",
+              lhs: "A 在两端 (端点)",
               rhs: "2 种情况，B 有 1 个相邻位置",
-              badge: "端点",
             },
             {
-              lhs: "A 在中间",
+              lhs: "A 在中间 (中间)",
               rhs: "2 种情况，B 有 2 个相邻位置",
-              badge: "中间",
             },
-            { lhs: "B 相邻位置总数", rhs: "2×1 + 2×2 = 6", badge: "有利" },
-            { lhs: "B 可能位置总数", rhs: "3（除去 A 的位置）", badge: "总数" },
+            { lhs: "B 相邻位置总数 (有利)", rhs: "2×1 + 2×2 = 6" },
+            { lhs: "B 可能位置总数 (总数)", rhs: "3（除去 A 的位置）" },
             { lhs: "相邻概率", rhs: "6/12 = 1/2", status: "keep" },
           ],
           caption: "位置分析：从 A 的角度考虑 B 的可能位置",

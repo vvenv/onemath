@@ -45,9 +45,8 @@ export default {
               rhs: "6 : 25",
             },
             {
-              lhs: "△ABC = 12 × 25/6",
+              lhs: "△ABC = 12 × 25/6 (答案)",
               rhs: "50",
-              badge: "答案",
             },
           ],
           caption: "互补角的共角三角形面积比公式仍适用",
@@ -92,9 +91,8 @@ export default {
               rhs: "(6/25) · △ABC",
             },
             {
-              lhs: "△ABC = 12 × 25/6",
+              lhs: "△ABC = 12 × 25/6 (验证)",
               rhs: "50",
-              badge: "验证",
             },
           ],
         },

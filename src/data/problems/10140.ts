@@ -19,10 +19,14 @@ export default {
           kind: "equation-list",
           rows: [
             { lhs: "原式", rhs: "99 × 73", status: "keep" },
-            { lhs: "拆成 整 − 尾", rhs: "(100 − 1) × 73", status: "keep", badge: "分配律正用" },
+            {
+              lhs: "拆成 整 − 尾 (分配律正用)",
+              rhs: "(100 − 1) × 73",
+              status: "keep",
+            },
             { lhs: "展开", rhs: "100 × 73 − 1 × 73", status: "keep" },
             { lhs: "分别算", rhs: "7300 − 73", status: "keep" },
-            { lhs: "得数", rhs: "7227", status: "keep", badge: "答案" },
+            { lhs: "得数 (答案)", rhs: "7227", status: "keep" },
           ],
           caption: "把接近整百的因数拆成 (整 − 尾)，展开后两步就完成。",
         },
@@ -45,7 +49,11 @@ export default {
           rows: [
             { lhs: "99 × 3", rhs: "297", status: "keep" },
             { lhs: "99 × 70", rhs: "6930", status: "keep" },
-            { lhs: "求和", rhs: "297 + 6930 = 7227", status: "keep", badge: "答案" },
+            {
+              lhs: "求和 (答案)",
+              rhs: "297 + 6930 = 7227",
+              status: "keep",
+            },
           ],
           caption: "直接竖式也得 7227，但明显更繁。",
         },

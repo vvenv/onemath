@@ -1,130 +1,130 @@
 import type { ProblemData } from "@/types/problem";
 
 export default {
-  "id": "10019",
-  "title": "环形跑道·相遇与追及",
-  "grade": "五年级",
-  "module": "行程",
-  "difficulty": "进阶",
-  "question": "甲、乙两人在 400 米的环形跑道上练习跑步。甲每秒跑 6 米，乙每秒跑 4 米。两人同时同地反向出发，经过多少秒两人第一次相遇？如果是同向出发，经过多少秒甲第一次追上乙？",
-  "solutions": [
+  id: "10019",
+  title: "环形跑道·相遇与追及",
+  grade: "五年级",
+  module: "行程",
+  difficulty: "进阶",
+  question:
+    "甲、乙两人在 400 米的环形跑道上练习跑步。甲每秒跑 6 米，乙每秒跑 4 米。两人同时同地反向出发，经过多少秒两人第一次相遇？如果是同向出发，经过多少秒甲第一次追上乙？",
+  solutions: [
     {
-      "key": "relative",
-      "label": "相对速度法",
-      "steps": [
-        "反向相遇 = 400 ÷ (6 + 4) = 40 秒；同向追及 = 400 ÷ (6 − 4) = 200 秒。"
+      key: "relative",
+      label: "相对速度法",
+      steps: [
+        "反向相遇 = 400 ÷ (6 + 4) = 40 秒；同向追及 = 400 ÷ (6 − 4) = 200 秒。",
       ],
-      "scenes": [
+      scenes: [
         {
-          "kind": "number-line",
-          "min": 0,
-          "max": 400,
-          "points": [
+          kind: "number-line",
+          min: 0,
+          max: 400,
+          points: [
             {
-              "value": 0,
-              "label": "同点起跑",
-              "tone": "primary"
+              value: 0,
+              label: "同点起跑",
+              tone: "primary",
             },
             {
-              "value": 240,
-              "label": "甲走 6×40",
-              "sublabel": "240",
-              "tone": "primary"
+              value: 240,
+              label: "甲走 6×40",
+              sublabel: "240",
+              tone: "primary",
             },
             {
-              "value": 400,
-              "label": "环绕一圈",
-              "tone": "accent"
-            }
+              value: 400,
+              label: "环绕一圈",
+              tone: "accent",
+            },
           ],
-          "segments": [
+          segments: [
             {
-              "from": 0,
-              "to": 240,
-              "label": "甲 →",
-              "tone": "primary"
+              from: 0,
+              to: 240,
+              label: "甲 →",
+              tone: "primary",
             },
             {
-              "from": 240,
-              "to": 400,
-              "label": "← 乙 4×40 = 160",
-              "tone": "muted"
-            }
+              from: 240,
+              to: 400,
+              label: "← 乙 4×40 = 160",
+              tone: "muted",
+            },
           ],
-          "caption": "反向相遇：两人路程和 = 一圈 400 米"
+          caption: "反向相遇：两人路程和 = 一圈 400 米",
         },
         {
-          "kind": "compare-bars",
-          "rows": [
+          kind: "compare-bars",
+          rows: [
             {
-              "label": "速度和 (反向)",
-              "value": 10,
-              "max": 10,
-              "tone": "primary"
+              label: "速度和 (反向)",
+              value: 10,
+              max: 10,
+              tone: "primary",
             },
             {
-              "label": "速度差 (同向)",
-              "value": 2,
-              "max": 10,
-              "tone": "primary",
-              "marker": true
-            }
+              label: "速度差 (同向)",
+              value: 2,
+              max: 10,
+              tone: "primary",
+              marker: true,
+            },
           ],
-          "caption": "反向用速度和 10；同向用速度差 2"
+          caption: "反向用速度和 10；同向用速度差 2",
         },
         {
-          "kind": "equation-list",
-          "rows": [
+          kind: "equation-list",
+          rows: [
             {
-              "lhs": "相遇时间",
-              "rhs": "400 ÷ (6 + 4) = 40 秒",
-              "note": "反向"
+              lhs: "相遇时间 (反向)",
+              rhs: "400 ÷ (6 + 4) = 40 秒",
             },
             {
-              "lhs": "追及时间",
-              "rhs": "400 ÷ (6 − 4) = 200 秒",
-              "note": "同向",
-              "status": "keep"
-            }
+              lhs: "追及时间 (同向)",
+              rhs: "400 ÷ (6 − 4) = 200 秒",
+              status: "keep",
+            },
           ],
-          "caption": "甲要多跑一整圈"
+          caption: "甲要多跑一整圈",
         },
         {
-          "kind": "result-badges",
-          "items": [
+          kind: "result-badges",
+          items: [
             {
-              "icon": "🔄",
-              "count": 40,
-              "label": "反向相遇(秒)"
+              icon: "🔄",
+              count: 40,
+              label: "反向相遇(秒)",
             },
             {
-              "icon": "➡️",
-              "count": 200,
-              "label": "同向追及(秒)"
-            }
+              icon: "➡️",
+              count: 200,
+              label: "同向追及(秒)",
+            },
           ],
-          "caption": "第一次相遇 40 秒；第一次追上 200 秒"
-        }
-      ]
-    }
+          caption: "第一次相遇 40 秒；第一次追上 200 秒",
+        },
+      ],
+    },
   ],
-  "variant": {
-    "question": "一个湖的周长是 2 千米。张、李二人从同一地点出发。张每小时走 5 千米，李每小时走 4 千米。如果反向而行，多少小时后相遇？如果同向而行，多少小时后张追上李？",
-    "fields": [
+  variant: {
+    question:
+      "一个湖的周长是 2 千米。张、李二人从同一地点出发。张每小时走 5 千米，李每小时走 4 千米。如果反向而行，多少小时后相遇？如果同向而行，多少小时后张追上李？",
+    fields: [
       {
-        "key": "meet",
-        "label": "反向相遇时间"
+        key: "meet",
+        label: "反向相遇时间",
       },
       {
-        "key": "catch",
-        "label": "同向追及时间"
-      }
+        key: "catch",
+        label: "同向追及时间",
+      },
     ],
-    "answer": {
-      "meet": "2/9",
-      "catch": 2
+    answer: {
+      meet: "2/9",
+      catch: 2,
     },
-    "hint": "注意单位的一致性。"
+    hint: "注意单位的一致性。",
   },
-  "tags": ["相遇追及"]
+  tags: ["相遇追及"],
 } satisfies ProblemData;

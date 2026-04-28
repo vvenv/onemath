@@ -46,9 +46,8 @@ export default {
               rhs: "2√10",
             },
             {
-              lhs: "阴影面积",
+              lhs: "阴影面积 (结论)",
               rhs: "(2√10)² = 40",
-              badge: "结论",
               status: "keep",
             },
           ],
@@ -95,9 +94,8 @@ export default {
               rhs: "2√10",
             },
             {
-              lhs: "阴影面积",
+              lhs: "阴影面积 (结论)",
               rhs: "(2√10)² = 40",
-              badge: "结论",
               status: "keep",
             },
           ],

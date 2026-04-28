@@ -44,14 +44,12 @@ export default {
               rhs: "1/5",
             },
             {
-              lhs: "△AGS = △ADG × (GS/DG)",
+              lhs: "△AGS = △ADG × (GS/DG) (GS = DG)",
               rhs: "1/5",
-              note: "GS = DG",
             },
             {
-              lhs: "△FGS = △AGS × 1/2",
+              lhs: "△FGS = △AGS × 1/2 (答案)",
               rhs: "1/10",
-              badge: "答案",
             },
           ],
           caption: "从大到小逐层缩放",
@@ -119,9 +117,8 @@ export default {
               rhs: "(0) b + (45/120) c",
             },
             {
-              lhs: "△FGS",
+              lhs: "△FGS (验证)",
               rhs: "1/10",
-              badge: "验证",
             },
           ],
         },

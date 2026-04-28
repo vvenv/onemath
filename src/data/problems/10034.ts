@@ -29,7 +29,7 @@ export default {
           rows: [
             { lhs: "经过 B", rhs: "3 × 4 = 12 种" },
             { lhs: "直达", rhs: "2 种" },
-            { lhs: "总计", rhs: "12 + 2 = 14 种", badge: "答案" },
+            { lhs: "总计 (答案)", rhs: "12 + 2 = 14 种" },
           ],
         },
       ],

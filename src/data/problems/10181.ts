@@ -11,7 +11,9 @@ export default {
     {
       key: "classical",
       label: "古典概型法",
-      steps: ["骰子有 6 个面，点数大于 4 的是 5 和 6，概率 = 2 ÷ 6 = 1/3。"],
+      steps: [
+        { text: "骰子有 6 个面，点数大于 4 的是 5 和 6，概率 = 2 ÷ 6 = 1/3。" },
+      ],
       scenes: [
         {
           kind: "equation-list",
@@ -69,7 +71,9 @@ export default {
       key: "enumeration",
       label: "枚举法",
       steps: [
-        "所有可能结果为 1、2、3、4、5、6，满足条件的结果为 5、6，概率 = 2 ÷ 6 = 1/3。",
+        {
+          text: "所有可能结果为 1、2、3、4、5、6，满足条件的结果为 5、6，概率 = 2 ÷ 6 = 1/3。",
+        },
       ],
       scenes: [
         {

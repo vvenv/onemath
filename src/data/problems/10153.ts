@@ -51,9 +51,8 @@ export default {
               status: "keep",
             },
             {
-              lhs: "合作天数",
+              lhs: "合作天数 (结论)",
               rhs: "1 ÷ (1/4) = 4",
-              badge: "结论",
               status: "keep",
             },
           ],
@@ -134,9 +133,8 @@ export default {
               status: "keep",
             },
             {
-              lhs: "合作天数",
+              lhs: "合作天数 (结论)",
               rhs: "12 ÷ 3 = 4（天）",
-              badge: "结论",
               status: "keep",
             },
           ],

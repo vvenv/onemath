@@ -43,9 +43,8 @@ export default {
               rhs: "(1/2)·(2/3) = 1/3",
             },
             {
-              lhs: "△ABC = 12 × 3",
+              lhs: "△ABC = 12 × 3 (答案)",
               rhs: "36",
-              badge: "答案",
             },
           ],
           caption: "共角公式一步到位",
@@ -84,9 +83,8 @@ export default {
               rhs: "(1/3) △ABC",
             },
             {
-              lhs: "△ABC",
+              lhs: "△ABC (答案)",
               rhs: "36",
-              badge: "答案",
             },
           ],
         },

@@ -32,9 +32,8 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "AD : CE",
+              lhs: "AD : CE (沙漏相似)",
               rhs: "2 : 1",
-              note: "沙漏相似",
             },
             {
               lhs: "AF : FC",
@@ -45,9 +44,8 @@ export default {
               rhs: "18",
             },
             {
-              lhs: "△DFC = 18 × 1/3",
+              lhs: "△DFC = 18 × 1/3 (答案)",
               rhs: "6",
-              badge: "答案",
             },
           ],
           caption: "用沙漏求得 F 在 AC 上的位置，再等高三角形按底比缩放",
@@ -82,9 +80,8 @@ export default {
               rhs: "(4, 2)",
             },
             {
-              lhs: "△DFC",
+              lhs: "△DFC (验证)",
               rhs: "6",
-              badge: "验证",
             },
           ],
         },

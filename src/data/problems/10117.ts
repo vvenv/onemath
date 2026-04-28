@@ -22,82 +22,94 @@ export default {
       key: "locate-F",
       label: "先定位 F，再按比例缩放（等积变换）",
       steps: [
-        "分析：△AEF 的三个顶点里只有 F 在 AC 上、位置未知，所以先定 AF : FC。D 是 BC 中点使 △ABD = △ACD，再由 E 在 AD 上（AE : AD = 2 : 3）得 △ABE = △ACE = 20，说明 E 到 AB 与 AC 的「面积贡献」对称，从而 BE 的延长线 F 必为 AC 的中点。",
-        "确定 AF : FC = 1 : 1 后，对 △AEF 做两步缩放：△ADF = △ADC · (AF/AC) = 30 · 1/2 = 15；△AEF = △ADF · (AE/AD) = 15 · 2/3 = 10。",
-        "所以 △AEF = 10。",
-      ],
-      scenes: [
         {
-          kind: "equation-list",
-          rows: [
+          text: "分析：△AEF 的三个顶点里只有 F 在 AC 上、位置未知，所以先定 AF : FC。D 是 BC 中点使 △ABD = △ACD，再由 E 在 AD 上（AE : AD = 2 : 3）得 △ABE = △ACE = 20，说明 E 到 AB 与 AC 的「面积贡献」对称，从而 BE 的延长线 F 必为 AC 的中点。",
+          scenes: [
             {
-              lhs: "△ABD = △ACD",
-              rhs: "30",
-              note: "D 是 BC 中点",
-            },
-            {
-              lhs: "△ABE = △ABD × 2/3",
-              rhs: "20",
-            },
-            {
-              lhs: "△ACE = △ACD × 2/3",
-              rhs: "20",
-            },
-            {
-              lhs: "由 △ABE = △ACE ⇒ AF : FC",
-              rhs: "1 : 1",
-              note: "F 是 AC 的中点",
-            },
-            {
-              lhs: "△ADF = 30 × 1/2",
-              rhs: "15",
-            },
-            {
-              lhs: "△AEF = 15 × 2/3",
-              rhs: "10",
-              badge: "答案",
+              kind: "equation-list",
+              rows: [
+                {
+                  lhs: "△ABD = △ACD (D 是 BC 中点)",
+                  rhs: "30",
+                },
+                {
+                  lhs: "△ABE = △ABD × 2/3",
+                  rhs: "20",
+                },
+                {
+                  lhs: "△ACE = △ACD × 2/3",
+                  rhs: "20",
+                },
+                {
+                  lhs: "由 △ABE = △ACE ⇒ AF : FC (F 是 AC 的中点)",
+                  rhs: "1 : 1",
+                },
+              ],
+              caption: "中点 + 比例点两步缩放即可得到答案",
             },
           ],
-          caption: "中点 + 比例点两步缩放即可得到答案",
         },
         {
-          kind: "compare-bars",
-          rows: [
+          text: "确定 AF : FC = 1 : 1 后，对 △AEF 做两步缩放：△ADF = △ADC · (AF/AC) = 30 · 1/2 = 15；△AEF = △ADF · (AE/AD) = 15 · 2/3 = 10。",
+          scenes: [
             {
-              label: "△ABC",
-              value: 60,
-              max: 60,
-              tone: "muted",
+              kind: "equation-list",
+              rows: [
+                {
+                  lhs: "△ADF = 30 × 1/2",
+                  rhs: "15",
+                },
+                {
+                  lhs: "△AEF = 15 × 2/3 (答案)",
+                  rhs: "10",
+                },
+              ],
             },
             {
-              label: "△ACD",
-              value: 30,
-              max: 60,
-              tone: "muted",
-            },
-            {
-              label: "△ADF",
-              value: 15,
-              max: 60,
-              tone: "muted",
-            },
-            {
-              label: "△AEF",
-              value: 10,
-              max: 60,
-              tone: "primary",
+              kind: "compare-bars",
+              rows: [
+                {
+                  label: "△ABC",
+                  value: 60,
+                  max: 60,
+                  tone: "muted",
+                },
+                {
+                  label: "△ACD",
+                  value: 30,
+                  max: 60,
+                  tone: "muted",
+                },
+                {
+                  label: "△ADF",
+                  value: 15,
+                  max: 60,
+                  tone: "muted",
+                },
+                {
+                  label: "△AEF",
+                  value: 10,
+                  max: 60,
+                  tone: "primary",
+                },
+              ],
+              caption:
+                "由 △ABC 向 △AEF 的两步缩放：先 ×1/2（取 AF=AC/2），再 ×2/3（取 AE=2AD/3）",
             },
           ],
-          caption:
-            "由 △ABC 向 △AEF 的两步缩放：先 ×1/2（取 AF=AC/2），再 ×2/3（取 AE=2AD/3）",
         },
         {
-          kind: "result-badges",
-          items: [
+          text: "所以 △AEF = 10。",
+          scenes: [
             {
-              icon: "📐",
-              count: 10,
-              label: "△AEF 面积",
+              kind: "result-badges",
+              items: [
+                {
+                  icon: "📐",
+                  count: 10,
+                  label: "△AEF 面积",
+                },
+              ],
             },
           ],
         },
@@ -107,27 +119,31 @@ export default {
       key: "coord",
       label: "坐标法验证",
       steps: [
-        "分析：取 A(0, 12)、B(0, 0)、C(10, 0)，△ABC = 60 与题意一致。D = (5, 0)，E = (10/3, 4)。",
-        "BE 方程 y = (6/5)x；AC 方程 y = 12 − (6/5)x。联立得 F = (5, 6)，恰是 AC 中点。",
-        "△AEF = (1/2)·|0·(4 − 6) + (10/3)·(6 − 12) + 5·(12 − 4)| = 10，与前解一致。",
-      ],
-      scenes: [
         {
-          kind: "equation-list",
-          rows: [
+          text: "分析：取 A(0, 12)、B(0, 0)、C(10, 0)，△ABC = 60 与题意一致。D = (5, 0)，E = (10/3, 4)。",
+        },
+        {
+          text: "BE 方程 y = (6/5)x；AC 方程 y = 12 − (6/5)x。联立得 F = (5, 6)，恰是 AC 中点。",
+        },
+        {
+          text: "△AEF = (1/2)·|0·(4 − 6) + (10/3)·(6 − 12) + 5·(12 − 4)| = 10，与前解一致。",
+          scenes: [
             {
-              lhs: "E",
-              rhs: "(10/3, 4)",
-            },
-            {
-              lhs: "F = BE ∩ AC",
-              rhs: "(5, 6)",
-              note: "= AC 的中点",
-            },
-            {
-              lhs: "△AEF",
-              rhs: "10",
-              badge: "验证通过",
+              kind: "equation-list",
+              rows: [
+                {
+                  lhs: "E",
+                  rhs: "(10/3, 4)",
+                },
+                {
+                  lhs: "F = BE ∩ AC (= AC 的中点)",
+                  rhs: "(5, 6)",
+                },
+                {
+                  lhs: "△AEF (验证通过)",
+                  rhs: "10",
+                },
+              ],
             },
           ],
         },

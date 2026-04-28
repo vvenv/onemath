@@ -23,24 +23,20 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "1路车间隔",
+              lhs: "1路车间隔 (8 = 2³)",
               rhs: "8分钟",
-              note: "8 = 2³",
             },
             {
-              lhs: "2路车间隔",
+              lhs: "2路车间隔 (12 = 2² × 3)",
               rhs: "12分钟",
-              note: "12 = 2² × 3",
             },
             {
-              lhs: "3路车间隔",
+              lhs: "3路车间隔 (15 = 3 × 5)",
               rhs: "15分钟",
-              note: "15 = 3 × 5",
             },
             {
-              lhs: "LCM(8, 12, 15)",
+              lhs: "LCM(8, 12, 15) (结论)",
               rhs: "120分钟",
-              badge: "结论",
               status: "keep",
             },
           ],

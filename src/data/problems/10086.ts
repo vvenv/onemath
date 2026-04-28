@@ -28,19 +28,17 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "1+3+…+17",
+              lhs: "1+3+…+17 (前 9 个奇数之和 = 9² = 81)",
               rhs: "81",
-              note: "前 9 个奇数之和 = 9² = 81",
             },
             {
               lhs: "3S",
               rhs: "81",
             },
             {
-              lhs: "S",
+              lhs: "S (幻和)",
               rhs: "27",
               status: "keep",
-              badge: "幻和",
             },
           ],
         },

@@ -30,23 +30,20 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "△AOD",
+              lhs: "△AOD (= △BOC（AB ∥ CD 的推论）)",
               rhs: "35",
-              note: "= △BOC（AB ∥ CD 的推论）",
             },
             {
-              lhs: "△AOB · △COD",
+              lhs: "△AOB · △COD (蝴蝶定理)",
               rhs: "35 × 35 = 1225",
-              note: "蝴蝶定理",
             },
             {
               lhs: "△COD",
               rhs: "1225 ÷ 25 = 49",
             },
             {
-              lhs: "梯形 = 25 + 35 + 35 + 49",
+              lhs: "梯形 = 25 + 35 + 35 + 49 (答案)",
               rhs: "144",
-              badge: "答案",
             },
           ],
           caption: "两个结论联手即可求完四块面积",
@@ -105,23 +102,20 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "AB : CD",
+              lhs: "AB : CD (= △AOB : △BOC)",
               rhs: "25 : 35 = 5 : 7",
-              note: "= △AOB : △BOC",
             },
             {
-              lhs: "△COD",
+              lhs: "△COD (面积比 = 相似比²)",
               rhs: "25 × (7/5)² = 49",
-              note: "面积比 = 相似比²",
             },
             {
               lhs: "△AOD",
               rhs: "= △BOC = 35",
             },
             {
-              lhs: "梯形 = 25 + 35 + 35 + 49",
+              lhs: "梯形 = 25 + 35 + 35 + 49 (答案)",
               rhs: "144",
-              badge: "答案",
             },
           ],
           caption: "抓住 AB : CD = 5 : 7，四块面积一步到位",

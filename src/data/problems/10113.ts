@@ -22,77 +22,86 @@ export default {
       key: "halving",
       label: "逐次取中点·面积减半",
       steps: [
-        "分析：D 是 BC 中点，E 是 CA 中点，F 是 AD 中点。中点连线把三角形分成两个等面积的部分——这是等积变换最基本的用法：等底等高面积相等。",
-        "第一步：D 是 BC 中点 ⇒ △ABD 与 △ADC 等底等高，面积都是 24 ÷ 2 = 12。",
-        "第二步：看 △ADC，E 是 AC 中点 ⇒ 中线 DE 把 △ADC 分成 △ADE 与 △DEC 两个等面积的三角形，各为 12 ÷ 2 = 6。",
-        "第三步：看 △ADE，F 是 AD 中点 ⇒ 中线 EF 把 △ADE 分成 △AEF 与 △DEF 两个等面积的三角形，各为 6 ÷ 2 = 3。",
-        "结论：三角形 DEF 的面积 = 3。",
-      ],
-      scenes: [
         {
-          kind: "equation-list",
-          rows: [
-            {
-              lhs: "△ABC",
-              rhs: "24",
-              badge: "已知",
-            },
-            {
-              lhs: "△ADC = 24 ÷ 2",
-              rhs: "12",
-              note: "D 为 BC 中点",
-            },
-            {
-              lhs: "△ADE = 12 ÷ 2",
-              rhs: "6",
-              note: "E 为 AC 中点",
-            },
-            {
-              lhs: "△DEF = 6 ÷ 2",
-              rhs: "3",
-              note: "F 为 AD 中点",
-              badge: "答案",
-            },
-          ],
-          caption: "三次取中点，每次面积减半",
+          text: "分析：D 是 BC 中点，E 是 CA 中点，F 是 AD 中点。中点连线把三角形分成两个等面积的部分——这是等积变换最基本的用法：等底等高面积相等。",
+          scenes: [],
         },
         {
-          kind: "compare-bars",
-          rows: [
-            {
-              label: "△ABC",
-              value: 24,
-              max: 24,
-              tone: "muted",
-            },
-            {
-              label: "△ADC",
-              value: 12,
-              max: 24,
-              tone: "muted",
-            },
-            {
-              label: "△ADE",
-              value: 6,
-              max: 24,
-              tone: "muted",
-            },
-            {
-              label: "△DEF",
-              value: 3,
-              max: 24,
-              tone: "primary",
-            },
-          ],
-          caption: "面积逐层减半的可视化",
+          text: "第一步：D 是 BC 中点 ⇒ △ABD 与 △ADC 等底等高，面积都是 24 ÷ 2 = 12。",
+          scenes: [],
         },
         {
-          kind: "result-badges",
-          items: [
+          text: "第二步：看 △ADC，E 是 AC 中点 ⇒ 中线 DE 把 △ADC 分成 △ADE 与 △DEC 两个等面积的三角形，各为 12 ÷ 2 = 6。",
+          scenes: [],
+        },
+        {
+          text: "第三步：看 △ADE，F 是 AD 中点 ⇒ 中线 EF 把 △ADE 分成 △AEF 与 △DEF 两个等面积的三角形，各为 6 ÷ 2 = 3。",
+          scenes: [],
+        },
+        {
+          text: "结论：三角形 DEF 的面积 = 3。",
+          scenes: [
             {
-              icon: "📐",
-              count: 3,
-              label: "△DEF 面积",
+              kind: "equation-list",
+              rows: [
+                {
+                  lhs: "△ABC (已知)",
+                  rhs: "24",
+                },
+                {
+                  lhs: "△ADC = 24 ÷ 2 (D 为 BC 中点)",
+                  rhs: "12",
+                },
+                {
+                  lhs: "△ADE = 12 ÷ 2 (E 为 AC 中点)",
+                  rhs: "6",
+                },
+                {
+                  lhs: "△DEF = 6 ÷ 2 (F 为 AD 中点，答案)",
+                  rhs: "3",
+                },
+              ],
+              caption: "三次取中点，每次面积减半",
+            },
+            {
+              kind: "compare-bars",
+              rows: [
+                {
+                  label: "△ABC",
+                  value: 24,
+                  max: 24,
+                  tone: "muted",
+                },
+                {
+                  label: "△ADC",
+                  value: 12,
+                  max: 24,
+                  tone: "muted",
+                },
+                {
+                  label: "△ADE",
+                  value: 6,
+                  max: 24,
+                  tone: "muted",
+                },
+                {
+                  label: "△DEF",
+                  value: 3,
+                  max: 24,
+                  tone: "primary",
+                },
+              ],
+              caption: "面积逐层减半的可视化",
+            },
+            {
+              kind: "result-badges",
+              items: [
+                {
+                  icon: "📐",
+                  count: 3,
+                  label: "△DEF 面积",
+                },
+              ],
             },
           ],
         },
@@ -102,24 +111,37 @@ export default {
       key: "ratio",
       label: "比例连乘",
       steps: [
-        "分析：三次取中点相当于三次把面积乘以 1/2，可以一次性写成比例连乘。",
-        "△DEF 占 △ADE 的 1/2（F 是 AD 中点，EF 为 △ADE 的中线）。",
-        "△ADE 占 △ADC 的 1/2（E 是 AC 中点，DE 为 △ADC 的中线）。",
-        "△ADC 占 △ABC 的 1/2（D 是 BC 中点，AD 为 △ABC 的中线）。",
-        "因此 △DEF = (1/2)³ × △ABC = 24 × 1/8 = 3。",
-      ],
-      scenes: [
         {
-          kind: "equation-list",
-          rows: [
+          text: "分析：三次取中点相当于三次把面积乘以 1/2，可以一次性写成比例连乘。",
+          scenes: [],
+        },
+        {
+          text: "△DEF 占 △ADE 的 1/2（F 是 AD 中点，EF 为 △ADE 的中线）。",
+          scenes: [],
+        },
+        {
+          text: "△ADE 占 △ADC 的 1/2（E 是 AC 中点，DE 为 △ADC 的中线）。",
+          scenes: [],
+        },
+        {
+          text: "△ADC 占 △ABC 的 1/2（D 是 BC 中点，AD 为 △ABC 的中线）。",
+          scenes: [],
+        },
+        {
+          text: "因此 △DEF = (1/2)³ × △ABC = 24 × 1/8 = 3。",
+          scenes: [
             {
-              lhs: "△DEF : △ABC",
-              rhs: "1/2 × 1/2 × 1/2 = 1/8",
-            },
-            {
-              lhs: "△DEF = 24 × 1/8",
-              rhs: "3",
-              badge: "答案",
+              kind: "equation-list",
+              rows: [
+                {
+                  lhs: "△DEF : △ABC",
+                  rhs: "1/2 × 1/2 × 1/2 = 1/8",
+                },
+                {
+                  lhs: "△DEF = 24 × 1/8 (答案)",
+                  rhs: "3",
+                },
+              ],
             },
           ],
         },

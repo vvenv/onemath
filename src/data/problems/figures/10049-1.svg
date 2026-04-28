@@ -1,8 +1,6 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 440 120"
-  width="396.19"
-  height="129.52"
 >
   <rect
     x="65.71"
@@ -29,7 +27,7 @@
   <text x="233.33" y="42.86" text-anchor="middle" fill="#991b1b" font-weight="bold">
     40% 溶液
   </text>
-  <text x="233.33" y="59.62" text-anchor="middle" fill="#991b1b">x 克（等量）</text>
+  <text x="233.33" y="59.62" text-anchor="middle" fill="#991b1b">x 克</text>
   <text x="301.90" y="50.48" text-anchor="middle" fill="#374151">→</text>
   <rect
     x="324.76"

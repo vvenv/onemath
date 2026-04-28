@@ -32,10 +32,9 @@ export default {
               status: "keep",
             },
             {
-              lhs: "=",
+              lhs: "= (关键)",
               rhs: "120 ÷ 800 = 15%",
               status: "keep",
-              badge: "关键",
             },
             {
               lhs: "甲最终盐量",
@@ -61,7 +60,6 @@ export default {
               lhs: "解得 x",
               rhs: "187.5 克",
               status: "keep",
-              badge: "答案",
             },
           ],
           caption: "利用最终浓度相等的性质，列出方程求解",

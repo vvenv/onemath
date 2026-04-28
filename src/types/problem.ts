@@ -31,6 +31,11 @@ export type ProblemFigure = {
   alt?: string;
 };
 
+export type ProblemStep = {
+  text: string;
+  scenes?: Array<SceneSpec | null>;
+};
+
 export type ProblemData = {
   id: string;
   title: string;
@@ -42,7 +47,7 @@ export type ProblemData = {
   solutions: Array<{
     key: string;
     label: string;
-    steps: string[];
+    steps: ProblemStep[];
     scenes?: Array<SceneSpec | null>;
   }>;
   variant: {

@@ -31,18 +31,16 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "S₄",
+              lhs: "S₄ (= S₂)",
               rhs: "2",
-              note: "= S₂",
             },
             {
               lhs: "S₁ = S₂² / S₃",
               rhs: "4 / 4 = 1",
             },
             {
-              lhs: "梯形 = 1 + 2 + 4 + 2",
+              lhs: "梯形 = 1 + 2 + 4 + 2 (答案)",
               rhs: "9",
-              badge: "答案",
             },
           ],
           caption: "两条蝴蝶结论一起用即可",

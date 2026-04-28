@@ -47,9 +47,8 @@ export default {
               rhs: "24",
             },
             {
-              lhs: "AGCD = 72 + 24",
+              lhs: "AGCD = 72 + 24 (答案)",
               rhs: "96",
-              badge: "答案",
             },
           ],
           caption: "用对角线 AC 把四边形分成两块",
@@ -91,9 +90,8 @@ export default {
               rhs: "12",
             },
             {
-              lhs: "AGCD = 144 − (24 + 12 + 12)",
+              lhs: "AGCD = 144 − (24 + 12 + 12) (验证)",
               rhs: "96",
-              badge: "验证",
             },
           ],
           caption: "补集法：正方形减去三块外围三角形",

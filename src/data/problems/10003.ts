@@ -1,321 +1,312 @@
 import type { ProblemData } from "@/types/problem";
 
 export default {
-  "id": "10003",
-  "title": "时光之谜·变倍年龄",
-  "grade": "三年级",
-  "module": "应用题",
-  "difficulty": "进阶",
-  "question": "父亲对儿子说：“我像你这么大时，你才 3 岁；当你像我这么大时，我就 78 岁了。” 问父亲和儿子现在各多少岁？",
-  "solutions": [
+  id: "10003",
+  title: "时光之谜·变倍年龄",
+  grade: "三年级",
+  module: "应用题",
+  difficulty: "进阶",
+  question:
+    "父亲对儿子说：“我像你这么大时，你才 3 岁；当你像我这么大时，我就 78 岁了。” 问父亲和儿子现在各多少岁？",
+  solutions: [
     {
-      "key": "segment",
-      "label": "线段图法",
-      "steps": [
-        "年龄差 d 不变，3 到 78 跨 3 个 d，故 3d = 78−3 = 75 ⇒ d = 25。儿子现在 3+25=28 岁，父亲 28+25=53 岁。"
+      key: "segment",
+      label: "线段图法",
+      steps: [
+        "年龄差 d 不变，3 到 78 跨 3 个 d，故 3d = 78−3 = 75 ⇒ d = 25。儿子现在 3+25=28 岁，父亲 28+25=53 岁。",
       ],
-      "scenes": [
+      scenes: [
         {
-          "kind": "number-line",
-          "min": 3,
-          "max": 78,
-          "points": [
+          kind: "number-line",
+          min: 3,
+          max: 78,
+          points: [
             {
-              "value": 3,
-              "label": "过去儿子",
-              "sublabel": "3",
-              "tone": "muted"
+              value: 3,
+              label: "过去儿子",
+              sublabel: "3",
+              tone: "muted",
             },
             {
-              "value": 78,
-              "label": "未来父亲",
-              "sublabel": "78",
-              "tone": "primary"
-            }
+              value: 78,
+              label: "未来父亲",
+              sublabel: "78",
+              tone: "primary",
+            },
           ],
-          "caption": "一条时间线：左端是过去儿子 3 岁，右端是未来父亲 78 岁"
+          caption: "一条时间线：左端是过去儿子 3 岁，右端是未来父亲 78 岁",
         },
         {
-          "kind": "number-line",
-          "min": 3,
-          "max": 78,
-          "points": [
+          kind: "number-line",
+          min: 3,
+          max: 78,
+          points: [
             {
-              "value": 3,
-              "label": "过去儿子",
-              "sublabel": "3",
-              "tone": "muted"
+              value: 3,
+              label: "过去儿子",
+              sublabel: "3",
+              tone: "muted",
             },
             {
-              "value": 28,
-              "label": "现在儿子",
-              "sublabel": "?",
-              "tone": "accent"
+              value: 28,
+              label: "现在儿子",
+              sublabel: "?",
+              tone: "accent",
             },
             {
-              "value": 53,
-              "label": "现在父亲",
-              "sublabel": "?",
-              "tone": "accent"
+              value: 53,
+              label: "现在父亲",
+              sublabel: "?",
+              tone: "accent",
             },
             {
-              "value": 78,
-              "label": "未来父亲",
-              "sublabel": "78",
-              "tone": "primary"
-            }
+              value: 78,
+              label: "未来父亲",
+              sublabel: "78",
+              tone: "primary",
+            },
           ],
-          "caption": "在线段上标出四个关键点（过去父亲=现在儿子，现在父亲=未来儿子）"
+          caption:
+            "在线段上标出四个关键点（过去父亲=现在儿子，现在父亲=未来儿子）",
         },
         {
-          "kind": "number-line",
-          "min": 3,
-          "max": 78,
-          "points": [
+          kind: "number-line",
+          min: 3,
+          max: 78,
+          points: [
             {
-              "value": 3,
-              "label": "过去儿子",
-              "sublabel": "3",
-              "tone": "muted"
+              value: 3,
+              label: "过去儿子",
+              sublabel: "3",
+              tone: "muted",
             },
             {
-              "value": 28,
-              "sublabel": "?",
-              "tone": "accent"
+              value: 28,
+              sublabel: "?",
+              tone: "accent",
             },
             {
-              "value": 53,
-              "sublabel": "?",
-              "tone": "accent"
+              value: 53,
+              sublabel: "?",
+              tone: "accent",
             },
             {
-              "value": 78,
-              "label": "未来父亲",
-              "sublabel": "78",
-              "tone": "primary"
-            }
+              value: 78,
+              label: "未来父亲",
+              sublabel: "78",
+              tone: "primary",
+            },
           ],
-          "segments": [
+          segments: [
             {
-              "from": 3,
-              "to": 78,
-              "label": "78 − 3 = 75",
-              "tone": "primary"
-            }
+              from: 3,
+              to: 78,
+              label: "78 − 3 = 75",
+              tone: "primary",
+            },
           ],
-          "caption": "父子年龄差不变，总跨度为 75 岁"
+          caption: "父子年龄差不变，总跨度为 75 岁",
         },
         {
-          "kind": "number-line",
-          "min": 3,
-          "max": 78,
-          "points": [
+          kind: "number-line",
+          min: 3,
+          max: 78,
+          points: [
             {
-              "value": 3,
-              "sublabel": "3",
-              "tone": "muted"
+              value: 3,
+              sublabel: "3",
+              tone: "muted",
             },
             {
-              "value": 28,
-              "sublabel": "?",
-              "tone": "accent"
+              value: 28,
+              sublabel: "?",
+              tone: "accent",
             },
             {
-              "value": 53,
-              "sublabel": "?",
-              "tone": "accent"
+              value: 53,
+              sublabel: "?",
+              tone: "accent",
             },
             {
-              "value": 78,
-              "sublabel": "78",
-              "tone": "primary"
-            }
+              value: 78,
+              sublabel: "78",
+              tone: "primary",
+            },
           ],
-          "segments": [
+          segments: [
             {
-              "from": 3,
-              "to": 28,
-              "label": "d",
-              "tone": "accent"
+              from: 3,
+              to: 28,
+              label: "d",
+              tone: "accent",
             },
             {
-              "from": 28,
-              "to": 53,
-              "label": "d",
-              "tone": "accent"
+              from: 28,
+              to: 53,
+              label: "d",
+              tone: "accent",
             },
             {
-              "from": 53,
-              "to": 78,
-              "label": "d",
-              "tone": "accent"
-            }
+              from: 53,
+              to: 78,
+              label: "d",
+              tone: "accent",
+            },
           ],
-          "caption": "75 岁恰好分成 3 个相等的年龄差 d：3d = 75"
+          caption: "75 岁恰好分成 3 个相等的年龄差 d：3d = 75",
         },
         {
-          "kind": "number-line",
-          "min": 3,
-          "max": 78,
-          "points": [
+          kind: "number-line",
+          min: 3,
+          max: 78,
+          points: [
             {
-              "value": 3,
-              "sublabel": "3",
-              "tone": "muted"
+              value: 3,
+              sublabel: "3",
+              tone: "muted",
             },
             {
-              "value": 28,
-              "label": "现在儿子",
-              "sublabel": "28",
-              "tone": "accent"
+              value: 28,
+              label: "现在儿子",
+              sublabel: "28",
+              tone: "accent",
             },
             {
-              "value": 53,
-              "label": "现在父亲",
-              "sublabel": "53",
-              "tone": "accent"
+              value: 53,
+              label: "现在父亲",
+              sublabel: "53",
+              tone: "accent",
             },
             {
-              "value": 78,
-              "sublabel": "78",
-              "tone": "primary"
-            }
+              value: 78,
+              sublabel: "78",
+              tone: "primary",
+            },
           ],
-          "segments": [
+          segments: [
             {
-              "from": 3,
-              "to": 28,
-              "label": "25",
-              "tone": "primary"
+              from: 3,
+              to: 28,
+              label: "25",
+              tone: "primary",
             },
             {
-              "from": 28,
-              "to": 53,
-              "label": "25",
-              "tone": "primary"
+              from: 28,
+              to: 53,
+              label: "25",
+              tone: "primary",
             },
             {
-              "from": 53,
-              "to": 78,
-              "label": "25",
-              "tone": "primary"
-            }
+              from: 53,
+              to: 78,
+              label: "25",
+              tone: "primary",
+            },
           ],
-          "caption": "d = (78 − 3) ÷ 3 = 25"
+          caption: "d = (78 − 3) ÷ 3 = 25",
         },
         null,
         {
-          "kind": "result-badges",
-          "items": [
+          kind: "result-badges",
+          items: [
             {
-              "icon": "👨",
-              "count": 53,
-              "label": "父亲现在"
+              icon: "👨",
+              count: 53,
+              label: "父亲现在",
             },
             {
-              "icon": "🧒",
-              "count": 28,
-              "label": "儿子现在"
-            }
+              icon: "🧒",
+              count: 28,
+              label: "儿子现在",
+            },
           ],
-          "caption": "父亲：3 + 25 + 25 = 53 ｜ 儿子：3 + 25 = 28"
-        }
-      ]
+          caption: "父亲：3 + 25 + 25 = 53 ｜ 儿子：3 + 25 = 28",
+        },
+      ],
     },
     {
-      "key": "equation",
-      "label": "方程法",
-      "steps": [
+      key: "equation",
+      label: "方程法",
+      steps: [
         "分析：设现在儿子 x、父亲 y，年龄差 d = y − x。把两句话翻译成方程：x − d = 3（过去儿子 3 岁）、y + d = 78（未来父亲 78 岁）。",
-        "后式减前式得 (y − x) + 2d = 75，即 3d = 75 ⇒ d = 25；代回得 x = 28、y = 53。"
+        "后式减前式得 (y − x) + 2d = 75，即 3d = 75 ⇒ d = 25；代回得 x = 28、y = 53。",
       ],
-      "scenes": [
+      scenes: [
         {
-          "kind": "equation-list",
-          "rows": [
+          kind: "equation-list",
+          rows: [
             {
-              "lhs": "x − d",
-              "rhs": "3",
-              "note": "过去儿子",
-              "badge": "①"
+              lhs: "x − d (过去儿子 ①)",
+              rhs: "3",
             },
             {
-              "lhs": "y + d",
-              "rhs": "78",
-              "note": "未来父亲",
-              "badge": "②"
+              lhs: "y + d (未来父亲 ②)",
+              rhs: "78",
             },
             {
-              "lhs": "y − x",
-              "rhs": "d",
-              "note": "年龄差",
-              "badge": "③"
-            }
+              lhs: "y − x (年龄差 ③)",
+              rhs: "d",
+            },
           ],
-          "caption": "把题意翻译成三条方程"
+          caption: "把题意翻译成三条方程",
         },
         {
-          "kind": "equation-list",
-          "rows": [
+          kind: "equation-list",
+          rows: [
             {
-              "lhs": "(y + d) − (x − d)",
-              "rhs": "78 − 3",
-              "note": "② − ①"
+              lhs: "(y + d) − (x − d) (② − ①)",
+              rhs: "78 − 3",
             },
             {
-              "lhs": "(y − x) + 2d",
-              "rhs": "75",
-              "status": "keep"
+              lhs: "(y − x) + 2d",
+              rhs: "75",
+              status: "keep",
             },
             {
-              "lhs": "d + 2d = 3d",
-              "rhs": "75",
-              "note": "代入 ③",
-              "status": "keep"
+              lhs: "d + 2d = 3d (代入 ③)",
+              rhs: "75",
+              status: "keep",
             },
             {
-              "lhs": "d",
-              "rhs": "25",
-              "status": "keep"
-            }
+              lhs: "d",
+              rhs: "25",
+              status: "keep",
+            },
           ],
-          "caption": "两式相减消去 x、y，直接解出 d"
+          caption: "两式相减消去 x、y，直接解出 d",
         },
         {
-          "kind": "result-badges",
-          "items": [
+          kind: "result-badges",
+          items: [
             {
-              "icon": "👨",
-              "count": 53,
-              "label": "父亲"
+              icon: "👨",
+              count: 53,
+              label: "父亲",
             },
             {
-              "icon": "🧒",
-              "count": 28,
-              "label": "儿子"
-            }
+              icon: "🧒",
+              count: 28,
+              label: "儿子",
+            },
           ],
-          "caption": "x = 3 + 25 = 28，y = 78 − 25 = 53"
-        }
-      ]
-    }
-  ],
-  "variant": {
-    "question": "哥哥对弟弟说：“当我是你现在的年龄时，你才 5 岁；当你是我现在的年龄时，我已经 47 岁了。” 哥哥现在多少岁？",
-    "fields": [
-      {
-        "key": "brother",
-        "label": "哥哥年龄"
-      }
-    ],
-    "answer": {
-      "brother": 33
+          caption: "x = 3 + 25 = 28，y = 78 − 25 = 53",
+        },
+      ],
     },
-    "hint": "画出时间轴，找出年龄差是解题关键。"
+  ],
+  variant: {
+    question:
+      "哥哥对弟弟说：“当我是你现在的年龄时，你才 5 岁；当你是我现在的年龄时，我已经 47 岁了。” 哥哥现在多少岁？",
+    fields: [
+      {
+        key: "brother",
+        label: "哥哥年龄",
+      },
+    ],
+    answer: {
+      brother: 33,
+    },
+    hint: "画出时间轴，找出年龄差是解题关键。",
   },
-  "tags": [
-    "线段图法",
-    "方程法",
-    "不变量"
-  ]
+  tags: ["线段图法", "方程法", "不变量"],
 } satisfies ProblemData;

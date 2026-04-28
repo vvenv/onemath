@@ -11,7 +11,7 @@ export default {
     {
       key: "percentage",
       label: "百分数计算法",
-      steps: ["200 × 1.2 × 0.8 = 200 × 0.96 = 192 元。"],
+      steps: [{ text: "200 × 1.2 × 0.8 = 200 × 0.96 = 192 元。" }],
       scenes: [
         {
           kind: "equation-list",
@@ -69,7 +69,7 @@ export default {
     {
       key: "formula",
       label: "综合公式法",
-      steps: ["200 × 1.2 × 0.8 = 192 元。"],
+      steps: [{ text: "200 × 1.2 × 0.8 = 192 元。" }],
       scenes: [
         {
           kind: "equation-list",

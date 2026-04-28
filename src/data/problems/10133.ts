@@ -34,18 +34,16 @@ export default {
               rhs: "3 : 1",
             },
             {
-              lhs: "DF : DB",
+              lhs: "DF : DB (沙漏相似推论)",
               rhs: "1 : 4",
-              note: "沙漏相似推论",
             },
             {
               lhs: "△BDE = (长方形/2) × 1/3",
               rhs: "2",
             },
             {
-              lhs: "△DEF = 2 × (DF/DB)",
+              lhs: "△DEF = 2 × (DF/DB) (答案)",
               rhs: "1/2",
-              badge: "答案",
             },
           ],
           caption: "沙漏定位 F，再按底比缩放",
@@ -82,9 +80,8 @@ export default {
               rhs: "(3/2, 3/2)",
             },
             {
-              lhs: "△DEF",
+              lhs: "△DEF (验证)",
               rhs: "1/2",
-              badge: "验证",
             },
           ],
         },

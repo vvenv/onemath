@@ -74,9 +74,8 @@ export default {
               rhs: "20b² + 20a²",
             },
             {
-              lhs: "（BC² + AC²）÷ AB²",
+              lhs: "（BC² + AC²）÷ AB² (答案)",
               rhs: "5",
-              badge: "答案",
             },
           ],
           caption: "边长计算与最终比值",
@@ -120,9 +119,8 @@ export default {
               rhs: "a² + b² = 5c²",
             },
             {
-              lhs: "（BC² + AC²）/AB²",
+              lhs: "（BC² + AC²）/AB² (验证)",
               rhs: "5",
-              badge: "验证",
             },
           ],
           caption: "用中线公式与垂直条件推导",

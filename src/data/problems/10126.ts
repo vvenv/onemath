@@ -31,23 +31,20 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "梯形 ABCD 面积",
+              lhs: "梯形 ABCD 面积 (六边形的一半)",
               rhs: "1/2",
-              note: "六边形的一半",
             },
             {
-              lhs: "AD : BC",
+              lhs: "AD : BC (主对角线 : 边)",
               rhs: "2 : 1",
-              note: "主对角线 : 边",
             },
             {
               lhs: "△BCP : △ADP : △ABP : △CDP",
               rhs: "1 : 4 : 2 : 2",
             },
             {
-              lhs: "9·△BCP = 1/2",
+              lhs: "9·△BCP = 1/2 (答案)",
               rhs: "△BCP = 1/18",
-              badge: "答案",
             },
           ],
           caption: "梯形蝴蝶的 1 : 4 : 2 : 2 分配",
@@ -86,9 +83,8 @@ export default {
               rhs: "(0, √3/3)",
             },
             {
-              lhs: "△BCP / 六边形",
+              lhs: "△BCP / 六边形 (验证)",
               rhs: "1/18",
-              badge: "验证",
             },
           ],
         },

@@ -32,23 +32,20 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "DC / BC",
+              lhs: "DC / BC (BD = 2DC)",
               rhs: "1/3",
-              note: "BD = 2DC",
             },
             {
-              lhs: "EC / AC",
+              lhs: "EC / AC (AE = 3EC)",
               rhs: "1/4",
-              note: "AE = 3EC",
             },
             {
               lhs: "△DEC : △ABC",
               rhs: "1/3 × 1/4 = 1/12",
             },
             {
-              lhs: "△ABC = 3 × 12",
+              lhs: "△ABC = 3 × 12 (答案)",
               rhs: "36",
-              badge: "答案",
             },
           ],
           caption: "面积比 = 两条边上比例之积",

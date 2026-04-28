@@ -38,14 +38,19 @@ export function SolutionTabs({ methods }: SolutionTabsProps) {
       <Card>
         <CardContent>
           <ol className="space-y-3 list-decimal list-inside">
-            {activeMethod?.steps.map((step, index) => (
-              <li key={step} className="leading-6 only:list-none">
-                {step}
-                {activeMethod?.scenes?.length ? (
-                  <DrawingVisual step={index} scenes={activeMethod.scenes} />
-                ) : null}
-              </li>
-            ))}
+            {activeMethod?.steps.map((step, index) => {
+              const stepText = typeof step === "string" ? step : step.text;
+              const stepScenes =
+                typeof step === "string" ? activeMethod?.scenes : step.scenes;
+              return (
+                <li key={index} className="leading-6 only:list-none">
+                  {stepText}
+                  {stepScenes?.length ? (
+                    <DrawingVisual step={index} scenes={stepScenes} />
+                  ) : null}
+                </li>
+              );
+            })}
           </ol>
         </CardContent>
       </Card>

@@ -12,16 +12,15 @@ export default {
     {
       key: "formula",
       label: "公式法",
-      steps: ["甲 × 乙 = 6 × 72 = 432，乙 = 432 ÷ 24 = 18。"],
+      steps: [{ text: "甲 × 乙 = 6 × 72 = 432，乙 = 432 ÷ 24 = 18。" }],
       scenes: [
         {
           kind: "equation-list",
           rows: [
             {
-              lhs: "甲 × 乙",
+              lhs: "甲 × 乙 (公式)",
               rhs: "(甲,乙) × [甲,乙]",
               status: "keep",
-              badge: "公式",
             },
             {
               lhs: "24 × 乙",
@@ -34,10 +33,9 @@ export default {
               status: "keep",
             },
             {
-              lhs: "乙",
+              lhs: "乙 (答案)",
               rhs: "432 ÷ 24 = 18",
               status: "keep",
-              badge: "答案",
             },
           ],
           caption: "利用公式：两数之积 = 最大公约数 × 最小公倍数",

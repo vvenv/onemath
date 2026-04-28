@@ -28,8 +28,8 @@ export default {
         {
           kind: "equation-list",
           rows: [
-            { lhs: "红色区域数", rhs: "3", badge: "有利" },
-            { lhs: "总区域数", rhs: "8", badge: "总数" },
+            { lhs: "红色区域数 (有利)", rhs: "3" },
+            { lhs: "总区域数 (总数)", rhs: "8" },
             { lhs: "停在红色概率", rhs: "3/8", status: "keep" },
           ],
           caption: "几何概型：用区域面积比计算概率",

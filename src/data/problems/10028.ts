@@ -1,222 +1,215 @@
 import type { ProblemData } from "@/types/problem";
 
 export default {
-  "id": "10028",
-  "title": "计算·分数裂项",
-  "grade": "六年级",
-  "module": "计算",
-  "difficulty": "挑战",
-  "question": "计算：1/2 + 1/6 + 1/12 + 1/20 + 1/30",
-  "solutions": [
+  id: "10028",
+  title: "计算·分数裂项",
+  grade: "六年级",
+  module: "计算",
+  difficulty: "挑战",
+  question: "计算：1/2 + 1/6 + 1/12 + 1/20 + 1/30",
+  solutions: [
     {
-      "key": "split",
-      "label": "裂项相消法",
-      "steps": [
-        "裂项：1/2=1-1/2, 1/6=1/2-1/3, 1/12=1/3-1/4, 1/20=1/4-1/5, 1/30=1/5-1/6。相消后原式=1-1/6=5/6。"
+      key: "split",
+      label: "裂项相消法",
+      steps: [
+        "裂项：1/2=1-1/2, 1/6=1/2-1/3, 1/12=1/3-1/4, 1/20=1/4-1/5, 1/30=1/5-1/6。相消后原式=1-1/6=5/6。",
       ],
-      "scenes": [
+      scenes: [
         {
-          "kind": "equation-list",
-          "rows": [
+          kind: "equation-list",
+          rows: [
             {
-              "lhs": "2",
-              "rhs": "1 × 2"
+              lhs: "2",
+              rhs: "1 × 2",
             },
             {
-              "lhs": "6",
-              "rhs": "2 × 3"
+              lhs: "6",
+              rhs: "2 × 3",
             },
             {
-              "lhs": "12",
-              "rhs": "3 × 4"
+              lhs: "12",
+              rhs: "3 × 4",
             },
             {
-              "lhs": "20",
-              "rhs": "4 × 5"
+              lhs: "20",
+              rhs: "4 × 5",
             },
             {
-              "lhs": "30",
-              "rhs": "5 × 6"
-            }
+              lhs: "30",
+              rhs: "5 × 6",
+            },
           ],
-          "caption": "每个分母都是 n×(n+1) 的形式"
+          caption: "每个分母都是 n×(n+1) 的形式",
         },
         {
-          "kind": "number-line",
-          "min": 0,
-          "max": 1,
-          "points": [
+          kind: "number-line",
+          min: 0,
+          max: 1,
+          points: [
             {
-              "value": 0,
-              "sublabel": "0"
+              value: 0,
+              sublabel: "0",
             },
             {
-              "value": 0.3333,
-              "sublabel": "1/3",
-              "tone": "primary"
+              value: 0.3333,
+              sublabel: "1/3",
+              tone: "primary",
             },
             {
-              "value": 0.5,
-              "sublabel": "1/2",
-              "tone": "primary"
+              value: 0.5,
+              sublabel: "1/2",
+              tone: "primary",
             },
             {
-              "value": 1,
-              "sublabel": "1"
-            }
+              value: 1,
+              sublabel: "1",
+            },
           ],
-          "segments": [
+          segments: [
             {
-              "from": 0.3333,
-              "to": 0.5,
-              "label": "1/6 = 1/2 − 1/3",
-              "tone": "primary"
-            }
+              from: 0.3333,
+              to: 0.5,
+              label: "1/6 = 1/2 − 1/3",
+              tone: "primary",
+            },
           ],
-          "caption": "以 1/6 为例：它正好是数轴上 1/3 到 1/2 的距离"
+          caption: "以 1/6 为例：它正好是数轴上 1/3 到 1/2 的距离",
         },
         {
-          "kind": "number-line",
-          "min": 0,
-          "max": 1,
-          "points": [
+          kind: "number-line",
+          min: 0,
+          max: 1,
+          points: [
             {
-              "value": 0,
-              "sublabel": "0"
+              value: 0,
+              sublabel: "0",
             },
             {
-              "value": 0.1667,
-              "sublabel": "1/6",
-              "tone": "primary"
+              value: 0.1667,
+              sublabel: "1/6",
+              tone: "primary",
             },
             {
-              "value": 0.25,
-              "sublabel": "1/4"
+              value: 0.25,
+              sublabel: "1/4",
             },
             {
-              "value": 0.3333,
-              "sublabel": "1/3"
+              value: 0.3333,
+              sublabel: "1/3",
             },
             {
-              "value": 0.5,
-              "sublabel": "1/2"
+              value: 0.5,
+              sublabel: "1/2",
             },
             {
-              "value": 1,
-              "sublabel": "1",
-              "tone": "primary"
-            }
+              value: 1,
+              sublabel: "1",
+              tone: "primary",
+            },
           ],
-          "segments": [
+          segments: [
             {
-              "from": 0.1667,
-              "to": 0.2,
-              "label": "1/30",
-              "tone": "accent"
+              from: 0.1667,
+              to: 0.2,
+              label: "1/30",
+              tone: "accent",
             },
             {
-              "from": 0.2,
-              "to": 0.25,
-              "label": "1/20",
-              "tone": "accent"
+              from: 0.2,
+              to: 0.25,
+              label: "1/20",
+              tone: "accent",
             },
             {
-              "from": 0.25,
-              "to": 0.3333,
-              "label": "1/12",
-              "tone": "accent"
+              from: 0.25,
+              to: 0.3333,
+              label: "1/12",
+              tone: "accent",
             },
             {
-              "from": 0.3333,
-              "to": 0.5,
-              "label": "1/6",
-              "tone": "accent"
+              from: 0.3333,
+              to: 0.5,
+              label: "1/6",
+              tone: "accent",
             },
             {
-              "from": 0.5,
-              "to": 1,
-              "label": "1/2",
-              "tone": "accent"
-            }
+              from: 0.5,
+              to: 1,
+              label: "1/2",
+              tone: "accent",
+            },
           ],
-          "caption": "五段长度首尾相接，整体覆盖了 1/6 到 1 这一整段"
+          caption: "五段长度首尾相接，整体覆盖了 1/6 到 1 这一整段",
         },
         {
-          "kind": "equation-list",
-          "rows": [
+          kind: "equation-list",
+          rows: [
             {
-              "lhs": "1/2",
-              "rhs": "+1  −1/2",
-              "status": "keep",
-              "badge": "留 +1"
+              lhs: "1/2 (留 +1)",
+              rhs: "+1  −1/2",
+              status: "keep",
             },
             {
-              "lhs": "1/6",
-              "rhs": "+1/2  −1/3",
-              "status": "cancel",
-              "badge": "抵消"
+              lhs: "1/6 (抵消)",
+              rhs: "+1/2  −1/3",
+              status: "cancel",
             },
             {
-              "lhs": "1/12",
-              "rhs": "+1/3  −1/4",
-              "status": "cancel",
-              "badge": "抵消"
+              lhs: "1/12 (抵消)",
+              rhs: "+1/3  −1/4",
+              status: "cancel",
             },
             {
-              "lhs": "1/20",
-              "rhs": "+1/4  −1/5",
-              "status": "cancel",
-              "badge": "抵消"
+              lhs: "1/20 (抵消)",
+              rhs: "+1/4  −1/5",
+              status: "cancel",
             },
             {
-              "lhs": "1/30",
-              "rhs": "+1/5  −1/6",
-              "status": "keep",
-              "badge": "留 −1/6"
-            }
+              lhs: "1/30 (留 −1/6)",
+              rhs: "+1/5  −1/6",
+              status: "keep",
+            },
           ],
-          "note": "高亮行的两端（+1 与 −1/6）保留，中间三项两两抵消",
-          "caption": "±1/2、±1/3、±1/4、±1/5 成对出现，和为 0"
+          note: "高亮行的两端（+1 与 −1/6）保留，中间三项两两抵消",
+          caption: "±1/2、±1/3、±1/4、±1/5 成对出现，和为 0",
         },
         {
-          "kind": "result-badges",
-          "items": [
+          kind: "result-badges",
+          items: [
             {
-              "icon": "➕",
-              "count": "1",
-              "label": "首项"
+              icon: "➕",
+              count: "1",
+              label: "首项",
             },
             {
-              "icon": "➖",
-              "count": "1/6",
-              "label": "尾项"
+              icon: "➖",
+              count: "1/6",
+              label: "尾项",
             },
             {
-              "icon": "✅",
-              "count": "5/6",
-              "label": "结果"
-            }
+              icon: "✅",
+              count: "5/6",
+              label: "结果",
+            },
           ],
-          "separator": "→",
-          "caption": "1 − 1/6 = 6/6 − 1/6 = 5/6"
-        }
-      ]
-    }
-  ],
-  "variant": {
-    "question": "计算：1/12 + 1/20 + 1/30 + 1/42 + 1/56",
-    "fields": [
-      {
-        "key": "result",
-        "label": "计算结果"
-      }
-    ],
-    "answer": {
-      "result": "5/24"
+          separator: "→",
+          caption: "1 − 1/6 = 6/6 − 1/6 = 5/6",
+        },
+      ],
     },
-    "hint": "分母的规律是 3×4， 4×5， 5×6， 6×7， 7×8。"
+  ],
+  variant: {
+    question: "计算：1/12 + 1/20 + 1/30 + 1/42 + 1/56",
+    fields: [
+      {
+        key: "result",
+        label: "计算结果",
+      },
+    ],
+    answer: {
+      result: "5/24",
+    },
+    hint: "分母的规律是 3×4， 4×5， 5×6， 6×7， 7×8。",
   },
-  "tags": [
-    "裂项"
-  ]
+  tags: ["裂项"],
 } satisfies ProblemData;

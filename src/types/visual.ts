@@ -86,9 +86,9 @@ export type EquationStatus = "keep" | "cancel" | "neutral";
 export type EquationRowSpec = {
   lhs: string;
   rhs: string;
-  note?: string;
-  badge?: string;
   status?: EquationStatus;
+  badge?: string;
+  note?: string;
 };
 
 export type StatementVerdict = "unknown" | "true" | "false";

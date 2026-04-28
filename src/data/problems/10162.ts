@@ -36,10 +36,9 @@ export default {
               status: "keep",
             },
             {
-              lhs: "对应两数",
+              lhs: "对应两数 (答案)",
               rhs: "(12,108), (36,84), (84,36), (108,12)",
               status: "keep",
-              badge: "答案",
             },
           ],
           caption: "枚举互质数对，转化为 a + b = 10 的分解问题",

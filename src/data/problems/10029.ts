@@ -11,16 +11,14 @@ export default {
     {
       key: "stepwise",
       label: "分步代入法",
-      steps: ["3 ⊙ 4 = 2 × 3 + 4 = 10；10 ⊙ 5 = 2 × 10 + 5 = 25。"],
+      steps: [{ text: "3 ⊙ 4 = 2 × 3 + 4 = 10；10 ⊙ 5 = 2 × 10 + 5 = 25。" }],
       scenes: [
         {
           kind: "equation-list",
           rows: [
             {
-              lhs: "a ⊙ b",
+              lhs: "a ⊙ b (运算定义 📘)",
               rhs: "2a + b",
-              note: "运算定义",
-              badge: "📘",
             },
           ],
           caption: "先把新运算的规则记下来",
@@ -29,9 +27,8 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "3 ⊙ 4",
+              lhs: "3 ⊙ 4 (a=3, b=4)",
               rhs: "2×3 + 4",
-              note: "a=3, b=4",
             },
             {
               lhs: "= 6 + 4",
@@ -67,9 +64,8 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "10 ⊙ 5",
+              lhs: "10 ⊙ 5 (a=10, b=5)",
               rhs: "2×10 + 5",
-              note: "a=10, b=5",
             },
             {
               lhs: "= 20 + 5",

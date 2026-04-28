@@ -19,9 +19,13 @@ export default {
           kind: "equation-list",
           rows: [
             { lhs: "原式", rhs: "38 × 17 + 38 × 83", status: "keep" },
-            { lhs: "提公因数", rhs: "38 × (17 + 83)", status: "keep", badge: "分配律反用" },
-            { lhs: "凑整", rhs: "38 × 100", status: "keep", badge: "17+83=100" },
-            { lhs: "得数", rhs: "3800", status: "keep", badge: "答案" },
+            {
+              lhs: "提公因数 (分配律反用)",
+              rhs: "38 × (17 + 83)",
+              status: "keep",
+            },
+            { lhs: "凑整 (17+83=100)", rhs: "38 × 100", status: "keep" },
+            { lhs: "得数 (答案)", rhs: "3800", status: "keep" },
           ],
           caption: "看到相同因数就提出来，括号里往往藏着整百。",
         },
@@ -38,8 +42,19 @@ export default {
         {
           kind: "compare-bars",
           rows: [
-            { label: "提公因数：1 次乘法", value: 1, max: 3, tone: "primary", marker: true },
-            { label: "直接计算：2 次乘法 + 1 次加法", value: 3, max: 3, tone: "muted" },
+            {
+              label: "提公因数：1 次乘法",
+              value: 1,
+              max: 3,
+              tone: "primary",
+              marker: true,
+            },
+            {
+              label: "直接计算：2 次乘法 + 1 次加法",
+              value: 3,
+              max: 3,
+              tone: "muted",
+            },
           ],
           caption: "提公因数把运算压缩成一次乘法。",
         },

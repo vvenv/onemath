@@ -37,10 +37,9 @@ export default {
               status: "keep",
             },
             {
-              lhs: "最小值",
+              lhs: "最小值 (答案)",
               rhs: "60",
               status: "keep",
-              badge: "答案",
             },
           ],
           caption: "枚举因数个数的所有分解形式，取最小质数计算",

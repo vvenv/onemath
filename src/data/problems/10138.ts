@@ -30,9 +30,8 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "△ABM : △ACM : △BCM",
+              lhs: "△ABM : △ACM : △BCM (燕尾)",
               rhs: "1 : 2 : 1",
-              note: "燕尾",
             },
             {
               lhs: "△CDM = △ACM × 1/2",
@@ -43,9 +42,8 @@ export default {
               rhs: "1/12",
             },
             {
-              lhs: "CDMF = 1/4 + 1/12",
+              lhs: "CDMF = 1/4 + 1/12 (答案)",
               rhs: "1/3",
-              badge: "答案",
             },
           ],
           caption: "先用燕尾取块，再按底比两次缩放",
@@ -111,9 +109,8 @@ export default {
               rhs: "(3/4, 3/4)",
             },
             {
-              lhs: "CDMF / △ABC",
+              lhs: "CDMF / △ABC (验证)",
               rhs: "1/3",
-              badge: "验证",
             },
           ],
         },

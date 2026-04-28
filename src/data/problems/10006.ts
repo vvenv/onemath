@@ -112,9 +112,8 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "L=1",
+              lhs: "L=1 (水平/垂直)",
               rhs: "2·(5−1)·5 = 40",
-              badge: "水平/垂直",
             },
             {
               lhs: "L=2",
@@ -129,9 +128,8 @@ export default {
               rhs: "2·(5−4)·5 = 10",
             },
             {
-              lhs: "L=5",
+              lhs: "L=5 (3-4-5 斜向)",
               rhs: "2·(5−3)(5−4) = 4",
-              badge: "3-4-5 斜向",
             },
           ],
           note: "每行用 (5−dx)(5−dy) 公式，系数 2 来自方向对称",

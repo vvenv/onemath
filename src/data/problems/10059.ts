@@ -26,10 +26,8 @@ export default {
               status: "keep",
             },
             {
-              lhs: "(30 + 1) × (30 − 1)",
+              lhs: "(30 + 1) × (30 − 1) (平方差：(a+b)(a−b) = a² − b² 关键)",
               rhs: "30 × 30 − 1 × 1",
-              note: "平方差：(a+b)(a−b) = a² − b²",
-              badge: "关键",
             },
             {
               lhs: "31 × 29",
@@ -98,9 +96,8 @@ export default {
               status: "keep",
             },
             {
-              lhs: "净变化",
+              lhs: "净变化 (结论)",
               rhs: "30 − 31 = −1",
-              badge: "结论",
             },
           ],
           caption: "用面积变化解释 31 × 29 比 30 × 30 少 1",

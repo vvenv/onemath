@@ -37,10 +37,9 @@ export default {
               status: "keep",
             },
             {
-              lhs: "gcd(84, 126, 168)",
+              lhs: "gcd(84, 126, 168) (份数)",
               rhs: "2 × 3 × 7 = 42",
               status: "keep",
-              badge: "份数",
             },
             {
               lhs: "每份苹果",
@@ -53,10 +52,9 @@ export default {
               status: "keep",
             },
             {
-              lhs: "每份橘子",
+              lhs: "每份橘子 (答案)",
               rhs: "168 ÷ 42 = 4",
               status: "keep",
-              badge: "答案",
             },
           ],
           caption: "份数 = 三个数的最大公约数",

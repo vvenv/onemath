@@ -31,8 +31,8 @@ export default {
         {
           kind: "equation-list",
           rows: [
-            { lhs: "第一次红球概率", rhs: "4/7", badge: "P₁" },
-            { lhs: "第二次红球概率", rhs: "3/6 = 1/2", badge: "P₂" },
+            { lhs: "第一次红球概率 (P₁)", rhs: "4/7" },
+            { lhs: "第二次红球概率 (P₂)", rhs: "3/6 = 1/2" },
             { lhs: "两次都红球", rhs: "4/7 × 1/2 = 2/7", status: "keep" },
           ],
           caption: "分步计算：注意第二次概率因不放回而变化",
@@ -56,8 +56,8 @@ export default {
         {
           kind: "equation-list",
           rows: [
-            { lhs: "总组合数", rhs: "C(7,2) = 21", badge: "总数" },
-            { lhs: "有利组合数", rhs: "C(4,2) = 6", badge: "红红" },
+            { lhs: "总组合数 (总数)", rhs: "C(7,2) = 21" },
+            { lhs: "有利组合数 (红红)", rhs: "C(4,2) = 6" },
             { lhs: "概率", rhs: "6/21 = 2/7", status: "keep" },
           ],
           caption: "组合数法：C(4,2) ÷ C(7,2)",

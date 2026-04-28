@@ -32,23 +32,20 @@ export default {
           kind: "equation-list",
           rows: [
             {
-              lhs: "△ABF : △ACF : △BCF",
+              lhs: "△ABF : △ACF : △BCF (燕尾)",
               rhs: "2 : 4 : 3",
-              note: "燕尾",
             },
             {
               lhs: "△BDF = △BCF × 1/3",
               rhs: "k",
             },
             {
-              lhs: "k",
+              lhs: "k (由已知 △BDF = 4)",
               rhs: "4",
-              note: "由已知 △BDF = 4",
             },
             {
-              lhs: "△ABC = 9k",
+              lhs: "△ABC = 9k (答案)",
               rhs: "36",
-              badge: "答案",
             },
           ],
           caption: "燕尾把 △ABC 分成 2+3+4=9 份；△BDF 正好是其中 1 份",
@@ -123,9 +120,8 @@ export default {
               rhs: "1/9",
             },
             {
-              lhs: "△ABC = 4 × 9",
+              lhs: "△ABC = 4 × 9 (验证)",
               rhs: "36",
-              badge: "验证",
             },
           ],
         },
