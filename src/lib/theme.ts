@@ -125,6 +125,22 @@ const applyTheme = (theme: Theme) => {
 
 export const themeScript = `(function(){try{var s=localStorage.getItem("theme");var t=s?JSON.parse(s):null;if(t){document.documentElement.classList.toggle("dark",t.mode==="dark");document.documentElement.setAttribute("data-color-scheme",t.colorScheme);if(t.customColors)for(var k in t.customColors)document.documentElement.style.setProperty("--custom-"+k,t.customColors[k]);}else{var d=window.matchMedia("(prefers-color-scheme: dark)").matches;if(d)document.documentElement.classList.add("dark");}}catch{}})();`;
 
+/**
+ * Re-apply the persisted theme to the DOM. Called after React hydration to
+ * restore attributes that the hydration reconciliation may have stripped.
+ */
+export const applyStoredTheme = () => {
+  const theme = getInitialTheme();
+  const root = document.documentElement;
+  root.classList.toggle("dark", theme.mode === "dark");
+  root.setAttribute("data-color-scheme", theme.colorScheme);
+  if (theme.customColors) {
+    Object.entries(theme.customColors).forEach(([key, value]) => {
+      root.style.setProperty(`--custom-${key}`, value);
+    });
+  }
+};
+
 export const getTheme = (): Theme => {
   if (typeof document === "undefined") return DEFAULT_THEME;
   const stored = getStoredTheme();
