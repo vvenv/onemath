@@ -68,7 +68,8 @@ export default {
             {
               icon: "📍",
               count: 140,
-              label: "A-B距离（千米）",
+              label: "A-B距离",
+              note: "千米",
             },
           ],
           caption: "A、B 两地相距 140 千米",

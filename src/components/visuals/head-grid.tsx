@@ -1,8 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { HeadTone, TickGroup } from "@/types/visual";
 
-export type { HeadTone };
-
 export function Head({
   ticks,
   tone = "default",

@@ -64,7 +64,8 @@ export default {
             {
               icon: "📐",
               count: 32,
-              label: "第11个正方形边长（厘米）",
+              label: "第11个正方形边长",
+              note: "厘米",
             },
           ],
           caption: "32厘米",

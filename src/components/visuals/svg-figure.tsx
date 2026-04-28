@@ -12,7 +12,7 @@ export function SvgFigure({
   return (
     <div
       className={cn(
-        "flex w-full items-center justify-center text-foreground [&>svg]:h-auto [&>svg]:w-full",
+        "flex w-full items-center justify-center text-foreground [&>svg]:h-auto [&>svg]:w-full [&>svg]:max-w-sm",
         className,
       )}
       role="img"

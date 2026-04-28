@@ -1,24 +1,17 @@
 import { Fragment, type ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
-
-export type ResultBadge = {
-  icon: ReactNode;
-  count: number | string;
-  label?: ReactNode;
-};
-
-export type ResultBadgesLayout = "count-first" | "label-first";
+import type { ResultBadgeSpec } from "@/types/visual";
 
 export function ResultBadges({
   items,
   separator = "+",
-  layout = "count-first",
+  layout = "default",
   className,
 }: {
-  items: ResultBadge[];
+  items: ResultBadgeSpec[];
   separator?: ReactNode;
-  layout?: ResultBadgesLayout;
+  layout?: "default" | "label-first";
   className?: string;
 }) {
   return (
@@ -33,28 +26,25 @@ export function ResultBadges({
           {i > 0 ? (
             <span className="text-muted-foreground">{separator}</span>
           ) : null}
-          {layout === "label-first" ? (
-            <div className="flex items-center gap-2">
-              {item.label ? (
-                <span className="font-medium">{item.label}</span>
-              ) : null}
-              <span className="text-muted-foreground">=</span>
-              <span className="font-medium">{item.count}</span>
-              <span className="text-xl" aria-hidden>
-                {item.icon}
-              </span>
-            </div>
-          ) : (
-            <div className="flex items-center gap-2">
-              <span className="text-xl" aria-hidden>
-                {item.icon}
-              </span>
-              = <span className="font-medium">{item.count}</span>
-              {item.label ? (
-                <span className="text-muted-foreground">{item.label}</span>
-              ) : null}
-            </div>
-          )}
+          <div className="flex items-center gap-2">
+            {layout === "label-first" && item.label ? (
+              <span className="font-medium">{item.label}</span>
+            ) : null}
+            {layout === "label-first" && item.label ? (
+              <span className="text-muted-foreground">:</span>
+            ) : null}
+            <span className="text-xl" aria-hidden>
+              {item.icon}
+            </span>
+            {layout === "default" && item.label ? (
+              <span className="font-medium">{item.label}</span>
+            ) : null}
+            <span className="text-muted-foreground">=</span>
+            <span className="font-medium">{item.count}</span>
+            {item.note ? (
+              <span className="text-muted-foreground">{item.note}</span>
+            ) : null}
+          </div>
         </Fragment>
       ))}
     </div>

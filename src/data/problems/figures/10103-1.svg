@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" class="stroke-current fill-none">
-  <polygon points="220,42 20,398 420,398" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 400" class="stroke-current fill-none">
+  <polygon points="220,40 40,351.77 400,351.77" />
   <g class="fill-current">
-    <circle cx="220.00" cy="42.00" r="12" />
-    <circle cx="20.00" cy="398.00" r="12" />
-    <circle cx="420.00" cy="398.00" r="12" />
-    <circle cx="153.33" cy="160.67" r="12" />
-    <circle cx="86.67" cy="279.33" r="12" />
-    <circle cx="286.67" cy="160.67" r="12" />
-    <circle cx="353.33" cy="279.33" r="12" />
-    <circle cx="153.33" cy="398.00" r="12" />
-    <circle cx="286.67" cy="398.00" r="12" />
+    <circle cx="220" cy="40" r="20" />
+    <circle cx="40" cy="351.77" r="20" />
+    <circle cx="400" cy="351.77" r="20" />
+    <circle cx="160" cy="143.92" r="20" />
+    <circle cx="100" cy="247.85" r="20" />
+    <circle cx="280" cy="143.92" r="20" />
+    <circle cx="340" cy="247.85" r="20" />
+    <circle cx="160" cy="351.77" r="20" />
+    <circle cx="280" cy="351.77" r="20" />
   </g>
 </svg>

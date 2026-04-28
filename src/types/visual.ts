@@ -29,10 +29,10 @@ export type CompareRowSpec = {
 };
 
 export type ResultBadgeSpec = {
-  icon: string;
-  /** Displayed after `×`. String is accepted for non-numeric tallies (e.g. `"星期四"`, `"√2,√5,…"`). */
-  count: number | string;
   label?: string;
+  icon: string;
+  count: number | string;
+  note?: string;
 };
 
 export type NumberLinePointTone = "default" | "primary" | "accent" | "muted";
@@ -85,7 +85,7 @@ export type EquationStatus = "keep" | "cancel" | "neutral";
 
 export type EquationRowSpec = {
   lhs: string;
-  rhs?: string;
+  rhs: string;
   note?: string;
   badge?: string;
   status?: EquationStatus;
@@ -142,7 +142,7 @@ export type SceneSpec =
       kind: "result-badges";
       items: ResultBadgeSpec[];
       separator?: string;
-      layout?: "count-first" | "label-first";
+      layout?: "default" | "label-first";
       caption?: string;
     }
   | {

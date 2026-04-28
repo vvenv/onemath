@@ -429,7 +429,7 @@ function FeaturedProblem() {
           <SvgFigure
             svg={fig.svg}
             alt={fig.alt}
-            className="max-w-[440px] [&>svg]:max-h-[440px]"
+            className="[&>svg]:h-auto [&>svg]:w-full [&>svg]:max-w-sm"
           />
         </div>
         <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">

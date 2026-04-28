@@ -20,7 +20,7 @@
     y1="125.83"
     x2="420.00"
     y2="125.83"
-    stroke="#7fb3d5"
+    class="stroke-blue-300"
     stroke-dasharray="6 3"
   />
   <line
@@ -45,7 +45,7 @@
     y1="199.17"
     x2="420.00"
     y2="199.17"
-    stroke="#7fb3d5"
+    class="stroke-blue-300"
     stroke-dasharray="6 3"
   />
   <line

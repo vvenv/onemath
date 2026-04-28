@@ -1,8 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="31 0 378 288">
   <g class="stroke-current fill-none">
     <polygon points="60,242 380,242 131,29" />
-  </g>
-  <g class="stroke-current fill-none">
     <line x1="131" y1="29" x2="167" y2="242" />
     <line x1="60" y1="242" x2="255" y2="136" />
   </g>

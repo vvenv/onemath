@@ -68,7 +68,8 @@ export default {
             {
               icon: "⏱️",
               count: 200,
-              label: "相遇时间（秒）",
+              label: "相遇时间",
+              note: "秒",
             },
           ],
           caption: "200 秒后第一次相遇",

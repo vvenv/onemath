@@ -1,16 +1,7 @@
-import { cn } from "@/lib/utils";
+import { Fragment } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-
-export type EquationStatus = "keep" | "cancel" | "neutral";
-
-export type EquationRowSpec = {
-  lhs: string;
-  rhs?: string;
-  note?: string;
-  badge?: string;
-  status?: EquationStatus;
-};
+import { cn } from "@/lib/utils";
+import type { EquationStatus, EquationRowSpec } from "@/types/visual";
 
 const statusRowClass: Record<EquationStatus, string> = {
   keep: "",
@@ -37,58 +28,60 @@ export function EquationList({
   rows: EquationRowSpec[];
   note?: string;
 }) {
-  const hasRhs = rows.some((r) => r.rhs !== undefined);
   const hasNote = rows.some((r) => r.note);
   const hasBadge = rows.some((r) => r.badge);
   return (
     <div className="space-y-2">
-      <div className="overflow-hidden rounded-md border border-border/70">
-        <Table>
-          <TableBody>
-            {rows.map((row, i) => {
-              const status: EquationStatus = row.status ?? "neutral";
-              return (
-                <TableRow
-                  key={i}
-                  className={cn("hover:bg-transparent", statusRowClass[status])}
+      <div
+        className={cn(
+          "grid",
+          hasNote && hasBadge
+            ? "grid-cols-[3fr_5fr_2fr_2fr]"
+            : hasNote || hasBadge
+              ? "grid-cols-[3fr_5fr_2fr]"
+              : "grid-cols-[3fr_5fr]",
+        )}
+      >
+        {rows.map((row, i) => {
+          const status: EquationStatus = row.status ?? "neutral";
+          return (
+            <Fragment key={i}>
+              <div
+                className={cn(
+                  "whitespace-nowrap pr-2 text-right text-muted-foreground",
+                  statusRowClass[status],
+                )}
+              >
+                {row.lhs}
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-muted-foreground/70">=</span>
+                <span
+                  className={cn(
+                    "whitespace-nowrap font-mono",
+                    statusRhsClass[status],
+                  )}
                 >
-                  <TableCell className="w-px whitespace-nowrap pr-2 text-right text-muted-foreground">
-                    {row.lhs}
-                  </TableCell>
-                  {hasRhs ? (
-                    <>
-                      <TableCell className="w-px px-1 text-center text-muted-foreground/70">
-                        {row.rhs !== undefined ? "=" : null}
-                      </TableCell>
-                      <TableCell
-                        className={cn(
-                          "whitespace-nowrap font-mono",
-                          statusRhsClass[status],
-                        )}
-                      >
-                        {row.rhs ?? ""}
-                      </TableCell>
-                    </>
+                  {row.rhs}
+                </span>
+              </div>
+              {hasNote ? (
+                <div className="text-xs text-muted-foreground">
+                  {row.note ?? ""}
+                </div>
+              ) : null}
+              {hasBadge ? (
+                <div className="text-right">
+                  {row.badge ? (
+                    <Badge variant={statusBadgeVariant[status]}>
+                      {row.badge}
+                    </Badge>
                   ) : null}
-                  {hasNote ? (
-                    <TableCell className="text-xs text-muted-foreground">
-                      {row.note ?? ""}
-                    </TableCell>
-                  ) : null}
-                  {hasBadge ? (
-                    <TableCell className="w-px text-right">
-                      {row.badge ? (
-                        <Badge variant={statusBadgeVariant[status]}>
-                          {row.badge}
-                        </Badge>
-                      ) : null}
-                    </TableCell>
-                  ) : null}
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
+                </div>
+              ) : null}
+            </Fragment>
+          );
+        })}
       </div>
       {note ? (
         <p className="text-center text-xs text-muted-foreground">{note}</p>

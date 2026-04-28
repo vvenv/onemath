@@ -1,4 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
-  <circle cx="220.00" cy="220.00" r="200" class="stroke-current fill-none" />
-  <circle cx="220.00" cy="220.00" r="3" class="fill-yellow-700" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" class="stroke-current fill-none">
+  <circle cx="220.00" cy="220.00" r="200" />
 </svg>

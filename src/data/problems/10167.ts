@@ -68,8 +68,9 @@ export default {
           items: [
             {
               icon: "⏱️",
+              label: "最少时间",
               count: 21,
-              label: "最少时间（分钟）",
+              note: "分钟",
             },
           ],
           caption: "烙 7 张饼最少需要 21 分钟",

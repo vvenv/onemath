@@ -63,7 +63,8 @@ export default {
             {
               icon: "📐",
               count: "2.9",
-              label: "阴影面积（平方厘米）",
+              label: "阴影面积",
+              note: "平方厘米",
             },
           ],
           caption: "阴影面积约 2.9 平方厘米",

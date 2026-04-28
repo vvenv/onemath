@@ -293,7 +293,6 @@
               "items": { "$ref": "#/definitions/resultBadge" }
             },
             "separator": { "type": "string" },
-            "layout": { "enum": ["count-first", "label-first"] },
             "caption": { "type": "string" }
           }
         },

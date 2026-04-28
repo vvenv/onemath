@@ -63,12 +63,14 @@ export default {
             {
               icon: "🚂",
               count: 20,
-              label: "速度（米/秒）",
+              label: "速度",
+              note: "米/秒",
             },
             {
               icon: "📏",
               count: 400,
-              label: "车长（米）",
+              label: "车长",
+              note: "米",
             },
           ],
           caption: "火车速度 20 米/秒，车长 400 米",

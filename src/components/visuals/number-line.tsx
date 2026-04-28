@@ -1,20 +1,9 @@
 import { cn } from "@/lib/utils";
-
-export type NumberLinePointTone = "default" | "primary" | "accent" | "muted";
-
-export type NumberLinePoint = {
-  value: number;
-  label?: string;
-  sublabel?: string;
-  tone?: NumberLinePointTone;
-};
-
-export type NumberLineSegment = {
-  from: number;
-  to: number;
-  label?: string;
-  tone?: "default" | "primary" | "accent" | "muted";
-};
+import type {
+  NumberLinePointTone,
+  NumberLinePointSpec,
+  NumberLineSegmentSpec,
+} from "@/types/visual";
 
 const dotToneClass: Record<NumberLinePointTone, string> = {
   default: "border-foreground/60 bg-background",
@@ -24,7 +13,7 @@ const dotToneClass: Record<NumberLinePointTone, string> = {
 };
 
 const segmentToneClass: Record<
-  NonNullable<NumberLineSegment["tone"]>,
+  NonNullable<NumberLineSegmentSpec["tone"]>,
   string
 > = {
   default: "border-foreground/50 text-foreground",
@@ -42,8 +31,8 @@ export function NumberLine({
 }: {
   min: number;
   max: number;
-  points: NumberLinePoint[];
-  segments?: NumberLineSegment[];
+  points: NumberLinePointSpec[];
+  segments?: NumberLineSegmentSpec[];
   className?: string;
 }) {
   const range = max - min || 1;

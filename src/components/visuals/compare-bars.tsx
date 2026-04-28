@@ -1,12 +1,5 @@
 import { cn } from "@/lib/utils";
-
-export type CompareRow = {
-  label: string;
-  value: number | string;
-  max: number;
-  tone?: "primary" | "muted";
-  marker?: boolean;
-};
+import type { CompareRowSpec } from "@/types/visual";
 
 function toNumber(value: string | number): number {
   if (typeof value === "string") {
@@ -23,7 +16,7 @@ export function CompareBars({
   rows,
   className,
 }: {
-  rows: CompareRow[];
+  rows: CompareRowSpec[];
   className?: string;
 }) {
   return (
