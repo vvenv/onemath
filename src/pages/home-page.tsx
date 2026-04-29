@@ -160,6 +160,7 @@ export default function HomePage() {
         </div>
         <FeaturedProblem />
       </section>
+
       <section className="flex flex-col gap-4">
         <Sheet
           open={filterDrawerOpen}
@@ -301,28 +302,24 @@ export default function HomePage() {
             <ProblemRow key={item.id} problem={item} />
           ))}
         </div>
-      ) : null}
-
-      <div>
-        {visibleProblems.length === 0 ? (
-          <div className="flex flex-col items-center gap-2 rounded-2xl border border-dashed border-border/70 py-12 text-center">
-            <Search className="size-6 text-muted-foreground" />
-            <p className="font-medium">没有符合条件的题目</p>
-            <p className="text-muted-foreground">试试调整筛选</p>
-            {hasFilter ? (
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                onClick={resetAll}
-                className="mt-1 h-8"
-              >
-                清空筛选
-              </Button>
-            ) : null}
-          </div>
-        ) : null}
-      </div>
+      ) : (
+        <div className="flex flex-col items-center gap-2 rounded-2xl border border-dashed border-border/70 py-12 text-center">
+          <Search className="size-6 text-muted-foreground" />
+          <p className="font-medium">没有符合条件的题目</p>
+          <p className="text-muted-foreground">试试调整筛选</p>
+          {hasFilter ? (
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={resetAll}
+              className="mt-1 h-8"
+            >
+              清空筛选
+            </Button>
+          ) : null}
+        </div>
+      )}
     </div>
   );
 }

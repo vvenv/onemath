@@ -8,6 +8,7 @@ import { RelatedProblems } from "@/components/related-problems";
 import { SolutionTabs } from "@/components/solution-tabs";
 import { getProblemById } from "@/lib/problems";
 import { SITE_NAME, SITE_URL, buildMeta } from "@/lib/seo";
+import { useTrackRecentProblem } from "@/lib/recent-problems";
 
 export const meta: MetaFunction = ({ params }) => {
   const problem = getProblemById(params.id);
@@ -64,6 +65,8 @@ export default function ProblemPage() {
   const problem = getProblemById(id);
   // Note: loader is used for SSR/meta, but client-side we still use getProblemById
   // to avoid hydration mismatch since loader data may not be available in client transitions
+
+  useTrackRecentProblem(id);
 
   if (!problem) {
     return <Navigate to="/" replace />;
