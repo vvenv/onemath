@@ -1,8 +1,10 @@
 import { Link, useNavigate } from "react-router";
-import { ArrowLeft, Dices, Shuffle } from "lucide-react";
+import { ArrowLeft, Dices, Heart, Shuffle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getModule, type ModuleKey } from "@/lib/modules";
 import { getRandomProblem } from "@/lib/problems";
+import { isFavorited, toggleFavorite } from "@/lib/favorites";
+import { useEffect, useState } from "react";
 
 type ProblemHeaderProps = {
   id: string;
@@ -20,6 +22,17 @@ export function ProblemHeader({
   tags,
 }: ProblemHeaderProps) {
   const navigate = useNavigate();
+  const [favorited, setFavorited] = useState(false);
+
+  useEffect(() => {
+    setFavorited(isFavorited(id, "problem"));
+  }, [id]);
+
+  const handleFavoriteToggle = () => {
+    const newState = toggleFavorite(id, "problem");
+    setFavorited(newState);
+  };
+
   const handleShuffle = () => {
     const next = getRandomProblem({ module, excludeId: id });
     if (next) navigate(`/p/${next.id}`);
@@ -92,6 +105,21 @@ export function ProblemHeader({
           <div className="flex-1" />
         )}
         <div className="flex items-center gap-1">
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon-sm"
+            onClick={handleFavoriteToggle}
+            className={
+              favorited
+                ? "text-red-500 hover:text-red-600"
+                : "text-muted-foreground hover:text-foreground"
+            }
+            aria-label={favorited ? "取消收藏" : "收藏"}
+            title={favorited ? "取消收藏" : "收藏"}
+          >
+            <Heart className={favorited ? "fill-current" : ""} />
+          </Button>
           {mod ? (
             <Button
               type="button"

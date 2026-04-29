@@ -1,6 +1,7 @@
 import {
   ArrowLeft,
   BookOpen,
+  Heart,
   Lightbulb,
   ListChecks,
   Sparkles,
@@ -27,6 +28,8 @@ import {
 } from "@/data/knowledge";
 import { SITE_NAME, SITE_URL, buildMeta } from "@/lib/seo";
 import { cn } from "@/lib/utils";
+import { isFavorited, toggleFavorite } from "@/lib/favorites";
+import { useEffect, useState } from "react";
 
 export const meta: MetaFunction = ({ params }) => {
   const entry = getKnowledgeBySlug(params.slug as string | undefined);
@@ -85,6 +88,20 @@ const CATEGORY_LABEL: Record<KnowledgeEntry["category"], string> = {
 export default function KnowledgePage() {
   const { slug } = useParams<{ slug: string }>();
   const entry = getKnowledgeBySlug(slug);
+  const [favorited, setFavorited] = useState(false);
+
+  useEffect(() => {
+    if (slug) {
+      setFavorited(isFavorited(slug, "knowledge"));
+    }
+  }, [slug]);
+
+  const handleFavoriteToggle = () => {
+    if (slug) {
+      const newState = toggleFavorite(slug, "knowledge");
+      setFavorited(newState);
+    }
+  };
 
   if (!entry) {
     return <Navigate to="/" replace />;
@@ -118,6 +135,23 @@ export default function KnowledgePage() {
               #{entry.tag}
             </Badge>
           ) : null}
+          <div className="ml-auto">
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon-sm"
+              onClick={handleFavoriteToggle}
+              className={
+                favorited
+                  ? "text-red-500 hover:text-red-600"
+                  : "text-muted-foreground hover:text-foreground"
+              }
+              aria-label={favorited ? "取消收藏" : "收藏"}
+              title={favorited ? "取消收藏" : "收藏"}
+            >
+              <Heart className={favorited ? "fill-current" : ""} />
+            </Button>
+          </div>
         </div>
         <div className="flex items-center gap-2">
           <BookOpen className="size-5 text-primary" />
