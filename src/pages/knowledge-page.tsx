@@ -12,6 +12,7 @@ import { Link, Navigate, useParams, type MetaFunction } from "react-router";
 import { KnowledgeFigures } from "@/components/knowledge-figures";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ShareButton } from "@/components/share-button";
 import {
   Card,
   CardContent,
@@ -135,7 +136,12 @@ export default function KnowledgePage() {
               #{entry.tag}
             </Badge>
           ) : null}
-          <div className="ml-auto">
+          <div className="ml-auto flex items-center gap-1">
+            <ShareButton
+              title={`${entry.name} - 知识点讲解 - 一道+`}
+              url={typeof window !== "undefined" ? window.location.href : ""}
+              text={entry.summary}
+            />
             <Button
               type="button"
               variant="ghost"

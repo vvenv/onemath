@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router";
 import { ArrowLeft, Dices, Heart, Shuffle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ShareButton } from "@/components/share-button";
 import { getModule, type ModuleKey } from "@/lib/modules";
 import { getRandomProblem } from "@/lib/problems";
 import { isFavorited, toggleFavorite } from "@/lib/favorites";
@@ -105,6 +106,15 @@ export function ProblemHeader({
           <div className="flex-1" />
         )}
         <div className="flex items-center gap-1">
+          <ShareButton
+            title={`${title} (#${id}) - 一道+`}
+            url={
+              typeof window !== "undefined"
+                ? `${window.location.origin}/p/${id}`
+                : ""
+            }
+            text={`${grade ? grade + "数学" : ""}${mod?.label ? mod?.label : ""}：${title}`}
+          />
           <Button
             type="button"
             variant="ghost"

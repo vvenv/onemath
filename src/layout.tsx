@@ -3,6 +3,7 @@ import { Outlet } from "react-router";
 import { AppBar } from "@/components/app-bar";
 import { Footer } from "@/components/footer";
 import { WebMCPProvider } from "@/components/web-mcp-provider";
+import { Toaster } from "sonner";
 
 export default function Layout() {
   return (
@@ -13,6 +14,7 @@ export default function Layout() {
       </main>
       <Footer />
       <WebMCPProvider />
+      <Toaster richColors position="top-center" />
     </div>
   );
 }
