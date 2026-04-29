@@ -8,6 +8,7 @@ import { markdownNegotiationPlugin } from "./vite-plugins/markdown-negotiation";
 import { sitemapPlugin } from "./vite-plugins/sitemap";
 import { silenceChromeDevtoolsProbe } from "./vite-plugins/silence-chrome-devtools-probe";
 import { vercelOutputPlugin } from "./vite-plugins/vercel-output";
+import { devApiProxy } from "./vite-plugins/dev-api-proxy";
 
 // Use git commit hash so the value is identical across React Router's two
 // build passes (SSR + client).  `Date.now()` differed between passes,
@@ -32,6 +33,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     silenceChromeDevtoolsProbe,
+    devApiProxy(),
     agentSkills({
       skills: [
         {
@@ -52,6 +54,11 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      // Use local mock for @vercel/kv during development
+      "@vercel/kv": path.resolve(__dirname, "./lib/mocks/vercel-kv.ts"),
     },
+  },
+  ssr: {
+    noExternal: ["@vercel/kv"],
   },
 });

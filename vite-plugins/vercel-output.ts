@@ -187,7 +187,8 @@ export function vercelOutputPlugin(
   const clientDir = path.join(repoRoot, "build/client");
   const outputDir = path.join(repoRoot, ".vercel/output");
   const staticDir = path.join(outputDir, "static");
-  const funcDir = path.join(outputDir, "functions/mcp.func");
+  const mcpFuncDir = path.join(outputDir, "functions/mcp.func");
+  const syncFuncDir = path.join(outputDir, "functions/api/sync.func");
 
   return {
     name: "onemath-vercel-output",
@@ -210,7 +211,8 @@ export function vercelOutputPlugin(
 
         cpSync(clientDir, staticDir, { recursive: true });
 
-        mkdirSync(funcDir, { recursive: true });
+        // --- MCP function ---
+        mkdirSync(mcpFuncDir, { recursive: true });
 
         await esbuild({
           entryPoints: [path.join(repoRoot, "api/mcp.ts")],
@@ -218,30 +220,47 @@ export function vercelOutputPlugin(
           format: "esm",
           platform: "node",
           target: "node22",
-          outfile: path.join(funcDir, "index.mjs"),
+          outfile: path.join(mcpFuncDir, "index.mjs"),
           external: ["@vercel/node"],
           logLevel: "warning",
         });
 
         const catalog = await generateCatalog(repoRoot);
         writeFileSync(
-          path.join(funcDir, "_catalog.json"),
+          path.join(mcpFuncDir, "_catalog.json"),
           JSON.stringify(catalog),
         );
 
+        const vcConfig = {
+          runtime: "nodejs22.x",
+          handler: "index.mjs",
+          launcherType: "Nodejs",
+          shouldAddHelpers: true,
+          maxDuration: 15,
+        };
+
         writeFileSync(
-          path.join(funcDir, ".vc-config.json"),
-          JSON.stringify(
-            {
-              runtime: "nodejs22.x",
-              handler: "index.mjs",
-              launcherType: "Nodejs",
-              shouldAddHelpers: true,
-              maxDuration: 15,
-            },
-            null,
-            2,
-          ),
+          path.join(mcpFuncDir, ".vc-config.json"),
+          JSON.stringify(vcConfig, null, 2),
+        );
+
+        // --- Sync function ---
+        mkdirSync(syncFuncDir, { recursive: true });
+
+        await esbuild({
+          entryPoints: [path.join(repoRoot, "api/sync.ts")],
+          bundle: true,
+          format: "esm",
+          platform: "node",
+          target: "node22",
+          outfile: path.join(syncFuncDir, "index.mjs"),
+          external: ["@vercel/node"],
+          logLevel: "warning",
+        });
+
+        writeFileSync(
+          path.join(syncFuncDir, ".vc-config.json"),
+          JSON.stringify(vcConfig, null, 2),
         );
 
         const config = {
@@ -311,7 +330,8 @@ export function vercelOutputPlugin(
             { src: "^/(k)/?$", dest: "/k/index.html" },
             // `handle: filesystem` resolves both static files under static/
             // and serverless functions under functions/*.func/ — so the MCP
-            // handler at functions/mcp.func/ serves /mcp automatically.
+            // handler at functions/mcp.func/ serves /mcp and the sync handler
+            // at functions/api/sync.func/ serves /api/sync automatically.
             { handle: "filesystem" },
             // Anything still unmatched falls back to react-router's SPA shell.
             // This is a catch-all that only runs if the filesystem didn't find
@@ -327,9 +347,10 @@ export function vercelOutputPlugin(
 
         console.log(
           `[onemath-vercel-output] wrote ${outputDir}
-  - static/              (${readdirSync(staticDir).length} top-level entries from build/client)
-  - functions/mcp.func/  (${catalog.problems.length} problems, ${catalog.knowledge.length} knowledge)
-  - config.json          (${config.routes.length} routes)`,
+  - static/                   (${readdirSync(staticDir).length} top-level entries from build/client)
+  - functions/mcp.func/       (${catalog.problems.length} problems, ${catalog.knowledge.length} knowledge)
+  - functions/api/sync.func/  (QR sync endpoint)
+  - config.json               (${config.routes.length} routes)`,
         );
       },
     },

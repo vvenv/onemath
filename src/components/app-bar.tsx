@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import { BookOpen, Clock, Heart, X } from "lucide-react";
+import { BookOpen, Clock, Heart, QrCode, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -112,6 +112,18 @@ export function AppBar() {
             >
               <Link to="/k">
                 <BookOpen />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="ghost"
+              size="icon-sm"
+              className="text-muted-foreground hover:text-foreground"
+              aria-label="数据同步"
+              title="数据同步"
+            >
+              <Link to="/sync">
+                <QrCode />
               </Link>
             </Button>
             <ThemeSwitcher />
