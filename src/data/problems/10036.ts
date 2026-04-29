@@ -15,13 +15,18 @@ export default {
       label: "容斥原理",
       steps: [
         {
-          text: "至少参加一个 = 28 + 25 − 12 = 41 人；都没参加 = 45 − 41 = 4 人。",
+          text: "分析：要求两个小组都没参加的人数，可以先求至少参加一个小组的人数，再用全班人数减去它。",
           scenes: [
             {
               kind: "svg",
               svg: svg1,
-              caption: "用韦恩图表示：数学28人，语文25人，交集12人",
+              caption: "韦恩图：数学28人，语文25人，交集12人",
             },
+          ],
+        },
+        {
+          text: "容斥原理：至少参加一个 = 数学 + 语文 − 两个都参加 = 28 + 25 − 12 = 41 人；都没参加 = 45 − 41 = 4 人。",
+          scenes: [
             {
               kind: "equation-list",
               rows: [
@@ -35,37 +40,18 @@ export default {
                   rhs: "41 人",
                   badge: "容斥结果",
                 },
-              ],
-              caption: "步骤1：容斥原理求至少参加一个小组的人数",
-            },
-            {
-              kind: "compare-bars",
-              rows: [
                 {
-                  label: "全班",
-                  value: 45,
-                  max: 45,
-                  tone: "primary",
+                  lhs: "都没参加",
+                  rhs: "45 − 41",
+                  status: "keep",
                 },
                 {
-                  label: "至少参加一个",
-                  value: 41,
-                  max: 45,
-                  tone: "muted",
+                  lhs: "=",
+                  rhs: "4 人",
+                  badge: "答案",
                 },
               ],
-              caption: "全班45人，至少参加一个的有41人",
-            },
-            {
-              kind: "result-badges",
-              items: [
-                {
-                  icon: "📊",
-                  count: 4,
-                  label: "都没有参加",
-                },
-              ],
-              caption: "45 - 41 = 4 人两个小组都没有参加",
+              caption: "容斥原理计算",
             },
           ],
         },
