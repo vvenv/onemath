@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
+  <g class="stroke-current fill-none">
+    <circle cx="220" cy="220" r="175" />
+  </g>
+  <g class="fill-current">
+    <circle cx="220" cy="45" r="25" />
+    <circle cx="356.9" cy="111" r="25" />
+    <circle cx="390.6" cy="259" r="25" />
+    <circle cx="296" cy="377.7" r="25" />
+    <circle cx="144" cy="377.7" r="25" />
+    <circle cx="49.4" cy="259" r="25" />
+    <circle cx="83.1" cy="111" r="25" />
+  </g>
+</svg>
