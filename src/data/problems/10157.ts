@@ -1,5 +1,6 @@
-import svg1 from "./figures/10157-1.svg?raw";
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10157-1.svg?raw";
+import svg2 from "./figures/10157-2.svg?raw";
 
 export default {
   id: "10157",
@@ -96,8 +97,7 @@ export default {
       "一个边长为12厘米的正方形，每条边被三等分。将每个顶点与对边的一个三等分点连接，四条连接线围成一个旋转的四边形（阴影部分）。求阴影部分的面积是多少平方厘米？",
     figures: [
       {
-        svg: svg1,
-
+        svg: svg2,
         alt: "正方形ABCD，边长12cm，每边三等分，内部有一个旋转的正方形阴影区域",
       },
     ],
