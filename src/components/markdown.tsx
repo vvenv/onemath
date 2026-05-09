@@ -39,7 +39,7 @@ const components: Options["components"] = {
   code: ({ node: _node, className, ...props }) => (
     <code
       className={cn(
-        "rounded bg-muted px-1 py-0.5 font-mono text-[0.9em]",
+        "rounded bg-muted px-1 py-0.5",
         className,
       )}
       {...props}
@@ -48,7 +48,7 @@ const components: Options["components"] = {
   pre: ({ node: _node, className, ...props }) => (
     <pre
       className={cn(
-        "my-3 overflow-x-auto rounded-md bg-muted p-3 font-mono text-sm",
+        "my-3 overflow-x-auto rounded-md bg-muted p-3",
         className,
       )}
       {...props}
