@@ -1,3 +1,4 @@
+import svg1 from "./figures/10102-1.svg?raw";
 import type { ProblemData } from "@/types/problem";
 
 export default {
@@ -7,7 +8,13 @@ export default {
   difficulty: "进阶",
   module: "杂题",
   question:
-    "两个圆相交。左圆有 5 个位置，右圆有 5 个位置，两圆交集区域共 1 个位置（同时属于两圆）。把 1, 2, 3, …, 9 每个数字各填入一个位置，要求左圆 5 数之和与右圆 5 数之和相等。\n请问：交集位置上的数字必须满足什么条件？最大可能的圆和 S 是多少？",
+    "两个圆相交。左圆有 5 个位置，右圆有 5 个位置，两圆交集区域共 1 个位置（同时属于两圆）。\n把 1, 2, 3, …, 9 每个数字各填入一个位置，要求左圆 5 数之和与右圆 5 数之和相等。\n请问：交集位置上的数字必须满足什么条件？最大可能的圆和 S 是多少？",
+  figures: [
+    {
+      svg: svg1,
+      alt: "两个相交圆，共 9 个位置",
+    },
+  ],
   solutions: [
     {
       key: "overlap",
