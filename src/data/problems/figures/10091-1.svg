@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
+  <g class="stroke-current fill-none">
+    <rect x="20" y="20" width="400" height="400" />
+    <line x1="153" y1="20" x2="153" y2="420" />
+    <line x1="286" y1="20" x2="286" y2="420" />
+    <line x1="20" y1="153" x2="420" y2="153" />
+    <line x1="20" y1="286" x2="420" y2="286" />
+  </g>
+</svg>

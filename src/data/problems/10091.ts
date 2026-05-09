@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/types/problem";
+import svg1 from "./figures/10091-1.svg?raw";
 
 export default {
   id: "10091",
@@ -8,6 +9,12 @@ export default {
   difficulty: "挑战",
   question:
     "把下面 9 个数字各用一次：1, 2, 4, 8, 16, 32, 64, 128, 256，填入 3 × 3 方格中，使每一行、每一列、两条对角线上三个数的乘积都相等。\n问：这个公共乘积（幻积）是多少？",
+  figures: [
+    {
+      svg: svg1,
+      alt: "3×3 空网格",
+    },
+  ],
   solutions: [
     {
       key: "logSum",
