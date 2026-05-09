@@ -213,7 +213,6 @@ export default {
   - 按模块分类（`counting` / `word` / `travel` / `numberCalc` / `geometry` / `magicSquare` / `planning` / `general`）将新标签加入对应数组
   - 确保标签命名简洁、准确反映方法本质，与现有标签风格一致
   - 添加后，`TAG_WHITELIST` 会自动包含新标签（通过 `Object.values(METHOD_TAGS).flat()`）
-- 可选自检（// turbo）：重新跑一次 `node scripts/normalize-tags.mjs`，期望无改动。
 
 ## 质量检查清单（每题生成后逐项核对）
 

@@ -91,14 +91,7 @@ description: Audit and optimize an existing edao.plus problem TS file against th
    pnpm exec tsc --noEmit
    ```
 
-2. Tag 规范化自检（期望无改动；若有改动，说明 tags 仍不合规，回到阶段 2）：
-   // turbo
-
-   ```bash
-   node scripts/normalize-tags.mjs
-   ```
-
-3. 对照 "质量检查清单" 再走一遍，全部打钩后汇总变更说明。
+2. 对照 "质量检查清单" 再走一遍，全部打钩后汇总变更说明。
 
 ## scenes 选型建议
 
@@ -109,7 +102,6 @@ description: Audit and optimize an existing edao.plus problem TS file against th
 先完整过一遍 `generate-problem.md` 的 "质量检查清单"，再补充 `optimize` 专属项：
 
 - [ ] `pnpm exec tsc --noEmit` 通过；`id` 未被改动
-- [ ] `node scripts/normalize-tags.mjs` 无改动
 - [ ] 对照 / 备选解法已合并例行算术，未淹没对比结论
 
 ## 输出格式
