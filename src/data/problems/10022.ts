@@ -7,7 +7,7 @@ export default {
   difficulty: "进阶",
   module: "杂题",
   question:
-    "警察抓获了四个嫌疑人 A, B, C, D。已知只有一人是小偷。他们的供词如下：\nA：不是我。\nB：是 C。\nC：是 D。\nD：C 在胡说。\n已知只有一个人说了真话。请问谁是小偷？",
+    "警察抓获了四个嫌疑人 A, B, C, D。已知只有一人是小偷。他们的供词如下：\n- A：不是我。\n- B：是 C。\n- C：是 D。\n- D：C 在胡说。\n\n已知只有一个人说了真话。请问谁是小偷？",
   solutions: [
     {
       key: "contradiction",
