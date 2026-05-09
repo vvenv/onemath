@@ -1,3 +1,4 @@
+import svg1 from "./figures/10111-1.svg?raw";
 import type { ProblemData } from "@/types/problem";
 
 export default {
@@ -7,7 +8,13 @@ export default {
   difficulty: "挑战",
   module: "杂题",
   question:
-    "把 1, 2, 3, 4, 5, 6 这 6 个数字各用一次，填入三角形的 3 个顶点和 3 条边的中点，使三角形每条边上 3 个数字（两端顶点 + 中点）之和都相等。\n问：这个公共边和 S 的最大值是多少？此时 3 个顶点上的数字之和等于多少？请给出一种使 S 达到最大的具体填法。",
+    "如图，把 1, 2, 3, 4, 5, 6 这 6 个数字各用一次，填入三角形的 3 个顶点和 3 条边的中点，使三角形每条边上 3 个数字（两端顶点 + 中点）之和都相等。\n问：\n- 这个公共边和 S 的最大值是多少？\n- 此时 3 个顶点上的数字之和等于多少？\n- 请给出一种使 S 达到最大的具体填法。",
+  figures: [
+    {
+      svg: svg1,
+      alt: "三角形数阵 6 个位置",
+    },
+  ],
   solutions: [
     {
       key: "max",

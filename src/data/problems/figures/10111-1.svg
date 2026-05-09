@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
+  <g class="stroke-current fill-none">
+    <polygon points="220,82 380,358 60,358" />
+  </g>
+  <g class="fill-current">
+    <circle cx="220" cy="82" r="40" />
+    <circle cx="60" cy="358" r="40" />
+    <circle cx="380" cy="358" r="40" />
+    <circle cx="140" cy="220" r="40" />
+    <circle cx="300" cy="220" r="40" />
+    <circle cx="220" cy="358" r="40" />
+  </g>
+</svg>
