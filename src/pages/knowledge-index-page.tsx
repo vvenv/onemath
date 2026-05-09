@@ -83,7 +83,7 @@ export default function KnowledgeIndexPage() {
       <header className="flex flex-col gap-2">
         <div className="flex items-center gap-2">
           <BookOpen className="size-5" />
-          <h1 className="font-heading text-2xl leading-tight font-semibold tracking-tight">
+          <h1 className="text-2xl leading-tight font-semibold tracking-tight">
             方法手册
           </h1>
         </div>
@@ -99,7 +99,7 @@ export default function KnowledgeIndexPage() {
             <Collapsible key={cat} defaultOpen>
               <CollapsibleTrigger className="group flex w-full items-center gap-3 py-2">
                 <div className="flex flex-1 items-center gap-2">
-                  <h2 className="font-heading text-lg font-semibold tracking-tight">
+                  <h2 className="text-lg font-semibold tracking-tight">
                     {CATEGORY_LABEL[cat]}
                   </h2>
                   <Badge

@@ -73,7 +73,7 @@ export function AppBar() {
           >
             <Logo />
             <span className="truncate">
-              <span className="font-heading text-base font-semibold tracking-tight">
+              <span className="text-base font-semibold tracking-tight">
                 一道<sup>+</sup> / edao.plus
               </span>
             </span>

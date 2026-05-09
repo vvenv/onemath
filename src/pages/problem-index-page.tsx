@@ -138,7 +138,7 @@ export default function ProblemIndexPage() {
       <header className="flex flex-col gap-2">
         <div className="flex items-center gap-2">
           <ListFilter className="size-5" />
-          <h1 className="font-heading text-2xl leading-tight font-semibold tracking-tight">
+          <h1 className="text-2xl leading-tight font-semibold tracking-tight">
             题目列表
           </h1>
         </div>

@@ -97,7 +97,7 @@ export default function KnowledgePage() {
                 <ArrowLeft />
               </Link>
             </Button>
-            <h1 className="font-heading text-2xl leading-tight font-semibold tracking-tight">
+            <h1 className="text-2xl leading-tight font-semibold tracking-tight">
               {entry.name}
             </h1>
           </div>

@@ -66,7 +66,7 @@ export function ProblemHeader({
         <span className="text-xs font-medium text-muted-foreground tabular-nums">
           #{id}
         </span>
-        <h1 className="font-heading text-2xl leading-tight font-semibold tracking-tight">
+        <h1 className="text-2xl leading-tight font-semibold tracking-tight">
           {title}
         </h1>
       </div>
