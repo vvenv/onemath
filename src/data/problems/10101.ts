@@ -1,3 +1,4 @@
+import svg1 from "./figures/10101-1.svg?raw";
 import type { ProblemData } from "@/types/problem";
 
 export default {
@@ -7,7 +8,13 @@ export default {
   module: "杂题",
   difficulty: "基础",
   question:
-    "一个正方形的 4 个顶点 + 4 条边的中点共 8 个位置。把 1, 2, 3, 4, 5, 6, 7, 8 这 8 个数字各用一次填入这 8 个位置，使正方形每条边上 3 个数（两端顶点 + 1 个中点）的和都相等。\n问：这个相等的边和 S 可能的取值有几种？最大是多少？",
+    "如图，把 1, 2, 3, 4, 5, 6, 7, 8 这 8 个数字各用一次填入 8 个圆，使正方形每条边上 3 个数的和都相等。\n问：\n- 这个相等的边和 S 可能的取值有几种？\n- 最大是多少？",
+  figures: [
+    {
+      svg: svg1,
+      alt: "正方形，4 个顶点（较大圆点）和 4 条边中点（较小圆点）",
+    },
+  ],
   solutions: [
     {
       key: "sum",

@@ -11,7 +11,7 @@ export function ProblemFigures({ figures, className }: ProblemFiguresProps) {
   return (
     <div
       className={cn(
-        "grid gap-3",
+        "grid gap-3 mt-3",
         figures.length > 1 ? "sm:grid-cols-2" : "sm:grid-cols-1",
         className,
       )}

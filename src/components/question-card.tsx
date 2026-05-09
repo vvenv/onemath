@@ -16,7 +16,7 @@ export function QuestionCard({ question, figures }: QuestionCardProps) {
           题目
         </CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-col gap-3">
+      <CardContent className="flex flex-col">
         <Markdown>
           {question}
         </Markdown>
