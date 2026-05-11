@@ -1,6 +1,5 @@
 import type { ProblemData } from "@/types/problem";
 import svg1 from "./figures/10062-1.svg?raw";
-import svg2 from "./figures/10062-2.svg?raw";
 
 export default {
   id: "10062",
@@ -25,12 +24,6 @@ export default {
           text: "用隔板法：在苹果形成的空隙中放隔板来分苹果。",
           scenes: [
             {
-              kind: "svg",
-              svg: svg2,
-
-              alt: "隔板法示意：10个苹果+2块隔板",
-            },
-            {
               kind: "equation-list",
               rows: [
                 {
@@ -43,37 +36,7 @@ export default {
                 },
                 {
                   lhs: "分法总数",
-                  rhs: "C(9, 2) = 9×8÷2 = 36",
-                  badge: "结论",
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      key: "equation",
-      label: "正整数解法",
-      steps: [
-        {
-          text: "设 a+b+c=10(a,b,c≥1)，代换得 a'+b'+c'=7(≥0)，解数=C(9,2)=36 种。",
-          scenes: [
-            {
-              kind: "equation-list",
-              rows: [
-                {
-                  lhs: "原方程",
-                  rhs: "a + b + c = 10 (a,b,c ≥ 1)",
-                },
-                {
-                  lhs: "代换后",
-                  rhs: "a' + b' + c' = 7 (≥ 0)",
-                  note: "每人先分到 1 个",
-                },
-                {
-                  lhs: "解的个数",
-                  rhs: "C(9, 2) = 36",
+                  rhs: "C(9, 2) = 9 × 8 ÷ 2 = 36",
                   badge: "结论",
                 },
               ],

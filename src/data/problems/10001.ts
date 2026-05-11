@@ -6,7 +6,8 @@ export default {
   grade: "三年级",
   difficulty: "基础",
   module: "应用题",
-  question: "笼子里有 🐔 和 🐰，共 30 个头，88 只脚。问 🐔 和 🐰 各有多少只？",
+  question:
+    "笼子里有 🐔 和 🐰，共 30 个头，88 只脚。\n\n问 🐔 和 🐰 各有多少只？",
   solutions: [
     {
       key: "drawing",

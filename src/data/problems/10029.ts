@@ -13,7 +13,7 @@ export default {
       label: "分步代入法",
       steps: [
         {
-          text: "3 ⊙ 4 = 2 × 3 + 4 = 10；\n\n10 ⊙ 5 = 2 × 10 + 5 = 25。",
+          text: "按定义分步代入计算。",
           scenes: [
             {
               kind: "equation-list",
@@ -38,7 +38,7 @@ export default {
     answer: {
       value: 13,
     },
-    hint: "先算 8 ※ 20 = (8 + 20)/2 = 14，再算 12 ※ 14 = (12 + 14)/2 = 13。",
+    hint: "先算括号内的 8 ※ 20，再算 12 ※ (结果)。",
   },
-  tags: ["分步代入法"],
+  tags: [],
 } satisfies ProblemData;

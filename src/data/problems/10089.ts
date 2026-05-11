@@ -58,7 +58,7 @@ export default {
     },
   ],
   variant: {
-    question: "n 阶幻方（n 为奇数）填入 1 到 n²，问 n=7 时幻和等于多少？",
+    question: "n 阶幻方（n 为奇数）填入 1 到 n²。\n\n问 n=7 时幻和等于多少？",
     fields: [
       {
         key: "sum",

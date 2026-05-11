@@ -7,7 +7,7 @@ export default {
   difficulty: "基础",
   module: "应用题",
   question:
-    "小明和小红一共有 63 张卡片，小明的卡片数量是小红的 2 倍。请问小明和小红各有多少张卡片？",
+    "小明和小红一共有 63 张卡片，小明的卡片数量是小红的 2 倍。\n\n请问小明和小红各有多少张卡片？",
   solutions: [
     {
       key: "multiple",

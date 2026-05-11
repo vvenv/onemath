@@ -43,9 +43,7 @@ export default {
           scenes: [
             {
               kind: "equation-list",
-              rows: [
-                { lhs: "f(1)", rhs: "1", status: "keep" },
-              ],
+              rows: [{ lhs: "f(1)", rhs: "1", status: "keep" }],
             },
           ],
         },
@@ -56,7 +54,11 @@ export default {
               kind: "equation-list",
               rows: [
                 { lhs: "f(2)", rhs: "2 × f(1) + 1 = 2 × 1 + 1 = 3" },
-                { lhs: "f(3)", rhs: "2 × f(2) + 1 = 2 × 3 + 1 = 7", status: "keep" },
+                {
+                  lhs: "f(3)",
+                  rhs: "2 × f(2) + 1 = 2 × 3 + 1 = 7",
+                  status: "keep",
+                },
               ],
             },
           ],
@@ -106,7 +108,7 @@ export default {
   ],
   variant: {
     question:
-      "汉诺塔问题：有 4 个大小不同的圆盘，每次只能移动一个，大圆盘不能放在小圆盘上面。将所有圆盘从 A 柱移到 C 柱，最少需要移动多少次？",
+      "汉诺塔问题：有 4 个大小不同的圆盘，每次只能移动一个，大圆盘不能放在小圆盘上面。\n\n将所有圆盘从 A 柱移到 C 柱，最少需要移动多少次？",
     fields: [
       {
         key: "moves",

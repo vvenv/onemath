@@ -57,7 +57,7 @@ export default {
   ],
   variant: {
     question:
-      "一件商品先降价 25%，再提价 25%。如果现价是 180 元，原价是多少元？",
+      "一件商品先降价 25%，再提价 25%。如果现价是 180 元。\n\n原价是多少元？",
     fields: [
       {
         key: "original",

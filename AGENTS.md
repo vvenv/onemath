@@ -53,10 +53,10 @@
 
 ## Question Formatting (`src/data/problems/*.ts`)
 
-- Add line breaks (`\n`) to the `question` field to improve readability:
-  - Separate conditions/descriptions from the main question
-  - Separate multiple questions when the problem asks more than one thing
-  - Example: `"条件描述。\n主问题？"` or `"条件描述。\n第一个问题？\n第二个问题？"`
+- Add line breaks (`\n\n`) to the `question` field to improve readability:
+  - Separate conditions/descriptions from the main question with `\n\n`
+  - Separate multiple questions when the problem asks more than one thing with `\n\n`
+  - Example: `"条件描述。\n\n主问题？"` or `"条件描述。\n\n第一个问题？\n\n第二个问题？"`
 
 ## Scene Labels (`compare-bars`, `equation-list`, etc.)
 

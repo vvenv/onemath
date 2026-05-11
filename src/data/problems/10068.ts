@@ -62,7 +62,8 @@ export default {
     },
   ],
   variant: {
-    question: "7 个人围着圆桌坐，旋转看作同一种坐法，一共有多少种不同的坐法？",
+    question:
+      "7 个人围着圆桌坐，旋转看作同一种坐法。\n\n一共有多少种不同的坐法？",
     fields: [
       {
         key: "answer",

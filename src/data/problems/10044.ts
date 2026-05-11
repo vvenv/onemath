@@ -58,7 +58,8 @@ export default {
     },
   ],
   variant: {
-    question: "一个数除以 3 余 2，除以 5 余 3，除以 7 余 2。这个数最小是多少？",
+    question:
+      "一个数除以 3 余 2，除以 5 余 3，除以 7 余 2。\n\n这个数最小是多少？",
     fields: [
       {
         key: "number",

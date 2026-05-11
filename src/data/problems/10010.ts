@@ -7,7 +7,7 @@ export default {
   difficulty: "基础",
   module: "应用题",
   question:
-    "一台织布机 3 小时织布 24 米。照这样计算，8 台同样的织布机 5 小时可以织布多少米？",
+    "一台织布机 3 小时织布 24 米。\n\n照这样计算，8 台同样的织布机 5 小时可以织布多少米？",
   solutions: [
     {
       key: "unit_rate",
