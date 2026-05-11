@@ -8,7 +8,7 @@ export default {
   difficulty: "挑战",
   module: "几何",
   question:
-    "如图，四边形 ABCD 的两条对角线 AC、BD 相交于点 O，把四边形分成四个三角形。\n\n已知三角形 AOB、BOC、COD 的面积依次是 4、6、9。求三角形 AOD 的面积以及四边形 ABCD 的总面积。",
+    "如图，四边形 ABCD 的两条对角线 AC、BD 相交于点 O，把四边形分成四个三角形。\n\n已知三角形 AOB、BOC、COD 的面积依次是 4、6、9。\n\n求三角形 AOD 的面积以及四边形 ABCD 的总面积。",
   figures: [
     {
       svg: svg1,
@@ -57,7 +57,7 @@ export default {
   ],
   variant: {
     question:
-      "四边形 ABCD 两条对角线交于 O。已知 △AOB = 9，△BOC = 12，△COD = 16。求 △AOD 的面积与四边形总面积。",
+      "四边形 ABCD 两条对角线交于 O。已知 △AOB = 9，△BOC = 12，△COD = 16。\n\n求 △AOD 的面积与四边形总面积。",
     fields: [
       {
         key: "aod",

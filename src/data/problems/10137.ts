@@ -8,7 +8,7 @@ export default {
   difficulty: "挑战",
   module: "几何",
   question:
-    "如图，三角形 ABC 中，D 在 AB 上使 BD = 2·DA（即 DA : DB = 1 : 2）；E 在 BC 上使 CE = 2·EB（即 EB : EC = 1 : 2）；F 在 CA 上使 AF = 2·FC（即 FC : FA = 1 : 2）。\n\n连接三条 塞瓦线 AE、BF、CD，它们两两相交形成一个中心小三角形 GHI。证明：△ABC 的面积恰好是 △GHI 面积的 7 倍。",
+    "如图，三角形 ABC 中：\n\n- D 在 AB 上使 BD = 2·DA（即 DA : DB = 1 : 2）\n- E 在 BC 上使 CE = 2·EB（即 EB : EC = 1 : 2）\n- F 在 CA 上使 AF = 2·FC（即 FC : FA = 1 : 2）\n\n连接三条塞瓦线 AE、BF、CD，它们两两相交形成一个中心小三角形 GHI。\n\n证明：△ABC 的面积恰好是 △GHI 面积的 7 倍。",
   figures: [
     {
       svg: svg1,
@@ -16,35 +16,6 @@ export default {
     },
   ],
   solutions: [
-    {
-      key: "routh",
-      label: "燕尾定理 + 巧分中心三角形",
-      steps: [
-        {
-          text: "分析：三条塞瓦线 AE、BF、CD 两两相交给出三个交点 G = BF ∩ CD、H = CD ∩ AE、I = AE ∩ BF，围出中心 △GHI。\n\n要证 △ABC = 7 · △GHI，直接用坐标法算出三个交点，比手工燕尾更稳。",
-        },
-        {
-          text: "建系：取 A(0, 1)、B(0, 0)、C(1, 0)，△ABC = 1/2。\n\n三条塞瓦线的分点 D(0, 2/3)、E(1/3, 0)、F(2/3, 1/3) 给出三线方程 AE: y = 1 − 3x，BF: y = x/2，CD: y = 2/3 − 2x/3。",
-        },
-        {
-          text: "两两求交：I = (2/7, 1/7)，G = (4/7, 2/7)，H = (1/7, 4/7)。三点横纵坐标皆为 1/7 的倍数，预示答案与 7 有关。",
-        },
-        {
-          text: "用行列式公式算 △GHI = (1/2) · |12/49 − 1/49 − 4/49| = 1/14，比原 △ABC = 1/2 小 7 倍，即 △ABC = 7 · △GHI，命题得证。",
-          scenes: [
-            {
-              kind: "equation-list",
-              rows: [
-                { lhs: "I (AE ∩ BF)", rhs: "(2/7, 1/7)" },
-                { lhs: "G (BF ∩ CD)", rhs: "(4/7, 2/7)" },
-                { lhs: "H (CD ∩ AE)", rhs: "(1/7, 4/7)" },
-                { lhs: "△GHI / △ABC", rhs: "1/7", badge: "答案" },
-              ],
-            },
-          ],
-        },
-      ],
-    },
     {
       key: "routh-formula",
       label: "Routh 定理（选学）",
@@ -76,7 +47,7 @@ export default {
   ],
   variant: {
     question:
-      "三角形 ABC 面积为 49。D、E、F 分别在 AB、BC、CA 上，BD = 2DA、CE = 2EB、AF = 2FC。三条 塞瓦线 AE、BF、CD 围出中心三角形 GHI。求 △GHI 的面积。",
+      "三角形 ABC 面积为 49。D、E、F 分别在 AB、BC、CA 上，且 BD = 2DA、CE = 2EB、AF = 2FC。三条塞瓦线 AE、BF、CD 围出中心三角形 GHI。\n\n求 △GHI 的面积。",
     fields: [
       {
         key: "area",

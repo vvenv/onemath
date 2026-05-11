@@ -8,7 +8,7 @@ export default {
   difficulty: "挑战",
   module: "几何",
   question:
-    "如图，平行四边形 ABCD 的面积为 2。把它的四条边依次向外延伸：在 AB 延长线上取 E，使 BE = AB；在 BC 延长线上取 F，使 CF = 2·CB；在 CD 延长线上取 G，使 DG = 3·DC；在 DA 延长线上取 H，使 AH = 4·AD。\n\n连接 EFGH 得到一个四边形。求四边形 EFGH 的面积。",
+    "如图，平行四边形 ABCD 中，AB = 12，AD = 8。\n\nE 是 AD 上一点，AE = 3。连接 BE 并延长，与 CD 所在直线的延长线相交于点 F（F 在 D 的外侧）。求 DF 的长度。",
   figures: [
     {
       svg: svg1,
@@ -65,7 +65,7 @@ export default {
   ],
   variant: {
     question:
-      "平行四边形 ABCD 面积为 3。把它四条边依次向外延长：BE = AB，CF = CB，DG = DC，AH = AD。求四边形 EFGH 的面积。",
+      "平行四边形 ABCD 面积为 3。\n\n把它四条边依次向外延长：BE = AB，CF = CB，DG = DC，AH = AD。求四边形 EFGH 的面积。",
     fields: [
       {
         key: "area",

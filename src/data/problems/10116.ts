@@ -59,7 +59,7 @@ export default {
   ],
   variant: {
     question:
-      "在三角形 ABC 中，D 在 BC 上使 BD = 3DC，E 在 AC 上使 AE = 4EC。已知三角形 DEC 的面积为 2，求三角形 ABC 的面积。",
+      "如图，在三角形 ABC 中，D 是 AB 的中点，E 是 AC 的中点。\n\n连接 DE。已知 △ADE 的面积为 12，求 △ABC 的面积。",
     fields: [
       {
         key: "area",

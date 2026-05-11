@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，三角形 ABC 中，D 在 BC 上，BD : DC = 1 : 2；E 在 AC 上，AE : EC = 2 : 3。AD 与 BE 相交于点 F。\n\n已知四边形 DFEC 的面积为 22，求三角形 ABC 的面积。",
+    "如图，三角形 ABC 中，D 在 BC 上，BD : DC = 1 : 2；E 在 AC 上，AE : EC = 2 : 3。\n\nAD 与 BE 相交于点 F。\n\n已知四边形 DFEC 的面积为 22，求三角形 ABC 的面积。",
   figures: [
     {
       svg: svg1,
@@ -57,7 +57,7 @@ export default {
   ],
   variant: {
     question:
-      "三角形 ABC 中 D 在 BC 上，BD : DC = 1 : 1（D 为 BC 中点）；E 在 AC 上 AE : EC = 1 : 2。AD 与 BE 交于 F。若 △ABC 面积为 30，求四边形 DFEC 的面积。",
+      "三角形 ABC 中，D 在 BC 上，BD : DC = 1 : 1（D 为 BC 中点）；E 在 AC 上，AE : EC = 1 : 2。\n\nAD 与 BE 交于 F。若 △ABC 面积为 30，求四边形 DFEC 的面积。",
     fields: [
       {
         key: "area",

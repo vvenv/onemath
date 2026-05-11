@@ -8,7 +8,7 @@ export default {
   difficulty: "基础",
   module: "几何",
   question:
-    "如图，在三角形 ABC 中，E 在边 AB 上且 AB = 3AE；D 在边 AC 上且 AC = 2AD。\n\n已知三角形 ABC 的面积为 36，求三角形 AED 的面积。",
+    "如图，三角形 ABC 中，D 是 BC 的中点，E 是 AC 的中点。\n\n连接 DE。已知 △ADE 的面积为 8，求 △ABC 的面积。",
   figures: [
     {
       svg: svg1,
@@ -75,7 +75,7 @@ export default {
   ],
   variant: {
     question:
-      "在三角形 ABC 中，D 在 AB 上，AD : DB = 2 : 3；E 在 AC 上，AE : EC = 3 : 1。若三角形 ABC 的面积为 40，求三角形 ADE 的面积。",
+      "在三角形 ABC 中，D 在 AB 上，AD : DB = 2 : 3；E 在 AC 上，AE : EC = 3 : 1。\n\n若三角形 ABC 的面积为 40，求三角形 ADE 的面积。",
     fields: [
       {
         key: "area",

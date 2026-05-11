@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，三角形 ABC 中，D 是 AC 的中点，E、F 是 BC 的三等分点（BE = EF = FC，E 靠近 B）。连接 AE 与 BD 相交于点 M。\n\n已知 △ABC 的面积为 1，求四边形 CDMF 的面积。",
+    "如图，三角形 ABC 中，D 是 AC 的中点，E、F 是 BC 的三等分点（BE = EF = FC，E 靠近 B）。\n\n连接 AE 与 BD 相交于点 M。\n\n已知 △ABC 的面积为 1，求四边形 CDMF 的面积。",
   figures: [
     {
       svg: svg1,
@@ -51,40 +51,10 @@ export default {
         },
       ],
     },
-    {
-      key: "coord",
-      label: "坐标法校核",
-      steps: [
-        {
-          text: "建系：B(0, 0)、C(3, 0)、A(0, 3)（△ABC 面积 = 9/2）。",
-        },
-        {
-          text: "D = (AC 中点) = (1.5, 1.5)；E = (1, 0)（BC 上距 B 的 1/3）；F = (2, 0)。",
-        },
-        {
-          text: "直线 BD：y = x；直线 AE：y = 3 − 3x。联立 x = 3 − 3x ⇒ x = 3/4, y = 3/4 ⇒ M = (3/4, 3/4)。",
-        },
-        {
-          text: "CDMF 面积（按 C → D → M → F 顺序 Shoelace）= (1/2)|3·1.5 − 1.5·0 + 1.5·0.75 − 0.75·1.5 + 0.75·0 − 2·0.75 + 2·0 − 3·0|= (1/2)|4.5 + 0 − 1.5 + 0| = 3/2。",
-        },
-        {
-          text: "比 = (3/2) / (9/2) = 1/3。所以 △ABC = 1 时 CDMF = 1/3。",
-          scenes: [
-            {
-              kind: "equation-list",
-              rows: [
-                { lhs: "M", rhs: "(3/4, 3/4)" },
-                { lhs: "CDMF / △ABC", rhs: "1/3" },
-              ],
-            },
-          ],
-        },
-      ],
-    },
   ],
   variant: {
     question:
-      "三角形 ABC 面积为 60。D 是 AC 中点，E、F 三等分 BC（BE = EF = FC）。AE 与 BD 交于 M。求 △CFM 的面积。",
+      "三角形 ABC 面积为 60。D 是 AC 中点，E、F 三等分 BC（BE = EF = FC）。\n\nAE 与 BD 交于 M。求 △CFM 的面积。",
     fields: [
       {
         key: "area",

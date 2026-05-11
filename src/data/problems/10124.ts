@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，梯形 ABCD 中 AB ∥ CD，两条对角线 AC 与 BD 相交于点 O。\n\n已知三角形 AOB 的面积为 25，三角形 BOC 的面积为 35。求梯形 ABCD 的总面积。",
+    "如图，梯形 ABCD 中 AB ∥ CD，对角线 AC、BD 相交于 O。\n\n已知 S₁ = 9，S₃ = 16。求梯形 ABCD 的总面积。",
   figures: [
     {
       svg: svg1,
@@ -81,7 +81,7 @@ export default {
   ],
   variant: {
     question:
-      "梯形 ABCD 中 AB ∥ CD，对角线交于 O。已知三角形 AOB 的面积为 4，三角形 BOC 的面积为 6。求梯形的总面积。",
+      "梯形 ABCD 中 AB ∥ CD，对角线交于 O。\n\n已知 S₁ = 4，S₃ = 9。求梯形总面积。",
     fields: [
       {
         key: "area",

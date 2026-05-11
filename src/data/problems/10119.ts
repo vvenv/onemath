@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，在三角形 ABC 中，D 在 BA 的延长线上（即 A 在 B、D 之间），AB : AD = 5 : 2；E 在边 AC 上，AE : EC = 3 : 2。\n\n已知三角形 ADE 的面积为 12，求三角形 ABC 的面积。",
+    "如图，三角形 ABC 中，D 在 BC 上使 BD = 2·DC（即 BD : DC = 2 : 1）；E 在 AC 上使 CE = 2·EA（即 CE : EA = 2 : 1）。\n\n连接 DE，DE 与 AB 的延长线相交于点 F。\n\n已知 △ADE 的面积为 6，求 △BDF 的面积。",
   figures: [
     {
       svg: svg1,
@@ -81,7 +81,7 @@ export default {
   ],
   variant: {
     question:
-      "在三角形 ABC 中，D 在 BA 的延长线上，AB : AD = 3 : 1；E 在 AC 上，AE : EC = 2 : 1。若三角形 ADE 的面积为 10，求三角形 ABC 的面积。",
+      "三角形 ABC 中，D 在 BC 上使 BD = 3·DC；E 在 AC 上使 CE = 3·EA。\n\n连接 DE，DE 与 AB 延长线交于 F。已知 △ADE = 4，求 △BDF。",
     fields: [
       {
         key: "area",

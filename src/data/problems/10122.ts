@@ -9,7 +9,7 @@ export default {
   difficulty: "挑战",
   module: "几何",
   question:
-    "如图，三角形 ABC 的面积为 1。D 在 BC 上，且 BC = 5·BD；E 在 AC 上，且 AC = 4·EC（即 AE = 3·EC）。\n\n连接 DE；在线段 DE 上取两点 G、S，使 DG = GS = SE（即 G、S 把 DE 三等分）。连接 AG 并在 AG 上取点 F，使 AF = FG（F 为 AG 的中点）。\n\n求三角形 FGS 的面积。",
+    "如图，三角形 ABC 的面积为 1。\n\nD 在 BC 上，且 BC = 5·BD；E 在 AC 上，且 AC = 4·EC（即 AE = 3·EC）。\n\n连接 DE；在线段 DE 上取两点 G、S，使 DG = GS = SE（即 G、S 把 DE 三等分）。连接 AG 并在 AG 上取点 F，使 AF = FG（F 为 AG 的中点）。\n\n求三角形 FGS 的面积。",
   figures: [
     {
       svg: svg1,
@@ -47,31 +47,6 @@ export default {
                 { label: "△ADE", value: 0.6, max: 1, tone: "muted" },
                 { label: "△ADG", value: 0.2, max: 1, tone: "muted" },
                 { label: "△FGS", value: 0.1, max: 1, tone: "primary" },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      key: "vector",
-      label: "向量/坐标法",
-      steps: [
-        {
-          text: "分析：取 A 为原点，AB、AC 为基底 b、c，|b × c| = 2（因为 △ABC 面积为 1）。把所有分点用 b、c 线性表出，再用叉积公式求 △FGS。",
-        },
-        {
-          text: "逐点表示：D = (4/5)b + (1/5)c，E = (3/4)c，G = (2/3)D + (1/3)E = (8/15)b + (23/60)c，S = (1/3)D + (2/3)E = (4/15)b + (17/30)c，F = G/2 = (4/15)b + (23/120)c。",
-        },
-        {
-          text: "△FGS = (1/2) · |det(G − F, S − F)| · |b × c| = (1/2) · (1/10) · 2 = 1/10。",
-          scenes: [
-            {
-              kind: "equation-list",
-              rows: [
-                { lhs: "G − F", rhs: "(4/15) b + (23/120) c" },
-                { lhs: "S − F", rhs: "(0) b + (45/120) c" },
-                { lhs: "△FGS", rhs: "1/10" },
               ],
             },
           ],

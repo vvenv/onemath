@@ -3,12 +3,12 @@ import type { ProblemData } from "@/types/problem";
 
 export default {
   id: "10159",
-  title: "中线垂直·重心坐标法",
+  title: "中线垂直·阿波罗尼斯定理",
   grade: "六年级",
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，在三角形 ABC 中，D 是 BC 的中点，E 是 CA 的中点。AD 与 BE 相交于点 G（重心）。\n\n已知 AD 垂直于 BE，且满足 AG = 2DG，BG = 2EG。求（BC² + AC²）÷ AB² 的值。",
+    "如图，在三角形 ABC 中，D 是 BC 的中点，E 是 CA 的中点。\n\nAD 与 BE 相交于点 G（重心）。\n\n已知 AD 垂直于 BE，且满足 AG = 2DG，BG = 2EG。求（BC² + AC²）÷ AB² 的值。",
   figures: [
     {
       svg: svg1,
@@ -17,51 +17,8 @@ export default {
   ],
   solutions: [
     {
-      key: "coordinate",
-      label: "坐标法：以重心为原点",
-      steps: [
-        {
-          text: "分析：取重心 G 为坐标原点。由 AG:GD = 2:1 和 BG:GE = 2:1，可设 A、B、D、E 的坐标。利用 AD ⟂ BE 确定坐标关系，再求出三边长。",
-        },
-        {
-          text: "设 G 为原点(0,0)。由 AG:GD = 2:1，设 A(0, 2a)，则 D(0, −a)；由 BG:GE = 2:1，设 B(−2b, 0)，则 E(b, 0)。",
-        },
-        {
-          text: "由 D 是 BC 中点，得 C = 2D − B = (2b, −2a)；由 E 是 CA 中点验证：E = (C + A)/2 = (b, 0)，符合设定。",
-        },
-        {
-          text: "计算三边长：AB² = 4b² + 4a²，AC² = 4b² + 16a²，BC² = 16b² + 4a²。",
-        },
-        {
-          text: "（BC² + AC²）÷ AB² = (16b² + 4a² + 4b² + 16a²) ÷ (4b² + 4a²) = (20b² + 20a²) ÷ (4b² + 4a²) = 5。",
-          scenes: [
-            {
-              kind: "equation-list",
-              rows: [
-                { lhs: "A", rhs: "(0, 2a)" },
-                { lhs: "B", rhs: "(−2b, 0)" },
-                { lhs: "D（BC 中点）", rhs: "(0, −a)" },
-                { lhs: "E（CA 中点）", rhs: "(b, 0)" },
-                { lhs: "C", rhs: "(2b, −2a)" },
-              ],
-            },
-            {
-              kind: "equation-list",
-              rows: [
-                { lhs: "AB²", rhs: "4b² + 4a²" },
-                { lhs: "AC²", rhs: "4b² + 16a²" },
-                { lhs: "BC²", rhs: "16b² + 4a²" },
-                { lhs: "BC² + AC²", rhs: "20b² + 20a²" },
-                { lhs: "（BC² + AC²）÷ AB²", rhs: "5", status: "keep" },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    {
       key: "apollonius",
-      label: "阿波罗尼斯定理（校核）",
+      label: "阿波罗尼斯定理",
       steps: [
         {
           text: "分析：阿波罗尼斯定理给出中线长度与三边的关系：AB² + AC² = 2(AD² + BD²)。结合 AD ⟂ BE 的条件可推导出比例关系。",
@@ -91,7 +48,7 @@ export default {
   ],
   variant: {
     question:
-      "在三角形 ABC 中，D 是 BC 的中点，E 是 CA 的中点。AD 与 BE 相交于点 G。已知 AD 垂直于 BE，且 AG = 3DG，BG = 3EG。求（BC² + AC²）÷ AB² 的值。",
+      "在三角形 ABC 中，D 是 BC 的中点，E 是 CA 的中点。\n\nAD 与 BE 相交于点 G。已知 AD 垂直于 BE，且 AG = 3DG，BG = 3EG。求（BC² + AC²）÷ AB² 的值。",
     fields: [
       {
         key: "ratio",

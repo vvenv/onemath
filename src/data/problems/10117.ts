@@ -8,7 +8,7 @@ export default {
   module: "几何",
   difficulty: "进阶",
   question:
-    "如图，三角形 ABC 中，D 是 BC 的中点，E 在线段 AD 上且 AE : ED = 2 : 1。直线 BE 延长后与边 AC 相交于点 F。\n\n已知三角形 ABC 的面积为 60，求三角形 AEF 的面积。",
+    "如图，三角形 ABC 中，D 是 AC 的中点，E 是 BC 的中点。\n\n连接 DE 并延长，与 AB 的延长线相交于点 F。已知三角形 ABC 的面积为 60，求三角形 AEF 的面积。",
   figures: [
     {
       svg: svg1,
@@ -99,44 +99,10 @@ export default {
         },
       ],
     },
-    {
-      key: "coord",
-      label: "坐标法",
-      steps: [
-        {
-          text: "分析：取 A(0, 12)、B(0, 0)、C(10, 0)，△ABC = 60 与题意一致。D = (5, 0)，E = (10/3, 4)。",
-        },
-        {
-          text: "BE 方程 y = (6/5)x；AC 方程 y = 12 − (6/5)x。联立得 F = (5, 6)，恰是 AC 中点。",
-        },
-        {
-          text: "△AEF = (1/2)·|0·(4 − 6) + (10/3)·(6 − 12) + 5·(12 − 4)| = 10。",
-          scenes: [
-            {
-              kind: "equation-list",
-              rows: [
-                {
-                  lhs: "E",
-                  rhs: "(10/3, 4)",
-                },
-                {
-                  lhs: "F = BE ∩ AC (= AC 的中点)",
-                  rhs: "(5, 6)",
-                },
-                {
-                  lhs: "△AEF",
-                  rhs: "10",
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
   ],
   variant: {
     question:
-      "三角形 ABC 的面积为 45。D 是 BC 的中点，E 在 AD 上使 AE : ED = 1 : 2。直线 BE 与 AC 交于 F。求三角形 AEF 的面积。",
+      "三角形 ABC 的面积为 45。D 是 BC 的中点，E 在 AD 上使 AE : ED = 1 : 2。\n\n直线 BE 与 AC 交于 F。求三角形 AEF 的面积。",
     fields: [
       {
         key: "area",

@@ -76,11 +76,11 @@ export default {
   ],
   variant: {
     question:
-      "在三角形 ABC 中，D 在 AB 上，AD : DB = 3 : 2；E 在 AC 上，AE : EC = 1 : 3。若三角形 ADE 的面积为 6，求三角形 ABC 的面积。",
+      "如图，三角形 ABC 中，D 在 BC 上，BD : DC = 1 : 2；E 在 AC 上，AE : EC = 1 : 2。\n\n连接 DE，DE 与 AB 的延长线相交于点 F。\n\n已知 △ADE 的面积为 6，求 △BDF 的面积。",
     fields: [
       {
         key: "area",
-        label: "△ABC 面积",
+        label: "△BDF 面积",
         type: "number",
       },
     ],

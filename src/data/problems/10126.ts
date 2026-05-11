@@ -49,11 +49,11 @@ export default {
   ],
   variant: {
     question:
-      "正六边形 ABCDEF 的面积为 36。连接 AC 与 BD，它们相交于 P。求三角形 ADP 的面积。",
+      "如图，正六边形 ABCDEF 的边长为 6。\n\n连接 AC、CE、EA，三条对角线两两相交形成中心小三角形 GHI。求三角形 GHI 的面积。",
     fields: [
       {
         key: "area",
-        label: "△ADP 面积",
+        label: "△GHI 面积",
         type: "number",
       },
     ],

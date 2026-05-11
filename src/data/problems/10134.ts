@@ -8,7 +8,7 @@ export default {
   difficulty: "挑战",
   module: "几何",
   question:
-    "如图，正方形 ABCD 的边长为 12。E 是 AB 的中点，F 是 BC 的中点。连接 AF 与 CE 相交于点 G。\n\n求四边形 AGCD 的面积。",
+    "如图，正方形 ABCD 的边长为 12。\n\nE 是 AB 的中点，F 是 BC 的中点。连接 AF 与 CE 相交于点 G。\n\n求四边形 AGCD 的面积。",
   figures: [
     {
       svg: svg1,
@@ -72,7 +72,7 @@ export default {
   ],
   variant: {
     question:
-      "正方形 ABCD 的边长为 6。E 是 AB 的中点，F 是 BC 的中点。AF 与 CE 相交于 G。求四边形 AGCD 的面积。",
+      "正方形 ABCD 的边长为 6。\n\nE 是 AB 的中点，F 是 BC 的中点。AF 与 CE 相交于 G。求四边形 AGCD 的面积。",
     fields: [
       {
         key: "area",

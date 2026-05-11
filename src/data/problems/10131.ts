@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，正方形 ABCD 的边长为 6。E 是边 BC 的中点。连接 DE 与对角线 AC 相交于点 F。\n\n求三角形 DFC 的面积。",
+    "如图，正方形 ABCD 的边长为 8。\n\nE 是 AD 的中点，对角线 AC 与 BE 相交于点 F。\n\n求三角形 CEF 的面积。",
   figures: [
     {
       svg: svg1,
@@ -48,41 +48,14 @@ export default {
         },
       ],
     },
-    {
-      key: "coord",
-      label: "坐标法",
-      steps: [
-        {
-          text: "建系：A(0,6), B(6,6), C(6,0), D(0,0), E(6,3)。",
-        },
-        {
-          text: "直线 DE：y = x/2；直线 AC：y = 6 − x。",
-        },
-        {
-          text: "联立 x/2 = 6 − x ⇒ x = 4, y = 2；F = (4, 2)。",
-        },
-        {
-          text: "△DFC 面积 = (1/2)|0·(2 − 0) + 4·(0 − 0) + 6·(0 − 2)| = 6。",
-          scenes: [
-            {
-              kind: "equation-list",
-              rows: [
-                { lhs: "F", rhs: "(4, 2)" },
-                { lhs: "△DFC", rhs: "6" },
-              ],
-            },
-          ],
-        },
-      ],
-    },
   ],
   variant: {
     question:
-      "正方形 ABCD 边长为 12。E 是 BC 上一点，BE : EC = 2 : 1。DE 与对角线 AC 交于 F。求 △DFC 的面积。",
+      "正方形 ABCD 边长为 6。\n\nE 是 AD 中点，对角线 AC 与 BE 交于 F。求 △CEF 面积。",
     fields: [
       {
         key: "area",
-        label: "△DFC 面积",
+        label: "△CEF 面积",
         type: "number",
       },
     ],

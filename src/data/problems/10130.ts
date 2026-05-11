@@ -8,7 +8,7 @@ export default {
   difficulty: "基础",
   module: "几何",
   question:
-    "如图，平行四边形 ABCD 中，AB = 16，AD = 10。E 在 AD 上且 AE = 4。\n\n连接 BE 并延长，与 CD 所在直线的延长线相交于点 F（F 在 D 的外侧）。求 DF 的长度。",
+    "如图，平行四边形 ABCD 中，AB = 16，AD = 10。\n\nE 在 AD 上且 AE = 4。\n\n连接 BE 并延长，与 CD 所在直线的延长线相交于点 F（F 在 D 的外侧）。求 DF 的长度。",
   figures: [
     {
       svg: svg1,
@@ -50,7 +50,7 @@ export default {
   ],
   variant: {
     question:
-      "平行四边形 ABCD 中 AB = 20，AD = 12。E 在 AD 上使 AE = 3。连接 BE 延长与 CD 延长线交于 F。求 DF。",
+      "平行四边形 ABCD 中，AB = 20，AD = 12。\n\nE 在 AD 上使 AE = 3。连接 BE 延长与 CD 延长线交于 F。求 DF。",
     fields: [
       {
         key: "df",

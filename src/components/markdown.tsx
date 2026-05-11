@@ -31,11 +31,14 @@ const components: Options["components"] = {
     />
   ),
   ul: ({ node: _node, className, ...props }) => (
-    <ul className={cn("my-2 list-disc pl-5 space-y-1", className)} {...props} />
+    <ul
+      className={cn("my-2 list-disc list-inside pl-2 space-y-1", className)}
+      {...props}
+    />
   ),
   ol: ({ node: _node, className, ...props }) => (
     <ol
-      className={cn("my-2 list-decimal pl-5 space-y-1", className)}
+      className={cn("my-2 list-decimal list-inside pl-2 space-y-1", className)}
       {...props}
     />
   ),
