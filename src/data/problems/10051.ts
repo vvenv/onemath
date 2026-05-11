@@ -7,7 +7,7 @@ export default {
   module: "应用题",
   difficulty: "挑战",
   question:
-    "容器中有浓度为 a% 的酒精溶液 100 克。每次操作：倒出 25 克溶液，再加入 25 克水。经过 3 次操作后，浓度变为 27%。\n求原来浓度 a%。",
+    "容器中有浓度为 a% 的酒精溶液 100 克。每次操作：倒出 25 克溶液，再加入 25 克水。经过 3 次操作后，浓度变为 27%。\n\n求原来浓度 a%。",
   solutions: [
     {
       key: "decay_formula",
@@ -40,7 +40,6 @@ export default {
                   status: "keep",
                 },
               ],
-
             },
             {
               kind: "compare-bars",
@@ -70,7 +69,6 @@ export default {
                   tone: "muted",
                 },
               ],
-
             },
           ],
         },

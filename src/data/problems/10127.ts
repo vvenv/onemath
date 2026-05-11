@@ -8,7 +8,7 @@ export default {
   difficulty: "挑战",
   module: "几何",
   question:
-    "如图，四边形 ABCD 的两条对角线 AC、BD 相交于点 O，把四边形分成四个三角形。\n已知三角形 AOB、BOC、COD 的面积依次是 4、6、9。求三角形 AOD 的面积以及四边形 ABCD 的总面积。",
+    "如图，四边形 ABCD 的两条对角线 AC、BD 相交于点 O，把四边形分成四个三角形。\n\n已知三角形 AOB、BOC、COD 的面积依次是 4、6、9。求三角形 AOD 的面积以及四边形 ABCD 的总面积。",
   figures: [
     {
       svg: svg1,
@@ -21,7 +21,7 @@ export default {
       label: "蝴蝶模型（任意四边形都成立）",
       steps: [
         {
-          text: "分析：对于任意两条相交线段 AC、BD 交于 O，在两端连成四边形 ABCD 后，四个小三角形的面积有一个很美的结构。\n设 OA = a₁, OC = a₂, OB = b₁, OD = b₂，设两对角线的夹角为 θ，则：△AOB = (1/2)·a₁·b₁·sinθ, △BOC = (1/2)·a₂·b₁·sinθ, △COD = (1/2)·a₂·b₂·sinθ, △AOD = (1/2)·a₁·b₂·sinθ。因此 △AOB · △COD = △BOC · △AOD，这就是蝴蝶模型——它对任意四边形都成立，不必是梯形。",
+          text: "分析：对于任意两条相交线段 AC、BD 交于 O，在两端连成四边形 ABCD 后，四个小三角形的面积有一个很美的结构。\n\n设 OA = a₁, OC = a₂, OB = b₁, OD = b₂，设两对角线的夹角为 θ，则：△AOB = (1/2)·a₁·b₁·sinθ, △BOC = (1/2)·a₂·b₁·sinθ, △COD = (1/2)·a₂·b₂·sinθ, △AOD = (1/2)·a₁·b₂·sinθ。因此 △AOB · △COD = △BOC · △AOD，这就是蝴蝶模型——它对任意四边形都成立，不必是梯形。",
         },
         {
           text: "套公式。△AOB · △COD = △BOC · △AOD ⇒ 4 × 9 = 6 × △AOD ⇒ △AOD = 36 ÷ 6 = 6。",
@@ -48,13 +48,6 @@ export default {
                 { label: "△BOC", value: 6, max: 10, tone: "muted" },
                 { label: "△COD", value: 9, max: 10, tone: "primary" },
                 { label: "△AOD", value: 6, max: 10, tone: "primary" },
-              ],
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "🔺", count: 6, label: "△AOD" },
-                { icon: "🔷", count: 25, label: "ABCD 总面积" },
               ],
             },
           ],

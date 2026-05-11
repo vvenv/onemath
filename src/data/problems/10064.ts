@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "计数",
   question:
-    "在由 4 行 5 列格点组成的方格网中（点共 4 × 5 = 20 个），小明要从左下角 A 走到右上角 B，每一步只能沿着格子线向右走一格或向上走一格。\n问从 A 到 B 一共有多少条不同的最短路径？",
+    "在由 4 行 5 列格点组成的方格网中（点共 4 × 5 = 20 个），小明要从左下角 A 走到右上角 B，每一步只能沿着格子线向右走一格或向上走一格。\n\n问从 A 到 B 一共有多少条不同的最短路径？",
   figures: [
     {
       svg: svg1,
@@ -49,10 +49,6 @@ export default {
                 { row: 3, col: 3, value: 1 },
                 { row: 3, col: 4, value: 1 },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🛤️", count: 35, label: "条最短路径" }],
             },
           ],
         },
@@ -102,5 +98,5 @@ export default {
     },
     hint: "向右 3 步，向上 3 步，共 6 步，其中选 3 步向上：C(6, 3) = 20。",
   },
-  tags: ["标数法"],
+  tags: ["标数法", "组合"],
 } satisfies ProblemData;

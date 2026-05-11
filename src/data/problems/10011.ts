@@ -7,7 +7,7 @@ export default {
   difficulty: "基础",
   module: "应用题",
   question:
-    "学校合唱队的人数比舞蹈队多 24 人，合唱队人数是舞蹈队的3倍。\n合唱队和舞蹈队各有多少人？",
+    "学校合唱队的人数比舞蹈队多 24 人，合唱队人数是舞蹈队的3倍。\n\n合唱队和舞蹈队各有多少人？",
   solutions: [
     {
       key: "diff_multiple",
@@ -28,15 +28,6 @@ export default {
                   marker: true,
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "💃", count: 12, label: "舞蹈队" },
-                { icon: "🎤", count: 36, label: "合唱队" },
-              ],
-
             },
           ],
         },
@@ -62,7 +53,6 @@ export default {
                 { lhs: "2x", rhs: "24", status: "keep" },
                 { lhs: "x", rhs: "12", status: "keep" },
               ],
-
             },
           ],
         },

@@ -8,7 +8,7 @@ export default {
   difficulty: "挑战",
   module: "几何",
   question:
-    "如图，三角形 ABC 中，D 在 BC 上使 BD : DC = 1 : 2；E 在 AC 上使 AE : EC = 2 : 3。AD 与 BE 相交于点 F。\n已知三角形 BDF 的面积为 4，求三角形 ABC 的面积。",
+    "如图，三角形 ABC 中，D 在 BC 上使 BD : DC = 1 : 2；E 在 AC 上使 AE : EC = 2 : 3。AD 与 BE 相交于点 F。\n\n已知三角形 BDF 的面积为 4，求三角形 ABC 的面积。",
   figures: [
     {
       svg: svg1,
@@ -43,7 +43,6 @@ export default {
                 { lhs: "k (由已知 △BDF = 4)", rhs: "4" },
                 { lhs: "△ABC = 9k", rhs: "36" },
               ],
-
             },
             {
               kind: "compare-bars",
@@ -54,10 +53,6 @@ export default {
                 { label: "△ACF", value: 16, max: 36, tone: "muted" },
                 { label: "△ABC", value: 36, max: 36, tone: "primary" },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔺", count: 36, label: "△ABC 面积" }],
             },
           ],
         },

@@ -8,7 +8,7 @@ export default {
   difficulty: "挑战",
   module: "计数",
   question:
-    "把 6 本各不相同的书，平均分成 3 堆（3 堆之间没有顺序之分，只看“哪几本书放在一起”）。\n一共有多少种不同的分法？",
+    "把 6 本各不相同的书，平均分成 3 堆（3 堆之间没有顺序之分，只看“哪几本书放在一起”）。\n\n一共有多少种不同的分法？",
   figures: [
     {
       svg: svg1,
@@ -45,10 +45,6 @@ export default {
                 { lhs: "3 堆相同大小", rhs: "重复倍数 3! = 6" },
                 { lhs: "分堆数 (结论)", rhs: "90 ÷ 6 = 15", status: "keep" },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "📚", count: 15, label: "种分法" }],
             },
           ],
         },
@@ -89,5 +85,5 @@ export default {
     },
     hint: "学生有区别即“有序分配”：C(6,2) × C(4,2) × C(2,2) = 15 × 6 × 1 = 90。",
   },
-  tags: ["消序法"],
+  tags: ["消序法", "固定参照物法"],
 } satisfies ProblemData;

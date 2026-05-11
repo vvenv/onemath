@@ -8,7 +8,7 @@ export default {
   difficulty: "基础",
   module: "几何",
   question:
-    "如图，在三角形 ABC 中，D 是 AB 的中点；E 在 AC 上，AE : EC = 2 : 1。\n已知三角形 ADE 的面积为 12，求三角形 ABC 的面积。",
+    "如图，在三角形 ABC 中，D 是 AB 的中点；E 在 AC 上，AE : EC = 2 : 1。\n\n已知三角形 ADE 的面积为 12，求三角形 ABC 的面积。",
   figures: [
     {
       svg: svg1,
@@ -41,10 +41,6 @@ export default {
                 { lhs: "△ABC = 12 × 3", rhs: "36", status: "keep" },
               ],
             },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔺", count: 36, label: "△ABC 面积" }],
-            },
           ],
         },
       ],
@@ -54,7 +50,7 @@ export default {
       label: "等积变换两步走",
       steps: [
         {
-          text: "分析：按「等高三角形面积比 = 底之比」两次连用，也能得到同样结论。",
+          text: "分析：按“等高三角形面积比 = 底之比”两次连用，也能得到同样结论。",
         },
         {
           text: "连 DE。△ADE 与 △ABE 同以 AE 为公共底，顶点 D、B 在同一直线 AB 上 ⇒ △ADE : △ABE = AD : AB = 1 : 2。",

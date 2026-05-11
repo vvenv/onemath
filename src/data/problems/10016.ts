@@ -7,7 +7,7 @@ export default {
   difficulty: "进阶",
   module: "应用题",
   question:
-    "老师给小朋友们分糖果。\n如果每人分 5 颗，则少 3 颗；\n如果每人分 4 颗，则多 2 颗。\n请问有多少个小朋友？\n有多少颗糖果？",
+    "老师给小朋友们分糖果。\n\n如果每人分 5 颗，则少 3 颗；\n\n如果每人分 4 颗，则多 2 颗。\n\n请问有多少个小朋友？\n\n有多少颗糖果？",
   solutions: [
     {
       key: "formula",
@@ -25,14 +25,11 @@ export default {
                 count: 3,
                 ticks: [{ count: 1, tone: "accent" }],
                 tone: "accent",
-
               },
               right: {
                 count: 2,
                 ticks: [{ count: 1 }],
-
               },
-
             },
             {
               kind: "compare-bars",
@@ -46,7 +43,6 @@ export default {
                   marker: true,
                 },
               ],
-
             },
             {
               kind: "equation-list",
@@ -58,15 +54,6 @@ export default {
                 },
                 { lhs: "糖果", rhs: "5×5 − 3 = 22", note: "或 4×5 + 2 = 22" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "👧", count: 5, label: "小朋友" },
-                { icon: "🍬", count: 22, label: "糖果" },
-              ],
-
             },
           ],
         },
@@ -95,7 +82,6 @@ export default {
                 { lhs: "5x − 4x", rhs: "2 + 3", status: "keep" },
                 { lhs: "x", rhs: "5", status: "keep" },
               ],
-
             },
           ],
         },
@@ -121,5 +107,5 @@ export default {
     },
     hint: "（盈+亏）÷ 两次分配之差 = 份数",
   },
-  tags: ["假设法", "方程法"],
+  tags: ["公式法", "方程法"],
 } satisfies ProblemData;

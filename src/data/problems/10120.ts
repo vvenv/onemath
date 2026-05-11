@@ -8,7 +8,7 @@ export default {
   difficulty: "挑战",
   module: "几何",
   question:
-    "如图，平行四边形 ABCD 的面积为 2。把它的四条边依次向外延伸：在 AB 延长线上取 E，使 BE = AB；在 BC 延长线上取 F，使 CF = 2·CB；在 CD 延长线上取 G，使 DG = 3·DC；在 DA 延长线上取 H，使 AH = 4·AD。\n连接 EFGH 得到一个四边形。求四边形 EFGH 的面积。",
+    "如图，平行四边形 ABCD 的面积为 2。把它的四条边依次向外延伸：在 AB 延长线上取 E，使 BE = AB；在 BC 延长线上取 F，使 CF = 2·CB；在 CD 延长线上取 G，使 DG = 3·DC；在 DA 延长线上取 H，使 AH = 4·AD。\n\n连接 EFGH 得到一个四边形。求四边形 EFGH 的面积。",
   figures: [
     {
       svg: svg1,
@@ -21,7 +21,7 @@ export default {
       label: "四个角上的共角三角形相加",
       steps: [
         {
-          text: "分析：EFGH 可以拆成中间的平行四边形 ABCD 加上四个「角上」的共角三角形 △AHE、△BEF、△CFG、△DGH。\n每个顶点处两条延长线与原顶点夹角和平行四边形相应角互补，可以直接用鸟头模型（互补型）的夹边乘积比求面积。",
+          text: "分析：EFGH 可以拆成中间的平行四边形 ABCD 加上四个“角上”的共角三角形 △AHE、△BEF、△CFG、△DGH。\n\n每个顶点处两条延长线与原顶点夹角和平行四边形相应角互补，可以直接用鸟头模型（互补型）的夹边乘积比求面积。",
         },
         {
           text: "取 ABCD 一条对角线把它分成两块，每块面积 = 1（即 △ABD = △ABC = △BCD = △CDA = 1），作为四个角上共角三角形的参照。",
@@ -57,7 +57,6 @@ export default {
                   status: "keep",
                 },
               ],
-
             },
           ],
         },

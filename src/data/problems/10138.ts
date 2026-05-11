@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，三角形 ABC 中，D 是 AC 的中点，E、F 是 BC 的三等分点（BE = EF = FC，E 靠近 B）。连接 AE 与 BD 相交于点 M。\n已知 △ABC 的面积为 1，求四边形 CDMF 的面积。",
+    "如图，三角形 ABC 中，D 是 AC 的中点，E、F 是 BC 的三等分点（BE = EF = FC，E 靠近 B）。连接 AE 与 BD 相交于点 M。\n\n已知 △ABC 的面积为 1，求四边形 CDMF 的面积。",
   figures: [
     {
       svg: svg1,
@@ -21,7 +21,7 @@ export default {
       label: "燕尾三块 + 两次底比",
       steps: [
         {
-          text: "分析：M 是塞瓦线 AE、BD 的交点。燕尾定理：由 BE : EC = 1 : 2 得 △ABM : △ACM = 1 : 2；由 AD : DC = 1 : 1 得 △ABM : △BCM = 1 : 1。\n设 △ABM = k，则 △ACM = 2k、△BCM = k，总 △ABC = 4k = 1，k = 1/4。",
+          text: "分析：M 是塞瓦线 AE、BD 的交点。燕尾定理：由 BE : EC = 1 : 2 得 △ABM : △ACM = 1 : 2；由 AD : DC = 1 : 1 得 △ABM : △BCM = 1 : 1。\n\n设 △ABM = k，则 △ACM = 2k、△BCM = k，总 △ABC = 4k = 1，k = 1/4。",
         },
         {
           text: "再按 D、F 位置两次拆块：△CDM = △ACM · (DC/AC) = 2k · 1/2 = k = 1/4；△CFM = △BCM · (CF/CB) = k · 1/3 = 1/12。",
@@ -46,10 +46,6 @@ export default {
                 { label: "△BCM", value: 1, max: 4, tone: "muted" },
                 { label: "CDMF", value: 1.33, max: 4, tone: "primary" },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🟨", count: "1/3", label: "CDMF 面积" }],
             },
           ],
         },

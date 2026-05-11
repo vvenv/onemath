@@ -8,7 +8,7 @@ export default {
   difficulty: "基础",
   module: "几何",
   question:
-    "如图，在三角形 ABC 中，E 在边 AB 上且 AB = 3AE；D 在边 AC 上且 AC = 2AD。\n已知三角形 ABC 的面积为 36，求三角形 AED 的面积。",
+    "如图，在三角形 ABC 中，E 在边 AB 上且 AB = 3AE；D 在边 AC 上且 AC = 2AD。\n\n已知三角形 ABC 的面积为 36，求三角形 AED 的面积。",
   figures: [
     {
       svg: svg1,
@@ -21,7 +21,7 @@ export default {
       label: "鸟头（共角）定理",
       steps: [
         {
-          text: "分析：△AED 与 △ABC 共用顶点 A 及 ∠A，且 E、D 分别在 AB、AC 这两条夹 ∠A 的边上。\n这是典型的「A 字型共角三角形」——两三角形面积之比 = 两对夹边乘积之比。",
+          text: "分析：△AED 与 △ABC 共用顶点 A 及 ∠A，且 E、D 分别在 AB、AC 这两条夹 ∠A 的边上。\n\n这是典型的“A 字型共角三角形”——两三角形面积之比 = 两对夹边乘积之比。",
         },
         {
           text: "读出比例。AB = 3AE ⇒ AE : AB = 1 : 3；AC = 2AD ⇒ AD : AC = 1 : 2。",
@@ -50,7 +50,7 @@ export default {
       label: "等积变换两步走",
       steps: [
         {
-          text: "分析：也可以不记公式，用两次「等高三角形面积比 = 底之比」逐步得到答案。",
+          text: "分析：也可以不记公式，用两次“等高三角形面积比 = 底之比”逐步得到答案。",
         },
         {
           text: "连 ED。△AED 与 △ABD 同以 AD 为公共底，顶点 E、B 在同一直线上 ⇒ 面积比 = AE : AB = 1 : 3。",

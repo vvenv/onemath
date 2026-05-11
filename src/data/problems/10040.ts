@@ -8,7 +8,7 @@ export default {
   module: "数论",
   difficulty: "基础",
   question:
-    "桌上有 5 个杯子，全部杯口朝上。每次同时翻转 3 个杯子，经过若干次操作后，\n能否使所有杯子杯口朝下？",
+    "桌上有 5 个杯子，全部杯口朝上。每次同时翻转 3 个杯子，经过若干次操作后，\n\n能否使所有杯子杯口朝下？",
   solutions: [
     {
       key: "parity",
@@ -22,7 +22,6 @@ export default {
               heads: {
                 count: 5,
               },
-
             },
             {
               kind: "statement-table",
@@ -53,12 +52,10 @@ export default {
                   verdict: "true",
                 },
               ],
-
             },
             {
               kind: "svg",
               svg: svg1,
-
             },
           ],
         },
@@ -94,7 +91,6 @@ export default {
                 },
               ],
               note: "各杯累计翻转：① ② ③ 各 1 次；④ ⑤ 各 3 次；全部奇数 ⇒ 全部由朝上变朝下",
-
             },
           ],
         },
@@ -103,24 +99,6 @@ export default {
         },
         {
           text: "每个杯子翻转奇数次后，杯口方向必然改变，故可实现。",
-          scenes: [
-            {
-              kind: "result-badges",
-              items: [
-                {
-                  icon: "✅",
-                  count: "可以",
-                  label: "能否实现",
-                },
-                {
-                  icon: "🔄",
-                  count: 3,
-                  label: "最少操作次数",
-                },
-              ],
-
-            },
-          ],
         },
       ],
     },

@@ -42,7 +42,6 @@ export default {
                   tone: "primary",
                 },
               ],
-
             },
             {
               kind: "statement-table",
@@ -64,7 +63,6 @@ export default {
                 { speaker: "两端不种", claim: "棵 = 间隔 − 1", badge: "39 棵" },
                 { speaker: "封闭路线", claim: "棵 = 间隔", badge: "40 棵" },
               ],
-
             },
             {
               kind: "equation-list",
@@ -72,12 +70,6 @@ export default {
                 { lhs: "间隔数", rhs: "200 ÷ 5 = 40" },
                 { lhs: "棵数", rhs: "40 + 1 = 41", status: "keep" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🌳", count: 41, label: "树苗" }],
-
             },
           ],
         },
@@ -98,5 +90,5 @@ export default {
     },
     hint: "注意是在“两侧”安装，并且“从头到尾”。",
   },
-  tags: ["线段图法"],
+  tags: ["间隔数法"],
 } satisfies ProblemData;

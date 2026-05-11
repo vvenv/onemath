@@ -7,7 +7,7 @@ export default {
   difficulty: "基础",
   module: "几何",
   question:
-    "四年级同学排成一个实心方阵进行广播操表演，最外层每边站了12人。\n请问这个方阵一共有多少人？\n最外层一共有多少人？",
+    "四年级同学排成一个实心方阵进行广播操表演，最外层每边站了12人。\n\n请问这个方阵一共有多少人？\n\n最外层一共有多少人？",
   solutions: [
     {
       key: "layer",
@@ -19,7 +19,6 @@ export default {
             {
               kind: "lattice",
               lattice: { rows: 12, cols: 12, tone: "accent" },
-
             },
             {
               kind: "equation-list",
@@ -31,7 +30,6 @@ export default {
                   status: "keep",
                 },
               ],
-
             },
           ],
         },
@@ -45,7 +43,7 @@ export default {
           text: "最外层人数 = 总人数 − 内层（10 × 10 = 100）人数 = 144 − 100 = 44 人。",
         },
         {
-          text: "这种方法把「外层」当作两个同心方阵的差，最直观。",
+          text: "这种方法把“外层”当作两个同心方阵的差，最直观。",
           scenes: [
             {
               kind: "compare-bars",
@@ -59,14 +57,12 @@ export default {
                   marker: true,
                 },
               ],
-
             },
             {
               kind: "equation-list",
               rows: [
                 { lhs: "12² − 10²", rhs: "144 − 100 = 44", status: "keep" },
               ],
-
             },
           ],
         },
@@ -75,7 +71,7 @@ export default {
   ],
   variant: {
     question:
-      "一个实心方阵花坛，最外层每边摆了15盆花。\n这个花坛一共用了多少盆花？\n最外层有多少盆？",
+      "一个实心方阵花坛，最外层每边摆了15盆花。\n\n这个花坛一共用了多少盆花？\n\n最外层有多少盆？",
     fields: [
       {
         key: "total",
@@ -92,5 +88,5 @@ export default {
     },
     hint: "最外层人数 = (每边人数 - 1) × 4",
   },
-  tags: ["平方差"],
+  tags: ["面积法"],
 } satisfies ProblemData;

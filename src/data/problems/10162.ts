@@ -6,7 +6,7 @@ export default {
   grade: "六年级",
   difficulty: "进阶",
   module: "数论",
-  question: "两个自然数的最大公约数是 12，这两个数的和是 120。\n求这两个数。",
+  question: "两个自然数的最大公约数是 12，这两个数的和是 120。\n\n求这两个数。",
   solutions: [
     {
       key: "gcd-transformation",
@@ -45,7 +45,6 @@ export default {
                   status: "keep",
                 },
               ],
-
             },
           ],
         },

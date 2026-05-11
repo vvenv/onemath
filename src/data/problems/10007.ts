@@ -7,7 +7,7 @@ export default {
   difficulty: "基础",
   module: "应用题",
   question:
-    "老师给小朋友们分糖果。\n如果每人分 6 颗，会多出 15 颗；\n如果每人分 8 颗，则还差 9 颗。\n请问一共有多少位小朋友？\n一共有多少颗糖果？",
+    "老师给小朋友们分糖果。\n\n如果每人分 6 颗，会多出 15 颗；\n\n如果每人分 8 颗，则还差 9 颗。\n\n请问一共有多少位小朋友？\n\n一共有多少颗糖果？",
   solutions: [
     {
       key: "comparison",
@@ -27,7 +27,6 @@ export default {
                   tone: "primary",
                 },
               ],
-
             },
             {
               kind: "compare-bars",
@@ -35,7 +34,6 @@ export default {
                 { label: "第一种 (6颗/人)", value: 6, max: 8, tone: "muted" },
                 { label: "第二种 (8颗/人)", value: 8, max: 8, tone: "primary" },
               ],
-
             },
             {
               kind: "heads",
@@ -43,15 +41,6 @@ export default {
                 count: 12,
                 ticks: [{ count: 6 }, { count: 2, tone: "accent" }],
               },
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "👧", count: 12, label: "小朋友" },
-                { icon: "🍬", count: 87, label: "糖果总数" },
-              ],
-
             },
           ],
         },
@@ -81,15 +70,6 @@ export default {
                 { lhs: "24", rhs: "2x", status: "keep" },
                 { lhs: "x", rhs: "12", status: "keep" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "👧", count: 12, label: "人" },
-                { icon: "🍬", count: 87, label: "糖果" },
-              ],
-
             },
           ],
         },
@@ -113,7 +93,7 @@ export default {
       rooms: 11,
       students: 54,
     },
-    hint: "第二种分法可以转化为“如果住满需要再增加多少人”，或者直接用方程试试。",
+    hint: "第二种分法可以转化为「如果住满需要再增加多少人」，或者直接用方程试试。",
   },
   tags: ["方程法", "对应思想"],
 } satisfies ProblemData;

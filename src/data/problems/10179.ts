@@ -7,7 +7,7 @@ export default {
   difficulty: "挑战",
   module: "杂题",
   question:
-    "把 20 个球放入 5 个盒子中，每个盒子至少放 1 个球。\n要使其中一个盒子中的球数尽可能多，最多能放多少个球？",
+    "把 20 个球放入 5 个盒子中，每个盒子至少放 1 个球。\n\n要使其中一个盒子中的球数尽可能多，最多能放多少个球？",
   solutions: [
     {
       key: "extreme",
@@ -25,7 +25,6 @@ export default {
                 { lhs: "其他盒子最少", rhs: "4 × 1 = 4", status: "keep" },
                 { lhs: "目标盒子最多", rhs: "20 − 4 = 16", status: "keep" },
               ],
-
             },
             {
               kind: "compare-bars",
@@ -33,12 +32,6 @@ export default {
                 { label: "目标盒子", value: 16, max: 20, tone: "primary" },
                 { label: "其他4个盒子", value: 4, max: 20, tone: "muted" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔮", count: 16, label: "最多球数" }],
-
             },
           ],
         },
@@ -62,7 +55,6 @@ export default {
                 { lhs: "a + b + c + d 最小", rhs: "4", status: "keep" },
                 { lhs: "x 最大", rhs: "20 − 4 = 16", status: "keep" },
               ],
-
             },
           ],
         },

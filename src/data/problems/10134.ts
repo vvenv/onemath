@@ -8,7 +8,7 @@ export default {
   difficulty: "挑战",
   module: "几何",
   question:
-    "如图，正方形 ABCD 的边长为 12。E 是 AB 的中点，F 是 BC 的中点。连接 AF 与 CE 相交于点 G。\n求四边形 AGCD 的面积。",
+    "如图，正方形 ABCD 的边长为 12。E 是 AB 的中点，F 是 BC 的中点。连接 AF 与 CE 相交于点 G。\n\n求四边形 AGCD 的面积。",
   figures: [
     {
       svg: svg1,
@@ -21,13 +21,13 @@ export default {
       label: "拆成 △ACD + △AGC",
       steps: [
         {
-          text: "分析：把 AGCD 沿对角线 AC 拆成两块：AC 下侧的 △ACD（正方形的一半）+ AC 上侧的 △AGC。\n只需定出 G 的位置。",
+          text: "分析：把 AGCD 沿对角线 AC 拆成两块：AC 下侧的 △ACD（正方形的一半）+ AC 上侧的 △AGC。\n\n只需定出 G 的位置。",
         },
         {
           text: "建系 A(0, 12), B(12, 12), C(12, 0), D(0, 0), E(6, 12), F(12, 6)。AF: y = 12 − x/2；CE: y = −2x + 24；联立得 G = (8, 8)。",
         },
         {
-          text: "△ACD = 144/2 = 72；△AGC（A, G, C 三点）行列式 = (1/2)|0·(8−0) + 8·(0−12) + 12·(12−8)| = 24。\nAGCD = 72 + 24 = 96。",
+          text: "△ACD = 144/2 = 72；△AGC（A, G, C 三点）行列式 = (1/2)|0·(8−0) + 8·(0−12) + 12·(12−8)| = 24。\n\nAGCD = 72 + 24 = 96。",
           scenes: [
             {
               kind: "equation-list",
@@ -38,10 +38,6 @@ export default {
                 { lhs: "△AGC", rhs: "24" },
                 { lhs: "AGCD = 72 + 24", rhs: "96", status: "keep" },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔷", count: 96, label: "AGCD 面积" }],
             },
           ],
         },

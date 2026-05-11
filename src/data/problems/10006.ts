@@ -39,7 +39,6 @@ export default {
                 { lhs: "L=4", rhs: "2·(5−4)·5 = 10" },
               ],
               note: "系数 2 来自横竖两个方向",
-
             },
           ],
         },
@@ -50,7 +49,6 @@ export default {
               kind: "equation-list",
               rows: [{ lhs: "L=5 (斜向)", rhs: "2·(5−3)(5−4) = 4" }],
               note: "3-4-5 直角三角形，两个斜向",
-
             },
           ],
         },
@@ -66,12 +64,6 @@ export default {
                 { label: "L=4", value: 10, max: 104, tone: "muted" },
                 { label: "L=5", value: 4, max: 104, tone: "muted" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "📏", count: 104, label: "线段总数" }],
-
             },
           ],
         },
@@ -89,16 +81,6 @@ export default {
         },
         {
           text: "整数长只有：轴向 (1,0)/(0,1) 给 L=1~4；斜向只有 (3,4)/(4,3) 给 L=5；其余如 (1,1)=√2、(1,2)=√5、(2,2)=√8 都是非整数。",
-          scenes: [
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "✅", count: 5, label: "整数长 L=1..5" },
-                { icon: "❌", count: "√2,√5,√8,…", label: "非整舍去" },
-              ],
-
-            },
-          ],
         },
         {
           text: "方向 (dx, dy) 的线段有 (5−dx)(5−dy) 个起始位置，对称方向乘以 2。",
@@ -113,7 +95,6 @@ export default {
                 { lhs: "L=5 (3-4-5 斜向)", rhs: "2·(5−3)(5−4) = 4" },
               ],
               note: "起始位置数 = (5−dx)(5−dy)，对称方向乘 2",
-
             },
           ],
         },

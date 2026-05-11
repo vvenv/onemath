@@ -41,12 +41,6 @@ export default {
                   status: "keep",
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🎲", count: "91/216", label: "概率" }],
-
             },
           ],
         },

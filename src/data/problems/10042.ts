@@ -14,12 +14,11 @@ export default {
       label: "质因数分解法",
       steps: [
         {
-          text: "210 = 2 × 3 × 5 × 7，组合成连续自然数 5、6、7（5 × 6 × 7 = 210）。\n和为 5 + 6 + 7 = 18。",
+          text: "210 = 2 × 3 × 5 × 7，组合成连续自然数 5、6、7（5 × 6 × 7 = 210）。\n\n和为 5 + 6 + 7 = 18。",
           scenes: [
             {
               kind: "svg",
               svg: svg1,
-
             },
             {
               kind: "number-line",
@@ -42,30 +41,6 @@ export default {
                   tone: "primary",
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                {
-                  icon: "5️⃣",
-                  count: 5,
-                },
-                {
-                  icon: "6️⃣",
-                  count: 6,
-                },
-                {
-                  icon: "7️⃣",
-                  count: 7,
-                },
-                {
-                  icon: "➕",
-                  count: 18,
-                  label: "总和",
-                },
-              ],
-
             },
           ],
         },

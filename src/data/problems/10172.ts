@@ -7,7 +7,7 @@ export default {
   difficulty: "挑战",
   module: "行程",
   question:
-    "甲、乙两人同时从同一点出发，沿周长 400 米的环形跑道同向跑步。甲的速度是 5 米/秒，乙的速度是 3 米/秒。\n出发后多少秒两人第一次相遇？",
+    "甲、乙两人同时从同一点出发，沿周长 400 米的环形跑道同向跑步。甲的速度是 5 米/秒，乙的速度是 3 米/秒。\n\n出发后多少秒两人第一次相遇？",
   solutions: [
     {
       key: "relative",
@@ -26,7 +26,6 @@ export default {
                 { lhs: "路程差", rhs: "400", status: "keep" },
                 { lhs: "相遇时间", rhs: "400 ÷ 2 = 200", status: "keep" },
               ],
-
             },
             {
               kind: "compare-bars",
@@ -35,14 +34,6 @@ export default {
                 { label: "乙速度", value: 3, max: 5, tone: "muted" },
                 { label: "相对速度", value: 2, max: 5, tone: "primary" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "⏱️", count: 200, label: "相遇时间", note: "秒" },
-              ],
-
             },
           ],
         },
@@ -53,7 +44,7 @@ export default {
       label: "路程计算法",
       steps: [
         {
-          text: "分析：设 t 秒后两人相遇。甲跑的路程 = 5t 米，乙跑的路程 = 3t 米。\n相遇时甲比乙多跑了一圈：5t − 3t = 400。解得 2t = 400，t = 200 秒。",
+          text: "分析：设 t 秒后两人相遇。甲跑的路程 = 5t 米，乙跑的路程 = 3t 米。\n\n相遇时甲比乙多跑了一圈：5t − 3t = 400。解得 2t = 400，t = 200 秒。",
           scenes: [
             {
               kind: "equation-list",
@@ -62,7 +53,6 @@ export default {
                 { lhs: "2t", rhs: "400" },
                 { lhs: "t", rhs: "200", status: "keep" },
               ],
-
             },
           ],
         },

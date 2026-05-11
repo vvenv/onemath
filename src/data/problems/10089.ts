@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "杂题",
   question:
-    "把 1, 2, 3, …, 25 这 25 个数字各用一次，填入 5 × 5 方格中，使每一行、每一列、两条对角线上 5 个数之和都相等。\n问：这个公共和（幻和）是多少？",
+    "把 1, 2, 3, …, 25 这 25 个数字各用一次，填入 5 × 5 方格中，使每一行、每一列、两条对角线上 5 个数之和都相等。\n\n问：这个公共和（幻和）是多少？",
   figures: [
     {
       svg: svg1,
@@ -53,12 +53,6 @@ export default {
         },
         {
           text: "代入 n=5 得幻和 S = 65。",
-          scenes: [
-            {
-              kind: "result-badges",
-              items: [{ icon: "🎯", count: 65, label: "幻和" }],
-            },
-          ],
         },
       ],
     },

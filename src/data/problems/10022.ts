@@ -7,14 +7,14 @@ export default {
   difficulty: "进阶",
   module: "杂题",
   question:
-    "警察抓获了四个嫌疑人 A, B, C, D。已知只有一人是小偷。他们的供词如下：\n- A：不是我。\n- B：是 C。\n- C：是 D。\n- D：C 在胡说。\n\n已知只有一个人说了真话。请问谁是小偷？",
+    "警察抓获了四个嫌疑人 A, B, C, D。已知只有一人是小偷。他们的供词如下：\n\n- A：不是我。\n\n- B：是 C。\n\n- C：是 D。\n\n- D：C 在胡说。\n\n已知只有一个人说了真话。请问谁是小偷？",
   solutions: [
     {
       key: "contradiction",
       label: "矛盾分析法",
       steps: [
         {
-          text: "C 与 D 互相否定必一真一假，故 A、B 假。\nB「是 C」假 ⇒ 非 C；A「不是我」假 ⇒ 是 A。\n验证：D 为真 ✓。",
+          text: "C 与 D 互相否定必一真一假，故 A、B 假。\n\nB“是 C”假 ⇒ 非 C；A“不是我”假 ⇒ 是 A。\n\n验证：D 为真 ✓。",
           scenes: [
             {
               kind: "statement-table",
@@ -35,7 +35,6 @@ export default {
                 },
               ],
               headers: { speaker: "嫌疑人", claim: "供词" },
-
             },
             {
               kind: "statement-table",
@@ -56,7 +55,6 @@ export default {
                 },
               ],
               headers: { speaker: "嫌疑人", claim: "供词" },
-
             },
             {
               kind: "statement-table",
@@ -78,7 +76,6 @@ export default {
               ],
               headers: { speaker: "嫌疑人", claim: "供词" },
               note: "全场只有一句真话 ⇒ 必定落在 C 或 D 身上",
-
             },
             {
               kind: "statement-table",
@@ -89,7 +86,6 @@ export default {
                 { speaker: "D", claim: "C 在胡说", highlight: "contradiction" },
               ],
               headers: { speaker: "嫌疑人", claim: "供词" },
-
             },
             {
               kind: "statement-table",
@@ -105,7 +101,6 @@ export default {
                 { speaker: "D", claim: "C 在胡说", highlight: "muted" },
               ],
               headers: { speaker: "嫌疑人", claim: "供词" },
-
             },
             {
               kind: "statement-table",
@@ -122,7 +117,6 @@ export default {
                 { speaker: "D", claim: "C 在胡说", highlight: "muted" },
               ],
               headers: { speaker: "嫌疑人", claim: "供词" },
-
             },
             {
               kind: "statement-table",
@@ -145,7 +139,6 @@ export default {
               ],
               headers: { speaker: "嫌疑人", claim: "供词" },
               note: "3 假 + 1 真，符合“只有一人说真话”",
-
             },
           ],
         },
@@ -168,5 +161,5 @@ export default {
     },
     hint: "找出哪两个人说的话是互斥的（甲和丙）。",
   },
-  tags: ["分类讨论"],
+  tags: ["矛盾分析法"],
 } satisfies ProblemData;

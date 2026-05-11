@@ -29,15 +29,6 @@ export default {
                   marker: true,
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "👧", count: 21, label: "小红" },
-                { icon: "👦", count: 42, label: "小明" },
-              ],
-
             },
           ],
         },
@@ -63,7 +54,6 @@ export default {
                 { lhs: "3x", rhs: "63", status: "keep" },
                 { lhs: "x", rhs: "21", status: "keep" },
               ],
-
             },
           ],
         },

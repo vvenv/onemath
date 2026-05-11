@@ -7,14 +7,14 @@ export default {
   difficulty: "挑战",
   module: "数论",
   question:
-    "有一筐苹果，3个3个数余2个，5个5个数余3个，7个7个数余4个。\n这筐苹果最少有多少个？",
+    "有一筐苹果，3个3个数余2个，5个5个数余3个，7个7个数余4个。\n\n这筐苹果最少有多少个？",
   solutions: [
     {
       key: "chinese-remainder",
       label: "中国剩余定理",
       steps: [
         {
-          text: "分析：设苹果数为 N，则 N ≡ 2 (mod 3)，N ≡ 3 (mod 5)，N ≡ 4 (mod 7)。\n从 N ≡ 4 (mod 7) 开始逐步求解：N = 7k + 4，代入得 k ≡ 2 (mod 5)，即 k = 5m + 2；N = 35m + 18，代入得 m ≡ 1 (mod 3)，即 m = 3n + 1；故 N = 105n + 53，最小解 n = 0 时 N = 53。",
+          text: "分析：设苹果数为 N，则 N ≡ 2 (mod 3)，N ≡ 3 (mod 5)，N ≡ 4 (mod 7)。\n\n从 N ≡ 4 (mod 7) 开始逐步求解：N = 7k + 4，代入得 k ≡ 2 (mod 5)，即 k = 5m + 2；N = 35m + 18，代入得 m ≡ 1 (mod 3)，即 m = 3n + 1；故 N = 105n + 53，最小解 n = 0 时 N = 53。",
           scenes: [
             {
               kind: "equation-list",
@@ -34,7 +34,6 @@ export default {
                 { lhs: "m = 3n + 1", rhs: "N = 105n + 53" },
                 { lhs: "最小解", rhs: "n = 0, N = 53", status: "keep" },
               ],
-
             },
           ],
         },

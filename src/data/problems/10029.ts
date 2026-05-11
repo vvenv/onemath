@@ -6,14 +6,14 @@ export default {
   grade: "四年级",
   difficulty: "进阶",
   module: "计算",
-  question: "定义一种新运算“⊙”：a ⊙ b = 2 × a + b。\n求 (3 ⊙ 4) ⊙ 5 的值。",
+  question: "定义一种新运算“⊙”：a ⊙ b = 2 × a + b。\n\n求 (3 ⊙ 4) ⊙ 5 的值。",
   solutions: [
     {
       key: "stepwise",
       label: "分步代入法",
       steps: [
         {
-          text: "3 ⊙ 4 = 2 × 3 + 4 = 10；\n10 ⊙ 5 = 2 × 10 + 5 = 25。",
+          text: "3 ⊙ 4 = 2 × 3 + 4 = 10；\n\n10 ⊙ 5 = 2 × 10 + 5 = 25。",
           scenes: [
             {
               kind: "equation-list",
@@ -21,7 +21,6 @@ export default {
                 { lhs: "3 ⊙ 4", rhs: "2 × 3 + 4 = 10" },
                 { lhs: "10 ⊙ 5", rhs: "2 × 10 + 5 = 25", status: "keep" },
               ],
-
             },
           ],
         },
@@ -41,5 +40,5 @@ export default {
     },
     hint: "先算 8 ※ 20 = (8 + 20)/2 = 14，再算 12 ※ 14 = (12 + 14)/2 = 13。",
   },
-  tags: ["乘法原理"],
+  tags: ["分步代入法"],
 } satisfies ProblemData;

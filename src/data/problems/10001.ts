@@ -13,23 +13,13 @@ export default {
       label: "画图法",
       steps: [
         {
-          text: "画 30 个圆圈代表 30 个头。",
+          text: "用画图法思路：先假设全是 🐔，计算脚数。",
           scenes: [
             {
-              kind: "heads",
-              heads: { count: 30 },
+              kind: "equation-list",
+              rows: [{ lhs: "假设全 🐔 脚数", rhs: "30 × 2 = 60" }],
             },
-          ]
-        },
-        {
-          text: "每个圆圈下画 2 条短线，先假设全是 🐔，共 60 只脚。",
-          scenes: [
-            {
-              kind: "heads",
-              heads: { count: 30, ticks: [{ count: 2 }] },
-
-            },
-          ]
+          ],
         },
         {
           text: "实际有 88 只脚，还差 28 只。",
@@ -46,9 +36,8 @@ export default {
                   marker: true,
                 },
               ],
-
             },
-          ]
+          ],
         },
         {
           text: "每把一只 🐔 变成 🐰，就多 2 只脚，因此 🐰 有 14 只。",
@@ -59,27 +48,11 @@ export default {
                 count: 14,
                 ticks: [{ count: 2 }, { count: 2, tone: "accent" }],
                 tone: "accent",
-
               },
               right: {
                 count: 16,
                 ticks: [{ count: 2 }],
-
               },
-
-            },
-          ]
-        },
-        {
-          text: "🐔 有 16 只。",
-          scenes: [
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "🐰", count: 14 },
-                { icon: "🐔", count: 16 },
-              ],
-
             },
           ],
         },
@@ -101,7 +74,6 @@ export default {
                 { lhs: "🐰", rhs: "28 ÷ 2 = 14", status: "keep" },
                 { lhs: "🐔", rhs: "30 − 14 = 16", status: "keep" },
               ],
-
             },
           ],
         },
@@ -132,7 +104,6 @@ export default {
                 { lhs: "x + y (头数 ①)", rhs: "30" },
                 { lhs: "2x + 4y (脚数 ②)", rhs: "88" },
               ],
-
             },
             {
               kind: "equation-list",
@@ -141,7 +112,6 @@ export default {
                 { lhs: "2x + 4y (保留 ②)", rhs: "88", status: "keep" },
                 { lhs: "2y (② − ①' 消 x)", rhs: "28", status: "keep" },
               ],
-
             },
           ],
         },

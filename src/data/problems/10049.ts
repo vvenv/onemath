@@ -9,7 +9,7 @@ export default {
   difficulty: "挑战",
   module: "应用题",
   question:
-    "有浓度为 10%、20%、40% 的三种酒精溶液。要用它们配制出浓度为 22% 的酒精溶液 600 克，且使用 10% 和 40% 的溶液质量相等。\n三种溶液各需要多少克？",
+    "有浓度为 10%、20%、40% 的三种酒精溶液。要用它们配制出浓度为 22% 的酒精溶液 600 克，且使用 10% 和 40% 的溶液质量相等。\n\n三种溶液各需要多少克？",
   solutions: [
     {
       key: "equal_mass_merge",
@@ -30,12 +30,10 @@ export default {
             {
               kind: "svg",
               svg: svg1,
-
             },
             {
               kind: "svg",
               svg: svg2,
-
             },
             {
               kind: "equation-list",
@@ -61,7 +59,6 @@ export default {
                   status: "keep",
                 },
               ],
-
             },
             {
               kind: "equation-list",
@@ -70,7 +67,6 @@ export default {
                 { lhs: "20% 🧪 溶液", rhs: "360 克" },
                 { lhs: "40% 🧪 溶液", rhs: "120 克" },
               ],
-
             },
           ],
         },
@@ -84,7 +80,7 @@ export default {
           text: "分析：设 10% 取 x 克、40% 同样 x 克、20% 取 y 克。按总质量与总酒精量列方程组：2x + y = 600 与 0.1x + 0.2y + 0.4x = 132，即 0.5x + 0.2y = 132。",
         },
         {
-          text: "代 y = 600 − 2x 消元得 0.1x = 12，解得 x = 120、y = 360。\n答：10% 120 克、20% 360 克、40% 120 克。",
+          text: "代 y = 600 − 2x 消元得 0.1x = 12，解得 x = 120、y = 360。\n\n答：10% 120 克、20% 360 克、40% 120 克。",
           scenes: [
             {
               kind: "equation-list",
@@ -104,7 +100,6 @@ export default {
                 { lhs: "化简", rhs: "0.1x = 12", status: "neutral" },
                 { lhs: "解得", rhs: "x = 120, y = 360", status: "keep" },
               ],
-
             },
             {
               kind: "equation-list",
@@ -113,7 +108,6 @@ export default {
                 { lhs: "20% 🧪 溶液", rhs: "360 克" },
                 { lhs: "40% 🧪 溶液", rhs: "120 克" },
               ],
-
             },
           ],
         },

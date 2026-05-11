@@ -7,7 +7,7 @@ export default {
   module: "计数",
   difficulty: "进阶",
   question:
-    "一个袋子里有红、黄、蓝三种颜色的球各 5 个。\n至少要摸出多少个球，才能保证摸出的球中一定有 2 个颜色相同？",
+    "一个袋子里有红、黄、蓝三种颜色的球各 5 个。\n\n至少要摸出多少个球，才能保证摸出的球中一定有 2 个颜色相同？",
   solutions: [
     {
       key: "pigeonhole",
@@ -40,25 +40,6 @@ export default {
                   badge: "3 个",
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                {
-                  icon: "🔴",
-                  count: 1,
-                },
-                {
-                  icon: "🟡",
-                  count: 1,
-                },
-                {
-                  icon: "🔵",
-                  count: 1,
-                },
-              ],
-
             },
             {
               kind: "equation-list",
@@ -79,7 +60,6 @@ export default {
                   badge: "答案",
                 },
               ],
-
             },
           ],
         },

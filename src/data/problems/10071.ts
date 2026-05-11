@@ -8,7 +8,7 @@ export default {
   difficulty: "基础",
   module: "杂题",
   question:
-    "用一口平底锅烙饼，锅里一次最多同时烙 2 张饼。每张饼有正反两面，每面都要烙 3 分钟才熟。\n现在要烙 3 张饼，最少需要多少分钟？",
+    "用一口平底锅烙饼，锅里一次最多同时烙 2 张饼。每张饼有正反两面，每面都要烙 3 分钟才熟。\n\n现在要烙 3 张饼，最少需要多少分钟？",
   figures: [
     {
       svg: svg1,
@@ -35,10 +35,6 @@ export default {
                   status: "keep",
                 },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "⏱️", count: 9, label: "分钟" }],
             },
           ],
         },

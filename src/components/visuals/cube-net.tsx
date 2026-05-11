@@ -64,7 +64,7 @@ function Face({
           );
         })}
       </div>
-      <span className="absolute inset-0 flex items-center justify-center text-[9px] font-medium text-foreground/50">
+      <span className="absolute inset-0 flex items-center justify-center text-xs font-medium text-foreground/50">
         {label}
       </span>
     </div>

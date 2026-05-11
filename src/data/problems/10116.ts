@@ -8,7 +8,7 @@ export default {
   difficulty: "基础",
   module: "几何",
   question:
-    "如图，在三角形 ABC 中，D 在 BC 上，且 BD = 2DC；E 在 AC 上，且 AE = 3EC。\n已知三角形 DEC 的面积为 3，求三角形 ABC 的面积。",
+    "如图，在三角形 ABC 中，D 在 BC 上，且 BD = 2DC；E 在 AC 上，且 AE = 3EC。\n\n已知三角形 DEC 的面积为 3，求三角形 ABC 的面积。",
   figures: [
     {
       svg: svg1,
@@ -21,7 +21,7 @@ export default {
       label: "两次等积变换",
       steps: [
         {
-          text: "分析：D 把 BC 分成 BD : DC = 2 : 1，所以 DC 占 BC 的 1/3；E 把 AC 分成 AE : EC = 3 : 1，所以 EC 占 AC 的 1/4。\n两条边上的「裁剪比例」可以依次应用。",
+          text: "分析：D 把 BC 分成 BD : DC = 2 : 1，所以 DC 占 BC 的 1/3；E 把 AC 分成 AE : EC = 3 : 1，所以 EC 占 AC 的 1/4。\n\n两条边上的“裁剪比例”可以依次应用。",
         },
         {
           text: "连 AD。△ADC 与 △ABC 同以 A 为顶点，底分别是 DC 与 BC，底在同一直线上 ⇒ 等高 ⇒ △ADC = △ABC × (DC / BC) = △ABC × 1/3。",

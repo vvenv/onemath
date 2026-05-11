@@ -8,14 +8,14 @@ export default {
   module: "应用题",
   difficulty: "挑战",
   question:
-    "有浓度为 5% 的盐水 100 克和浓度为 20% 的盐水 200 克。\n现在要用这两种盐水配制成浓度为 15% 的盐水，\n最多能配制多少克？",
+    "有浓度为 5% 的盐水 100 克和浓度为 20% 的盐水 200 克。\n\n现在要用这两种盐水配制成浓度为 15% 的盐水，\n\n最多能配制多少克？",
   solutions: [
     {
       key: "max_weight",
       label: "极端分析法",
       steps: [
         {
-          text: "十字交叉得 5%:20% = 1:2，现有 100g:200g 恰好符合比例。\n总质量 = 100 + 200 = 300 克。",
+          text: "十字交叉得 5%:20% = 1:2，现有 100g:200g 恰好符合比例。\n\n总质量 = 100 + 200 = 300 克。",
           scenes: [
             {
               kind: "svg",
@@ -47,16 +47,6 @@ export default {
                   claim: "20g",
                   verdict: "true",
                   badge: "40g",
-                },
-              ],
-            },
-            {
-              kind: "result-badges",
-              items: [
-                {
-                  icon: "🧪",
-                  count: 300,
-                  label: "最多配制（克）",
                 },
               ],
             },

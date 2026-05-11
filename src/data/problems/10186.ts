@@ -7,7 +7,7 @@ export default {
   difficulty: "挑战",
   module: "数论",
   question:
-    "桌上有 7 个硬币，全部正面朝上。每次操作必须翻转恰好 4 个硬币。\n经过若干次操作后，能否使所有硬币全部反面朝上？如果能，最少需要多少次操作？",
+    "桌上有 7 个硬币，全部正面朝上。每次操作必须翻转恰好 4 个硬币。\n\n经过若干次操作后，能否使所有硬币全部反面朝上？如果能，最少需要多少次操作？",
   solutions: [
     {
       key: "parity-analysis",
@@ -24,7 +24,6 @@ export default {
                 { lhs: "目标 1 的个数", rhs: "0（偶数）", status: "keep" },
                 { lhs: "结论", rhs: "奇偶性不同，无法实现", status: "keep" },
               ],
-
             },
           ],
         },

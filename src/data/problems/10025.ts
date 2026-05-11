@@ -7,7 +7,7 @@ export default {
   difficulty: "进阶",
   module: "数论",
   question:
-    "一筐鸡蛋，1个1个拿正好拿完；\n2个2个拿剩1个；\n3个3个拿剩1个；\n4个4个拿剩1个；\n5个5个拿剩1个；\n6个6个拿剩1个；\n7个7个拿正好拿完。\n问这筐鸡蛋最少有多少个？",
+    "一筐鸡蛋，1个1个拿正好拿完；\n\n2个2个拿剩1个；\n\n3个3个拿剩1个；\n\n4个4个拿剩1个；\n\n5个5个拿剩1个；\n\n6个6个拿剩1个；\n\n7个7个拿正好拿完。\n\n问这筐鸡蛋最少有多少个？",
   solutions: [
     {
       key: "lcm-remainder",
@@ -32,7 +32,6 @@ export default {
                   tone: "primary",
                 },
               ],
-
             },
             {
               kind: "statement-table",
@@ -53,12 +52,6 @@ export default {
                   highlight: "target",
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🥚", count: 301, label: "最少鸡蛋数" }],
-
             },
           ],
         },

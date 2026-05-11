@@ -14,28 +14,7 @@ export default {
       label: "归一法·单产",
       steps: [
         {
-          text: "8 × 8 × 5 = 320（米）",
-          scenes: [
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "🧵", count: 24, label: "米" },
-                { icon: "🖨️", count: 3, label: "台·小时" },
-              ],
-              separator: "÷",
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "⚙️", count: 8, label: "米/台·小时（单产）" },
-                { icon: "🖨️", count: 8, label: "台" },
-                { icon: "⏱️", count: 5, label: "小时" },
-              ],
-              separator: "×",
-
-            },
-          ],
+          text: "先算单台每小时产量：24 ÷ 3 = 8（米/台·时）。\n\n8 台 5 小时：8 × 8 × 5 = 320（米）。",
         },
       ],
     },
@@ -44,13 +23,13 @@ export default {
       label: "倍比法·台时换算",
       steps: [
         {
-          text: "原方案的「台·时」总数：1 × 3 = 3（台·时）→ 织 24 米。",
+          text: "原方案的“台·时”总数：1 × 3 = 3（台·时）→ 织 24 米。",
         },
         {
-          text: "新方案的「台·时」总数：8 × 5 = 40（台·时）。",
+          text: "新方案的“台·时”总数：8 × 5 = 40（台·时）。",
         },
         {
-          text: "「台·时」扩大到 40 ÷ 3 倍，产量也按相同倍数扩大。",
+          text: "“台·时”扩大到 40 ÷ 3 倍，产量也按相同倍数扩大。",
         },
         {
           text: "总产量：24 × (40 ÷ 3) = 24 ÷ 3 × 40 = 8 × 40 = 320（米）。",
@@ -67,7 +46,6 @@ export default {
                   marker: true,
                 },
               ],
-
             },
             {
               kind: "equation-list",
@@ -75,7 +53,6 @@ export default {
                 { lhs: "24 × (40 ÷ 3)", rhs: "24 ÷ 3 × 40" },
                 { lhs: "= 8 × 40", rhs: "320（米）", status: "keep" },
               ],
-
             },
           ],
         },

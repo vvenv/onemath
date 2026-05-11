@@ -7,7 +7,7 @@ export default {
   difficulty: "基础",
   module: "计算",
   question:
-    "不通过计算（不直接算出具体乘积），比较 31 × 29 和 30 × 30 的大小，\n并说明理由。",
+    "不通过计算（不直接算出具体乘积），比较 31 × 29 和 30 × 30 的大小，\n\n并说明理由。",
   solutions: [
     {
       key: "split",
@@ -24,7 +24,6 @@ export default {
                 { lhs: "", rhs: "900 − 1", status: "keep" },
                 { lhs: "", rhs: "899", status: "keep" },
               ],
-
             },
           ],
         },

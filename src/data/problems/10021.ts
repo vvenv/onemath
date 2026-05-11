@@ -15,7 +15,7 @@ export default {
       label: "平移法",
       steps: [
         {
-          text: "原表面积 6 × 4² = 96 cm²，每坑净增 5−1=4 cm²，6 坑共增 24 cm²。\n总表面积 96 + 24 = 120 cm²。",
+          text: "原表面积 6 × 4² = 96 cm²，每坑净增 5−1=4 cm²，6 坑共增 24 cm²。\n\n总表面积 96 + 24 = 120 cm²。",
           scenes: [
             {
               kind: "cube-net",
@@ -29,13 +29,11 @@ export default {
                   },
                 ],
               },
-
             },
             {
               kind: "pit-diagram",
               removed: ["top"],
               added: ["bottom", "front", "back", "left", "right"],
-
             },
             {
               kind: "compare-bars",
@@ -53,29 +51,6 @@ export default {
                   tone: "primary",
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                {
-                  icon: "⬜",
-                  count: 6,
-                  label: "挖坑数量",
-                },
-                {
-                  icon: "➕",
-                  count: 4,
-                  label: "每个坑净增面积",
-                },
-                {
-                  icon: "📐",
-                  count: 120,
-                  label: "最终表面积(cm²)",
-                },
-              ],
-              separator: "→",
-
             },
           ],
         },

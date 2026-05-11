@@ -8,7 +8,7 @@ export default {
   difficulty: "挑战",
   module: "几何",
   question:
-    "如图，正方形 ABCD 的面积为 120。E 是 AB 的中点，F 是 BC 的中点。连接 AF 与 CE 相交于点 G。\n求三角形 BGF 的面积。",
+    "如图，正方形 ABCD 的面积为 120。E 是 AB 的中点，F 是 BC 的中点。连接 AF 与 CE 相交于点 G。\n\n求三角形 BGF 的面积。",
   figures: [
     {
       svg: svg1,
@@ -21,13 +21,13 @@ export default {
       label: "燕尾定理定位 G",
       steps: [
         {
-          text: "分析：G 在两条 塞瓦线 AF 与 CE 的交点上。在 △ABC 中（把正方形对角线 AC 看成一条辅助线），F 在 BC 上、E 在 AB 上，AF、CE 是两条 塞瓦线。\n用燕尾定理可以算出 G 把 △ABC 分成的三块比例，再和正方形面积挂钩。",
+          text: "分析：G 在两条 塞瓦线 AF 与 CE 的交点上。在 △ABC 中（把正方形对角线 AC 看成一条辅助线），F 在 BC 上、E 在 AB 上，AF、CE 是两条 塞瓦线。\n\n用燕尾定理可以算出 G 把 △ABC 分成的三块比例，再和正方形面积挂钩。",
         },
         {
           text: "△ABC 是正方形的一半 = 120 ÷ 2 = 60。",
         },
         {
-          text: "燕尾：· 塞瓦线 AF（F 在 BC 上），BF : FC = 1 : 1 ⇒ △ABG : △ACG = 1 : 1。· 塞瓦线 CE（E 在 AB 上），AE : EB = 1 : 1 ⇒ △ACG : △BCG = 1 : 1。\n所以 △ABG : △ACG : △BCG = 1 : 1 : 1，每块 = 60 ÷ 3 = 20。",
+          text: "燕尾：· 塞瓦线 AF（F 在 BC 上），BF : FC = 1 : 1 ⇒ △ABG : △ACG = 1 : 1。· 塞瓦线 CE（E 在 AB 上），AE : EB = 1 : 1 ⇒ △ACG : △BCG = 1 : 1。\n\n所以 △ABG : △ACG : △BCG = 1 : 1 : 1，每块 = 60 ÷ 3 = 20。",
         },
         {
           text: "把 △BCG 按 F 在 BC 上的位置拆。△BFG 与 △CFG 同以 G 为顶点、底在 BC 上 ⇒ 比 = BF : FC = 1 : 1 ⇒ △BFG = △BCG ÷ 2 = 10。",
@@ -46,10 +46,6 @@ export default {
                 { lhs: "△BCG = 60 / 3", rhs: "20" },
                 { lhs: "△BFG = △BCG × 1/2", rhs: "10" },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔺", count: 10, label: "△BGF 面积" }],
             },
           ],
         },

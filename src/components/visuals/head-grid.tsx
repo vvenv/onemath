@@ -20,7 +20,7 @@ export function Head({
       />
       {ticks?.map((group, gi) =>
         group.count > 0 ? (
-          <span key={gi} className="flex gap-[3px]" aria-hidden>
+          <span key={gi} className="flex gap-1" aria-hidden>
             {Array.from({ length: group.count }).map((_, i) => (
               <span
                 key={i}

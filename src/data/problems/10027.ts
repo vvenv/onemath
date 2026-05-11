@@ -13,7 +13,7 @@ export default {
       label: "首尾配对法",
       steps: [
         {
-          text: "项数 = (19 − 1) ÷ 2 + 1 = 10，首尾配对每对和 20。\n总和 = 20 × 5 = 100。",
+          text: "项数 = (19 − 1) ÷ 2 + 1 = 10，首尾配对每对和 20。\n\n总和 = 20 × 5 = 100。",
           scenes: [
             {
               kind: "equation-list",
@@ -23,7 +23,6 @@ export default {
                 { lhs: "每对和", rhs: "1 + 19 = 20", status: "keep" },
                 { lhs: "总和", rhs: "20 × 5 = 100", status: "keep" },
               ],
-
             },
           ],
         },
@@ -43,5 +42,5 @@ export default {
     },
     hint: "先计算项数，再使用首尾配对法。",
   },
-  tags: ["首尾配对"],
+  tags: ["首尾配对法"],
 } satisfies ProblemData;

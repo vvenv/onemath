@@ -9,7 +9,7 @@ export default {
   difficulty: "进阶",
   module: "计数",
   question:
-    "3 个男生和 2 个女生站成一排合影，要求 2 个女生必须相邻。\n一共有多少种不同的站法？",
+    "3 个男生和 2 个女生站成一排合影，要求 2 个女生必须相邻。\n\n一共有多少种不同的站法？",
   figures: [
     {
       svg: svg1,
@@ -45,10 +45,6 @@ export default {
                 },
                 { lhs: "总站法 (结论)", rhs: "4! × 2! = 48", status: "keep" },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🧍", count: 48, label: "种站法" }],
             },
           ],
         },

@@ -9,7 +9,7 @@ export default {
   module: "几何",
   difficulty: "挑战",
   question:
-    "如图，直角梯形 ABCD 中，AD ∥ BC，AB ⊥ AD，AD = 5，BC = 7，AB = 8。E 是 AB 上一点，AE = 5（即 EB = 3）；F 是 CD 上一点，DF : FC = 2 : 3。\n求三角形 DEF 的面积。",
+    "如图，直角梯形 ABCD 中，AD ∥ BC，AB ⊥ AD，AD = 5，BC = 7，AB = 8。E 是 AB 上一点，AE = 5（即 EB = 3）；F 是 CD 上一点，DF : FC = 2 : 3。\n\n求三角形 DEF 的面积。",
   figures: [
     {
       svg: svg1,
@@ -92,7 +92,7 @@ export default {
       label: "坐标法",
       steps: [
         {
-          text: "分析：取 A 作原点、AB 沿 x 轴、AD 沿 y 轴建系：A(0, 0)、B(8, 0)、D(0, 5)、C(8, 7)、E(5, 0)。\nDF : FC = 2 : 3 ⇒ F = D + (2/5)(C − D) = (16/5, 29/5)。",
+          text: "分析：取 A 作原点、AB 沿 x 轴、AD 沿 y 轴建系：A(0, 0)、B(8, 0)、D(0, 5)、C(8, 7)、E(5, 0)。\n\nDF : FC = 2 : 3 ⇒ F = D + (2/5)(C − D) = (16/5, 29/5)。",
           scenes: [],
         },
         {

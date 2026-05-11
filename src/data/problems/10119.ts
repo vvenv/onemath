@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，在三角形 ABC 中，D 在 BA 的延长线上（即 A 在 B、D 之间），AB : AD = 5 : 2；E 在边 AC 上，AE : EC = 3 : 2。\n已知三角形 ADE 的面积为 12，求三角形 ABC 的面积。",
+    "如图，在三角形 ABC 中，D 在 BA 的延长线上（即 A 在 B、D 之间），AB : AD = 5 : 2；E 在边 AC 上，AE : EC = 3 : 2。\n\n已知三角形 ADE 的面积为 12，求三角形 ABC 的面积。",
   figures: [
     {
       svg: svg1,
@@ -21,7 +21,7 @@ export default {
       label: "鸟头定理·互补型",
       steps: [
         {
-          text: "分析：∠DAE 与 ∠BAC 在同一顶点 A，但 D 在 BA 的延长线上，所以 AD 的方向和 AB 相反；AE 的方向则和 AC 相同。\n因此 ∠DAE 与 ∠BAC 互为补角（相加 = 180°）。互补角的正弦值相等，所以「鸟头定理」对互补型同样成立：△ADE 与 △ABC 的面积比 = 两对夹边乘积之比。",
+          text: "分析：∠DAE 与 ∠BAC 在同一顶点 A，但 D 在 BA 的延长线上，所以 AD 的方向和 AB 相反；AE 的方向则和 AC 相同。\n\n因此 ∠DAE 与 ∠BAC 互为补角（相加 = 180°）。互补角的正弦值相等，所以“鸟头定理”对互补型同样成立：△ADE 与 △ABC 的面积比 = 两对夹边乘积之比。",
         },
         {
           text: "读出比例。AB : AD = 5 : 2 ⇒ AD : AB = 2 : 5；AE : EC = 3 : 2 ⇒ AE : AC = 3 : 5。",
@@ -52,7 +52,7 @@ export default {
       label: "两次等积变换（避开鸟头定理）",
       steps: [
         {
-          text: "分析：若尚未接触鸟头定理，也可以通过连 BE，用「等高三角形面积比 = 底之比」两次完成转化。",
+          text: "分析：若尚未接触鸟头定理，也可以通过连 BE，用“等高三角形面积比 = 底之比”两次完成转化。",
         },
         {
           text: "△ABE 与 △ABC 同以 AB 为底、同高 ⇒ △ABE : △ABC = AE : AC = 3 : 5，即 △ABE = (3/5)·△ABC。",

@@ -7,14 +7,14 @@ export default {
   difficulty: "基础",
   module: "杂题",
   question:
-    '为迎接节日，公园里安装了一排彩灯，按照“3 盏红灯、2 盏黄灯、1 盏蓝灯、2 盏绿灯”的顺序循环排列。\n请问：\n- 第 2026 盏灯是什么颜色？\n- 在这 2026 盏灯中，红灯一共有多少盏？',
+    "为迎接节日，公园里安装了一排彩灯，按照“3 盏红灯、2 盏黄灯、1 盏蓝灯、2 盏绿灯”的顺序循环排列。\n\n请问：\n\n- 第 2026 盏灯是什么颜色？\n\n- 在这 2026 盏灯中，红灯一共有多少盏？",
   solutions: [
     {
       key: "cycle",
       label: "周期法",
       steps: [
         {
-          text: "周期 8 盏，2026 ÷ 8 = 253 余 2，第 2026 盏为红色（前 2 盏仍红灯）。\n红灯总数 = 253 × 3 + 2 = 761 盏。",
+          text: "周期 8 盏，2026 ÷ 8 = 253 余 2，第 2026 盏为红色（前 2 盏仍红灯）。\n\n红灯总数 = 253 × 3 + 2 = 761 盏。",
           scenes: [
             {
               kind: "result-badges",
@@ -25,7 +25,6 @@ export default {
                 { icon: "🟢", count: 2 },
               ],
               separator: "→",
-
             },
             {
               kind: "compare-bars",
@@ -39,7 +38,6 @@ export default {
                   marker: true,
                 },
               ],
-
             },
             {
               kind: "heads-split",
@@ -47,10 +45,8 @@ export default {
                 count: 253,
                 ticks: [{ count: 3 }],
                 tone: "accent",
-
               },
               right: { count: 2, ticks: [{ count: 1 }] },
-
             },
             {
               kind: "heads",
@@ -58,12 +54,6 @@ export default {
                 count: 8,
                 ticks: [{ count: 3, tone: "accent" }, { count: 5 }],
               },
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔴", count: 761, label: "红灯总数" }],
-
             },
           ],
         },
@@ -72,7 +62,7 @@ export default {
   ],
   variant: {
     question:
-      '一列队伍按"2名男生、3名女生、1名老师"的规律重复排列，已知队伍共有156人。\n请问最后一名是男生、女生还是老师？\n队伍中一共有多少名女生？',
+      '一列队伍按"2名男生、3名女生、1名老师"的规律重复排列，已知队伍共有156人。\n\n请问最后一名是男生、女生还是老师？\n\n队伍中一共有多少名女生？',
     fields: [
       {
         key: "last_person_type",

@@ -7,14 +7,14 @@ export default {
   difficulty: "进阶",
   module: "数论",
   question:
-    "甲、乙两个数的最大公约数是 6，最小公倍数是 72。已知甲数是 24，\n求乙数。",
+    "甲、乙两个数的最大公约数是 6，最小公倍数是 72。已知甲数是 24，\n\n求乙数。",
   solutions: [
     {
       key: "formula",
       label: "公式法",
       steps: [
         {
-          text: "甲 × 乙 = 6 × 72 = 432。\n乙 = 432 ÷ 24 = 18。",
+          text: "甲 × 乙 = 6 × 72 = 432。\n\n乙 = 432 ÷ 24 = 18。",
           scenes: [
             {
               kind: "equation-list",
@@ -28,7 +28,6 @@ export default {
                 { lhs: "24 × 乙", rhs: "432", status: "keep" },
                 { lhs: "乙", rhs: "432 ÷ 24 = 18", status: "keep" },
               ],
-
             },
           ],
         },
@@ -49,5 +48,5 @@ export default {
     },
     hint: "两数之积 = 最大公约数 × 最小公倍数",
   },
-  tags: ["最大公约数", "最小公倍数", "短除法"],
+  tags: ["公式法"],
 } satisfies ProblemData;

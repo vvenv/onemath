@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，三角形 ABC 中，D 在 BC 上，BD : DC = 1 : 2；E 在 AC 上，AE : EC = 2 : 3。AD 与 BE 相交于点 F。\n已知四边形 DFEC 的面积为 22，求三角形 ABC 的面积。",
+    "如图，三角形 ABC 中，D 在 BC 上，BD : DC = 1 : 2；E 在 AC 上，AE : EC = 2 : 3。AD 与 BE 相交于点 F。\n\n已知四边形 DFEC 的面积为 22，求三角形 ABC 的面积。",
   figures: [
     {
       svg: svg1,
@@ -21,7 +21,7 @@ export default {
       label: "燕尾定理 + 底比分割",
       steps: [
         {
-          text: "分析：F 是 AD、BE 的交点。用燕尾定理得 △ABF : △ACF = BD : DC = 1 : 2，△ABF : △BCF = AE : EC = 2 : 3；\n设 △ABF = 2k，则 △ACF = 4k、△BCF = 3k，总 △ABC = 9k。",
+          text: "分析：F 是 AD、BE 的交点。用燕尾定理得 △ABF : △ACF = BD : DC = 1 : 2，△ABF : △BCF = AE : EC = 2 : 3；\n\n设 △ABF = 2k，则 △ACF = 4k、△BCF = 3k，总 △ABC = 9k。",
         },
         {
           text: "把 △BCF 按 D 点拆成 △BDF = k、△CDF = 2k；把 △ACF 按 E 点拆成 △AEF = 8k/5、△CEF = 12k/5。",
@@ -49,11 +49,6 @@ export default {
                 { label: "DFEC", value: 22, max: 45, tone: "primary" },
                 { label: "△ABC", value: 45, max: 45, tone: "muted" },
               ],
-            },
-            {
-              kind: "result-badges",
-              layout: "label-first",
-              items: [{ icon: "🔺", count: 45, label: "△ABC 面积" }],
             },
           ],
         },

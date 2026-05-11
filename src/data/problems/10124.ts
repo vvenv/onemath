@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，梯形 ABCD 中 AB ∥ CD，两条对角线 AC 与 BD 相交于点 O。\n已知三角形 AOB 的面积为 25，三角形 BOC 的面积为 35。求梯形 ABCD 的总面积。",
+    "如图，梯形 ABCD 中 AB ∥ CD，两条对角线 AC 与 BD 相交于点 O。\n\n已知三角形 AOB 的面积为 25，三角形 BOC 的面积为 35。求梯形 ABCD 的总面积。",
   figures: [
     {
       svg: svg1,
@@ -21,7 +21,7 @@ export default {
       label: "梯形蝴蝶模型",
       steps: [
         {
-          text: "分析：两条对角线把梯形分成四块 △AOB、△BOC、△AOD、△COD。由 AB ∥ CD 得 △ABD = △ABC（等底同高），同减 △AOB 即 △AOD = △BOC；\n再由蝴蝶模型，△AOB · △COD = △BOC · △AOD。已知两块，用这两条结论就能补出另外两块。",
+          text: "分析：两条对角线把梯形分成四块 △AOB、△BOC、△AOD、△COD。由 AB ∥ CD 得 △ABD = △ABC（等底同高），同减 △AOB 即 △AOD = △BOC；\n\n再由蝴蝶模型，△AOB · △COD = △BOC · △AOD。已知两块，用这两条结论就能补出另外两块。",
         },
         {
           text: "四块面积依次为 25、35、35、49，其中 △COD 这一块最大。",
@@ -50,10 +50,6 @@ export default {
                 { label: "△AOD", value: 35, max: 50, tone: "muted" },
                 { label: "△COD", value: 49, max: 50, tone: "primary" },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔷", count: 144, label: "梯形总面积" }],
             },
           ],
         },

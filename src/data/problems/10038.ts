@@ -28,7 +28,6 @@ export default {
                 { row: 0, col: 3, value: "D", tone: "primary" },
                 { row: 0, col: 4, value: "E", tone: "primary" },
               ],
-
             },
             {
               kind: "equation-list",
@@ -65,7 +64,6 @@ export default {
                 { speaker: "C", claim: "D,E", badge: "2" },
                 { speaker: "D", claim: "E", badge: "1" },
               ],
-
             },
             {
               kind: "equation-list",
@@ -73,7 +71,6 @@ export default {
                 { lhs: "线段总数", rhs: "4+3+2+1", status: "keep" },
                 { lhs: "", rhs: "10 条", status: "keep" },
               ],
-
             },
           ],
         },
@@ -94,5 +91,5 @@ export default {
     },
     hint: "每两个点确定一条直线，用组合数计算。",
   },
-  tags: ["组合", "加法原理", "分类讨论"],
+  tags: ["组合", "加法原理"],
 } satisfies ProblemData;

@@ -8,7 +8,7 @@ export default {
   difficulty: "基础",
   module: "几何",
   question:
-    "如图，平行四边形 ABCD 中，AB = 16，AD = 10。E 在 AD 上且 AE = 4。\n连接 BE 并延长，与 CD 所在直线的延长线相交于点 F（F 在 D 的外侧）。求 DF 的长度。",
+    "如图，平行四边形 ABCD 中，AB = 16，AD = 10。E 在 AD 上且 AE = 4。\n\n连接 BE 并延长，与 CD 所在直线的延长线相交于点 F（F 在 D 的外侧）。求 DF 的长度。",
   figures: [
     {
       svg: svg1,
@@ -21,7 +21,7 @@ export default {
       label: "沙漏（X 型）相似",
       steps: [
         {
-          text: "分析：AB ∥ CD（平行四边形的一对对边），而直线 BF 同时过 AB 上的 B 和 CD 延长线上的 F，另一方向上 E 在 AD 上。\n这正是典型的「沙漏模型」——两对平行线交出的两个三角形相似。",
+          text: "分析：AB ∥ CD（平行四边形的一对对边），而直线 BF 同时过 AB 上的 B 和 CD 延长线上的 F，另一方向上 E 在 AD 上。\n\n这正是典型的“沙漏模型”——两对平行线交出的两个三角形相似。",
         },
         {
           text: "找相似的两个三角形。考察 △ABE 与 △DFE：· ∠AEB 与 ∠DEF 是对顶角，相等；· AB ∥ DF（DF 落在 CD 所在直线上），所以 ∠BAE = ∠FDE（内错角）。两组角相等 ⇒ △ABE ∼ △DFE。",
@@ -42,10 +42,6 @@ export default {
                 { lhs: "AB / DF = AE / DE (沙漏相似)", rhs: "2/3" },
                 { lhs: "DF = 16 × 3/2", rhs: "24", status: "keep" },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "📏", count: 24, label: "DF 长度" }],
             },
           ],
         },

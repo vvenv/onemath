@@ -8,7 +8,7 @@ export default {
   difficulty: "挑战",
   module: "计数",
   question:
-    "甲、乙、丙、丁、戊 5 人站成一排拍照，要求甲不站在排头（最左端），乙不站在排尾（最右端）。\n一共有多少种不同的站法？",
+    "甲、乙、丙、丁、戊 5 人站成一排拍照，要求甲不站在排头（最左端），乙不站在排尾（最右端）。\n\n一共有多少种不同的站法？",
   figures: [
     {
       svg: svg1,
@@ -33,10 +33,6 @@ export default {
                 { lhs: "|A ∪ B|", rhs: "24 + 24 − 6 = 42" },
                 { lhs: "答案 (结论)", rhs: "120 − 42 = 78" },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "📸", count: 78, label: "种站法" }],
             },
           ],
         },

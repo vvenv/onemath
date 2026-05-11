@@ -7,7 +7,7 @@ export default {
   module: "行程",
   difficulty: "进阶",
   question:
-    "小明从家到学校，如果每分钟走 60 米，会迟到 5 分钟；如果每分钟走 80 米，会提前 3 分钟到达。\n小明家到学校的距离是多少米？",
+    "小明从家到学校，如果每分钟走 60 米，会迟到 5 分钟；如果每分钟走 80 米，会提前 3 分钟到达。\n\n小明家到学校的距离是多少米？",
   solutions: [
     {
       key: "ratio",
@@ -55,7 +55,6 @@ export default {
                   tone: "accent",
                 },
               ],
-
             },
             {
               kind: "equation-list",
@@ -86,7 +85,6 @@ export default {
                   status: "keep",
                 },
               ],
-
             },
             {
               kind: "compare-bars",
@@ -104,23 +102,6 @@ export default {
                   tone: "primary",
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                {
-                  icon: "⏰",
-                  count: 27,
-                  label: "规定时间 (分钟)",
-                },
-                {
-                  icon: "📏",
-                  count: 1920,
-                  label: "全程距离 (米)",
-                },
-              ],
-
             },
           ],
         },

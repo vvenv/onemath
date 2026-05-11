@@ -7,7 +7,7 @@ export default {
   difficulty: "进阶",
   module: "计数",
   question:
-    "一个袋子里有 4 个红球和 3 个白球。从中摸出 1 个球后不放回，再摸出 1 个球。\n求两次都摸到红球的概率。",
+    "一个袋子里有 4 个红球和 3 个白球。从中摸出 1 个球后不放回，再摸出 1 个球。\n\n求两次都摸到红球的概率。",
   solutions: [
     {
       key: "stepwise",
@@ -29,26 +29,12 @@ export default {
           text: "两次都红球的概率 = 第一次概率 × 第二次概率。",
           scenes: [
             {
-              kind: "result-badges",
-              items: [
-                { icon: "🔴", count: 4 },
-                { icon: "⚪", count: 3 },
-              ],
-
-            },
-            {
               kind: "equation-list",
               rows: [
                 { lhs: "第一次红球概率 (P₁)", rhs: "4/7" },
                 { lhs: "第二次红球概率 (P₂)", rhs: "3/6 = 1/2" },
                 { lhs: "两次都红球", rhs: "4/7 × 1/2 = 2/7", status: "keep" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔴🔴", count: "2/7", label: "概率" }],
-
             },
           ],
         },
@@ -74,7 +60,6 @@ export default {
                 { lhs: "有利组合数 (红红)", rhs: "C(4,2) = 6" },
                 { lhs: "概率", rhs: "6/21 = 2/7", status: "keep" },
               ],
-
             },
           ],
         },

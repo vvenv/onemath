@@ -128,8 +128,8 @@ export function GlobalSearch() {
       >
         <Search className="size-4" />
         <span className="hidden text-xs sm:inline">搜索题目</span>
-        <kbd className="ml-1 hidden items-center gap-0.5 rounded border border-border/60 bg-muted/50 px-1 font-mono text-[10px] text-muted-foreground sm:inline-flex">
-          <span className="text-[11px]">⌘</span>K
+        <kbd className="ml-1 hidden items-center gap-0.5 rounded border border-border/60 bg-muted/50 px-1 font-mono text-xs text-muted-foreground sm:inline-flex">
+          <span className="text-xs">⌘</span>K
         </kbd>
       </Button>
 
@@ -197,7 +197,7 @@ export function GlobalSearch() {
                         <span className="text-foreground">{p.title}</span>
                       </span>
                       <ModuleBadge moduleKey={p.module} />
-                      <span className="shrink-0 text-[10px] text-muted-foreground/70">
+                      <span className="shrink-0 text-xs text-muted-foreground/70">
                         {p.grade}
                       </span>
                     </button>
@@ -207,7 +207,7 @@ export function GlobalSearch() {
             )}
           </div>
 
-          <div className="flex items-center justify-between gap-2 border-t border-border/60 bg-muted/30 px-3 py-1.5 text-[10px] text-muted-foreground">
+          <div className="flex items-center justify-between gap-2 border-t border-border/60 bg-muted/30 px-3 py-1.5 text-xs text-muted-foreground">
             <span className="flex items-center gap-1">
               <Kbd>↑</Kbd>
               <Kbd>↓</Kbd>
@@ -228,7 +228,7 @@ export function GlobalSearch() {
 
 function Kbd({ children }: { children: React.ReactNode }) {
   return (
-    <kbd className="inline-flex h-4 items-center rounded border border-border/60 bg-background px-1 font-mono text-[10px] text-muted-foreground">
+    <kbd className="inline-flex h-4 items-center rounded border border-border/60 bg-background px-1 font-mono text-xs text-muted-foreground">
       {children}
     </kbd>
   );
@@ -253,7 +253,7 @@ function ModuleBadge({
     <Badge
       variant="outline"
       className={cn(
-        "h-5 shrink-0 border-transparent px-1.5 text-[10px] ring-1 ring-inset",
+        "h-5 shrink-0 border-transparent px-1.5 text-xs ring-1 ring-inset",
         mod.accent,
       )}
     >

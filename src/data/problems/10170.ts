@@ -7,7 +7,7 @@ export default {
   difficulty: "进阶",
   module: "应用题",
   question:
-    "一件商品原价 200 元，先提价 20%，再降价 20%。\n现在的价格是多少元？",
+    "一件商品原价 200 元，先提价 20%，再降价 20%。\n\n现在的价格是多少元？",
   solutions: [
     {
       key: "percentage",
@@ -22,7 +22,6 @@ export default {
                 { lhs: "提价后价格", rhs: "200 × 1.2 = 240", status: "keep" },
                 { lhs: "降价后价格", rhs: "240 × 0.8 = 192", status: "keep" },
               ],
-
             },
             {
               kind: "compare-bars",
@@ -31,12 +30,6 @@ export default {
                 { label: "提价后", value: 240, max: 240, tone: "primary" },
                 { label: "现价", value: 192, max: 240, tone: "primary" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "💰", count: 192, label: "现价（元）" }],
-
             },
           ],
         },
@@ -56,7 +49,6 @@ export default {
                 { lhs: "", rhs: "200 × 0.96" },
                 { lhs: "", rhs: "192", status: "keep" },
               ],
-
             },
           ],
         },

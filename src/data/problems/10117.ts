@@ -8,7 +8,7 @@ export default {
   module: "几何",
   difficulty: "进阶",
   question:
-    "如图，三角形 ABC 中，D 是 BC 的中点，E 在线段 AD 上且 AE : ED = 2 : 1。直线 BE 延长后与边 AC 相交于点 F。\n已知三角形 ABC 的面积为 60，求三角形 AEF 的面积。",
+    "如图，三角形 ABC 中，D 是 BC 的中点，E 在线段 AD 上且 AE : ED = 2 : 1。直线 BE 延长后与边 AC 相交于点 F。\n\n已知三角形 ABC 的面积为 60，求三角形 AEF 的面积。",
   figures: [
     {
       svg: svg1,
@@ -21,7 +21,7 @@ export default {
       label: "先定位 F，再按比例缩放（等积变换）",
       steps: [
         {
-          text: "分析：△AEF 的三个顶点里只有 F 在 AC 上、位置未知，所以先定 AF : FC。\nD 是 BC 中点使 △ABD = △ACD，再由 E 在 AD 上（AE : AD = 2 : 3）得 △ABE = △ACE = 20，说明 E 到 AB 与 AC 的「面积贡献」对称，从而 BE 的延长线 F 必为 AC 的中点。",
+          text: "分析：△AEF 的三个顶点里只有 F 在 AC 上、位置未知，所以先定 AF : FC。\n\nD 是 BC 中点使 △ABD = △ACD，再由 E 在 AD 上（AE : AD = 2 : 3）得 △ABE = △ACE = 20，说明 E 到 AB 与 AC 的“面积贡献”对称，从而 BE 的延长线 F 必为 AC 的中点。",
           scenes: [
             {
               kind: "equation-list",

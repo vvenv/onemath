@@ -12,7 +12,7 @@ export function Scene({
   return (
     <div
       className={cn(
-        "rounded-md border border-dashed border-border/70 bg-background/60 p-3",
+        "rounded-md border border-dashed border-border/70 bg-background/60 mt-3 p-3",
         className,
       )}
     >

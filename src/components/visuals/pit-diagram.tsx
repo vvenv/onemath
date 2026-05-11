@@ -37,7 +37,7 @@ function FaceTile({ state, label }: { state: FaceState; label: string }) {
   return (
     <div
       className={cn(
-        "flex h-10 w-10 flex-col items-center justify-center border text-[10px] font-medium",
+        "flex h-10 w-10 flex-col items-center justify-center border text-xs font-medium",
         classes[state],
       )}
       role="img"

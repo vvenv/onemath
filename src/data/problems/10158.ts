@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "计数",
   question:
-    "如图，一个 4×4 的点阵（4 行 4 列共 16 个点），去掉两个对角的点后剩下 14 个点。\n用这 14 个点中的 4 个点作为顶点，一共可以组成多少个不同的正方形？",
+    "如图，一个 4×4 的点阵（4 行 4 列共 16 个点），去掉两个对角的点后剩下 14 个点。\n\n用这 14 个点中的 4 个点作为顶点，一共可以组成多少个不同的正方形？",
   figures: [
     {
       svg: svg1,
@@ -43,15 +43,6 @@ export default {
                 { lhs: "中心在半点的斜正方形", rhs: "5 个" },
                 { lhs: "斜向小计", rhs: "7 个" },
                 { lhs: "总计", rhs: "18 个", status: "keep" },
-              ],
-            },
-            {
-              kind: "result-badges",
-              layout: "label-first",
-              items: [
-                { icon: "🔲", count: 9, label: "正向正方形" },
-                { icon: "🔷", count: 7, label: "斜向正方形" },
-                { icon: "📐", count: 18, label: "总计" },
               ],
             },
           ],

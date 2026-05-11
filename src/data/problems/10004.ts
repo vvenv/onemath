@@ -7,14 +7,14 @@ export default {
   difficulty: "进阶",
   module: "应用题",
   question:
-    "一支探险队准备在野外露营。\n如果每顶帐篷住 5 人，则有 14 人没有地方住；\n如果每顶帐篷住 7 人，则刚好空出 4 顶帐篷。\n问探险队共有多少人？帐篷共有多少顶？",
+    "一支探险队准备在野外露营。\n\n如果每顶帐篷住 5 人，则有 14 人没有地方住；\n\n如果每顶帐篷住 7 人，则刚好空出 4 顶帐篷。\n\n问探险队共有多少人？帐篷共有多少顶？",
   solutions: [
     {
       key: "comparison",
       label: "比较法",
       steps: [
         {
-          text: "帐篷数 = (14 + 7×4) ÷ (7−5) = 42 ÷ 2 = 21 顶；\n总人数 = 5 × 21 + 14 = 119 人。",
+          text: "帐篷数 = (14 + 7×4) ÷ (7−5) = 42 ÷ 2 = 21 顶；\n\n总人数 = 5 × 21 + 14 = 119 人。",
           scenes: [
             { kind: "heads", heads: { count: 21 } },
             {
@@ -34,7 +34,6 @@ export default {
                   marker: true,
                 },
               ],
-
             },
             {
               kind: "heads-split",
@@ -42,22 +41,11 @@ export default {
                 count: 14,
                 ticks: [{ count: 1 }],
                 tone: "accent",
-
               },
               right: {
                 count: 28,
                 ticks: [{ count: 1 }],
-
               },
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "⛺", count: 21, label: "帐篷" },
-                { icon: "🧑‍🚀", count: 119, label: "队员" },
-              ],
-
             },
           ],
         },
@@ -82,15 +70,6 @@ export default {
                 { lhs: "42", rhs: "2x", status: "keep" },
                 { lhs: "x", rhs: "21", status: "keep" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "⛺", count: 21, label: "帐篷" },
-                { icon: "🧑‍🚀", count: 119, label: "队员" },
-              ],
-
             },
           ],
         },

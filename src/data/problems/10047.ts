@@ -7,14 +7,14 @@ export default {
   module: "数论",
   difficulty: "挑战",
   question:
-    "一个自然数的因数个数是奇数，这个数在 100 到 200 之间。\n这样的数有哪些？",
+    "一个自然数的因数个数是奇数，这个数在 100 到 200 之间。\n\n这样的数有哪些？",
   solutions: [
     {
       key: "perfect_square",
       label: "完全平方数特征",
       steps: [
         {
-          text: "因数个数为奇数 ⇔ 完全平方数。\n100~200 间的完全平方数：10²=100, 11²=121, 12²=144, 13²=169, 14²=196。",
+          text: "因数个数为奇数 ⇔ 完全平方数。\n\n100~200 间的完全平方数：10²=100, 11²=121, 12²=144, 13²=169, 14²=196。",
           scenes: [
             {
               kind: "statement-table",
@@ -37,7 +37,6 @@ export default {
                   badge: "10个(偶)",
                 },
               ],
-
             },
             {
               kind: "number-line",
@@ -70,38 +69,6 @@ export default {
                   tone: "primary",
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                {
-                  icon: "🔢",
-                  count: "100",
-                  label: "10²",
-                },
-                {
-                  icon: "🔢",
-                  count: "121",
-                  label: "11²",
-                },
-                {
-                  icon: "🔢",
-                  count: "144",
-                  label: "12²",
-                },
-                {
-                  icon: "🔢",
-                  count: "169",
-                  label: "13²",
-                },
-                {
-                  icon: "🔢",
-                  count: "196",
-                  label: "14²",
-                },
-              ],
-
             },
           ],
         },

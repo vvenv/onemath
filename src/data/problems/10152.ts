@@ -7,14 +7,14 @@ export default {
   module: "应用题",
   difficulty: "基础",
   question:
-    "今年父亲的年龄是儿子的4倍。20年后，父亲的年龄将是儿子的2倍。\n问今年父亲和儿子各多少岁？",
+    "今年父亲的年龄是儿子的4倍。20年后，父亲的年龄将是儿子的2倍。\n\n问今年父亲和儿子各多少岁？",
   solutions: [
     {
       key: "difference_constant",
       label: "年龄差不变法",
       steps: [
         {
-          text: "分析：年龄问题的核心是「年龄差永远不变」。设今年儿子 x 岁，则父亲 4x 岁，年龄差为 3x 岁。",
+          text: "分析：年龄问题的核心是“年龄差永远不变”。设今年儿子 x 岁，则父亲 4x 岁，年龄差为 3x 岁。",
           scenes: [
             {
               kind: "compare-bars",
@@ -33,7 +33,6 @@ export default {
                   marker: true,
                 },
               ],
-
             },
           ],
         },
@@ -57,7 +56,6 @@ export default {
                   marker: true,
                 },
               ],
-
             },
           ],
         },
@@ -94,7 +92,6 @@ export default {
                   status: "keep",
                 },
               ],
-
             },
           ],
         },
@@ -145,7 +142,6 @@ export default {
                   status: "keep",
                 },
               ],
-
             },
           ],
         },

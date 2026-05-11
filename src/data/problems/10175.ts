@@ -9,7 +9,7 @@ export default {
   module: "几何",
   difficulty: "进阶",
   question:
-    "如图，两个半径都是 4 厘米的圆相交，圆心距也是 4 厘米。\n求阴影部分的面积。",
+    "如图，两个半径都是 4 厘米的圆相交，圆心距也是 4 厘米。\n\n求阴影部分的面积。",
   figures: [
     {
       svg: svg1,

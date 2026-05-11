@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，四边形 ABCD 是一个梯形，上底 AD 长 4，下底 BC 长 8。\n对角线 AC 和 BD 相交于点 O。\n已知三角形 AOD 的面积是 10 平方厘米，\n那么梯形 ABCD 的总面积是多少平方厘米？",
+    "如图，四边形 ABCD 是一个梯形，上底 AD 长 4，下底 BC 长 8。\n\n对角线 AC 和 BD 相交于点 O。\n\n已知三角形 AOD 的面积是 10 平方厘米，\n\n那么梯形 ABCD 的总面积是多少平方厘米？",
   figures: [
     {
       svg: svg1,
@@ -21,30 +21,7 @@ export default {
       label: "蝴蝶模型与等高模型",
       steps: [
         {
-          text: "AD∥BC ⇒ △AOD∽△COB，边长比 4 : 8 = 1 : 2，面积比 1 : 4，故 S△COB = 40。\n蝴蝶模型：两翼各 √(10 × 40) = 20。\n总面积 10 + 40 + 20 + 20 = 90 cm²。",
-          scenes: [
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "🔺", count: 10, label: "S△AOD" },
-                { icon: "🔻", count: 40, label: "S△COB" },
-              ],
-              separator: "→",
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                {
-                  icon: "🔷",
-                  count: 90,
-                  label: "梯形总面积",
-                  note: "平方厘米",
-                },
-              ],
-
-            },
-          ],
+          text: "AD∥BC ⇒ △AOD∽△COB，边长比 4 : 8 = 1 : 2，面积比 1 : 4，故 S△COB = 40。\n\n蝴蝶模型：两翼各 √(10 × 40) = 20。\n\n总面积 10 + 40 + 20 + 20 = 90 cm²。",
         },
       ],
     },

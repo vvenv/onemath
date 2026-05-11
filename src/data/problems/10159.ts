@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，在三角形 ABC 中，D 是 BC 的中点，E 是 CA 的中点。AD 与 BE 相交于点 G（重心）。\n已知 AD 垂直于 BE，且满足 AG = 2DG，BG = 2EG。求（BC² + AC²）÷ AB² 的值。",
+    "如图，在三角形 ABC 中，D 是 BC 的中点，E 是 CA 的中点。AD 与 BE 相交于点 G（重心）。\n\n已知 AD 垂直于 BE，且满足 AG = 2DG，BG = 2EG。求（BC² + AC²）÷ AB² 的值。",
   figures: [
     {
       svg: svg1,
@@ -54,11 +54,6 @@ export default {
                 { lhs: "BC² + AC²", rhs: "20b² + 20a²" },
                 { lhs: "（BC² + AC²）÷ AB²", rhs: "5", status: "keep" },
               ],
-            },
-            {
-              kind: "result-badges",
-              layout: "label-first",
-              items: [{ icon: "📐", count: 5, label: "（BC² + AC²）÷ AB²" }],
             },
           ],
         },

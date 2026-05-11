@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "行程",
   question:
-    "一列火车通过一座长 600 米的桥需要 50 秒，用同样的速度通过一条长 400 米的隧道需要 40 秒。\n这列火车的速度和车长各是多少？",
+    "一列火车通过一座长 600 米的桥需要 50 秒，用同样的速度通过一条长 400 米的隧道需要 40 秒。\n\n这列火车的速度和车长各是多少？",
   solutions: [
     {
       key: "difference",
@@ -33,13 +33,6 @@ export default {
                 { lhs: "车长", rhs: "20 × 50 − 600 = 400", status: "keep" },
               ],
             },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "🚂", count: 20, label: "速度", note: "米/秒" },
-                { icon: "📏", count: 400, label: "车长", note: "米" },
-              ],
-            },
           ],
         },
       ],
@@ -49,7 +42,7 @@ export default {
       label: "方程法",
       steps: [
         {
-          text: "设速度为 v 米/秒，车长为 L 米，则 (600 + L) ÷ v = 50，(400 + L) ÷ v = 40。\n两式相减得 200 ÷ v = 10，解得 v = 20，代入得 L = 400。",
+          text: "设速度为 v 米/秒，车长为 L 米，则 (600 + L) ÷ v = 50，(400 + L) ÷ v = 40。\n\n两式相减得 200 ÷ v = 10，解得 v = 20，代入得 L = 400。",
           scenes: [
             {
               kind: "equation-list",

@@ -7,7 +7,7 @@ export default {
   difficulty: "挑战",
   module: "计数",
   question:
-    "一个袋子里有 3 个红球和 2 个白球。先从中摸出 1 个球，记下颜色后放回袋中，再摸出 1 个球。\n求两次摸球颜色不同的概率。",
+    "一个袋子里有 3 个红球和 2 个白球。先从中摸出 1 个球，记下颜色后放回袋中，再摸出 1 个球。\n\n求两次摸球颜色不同的概率。",
   solutions: [
     {
       key: "classification",
@@ -36,12 +36,6 @@ export default {
                 { lhs: "先白后红 (情况2)", rhs: "2/5 × 3/5 = 6/25" },
                 { lhs: "颜色不同", rhs: "6/25 + 6/25 = 12/25", status: "keep" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔴⚪", count: "12/25", label: "概率" }],
-
             },
           ],
         },
@@ -68,7 +62,6 @@ export default {
                 { lhs: "颜色相同 (对立事件)", rhs: "9/25 + 4/25 = 13/25" },
                 { lhs: "颜色不同", rhs: "1 − 13/25 = 12/25", status: "keep" },
               ],
-
             },
           ],
         },

@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，梯形 ABCD 中 AB ∥ CD，AB = 3，CD = 5，两条对角线交于 O。\n已知三角形 AOB 的面积为 9，求梯形 ABCD 的总面积。",
+    "如图，梯形 ABCD 中 AB ∥ CD，AB = 3，CD = 5，两条对角线交于 O。\n\n已知三角形 AOB 的面积为 9，求梯形 ABCD 的总面积。",
   figures: [
     {
       svg: svg1,
@@ -50,10 +50,6 @@ export default {
                 { label: "△AOD", value: 15, max: 25, tone: "muted" },
                 { label: "△COD", value: 25, max: 25, tone: "primary" },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔷", count: 64, label: "梯形总面积" }],
             },
           ],
         },

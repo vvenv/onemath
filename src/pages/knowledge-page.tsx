@@ -169,7 +169,7 @@ export default function KnowledgePage() {
               <Card key={i}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <span className="inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[11px] font-semibold tabular-nums text-primary">
+                    <span className="inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-semibold tabular-nums text-primary">
                       {i + 1}
                     </span>
                     {ex.title ?? `例 ${i + 1}`}
@@ -216,7 +216,7 @@ export default function KnowledgePage() {
       {problems.length > 0 ? (
         <Section
           icon={<BookOpen className="size-4" />}
-          title={`用到「${entry.name}」的题目`}
+          title={`用到“${entry.name}”的题目`}
           seamless
         >
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
@@ -237,13 +237,13 @@ export default function KnowledgePage() {
                       <Badge
                         variant="outline"
                         className={cn(
-                          "h-5 border-transparent px-1.5 text-[10px] ring-1 ring-inset",
+                          "h-5 border-transparent px-1.5 text-xs ring-1 ring-inset",
                           mod.accent,
                         )}
                       >
                         {mod.label}
                       </Badge>
-                      <span className="text-[11px] text-muted-foreground">
+                      <span className="text-xs text-muted-foreground">
                         {p.grade}
                       </span>
                     </div>

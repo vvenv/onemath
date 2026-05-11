@@ -55,7 +55,7 @@ export function NumberLine({
   const ROW_OFFSET = 14;
 
   return (
-    <div className={cn("px-3 pt-1", className)}>
+    <div className={cn("px-8 pt-1", className)}>
       <div className={cn("relative", hasCluster ? "h-24" : "h-16")}>
         <div className="absolute left-0 right-0 top-1/2 h-px -translate-y-1/2 bg-border" />
         {points.map((p, i) => {
@@ -72,7 +72,7 @@ export function NumberLine({
             >
               {p.label ? (
                 <span
-                  className="absolute left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] leading-tight text-muted-foreground"
+                  className="absolute left-1/2 -translate-x-1/2 whitespace-nowrap text-xs leading-tight text-muted-foreground"
                   style={{ bottom: labelBottom }}
                 >
                   {p.label}
@@ -130,7 +130,7 @@ export function NumberLine({
                         style={{ left: `${left}%`, width: `${widthPct}%` }}
                       >
                         {s.label && !isNarrow ? (
-                          <span className="-mt-3 bg-background px-1 text-[11px] font-medium leading-none">
+                          <span className="-mt-3 bg-background px-1 text-xs font-medium leading-none">
                             {s.label}
                           </span>
                         ) : null}
@@ -148,7 +148,7 @@ export function NumberLine({
                             }}
                           />
                           <span
-                            className="absolute -translate-x-1/2 whitespace-nowrap text-[11px] font-medium leading-none"
+                            className="absolute -translate-x-1/2 whitespace-nowrap text-xs font-medium leading-none"
                             style={{
                               left: `${midLeft}%`,
                               top: belowRow === 0 ? 30 : 42,

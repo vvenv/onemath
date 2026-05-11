@@ -7,7 +7,7 @@ export default {
   difficulty: "挑战",
   module: "应用题",
   question:
-    "一桶浓度为 80% 的酒精溶液。第一次倒出 20 升，再用水加满；第二次倒出 30 升，再用水加满。此时桶内酒精浓度降为 40%。\n桶的容量（原来酒精溶液的体积）是多少升？",
+    "一桶浓度为 80% 的酒精溶液。第一次倒出 20 升，再用水加满；第二次倒出 30 升，再用水加满。此时桶内酒精浓度降为 40%。\n\n桶的容量（原来酒精溶液的体积）是多少升？",
   solutions: [
     {
       key: "concentration-ratio",
@@ -32,7 +32,6 @@ export default {
                 { lhs: "化简", rhs: "(V-20)(V-30) / V² = 0.5", status: "keep" },
                 { lhs: "方程", rhs: "V² − 100V + 1200 = 0", status: "keep" },
               ],
-
             },
           ],
         },
@@ -53,5 +52,5 @@ export default {
     },
     hint: "酒精保留比例 = (40−10)(40−20) / 40² = 3/8，最终浓度 = 80% × 3/8 = 30%。",
   },
-  tags: ["逆向推理"],
+  tags: ["方程法"],
 } satisfies ProblemData;

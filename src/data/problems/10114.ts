@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，正方形 ABCD 的边长为 12。E、F、G 分别在 AB、BC、CD 上，且 AE = 8，BF = 8，CG = 8。\n连接 EF、FG、GE，求三角形 EFG 的面积。",
+    "如图，正方形 ABCD 的边长为 12。E、F、G 分别在 AB、BC、CD 上，且 AE = 8，BF = 8，CG = 8。\n\n连接 EF、FG、GE，求三角形 EFG 的面积。",
   figures: [
     {
       svg: svg1,
@@ -21,7 +21,7 @@ export default {
       label: "整体减去三角",
       steps: [
         {
-          text: "分析：正方形面积 12² = 144。从中切掉 △EFG 之外的三块：两个直角 △BEF、△CFG 与一个梯形 AEGD。\nEB = FC = GD = 4。",
+          text: "分析：正方形面积 12² = 144。从中切掉 △EFG 之外的三块：两个直角 △BEF、△CFG 与一个梯形 AEGD。\n\nEB = FC = GD = 4。",
         },
         {
           text: "逐块算：△BEF = (1/2)·4·8 = 16；△CFG = (1/2)·4·8 = 16；梯形 AEGD（平行边 AE = 8、DG = 4，高 AD = 12）= (8 + 4)·12/2 = 72。",

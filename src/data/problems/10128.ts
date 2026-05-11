@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，正方形 ABCD 的边长为 10。E 是 AD 的中点；F 是线段 CE 的中点；G 是线段 BF 的中点。\n求三角形 BDG 的面积。",
+    "如图，正方形 ABCD 的边长为 10。E 是 AD 的中点；F 是线段 CE 的中点；G 是线段 BF 的中点。\n\n求三角形 BDG 的面积。",
   figures: [
     {
       svg: svg1,
@@ -21,13 +21,13 @@ export default {
       label: "面积比例法",
       steps: [
         {
-          text: "分析：连接 AC、BD 交于 O（正方形中心），则 O 将每条对角线平分。E 是 AD 中点，F 是 CE 中点，G 是 BF 中点。\n通过相似三角形和面积比例求解。",
+          text: "分析：连接 AC、BD 交于 O（正方形中心），则 O 将每条对角线平分。E 是 AD 中点，F 是 CE 中点，G 是 BF 中点。\n\n通过相似三角形和面积比例求解。",
         },
         {
-          text: "正方形面积 = 100，△ABD = 50。E 是 AD 中点，故 △ABE = 25，△BDE = 25。\nF 是 CE 中点。在 △BCE 中，F 是 CE 中点，故 △BCF = △BEF = 12.5。\nG 是 BF 中点。在 △BDF 中，G 是 BF 中点，但 D、B、F 不共线，需用相似比。",
+          text: "正方形面积 = 100，△ABD = 50。E 是 AD 中点，故 △ABE = 25，△BDE = 25。\n\nF 是 CE 中点。在 △BCE 中，F 是 CE 中点，故 △BCF = △BEF = 12.5。\n\nG 是 BF 中点。在 △BDF 中，G 是 BF 中点，但 D、B、F 不共线，需用相似比。",
         },
         {
-          text: "连接 DG 并延长交 AC 于 H。利用相似三角形比例关系，可推导出 △BDG 的面积。\n经过三次中点操作，面积传递关系为：△BDG = 正方形面积 ÷ 16 = 6.25。",
+          text: "连接 DG 并延长交 AC 于 H。利用相似三角形比例关系，可推导出 △BDG 的面积。\n\n经过三次中点操作，面积传递关系为：△BDG = 正方形面积 ÷ 16 = 6.25。",
           scenes: [
             {
               kind: "equation-list",
@@ -37,19 +37,17 @@ export default {
                 { lhs: "△ABE (= △CDE)", rhs: "50 ÷ 2 = 25" },
                 { lhs: "△BDE (= △BCE)", rhs: "50 - 25 = 25" },
                 { lhs: "△BCF (= △BEF)", rhs: "25 ÷ 2 = 12.5" },
-                { lhs: "△BDG (面积传递)", rhs: "100 ÷ 16 = 6.25", status: "keep" },
+                {
+                  lhs: "△BDG (面积传递)",
+                  rhs: "100 ÷ 16 = 6.25",
+                  status: "keep",
+                },
               ],
             },
           ],
         },
         {
           text: "答：三角形 BDG 的面积为 6.25。",
-          scenes: [
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔷", count: 6.25, label: "△BDG 面积" }],
-            },
-          ],
         },
       ],
     },

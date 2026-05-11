@@ -7,14 +7,14 @@ export default {
   difficulty: "进阶",
   module: "数论",
   question:
-    "在四位数 2A7B 中，A、B 各代表一个数字。已知这个四位数能同时被 3 和 5 整除，\n求 A + B 的最大值。",
+    "在四位数 2A7B 中，A、B 各代表一个数字。已知这个四位数能同时被 3 和 5 整除，\n\n求 A + B 的最大值。",
   solutions: [
     {
       key: "rule",
       label: "整除特征分析法",
       steps: [
         {
-          text: "B=0 时 A 为 3 的倍数，最大 A=9，A+B=9；\nB=5 时 A≡1(mod3)，最大 A=7，A+B=12。\n取最大得 A+B=12。",
+          text: "B=0 时 A 为 3 的倍数，最大 A=9，A+B=9；\n\nB=5 时 A≡1(mod3)，最大 A=7，A+B=12。\n\n取最大得 A+B=12。",
           scenes: [
             {
               kind: "statement-table",
@@ -33,7 +33,6 @@ export default {
                   badge: "A最大=7",
                 },
               ],
-
             },
             {
               kind: "equation-list",
@@ -54,16 +53,6 @@ export default {
                   status: "keep",
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "🔢", count: "2970", label: "B=0 时的最大数" },
-                { icon: "🔢", count: "2775", label: "B=5 时的最大数" },
-                { icon: "✅", count: 12, label: "A+B 最大值" },
-              ],
-
             },
           ],
         },

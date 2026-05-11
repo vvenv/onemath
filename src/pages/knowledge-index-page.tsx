@@ -104,7 +104,7 @@ export default function KnowledgeIndexPage() {
                   </h2>
                   <Badge
                     variant="outline"
-                    className="h-5 rounded-full px-2 text-[11px] tabular-nums"
+                    className="h-5 rounded-full px-2 text-xs tabular-nums"
                   >
                     {list.length}
                   </Badge>

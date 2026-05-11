@@ -390,7 +390,7 @@ function ProblemRow({ problem }: { problem: ProblemIndexEntry }) {
           </span>{" "}
           {problem.title}
         </span>
-        <div className="truncate text-[11px] text-muted-foreground">
+        <div className="truncate text-xs text-muted-foreground">
           {[mod.label, difficulty, problem.tags.slice(0, 3).join(" / ") || null]
             .filter(Boolean)
             .join(" · ")}

@@ -8,7 +8,7 @@ export default {
   difficulty: "挑战",
   module: "几何",
   question:
-    "如图，长方形 ABCD 中 AB = 8，BC = 6。\nE 是 CD 的中点。\n连接 AE 与对角线 BD 相交于点 F。\n(1) 求 AF : FE；\n(2) 求三角形 ABF 的面积。",
+    "如图，长方形 ABCD 中 AB = 8，BC = 6。\n\nE 是 CD 的中点。\n\n连接 AE 与对角线 BD 相交于点 F。\n\n(1) 求 AF : FE；\n\n(2) 求三角形 ABF 的面积。",
   figures: [
     {
       svg: svg1,
@@ -40,7 +40,6 @@ export default {
                 { lhs: "△ABD = 长方形 / 2", rhs: "24" },
                 { lhs: "△ABF = 24 × 2/3", rhs: "16", badge: "(2)" },
               ],
-
             },
             {
               kind: "compare-bars",
@@ -48,13 +47,6 @@ export default {
                 { label: "长方形 ABCD", value: 48, max: 48, tone: "muted" },
                 { label: "△ABD", value: 24, max: 48, tone: "muted" },
                 { label: "△ABF", value: 16, max: 48, tone: "primary" },
-              ],
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "📏", count: "2:1", label: "AF : FE" },
-                { icon: "🔺", count: 16, label: "△ABF 面积" },
               ],
             },
           ],

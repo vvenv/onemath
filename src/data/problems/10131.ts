@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，正方形 ABCD 的边长为 6。E 是边 BC 的中点。连接 DE 与对角线 AC 相交于点 F。\n求三角形 DFC 的面积。",
+    "如图，正方形 ABCD 的边长为 6。E 是边 BC 的中点。连接 DE 与对角线 AC 相交于点 F。\n\n求三角形 DFC 的面积。",
   figures: [
     {
       svg: svg1,
@@ -21,7 +21,7 @@ export default {
       label: "沙漏相似定位 F",
       steps: [
         {
-          text: "分析：AD ∥ BC（正方形的对边），所以在 F 点处，直线 AC 与直线 DE 形成「沙漏」的两组平行线之一：考察 △AFD 与 △CFE，它们通过对顶角 + 平行内错角形成相似。",
+          text: "分析：AD ∥ BC（正方形的对边），所以在 F 点处，直线 AC 与直线 DE 形成“沙漏”的两组平行线之一：考察 △AFD 与 △CFE，它们通过对顶角 + 平行内错角形成相似。",
         },
         {
           text: "∠AFD = ∠CFE（对顶角）；AD ∥ CE（都在正方形的对边上） ⇒ ∠DAF = ∠ECF。故 △AFD ∼ △CFE。",
@@ -43,10 +43,6 @@ export default {
                 { lhs: "△DAC = 正方形 / 2", rhs: "18" },
                 { lhs: "△DFC = 18 × 1/3", rhs: "6", status: "keep" },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔺", count: 6, label: "△DFC 面积" }],
             },
           ],
         },

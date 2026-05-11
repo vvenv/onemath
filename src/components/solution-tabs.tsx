@@ -45,13 +45,9 @@ export function SolutionTabs({ methods }: SolutionTabsProps) {
                   className="leading-6 only:list-none"
                 >
                   <Markdown>{text}</Markdown>
-                  {scenes?.length ? (
-                    <div className="mt-2 flex flex-col gap-2">
-                      {scenes.map((scene, i) => (
-                        <SceneRenderer key={i} spec={scene} />
-                      ))}
-                    </div>
-                  ) : null}
+                  {scenes?.map((scene, i) => (
+                    <SceneRenderer key={i} spec={scene} />
+                  ))}
                 </li>
               );
             })}

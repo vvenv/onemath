@@ -8,14 +8,14 @@ export default {
   module: "几何",
   difficulty: "进阶",
   question:
-    "由若干相同的小正方体搭成一个几何体。从上面看是一个 3×3 的正方形（即俯视图 9 格都有方块）；从正面看，左、中、右三列的高度依次为 3、1、2。\n这个几何体最少由多少个小正方体组成？",
+    "由若干相同的小正方体搭成一个几何体。从上面看是一个 3×3 的正方形（即俯视图 9 格都有方块）；从正面看，左、中、右三列的高度依次为 3、1、2。\n\n这个几何体最少由多少个小正方体组成？",
   solutions: [
     {
       key: "view-analysis",
       label: "俯视图标数法",
       steps: [
         {
-          text: "俯视图 3×3 地基 9 格各 1 个，正视图左中右高 3、1、2。\n最少：左列 3+1+1=5，中列 1+1+1=3，右列 2+1+1=4，总数 12 个。",
+          text: "俯视图 3×3 地基 9 格各 1 个，正视图左中右高 3、1、2。\n\n最少：左列 3+1+1=5，中列 1+1+1=3，右列 2+1+1=4，总数 12 个。",
           scenes: [
             {
               kind: "number-grid",
@@ -79,7 +79,6 @@ export default {
               ],
               rowLabel: "后 ← → 前",
               colLabel: "左 ← → 右",
-
             },
             {
               kind: "compare-bars",
@@ -103,7 +102,6 @@ export default {
                   tone: "primary",
                 },
               ],
-
             },
             {
               kind: "number-grid",
@@ -167,40 +165,6 @@ export default {
               ],
               rowLabel: "后 ← → 前",
               colLabel: "左 ← → 右",
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                {
-                  icon: "🧊",
-                  count: 5,
-                  label: "左列 3+1+1",
-                },
-                {
-                  icon: "🧊",
-                  count: 3,
-                  label: "中列 1+1+1",
-                },
-                {
-                  icon: "🧊",
-                  count: 4,
-                  label: "右列 2+1+1",
-                },
-              ],
-              separator: "+",
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                {
-                  icon: "🔢",
-                  count: 12,
-                  label: "最少方块数",
-                },
-              ],
-
             },
           ],
         },

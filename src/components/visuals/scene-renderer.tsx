@@ -1,4 +1,4 @@
-import type { HeadsFragment, SceneSpec } from "@/types/visual";
+import type { SceneSpec } from "@/types/visual";
 
 import { Scene } from "./scene";
 import { HeadGrid } from "./head-grid";
@@ -12,21 +12,15 @@ import { StatementTable } from "./statement-table";
 import { EquationList } from "./equation-list";
 import { NumberGrid } from "./number-grid";
 import { SvgFigure } from "./svg-figure";
+import { HeadsSplit } from "./heads-split";
 
-function HeadsBlock({ spec }: { spec: HeadsFragment }) {
-  return (
-    <div>
-      <HeadGrid count={spec.count} ticks={spec.ticks} tone={spec.tone} />
-    </div>
-  );
-}
 
 export function SceneRenderer({ spec }: { spec: SceneSpec }) {
   switch (spec.kind) {
     case "heads":
       return (
         <Scene>
-          <HeadsBlock spec={spec.heads} />
+          <HeadGrid count={spec.heads.count} ticks={spec.heads.ticks} tone={spec.heads.tone} />
         </Scene>
       );
     case "lattice":
@@ -42,15 +36,7 @@ export function SceneRenderer({ spec }: { spec: SceneSpec }) {
     case "heads-split":
       return (
         <Scene>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <div className="flex-1">
-              <HeadsBlock spec={spec.left} />
-            </div>
-            <div className="hidden w-px bg-border sm:block" aria-hidden />
-            <div className="flex-1">
-              <HeadsBlock spec={spec.right} />
-            </div>
-          </div>
+          <HeadsSplit left={spec.left} right={spec.right} />
         </Scene>
       );
     case "compare-bars":

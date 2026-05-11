@@ -8,7 +8,7 @@ export default {
   difficulty: "挑战",
   module: "几何",
   question:
-    "如图，正六边形 ABCDEF 的面积为 1。连接对角线 AC 与 BD，它们相交于点 P。\n求三角形 BCP 的面积。",
+    "如图，正六边形 ABCDEF 的面积为 1。连接对角线 AC 与 BD，它们相交于点 P。\n\n求三角形 BCP 的面积。",
   figures: [
     {
       svg: svg1,
@@ -21,7 +21,7 @@ export default {
       label: "四边形 ABCD 的蝴蝶模型",
       steps: [
         {
-          text: "分析：P 是四边形 ABCD 的对角线交点。在正六边形里 ABCD 恰好是一个等腰梯形（AD ∥ BC，AD = 2·BC），且梯形面积 = 六边形的一半 = 1/2。\n对梯形套用蝴蝶模型即可。",
+          text: "分析：P 是四边形 ABCD 的对角线交点。在正六边形里 ABCD 恰好是一个等腰梯形（AD ∥ BC，AD = 2·BC），且梯形面积 = 六边形的一半 = 1/2。\n\n对梯形套用蝴蝶模型即可。",
         },
         {
           text: "梯形蝴蝶分配：△BCP : △ADP : △ABP : △CDP = BC² : AD² : BC·AD : BC·AD = 1 : 4 : 2 : 2，四块之和 9·△BCP = 1/2。",

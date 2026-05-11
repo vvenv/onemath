@@ -7,7 +7,7 @@ export default {
   difficulty: "挑战",
   module: "计数",
   question:
-    "5 个小朋友围着一张圆桌坐下玩游戏。如果两种坐法可以通过整体旋转圆桌而互相重合，就看作同一种坐法（例如：大家都向左挪一个座位，不算新的一种）。\n那么一共有多少种不同的坐法？",
+    "5 个小朋友围着一张圆桌坐下玩游戏。如果两种坐法可以通过整体旋转圆桌而互相重合，就看作同一种坐法（例如：大家都向左挪一个座位，不算新的一种）。\n\n那么一共有多少种不同的坐法？",
   solutions: [
     {
       key: "fixReference",
@@ -27,12 +27,6 @@ export default {
                   status: "keep",
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔄", count: 24, label: "种坐法" }],
-
             },
           ],
         },
@@ -61,7 +55,6 @@ export default {
                 { lhs: "每个环对应直线数", rhs: "5（旋转起点）" },
                 { lhs: "环形坐法 (结论)", rhs: "120 ÷ 5 = 24", status: "keep" },
               ],
-
             },
           ],
         },

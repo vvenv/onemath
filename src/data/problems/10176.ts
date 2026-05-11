@@ -28,16 +28,6 @@ export default {
                   status: "keep",
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "🔢", count: 12, label: "最大公约数" },
-                { icon: "🔢", count: 420, label: "最小公倍数" },
-              ],
-              separator: "，",
-
             },
           ],
         },
@@ -48,7 +38,7 @@ export default {
       label: "质因数分解法",
       steps: [
         {
-          text: "分析：将两个数分解质因数。60 = 2 × 2 × 3 × 5。84 = 2 × 2 × 3 × 7。\n最大公约数 = 公共质因数的乘积 = 2 × 2 × 3 = 12。最小公倍数 = 所有质因数的乘积（公共的只算一次）= 2 × 2 × 3 × 5 × 7 = 420。",
+          text: "分析：将两个数分解质因数。60 = 2 × 2 × 3 × 5。84 = 2 × 2 × 3 × 7。\n\n最大公约数 = 公共质因数的乘积 = 2 × 2 × 3 = 12。最小公倍数 = 所有质因数的乘积（公共的只算一次）= 2 × 2 × 3 × 5 × 7 = 420。",
           scenes: [
             {
               kind: "equation-list",
@@ -62,7 +52,6 @@ export default {
                   status: "keep",
                 },
               ],
-
             },
           ],
         },

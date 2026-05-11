@@ -8,7 +8,7 @@ export default {
   module: "计数",
   difficulty: "进阶",
   question:
-    "某班有45人，其中参加数学兴趣小组的有28人，参加语文兴趣小组的有25人，两个小组都参加的有12人。\n请问：两个小组都没有参加的有多少人？",
+    "某班有45人，其中参加数学兴趣小组的有28人，参加语文兴趣小组的有25人，两个小组都参加的有12人。\n\n请问：两个小组都没有参加的有多少人？",
   solutions: [
     {
       key: "inclusion-exclusion",
@@ -20,7 +20,6 @@ export default {
             {
               kind: "svg",
               svg: svg1,
-
             },
           ],
         },
@@ -61,7 +60,6 @@ export default {
                   badge: "答案",
                 },
               ],
-
             },
           ],
         },

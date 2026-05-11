@@ -7,7 +7,7 @@ export default {
   difficulty: "基础",
   module: "计数",
   question:
-    "一个不透明的袋子里装有 5 个红球和 3 个白球，这些球除颜色外完全相同。从袋子里任意摸出 1 个球，\n求摸到红球的概率是多少？",
+    "一个不透明的袋子里装有 5 个红球和 3 个白球，这些球除颜色外完全相同。从袋子里任意摸出 1 个球，\n\n求摸到红球的概率是多少？",
   solutions: [
     {
       key: "classical",
@@ -23,26 +23,12 @@ export default {
           text: "概率 = 有利结果数 ÷ 所有可能结果数。",
           scenes: [
             {
-              kind: "result-badges",
-              items: [
-                { icon: "🔴", count: 5 },
-                { icon: "⚪", count: 3 },
-              ],
-
-            },
-            {
               kind: "equation-list",
               rows: [
                 { lhs: "总结果数 (总数)", rhs: "5 + 3 = 8" },
                 { lhs: "有利结果数 (红球)", rhs: "5" },
                 { lhs: "概率", rhs: "5 ÷ 8 = 5/8", status: "keep" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔴", count: "5/8", label: "概率" }],
-
             },
           ],
         },

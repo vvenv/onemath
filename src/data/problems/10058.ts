@@ -19,7 +19,6 @@ export default {
             {
               kind: "svg",
               svg: svg1,
-
             },
             {
               kind: "equation-list",
@@ -29,7 +28,6 @@ export default {
                 { lhs: "", rhs: "100 × 47", status: "keep" },
                 { lhs: "", rhs: "4700", status: "keep" },
               ],
-
             },
           ],
         },
@@ -50,5 +48,5 @@ export default {
     },
     hint: "提取公因数 28：(125 − 25) × 28 = 100 × 28",
   },
-  tags: ["乘法分配律"],
+  tags: ["提取公因数"],
 } satisfies ProblemData;

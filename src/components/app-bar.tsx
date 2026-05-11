@@ -189,7 +189,7 @@ export function AppBar() {
                           </span>{" "}
                           {problem.title}
                         </span>
-                        <div className="truncate text-[11px] text-muted-foreground">
+                        <div className="truncate text-xs text-muted-foreground">
                           {problem.grade} · {problem.module}
                         </div>
                       </Link>
@@ -233,7 +233,7 @@ export function AppBar() {
                         <span className="truncate text-base font-semibold text-card-foreground group-hover:text-primary">
                           {entry.name}
                         </span>
-                        <div className="truncate text-[11px] text-muted-foreground">
+                        <div className="truncate text-xs text-muted-foreground">
                           {entry.summary}
                         </div>
                       </Link>
@@ -324,7 +324,7 @@ export function AppBar() {
                       </span>{" "}
                       {problem.title}
                     </span>
-                    <div className="truncate text-[11px] text-muted-foreground">
+                    <div className="truncate text-xs text-muted-foreground">
                       {problem.grade} · {problem.module}
                     </div>
                   </Link>

@@ -31,7 +31,7 @@ export function RelatedProblems({ id, limit = 2 }: RelatedProblemsProps) {
                   {p.title}
                 </span>
                 {p.tags.length > 0 ? (
-                  <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[11px] text-muted-foreground">
+                  <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-xs text-muted-foreground">
                     <span className="truncate">
                       {p.tags.slice(0, 3).join(" / ")}
                     </span>
@@ -41,7 +41,7 @@ export function RelatedProblems({ id, limit = 2 }: RelatedProblemsProps) {
                   <Badge
                     variant="outline"
                     className={cn(
-                      "h-5 border-transparent px-1.5 text-[10px] ring-1 ring-inset",
+                      "h-5 border-transparent px-1.5 text-xs ring-1 ring-inset",
                       mod.accent,
                     )}
                   >
@@ -49,7 +49,7 @@ export function RelatedProblems({ id, limit = 2 }: RelatedProblemsProps) {
                   </Badge>
                   <Badge
                     variant="outline"
-                    className="h-5 border-transparent px-1.5 text-[10px] ring-1 ring-inset"
+                    className="h-5 border-transparent px-1.5 text-xs ring-1 ring-inset"
                   >
                     {p.grade}
                   </Badge>

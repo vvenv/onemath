@@ -13,7 +13,7 @@ export default {
       label: "按数位分类计数",
       steps: [
         {
-          text: "个位是 5 的有 10 个，十位是 5 的有 10 个。\n总次数 = 10 + 10 = 20 次。",
+          text: "个位是 5 的有 10 个，十位是 5 的有 10 个。\n\n总次数 = 10 + 10 = 20 次。",
           scenes: [
             {
               kind: "number-grid",
@@ -137,7 +137,6 @@ export default {
               ],
               rowLabel: "十位",
               colLabel: "个位",
-
             },
             {
               kind: "compare-bars",
@@ -155,28 +154,6 @@ export default {
                   tone: "primary",
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                {
-                  icon: "5️⃣",
-                  count: 10,
-                  label: "个位出现5",
-                },
-                {
-                  icon: "5️⃣",
-                  count: 10,
-                  label: "十位出现5",
-                },
-                {
-                  icon: "✅",
-                  count: 20,
-                  label: "总计出现",
-                },
-              ],
-
             },
           ],
         },

@@ -30,12 +30,6 @@ export default {
               ],
               rowLabel: "十位",
               colLabel: "个位选择",
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🔢", count: 6, label: "总共可以组成" }],
-
             },
           ],
         },
@@ -62,7 +56,6 @@ export default {
               ],
               rowLabel: "数位",
               colLabel: "选法数",
-
             },
             {
               kind: "equation-list",
@@ -71,12 +64,6 @@ export default {
                 { lhs: "个位选法 (从剩下的 2 个数字中任选 1 个)", rhs: "2 种" },
                 { lhs: "总数", rhs: "3 × 2 = 6（个）", status: "keep" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "✖️", count: 6, label: "3 × 2" }],
-
             },
           ],
         },
@@ -96,5 +83,5 @@ export default {
     },
     hint: "注意：十位不能是 0。",
   },
-  tags: ["枚举法"],
+  tags: ["枚举法", "乘法原理"],
 } satisfies ProblemData;

@@ -59,7 +59,6 @@ export default {
                   highlight: "target",
                 },
               ],
-
             },
             {
               kind: "statement-table",
@@ -76,15 +75,6 @@ export default {
                 { speaker: "7", claim: "20", verdict: "false" },
                 { speaker: "9", claim: "22", verdict: "false" },
               ],
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "🔢", count: 5652, label: "满足条件的四位数" },
-                { icon: "✅", count: 5, label: "方框数字之和" },
-              ],
-              separator: "→",
-
             },
           ],
         },

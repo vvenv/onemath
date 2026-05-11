@@ -23,7 +23,6 @@ export default {
                 { lhs: "…", rhs: "…" },
                 { lhs: "(99 − 100)", rhs: "−1", status: "keep" },
               ],
-
             },
           ],
         },
@@ -43,5 +42,5 @@ export default {
     },
     hint: "也是两两分组，但这次是 (100−99), (98−97) ... 每组的结果是 +1。",
   },
-  tags: ["分类讨论"],
+  tags: ["分组法"],
 } satisfies ProblemData;

@@ -7,7 +7,7 @@ export default {
   difficulty: "挑战",
   module: "杂题",
   question:
-    "甲、乙两人轮流从一堆 20 个石子中取石子，每次只能取 1 个或 2 个，取到最后一个石子的人获胜。\n甲先取，甲有没有必胜策略？如果有，应该怎么取？",
+    "甲、乙两人轮流从一堆 20 个石子中取石子，每次只能取 1 个或 2 个，取到最后一个石子的人获胜。\n\n甲先取，甲有没有必胜策略？如果有，应该怎么取？",
   solutions: [
     {
       key: "backward",
@@ -31,7 +31,6 @@ export default {
                 { lhs: "甲第一次取", rhs: "20 − 18 = 2", status: "keep" },
                 { lhs: "给乙留下", rhs: "18（3的倍数）", status: "keep" },
               ],
-
             },
             {
               kind: "compare-bars",
@@ -40,12 +39,6 @@ export default {
                 { label: "甲取2个", value: 2, max: 20, tone: "primary" },
                 { label: "给乙留下", value: 18, max: 20, tone: "primary" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "♟️", count: "有", label: "必胜策略" }],
-
             },
           ],
         },
@@ -56,7 +49,7 @@ export default {
       label: "模运算分析法",
       steps: [
         {
-          text: "分析：在模 3 意义下操作，若石子数不是 3 的倍数，可取适当数量使其变为 3 的倍数。\n20 ÷ 3 = 6 余 2，甲先取 2 个，使石子数变为 18。之后乙取 k 个，甲取 3 − k 个。",
+          text: "分析：在模 3 意义下操作，若石子数不是 3 的倍数，可取适当数量使其变为 3 的倍数。\n\n20 ÷ 3 = 6 余 2，甲先取 2 个，使石子数变为 18。之后乙取 k 个，甲取 3 − k 个。",
           scenes: [
             {
               kind: "equation-list",
@@ -66,7 +59,6 @@ export default {
                 { lhs: "剩余", rhs: "18（3的倍数）", status: "keep" },
                 { lhs: "策略", rhs: "乙取k，甲取3−k", status: "keep" },
               ],
-
             },
           ],
         },

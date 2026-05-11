@@ -7,14 +7,14 @@ export default {
   difficulty: "挑战",
   module: "数论",
   question:
-    "一篮鸡蛋，每次拿 2 个还剩 1 个，每次拿 3 个还剩 2 个，每次拿 5 个还剩 4 个。\n这篮鸡蛋最少有多少个？",
+    "一篮鸡蛋，每次拿 2 个还剩 1 个，每次拿 3 个还剩 2 个，每次拿 5 个还剩 4 个。\n\n这篮鸡蛋最少有多少个？",
   solutions: [
     {
       key: "chinese_remainder",
       label: "逐级满足法",
       steps: [
         {
-          text: "余数 = 除数 − 1，故 N + 1 是 2、3、5 的公倍数。\n[2,3,5] = 30，最小 N = 30 − 1 = 29。",
+          text: "余数 = 除数 − 1，故 N + 1 是 2、3、5 的公倍数。\n\n[2,3,5] = 30，最小 N = 30 − 1 = 29。",
           scenes: [
             {
               kind: "statement-table",
@@ -39,7 +39,6 @@ export default {
                   verdict: "true",
                 },
               ],
-
             },
             {
               kind: "number-line",
@@ -52,12 +51,6 @@ export default {
               segments: [
                 { from: 0, to: 30, label: "最小公倍数", tone: "accent" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [{ icon: "🥚", count: 29, label: "最少鸡蛋数" }],
-
             },
           ],
         },

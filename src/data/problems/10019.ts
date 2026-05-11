@@ -7,14 +7,14 @@ export default {
   difficulty: "进阶",
   module: "行程",
   question:
-    "甲、乙两人在 400 米的环形跑道上练习跑步。甲每秒跑 6 米，乙每秒跑 4 米。\n两人同时同地反向出发，经过多少秒两人第一次相遇？如果是同向出发，经过多少秒甲第一次追上乙？",
+    "甲、乙两人在 400 米的环形跑道上练习跑步。甲每秒跑 6 米，乙每秒跑 4 米。\n\n两人同时同地反向出发，经过多少秒两人第一次相遇？如果是同向出发，经过多少秒甲第一次追上乙？",
   solutions: [
     {
       key: "relative",
       label: "相对速度法",
       steps: [
         {
-          text: "反向相遇 = 400 ÷ (6 + 4) = 40 秒；\n同向追及 = 400 ÷ (6 − 4) = 200 秒。",
+          text: "反向相遇 = 400 ÷ (6 + 4) = 40 秒；\n\n同向追及 = 400 ÷ (6 − 4) = 200 秒。",
           scenes: [
             {
               kind: "number-line",
@@ -34,7 +34,6 @@ export default {
                 { from: 0, to: 240, label: "甲 →", tone: "primary" },
                 { from: 240, to: 400, label: "← 乙 4×40 = 160", tone: "muted" },
               ],
-
             },
             {
               kind: "compare-bars",
@@ -48,7 +47,6 @@ export default {
                   marker: true,
                 },
               ],
-
             },
             {
               kind: "equation-list",
@@ -60,15 +58,6 @@ export default {
                   status: "keep",
                 },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "🔄", count: 40, label: "反向相遇(秒)" },
-                { icon: "➡️", count: 200, label: "同向追及(秒)" },
-              ],
-
             },
           ],
         },

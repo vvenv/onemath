@@ -7,7 +7,7 @@ export default {
   difficulty: "基础",
   module: "行程",
   question:
-    "哥哥和弟弟去上学，弟弟先出发，每分钟走40米。5分钟后，哥哥从同一地点出发去追弟弟，哥哥每分钟走60米。\n请问哥哥几分钟后能追上弟弟？",
+    "哥哥和弟弟去上学，弟弟先出发，每分钟走40米。5分钟后，哥哥从同一地点出发去追弟弟，哥哥每分钟走60米。\n\n请问哥哥几分钟后能追上弟弟？",
   solutions: [
     {
       key: "speed_diff",
@@ -39,7 +39,6 @@ export default {
                   tone: "primary",
                 },
               ],
-
             },
             {
               kind: "compare-bars",
@@ -53,7 +52,6 @@ export default {
                   marker: true,
                 },
               ],
-
             },
             {
               kind: "equation-list",
@@ -62,7 +60,6 @@ export default {
                 { lhs: "速度差", rhs: "60 − 40 = 20 米/分" },
                 { lhs: "追及时间", rhs: "200 ÷ 20 = 10 分钟", status: "keep" },
               ],
-
             },
           ],
         },

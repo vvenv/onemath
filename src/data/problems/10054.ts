@@ -7,7 +7,7 @@ export default {
   difficulty: "基础",
   module: "行程",
   question:
-    "一艘轮船从甲港开往乙港，顺水航行需要 4 小时，逆水返回需要 6 小时。已知甲、乙两港相距 120 千米。\n求这艘轮船在静水中的速度和水流的速度。",
+    "一艘轮船从甲港开往乙港，顺水航行需要 4 小时，逆水返回需要 6 小时。已知甲、乙两港相距 120 千米。\n\n求这艘轮船在静水中的速度和水流的速度。",
   solutions: [
     {
       key: "water",
@@ -35,13 +35,6 @@ export default {
               segments: [
                 { from: 20, to: 25, label: "水流 5", tone: "primary" },
                 { from: 25, to: 30, label: "水流 5", tone: "primary" },
-              ],
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "🚢", count: 25, label: "静水速度 (km/h)" },
-                { icon: "💧", count: 5, label: "水流速度 (km/h)" },
               ],
             },
           ],

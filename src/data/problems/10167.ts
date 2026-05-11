@@ -7,7 +7,7 @@ export default {
   difficulty: "挑战",
   module: "杂题",
   question:
-    "烙饼时，一口锅每次只能烙 2 张饼，每面需要烙 3 分钟。\n如果要烙 7 张饼，最少需要多少分钟？",
+    "烙饼时，一口锅每次只能烙 2 张饼，每面需要烙 3 分钟。\n\n如果要烙 7 张饼，最少需要多少分钟？",
   solutions: [
     {
       key: "optimization",
@@ -29,7 +29,6 @@ export default {
                 { lhs: "后 4 张（两两）", rhs: "4 ÷ 2 × 6 = 12", note: "分钟" },
                 { lhs: "总时间", rhs: "9 + 12 = 21", status: "keep" },
               ],
-
             },
             {
               kind: "compare-bars",
@@ -38,14 +37,6 @@ export default {
                 { label: "两两烙 4 张", value: 12, max: 21, tone: "primary" },
                 { label: "总时间", value: 21, max: 21, tone: "primary" },
               ],
-
-            },
-            {
-              kind: "result-badges",
-              items: [
-                { icon: "⏱️", label: "最少时间", count: 21, note: "分钟" },
-              ],
-
             },
           ],
         },
@@ -74,7 +65,6 @@ export default {
                 { lhs: "后 4 张两两", rhs: "(4 ÷ 2) × 6 = 12" },
                 { lhs: "总时间", rhs: "9 + 12 = 21", status: "keep" },
               ],
-
             },
           ],
         },
