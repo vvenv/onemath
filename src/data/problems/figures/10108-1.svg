@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440">
   <g class="stroke-current fill-none">
-    <circle cx="220" cy="220" r="90" />
+    <circle cx="220" cy="220" r="200" />
     <line x1="220" y1="20" x2="220" y2="420" />
-    <line x1="46.67" y1="120" x2="393.33" y2="320" />
-    <line x1="46.67" y1="320" x2="393.33" y2="120" />
+    <line x1="46.79" y1="120" x2="393.21" y2="320" />
+    <line x1="46.79" y1="320" x2="393.21" y2="120" />
   </g>
   <g class="stroke-current fill-none">
     <circle cx="220" cy="20" r="12" />
     <circle cx="220" cy="420" r="12" />
-    <circle cx="46.67" cy="120" r="12" />
-    <circle cx="393.33" cy="320" r="12" />
-    <circle cx="46.67" cy="320" r="12" />
-    <circle cx="393.33" cy="120" r="12" />
+    <circle cx="46.79" cy="120" r="12" />
+    <circle cx="393.21" cy="320" r="12" />
+    <circle cx="46.79" cy="320" r="12" />
+    <circle cx="393.21" cy="120" r="12" />
     <circle cx="220" cy="220" r="12" />
   </g>
 </svg>
