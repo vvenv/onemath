@@ -8,7 +8,7 @@ export default {
   difficulty: "进阶",
   module: "几何",
   question:
-    "如图，正方形 ABCD 的面积为 144。\n\nE、F、G、H 分别是四条边的中点。连接 EG、FH，两条线段相交于点 O。求四边形 EGFH 的面积。",
+    "如图，正方形 ABCD 的边长为 10。E 是 AD 的中点；F 是线段 CE 的中点；G 是线段 BF 的中点。\n\n求三角形 BDG 的面积。",
   figures: [
     {
       svg: svg1,
