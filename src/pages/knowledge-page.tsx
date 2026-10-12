@@ -37,14 +37,14 @@ export const meta: MetaFunction = ({ params }) => {
   const entry = getKnowledgeBySlug(slug);
   if (!entry) {
     return buildMeta({
-      title: "知识点 - 一道+ / edao.plus",
+      title: "知识点 - 一道+",
       description: "小学奥数知识点讲解",
       path: "/k",
     });
   }
   const description = entry.summary.replace(/\s+/g, " ").slice(0, 160);
   return buildMeta({
-    title: `${entry.name} - 知识点 - 一道+ / edao.plus`,
+    title: `${entry.name} - 知识点 - 一道+`,
     description,
     path: `/k/${entry.slug}`,
     type: "article",

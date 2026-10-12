@@ -20,9 +20,9 @@ import type { Grade } from "@/types/problem";
 import type { ProblemIndexEntry } from "@/types/problem-index";
 import type { MetaFunction } from "react-router";
 
-const PROBLEMS_TITLE = "题目列表 - 一道+ / edao.plus";
+const PROBLEMS_TITLE = "题目列表 - 一道+";
 const PROBLEMS_DESCRIPTION =
-  "一道+(edao.plus) 题目列表：按模块、年级、难度和方法筛选小学奥数典型题，配可视化解法与方法手册。";
+  "一道+ 题目列表：按模块、年级、难度和方法筛选小学奥数典型题，配可视化解法与方法手册。";
 
 export const meta: MetaFunction = () =>
   buildMeta({

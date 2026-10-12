@@ -19,7 +19,7 @@ import type { MetaFunction } from "react-router";
 
 export const meta: MetaFunction = () =>
   buildMeta({
-    title: "数据同步 - edao.plus",
+    title: "数据同步 - 一道+",
     description:
       "生成同步码，在其他设备上扫描二维码即可导入收藏、浏览记录和主题设置",
     path: "/sync",
@@ -103,7 +103,7 @@ export default function SyncPage() {
 
   const handleShare = useCallback(async () => {
     if (!qrUrl) return;
-    await share({ title: "edao.plus 数据同步", url: qrUrl });
+    await share({ title: "一道+ 数据同步", url: qrUrl });
   }, [qrUrl]);
 
   return (

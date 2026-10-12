@@ -1,10 +1,10 @@
 ---
-description: Audit and optimize an existing edao.plus problem TS file against the project's quality standards. Use when revising a single file under src/data/problems/.
+description: Audit and optimize an existing 一道+ problem TS file against the project's quality standards. Use when revising a single file under src/data/problems/.
 ---
 
 # 优化单题题目 (/optimize-problem)
 
-针对 `src/data/problems/<id>.ts` 下的**单个已存在题目文件**，依据 edao.plus 的题目规范做一次完整审计与优化，输出可直接落盘的改进版本。
+针对 `src/data/problems/<id>.ts` 下的**单个已存在题目文件**，依据 一道+ 的题目规范做一次完整审计与优化，输出可直接落盘的改进版本。
 
 ## 使用方式
 

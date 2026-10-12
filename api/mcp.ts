@@ -19,7 +19,7 @@ type VercelResponse = ServerResponse & {
 };
 
 /**
- * Minimal Streamable HTTP MCP server for edao.plus.
+ * Minimal Streamable HTTP MCP server for 一道+.
  *
  * Speaks a stateless subset of the MCP spec over HTTP POST + JSON-RPC 2.0:
  *   - `initialize`                → serverInfo + capabilities
@@ -37,7 +37,7 @@ type VercelResponse = ServerResponse & {
 
 const PROTOCOL_VERSION = "2025-06-18";
 const SUPPORTED_PROTOCOL_VERSIONS = ["2025-06-18", "2025-03-26", "2024-11-05"];
-const SERVER_NAME = "plus.edao/onemath";
+const SERVER_NAME = "dev.wenfu.math/onemath";
 const SERVER_VERSION = "0.1.0";
 
 type JsonRpcId = string | number | null;
@@ -116,7 +116,7 @@ function readResource(catalog: Catalog, uri: string) {
 const searchTool = {
   name: "search",
   description:
-    "Full-text search across edao.plus problems and knowledge entries. Matches against title, question, tags, and summary.",
+    "Full-text search across 一道+ problems and knowledge entries. Matches against title, question, tags, and summary.",
   inputSchema: {
     type: "object",
     properties: {
@@ -226,7 +226,7 @@ function handleRpc(msg: JsonRpcRequest): JsonRpcResponse | null {
         },
         serverInfo: { name: SERVER_NAME, version: SERVER_VERSION },
         instructions:
-          "Read-only access to edao.plus math problems (onemath://problem/{id}) and knowledge entries (onemath://knowledge/{slug}). Use the `search` tool to discover relevant resources.",
+          "Read-only access to 一道+ math problems (onemath://problem/{id}) and knowledge entries (onemath://knowledge/{slug}). Use the `search` tool to discover relevant resources.",
       });
     }
 
@@ -260,7 +260,7 @@ function handleRpc(msg: JsonRpcRequest): JsonRpcResponse | null {
           {
             uriTemplate: "onemath://problem/{id}",
             name: "Problem",
-            description: "A single edao.plus problem by id (e.g. 10001).",
+            description: "A single 一道+ problem by id (e.g. 10001).",
             mimeType: "application/json",
           },
           {

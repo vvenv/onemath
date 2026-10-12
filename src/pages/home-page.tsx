@@ -13,7 +13,7 @@ import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, buildMeta } from "@/lib/seo";
 import type { FiguredProblemEntry } from "@/types/figured-problem";
 import type { MetaFunction } from "react-router";
 
-const HOME_TITLE = "一道+ / edao.plus - 小学数学思维训练";
+const HOME_TITLE = "一道+ - 小学数学思维训练";
 
 export const meta: MetaFunction = () =>
   buildMeta({
@@ -26,7 +26,6 @@ export const meta: MetaFunction = () =>
         "@context": "https://schema.org",
         "@type": "WebSite",
         name: SITE_NAME,
-        alternateName: ["一道+", "edao.plus"],
         url: SITE_URL,
         inLanguage: "zh-CN",
         description: SITE_DESCRIPTION,

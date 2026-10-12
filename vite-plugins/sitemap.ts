@@ -5,7 +5,7 @@ import type { Plugin } from "vite";
 import { getPrerenderPaths } from "../prerender-paths";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const SITE_URL = "https://edao.plus";
+const SITE_URL = "https://math.wenfu.dev";
 
 function xmlEscape(s: string): string {
   return s

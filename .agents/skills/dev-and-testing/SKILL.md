@@ -29,7 +29,7 @@ To verify that SSG HTML and client hydration produce the same output:
 Example for the featured problem on the homepage:
 ```bash
 # Extract featured problem ID from SSG HTML
-curl -s https://edao.plus/ | python3 -c "
+curl -s https://math.wenfu.dev/ | python3 -c "
 import sys, re
 html = sys.stdin.read()
 links = re.findall(r'href=\"/p/(\d+)\"', html)
@@ -40,6 +40,6 @@ Then compare with what the browser renders after React hydration.
 
 ## Deployment
 
-- **Production**: edao.plus (Vercel)
+- **Production**: math.wenfu.dev (Vercel)
 - **Preview**: Vercel auto-deploys preview URLs for each PR branch
 - Preview URL pattern: `onemath-git-<branch>-vvenv-projects.vercel.app`

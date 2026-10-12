@@ -68,13 +68,13 @@ export function AppBar() {
         <div className="relative mx-auto flex h-14 w-full max-w-3xl items-center gap-3 px-4">
           <Link
             to="/"
-            aria-label="返回 edao.plus 首页"
+            aria-label="返回 一道+ 首页"
             className="flex min-w-0 items-center gap-2.5 rounded-md outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             <Logo />
             <span className="truncate">
               <span className="text-base font-semibold tracking-tight">
-                一道<sup>+</sup> / edao.plus
+                一道<sup>+</sup>
               </span>
             </span>
           </Link>

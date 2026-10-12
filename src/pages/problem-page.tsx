@@ -15,14 +15,14 @@ export const meta: MetaFunction = ({ params }) => {
   const problem = id ? getProblemById(id) : undefined;
   if (!problem) {
     return buildMeta({
-      title: "题目 - 一道+ / edao.plus",
+      title: "题目 - 一道+",
       description: "小学奥数题目详解",
       path: "/p",
     });
   }
   const description = problem.question.replace(/\s+/g, " ").slice(0, 160);
   return buildMeta({
-    title: `${problem.title} - 一道+ / edao.plus`,
+    title: `${problem.title} - 一道+`,
     description,
     path: `/p/${problem.id}`,
     type: "article",

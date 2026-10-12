@@ -17,7 +17,7 @@ import type { MetaFunction } from "react-router";
 
 export const meta: MetaFunction = () =>
   buildMeta({
-    title: "导入数据 - edao.plus",
+    title: "导入数据 - 一道+",
     description: "通过同步码导入收藏、浏览记录和主题设置到当前设备",
     path: "/sync",
   });

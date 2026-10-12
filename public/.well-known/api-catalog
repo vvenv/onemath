@@ -1,22 +1,22 @@
 {
   "linkset": [
     {
-      "anchor": "https://edao.plus/",
+      "anchor": "https://math.wenfu.dev/",
       "service-desc": [
         {
-          "href": "https://edao.plus/openapi.json",
+          "href": "https://math.wenfu.dev/openapi.json",
           "type": "application/openapi+json"
         }
       ],
       "service-doc": [
         {
-          "href": "https://edao.plus/",
+          "href": "https://math.wenfu.dev/",
           "type": "text/html"
         }
       ],
       "status": [
         {
-          "href": "https://edao.plus/status.json",
+          "href": "https://math.wenfu.dev/status.json",
           "type": "application/json"
         }
       ]
